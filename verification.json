@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T16:56:37.535Z",
+  "generatedAt": "2026-10-16T17:49:37.599Z",
   "root": "G:\\TOOLS\\AimOffline\\dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
@@ -11,7 +11,7 @@
     "mapCount": 6
   },
   "resourceCount": 1826,
-  "storedBytes": 164518646,
+  "storedBytes": 164536932,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
@@ -1935,7 +1935,7 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "1f0c7f7d6462fd932fef75c8b62433c2756ddad36fc95515d78a6cec72ce4eaa",
+    "sha256": "184cd8da1a0122f5ab75bf64f612635519c3076854095802c5d0d7245254f6aa",
     "fileCount": 1826
   },
   "limitations": [
