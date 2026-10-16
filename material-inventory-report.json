@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-10-16T16:31:30.199Z",
+  "total": 638,
+  "existing": 636,
+  "missing": 2,
+  "missingRequired": [],
+  "missingOptional": [
+    {
+      "path": "/aim-viewmodel/outlaw.equip.bin.enc",
+      "source": "CymPR-fm.js weapon stem + CFqO0zvx.js loader",
+      "optional": true
+    },
+    {
+      "path": "/aim-viewmodel/outlaw.equip.json.enc",
+      "source": "CymPR-fm.js weapon stem + CFqO0zvx.js loader",
+      "optional": true
+    }
+  ],
+  "excludedLiteralModules": [
+    "mxLm3KzH.js"
+  ],
+  "maps": [
+    "ascent",
+    "bonsai",
+    "triad",
+    "plummet",
+    "jam",
+    "infinity"
+  ],
+  "weapons": [
+    "vandal",
+    "phantom",
+    "classic",
+    "sheriff",
+    "spectre",
+    "ares",
+    "operator",
+    "ghost",
+    "odin",
+    "frenzy",
+    "guardian",
+    "marshal",
+    "outlaw",
+    "bulldog",
+    "stinger",
+    "judge",
+    "shorty",
+    "bucky"
+  ],
+  "agentCount": 28,
+  "stems": [
+    "viewmodel",
+    "phantom",
+    "bulldog",
+    "operator",
+    "classic",
+    "odin",
+    "frenzy",
+    "ghost",
+    "guardian",
+    "marshal",
+    "outlaw",
+    "spectre",
+    "stinger",
+    "ares",
+    "sheriff",
+    "shorty",
+    "bucky",
+    "judge",
+    "knife"
+  ],
+  "decodedManifestCount": 111,
+  "pendingManifests": [
+    "/aim-viewmodel/outlaw.equip.json.enc"
+  ],
+  "errors": [],
+  "glbReports": [
+    {
+      "map": "ascent",
+      "externalUris": 0,
+      "images": 382,
+      "buffers": 2
+    },
+    {
+      "map": "bonsai",
+      "externalUris": 0,
+      "images": 374,
+      "buffers": 2
+    },
+    {
+      "map": "triad",
+      "externalUris": 0,
+      "images": 260,
+      "buffers": 2
+    },
+    {
+      "map": "plummet",
+      "externalUris": 0,
+      "images": 266,
+      "buffers": 2
+    },
+    {
+      "map": "jam",
+      "externalUris": 0,
+      "images": 151,
+      "buffers": 2
+    },
+    {
+      "map": "infinity",
+      "externalUris": 0,
+      "images": 211,
+      "buffers": 2
+    }
+  ],
+  "notes": [
+    "Each exact source path is backed by source literals, source loader interpolation and enumerated selectable keys, a cached asset, or a decoded manifest.",
+    "Rerun after acquiring pending manifests to recursively add their exact filenames.",
+    "Map lightmap PNG and AVIF are both enumerated: the original loader feature-detects AVIF and keeps PNG fallback.",
+    "Generic texture registry assets include effects used by all selectable flash packs, including not-yet-cached packs.",
+    "No remote downloads or browser UI performed by this script."
+  ]
+}

@@ -1,0 +1,1945 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T16:56:37.535Z",
+  "root": "G:\\TOOLS\\AimOffline\\dist",
+  "success": true,
+  "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
+  "checks": {
+    "network": "No network used: fetch reads dist only and blocks external hosts",
+    "encryptedFormat": "Every .enc file authenticated, decrypted and decompressed with the current original-format codec",
+    "sceneCount": 62,
+    "mapCount": 6
+  },
+  "resourceCount": 1826,
+  "storedBytes": 164518646,
+  "encryptedResources": 410,
+  "jsonResources": 111,
+  "inventory": {
+    "materialCandidates": 638,
+    "moduleCandidates": 0,
+    "moduleClosureEntries": 78,
+    "uniqueRequirements": 1729,
+    "satisfied": 1727,
+    "moduleExclusions": [
+      {
+        "path": "js/BbCrAlFy.js",
+        "source": "js/B9C9f4Y8.js",
+        "reason": "online course/checkup outside local training"
+      },
+      {
+        "path": "js/mxLm3KzH.js",
+        "source": "js/B9C9f4Y8.js",
+        "reason": "skin lab requires val:aimlab:audit permission"
+      },
+      {
+        "path": "js/OmX0A8kk.js",
+        "source": "js/B9C9f4Y8.js",
+        "reason": "online course account outside local training"
+      }
+    ]
+  },
+  "scenes": 62,
+  "sceneDetails": [
+    {
+      "code": "5a9e43d609bbb3a3",
+      "name": "Boaster架枪训练（困难）",
+      "map": null,
+      "weapon": "guardian",
+      "duration": 60,
+      "docBytes": 2994,
+      "docSha256": "eeeb481ffb962412b29e1625bd60e874baaaf0bcc101398cacb2745df1bce4fa",
+      "actors": 2,
+      "blocks": 10,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "29d97300304f802d",
+      "name": "Boaster架枪训练（简单静步）",
+      "map": null,
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 2994,
+      "docSha256": "aeb1ca5a9bee073d1a3e2d6b048defdddb0cb0e1e4848688ea9424d857a5af9b",
+      "actors": 2,
+      "blocks": 10,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "74c0e163b0ae79a2",
+      "name": "s0pp无甲手枪名场面",
+      "map": "ascent",
+      "weapon": "classic",
+      "duration": 35,
+      "docBytes": 4446,
+      "docSha256": "b727e724df127aa0fb11e5ec75f7d59a6983e86b0f5b2872ff80a5ee678a41af",
+      "actors": 5,
+      "blocks": 0,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "d5a8557a5d9537e3",
+      "name": "困难-空岛船坞抗压训练",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 3597,
+      "docSha256": "fae5160b75a676a3433a0ef96f9ac79d2c3f60e3ca55604c3ff10d0a5efe2a92",
+      "actors": 4,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "c935a7a37b985842",
+      "name": "困难-空岛B 中路回防包点预瞄",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6987,
+      "docSha256": "7d09a3a0704d7e0bbab73b833a3b534a86ddba11f2834ef62f155d155f90b79e",
+      "actors": 2,
+      "blocks": 4,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "54145a349a983de4",
+      "name": "简单-空岛B 中路回防包点预瞄",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6676,
+      "docSha256": "abd0f5a9cc818bb3b2cfa2252906becfec20bb84b13483423a67be6af7430f57",
+      "actors": 2,
+      "blocks": 4,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "19c5ea522465b282",
+      "name": "困难-空岛B CT回防包点预瞄",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6945,
+      "docSha256": "56e83f150a6bb829990fef1405afe386d45918b2c24f82075dccb085160072fd",
+      "actors": 3,
+      "blocks": 4,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "49c858ec2fa5ae29",
+      "name": "简单-空岛B CT回防包点预瞄",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6162,
+      "docSha256": "b78688678daefd6b9541f3b3c31f0eb0141f849fc0684b359d84c93c4f0a9183",
+      "actors": 2,
+      "blocks": 4,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "24b56fc3bc3b6f89",
+      "name": "困难-DDY预瞄训练中远上A小",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6817,
+      "docSha256": "3a0487ad38b158aa15620d320330df0052ef61457e40b761651e4c1d5dc032f5",
+      "actors": 9,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "b840a9b06efea122",
+      "name": "简单-DDY预瞄训练中远上A小",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5572,
+      "docSha256": "b6e1308ad768328e9133447e2a59ad2d889ede0556326f09e961448af105c2c2",
+      "actors": 9,
+      "blocks": 1,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "87a361b2c17e0042",
+      "name": "困难-DDY预瞄训练A大进攻路线",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4206,
+      "docSha256": "a20e27a691196cb4514a5ff4ebb1da7349e1611931bff5ab1f22732d08743d79",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "8bc169307d5a99cd",
+      "name": "简单-DDY预瞄训练A大进攻路线",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4090,
+      "docSha256": "37523073d9818c075fc10884bc72ed4f4bfa1c58abdbcdc0d71295407631a744",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "e61b0a6469c91bd9",
+      "name": "简单-DDY预瞄训练B厅路线",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 8227,
+      "docSha256": "efc71792b00bc256aa613e0bd0aa4cd489a7642ff89d54e44689bbf339596b20",
+      "actors": 17,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "391210d7bf192c0b",
+      "name": "困难-DDY预瞄训练B厅路线",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 10236,
+      "docSha256": "a9a2e72109fe36f7c1acd8d7501c85b3222e04d5fcdcfc0795d94e4df642c3ea",
+      "actors": 17,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "1a1342d870923895",
+      "name": "困难-B大进攻路线",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 30,
+      "docBytes": 10054,
+      "docSha256": "38b12ad351863f8644410241c733965cbf1acaac9b17513602ebde8b70146a95",
+      "actors": 2,
+      "blocks": 1,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "1b597bb63a48bf26",
+      "name": "简单-A2 回防预瞄",
+      "map": "ascent",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 9309,
+      "docSha256": "a0caa849f855b2d7c4e1dd12c31a37f48b0a18163ccaf864b2ed99a97aa41cc6",
+      "actors": 2,
+      "blocks": 1,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "cb2431243b5643fd",
+      "name": "霓虹厅A大架枪（优化版）",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5661,
+      "docSha256": "0dea1997e75e3c0046147288274af7d5a1de9be9d6205abe574c10c261b6f8c6",
+      "actors": 7,
+      "blocks": 7,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "bb7624010563ab6b",
+      "name": "困难-霓虹町A包接人",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4118,
+      "docSha256": "1d0d3dc0fd54137e3d6c1e514df87e91341ef979e401d6a0cc444b33ab6757a1",
+      "actors": 4,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "aa03a3989083b77f",
+      "name": "困难-霓虹町B包回防2楼路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 6008,
+      "docSha256": "0bc6e6254c2e8f9ad19add8b471b840e09472b8e6e1c441fb1d70823d45c52ca",
+      "actors": 2,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "1260bffea8d85b5d",
+      "name": "简单-霓虹町B包回防2楼路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 5699,
+      "docSha256": "f64a654ff1efed33b9c26f1d9f014a6f9b2f03d4cdb6d3e24a4ab4b9308664af",
+      "actors": 2,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "8439ab50a708a5b8",
+      "name": "困难-霓虹町B包回防CT路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 5346,
+      "docSha256": "6f15af70c5ea06c96246281f6df447829a75562ee2ef09ec1598be8a3dd721c7",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "426e2f8fa5e244b7",
+      "name": "简单-霓虹町B包回防CT路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 5034,
+      "docSha256": "188474960d4f2a1871336b95df0461d1d2783c81fc4ca46004ac7fd1071161ab",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "80444d4551b0ebcc",
+      "name": "困难-霓虹町回防A包 铁板路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 7010,
+      "docSha256": "c87a8291ace578a1b92b8d67135226eca40bf7b3b46debd63b97c9043ae80eac",
+      "actors": 2,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "1802435f5c7bd36c",
+      "name": "简单-霓虹町回防A包 铁板路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 6701,
+      "docSha256": "03a9886fe5a8bc444226bcdd74c7f9d1b249765e3738c5c6b15cfc837ea7832b",
+      "actors": 2,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "334c7b11c93f400f",
+      "name": "困难-霓虹町回防A包 ct路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 6126,
+      "docSha256": "d21895faa1a03cb212d8b506807723840351c6992e1f747cb020a78a6b094186",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "2bca4991b2ec434d",
+      "name": "简单-霓虹町回防A包 ct路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 90,
+      "docBytes": 5817,
+      "docSha256": "c0cbe127af17ee331ee04d330dd986d7acac42b5d2e9a8a4d92070063d34496b",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "782614562cd94b22",
+      "name": "霓虹厅B二楼接包点",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 2730,
+      "docSha256": "ffb8a29da1671fafd4c17aea104b9a03b388339a115b6876a2c31c0d226a2d11",
+      "actors": 2,
+      "blocks": 7,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "0a18b502eae99be7",
+      "name": "困难-DDY预瞄教学A大进攻路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4795,
+      "docSha256": "f1ad0d0dc6416a9b9e1abdf066b1943df4555c9d7ee2a6769109e3607876eddb",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "42892b6f8794298d",
+      "name": "简单-DDY预瞄教学A大进攻路线",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4599,
+      "docSha256": "e9b8a9db91fd9531f60d204650aec654585fa6a964e9f954e524f03a8ced8104",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "a4ae10756361597b",
+      "name": "困难-DDY预瞄训练B厅进攻",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4658,
+      "docSha256": "0b741cb7c94324336df628464138869b2a0157d2b9306705ffd98409bef1cc66",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "68251fbac9876edd",
+      "name": "简单-DDY预瞄训练B厅进攻",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4462,
+      "docSha256": "e248d548bd258c11ff5fd45c65da4d51baf833bce0f53432829e862c1e534abb",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "ea526db79d7c6ba9",
+      "name": "困难-DDY 中路预瞄训练",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6058,
+      "docSha256": "40e73828de1e2641badceb7cd9bfd67f44650689eda4744a05eba638c6839996",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "ec10162a4e006ddc",
+      "name": "简单-DDY 中路预瞄训练",
+      "map": "bonsai",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5874,
+      "docSha256": "64d36638cd3542beeae98f66e06cc3b6642fd37cd310145e649d754f0c14130b",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "5e7181a5a97d2a8e",
+      "name": "困难-幽邃地窟中路预瞄 夹B",
+      "map": "infinity",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5977,
+      "docSha256": "dca6fe72a9e27273b773d64028f588d8204cbde078bbceb310426c06cd47cd7c",
+      "actors": 2,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "c0002648f8a2d1e4",
+      "name": "简单-幽邃地窟中路预瞄 夹B",
+      "map": "infinity",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5665,
+      "docSha256": "4a2db98fe112e52ed19bf0807cb78e1ed9a72cbf761405e3c33e1e14bce7194d",
+      "actors": 2,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "becafa3cd2560b03",
+      "name": "困难-幽邃地窟B大进攻预瞄悬崖路线",
+      "map": "infinity",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5742,
+      "docSha256": "5c10ea0659dc4ccda3ffa32a704d5b3b4483624b4ad9c8641b468f7406664ee6",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "10d043eea1794c53",
+      "name": "简单-幽邃地窟B大进攻包点路线预瞄",
+      "map": "infinity",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5433,
+      "docSha256": "58b2f97754838aab272e86e2b0db1dc638e0892335807bfe384694fc490e421b",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "bcc026278b45c206",
+      "name": "困难-幽邃地窟A大预瞄路线",
+      "map": "infinity",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6394,
+      "docSha256": "110f061b029fd872505e59f3b6132f5dd122924be9c14761ec43fb5c6f4cc7a8",
+      "actors": 3,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "36afa3da2e3134c5",
+      "name": "简单-幽邃地窟A大预瞄路线",
+      "map": "infinity",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6083,
+      "docSha256": "41f34a0e17c3ed002cf5e3919f1a5968bc13de3fa5be43b76d2ed38269f546a3",
+      "actors": 3,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "e141b0dd0d7c5a65",
+      "name": "困难-莲花古城DDY C大进攻预瞄",
+      "map": "jam",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5305,
+      "docSha256": "a1fc3cb8f8a4a53b2a41550a7dc8af877178ccfb18b33ab187a37019d8d62487",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "cea517f28f2a6503",
+      "name": "简单-莲花古城DDY C大进攻预瞄",
+      "map": "jam",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 4996,
+      "docSha256": "0f56aaca96e9297242b3405feb6fbed17ac4962587442549f19bc70ce1cec450",
+      "actors": 2,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "35e58d677b59c90e",
+      "name": "困难-莲花古城DDY B进攻预瞄",
+      "map": "jam",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5654,
+      "docSha256": "b88df3ce9e3a13362b453208eb66308a2e0633b7969d9c42c38c9ebf225e1e6e",
+      "actors": 3,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "8493fc74ca8b261b",
+      "name": "简单-莲花古城DDY B进攻预瞄",
+      "map": "jam",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5194,
+      "docSha256": "872478a7e0224389a50164ecd74594d64dcab30033a71307e1d9b2637cbd3ff9",
+      "actors": 3,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "e759f847c60c90e5",
+      "name": "困难-莲花古城A大进攻（随机）",
+      "map": "jam",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6857,
+      "docSha256": "73f7fe5c1021fe9d10179294e3e6851cc49245918090b7eeaf40240b9176f931",
+      "actors": 3,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "789f9e6dc075e747",
+      "name": "简单-莲花古城A大进攻",
+      "map": "jam",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6397,
+      "docSha256": "75ad6b9413abd719b5bfb7e2eed68269022977418179e3b2534a2dbd6e03c6e5",
+      "actors": 3,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "ff81533277dc43c8",
+      "name": "困难-天枢云阙中路上B",
+      "map": "plummet",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 7902,
+      "docSha256": "f120998f98018a33ac41b1ed55a19ec6df5f3c336d7975c0493a31d8f07d3439",
+      "actors": 3,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "fdb3a73e5a32b2d9",
+      "name": "简单-天枢云阙中路上B",
+      "map": "plummet",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 7127,
+      "docSha256": "77ef6bc9342401b2d5e69217c7d7d3f4506db9433975294e4408f97821532b8a",
+      "actors": 3,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "b69de2b10b5cfc06",
+      "name": "困难-天枢云阙B大进攻（开枪）",
+      "map": "plummet",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6436,
+      "docSha256": "92698b0dd7c0e8429d211db9dddbbedea3309602476a977ff6aa6267c9abcf86",
+      "actors": 3,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "75551c4e540ca4e8",
+      "name": "简单-天枢云阙B大进攻",
+      "map": "plummet",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5975,
+      "docSha256": "1a2fc02dd79c157653a92fde66b5f690f5094cc6053f39b035c63c7e6b5cbf57",
+      "actors": 3,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "ba9af09e219369fd",
+      "name": "困难-天枢云阙A大进攻预瞄",
+      "map": "plummet",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 7444,
+      "docSha256": "b14b55d7960d24d277e281e53295e9398fc9a7cfbaf2486b14f6bee773e9b160",
+      "actors": 3,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "b212f6540b47679a",
+      "name": "简单-天枢云阙A大进攻预瞄",
+      "map": "plummet",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6452,
+      "docSha256": "fc181c8f4723553bdf482f82fe34e27ee6403220f009c5dbad26f4d7a24b05d7",
+      "actors": 3,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "8e3c439a53c4dc6b",
+      "name": "Erv 正义7秒5杀",
+      "map": "triad",
+      "weapon": "sheriff",
+      "duration": 40,
+      "docBytes": 5739,
+      "docSha256": "f613b597c0e60b205ff2a005cdb1c59dc35b860c64c45c6c1d1bd79cf12756b5",
+      "actors": 5,
+      "blocks": 5,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "95db7dec27f4fb1c",
+      "name": "简单-遗落境地A包接人背闪",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 2996,
+      "docSha256": "6da265a74b37931728ad283ac14ff85daa48a4bbdff8913668d487568a88eee7",
+      "actors": 4,
+      "blocks": 1,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "0d98806d4c5493c2",
+      "name": "困难-隐士修所DDY预瞄中路进攻车库（随机）",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 7565,
+      "docSha256": "6670546c75af08fb1cb3ba7b49cfa027a5b930fb3dcc318907977ccbb89cdd28",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "275f856ff0aadc98",
+      "name": "简单-隐士修所DDY预瞄中路进攻车库",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 300,
+      "docBytes": 7024,
+      "docSha256": "82cf9a76ea4a124c6ed26fb8a8d779549cab5f9cb1ee91963e4bf190f24fc6c8",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "03fb06bc6f0cfd56",
+      "name": "困难-隐士修所DDY C大进攻路线",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5171,
+      "docSha256": "243b2acfd16183a20f11ac456ad9540438051d4a9c4b8f99b798291b072ff35d",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "6973bd707a594514",
+      "name": "简单-隐士修所DDY C大进攻路线",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5011,
+      "docSha256": "3061bfe3deadde3063f11737fc647d36e154b005af97d635392eb71a53dc0583",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "f4dd449a25c0afdf",
+      "name": "困难-隐士修所DDY预瞄A小进攻",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6355,
+      "docSha256": "636b77599a9fc5a45777875f45dc065ae7feecbac2becd411eb25512ff46fa7c",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "17b1d2dfe79fd055",
+      "name": "简单-隐士修所DDY预瞄A小进攻",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6198,
+      "docSha256": "ac47d5c5ef0624912e738d4296c9f57e001063312562a4a3cf400a71b60a2737",
+      "actors": 1,
+      "blocks": 3,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "935efd2987c64ad4",
+      "name": "困难-遗落境地DDY A大进攻预瞄（随机）",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 6438,
+      "docSha256": "76b5680aba82dcef0b4c5f2d2c7ef3fb5d312a994eb7afdc20a234c0b799f756",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "afcbc73b0048afcc",
+      "name": "困难-遗落境地DDY A大进攻预瞄（开枪）",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 60,
+      "docBytes": 5310,
+      "docSha256": "3bc4f998b7648c987e8612bea679c13024ccc015127f7ebe9312a21797c50e3b",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    },
+    {
+      "code": "46029355cfd99cf1",
+      "name": "简单-遗落境地DDY A大进攻预瞄",
+      "map": "triad",
+      "weapon": "vandal",
+      "duration": 300,
+      "docBytes": 5125,
+      "docSha256": "6a8285dad058d5e791c554f3704fc4a0ab78c68c552b8addf5b7a282faf53f4e",
+      "actors": 1,
+      "blocks": 2,
+      "checks": [
+        "rules and environment",
+        "duration, weapon and scoring rules",
+        "scene geometry, actor lists and spawn",
+        "document bytes",
+        "source document SHA256 equality"
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "map": "ascent",
+      "requiredFiles": [
+        "/aim-maps/ascent.glb.enc",
+        "/aim-maps/ascent.collision.json.enc",
+        "/aim-maps/ascent.lightmaps.json.enc",
+        "/aim-maps/ascent.lights.json.enc",
+        "/aim-maps/ascent.pvs.json.enc",
+        "/aim-maps/ascent.surfaces.json.enc",
+        "/aim-maps/ascent.minimap.json",
+        "/aim-maps/ascent.minimap.png"
+      ],
+      "complete": true,
+      "model": {
+        "path": "/aim-maps/ascent.glb",
+        "bytes": 13058488,
+        "images": 382,
+        "externalUris": 0
+      },
+      "manifestKeys": {
+        "collision.json": [
+          "map",
+          "space",
+          "note",
+          "prims",
+          "walkSets",
+          "sets",
+          "noCollision"
+        ],
+        "lightmaps.json": [
+          "map",
+          "note",
+          "K",
+          "shRange",
+          "shL0",
+          "irrDiv",
+          "shDiv",
+          "atlases",
+          "inst"
+        ],
+        "lights.json": [
+          "map",
+          "space",
+          "note",
+          "lights",
+          "fogs",
+          "posts"
+        ],
+        "pvs.json": [
+          "map",
+          "cell",
+          "layer",
+          "eyeOffset",
+          "batches",
+          "cells"
+        ],
+        "surfaces.json": [
+          "v",
+          "map",
+          "codes",
+          "walk",
+          "cable",
+          "projectile"
+        ]
+      }
+    },
+    {
+      "map": "bonsai",
+      "requiredFiles": [
+        "/aim-maps/bonsai.glb.enc",
+        "/aim-maps/bonsai.collision.json.enc",
+        "/aim-maps/bonsai.lightmaps.json.enc",
+        "/aim-maps/bonsai.lights.json.enc",
+        "/aim-maps/bonsai.pvs.json.enc",
+        "/aim-maps/bonsai.surfaces.json.enc",
+        "/aim-maps/bonsai.ropes.json.enc",
+        "/aim-maps/bonsai.minimap.json",
+        "/aim-maps/bonsai.minimap.png"
+      ],
+      "complete": true,
+      "model": {
+        "path": "/aim-maps/bonsai.glb",
+        "bytes": 13395780,
+        "images": 374,
+        "externalUris": 0
+      },
+      "manifestKeys": {
+        "collision.json": [
+          "map",
+          "space",
+          "note",
+          "prims",
+          "walkSets",
+          "sets",
+          "noCollision"
+        ],
+        "lightmaps.json": [
+          "map",
+          "note",
+          "K",
+          "shRange",
+          "shL0",
+          "irrDiv",
+          "shDiv",
+          "atlases",
+          "inst"
+        ],
+        "lights.json": [
+          "map",
+          "space",
+          "note",
+          "lights",
+          "fogs",
+          "posts"
+        ],
+        "pvs.json": [
+          "map",
+          "cell",
+          "layer",
+          "eyeOffset",
+          "batches",
+          "cells"
+        ],
+        "surfaces.json": [
+          "v",
+          "map",
+          "codes",
+          "walk",
+          "cable",
+          "projectile"
+        ],
+        "ropes.json": [
+          "map",
+          "space",
+          "note",
+          "count",
+          "ropes"
+        ]
+      }
+    },
+    {
+      "map": "triad",
+      "requiredFiles": [
+        "/aim-maps/triad.glb.enc",
+        "/aim-maps/triad.collision.json.enc",
+        "/aim-maps/triad.lightmaps.json.enc",
+        "/aim-maps/triad.lights.json.enc",
+        "/aim-maps/triad.pvs.json.enc",
+        "/aim-maps/triad.surfaces.json.enc",
+        "/aim-maps/triad.minimap.json",
+        "/aim-maps/triad.minimap.png"
+      ],
+      "complete": true,
+      "model": {
+        "path": "/aim-maps/triad.glb",
+        "bytes": 11627132,
+        "images": 260,
+        "externalUris": 0
+      },
+      "manifestKeys": {
+        "collision.json": [
+          "map",
+          "space",
+          "note",
+          "prims",
+          "walkSets",
+          "sets",
+          "noCollision"
+        ],
+        "lightmaps.json": [
+          "map",
+          "note",
+          "K",
+          "shRange",
+          "shL0",
+          "irrDiv",
+          "shDiv",
+          "atlases",
+          "inst"
+        ],
+        "lights.json": [
+          "map",
+          "space",
+          "note",
+          "lights",
+          "fogs",
+          "posts"
+        ],
+        "pvs.json": [
+          "map",
+          "cell",
+          "layer",
+          "eyeOffset",
+          "batches",
+          "cells"
+        ],
+        "surfaces.json": [
+          "v",
+          "map",
+          "codes",
+          "walk",
+          "cable",
+          "projectile"
+        ]
+      }
+    },
+    {
+      "map": "plummet",
+      "requiredFiles": [
+        "/aim-maps/plummet.glb.enc",
+        "/aim-maps/plummet.collision.json.enc",
+        "/aim-maps/plummet.lightmaps.json.enc",
+        "/aim-maps/plummet.lights.json.enc",
+        "/aim-maps/plummet.pvs.json.enc",
+        "/aim-maps/plummet.surfaces.json.enc",
+        "/aim-maps/plummet.ropes.json.enc",
+        "/aim-maps/plummet.minimap.json",
+        "/aim-maps/plummet.minimap.png"
+      ],
+      "complete": true,
+      "model": {
+        "path": "/aim-maps/plummet.glb",
+        "bytes": 18167644,
+        "images": 266,
+        "externalUris": 0
+      },
+      "manifestKeys": {
+        "collision.json": [
+          "map",
+          "space",
+          "note",
+          "prims",
+          "walkSets",
+          "sets",
+          "noCollision"
+        ],
+        "lightmaps.json": [
+          "map",
+          "note",
+          "K",
+          "shRange",
+          "shL0",
+          "irrDiv",
+          "shDiv",
+          "atlases",
+          "inst"
+        ],
+        "lights.json": [
+          "map",
+          "space",
+          "note",
+          "lights",
+          "fogs",
+          "posts"
+        ],
+        "pvs.json": [
+          "map",
+          "cell",
+          "layer",
+          "eyeOffset",
+          "batches",
+          "cells"
+        ],
+        "surfaces.json": [
+          "v",
+          "map",
+          "codes",
+          "walk",
+          "cable",
+          "projectile"
+        ],
+        "ropes.json": [
+          "map",
+          "space",
+          "note",
+          "count",
+          "ropes"
+        ]
+      }
+    },
+    {
+      "map": "jam",
+      "requiredFiles": [
+        "/aim-maps/jam.glb.enc",
+        "/aim-maps/jam.collision.json.enc",
+        "/aim-maps/jam.lightmaps.json.enc",
+        "/aim-maps/jam.lights.json.enc",
+        "/aim-maps/jam.pvs.json.enc",
+        "/aim-maps/jam.surfaces.json.enc",
+        "/aim-maps/jam.ropes.json.enc",
+        "/aim-maps/jam.minimap.json",
+        "/aim-maps/jam.minimap.png"
+      ],
+      "complete": true,
+      "model": {
+        "path": "/aim-maps/jam.glb",
+        "bytes": 9957832,
+        "images": 151,
+        "externalUris": 0
+      },
+      "manifestKeys": {
+        "collision.json": [
+          "map",
+          "space",
+          "note",
+          "prims",
+          "walkSets",
+          "sets",
+          "noCollision"
+        ],
+        "lightmaps.json": [
+          "map",
+          "note",
+          "K",
+          "shRange",
+          "shL0",
+          "irrDiv",
+          "shDiv",
+          "atlases",
+          "inst"
+        ],
+        "lights.json": [
+          "map",
+          "space",
+          "note",
+          "lights",
+          "fogs",
+          "posts"
+        ],
+        "pvs.json": [
+          "map",
+          "cell",
+          "layer",
+          "eyeOffset",
+          "batches",
+          "cells"
+        ],
+        "surfaces.json": [
+          "v",
+          "map",
+          "codes",
+          "walk",
+          "cable",
+          "projectile"
+        ],
+        "ropes.json": [
+          "map",
+          "space",
+          "note",
+          "count",
+          "ropes"
+        ]
+      }
+    },
+    {
+      "map": "infinity",
+      "requiredFiles": [
+        "/aim-maps/infinity.glb.enc",
+        "/aim-maps/infinity.collision.json.enc",
+        "/aim-maps/infinity.lightmaps.json.enc",
+        "/aim-maps/infinity.lights.json.enc",
+        "/aim-maps/infinity.pvs.json.enc",
+        "/aim-maps/infinity.surfaces.json.enc",
+        "/aim-maps/infinity.ropes.json.enc",
+        "/aim-maps/infinity.minimap.json",
+        "/aim-maps/infinity.minimap.png"
+      ],
+      "complete": true,
+      "model": {
+        "path": "/aim-maps/infinity.glb",
+        "bytes": 12382948,
+        "images": 211,
+        "externalUris": 0
+      },
+      "manifestKeys": {
+        "collision.json": [
+          "map",
+          "space",
+          "note",
+          "prims",
+          "walkSets",
+          "sets",
+          "noCollision",
+          "killSets"
+        ],
+        "lightmaps.json": [
+          "map",
+          "note",
+          "K",
+          "shRange",
+          "shL0",
+          "irrDiv",
+          "shDiv",
+          "atlases",
+          "inst"
+        ],
+        "lights.json": [
+          "map",
+          "space",
+          "note",
+          "lights",
+          "fogs",
+          "posts"
+        ],
+        "pvs.json": [
+          "map",
+          "cell",
+          "layer",
+          "eyeOffset",
+          "batches",
+          "cells"
+        ],
+        "surfaces.json": [
+          "v",
+          "map",
+          "codes",
+          "walk",
+          "cable",
+          "projectile"
+        ],
+        "ropes.json": [
+          "map",
+          "space",
+          "note",
+          "count",
+          "ropes"
+        ]
+      }
+    }
+  ],
+  "fonts": {
+    "files": 1013,
+    "cachedFiles": 1013,
+    "groups": 523,
+    "satisfiedGroups": 523,
+    "missingGroups": 0,
+    "byFamily": {
+      "Aimlab Map Title": {
+        "groups": 1,
+        "satisfied": 1,
+        "missing": 0,
+        "embedded": 0
+      },
+      "Noto Sans SC": {
+        "groups": 505,
+        "satisfied": 505,
+        "missing": 0,
+        "embedded": 15
+      },
+      "Anton": {
+        "groups": 3,
+        "satisfied": 3,
+        "missing": 0,
+        "embedded": 0
+      },
+      "Chakra Petch": {
+        "groups": 8,
+        "satisfied": 8,
+        "missing": 0,
+        "embedded": 2
+      },
+      "vxetableiconfont": {
+        "groups": 1,
+        "satisfied": 1,
+        "missing": 0,
+        "embedded": 1
+      },
+      "Rubik": {
+        "groups": 5,
+        "satisfied": 5,
+        "missing": 0,
+        "embedded": 0
+      }
+    },
+    "excluded": [
+      {
+        "source": "/css/index.DjXErpXU.css",
+        "url": "chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/rbicon.woff2",
+        "reason": "browser extension or unrelated external font"
+      }
+    ]
+  },
+  "missingRequiredAssets": [],
+  "missingOptionalAssets": [
+    {
+      "path": "/aim-viewmodel/outlaw.equip.bin.enc",
+      "optional": true,
+      "sources": [
+        "material inventory: CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+      ],
+      "requestedPaths": [
+        "/aim-viewmodel/outlaw.equip.bin.enc"
+      ]
+    },
+    {
+      "path": "/aim-viewmodel/outlaw.equip.json.enc",
+      "optional": true,
+      "sources": [
+        "material inventory: CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+      ],
+      "requestedPaths": [
+        "/aim-viewmodel/outlaw.equip.json.enc"
+      ]
+    }
+  ],
+  "aliases": [
+    {
+      "requested": "/aim-weapons/ares.gun.png",
+      "resolved": "/aim-viewmodel/ares.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/bucky.gun.png",
+      "resolved": "/aim-viewmodel/bucky.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/bulldog.gun.png",
+      "resolved": "/aim-viewmodel/bulldog.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/classic.gun.png",
+      "resolved": "/aim-viewmodel/classic.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/frenzy.gun.png",
+      "resolved": "/aim-viewmodel/frenzy.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/ghost.gun.png",
+      "resolved": "/aim-viewmodel/ghost.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/ghost.silencer.png",
+      "resolved": "/aim-viewmodel/ghost.silencer.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/guardian.gun.png",
+      "resolved": "/aim-viewmodel/guardian.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/judge.gun.png",
+      "resolved": "/aim-viewmodel/judge.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/marshal.gun.png",
+      "resolved": "/aim-viewmodel/marshal.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/marshal.scope.png",
+      "resolved": "/aim-viewmodel/marshal.scope.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/odin.gun.png",
+      "resolved": "/aim-viewmodel/odin.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/odin.bullets.png",
+      "resolved": "/aim-viewmodel/odin.bullets.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/operator.gun.png",
+      "resolved": "/aim-viewmodel/operator.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/operator.scope.png",
+      "resolved": "/aim-viewmodel/operator.scope.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/outlaw.gun.png",
+      "resolved": "/aim-viewmodel/outlaw.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/outlaw.scope.png",
+      "resolved": "/aim-viewmodel/outlaw.scope.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/outlaw.bullets.png",
+      "resolved": "/aim-viewmodel/outlaw.bullets.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/phantom.gun.png",
+      "resolved": "/aim-viewmodel/phantom.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/phantom.silencer.png",
+      "resolved": "/aim-viewmodel/phantom.silencer.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/sheriff.gun.png",
+      "resolved": "/aim-viewmodel/sheriff.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/shorty.gun.png",
+      "resolved": "/aim-viewmodel/shorty.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/spectre.gun.png",
+      "resolved": "/aim-viewmodel/spectre.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    },
+    {
+      "requested": "/aim-weapons/stinger.gun.png",
+      "resolved": "/aim-viewmodel/stinger.gun.png.enc",
+      "reason": "original weapon texture loader uses /aim-viewmodel/"
+    }
+  ],
+  "alternativeGroups": [
+    {
+      "manifest": "/aim-maps/ascent.lightmaps.json",
+      "atlas": "0",
+      "satisfied": true,
+      "formats": [
+        {
+          "format": "png",
+          "files": [
+            "/aim-maps/ascent.lightmap.0.irr.png",
+            "/aim-maps/ascent.lightmap.0.sh.png"
+          ],
+          "complete": true
+        },
+        {
+          "format": "avif",
+          "files": [
+            "/aim-maps/ascent.lightmap.0.irr.avif",
+            "/aim-maps/ascent.lightmap.0.sh.avif"
+          ],
+          "complete": true
+        }
+      ]
+    },
+    {
+      "manifest": "/aim-maps/bonsai.lightmaps.json",
+      "atlas": "0",
+      "satisfied": true,
+      "formats": [
+        {
+          "format": "png",
+          "files": [
+            "/aim-maps/bonsai.lightmap.0.irr.png",
+            "/aim-maps/bonsai.lightmap.0.sh.png"
+          ],
+          "complete": true
+        },
+        {
+          "format": "avif",
+          "files": [
+            "/aim-maps/bonsai.lightmap.0.irr.avif",
+            "/aim-maps/bonsai.lightmap.0.sh.avif"
+          ],
+          "complete": true
+        }
+      ]
+    },
+    {
+      "manifest": "/aim-maps/infinity.lightmaps.json",
+      "atlas": "0",
+      "satisfied": true,
+      "formats": [
+        {
+          "format": "png",
+          "files": [
+            "/aim-maps/infinity.lightmap.0.irr.png",
+            "/aim-maps/infinity.lightmap.0.sh.png"
+          ],
+          "complete": true
+        },
+        {
+          "format": "avif",
+          "files": [
+            "/aim-maps/infinity.lightmap.0.irr.avif",
+            "/aim-maps/infinity.lightmap.0.sh.avif"
+          ],
+          "complete": true
+        }
+      ]
+    },
+    {
+      "manifest": "/aim-maps/jam.lightmaps.json",
+      "atlas": "0",
+      "satisfied": true,
+      "formats": [
+        {
+          "format": "png",
+          "files": [
+            "/aim-maps/jam.lightmap.0.irr.png",
+            "/aim-maps/jam.lightmap.0.sh.png"
+          ],
+          "complete": true
+        },
+        {
+          "format": "avif",
+          "files": [
+            "/aim-maps/jam.lightmap.0.irr.avif",
+            "/aim-maps/jam.lightmap.0.sh.avif"
+          ],
+          "complete": true
+        }
+      ]
+    },
+    {
+      "manifest": "/aim-maps/plummet.lightmaps.json",
+      "atlas": "0",
+      "satisfied": true,
+      "formats": [
+        {
+          "format": "png",
+          "files": [
+            "/aim-maps/plummet.lightmap.0.irr.png",
+            "/aim-maps/plummet.lightmap.0.sh.png"
+          ],
+          "complete": true
+        },
+        {
+          "format": "avif",
+          "files": [
+            "/aim-maps/plummet.lightmap.0.irr.avif",
+            "/aim-maps/plummet.lightmap.0.sh.avif"
+          ],
+          "complete": true
+        }
+      ]
+    },
+    {
+      "manifest": "/aim-maps/triad.lightmaps.json",
+      "atlas": "0",
+      "satisfied": true,
+      "formats": [
+        {
+          "format": "png",
+          "files": [
+            "/aim-maps/triad.lightmap.0.irr.png",
+            "/aim-maps/triad.lightmap.0.sh.png"
+          ],
+          "complete": true
+        },
+        {
+          "format": "avif",
+          "files": [
+            "/aim-maps/triad.lightmap.0.irr.avif",
+            "/aim-maps/triad.lightmap.0.sh.avif"
+          ],
+          "complete": true
+        }
+      ]
+    }
+  ],
+  "ignoredReferences": [
+    {
+      "path": "/css/%23n",
+      "source": "/css/PlayerProfileView.Cx5AOkak.css CSS URL",
+      "reason": "embedded URI or CSS SVG fragment"
+    }
+  ],
+  "failures": [],
+  "sha256Manifest": {
+    "file": "verification-resources.sha256.json",
+    "sha256": "1f0c7f7d6462fd932fef75c8b62433c2756ddad36fc95515d78a6cec72ce4eaa",
+    "fileCount": 1826
+  },
+  "limitations": [
+    "Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.",
+    "A lightmap atlas is considered present when either complete PNG or complete AVIF pair exists; Edge supports the saved AVIF assets."
+  ]
+}

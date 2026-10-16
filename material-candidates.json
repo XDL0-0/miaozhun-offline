@@ -1,0 +1,2556 @@
+[
+  {
+    "path": "/aim-agents/astra.ee999990.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.astra.albedo"
+  },
+  {
+    "path": "/aim-agents/astra.ee999990.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.astra.ao"
+  },
+  {
+    "path": "/aim-agents/astra.ee999990.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.astra.bin"
+  },
+  {
+    "path": "/aim-agents/astra.ee999990.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.astra.orm"
+  },
+  {
+    "path": "/aim-agents/breach.41515ef1.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.breach.albedo"
+  },
+  {
+    "path": "/aim-agents/breach.41515ef1.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.breach.ao"
+  },
+  {
+    "path": "/aim-agents/breach.41515ef1.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.breach.bin"
+  },
+  {
+    "path": "/aim-agents/breach.41515ef1.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.breach.orm"
+  },
+  {
+    "path": "/aim-agents/brimstone.ac1e9b02.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.brimstone.albedo"
+  },
+  {
+    "path": "/aim-agents/brimstone.ac1e9b02.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.brimstone.ao"
+  },
+  {
+    "path": "/aim-agents/brimstone.ac1e9b02.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.brimstone.bin"
+  },
+  {
+    "path": "/aim-agents/brimstone.ac1e9b02.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.brimstone.orm"
+  },
+  {
+    "path": "/aim-agents/chamber.7d80187b.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.chamber.albedo"
+  },
+  {
+    "path": "/aim-agents/chamber.7d80187b.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.chamber.ao"
+  },
+  {
+    "path": "/aim-agents/chamber.7d80187b.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.chamber.bin"
+  },
+  {
+    "path": "/aim-agents/chamber.7d80187b.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.chamber.orm"
+  },
+  {
+    "path": "/aim-agents/clove.9d145083.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.clove.albedo"
+  },
+  {
+    "path": "/aim-agents/clove.9d145083.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.clove.ao"
+  },
+  {
+    "path": "/aim-agents/clove.9d145083.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.clove.bin"
+  },
+  {
+    "path": "/aim-agents/clove.9d145083.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.clove.orm"
+  },
+  {
+    "path": "/aim-agents/cypher.82ee292d.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.cypher.albedo"
+  },
+  {
+    "path": "/aim-agents/cypher.82ee292d.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.cypher.ao"
+  },
+  {
+    "path": "/aim-agents/cypher.82ee292d.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.cypher.bin"
+  },
+  {
+    "path": "/aim-agents/cypher.82ee292d.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.cypher.orm"
+  },
+  {
+    "path": "/aim-agents/deadlock.b08d1e5e.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.deadlock.albedo"
+  },
+  {
+    "path": "/aim-agents/deadlock.b08d1e5e.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.deadlock.ao"
+  },
+  {
+    "path": "/aim-agents/deadlock.b08d1e5e.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.deadlock.bin"
+  },
+  {
+    "path": "/aim-agents/deadlock.b08d1e5e.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.deadlock.orm"
+  },
+  {
+    "path": "/aim-agents/fade.327a21bf.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.fade.albedo"
+  },
+  {
+    "path": "/aim-agents/fade.327a21bf.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.fade.ao"
+  },
+  {
+    "path": "/aim-agents/fade.327a21bf.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.fade.bin"
+  },
+  {
+    "path": "/aim-agents/fade.327a21bf.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.fade.orm"
+  },
+  {
+    "path": "/aim-agents/gekko.7f4a996e.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.gekko.albedo"
+  },
+  {
+    "path": "/aim-agents/gekko.7f4a996e.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.gekko.ao"
+  },
+  {
+    "path": "/aim-agents/gekko.7f4a996e.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.gekko.bin"
+  },
+  {
+    "path": "/aim-agents/gekko.7f4a996e.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.gekko.orm"
+  },
+  {
+    "path": "/aim-agents/harbor.88b03ac2.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.harbor.albedo"
+  },
+  {
+    "path": "/aim-agents/harbor.88b03ac2.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.harbor.ao"
+  },
+  {
+    "path": "/aim-agents/harbor.88b03ac2.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.harbor.bin"
+  },
+  {
+    "path": "/aim-agents/harbor.88b03ac2.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.harbor.orm"
+  },
+  {
+    "path": "/aim-agents/iso.94425bfd.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.iso.albedo"
+  },
+  {
+    "path": "/aim-agents/iso.94425bfd.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.iso.ao"
+  },
+  {
+    "path": "/aim-agents/iso.94425bfd.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.iso.bin"
+  },
+  {
+    "path": "/aim-agents/iso.94425bfd.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.iso.orm"
+  },
+  {
+    "path": "/aim-agents/jett.3d8952ce.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.jett.albedo"
+  },
+  {
+    "path": "/aim-agents/jett.3d8952ce.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.jett.ao"
+  },
+  {
+    "path": "/aim-agents/jett.3d8952ce.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.jett.bin"
+  },
+  {
+    "path": "/aim-agents/jett.3d8952ce.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.jett.orm"
+  },
+  {
+    "path": "/aim-agents/kayo.5f8f5045.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.kayo.albedo"
+  },
+  {
+    "path": "/aim-agents/kayo.5f8f5045.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.kayo.ao"
+  },
+  {
+    "path": "/aim-agents/kayo.5f8f5045.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.kayo.bin"
+  },
+  {
+    "path": "/aim-agents/kayo.5f8f5045.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.kayo.orm"
+  },
+  {
+    "path": "/aim-agents/killjoy.62bf8be6.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.killjoy.albedo"
+  },
+  {
+    "path": "/aim-agents/killjoy.62bf8be6.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.killjoy.ao"
+  },
+  {
+    "path": "/aim-agents/killjoy.62bf8be6.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.killjoy.bin"
+  },
+  {
+    "path": "/aim-agents/killjoy.62bf8be6.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.killjoy.orm"
+  },
+  {
+    "path": "/aim-agents/miks.13e3bbd4.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.miks.albedo"
+  },
+  {
+    "path": "/aim-agents/miks.13e3bbd4.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.miks.ao"
+  },
+  {
+    "path": "/aim-agents/miks.13e3bbd4.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.miks.bin"
+  },
+  {
+    "path": "/aim-agents/miks.13e3bbd4.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.miks.orm"
+  },
+  {
+    "path": "/aim-agents/neon.54468eaf.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.neon.albedo"
+  },
+  {
+    "path": "/aim-agents/neon.54468eaf.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.neon.ao"
+  },
+  {
+    "path": "/aim-agents/neon.54468eaf.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.neon.bin"
+  },
+  {
+    "path": "/aim-agents/neon.54468eaf.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.neon.orm"
+  },
+  {
+    "path": "/aim-agents/omen.52d6352c.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.omen.albedo"
+  },
+  {
+    "path": "/aim-agents/omen.52d6352c.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.omen.ao"
+  },
+  {
+    "path": "/aim-agents/omen.52d6352c.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.omen.bin"
+  },
+  {
+    "path": "/aim-agents/omen.52d6352c.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.omen.orm"
+  },
+  {
+    "path": "/aim-agents/portraits.e23b2366.jpg",
+    "source": "existing cached asset"
+  },
+  {
+    "path": "/aim-agents/raze.669a1475.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.raze.albedo"
+  },
+  {
+    "path": "/aim-agents/raze.669a1475.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.raze.ao"
+  },
+  {
+    "path": "/aim-agents/raze.669a1475.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.raze.bin"
+  },
+  {
+    "path": "/aim-agents/raze.669a1475.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.raze.orm"
+  },
+  {
+    "path": "/aim-agents/reyna.061164fd.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.reyna.albedo"
+  },
+  {
+    "path": "/aim-agents/reyna.061164fd.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.reyna.ao"
+  },
+  {
+    "path": "/aim-agents/reyna.061164fd.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.reyna.bin"
+  },
+  {
+    "path": "/aim-agents/reyna.061164fd.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.reyna.orm"
+  },
+  {
+    "path": "/aim-agents/sage.755473a8.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sage.albedo"
+  },
+  {
+    "path": "/aim-agents/sage.755473a8.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sage.ao"
+  },
+  {
+    "path": "/aim-agents/sage.755473a8.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sage.bin"
+  },
+  {
+    "path": "/aim-agents/sage.755473a8.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sage.orm"
+  },
+  {
+    "path": "/aim-agents/skye.1793f380.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.skye.albedo"
+  },
+  {
+    "path": "/aim-agents/skye.1793f380.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.skye.ao"
+  },
+  {
+    "path": "/aim-agents/skye.1793f380.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.skye.bin"
+  },
+  {
+    "path": "/aim-agents/skye.1793f380.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.skye.orm"
+  },
+  {
+    "path": "/aim-agents/sova.d9daf82c.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sova.albedo"
+  },
+  {
+    "path": "/aim-agents/sova.d9daf82c.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sova.ao"
+  },
+  {
+    "path": "/aim-agents/sova.d9daf82c.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sova.bin"
+  },
+  {
+    "path": "/aim-agents/sova.d9daf82c.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.sova.orm"
+  },
+  {
+    "path": "/aim-agents/tejo.6908b676.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.tejo.albedo"
+  },
+  {
+    "path": "/aim-agents/tejo.6908b676.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.tejo.ao"
+  },
+  {
+    "path": "/aim-agents/tejo.6908b676.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.tejo.bin"
+  },
+  {
+    "path": "/aim-agents/tejo.6908b676.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.tejo.orm"
+  },
+  {
+    "path": "/aim-agents/veto.fa2130de.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.veto.albedo"
+  },
+  {
+    "path": "/aim-agents/veto.fa2130de.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.veto.ao"
+  },
+  {
+    "path": "/aim-agents/veto.fa2130de.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.veto.bin"
+  },
+  {
+    "path": "/aim-agents/veto.fa2130de.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.veto.orm"
+  },
+  {
+    "path": "/aim-agents/viper.125284ad.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.viper.albedo"
+  },
+  {
+    "path": "/aim-agents/viper.125284ad.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.viper.ao"
+  },
+  {
+    "path": "/aim-agents/viper.125284ad.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.viper.bin"
+  },
+  {
+    "path": "/aim-agents/viper.125284ad.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.viper.orm"
+  },
+  {
+    "path": "/aim-agents/vyse.3c5ac112.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.vyse.albedo"
+  },
+  {
+    "path": "/aim-agents/vyse.3c5ac112.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.vyse.ao"
+  },
+  {
+    "path": "/aim-agents/vyse.3c5ac112.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.vyse.bin"
+  },
+  {
+    "path": "/aim-agents/vyse.3c5ac112.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.vyse.orm"
+  },
+  {
+    "path": "/aim-agents/waylay.32123f18.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.waylay.albedo"
+  },
+  {
+    "path": "/aim-agents/waylay.32123f18.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.waylay.ao"
+  },
+  {
+    "path": "/aim-agents/waylay.32123f18.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.waylay.bin"
+  },
+  {
+    "path": "/aim-agents/waylay.32123f18.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.waylay.orm"
+  },
+  {
+    "path": "/aim-agents/yoru.627ba128.albedo.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.yoru.albedo"
+  },
+  {
+    "path": "/aim-agents/yoru.627ba128.ao.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.yoru.ao"
+  },
+  {
+    "path": "/aim-agents/yoru.627ba128.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.yoru.bin"
+  },
+  {
+    "path": "/aim-agents/yoru.627ba128.orm.jpg.enc",
+    "source": "existing cached asset; tmIeW3Ig.js aD.yoru.orm"
+  },
+  {
+    "path": "/aim-impact/bullet-hole.png",
+    "source": "site/js/DCKWp-_u.js literal; existing cached asset"
+  },
+  {
+    "path": "/aim-impact/flash-glow.png",
+    "source": "site/js/YUUbOBiI.js literal; existing cached asset"
+  },
+  {
+    "path": "/aim-impact/hit-burst.png",
+    "source": "site/js/B9C9f4Y8.js literal; site/js/CymPR-fm.js literal; existing cached asset"
+  },
+  {
+    "path": "/aim-impact/tracer.png",
+    "source": "site/js/CymPR-fm.js literal; existing cached asset"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-10-237f1ffb65b7.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-10-44e88bdadf5d.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-12-5176561407a8.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-13-869730234b28.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-14-3ed58eb13a06.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-15-e7046485f9e0.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-16-d1238176864c.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-17-31dc3ae805e3.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-19-6bf91bea939e.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-20-7357221967ef.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-21-71c067617b39.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-21-9f82f7a50170.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-21-e5ff288fa2e2.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-22-093de93003d1.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-23-cf1bc5df8965.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-24-f32e03b4a212.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-25-67d8c0f8a74b.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-26-73aa0f5aa112.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-29-e53893012931.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-30-e92584b4d9c9.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-31-14d2c9149fb0.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-32-6ff3f145f42a.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-32-b22f27f65594.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-33-c0000da4d272.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-33-fb63b0247dad.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-6-7c1c43141e0d.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-6-bb95cd0c39bc.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-7-01ddfa9274f4.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-7-0c5edf7e0e72.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-7-401034030836.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-7-4057b4bff901.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-7-a7390604828f.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-8-f87793005dd1.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/kernel-aimlab-9-fb4fd7f87c4d.js",
+    "source": "aim-kernels/manifest.json exact file"
+  },
+  {
+    "path": "/aim-kernels/manifest.json",
+    "source": "DqtmD7Xr.js replay kernel manifest"
+  },
+  {
+    "path": "/aim-maps/ascent.collision.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/ascent.glb.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/ascent.lightmap.0.irr.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/ascent.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/ascent.lightmap.0.irr.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/ascent.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/ascent.lightmap.0.sh.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/ascent.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/ascent.lightmap.0.sh.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/ascent.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/ascent.lightmaps.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/ascent.lights.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/ascent.minimap.json",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/ascent.minimap.png",
+    "source": "site/js/DtLCYWdy.js literal; existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/ascent.pvs.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/ascent.surfaces.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.collision.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.glb.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.lightmap.0.irr.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/bonsai.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/bonsai.lightmap.0.irr.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/bonsai.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/bonsai.lightmap.0.sh.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/bonsai.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/bonsai.lightmap.0.sh.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/bonsai.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/bonsai.lightmaps.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.lights.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.minimap.json",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.minimap.png",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.pvs.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/bonsai.ropes.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js rope map set"
+  },
+  {
+    "path": "/aim-maps/bonsai.surfaces.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/infinity.collision.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/infinity.glb.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/infinity.lightmap.0.irr.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/infinity.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/infinity.lightmap.0.irr.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/infinity.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/infinity.lightmap.0.sh.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/infinity.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/infinity.lightmap.0.sh.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/infinity.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/infinity.lightmaps.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/infinity.lights.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/infinity.minimap.json",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/infinity.minimap.png",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/infinity.pvs.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/infinity.ropes.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js rope map set"
+  },
+  {
+    "path": "/aim-maps/infinity.surfaces.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/jam.collision.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/jam.glb.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/jam.lightmap.0.irr.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/jam.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/jam.lightmap.0.irr.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/jam.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/jam.lightmap.0.sh.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/jam.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/jam.lightmap.0.sh.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/jam.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/jam.lightmaps.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/jam.lights.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/jam.minimap.json",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/jam.minimap.png",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/jam.pvs.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/jam.ropes.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js rope map set"
+  },
+  {
+    "path": "/aim-maps/jam.surfaces.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/plummet.collision.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/plummet.glb.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/plummet.lightmap.0.irr.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/plummet.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/plummet.lightmap.0.irr.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/plummet.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/plummet.lightmap.0.sh.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/plummet.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/plummet.lightmap.0.sh.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/plummet.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/plummet.lightmaps.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/plummet.lights.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/plummet.minimap.json",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/plummet.minimap.png",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/plummet.pvs.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/plummet.ropes.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js rope map set"
+  },
+  {
+    "path": "/aim-maps/plummet.surfaces.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/triad.collision.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/triad.glb.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/triad.lightmap.0.irr.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/triad.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/triad.lightmap.0.irr.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/triad.lightmaps.json field irr"
+  },
+  {
+    "path": "/aim-maps/triad.lightmap.0.sh.avif.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/triad.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/triad.lightmap.0.sh.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-maps/triad.lightmaps.json field sh"
+  },
+  {
+    "path": "/aim-maps/triad.lightmaps.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/triad.lights.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/triad.minimap.json",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/triad.minimap.png",
+    "source": "existing cached asset; map minimap loader"
+  },
+  {
+    "path": "/aim-maps/triad.pvs.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-maps/triad.surfaces.json.enc",
+    "source": "existing cached asset; aQOfOAp-.js map loader"
+  },
+  {
+    "path": "/aim-viewmodel/ak47.bin.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/ak47.json.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/ares.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ares.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ares.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ares.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/ares.json field texture; decoded manifest /aim-weapons/ares.json field texture (manifest value \"ares.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/ares.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/arms.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/ares.json field texture; decoded manifest /aim-viewmodel/bucky.json field texture; decoded manifest /aim-viewmodel/bulldog.json field texture; decoded manifest /aim-viewmodel/classic.json field texture; decoded manifest /aim-viewmodel/frenzy.json field texture; decoded manifest /aim-viewmodel/ghost.json field texture; decoded manifest /aim-viewmodel/guardian.json field texture; decoded manifest /aim-viewmodel/judge.json field texture; decoded manifest /aim-viewmodel/knife.json field texture; decoded manifest /aim-viewmodel/marshal.json field texture; decoded manifest /aim-viewmodel/odin.json field texture; decoded manifest /aim-viewmodel/operator.json field texture; decoded manifest /aim-viewmodel/outlaw.json field texture; decoded manifest /aim-viewmodel/phantom.json field texture; decoded manifest /aim-viewmodel/sheriff.json field texture; decoded manifest /aim-viewmodel/shorty.json field texture; decoded manifest /aim-viewmodel/spectre.json field texture; decoded manifest /aim-viewmodel/stinger.json field texture; decoded manifest /aim-viewmodel/viewmodel.json field texture"
+  },
+  {
+    "path": "/aim-viewmodel/bucky.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bucky.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bucky.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bucky.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/bucky.json field texture; decoded manifest /aim-weapons/bucky.json field texture (manifest value \"bucky.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/bucky.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bulldog.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bulldog.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bulldog.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/bulldog.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/bulldog.json field texture; decoded manifest /aim-weapons/bulldog.json field texture (manifest value \"bulldog.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/bulldog.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/classic.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/classic.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/classic.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/classic.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/classic.json field texture; decoded manifest /aim-weapons/classic.json field texture (manifest value \"classic.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/classic.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.brc.json.enc",
+    "source": "existing cached asset; CymPR-fm.js Al/Wm flash packs"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.rey.json.enc",
+    "source": "existing cached asset; CymPR-fm.js Al/Wm flash packs"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.sky.json.enc",
+    "source": "existing cached asset; CymPR-fm.js Al/Wm flash packs"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.AB_Nox_S0_Flower_DF.jpg.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.CrackTile_Inverse_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.CrystalShards_TEX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Env_TilingDissolve_1.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.FlashLocation_TEX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.FlowMap_1_TEX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.GlowA01_DIFF.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.GodRay5A_TFX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.GodRayLayered_TFX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.GradientDouble_TEX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Leaves24x4.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.LightShaft_TEX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Pandemic_Ember_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.PandemicTearAwaySimple_TFX_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Radianite_Electrity_4x3.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.SmokeRadial_4x2_TFX.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Sparkles.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Star_Sparkle_Anim.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Flare_Wide_01.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Mask_Circle_01.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Mask_Circle_Gradient.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Mask_Circle.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Mask_Gradient_Falloff.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Mask_Light_Soft.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Mask_Ramp_TopDown_Clamped.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.T_Wraith_Ribbon_Tile.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.tex_glow_01.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.tex_liquid_sheet_03.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.tex_X_crackEquip.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.ThorneEnergyScroll_B.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.TP_Hawk_S0_DF.jpg.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.vampire_alphaGradientB.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Vampire_Orb_Flare.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Wraith_4Xtile_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Wraith_4Xtile90_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Wraith_Body_mask.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Wraith_Dissolve_Strip_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.tex.Wraith_Strand_falloff_Grayscale.png.enc",
+    "source": "existing cached asset; CymPR-fm.js Ai flash material texture map"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.vys.json.enc",
+    "source": "existing cached asset; CymPR-fm.js Al/Wm flash packs"
+  },
+  {
+    "path": "/aim-viewmodel/flashfx.yru.json.enc",
+    "source": "existing cached asset; CymPR-fm.js Al/Wm flash packs"
+  },
+  {
+    "path": "/aim-viewmodel/frenzy.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/frenzy.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/frenzy.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/frenzy.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/frenzy.json field texture; decoded manifest /aim-weapons/frenzy.json field texture (manifest value \"frenzy.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/frenzy.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ghost.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ghost.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ghost.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ghost.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/ghost.json field texture; decoded manifest /aim-weapons/ghost.json field texture (manifest value \"ghost.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/ghost.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/ghost.silencer.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/ghost.json field texture; decoded manifest /aim-weapons/ghost.json field texture (manifest value \"ghost.silencer.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/guardian.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/guardian.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/guardian.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/guardian.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/guardian.json field texture; decoded manifest /aim-weapons/guardian.json field texture (manifest value \"guardian.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/guardian.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/viewmodel.json field texture"
+  },
+  {
+    "path": "/aim-viewmodel/jett.arms.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/jett.json field texture"
+  },
+  {
+    "path": "/aim-viewmodel/jett.bin.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/jett.json.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/judge.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/judge.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/judge.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/judge.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/judge.json field texture; decoded manifest /aim-weapons/judge.json field texture (manifest value \"judge.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/judge.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/killjoy.detain.bin.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/killjoy.detain.json.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/killjoy.device.bin.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/killjoy.device.df.jpg.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/killjoy.device.json field texture"
+  },
+  {
+    "path": "/aim-viewmodel/killjoy.device.json.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/killjoy.device.mask.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/killjoy.device.json field emissive"
+  },
+  {
+    "path": "/aim-viewmodel/knife.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/knife.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/knife.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/knife.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/knife.json field texture"
+  },
+  {
+    "path": "/aim-viewmodel/knife.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/marshal.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/marshal.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/marshal.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/marshal.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/marshal.json field texture; decoded manifest /aim-weapons/marshal.json field texture (manifest value \"marshal.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/marshal.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/marshal.scope.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/marshal.json field texture; decoded manifest /aim-weapons/marshal.json field texture (manifest value \"marshal.scope.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/melee.knife.b996f03cc9.bin.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/melee.knife.b996f03cc9.json.enc",
+    "source": "existing cached asset; CFqO0zvx.js/tmIeW3Ig.js explicit loader"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.00_Grad2x2_Grayscale.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.00_White_DIFF.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.5073054cbb.json.enc",
+    "source": "existing cached asset; CymPR-fm.js muzzle manifest constant"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.ArrowMuzzle_TEX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.BlastDirectional_8x1.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.CloudsGS_TEX_Grayscale.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.Flash_Alpha2_DS_2x2_TEX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.Glow.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.LUT_BaseWeaponsGrayscale_TEX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.m_flash_01_ring.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.m_flash_02.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MFlash_1P_VFX_Silenced_SO.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MoonGradient_TEX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MuzzleFlash1_FB_1x3_VFX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MuzzleFlash2_FB_1x3_VFX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MuzzleFlash2_FB_1x4_VFX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MuzzleFlash2_Greyscale_TEX_Inverted.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MuzzleFlash3_FB_1x4_VFX_Grayscale.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.MuzzleFlashCenter_VFX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.rifle_smoke.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.RingSmoke_3x3_TEX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.SmokePuff_4x3a.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.SmokeRadial_4x2_TFX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.SplatRadialBody_4x3.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/muzzle.UV_Noise_Cellular_TEX.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/muzzle.5073054cbb.json field file"
+  },
+  {
+    "path": "/aim-viewmodel/odin.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/odin.bullets.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/odin.json field texture; decoded manifest /aim-weapons/odin.json field texture (manifest value \"odin.bullets.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/odin.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/odin.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/odin.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/odin.json field texture; decoded manifest /aim-weapons/odin.json field texture (manifest value \"odin.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/odin.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/operator.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/operator.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/operator.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/operator.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/operator.json field texture; decoded manifest /aim-weapons/operator.json field texture (manifest value \"operator.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/operator.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/operator.scope.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/operator.json field texture; decoded manifest /aim-weapons/operator.json field texture (manifest value \"operator.scope.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.bullets.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/outlaw.json field texture; decoded manifest /aim-weapons/outlaw.json field texture (manifest value \"outlaw.bullets.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.equip.bin.enc",
+    "source": "CymPR-fm.js weapon stem + CFqO0zvx.js loader",
+    "optional": true
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.equip.json.enc",
+    "source": "CymPR-fm.js weapon stem + CFqO0zvx.js loader",
+    "optional": true
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/outlaw.json field texture; decoded manifest /aim-weapons/outlaw.json field texture (manifest value \"outlaw.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/outlaw.scope.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/outlaw.json field texture; decoded manifest /aim-weapons/outlaw.json field texture (manifest value \"outlaw.scope.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/phantom.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/phantom.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/phantom.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/phantom.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/phantom.json field texture; decoded manifest /aim-weapons/phantom.json field texture (manifest value \"phantom.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/phantom.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/phantom.silencer.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/phantom.json field texture; decoded manifest /aim-weapons/phantom.json field texture (manifest value \"phantom.silencer.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/sheriff.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/sheriff.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/sheriff.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/sheriff.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/sheriff.json field texture; decoded manifest /aim-weapons/sheriff.json field texture (manifest value \"sheriff.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/sheriff.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/shorty.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/shorty.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/shorty.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/shorty.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/shorty.json field texture; decoded manifest /aim-weapons/shorty.json field texture (manifest value \"shorty.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/shorty.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-astra-ally.cd6b06cab3.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-astra-enemy.204685e298.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-astra.b69a80f9dc.bin.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/smoke-astra-ally.cd6b06cab3.json field bin; decoded manifest /aim-viewmodel/smoke-astra-enemy.204685e298.json field bin"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-brimstone-ally.9060fcf6d3.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-brimstone-enemy.4bdfd92a3d.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-brimstone.ca5076c4b4.bin.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/smoke-brimstone-ally.9060fcf6d3.json field bin; decoded manifest /aim-viewmodel/smoke-brimstone-enemy.4bdfd92a3d.json field bin"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-clove-ally.843f7abcc5.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-clove-enemy.dd9919c080.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-clove.507bfbb598.bin.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/smoke-clove-ally.843f7abcc5.json field bin; decoded manifest /aim-viewmodel/smoke-clove-enemy.dd9919c080.json field bin"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-jett-ally.b844488a5b.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-jett-enemy.73177dc412.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-jett.0ba43fd2d2.bin.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/smoke-jett-ally.b844488a5b.json field bin; decoded manifest /aim-viewmodel/smoke-jett-enemy.73177dc412.json field bin"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-miks-ally.f5b7e48154.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-miks-enemy.fae2f6db16.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-miks.887e50c3bc.bin.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/smoke-miks-ally.f5b7e48154.json field bin; decoded manifest /aim-viewmodel/smoke-miks-enemy.fae2f6db16.json field bin"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-omen-ally.8d8898e624.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-omen-enemy.44b29d3c54.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js bn smoke manifests"
+  },
+  {
+    "path": "/aim-viewmodel/smoke-omen.ad2e865c05.bin.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/smoke-omen-ally.8d8898e624.json field bin; decoded manifest /aim-viewmodel/smoke-omen-enemy.44b29d3c54.json field bin"
+  },
+  {
+    "path": "/aim-viewmodel/spectre.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/spectre.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/spectre.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/spectre.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/spectre.json field texture; decoded manifest /aim-weapons/spectre.json field texture (manifest value \"spectre.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/spectre.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/stinger.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/stinger.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/stinger.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/stinger.gun.png.enc",
+    "source": "existing cached asset; decoded manifest /aim-viewmodel/stinger.json field texture; decoded manifest /aim-weapons/stinger.json field texture (manifest value \"stinger.gun.png\"; tmIeW3Ig.js df/vf resolves texture in /aim-viewmodel/)"
+  },
+  {
+    "path": "/aim-viewmodel/stinger.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/viewmodel.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/viewmodel.equip.bin.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/viewmodel.equip.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-viewmodel/viewmodel.json.enc",
+    "source": "existing cached asset; CymPR-fm.js weapon stem + CFqO0zvx.js loader"
+  },
+  {
+    "path": "/aim-weapons/ares.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/ares.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/bucky.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/bucky.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/bulldog.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/bulldog.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/classic.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/classic.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/frenzy.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/frenzy.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/ghost.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/ghost.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/guardian.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/guardian.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/judge.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/judge.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/marshal.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/marshal.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/odin.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/odin.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/operator.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/operator.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/outlaw.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/outlaw.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/phantom.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/phantom.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/sheriff.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/sheriff.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/shorty.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/shorty.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/spectre.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/spectre.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/stinger.bin.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/aim-weapons/stinger.json.enc",
+    "source": "existing cached asset; tmIeW3Ig.js HE weapon loader; B51EgnC9.js selectable weapons"
+  },
+  {
+    "path": "/apple-touch-icon-aim.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/apple-touch-icon.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/baiyin.webp",
+    "source": "site/js/BW23heFo.js literal"
+  },
+  {
+    "path": "/basis/basis_transcoder.js",
+    "source": "aQOfOAp-.js KTX2Loader.setTranscoderPath"
+  },
+  {
+    "path": "/basis/basis_transcoder.wasm",
+    "source": "aQOfOAp-.js KTX2Loader.setTranscoderPath"
+  },
+  {
+    "path": "/bojin.webp",
+    "source": "site/js/BW23heFo.js literal"
+  },
+  {
+    "path": "/chaofan.webp",
+    "source": "site/js/BW23heFo.js literal"
+  },
+  {
+    "path": "/favicon-16.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/favicon-32.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/favicon-aim-16.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/favicon-aim-32.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/funneg.webp",
+    "source": "site/js/BW23heFo.js literal"
+  },
+  {
+    "path": "/gold.webp",
+    "source": "site/js/BW23heFo.js literal"
+  },
+  {
+    "path": "/images/agent-art/astra.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/breach.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/brimstone.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/chamber.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/clove.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/cypher.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/deadlock.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/fade.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/gekko.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/harbor.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/iso.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/jett.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/kay-o.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/killjoy.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/miks.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/neon.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/omen.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/phoenix.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/raze.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/reyna.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/sage.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/skye.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/sova.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/tejo.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/veto.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/viper.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/vyse.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/waylay.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-art/yoru.webp",
+    "source": "B9C9f4Y8.js ls/vu agent art"
+  },
+  {
+    "path": "/images/agent-portraits/jett.webp",
+    "source": "B9C9f4Y8.js Di/o_ loading portraits"
+  },
+  {
+    "path": "/images/agent-portraits/neon.webp",
+    "source": "B9C9f4Y8.js Di/o_ loading portraits"
+  },
+  {
+    "path": "/images/agent-portraits/phoenix.webp",
+    "source": "B9C9f4Y8.js Di/o_ loading portraits"
+  },
+  {
+    "path": "/images/agent-portraits/raze.webp",
+    "source": "B9C9f4Y8.js Di/o_ loading portraits"
+  },
+  {
+    "path": "/images/agent-portraits/reyna.webp",
+    "source": "B9C9f4Y8.js Di/o_ loading portraits"
+  },
+  {
+    "path": "/images/agent-portraits/yoru.webp",
+    "source": "B9C9f4Y8.js Di/o_ loading portraits"
+  },
+  {
+    "path": "/images/gun-art/guardian.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/gun-art/odin.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/gun-art/operator.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/gun-art/phantom.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/gun-art/sheriff.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/gun-art/spectre.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/gun-art/vandal.webp",
+    "source": "DCKWp-_u.js Em/$r gun artwork selectable set"
+  },
+  {
+    "path": "/images/map-covers/abyss.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-covers/ascent.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-covers/haven.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-covers/lotus.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-covers/split.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-covers/summit.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-slices/abyss.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-slices/ascent.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-slices/haven.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-slices/lotus.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-slices/split.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-slices/summit.webp",
+    "source": "DuBWfmzx.js ft/X/St map thumbnail mapping"
+  },
+  {
+    "path": "/images/map-splash/ascent.webp",
+    "source": "B9C9f4Y8.js t2/va map splash"
+  },
+  {
+    "path": "/img/bot-ao.BrgJ4V5a.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/bot-orm.pP6PTVb1.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/bot-s0.BPbMfJpR.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/bot-s2.HE7WIqUC.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/bot-s3.dOprzjDO.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/emblem.BqXtWH2Y.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/emblem.C3kT7LfQ.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/emblem.CmpqMtlH.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/frame.CsKtF9X0.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/frame.DpjgUdkd.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/frame.Irk-musE.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/phoenix-ao.DX_E7b34.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/phoenix-orm.wei3MwBl.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/phoenix.CEGH5otU.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/img/ring.BH2gf5E8.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/ring.gO_TnNuo.png",
+    "source": "site/js/DVK7uRSu.js literal"
+  },
+  {
+    "path": "/img/vandal.DijYaig_.jpg",
+    "source": "site/js/tmIeW3Ig.js literal"
+  },
+  {
+    "path": "/logo.png",
+    "source": "site/js/B9C9f4Y8.js literal; site/js/CxXS7KxG.js literal"
+  },
+  {
+    "path": "/media/1.BK9q9c7J.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/1.naDhHhIk.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/1.vD7J1R1r.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/2.334lx1yZ.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/2.C-TwaDd4.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/2.CPiQdKDU.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/3.BYQhBhpx.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/3.CJY1pByT.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/3.DsMom-1G.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/4.BkxsdeCO.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/4.C_H1MuiA.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/4.DgXNyQo2.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/5.BF5JTrtM.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/5.BMaV15T5.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/5.CxpYt56x.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/ares.BTWE41Th.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/brc-post.BOn6I2PF.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/brc-pre.CZdcg1u_.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/bucky.BwpOH9ii.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/bulldog.DYyeePj8.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/classic.C0xdLy3g.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/erv1v5.CcCuUjyS.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/frenzy.CPCCotj4.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/ghost.bDsVUSsi.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/guardian.B4hqXqQM.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/jam.DdGeqPb9.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/judge.mTlsZNvz.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/kyo-pop.DJAcj8Rm.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/land-01.Bwh2_heJ.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/marshal.B5UVoP4O.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/odin.DWFsc191.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/operator.BQcYlBwz.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/outlaw.CVtJL3l5.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/phantom.DuBbxa-f.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/phx-post.D1ldfGxT.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/phx-pre.pvldPD3r.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/rey-eye.BVuQbuR5.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/rey-post.B3i8rquq.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/rey-pre.B0Dm6k8u.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/sheriff.d3cDEaxR.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/shorty.CN_gaLGI.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/sky-pop.BOyIyLmV.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/sky-post.ChrjcCJ6.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/sky-pre.BhvXmRmr.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/soppJDG.C-D-heqM.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/spectre.CC369F-w.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/step-01.BOutsWVR.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/step-02.BnEdArmS.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/step-03.BPvFd04g.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/step-04.CrtjhW-m.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/step-05.DMRjDcrI.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/step-06.BfaGeNG6.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/step-07.BtAXwPeT.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/stinger.9Uplg-EB.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/vandal.rgT5EY0P.ogg",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/media/vys-pop.DMb9qqhc.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/vys-post.C_51dElE.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/vys-pre.CIJqPYp-.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/yru-post.Bgf_dYrt.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/media/yru-pre.BECko5qA.ogg",
+    "source": "site/js/CymPR-fm.js literal"
+  },
+  {
+    "path": "/og-aim.png",
+    "source": "site/js/CbwK0sKS.js literal"
+  },
+  {
+    "path": "/shenhua.webp",
+    "source": "site/js/BW23heFo.js literal"
+  },
+  {
+    "path": "/wasm/basis_transcoder.VXdx5NbI.wasm",
+    "source": "site/js/aQOfOAp-.js literal"
+  },
+  {
+    "path": "/webp/aim-logo.9elbu3yY.webp",
+    "source": "site/js/DylGn4iT.js literal"
+  },
+  {
+    "path": "/webp/ares.CHlu4JgW.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/ascent-mid.BV0MW3Lk.webp",
+    "source": "site/js/B9C9f4Y8.js literal"
+  },
+  {
+    "path": "/webp/bucky.D-gyzOkx.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/bulldog.xenB1oQN.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/classic.C6bCzBxK.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/frenzy.Cxwkjrd6.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/ghost.CpJnieDT.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/guardian.BLQEXJWE.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/heavy.CsUJ2uA7.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/judge.DhYN-9QM.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/light.BIH4nmoF.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/marshal.CW_8XlJh.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/melee.l3ITDWIq.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/odin.H5eGYSqG.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/operator.Djnegr2z.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/outlaw.CIjaW8tl.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/phantom.xskCW10X.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/regen.yYHKKra-.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/sheriff.DrkcZdvb.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/shorty.CN3DVsHn.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/spectre.DlZaUOPp.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/stinger.BmSU6tlm.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/webp/vandal.CWxpmsjy.webp",
+    "source": "site/js/DCKWp-_u.js literal"
+  },
+  {
+    "path": "/zuanshi.webp",
+    "source": "site/js/BW23heFo.js literal"
+  }
+]

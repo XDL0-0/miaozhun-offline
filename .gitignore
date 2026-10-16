@@ -1,0 +1,10 @@
+node_modules/
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+backups/
+local-data/
+qa-artifacts/
+*.user

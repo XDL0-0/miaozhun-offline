@@ -1,0 +1,381 @@
+{
+  "generated": "2026-10-16T16:30:10.144Z",
+  "scope": "Public /aim route preloads, normal editor, training, settings and previews; excludes permission-gated skin lab, auth and courses.",
+  "counts": {
+    "total": 78,
+    "present": 78,
+    "missing": 0
+  },
+  "missing": [],
+  "missingJsRequiringExpansion": [],
+  "excluded": [
+    {
+      "path": "js/BbCrAlFy.js",
+      "source": "js/B9C9f4Y8.js",
+      "reason": "online course/checkup outside local training"
+    },
+    {
+      "path": "js/mxLm3KzH.js",
+      "source": "js/B9C9f4Y8.js",
+      "reason": "skin lab requires val:aimlab:audit permission"
+    },
+    {
+      "path": "js/OmX0A8kk.js",
+      "source": "js/B9C9f4Y8.js",
+      "reason": "online course account outside local training"
+    }
+  ],
+  "all": [
+    {
+      "path": "js/index.C6F_bJRd.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/aQOfOAp-.js; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/aQOfOAp-.js static import; js/BsLgkbch.js static import; js/D5_DqTHX.js static import; js/Biqfuxlb.js static import; js/hilfg0N6.js static import; js/B7oA57Lm.js static import; js/RwMafEaj.js static import; js/BcslMT89.js static import; js/DdXiJEVX.js static import; js/RK0jPcJm.js static import; js/CplsneeA.js static import; js/DOFMGMK6.js static import; js/DXaB1Kn3.js static import; js/ByozQ3Kd.js static import; js/DLaEZlmg.js static import; js/DMTuVw0F.js static import; js/a56SLoY6.js static import; js/BB-zep8c.js static import; js/D4FNK_BL.js static import; js/CdryQ4Mo.js static import; js/hJDQGPKm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/CbwK0sKS.js static import; js/CrbIph4W.js static import; js/COrNDj1U.js static import; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js static import; js/DqtmD7Xr.js dynamic preload js/aQOfOAp-.js; js/DkK-e7zE.js static import; js/DkK-e7zE.js dynamic preload js/CdryQ4Mo.js; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/B9C9f4Y8.js",
+      "source": "aim route preload; js/hJDQGPKm.js dynamic import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/DCKWp-_u.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/aQOfOAp-.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic import; js/B9C9f4Y8.js dynamic preload js/aQOfOAp-.js; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js static import; js/DqtmD7Xr.js dynamic import; js/DqtmD7Xr.js dynamic preload js/aQOfOAp-.js; js/tmIeW3Ig.js static import; js/CFqO0zvx.js static import; js/DijSnIfe.js static import; js/YUUbOBiI.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/ClAFWwpi.js static import; js/BzP-SsEr.js static import"
+    },
+    {
+      "path": "js/B51EgnC9.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/aQOfOAp-.js; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/aQOfOAp-.js static import; js/De-4Vn7b.js static import; js/LwQd1k6X.js static import; js/B7oA57Lm.js static import; js/BcReXW5-.js static import; js/4JWOlA2c.js static import; js/RK0jPcJm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js static import; js/DqtmD7Xr.js dynamic preload js/aQOfOAp-.js; js/tmIeW3Ig.js static import; js/CFqO0zvx.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/De-4Vn7b.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/aQOfOAp-.js; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/aQOfOAp-.js static import; js/DuBWfmzx.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js dynamic preload js/aQOfOAp-.js; js/tmIeW3Ig.js static import; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/DHDvBWqu.js",
+      "source": "aim route preload; js/index.C6F_bJRd.js static import; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/aQOfOAp-.js; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/aQOfOAp-.js static import; js/DuBWfmzx.js static import; js/BsLgkbch.js static import; js/BB-zep8c.js static import; js/CdryQ4Mo.js static import; js/hJDQGPKm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js static import; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js dynamic preload js/aQOfOAp-.js; js/tmIeW3Ig.js static import; js/CFqO0zvx.js static import; js/DkK-e7zE.js static import; js/DkK-e7zE.js dynamic preload js/CdryQ4Mo.js; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/DuBWfmzx.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/BsLgkbch.js static import; js/CplsneeA.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/BW23heFo.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/DuBWfmzx.js static import; js/ByozQ3Kd.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/BsLgkbch.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/CplsneeA.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DijSnIfe.js static import; js/YUUbOBiI.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/D5_DqTHX.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/DCKWp-_u.js static import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/BsLgkbch.js static import; js/B7oA57Lm.js static import; js/CplsneeA.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/Ce84J7kX.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/Cjubwk9a.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/DCKWp-_u.js static import; js/B7oA57Lm.js static import; js/hJDQGPKm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/LwQd1k6X.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js static import; js/CplsneeA.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js static import; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "css/settingsSections.BhSDVSfO.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js"
+    },
+    {
+      "path": "js/DylGn4iT.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/C5ume65F.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "css/latin-900.DJYRJEed.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "js/Biqfuxlb.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/B7oA57Lm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/hilfg0N6.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/Biqfuxlb.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "css/BadgeChip.DUW05nmx.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "css/BadgeStrip.CNE6WKuh.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "js/B7oA57Lm.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic import; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DkK-e7zE.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/BhUyNI_S.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/B7oA57Lm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import"
+    },
+    {
+      "path": "js/RwMafEaj.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/B7oA57Lm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/BcReXW5-.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/B7oA57Lm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/4JWOlA2c.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/B7oA57Lm.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "css/sharedScene.XNNSTrCL.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "js/BcslMT89.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/DdXiJEVX.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/ByozQ3Kd.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/DHBGM3nb.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/RK0jPcJm.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/DhZaeXPX.js static import; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import"
+    },
+    {
+      "path": "js/CplsneeA.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import"
+    },
+    {
+      "path": "js/DOFMGMK6.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/DXaB1Kn3.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "css/SlideCaptcha.IvntPFtu.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "js/ByozQ3Kd.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/DLaEZlmg.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/ByozQ3Kd.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/DMTuVw0F.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/ByozQ3Kd.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/a56SLoY6.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/ByozQ3Kd.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/C-EbiaU_.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/ByozQ3Kd.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/BB-zep8c.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/CSDlBjTJ.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/BB-zep8c.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/D4FNK_BL.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/BB-zep8c.js static import; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "css/WechatQrScan.Bjhy4oDi.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "css/loading.BMm8-qJa.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "js/CdryQ4Mo.js",
+      "source": "aim route preload; js/B9C9f4Y8.js static import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DkK-e7zE.js dynamic import; js/DkK-e7zE.js dynamic preload js/CdryQ4Mo.js; js/DVK7uRSu.js static import; js/DtLCYWdy.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "css/AuthDialog.CnMv9OAO.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DkK-e7zE.js dynamic preload js/CdryQ4Mo.js"
+    },
+    {
+      "path": "css/HallView.Bm0bXTte.css",
+      "source": "aim route preload; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js"
+    },
+    {
+      "path": "js/hJDQGPKm.js",
+      "source": "aim route preload"
+    },
+    {
+      "path": "js/CbwK0sKS.js",
+      "source": "aim route preload; js/hJDQGPKm.js static import; js/COrNDj1U.js static import; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import"
+    },
+    {
+      "path": "js/CrbIph4W.js",
+      "source": "aim route preload; js/hJDQGPKm.js static import; js/CbwK0sKS.js static import; js/COrNDj1U.js static import; js/C5ume65F.js static import; js/DkK-e7zE.js static import; js/DhZaeXPX.js static import"
+    },
+    {
+      "path": "js/COrNDj1U.js",
+      "source": "aim route preload"
+    },
+    {
+      "path": "css/index.CJtmtCFW.css",
+      "source": "aim route preload"
+    },
+    {
+      "path": "js/C5ume65F.js",
+      "source": "aim route preload"
+    },
+    {
+      "path": "js/DqtmD7Xr.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/C5ume65F.js static import; js/DVK7uRSu.js static import"
+    },
+    {
+      "path": "js/tmIeW3Ig.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/CFqO0zvx.js",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/C5ume65F.js static import; js/DqtmD7Xr.js static import; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "css/prepareReplay.DqjPEKa-.css",
+      "source": "aim route preload; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js"
+    },
+    {
+      "path": "css/SharedReplayView.CMBhQanQ.css",
+      "source": "aim route preload"
+    },
+    {
+      "path": "js/DkK-e7zE.js",
+      "source": "aim route preload"
+    },
+    {
+      "path": "css/BoardView.BhZXr_kA.css",
+      "source": "aim route preload"
+    },
+    {
+      "path": "js/DhZaeXPX.js",
+      "source": "aim route preload"
+    },
+    {
+      "path": "css/PlayerProfileView.Cx5AOkak.css",
+      "source": "aim route preload"
+    },
+    {
+      "path": "css/index.DjXErpXU.css",
+      "source": "js/B9C9f4Y8.js dynamic preload js/aQOfOAp-.js; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/B9C9f4Y8.js dynamic preload js/B7oA57Lm.js; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/hJDQGPKm.js dynamic preload js/B9C9f4Y8.js; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DqtmD7Xr.js dynamic preload js/aQOfOAp-.js; js/DkK-e7zE.js dynamic preload js/CdryQ4Mo.js"
+    },
+    {
+      "path": "js/DijSnIfe.js",
+      "source": "js/B9C9f4Y8.js dynamic import; js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js"
+    },
+    {
+      "path": "js/YUUbOBiI.js",
+      "source": "js/B9C9f4Y8.js dynamic preload js/DijSnIfe.js; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DijSnIfe.js static import; js/DVK7uRSu.js static import; js/CymPR-fm.js static import; js/Ce84J7kX.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "js/DVK7uRSu.js",
+      "source": "js/B9C9f4Y8.js dynamic import; js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js"
+    },
+    {
+      "path": "js/CymPR-fm.js",
+      "source": "js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/DVK7uRSu.js static import; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "css/MomentFinale.DZrJQbHL.css",
+      "source": "js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js"
+    },
+    {
+      "path": "css/TrainLayer.CcDeXnwn.css",
+      "source": "js/B9C9f4Y8.js dynamic preload js/DVK7uRSu.js"
+    },
+    {
+      "path": "js/Ce84J7kX.js",
+      "source": "js/DCKWp-_u.js dynamic import; js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js"
+    },
+    {
+      "path": "css/FlashLookPreview.CZbXpgrD.css",
+      "source": "js/DCKWp-_u.js dynamic preload js/Ce84J7kX.js"
+    },
+    {
+      "path": "js/DtLCYWdy.js",
+      "source": "js/hJDQGPKm.js dynamic import; js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js"
+    },
+    {
+      "path": "js/BefkaPT2.js",
+      "source": "js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js; js/DtLCYWdy.js static import"
+    },
+    {
+      "path": "css/MobileAim.DvXtFBBX.css",
+      "source": "js/hJDQGPKm.js dynamic preload js/DtLCYWdy.js"
+    },
+    {
+      "path": "js/ClAFWwpi.js",
+      "source": "js/COrNDj1U.js dynamic import; js/COrNDj1U.js dynamic preload js/ClAFWwpi.js"
+    },
+    {
+      "path": "js/BzP-SsEr.js",
+      "source": "js/COrNDj1U.js dynamic preload js/ClAFWwpi.js; js/ClAFWwpi.js static import"
+    },
+    {
+      "path": "css/StudioShell.BwZqhuLr.css",
+      "source": "js/COrNDj1U.js dynamic preload js/ClAFWwpi.js"
+    },
+    {
+      "path": "img/form-dialog-bg.hqv196S0.png",
+      "source": "css/index.DjXErpXU.css css url"
+    }
+  ],
+  "complete": true,
+  "caveat": "Re-run after missing JavaScript is acquired. Its dependencies cannot be known before source is available. Public server data for boards/shared profiles is separate from this module inventory.",
+  "studio": {
+    "entry": "js/COrNDj1U.js",
+    "shell": "js/ClAFWwpi.js",
+    "style": "css/StudioShell.BwZqhuLr.css",
+    "backendForNormalEditing": false,
+    "storage": {
+      "database": "aimlab-studio",
+      "stores": {
+        "draft": {
+          "keyPath": null,
+          "keys": [
+            "current",
+            "current-owner"
+          ]
+        },
+        "scenes": {
+          "keyPath": "id"
+        }
+      }
+    },
+    "localFeatures": [
+      "new scene",
+      "save as",
+      "autosave",
+      "JSON import",
+      "JSON export",
+      "playtest"
+    ],
+    "onlineFeatures": [
+      "cloud scene share",
+      "my cloud scenes",
+      "publish workshop",
+      "manage submissions",
+      "collaboration",
+      "review/admin routes"
+    ]
+  }
+}
