@@ -21,7 +21,7 @@ function harness(key='ayakashi/phantom',options={}){
   let selected=key,fetches=[],imageLoads=0;
   const gate=new Map(),failures=new Map(),changes=new Map();
   const skins={async initialize(){},selection(weapon){const [collection,gun,theme]=(selected??'default/'+weapon).split('/');return {collection:gun===weapon?collection:'default',theme,modelEnabled:options.enabled!==false};}};
-  const loader=createWeaponModelLoader({skins,timeoutMs:options.timeoutMs??1000,
+  const loader=createWeaponModelLoader({skins,timeoutMs:options.timeoutMs??1000,cacheBytes:options.cacheBytes,
     async fetcher(url,{signal}){
       fetches.push(url);await gate.get(url)?.promise;
       if(failures.get(url))return new Response('',{status:404});
@@ -29,7 +29,7 @@ function harness(key='ayakashi/phantom',options={}){
       return new Response(data,{status:200});
     },
     makeImage(){
-      imageLoads++;const image={async decode(){await options.decodeGate?.promise;}};
+      imageLoads++;const image={width:options.imageWidth??0,height:options.imageHeight??0,async decode(){await options.decodeGate?.promise;}};
       Object.defineProperty(image,'src',{set(value){queueMicrotask(()=>options.imageFailure?image.onerror?.():image.onload?.());}});return image;
     }});
   return {loader,skins,fetches,gate,failures,changes,choose(key){selected=key;},get imageLoads(){return imageLoads;}};
@@ -112,6 +112,17 @@ test('concurrent scene and selection preloads share one task and cache hits do n
   assert.equal(h.fetches.filter(u=>u===index.models['ayakashi/phantom']).length,1);
 });
 
+test('decoded asset budget evicts old packs without resizing source textures or invalidating live assets',async()=>{
+  const h=harness('ayakashi/phantom',{cacheBytes:96*1024*1024,imageWidth:2048,imageHeight:2048});
+  const a=await h.loader.load('phantom');assert.ok(a.byteLength>96*1024*1024);
+  assert.equal(await h.loader.load('phantom'),a,'current large pack remains reusable');
+  h.choose('kuronami/phantom');await h.loader.load('phantom');
+  const before=h.fetches.length;h.choose('ayakashi/phantom');const again=await h.loader.load('phantom');
+  assert.notEqual(again,a);assert.ok(h.fetches.length>before,'old raw assets no longer remain pinned by the cache');
+  assert.ok(a.parts[0].data.primitives[0].position.length>0,'an active controller can still use its evicted assets');
+  for(const image of again.pictures.values()){assert.equal(image.width,2048);assert.equal(image.height,2048);}
+});
+
 test('a missing model falls back to native and can recover on a later preload',()=>warnings(async()=>{
   const h=harness(),url=index.models['ayakashi/phantom'];h.failures.set(url,true);assert.equal(await h.loader.load('phantom'),null);
   h.failures.delete(url);assert.equal((await h.loader.load('phantom')).key,'ayakashi/phantom');
@@ -139,6 +150,34 @@ test('GLB decoding rejects truncated or external buffers before they reach the r
   assert.throws(()=>decodeWeaponGlb(binary(glb)),/embedded buffers/);
 });
 
+test('normal mapping retains the exported tangent frame and mirrored-UV handedness through coordinate conversion',()=>{
+  const pack=read(local(index.models['kuronami/phantom'])),bytes=fs.readFileSync(local(pack.parts[0].url)),buffer=binary(bytes),view=new DataView(buffer);
+  const jsonLength=view.getUint32(12,true),json=JSON.parse(new TextDecoder().decode(new Uint8Array(buffer,20,jsonLength)).trim()),binAt=20+jsonLength+8;
+  const primitive=json.meshes[0].primitives[0],accessor=json.accessors[primitive.attributes.TANGENT],slice=json.bufferViews[accessor.bufferView];
+  assert.equal(accessor.componentType,5126);assert.equal(accessor.type,'VEC4');
+  const offset=binAt+(slice.byteOffset??0)+(accessor.byteOffset??0),decoded=decodeWeaponGlb(buffer),tangent=decoded.primitives[0].tangent;
+  assert.ok(tangent.length>=accessor.count*4);assert.equal(decoded.primitives[0].position.length/3,tangent.length/4);
+  for(let i=0;i<accessor.count;i++){
+    const at=offset+i*(slice.byteStride??16),x=view.getFloat32(at,true),y=view.getFloat32(at+4,true),z=view.getFloat32(at+8,true),w=view.getFloat32(at+12,true);
+    assert.ok(tangent[i*4]*x-tangent[i*4+1]*z+tangent[i*4+2]*y>.998,'retain original tangent direction while orthogonalizing');
+    assert.ok(Math.abs(Math.hypot(...tangent.subarray(i*4,i*4+3))-1)<.002);
+    assert.ok(Math.abs(tangent[i*4+3])===1);assert.equal(w,1,'exported w is missing its mirrored-island sign');
+  }
+  const signs=new Set(Array.from(tangent).filter((_,i)=>i%4===3));assert.deepEqual(signs,new Set([1,-1]),'mirrored UV islands regain a distinct handedness');
+  const p=decoded.primitives[0];let checked=0;
+  for(let k=0;k<p.index.length;k+=3){
+    const [a,b,c]=p.index.subarray(k,k+3),du1=p.uv[b*2]-p.uv[a*2],dv1=p.uv[b*2+1]-p.uv[a*2+1],du2=p.uv[c*2]-p.uv[a*2],dv2=p.uv[c*2+1]-p.uv[a*2+1],det=du1*dv2-du2*dv1;
+    if(Math.abs(det)<1e-12)continue;
+    const B=[0,1,2].map(axis=>((p.position[c*3+axis]-p.position[a*3+axis])*du1-(p.position[b*3+axis]-p.position[a*3+axis])*du2)/det);
+    for(const v of [a,b,c]){
+      const [nx,ny,nz]=p.normal.subarray(v*3,v*3+3),[tx,ty,tz,w]=p.tangent.subarray(v*4,v*4+4);
+      const orientation=((ny*tz-nz*ty)*B[0]+(nz*tx-nx*tz)*B[1]+(nx*ty-ny*tx)*B[2])*w;
+      assert.ok(orientation>=-1e-10,'each side of a mirrored seam must reconstruct the UV bitangent');checked++;
+    }
+  }
+  assert.ok(checked>1000);
+});
+
 test('model toggle migrates old saved selections and persists independently from fire/kill/banner toggles',async()=>{
   const values=new Map(),storage={getItem:key=>values.get(key),setItem:(key,value)=>values.set(key,value)};
   const manifest=read(new URL('dist/skin-packs/index.json',root));
@@ -153,6 +192,7 @@ test('native viewmodel bridge is version-pinned, reversible and never changes we
   const name='CFqO0zvx.js',source=fs.readFileSync(new URL('site/js/'+name,root),'utf8'),game=fs.readFileSync(new URL('site/js/CymPR-fm.js',root),'utf8'),input={[name]:source,'CymPR-fm.js':game};
   const patched=applyWeaponModelsPatch(input);assert.equal(input[name],source);assert.equal(input['CymPR-fm.js'],game);
   assert.match(patched[name],/appearance':await __aimLoadWeaponModel/);assert.match(patched[name],/__aimAppearance\?\.update\(bf,/);assert.match(patched[name],/__aimAppearance\?\.dispose\(\)/);
+  assert.match(patched[name],/linearSrgb:'srgb-linear'/);assert.ok(!patched[name].includes('__aimWeaponLinearSrgb'));
   assert.match(patched['CymPR-fm.js'],/_t.push\(\{at:\(ke.tick\+1\)\*he,inspect:true,weapon:qe\(\)\}/);
   assert.equal(patched['CymPR-fm.js'].split('ke.step(Be)').length,game.split('ke.step(Be)').length);
   assert.throws(()=>applyWeaponModelsPatch(patched),/already patched/);assert.throws(()=>applyWeaponModelsPatch({[name]:source.replace("'setGun'","'setGunChanged'")}),/version mismatch/);

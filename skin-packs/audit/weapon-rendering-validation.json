@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-19T23:38:48.763Z",
+  "scope": "HDR source reflections, tangent frames and texture/cache ownership",
+  "build": {
+    "passed": true
+  },
+  "tests": {
+    "passed": 168,
+    "failed": 0,
+    "skipped": 0
+  },
+  "offline": {
+    "success": true,
+    "resources": 2824,
+    "storedBytes": 494629325,
+    "scenes": 62,
+    "maps": 6,
+    "missingRequired": 0,
+    "failures": []
+  },
+  "source": {
+    "assets": 640,
+    "unchangedOriginalSurfaceAndGeometryAssets": 445,
+    "environmentSourceRecords": 14,
+    "uniqueEnvironmentPayloads": 13,
+    "visibleMaterialAssignments": 135,
+    "bodyResolution": "unchanged"
+  },
+  "performance": {
+    "fpsMeasured": false,
+    "rawHistoricalCacheBudgetBytes": 100663296,
+    "retainsMostRecentOversizedPack": true,
+    "sharingEstimates": [
+      {
+        "keys": [
+          "champions-2026/phantom/defending",
+          "champions-2026/melee/defending"
+        ],
+        "bodyRgba8FullMipBytesSaved": 5592400,
+        "measured": false
+      },
+      {
+        "keys": [
+          "kuronami/vandal",
+          "kuronami/phantom"
+        ],
+        "bodyRgba8FullMipBytesSaved": 7346184,
+        "measured": false
+      }
+    ]
+  },
+  "servedRuntime": {
+    "matchesBuild": true,
+    "modules": 4
+  },
+  "browserValidation": {
+    "performed": false,
+    "reason": "Computer Use stopped because the active Edge URL could not be determined reliably. No alternate browser or automation was used."
+  },
+  "limitations": [
+    "No new rendered visual acceptance or full-scene FPS benchmark; prior Champions screenshots predate this material change.",
+    "Original cooked custom shader formulas, projection volumes and reflection rotation units remain approximated or omitted."
+  ],
+  "tangents": {
+    "status": "pass",
+    "glbs": 73,
+    "primitives": 186,
+    "sourceVertices": 274590,
+    "decodedVertices": 276150,
+    "extraVertices": 1560,
+    "triangles": 289168,
+    "corners": 867504,
+    "signedCorners": 858207,
+    "ambiguousCorners": 0,
+    "degenerateUVCorners": 9297,
+    "duplicateAttributeValuesChecked": 27944,
+    "failureCount": 0,
+    "extraVertexPercent": 0.5681197421610401,
+    "report": "skin-packs/audit/weapon-tangent-validation.json"
+  }
+}

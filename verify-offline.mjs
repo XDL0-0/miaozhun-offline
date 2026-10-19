@@ -6,7 +6,7 @@ import crypto from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {inventoryFonts} from './verify-font-inventory.mjs';
-import {decodeWeaponGlb} from './patches/weapon-models-runtime.mjs';
+import {decodeWeaponGlb,decodeWeaponEnvironment} from './patches/weapon-models-runtime.mjs';
 import {decodeWeaponMotion} from './patches/weapon-motion-runtime.mjs';
 import {gunzipSync} from 'node:zlib';
 
@@ -169,10 +169,18 @@ try{
    if(!safe(part.url))throw new Error('Invalid weapon GLB path');requireAsset(part.url,key+' '+part.role);seen.add(part.url);
    const bytes=fs.readFileSync(path.join(root,part.url.slice(1))),decoded=decodeWeaponGlb(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));
    if(decoded.primitives.some(p=>p.material>=part.materials.length||!p.position.every(Number.isFinite)))throw new Error('Invalid weapon geometry '+key);
-   for(const mat of part.materials)for(const texture of weaponMaterialTextures(mat)){
+   // Inventory retained source maps as well as visible/preloaded maps. Hidden
+   // surfaces keep their original files offline but do not upload them.
+   for(const mat of part.materials)for(const texture of weaponMaterialTextures({...mat,hidden:false})){
     if(!safe(texture))throw new Error('Invalid weapon texture path');requireAsset(texture,key+' '+mat.name);seen.add(texture);
     const png=fs.readFileSync(path.join(root,texture.slice(1)));
     if(!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||png.readUInt32BE(16)>4096||png.readUInt32BE(20)>4096)throw new Error('Invalid weapon texture '+texture);
+   }
+   for(const mat of part.materials)if(mat.environment){
+    const meta=mat.environment;if(!safe(meta.data))throw new Error('Invalid weapon environment path');requireAsset(meta.data,key+' '+mat.name+' HDR reflection');
+    if(!seen.has(meta.data)){
+     const bytes=gunzipSync(fs.readFileSync(path.join(root,meta.data.slice(1))));decodeWeaponEnvironment(meta,bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));seen.add(meta.data);
+    }
    }
   }
   if(pack.weapon!=='melee'&&(!fx.guns[key]?.hip?.length||!pack.motions?.actions?.reload?.arms)||!pack.motions?.actions?.inspect?.arms)throw new Error('Incomplete skin motions/effects '+key);
@@ -183,7 +191,7 @@ try{
   for(const action of Object.values(pack.motions.actions))for(const track of Object.values(action))for(const s of track.segments){if(!pack.motions.clips[s.clip]||!(s.to>s.from)||!(s.rate>0))throw new Error('Invalid skin montage segment '+key);}
   for(const url of pack.effects.textures){if(!safe(url))throw new Error('Invalid skin sprite path');requireAsset(url,key+' preloaded fire sprite');}
  }
- if(index.counts.assets!==seen.size)throw new Error('Weapon model asset count mismatch');
+ if(index.counts.assets!==seen.size)throw new Error('Weapon model asset count mismatch: expected '+index.counts.assets+', found '+seen.size);
  if(skinPacks)skinPacks.weaponModels={...index.counts};
 }catch(error){failures.push({path:'/skin-packs/models/index.json',stage:'weapon model integrity',error:error.message})}
 // Expand every decoded manifest. Packed /Game identities are metadata, not URLs.

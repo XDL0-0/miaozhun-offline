@@ -1621,6 +1621,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+      "bytes": 2516793,
+      "sha256": "151e10f5bd0518825299a7b9a628fc11eac9c81f2f613976d2133725b8b8862e",
+      "source": {
+        "path": "ShooterGame/Content/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "2da4aee022dbc5c87a20a96eb3f33a7068bd4d78793e05b8bd256f10f0ee5b31",
+        "originalSha256": "83a0faa60e1f76ca1cb7207b9eab5da8de24b76a102cc0fb6313e7d92887e359",
+        "width": 1024,
+        "height": 512,
+        "resolution": "environment-size-cap",
+        "resampled": true,
+        "original": {
+          "file": "skin-packs/environments/originals/83a0faa60e1f76ca1cb7207b9eab5da8de24b76a102cc0fb6313e7d92887e359.hdr",
+          "sha256": "83a0faa60e1f76ca1cb7207b9eab5da8de24b76a102cc0fb6313e7d92887e359",
+          "bytes": 3544559,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.00390625,
+              0.003631591796875,
+              0.0018310546875
+            ],
+            "maximumRGB": [
+              10816,
+              10048,
+              8896
+            ],
+            "meanRGB": [
+              0.7689996344254938,
+              0.6825286402325829,
+              0.6859945067290109
+            ],
+            "meanLuminance": 0.7011626091589385,
+            "maximumLuminance": 10128.1024,
+            "pixelsAboveOne": 174007,
+            "pixels": 1570878
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/8dd9121003aaf58a2ff8576a.png",
       "bytes": 1476633,
       "sha256": "8dd9121003aaf58a2ff8576a6e621749e99d6415e39fecf98878a655f30ee592",
@@ -3046,6 +3090,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/931656a3e4d9dfa5414daae1.bin.gz",
+      "bytes": 162229,
+      "sha256": "931656a3e4d9dfa5414daae1a897278d1ccaa45807a2e7257f0080581ff7497d",
+      "source": {
+        "path": "ShooterGame/Content/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_Cathedral.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "d2998baa86b330809d1d6a93e5625ffac2f5b93bd7087530d2025d1b2df1f30c",
+        "originalSha256": "216a7badfaf902119b7ad66b1f3015cf82a50003114e566ccd012443e78d3d2e",
+        "width": 443,
+        "height": 221,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/216a7badfaf902119b7ad66b1f3015cf82a50003114e566ccd012443e78d3d2e.hdr",
+          "sha256": "216a7badfaf902119b7ad66b1f3015cf82a50003114e566ccd012443e78d3d2e",
+          "bytes": 322924,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.005950927734375,
+              0.005950927734375,
+              0.005950927734375
+            ],
+            "maximumRGB": [
+              22.125,
+              22.125,
+              22.125
+            ],
+            "meanRGB": [
+              0.2353841925529925,
+              0.2353841925529925,
+              0.2353841925529925
+            ],
+            "meanLuminance": 0.2353841925529925,
+            "maximumLuminance": 22.125,
+            "pixelsAboveOne": 4336,
+            "pixels": 97903
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/7b40f7e13ea0b92fd1a2b479.glb",
       "bytes": 192276,
       "sha256": "7b40f7e13ea0b92fd1a2b479368fcecc4d0664f7c1b61fe17ec2c3e9b379d762",
@@ -3274,6 +3362,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/976fa998b14147b591aa10c9.bin.gz",
+      "bytes": 1207,
+      "sha256": "976fa998b14147b591aa10c9f7517d6043e6f7c75ad383a265b599d8ed6ef70c",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Afterglow/Plastic/Afterglow_HDRI.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "4b77b4754ec15867f66b66b2a515bd1281f4a1f22c4eeed569358bd1ff3defe1",
+        "originalSha256": "13bcb44f49651f31de3549decd186610ef6d36b2796dffb19e460bbd297824d8",
+        "width": 27,
+        "height": 13,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/13bcb44f49651f31de3549decd186610ef6d36b2796dffb19e460bbd297824d8.hdr",
+          "sha256": "13bcb44f49651f31de3549decd186610ef6d36b2796dffb19e460bbd297824d8",
+          "bytes": 1395,
+          "width": 27,
+          "height": 13,
+          "statistics": {
+            "minimumRGB": [
+              0.01507568359375,
+              0.0150146484375,
+              0.01507568359375
+            ],
+            "maximumRGB": [
+              13.4375,
+              13.4375,
+              13.4375
+            ],
+            "meanRGB": [
+              0.8174306320668625,
+              0.8157555561120015,
+              0.8158103312522258
+            ],
+            "meanLuminance": 0.8161156320251289,
+            "maximumLuminance": 13.4375,
+            "pixelsAboveOne": 50,
+            "pixels": 351
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/d049afd3658af63b3e113faf.png",
       "bytes": 137608,
       "sha256": "d049afd3658af63b3e113fafcaacfe04b03ca41ffa0111524fdd7e64b5c66969",
@@ -3470,6 +3602,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/25a7691818490341518e0e2d.bin.gz",
+      "bytes": 363171,
+      "sha256": "25a7691818490341518e0e2d761495807f7994eb67c14d30ef49ef81af5e6768",
+      "source": {
+        "path": "ShooterGame/Content/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "8edf210ffc78ef5ea530588c4e97c229c6728b2c0327567b8897eed829912e74",
+        "originalSha256": "75acd6c18840ad49a53b94a236fb3ea9129056dbd994710a5ebf640b6b74e6b8",
+        "width": 443,
+        "height": 221,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/75acd6c18840ad49a53b94a236fb3ea9129056dbd994710a5ebf640b6b74e6b8.hdr",
+          "sha256": "75acd6c18840ad49a53b94a236fb3ea9129056dbd994710a5ebf640b6b74e6b8",
+          "bytes": 321179,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.000579833984375,
+              0.0009918212890625,
+              0.001129150390625
+            ],
+            "maximumRGB": [
+              306,
+              350,
+              408
+            ],
+            "meanRGB": [
+              0.17058158645325183,
+              0.20002778532551233,
+              0.20777435893429355
+            ],
+            "meanLuminance": 0.1943268260598234,
+            "maximumLuminance": 344.8332,
+            "pixelsAboveOne": 3234,
+            "pixels": 97903
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/5387259b83f34f58ae53e029.png",
       "bytes": 62663,
       "sha256": "5387259b83f34f58ae53e0299f3be7178d454e1f0f6cfb65f4677ef58d1ef0cc",
@@ -3483,6 +3659,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/d026ca1184949e0df5c11eb4.bin.gz",
+      "bytes": 2511508,
+      "sha256": "d026ca1184949e0df5c11eb45c1e36c6cb2d3defeb965942eae5cf48a5ac86a3",
+      "source": {
+        "path": "ShooterGame/Content/Blueprints/LightStudio/HDRI/OutOfGame/Ares_HDRI_ModelViewerBuddy.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "45d5111203fa1c3d4d247a5340ddece5ee761f9effa75b659d1d70bb7c966eb1",
+        "originalSha256": "fa1ceb4d5659c028be45371174fc969091f69c73176b96137d8094d0420b8542",
+        "width": 1024,
+        "height": 512,
+        "resolution": "environment-size-cap",
+        "resampled": true,
+        "original": {
+          "file": "skin-packs/environments/originals/fa1ceb4d5659c028be45371174fc969091f69c73176b96137d8094d0420b8542.hdr",
+          "sha256": "fa1ceb4d5659c028be45371174fc969091f69c73176b96137d8094d0420b8542",
+          "bytes": 3574426,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.007537841796875,
+              0.006378173828125,
+              0.00347900390625
+            ],
+            "maximumRGB": [
+              1280,
+              1184,
+              1056
+            ],
+            "meanRGB": [
+              1.0696319750337084,
+              0.9757202708287194,
+              0.9490489930163346
+            ],
+            "meanLuminance": 0.9937602328841477,
+            "maximumLuminance": 1195.1680000000001,
+            "pixelsAboveOne": 194260,
+            "pixels": 1570878
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/2ce4599917f0ffe331411087.png",
       "bytes": 13482,
       "sha256": "2ce4599917f0ffe3314110877d596a5ccab9e8ec588f6feb9ba02136e2cc575d",
@@ -3493,6 +3713,50 @@
         "width": 128,
         "height": 128,
         "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/1cd70097fce51023df98f2a9.bin.gz",
+      "bytes": 284467,
+      "sha256": "1cd70097fce51023df98f2a9aa82dc8061b7387f4d7a58508dd9b2d0759ac16d",
+      "source": {
+        "path": "ShooterGame/Content/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass_Alt.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "35b7f62b0780ab1ee3f3bd3b210a9b5dbd3e4e1d7b472cd927df7df1ddb79999",
+        "originalSha256": "d74611931b45bf23d4b7c5095df25a3baefd191322b0d376fc03680136aca869",
+        "width": 443,
+        "height": 221,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/d74611931b45bf23d4b7c5095df25a3baefd191322b0d376fc03680136aca869.hdr",
+          "sha256": "d74611931b45bf23d4b7c5095df25a3baefd191322b0d376fc03680136aca869",
+          "bytes": 269005,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              5.5625,
+              5.375,
+              4.40625
+            ],
+            "meanRGB": [
+              0.18485861194353784,
+              0.1529858168942662,
+              0.15105865555862916
+            ],
+            "meanLuminance": 0.15962283207332612,
+            "maximumLuminance": 5.098349999999999,
+            "pixelsAboveOne": 2889,
+            "pixels": 97903
+          }
+        }
       }
     },
     {
@@ -5367,6 +5631,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+      "bytes": 18944,
+      "sha256": "42be264a7d4411fb22c3a5c23804f00e1c302f89e5226c30e768c1e3c9b7adc7",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Snowglobe/Glass/Snowglobe_HDRI.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "ff320a563cfc8e0443148f62a0dadc22ddb0becba8af004e222f74a20cd87b99",
+        "originalSha256": "70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408",
+        "width": 221,
+        "height": 110,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408.hdr",
+          "sha256": "70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408",
+          "bytes": 39129,
+          "width": 221,
+          "height": 110,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              0.388671875,
+              0.388671875,
+              0.388671875
+            ],
+            "meanRGB": [
+              0.07882993623264922,
+              0.07882993623264922,
+              0.07882993623264922
+            ],
+            "meanLuminance": 0.07882993623264922,
+            "maximumLuminance": 0.38867187499999994,
+            "pixelsAboveOne": 0,
+            "pixels": 24310
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/bf2cca4daf6f692f7e4da1ea.png",
       "bytes": 22270,
       "sha256": "bf2cca4daf6f692f7e4da1eac009c9c62aba97b5d8fd27f6d34ad659b90e6d9e",
@@ -5768,6 +6076,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/9af2d9f1c9fbb2831ef39ec5.bin.gz",
+      "bytes": 356367,
+      "sha256": "9af2d9f1c9fbb2831ef39ec553eb2733afd66903df81bf2bf906c46d1b69e973",
+      "source": {
+        "path": "ShooterGame/Content/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson_Glass2.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "e481a21278dc96fccebbda2ffc56a29af50f0b88324d4c40bd11cf72ed159146",
+        "originalSha256": "0e67609a6ef98f542e2eca95ccda40e34ca2b263adc9bd7f251a502eca12f10f",
+        "width": 443,
+        "height": 221,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/0e67609a6ef98f542e2eca95ccda40e34ca2b263adc9bd7f251a502eca12f10f.hdr",
+          "sha256": "0e67609a6ef98f542e2eca95ccda40e34ca2b263adc9bd7f251a502eca12f10f",
+          "bytes": 310351,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.0017852783203125,
+              0.002105712890625,
+              0.00244140625
+            ],
+            "maximumRGB": [
+              104,
+              117,
+              139
+            ],
+            "meanRGB": [
+              0.16154675018911216,
+              0.18976321258923654,
+              0.1955822961132647
+            ],
+            "meanLuminance": 0.18418453051339304,
+            "maximumLuminance": 115.82459999999999,
+            "pixelsAboveOne": 2612,
+            "pixels": 97903
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/82befa2012f78482295c8cef.png",
       "bytes": 122,
       "sha256": "82befa2012f78482295c8cefdb55cc11ff8fc97c324748c067564963d3dc9344",
@@ -5821,6 +6173,50 @@
         "width": 1024,
         "height": 1024,
         "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/039cacf21e2fe9598f2deea8.bin.gz",
+      "bytes": 575366,
+      "sha256": "039cacf21e2fe9598f2deea895f7e4ca60e3977b06dbae6e13c11aa0a7a58d20",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/HDRI_ValReflections_Test.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "360e09562dc581845557f687d2870afc57c3cec7fd335c833332db1fb7877bc3",
+        "originalSha256": "c9e245eed37e4fc51ee623ef466817b343e583c210d08a36a7d0c512071b6ff5",
+        "width": 1024,
+        "height": 512,
+        "resolution": "environment-size-cap",
+        "resampled": true,
+        "original": {
+          "file": "skin-packs/environments/originals/c9e245eed37e4fc51ee623ef466817b343e583c210d08a36a7d0c512071b6ff5.hdr",
+          "sha256": "c9e245eed37e4fc51ee623ef466817b343e583c210d08a36a7d0c512071b6ff5",
+          "bytes": 4406275,
+          "width": 3547,
+          "height": 1773,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              3.609375,
+              3.625,
+              3.625
+            ],
+            "meanRGB": [
+              0.039266808924941804,
+              0.0392672739603536,
+              0.03926727528840841
+            ],
+            "meanLuminance": 0.03926717518971136,
+            "maximumLuminance": 3.62055,
+            "pixelsAboveOne": 56168,
+            "pixels": 6288831
+          }
+        }
       }
     },
     {
@@ -6112,6 +6508,50 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/a1e778815259af5f0e534af7.bin.gz",
+      "bytes": 665219,
+      "sha256": "a1e778815259af5f0e534af7eaa15f446c48f508cfd327401c1887feef723741",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_Gold_HDRI.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "c318868409184c193caf3d600d63cf556e260f0b90ce22de90f5fbe364ea9881",
+        "originalSha256": "20dae3b52dd5522b7b2d7679d42848ef3a842c9cfa69bb53dd614b7cbc6f5610",
+        "width": 886,
+        "height": 443,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/20dae3b52dd5522b7b2d7679d42848ef3a842c9cfa69bb53dd614b7cbc6f5610.hdr",
+          "sha256": "20dae3b52dd5522b7b2d7679d42848ef3a842c9cfa69bb53dd614b7cbc6f5610",
+          "bytes": 784551,
+          "width": 886,
+          "height": 443,
+          "statistics": {
+            "minimumRGB": [
+              0.12109375,
+              0.03125,
+              0
+            ],
+            "maximumRGB": [
+              1,
+              1,
+              1
+            ],
+            "meanRGB": [
+              0.37517283129468176,
+              0.21633773526990902,
+              0.09886741759671387
+            ],
+            "meanLuminance": 0.24162471974978134,
+            "maximumLuminance": 1,
+            "pixelsAboveOne": 0,
+            "pixels": 392498
+          }
+        }
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/b4fbe5eba9094b6e680cd236.png",
       "bytes": 14866,
       "sha256": "b4fbe5eba9094b6e680cd23650c2018201da681dd040e73a87c84d9f70b76b03",
@@ -6152,6 +6592,50 @@
         "width": 512,
         "height": 512,
         "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/3edc9c7aead8258e2298a3b7.bin.gz",
+      "bytes": 2209279,
+      "sha256": "3edc9c7aead8258e2298a3b751d82ae53c16b7722333e945f888b1fc83bb243f",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_HDRI.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "333ba733ad5145d4efc3536c48f65cf59604ca5fac7a52094f176a65ad823d1a",
+        "originalSha256": "05e8da8c78c50eae91bdd4af916852534a8aa9cf1c2f59401586894e0dbac710",
+        "width": 1024,
+        "height": 512,
+        "resolution": "environment-size-cap",
+        "resampled": true,
+        "original": {
+          "file": "skin-packs/environments/originals/05e8da8c78c50eae91bdd4af916852534a8aa9cf1c2f59401586894e0dbac710.hdr",
+          "sha256": "05e8da8c78c50eae91bdd4af916852534a8aa9cf1c2f59401586894e0dbac710",
+          "bytes": 4320229,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.008544921875,
+              0.008544921875,
+              0.008544921875
+            ],
+            "maximumRGB": [
+              4320,
+              4320,
+              4320
+            ],
+            "meanRGB": [
+              1.0638451783161704,
+              1.0621959849481368,
+              1.062498024071334
+            ],
+            "meanLuminance": 1.0625684106834876,
+            "maximumLuminance": 4320,
+            "pixelsAboveOne": 169423,
+            "pixels": 1570878
+          }
+        }
       }
     },
     {
@@ -6411,6 +6895,50 @@
         "width": 1024,
         "height": 1024,
         "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/425137aa0d50a2d39fbe8dec.bin.gz",
+      "bytes": 317033,
+      "sha256": "425137aa0d50a2d39fbe8decb3120490bfd0ec4446fc08a383611017a02d77ec",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Speedster/Speedster_Glass_HDRI.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "5831b5a471614c4cd76a3b43d2a55c1d67b1f27aa8c565c2bd85cd61631fbbe8",
+        "originalSha256": "07e1577a24cedb54c69215ded6609b9072171ff7dbe26fa1f592c0891c5158e5",
+        "width": 443,
+        "height": 221,
+        "resolution": "original",
+        "resampled": false,
+        "original": {
+          "file": "skin-packs/environments/originals/07e1577a24cedb54c69215ded6609b9072171ff7dbe26fa1f592c0891c5158e5.hdr",
+          "sha256": "07e1577a24cedb54c69215ded6609b9072171ff7dbe26fa1f592c0891c5158e5",
+          "bytes": 279429,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.000701904296875,
+              0.0009918212890625,
+              0.001129150390625
+            ],
+            "maximumRGB": [
+              0.99609375,
+              0.99609375,
+              0.99609375
+            ],
+            "meanRGB": [
+              0.28152413779928975,
+              0.3016529189428986,
+              0.3053101702023713
+            ],
+            "meanLuminance": 0.2976375936126955,
+            "maximumLuminance": 0.9960937499999999,
+            "pixelsAboveOne": 0,
+            "pixels": 97903
+          }
+        }
       }
     },
     {
@@ -7727,6 +8255,50 @@
         "width": 1024,
         "height": 1024,
         "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/19e130a7b78117072b14105b.bin.gz",
+      "bytes": 1887385,
+      "sha256": "19e130a7b78117072b14105b251c1c5ff7781b4cc5a59920b3c4e77075db4cee",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_Gold_Melee_HDRI.hdr",
+        "kind": "environment",
+        "operation": "linear HDR panorama to little-endian RGBA16F; gzip",
+        "sha256": "917cfaf47d1c13f49cdbac1db589ad88628582c4acc86b6a01510ad0f4400632",
+        "originalSha256": "a1224a178a30347286c940c21e5602b093f51b632d57a081b8fec97e6ae087b1",
+        "width": 1024,
+        "height": 512,
+        "resolution": "environment-size-cap",
+        "resampled": true,
+        "original": {
+          "file": "skin-packs/environments/originals/a1224a178a30347286c940c21e5602b093f51b632d57a081b8fec97e6ae087b1.hdr",
+          "sha256": "a1224a178a30347286c940c21e5602b093f51b632d57a081b8fec97e6ae087b1",
+          "bytes": 2553242,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.12109375,
+              0.04296875,
+              0
+            ],
+            "maximumRGB": [
+              1,
+              1,
+              1
+            ],
+            "meanRGB": [
+              0.3930054434402091,
+              0.27509555060281177,
+              0.1491662618124625
+            ],
+            "meanLuminance": 0.29107109917256163,
+            "maximumLuminance": 1,
+            "pixelsAboveOne": 0,
+            "pixels": 1570878
+          }
+        }
       }
     },
     {
@@ -11310,6 +11882,3533 @@
       ]
     }
   ],
+  "environments": {
+    "schemaVersion": 1,
+    "type": "rgba16f",
+    "channels": "RGBA",
+    "byteOrder": "little-endian",
+    "colorSpace": "linear-srgb",
+    "alpha": 1,
+    "processing": "Radiance RGBE decoded to linear radiance; oversized panoramas use linear area averaging before IEEE binary16 quantization. No exposure, tone mapping or radiance clamping.",
+    "cap": {
+      "width": 1024,
+      "height": 512
+    },
+    "fallbackSource": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+    "sources": [
+      {
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "original": {
+          "file": "skin-packs/environments/originals/83a0faa60e1f76ca1cb7207b9eab5da8de24b76a102cc0fb6313e7d92887e359.hdr",
+          "sha256": "83a0faa60e1f76ca1cb7207b9eab5da8de24b76a102cc0fb6313e7d92887e359",
+          "bytes": 3544559,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.00390625,
+              0.003631591796875,
+              0.0018310546875
+            ],
+            "maximumRGB": [
+              10816,
+              10048,
+              8896
+            ],
+            "meanRGB": [
+              0.7689996344254938,
+              0.6825286402325829,
+              0.6859945067290109
+            ],
+            "meanLuminance": 0.7011626091589385,
+            "maximumLuminance": 10128.1024,
+            "pixelsAboveOne": 174007,
+            "pixels": 1570878
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+          "width": 1024,
+          "height": 512,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "2da4aee022dbc5c87a20a96eb3f33a7068bd4d78793e05b8bd256f10f0ee5b31",
+        "decodedBytes": 4194304,
+        "compressedBytes": 2516793,
+        "resampled": true,
+        "statistics": {
+          "minimumRGB": [
+            0.004161834716796875,
+            0.00383758544921875,
+            0.001956939697265625
+          ],
+          "maximumRGB": [
+            10040,
+            9376,
+            8328
+          ],
+          "meanRGB": [
+            0.7690259726514341,
+            0.6825215618737275,
+            0.6860056504774548
+          ],
+          "meanLuminance": 0.7011639508022137,
+          "maximumLuminance": 9441.5008,
+          "pixelsAboveOne": 58397,
+          "pixels": 524288
+        }
+      },
+      {
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_Cathedral",
+        "original": {
+          "file": "skin-packs/environments/originals/216a7badfaf902119b7ad66b1f3015cf82a50003114e566ccd012443e78d3d2e.hdr",
+          "sha256": "216a7badfaf902119b7ad66b1f3015cf82a50003114e566ccd012443e78d3d2e",
+          "bytes": 322924,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.005950927734375,
+              0.005950927734375,
+              0.005950927734375
+            ],
+            "maximumRGB": [
+              22.125,
+              22.125,
+              22.125
+            ],
+            "meanRGB": [
+              0.2353841925529925,
+              0.2353841925529925,
+              0.2353841925529925
+            ],
+            "meanLuminance": 0.2353841925529925,
+            "maximumLuminance": 22.125,
+            "pixelsAboveOne": 4336,
+            "pixels": 97903
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/931656a3e4d9dfa5414daae1.bin.gz",
+          "width": 443,
+          "height": 221,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "d2998baa86b330809d1d6a93e5625ffac2f5b93bd7087530d2025d1b2df1f30c",
+        "decodedBytes": 783224,
+        "compressedBytes": 162229,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0.005950927734375,
+            0.005950927734375,
+            0.005950927734375
+          ],
+          "maximumRGB": [
+            22.125,
+            22.125,
+            22.125
+          ],
+          "meanRGB": [
+            0.2353841925529925,
+            0.2353841925529925,
+            0.2353841925529925
+          ],
+          "meanLuminance": 0.2353841925529925,
+          "maximumLuminance": 22.125,
+          "pixelsAboveOne": 4336,
+          "pixels": 97903
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Afterglow/Plastic/Afterglow_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/13bcb44f49651f31de3549decd186610ef6d36b2796dffb19e460bbd297824d8.hdr",
+          "sha256": "13bcb44f49651f31de3549decd186610ef6d36b2796dffb19e460bbd297824d8",
+          "bytes": 1395,
+          "width": 27,
+          "height": 13,
+          "statistics": {
+            "minimumRGB": [
+              0.01507568359375,
+              0.0150146484375,
+              0.01507568359375
+            ],
+            "maximumRGB": [
+              13.4375,
+              13.4375,
+              13.4375
+            ],
+            "meanRGB": [
+              0.8174306320668625,
+              0.8157555561120015,
+              0.8158103312522258
+            ],
+            "meanLuminance": 0.8161156320251289,
+            "maximumLuminance": 13.4375,
+            "pixelsAboveOne": 50,
+            "pixels": 351
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/976fa998b14147b591aa10c9.bin.gz",
+          "width": 27,
+          "height": 13,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "4b77b4754ec15867f66b66b2a515bd1281f4a1f22c4eeed569358bd1ff3defe1",
+        "decodedBytes": 2808,
+        "compressedBytes": 1207,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0.01507568359375,
+            0.0150146484375,
+            0.01507568359375
+          ],
+          "maximumRGB": [
+            13.4375,
+            13.4375,
+            13.4375
+          ],
+          "meanRGB": [
+            0.8174306320668625,
+            0.8157555561120015,
+            0.8158103312522258
+          ],
+          "meanLuminance": 0.8161156320251289,
+          "maximumLuminance": 13.4375,
+          "pixelsAboveOne": 50,
+          "pixels": 351
+        }
+      },
+      {
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass",
+        "original": {
+          "file": "skin-packs/environments/originals/75acd6c18840ad49a53b94a236fb3ea9129056dbd994710a5ebf640b6b74e6b8.hdr",
+          "sha256": "75acd6c18840ad49a53b94a236fb3ea9129056dbd994710a5ebf640b6b74e6b8",
+          "bytes": 321179,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.000579833984375,
+              0.0009918212890625,
+              0.001129150390625
+            ],
+            "maximumRGB": [
+              306,
+              350,
+              408
+            ],
+            "meanRGB": [
+              0.17058158645325183,
+              0.20002778532551233,
+              0.20777435893429355
+            ],
+            "meanLuminance": 0.1943268260598234,
+            "maximumLuminance": 344.8332,
+            "pixelsAboveOne": 3234,
+            "pixels": 97903
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/25a7691818490341518e0e2d.bin.gz",
+          "width": 443,
+          "height": 221,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "8edf210ffc78ef5ea530588c4e97c229c6728b2c0327567b8897eed829912e74",
+        "decodedBytes": 783224,
+        "compressedBytes": 363171,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0.000579833984375,
+            0.0009918212890625,
+            0.001129150390625
+          ],
+          "maximumRGB": [
+            306,
+            350,
+            408
+          ],
+          "meanRGB": [
+            0.17058158645325183,
+            0.20002778532551233,
+            0.20777435893429355
+          ],
+          "meanLuminance": 0.1943268260598234,
+          "maximumLuminance": 344.8332,
+          "pixelsAboveOne": 3234,
+          "pixels": 97903
+        }
+      },
+      {
+        "source": "/Game/Blueprints/LightStudio/HDRI/OutOfGame/Ares_HDRI_ModelViewerBuddy",
+        "original": {
+          "file": "skin-packs/environments/originals/fa1ceb4d5659c028be45371174fc969091f69c73176b96137d8094d0420b8542.hdr",
+          "sha256": "fa1ceb4d5659c028be45371174fc969091f69c73176b96137d8094d0420b8542",
+          "bytes": 3574426,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.007537841796875,
+              0.006378173828125,
+              0.00347900390625
+            ],
+            "maximumRGB": [
+              1280,
+              1184,
+              1056
+            ],
+            "meanRGB": [
+              1.0696319750337084,
+              0.9757202708287194,
+              0.9490489930163346
+            ],
+            "meanLuminance": 0.9937602328841477,
+            "maximumLuminance": 1195.1680000000001,
+            "pixelsAboveOne": 194260,
+            "pixels": 1570878
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/d026ca1184949e0df5c11eb4.bin.gz",
+          "width": 1024,
+          "height": 512,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "45d5111203fa1c3d4d247a5340ddece5ee761f9effa75b659d1d70bb7c966eb1",
+        "decodedBytes": 4194304,
+        "compressedBytes": 2511508,
+        "resampled": true,
+        "statistics": {
+          "minimumRGB": [
+            0.0078125,
+            0.006893157958984375,
+            0.003711700439453125
+          ],
+          "maximumRGB": [
+            1271,
+            1177,
+            1049
+          ],
+          "meanRGB": [
+            1.069628999219276,
+            0.9757157841377193,
+            0.9490554418007378
+          ],
+          "meanLuminance": 0.9937568569472272,
+          "maximumLuminance": 1187.3176,
+          "pixelsAboveOne": 65186,
+          "pixels": 524288
+        }
+      },
+      {
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass_Alt",
+        "original": {
+          "file": "skin-packs/environments/originals/d74611931b45bf23d4b7c5095df25a3baefd191322b0d376fc03680136aca869.hdr",
+          "sha256": "d74611931b45bf23d4b7c5095df25a3baefd191322b0d376fc03680136aca869",
+          "bytes": 269005,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              5.5625,
+              5.375,
+              4.40625
+            ],
+            "meanRGB": [
+              0.18485861194353784,
+              0.1529858168942662,
+              0.15105865555862916
+            ],
+            "meanLuminance": 0.15962283207332612,
+            "maximumLuminance": 5.098349999999999,
+            "pixelsAboveOne": 2889,
+            "pixels": 97903
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/1cd70097fce51023df98f2a9.bin.gz",
+          "width": 443,
+          "height": 221,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "35b7f62b0780ab1ee3f3bd3b210a9b5dbd3e4e1d7b472cd927df7df1ddb79999",
+        "decodedBytes": 783224,
+        "compressedBytes": 284467,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0,
+            0,
+            0
+          ],
+          "maximumRGB": [
+            5.5625,
+            5.375,
+            4.40625
+          ],
+          "meanRGB": [
+            0.18485861194353784,
+            0.1529858168942662,
+            0.15105865555832473
+          ],
+          "meanLuminance": 0.15962283207330413,
+          "maximumLuminance": 5.098349999999999,
+          "pixelsAboveOne": 2889,
+          "pixels": 97903
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Snowglobe/Glass/Snowglobe_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408.hdr",
+          "sha256": "70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408",
+          "bytes": 39129,
+          "width": 221,
+          "height": 110,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              0.388671875,
+              0.388671875,
+              0.388671875
+            ],
+            "meanRGB": [
+              0.07882993623264922,
+              0.07882993623264922,
+              0.07882993623264922
+            ],
+            "meanLuminance": 0.07882993623264922,
+            "maximumLuminance": 0.38867187499999994,
+            "pixelsAboveOne": 0,
+            "pixels": 24310
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+          "width": 221,
+          "height": 110,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "ff320a563cfc8e0443148f62a0dadc22ddb0becba8af004e222f74a20cd87b99",
+        "decodedBytes": 194480,
+        "compressedBytes": 18944,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0,
+            0,
+            0
+          ],
+          "maximumRGB": [
+            0.388671875,
+            0.388671875,
+            0.388671875
+          ],
+          "meanRGB": [
+            0.07882993623387514,
+            0.07882993623387514,
+            0.07882993623387514
+          ],
+          "meanLuminance": 0.07882993623387514,
+          "maximumLuminance": 0.38867187499999994,
+          "pixelsAboveOne": 0,
+          "pixels": 24310
+        }
+      },
+      {
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson_Glass2",
+        "original": {
+          "file": "skin-packs/environments/originals/0e67609a6ef98f542e2eca95ccda40e34ca2b263adc9bd7f251a502eca12f10f.hdr",
+          "sha256": "0e67609a6ef98f542e2eca95ccda40e34ca2b263adc9bd7f251a502eca12f10f",
+          "bytes": 310351,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.0017852783203125,
+              0.002105712890625,
+              0.00244140625
+            ],
+            "maximumRGB": [
+              104,
+              117,
+              139
+            ],
+            "meanRGB": [
+              0.16154675018911216,
+              0.18976321258923654,
+              0.1955822961132647
+            ],
+            "meanLuminance": 0.18418453051339304,
+            "maximumLuminance": 115.82459999999999,
+            "pixelsAboveOne": 2612,
+            "pixels": 97903
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/9af2d9f1c9fbb2831ef39ec5.bin.gz",
+          "width": 443,
+          "height": 221,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "e481a21278dc96fccebbda2ffc56a29af50f0b88324d4c40bd11cf72ed159146",
+        "decodedBytes": 783224,
+        "compressedBytes": 356367,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0.0017852783203125,
+            0.002105712890625,
+            0.00244140625
+          ],
+          "maximumRGB": [
+            104,
+            117,
+            139
+          ],
+          "meanRGB": [
+            0.16154675018911216,
+            0.18976321258923654,
+            0.1955822961132647
+          ],
+          "meanLuminance": 0.18418453051339304,
+          "maximumLuminance": 115.82459999999999,
+          "pixelsAboveOne": 2612,
+          "pixels": 97903
+        }
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/HDRI_ValReflections_Test",
+        "original": {
+          "file": "skin-packs/environments/originals/c9e245eed37e4fc51ee623ef466817b343e583c210d08a36a7d0c512071b6ff5.hdr",
+          "sha256": "c9e245eed37e4fc51ee623ef466817b343e583c210d08a36a7d0c512071b6ff5",
+          "bytes": 4406275,
+          "width": 3547,
+          "height": 1773,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              3.609375,
+              3.625,
+              3.625
+            ],
+            "meanRGB": [
+              0.039266808924941804,
+              0.0392672739603536,
+              0.03926727528840841
+            ],
+            "meanLuminance": 0.03926717518971136,
+            "maximumLuminance": 3.62055,
+            "pixelsAboveOne": 56168,
+            "pixels": 6288831
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/039cacf21e2fe9598f2deea8.bin.gz",
+          "width": 1024,
+          "height": 512,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "360e09562dc581845557f687d2870afc57c3cec7fd335c833332db1fb7877bc3",
+        "decodedBytes": 4194304,
+        "compressedBytes": 575366,
+        "resampled": true,
+        "statistics": {
+          "minimumRGB": [
+            0,
+            0,
+            0
+          ],
+          "maximumRGB": [
+            3.609375,
+            3.61328125,
+            3.609375
+          ],
+          "meanRGB": [
+            0.039266887253347704,
+            0.03926729326792611,
+            0.03926720329525324
+          ],
+          "meanLuminance": 0.03926720045319977,
+          "maximumLuminance": 3.61216875,
+          "pixelsAboveOne": 4707,
+          "pixels": 524288
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Glass/Snowglobe_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408.hdr",
+          "sha256": "70eb6138df84069f1bc11bda4b2465ba7ea5c42fe513285bcd006f774cfdf408",
+          "bytes": 39129,
+          "width": 221,
+          "height": 110,
+          "statistics": {
+            "minimumRGB": [
+              0,
+              0,
+              0
+            ],
+            "maximumRGB": [
+              0.388671875,
+              0.388671875,
+              0.388671875
+            ],
+            "meanRGB": [
+              0.07882993623264922,
+              0.07882993623264922,
+              0.07882993623264922
+            ],
+            "meanLuminance": 0.07882993623264922,
+            "maximumLuminance": 0.38867187499999994,
+            "pixelsAboveOne": 0,
+            "pixels": 24310
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+          "width": 221,
+          "height": 110,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "ff320a563cfc8e0443148f62a0dadc22ddb0becba8af004e222f74a20cd87b99",
+        "decodedBytes": 194480,
+        "compressedBytes": 18944,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0,
+            0,
+            0
+          ],
+          "maximumRGB": [
+            0.388671875,
+            0.388671875,
+            0.388671875
+          ],
+          "meanRGB": [
+            0.07882993623387514,
+            0.07882993623387514,
+            0.07882993623387514
+          ],
+          "meanLuminance": 0.07882993623387514,
+          "maximumLuminance": 0.38867187499999994,
+          "pixelsAboveOne": 0,
+          "pixels": 24310
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_Gold_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/20dae3b52dd5522b7b2d7679d42848ef3a842c9cfa69bb53dd614b7cbc6f5610.hdr",
+          "sha256": "20dae3b52dd5522b7b2d7679d42848ef3a842c9cfa69bb53dd614b7cbc6f5610",
+          "bytes": 784551,
+          "width": 886,
+          "height": 443,
+          "statistics": {
+            "minimumRGB": [
+              0.12109375,
+              0.03125,
+              0
+            ],
+            "maximumRGB": [
+              1,
+              1,
+              1
+            ],
+            "meanRGB": [
+              0.37517283129468176,
+              0.21633773526990902,
+              0.09886741759671387
+            ],
+            "meanLuminance": 0.24162471974978134,
+            "maximumLuminance": 1,
+            "pixelsAboveOne": 0,
+            "pixels": 392498
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/a1e778815259af5f0e534af7.bin.gz",
+          "width": 886,
+          "height": 443,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "c318868409184c193caf3d600d63cf556e260f0b90ce22de90f5fbe364ea9881",
+        "decodedBytes": 3139984,
+        "compressedBytes": 665219,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0.12109375,
+            0.03125,
+            0
+          ],
+          "maximumRGB": [
+            1,
+            1,
+            1
+          ],
+          "meanRGB": [
+            0.37517283129468176,
+            0.21633773526990902,
+            0.09886741759671387
+          ],
+          "meanLuminance": 0.24162471974978134,
+          "maximumLuminance": 1,
+          "pixelsAboveOne": 0,
+          "pixels": 392498
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/05e8da8c78c50eae91bdd4af916852534a8aa9cf1c2f59401586894e0dbac710.hdr",
+          "sha256": "05e8da8c78c50eae91bdd4af916852534a8aa9cf1c2f59401586894e0dbac710",
+          "bytes": 4320229,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.008544921875,
+              0.008544921875,
+              0.008544921875
+            ],
+            "maximumRGB": [
+              4320,
+              4320,
+              4320
+            ],
+            "meanRGB": [
+              1.0638451783161704,
+              1.0621959849481368,
+              1.062498024071334
+            ],
+            "meanLuminance": 1.0625684106834876,
+            "maximumLuminance": 4320,
+            "pixelsAboveOne": 169423,
+            "pixels": 1570878
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/3edc9c7aead8258e2298a3b7.bin.gz",
+          "width": 1024,
+          "height": 512,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "333ba733ad5145d4efc3536c48f65cf59604ca5fac7a52094f176a65ad823d1a",
+        "decodedBytes": 4194304,
+        "compressedBytes": 2209279,
+        "resampled": true,
+        "statistics": {
+          "minimumRGB": [
+            0.0085906982421875,
+            0.0085906982421875,
+            0.0085906982421875
+          ],
+          "maximumRGB": [
+            4228,
+            4228,
+            4228
+          ],
+          "meanRGB": [
+            1.0638478343607858,
+            1.0621970087959198,
+            1.062502855551429
+          ],
+          "meanLuminance": 1.062570056446761,
+          "maximumLuminance": 4228,
+          "pixelsAboveOne": 56718,
+          "pixels": 524288
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Speedster/Speedster_Glass_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/07e1577a24cedb54c69215ded6609b9072171ff7dbe26fa1f592c0891c5158e5.hdr",
+          "sha256": "07e1577a24cedb54c69215ded6609b9072171ff7dbe26fa1f592c0891c5158e5",
+          "bytes": 279429,
+          "width": 443,
+          "height": 221,
+          "statistics": {
+            "minimumRGB": [
+              0.000701904296875,
+              0.0009918212890625,
+              0.001129150390625
+            ],
+            "maximumRGB": [
+              0.99609375,
+              0.99609375,
+              0.99609375
+            ],
+            "meanRGB": [
+              0.28152413779928975,
+              0.3016529189428986,
+              0.3053101702023713
+            ],
+            "meanLuminance": 0.2976375936126955,
+            "maximumLuminance": 0.9960937499999999,
+            "pixelsAboveOne": 0,
+            "pixels": 97903
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/425137aa0d50a2d39fbe8dec.bin.gz",
+          "width": 443,
+          "height": 221,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "5831b5a471614c4cd76a3b43d2a55c1d67b1f27aa8c565c2bd85cd61631fbbe8",
+        "decodedBytes": 783224,
+        "compressedBytes": 317033,
+        "resampled": false,
+        "statistics": {
+          "minimumRGB": [
+            0.000701904296875,
+            0.0009918212890625,
+            0.001129150390625
+          ],
+          "maximumRGB": [
+            0.99609375,
+            0.99609375,
+            0.99609375
+          ],
+          "meanRGB": [
+            0.28152413779928975,
+            0.3016529189428986,
+            0.3053101702023713
+          ],
+          "meanLuminance": 0.2976375936126955,
+          "maximumLuminance": 0.9960937499999999,
+          "pixelsAboveOne": 0,
+          "pixels": 97903
+        }
+      },
+      {
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_Gold_Melee_HDRI",
+        "original": {
+          "file": "skin-packs/environments/originals/a1224a178a30347286c940c21e5602b093f51b632d57a081b8fec97e6ae087b1.hdr",
+          "sha256": "a1224a178a30347286c940c21e5602b093f51b632d57a081b8fec97e6ae087b1",
+          "bytes": 2553242,
+          "width": 1773,
+          "height": 886,
+          "statistics": {
+            "minimumRGB": [
+              0.12109375,
+              0.04296875,
+              0
+            ],
+            "maximumRGB": [
+              1,
+              1,
+              1
+            ],
+            "meanRGB": [
+              0.3930054434402091,
+              0.27509555060281177,
+              0.1491662618124625
+            ],
+            "meanLuminance": 0.29107109917256163,
+            "maximumLuminance": 1,
+            "pixelsAboveOne": 0,
+            "pixels": 1570878
+          }
+        },
+        "environment": {
+          "data": "/skin-packs/models/assets/19e130a7b78117072b14105b.bin.gz",
+          "width": 1024,
+          "height": 512,
+          "type": "rgba16f"
+        },
+        "decodedSha256": "917cfaf47d1c13f49cdbac1db589ad88628582c4acc86b6a01510ad0f4400632",
+        "decodedBytes": 4194304,
+        "compressedBytes": 1887385,
+        "resampled": true,
+        "statistics": {
+          "minimumRGB": [
+            0.12109375,
+            0.04296875,
+            0
+          ],
+          "maximumRGB": [
+            1,
+            1,
+            1
+          ],
+          "meanRGB": [
+            0.39300565083976835,
+            0.27509559562895447,
+            0.14916626098874985
+          ],
+          "meanLuminance": 0.29107117540582306,
+          "maximumLuminance": 1,
+          "pixelsAboveOne": 0,
+          "pixels": 524288
+        }
+      }
+    ],
+    "materials": [
+      {
+        "material": "Demonstone_Emissive_v1_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Demonstone/Chromas/Demonstone_Emissive_v1_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_DemonStone_v1_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_DemonStone_v1_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Demonstone_Decals_v1_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Demonstone/Chromas/1P_Demonstone_Decals_v1_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_DemonStone_Magazine_v1_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_DemonStone_Magazine_v1_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_DemonStone_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/DemonStone/Materials/RedDot_DemonStone_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Demonstone_Emissive_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Demonstone/Demonstone_Emissive_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Demonstone_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Demonstone/1P_Demonstone_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ninja_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ninja_Water_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_Water_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Ninja_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Ninja/1P_Ninja_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ninja_Shuriken_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Ninja/AK_Ninja_Shuriken_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Vector Intensity": -0.35
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ninja_Magazine_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_Magazine_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ninja_Water_Magazine_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_Water_Magazine_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Ninja_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Ninja/Materials/RedDot_Ninja_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Ninja_Water_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Ninja/Materials/RedDot_Ninja_Water_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Ninja2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/Materials/Carbine_Ninja2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Ninja2_Water_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/Materials/Carbine_Ninja2_Water_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Ninja2_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Ninja2/1P_Ninja2_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Ninja2_Shuriken_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Ninja2/Ninja2_Shuriken_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Ninja2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Ninja2/Materials/Silencer_Ninja2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Ninja2_Water_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Ninja2/Materials/Silencer_Ninja2_Water_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Hellfire_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Hellfire/Materials/AK_Hellfire_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Hellfire_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Hellfire/Materials/RedDot_Hellfire_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Hellfire_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Hellfire/Materials/Carbine_Hellfire_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Hellfire_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Hellfire/Materials/Silencer_Hellfire_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Rogue_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Rogue_Extra_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_Extra_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Rogue_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Rogue/1P_Rogue_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Rogue_v3_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Rogue_v3_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_Cathedral",
+        "environment": "/skin-packs/models/assets/931656a3e4d9dfa5414daae1.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Rogue_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Rogue_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_Cathedral",
+        "environment": "/skin-packs/models/assets/931656a3e4d9dfa5414daae1.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Afterglow_Opaque_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_Opaque_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Afterglow_LEDs_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_LEDs_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Afterglow_Transparent_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_Transparent_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Afterglow/Plastic/Afterglow_HDRI",
+        "environment": "/skin-packs/models/assets/976fa998b14147b591aa10c9.bin.gz",
+        "importedEnvIntensity": 1.8,
+        "intensityParameter": "HDRI Brightness",
+        "previousEnvIntensity": 1.5,
+        "parameters": {
+          "scalars": {
+            "HDRI Brightness": 1.8,
+            "HDRI Roughness Scale": 6,
+            "HDRI Contrast": 0.5,
+            "HDRI Max Intensity": 5
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Afterglow_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Afterglow/Materials/RedDot_Afterglow_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Yokai_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass",
+        "environment": "/skin-packs/models/assets/25a7691818490341518e0e2d.bin.gz",
+        "importedEnvIntensity": 1,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 1,
+            "HDRI Midtones": 1,
+            "HDRI Fresnel Width": 0,
+            "HDRI Fresnel Center": 0,
+            "HDRI Max Intensity": 100,
+            "HDRI Min Intensity": 0
+          },
+          "colors": {
+            "HDRI Color Tint": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Carbine_Yokai_Head_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Head_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass",
+        "environment": "/skin-packs/models/assets/25a7691818490341518e0e2d.bin.gz",
+        "importedEnvIntensity": 1,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 1,
+            "HDRI Midtones": 1,
+            "HDRI Fresnel Width": 0,
+            "HDRI Fresnel Center": 0,
+            "HDRI Max Intensity": 100,
+            "HDRI Min Intensity": 0
+          },
+          "colors": {
+            "HDRI Color Tint": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Carbine_Yokai_Head_Shell_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Head_Shell_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/OutOfGame/Ares_HDRI_ModelViewerBuddy",
+        "environment": "/skin-packs/models/assets/d026ca1184949e0df5c11eb4.bin.gz",
+        "importedEnvIntensity": 0.16,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 0.16,
+            "HDRI Midtones": 1,
+            "HDRI Fresnel Width": 0,
+            "HDRI Fresnel Center": 0,
+            "HDRI Max Intensity": 100,
+            "HDRI Min Intensity": 0
+          },
+          "colors": {
+            "HDRI Color Tint": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Carbine_Yokai_Shell_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Shell_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass_Alt",
+        "environment": "/skin-packs/models/assets/1cd70097fce51023df98f2a9.bin.gz",
+        "importedEnvIntensity": 0.25,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 0.25,
+            "HDRI Midtones": 1,
+            "HDRI Fresnel Width": 0,
+            "HDRI Fresnel Center": 0,
+            "HDRI Max Intensity": 100,
+            "HDRI Min Intensity": 0
+          },
+          "colors": {
+            "HDRI Color Tint": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Carbine_Yokai_Background_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Background_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Yokai_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Glass_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Vector Intensity": 1,
+            "Reflection Vector Grayscale Intensity": 1
+          },
+          "colors": {
+            "Reflection Vector Offset": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0,
+              "Hex": "000000"
+            }
+          }
+        }
+      },
+      {
+        "material": "RedDot_Yokai_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Yokai/Materials/RedDot_Yokai_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.02,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 0.02,
+            "HDRI Midtones": 1,
+            "HDRI Fresnel Width": 0,
+            "HDRI Fresnel Center": 0,
+            "HDRI Max Intensity": 100,
+            "HDRI Min Intensity": 0
+          },
+          "colors": {
+            "HDRI Color Tint": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Silencer_Yokai_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Yokai/Materials/Silencer_Yokai_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass_Alt",
+        "environment": "/skin-packs/models/assets/1cd70097fce51023df98f2a9.bin.gz",
+        "importedEnvIntensity": 0.5,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 0.5,
+            "HDRI Midtones": 1,
+            "HDRI Fresnel Width": 0,
+            "HDRI Fresnel Center": 0,
+            "HDRI Max Intensity": 100,
+            "HDRI Min Intensity": 0
+          },
+          "colors": {
+            "HDRI Color Tint": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Silencer_Yokai_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Yokai/Materials/Silencer_Yokai_Glass_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Vector Intensity": 1,
+            "Reflection Vector Grayscale Intensity": 1
+          },
+          "colors": {
+            "Reflection Vector Offset": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0,
+              "Hex": "000000"
+            }
+          }
+        }
+      },
+      {
+        "material": "Carbine_Coven_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Coven_Straps_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_Straps_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Coven_Feathers_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_Feathers_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.4,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.4,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.4,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "coven_cracks_05_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Coven/coven_cracks_05_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "coven_cracks_04_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Coven/coven_cracks_04_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "coven_cracks_03_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Coven/coven_cracks_03_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "coven_cracks_02_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Coven/coven_cracks_02_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "coven_cracks_01_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Coven/coven_cracks_01_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Coven_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Coven/Materials/Silencer_Coven_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Spirit_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Spirit_Petal_Line_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_Petal_Line_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Spirit_Animated_Petal_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_Animated_Petal_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Spirit_Static_Petal_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_Static_Petal_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Spirit_Petal_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_Petal_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Spirit_Energy_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_Energy_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Vector Intensity": 0.35
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Spirit_Petal_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Spirit/Materials/RedDot_Spirit_Petal_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Spirit_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Spirit/Materials/RedDot_Spirit_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Spirit_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Spirit/Materials/Silencer_Spirit_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Spirit_Petal_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Spirit/Materials/Silencer_Spirit_Petal_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ego2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Ego2_Screen_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_Screen_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Ego2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Ego2/Materials/RedDot_Ego2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Ego2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Ego2_Screen_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_Screen_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Ego2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Ego2/Materials/Silencer_Ego2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Revolver_Ego2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Revolver_Ego2_Screen_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_Screen_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "BoltSniper_Ego2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "BoltSniper_Ego2_Screen_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_Screen_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "BoltSniper_Ego2_Scope_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Scope_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "BoltSniper_Ego2_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Glass_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Champions_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions/Materials/AK_Champions_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2_Emissive_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Emissive_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2_Crystal_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Crystal_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Snowglobe/Glass/Snowglobe_HDRI",
+        "environment": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Reflection Midtones": 1,
+            "HDRI Fake Roughness": 0,
+            "Reflection Intensity": 1.75
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.199963,
+              "G": 0.298861,
+              "B": 1,
+              "A": 1,
+              "Hex": "7C95FF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Carbine_Champions2_GoldTrim_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_GoldTrim_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2_Emissive_Magazine_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Emissive_Magazine_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Champions2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2/Materials/RedDot_Champions2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2_Attachment_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Attachment_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Snowglobe/Glass/Snowglobe_HDRI",
+        "environment": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Reflection Midtones": 1,
+            "HDRI Fake Roughness": 0,
+            "Reflection Intensity": 1.75
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.199963,
+              "G": 0.298861,
+              "B": 1,
+              "A": 1,
+              "Hex": "7C95FF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Silencer_Champions2_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2/Materials/Silencer_Champions2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Champions2023_Ray_Lv4_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_Ray_Lv4_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Champions2023_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/AK_Champions2023_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Infinity_ChampionTopGlass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Infinity_ChampionTopGlass_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "HDRI Fake Roughness": 0.4,
+            "Reflection Midtones": 1,
+            "Reflection Intensity": 0.15
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.351047,
+              "G": 0.331227,
+              "B": 0.802083,
+              "A": 1,
+              "Hex": "A09CE8"
+            }
+          }
+        }
+      },
+      {
+        "material": "1P_Champions2023_Emissive_Gradient_LUT_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_Emissive_Gradient_LUT_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Champions2023_RayMagazine_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_RayMagazine_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Champions2023_Glass_NoSparkMI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/AK_Champions2023_Glass_NoSparkMI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass",
+        "environment": "/skin-packs/models/assets/25a7691818490341518e0e2d.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Reflection Midtones": 1,
+            "HDRI Fake Roughness": 0.4,
+            "Reflection Intensity": 0.15
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.351047,
+              "G": 0.331227,
+              "B": 0.802083,
+              "A": 1,
+              "Hex": "A09CE8"
+            }
+          }
+        }
+      },
+      {
+        "material": "1P_Champions2023_Emissive_Outside_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_Emissive_Outside_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Champions2023_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2023/Materials/RedDot_Champions2023_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "champions_jellyTest_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/champions_jellyTest_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson_Glass2",
+        "environment": "/skin-packs/models/assets/9af2d9f1c9fbb2831ef39ec5.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Champions24_Spark_MI_V1",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Champions24_Spark_MI_V1",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2024_CF_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2024/Materials/Carbine_Champions2024_CF_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/HDRI_ValReflections_Test",
+        "environment": "/skin-packs/models/assets/039cacf21e2fe9598f2deea8.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Roughness": 0.7
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Champions2024_Tritium_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/1P_Champions2024_Tritium_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2024_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2024/Materials/Carbine_Champions2024_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Snowglobe/Glass/Snowglobe_HDRI",
+        "environment": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Reflection Midtones": 1,
+            "HDRI Fake Roughness": 0,
+            "Reflection Intensity": 1.75
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.199963,
+              "G": 0.298861,
+              "B": 1,
+              "A": 1,
+              "Hex": "7C95FF"
+            }
+          }
+        }
+      },
+      {
+        "material": "RedDot_Champions2024_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2024/Materials/RedDot_Champions2024_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Champions2024_RedDotGlass_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Glass/1P_Champions2024_RedDotGlass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Glass/Snowglobe_HDRI",
+        "environment": "/skin-packs/models/assets/42be264a7d4411fb22c3a5c2.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Reflection Midtones": 1,
+            "HDRI Fake Roughness": 0,
+            "Reflection Intensity": 1.75
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.2,
+              "G": 0.298039,
+              "B": 1,
+              "A": 1,
+              "Hex": "7C95FF"
+            }
+          }
+        }
+      },
+      {
+        "material": "Silencer_Champions2024_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2024/Materials/Silencer_Champions2024_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/HDRI_ValReflections_Test",
+        "environment": "/skin-packs/models/assets/039cacf21e2fe9598f2deea8.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Roughness": 0.7
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Midas_Lv3_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Lv3_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_Gold_HDRI",
+        "environment": "/skin-packs/models/assets/a1e778815259af5f0e534af7.bin.gz",
+        "importedEnvIntensity": 0.1,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 0.1,
+            "HDRI Rotation Angle": 0
+          },
+          "colors": {
+            "Masked (M) HDRI Opacity": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 1,
+              "Hex": "000000"
+            },
+            "HDRI Rotation Axis": {
+              "R": 0,
+              "G": 1,
+              "B": 0,
+              "A": 1,
+              "Hex": "00FF00"
+            }
+          }
+        }
+      },
+      {
+        "material": "AK_Midas_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_HDRI",
+        "environment": "/skin-packs/models/assets/3edc9c7aead8258e2298a3b7.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Midas_Number_MI_1",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/1P_Midas_Number_MI_1",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Midas_Number_MI_2",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/1P_Midas_Number_MI_2",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Midas_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Midas_Number_MI_3",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/1P_Midas_Number_MI_3",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {},
+          "colors": {}
+        }
+      },
+      {
+        "material": "AK_Midas_Decals_Cards_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Decals_Cards_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Midas_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Midas/Materials/RedDot_Midas_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2026_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/Carbine_Champions2026_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "MAT_Temp_Champions2026_Screen_Defender",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/champs_temp/MAT_Temp_Champions2026_Screen_Defender",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Speedster/Speedster_Glass_HDRI",
+        "environment": "/skin-packs/models/assets/425137aa0d50a2d39fbe8dec.bin.gz",
+        "importedEnvIntensity": 0.718913,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Desaturation": 0.736,
+            "HDRI Strength": 0.718913
+          },
+          "colors": {
+            "HDRI Tint": {
+              "R": 0.618,
+              "G": 0.618,
+              "B": 0.618,
+              "A": 1,
+              "Hex": "CECECE"
+            }
+          }
+        }
+      },
+      {
+        "material": "VCT26Season_Decals_Alpha",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/VCT26Season_Decals_Alpha",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Champions2026_Dragon",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2026/Materials/RedDot_Champions2026_Dragon",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "VCT25Season_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/VCT25Season/VCT25Season_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Champions2026_Dragon",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2026/Materials/Silencer_Champions2026_Dragon",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Carbine_Champions2026_Snake_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/Carbine_Champions2026_Snake_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "MAT_Temp_Champions2026_Screen_Attacker",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/champs_temp/MAT_Temp_Champions2026_Screen_Attacker",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Speedster/Speedster_Glass_HDRI",
+        "environment": "/skin-packs/models/assets/425137aa0d50a2d39fbe8dec.bin.gz",
+        "importedEnvIntensity": 0.760523,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Desaturation": 0.736,
+            "HDRI Strength": 0.760523
+          },
+          "colors": {
+            "HDRI Tint": {
+              "R": 0.635,
+              "G": 0.56388,
+              "B": 0.56388,
+              "A": 1,
+              "Hex": "D1C6C6"
+            }
+          }
+        }
+      },
+      {
+        "material": "VCT26Season_Decals_Omega",
+        "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/VCT26Season_Decals_Omega",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "RedDot_Champions2026_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2026/Materials/RedDot_Champions2026_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "VCT25Season_Snake_Decals_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Snake_Decals_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Silencer_Champions2026_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2026/Materials/Silencer_Champions2026_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions/Materials/Melee_Champions_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions2_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2/Materials/Melee_Champions2_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions2023_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2023/Materials/Melee_Champions2023_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "1P_Infinity_ChampionsMelee_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2023/Materials/1P_Infinity_ChampionsMelee_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPersonGlass",
+        "environment": "/skin-packs/models/assets/25a7691818490341518e0e2d.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "HDRI Fake Roughness": 0.4,
+            "Reflection Midtones": 1,
+            "Reflection Intensity": 0.5
+          },
+          "colors": {
+            "Reflection Tint": {
+              "R": 0.351047,
+              "G": 0.331227,
+              "B": 0.802083,
+              "A": 1,
+              "Hex": "A09CE8"
+            }
+          }
+        }
+      },
+      {
+        "material": "Melee_Champions2024_CF_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2024/Materials/Melee_Champions2024_CF_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/HDRI_ValReflections_Test",
+        "environment": "/skin-packs/models/assets/039cacf21e2fe9598f2deea8.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "Reflection Roughness": 0.7
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_champions_jellyTest_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2024/Materials/Melee_champions_jellyTest_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson_Glass2",
+        "environment": "/skin-packs/models/assets/9af2d9f1c9fbb2831ef39ec5.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Midas_Lv2_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Midas/Materials/Melee_Midas_Lv2_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_Gold_Melee_HDRI",
+        "environment": "/skin-packs/models/assets/19e130a7b78117072b14105b.bin.gz",
+        "importedEnvIntensity": 0.2,
+        "intensityParameter": "HDRI Strength",
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4,
+            "HDRI Strength": 0.2,
+            "HDRI Rotation Angle": -3.731043
+          },
+          "colors": {
+            "Masked (M) HDRI Opacity": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 1,
+              "Hex": "000000"
+            },
+            "HDRI Rotation Axis": {
+              "R": 0,
+              "G": 1,
+              "B": 0,
+              "A": 1,
+              "Hex": "00FF00"
+            }
+          }
+        }
+      },
+      {
+        "material": "Melee_Midas_Decals_Cards_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Midas/Materials/Melee_Midas_Decals_Cards_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Midas_Glass_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Midas/Materials/Melee_Midas_Glass_MI",
+        "assignment": "source-material-hdri",
+        "source": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/Midas_HDRI",
+        "environment": "/skin-packs/models/assets/3edc9c7aead8258e2298a3b7.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions2026_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions2026_Fan_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_Fan_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "VCT25Season_Decals_Lettering_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_Lettering_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions2026_Snake_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_Snake_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      },
+      {
+        "material": "Melee_Champions2026_Fan_Snake_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_Fan_Snake_MI",
+        "assignment": "weapon-studio-fallback",
+        "source": "/Game/Blueprints/LightStudio/HDRI/Weapon/Ares_HDRI_FirstPerson",
+        "environment": "/skin-packs/models/assets/151e10f5bd0518825299a7b9.bin.gz",
+        "importedEnvIntensity": 0.6,
+        "intensityParameter": null,
+        "previousEnvIntensity": 0.6,
+        "parameters": {
+          "scalars": {
+            "Probe Influence": 0.6,
+            "Darkest Probe Value": 0.4,
+            "Brightest Probe Value": 4
+          },
+          "colors": {}
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "material": "1P_Afterglow_LightTrails_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Afterglow/LightTrails/1P_Afterglow_LightTrails_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "Afterglow_BakedLight_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Afterglow/BakedLight/Afterglow_BakedLight_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "1P3P_Weapon_Cheap_Transparent_MI",
+        "sourceMaterial": "/Game/Equippables/_Core/Materials/1P3P_Weapon_Cheap_Transparent_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "1P_Infinity_ChampionRedDOt_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2023/Materials/1P_Infinity_ChampionRedDOt_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "1P_Infinity_ChampionRedDOtFront_MI",
+        "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2023/Materials/1P_Infinity_ChampionRedDOtFront_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "Champs26_Melee_TopFrag_DefGlow_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_TopFrag_DefGlow_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "Champs26_Melee_Aura_Glow_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_Aura_Glow_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "Champs26_Melee_TopFrag_AtkGlow_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_TopFrag_AtkGlow_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      },
+      {
+        "material": "Champs26_Melee_Aura_AtkGlow_MI",
+        "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_Aura_AtkGlow_MI",
+        "reason": "Hidden source surface has no environment allocation"
+      }
+    ]
+  },
   "particleImport": {
     "source": "Original skin firing blueprints and cooked Cascade tables",
     "systems": 63,

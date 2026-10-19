@@ -5,10 +5,33 @@ import os from 'node:os';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {weaponBodyMaterial,surfacePackFilter} from '../scripts/weapon-body-materials.mjs';
-import {weaponMaterialTextures} from '../patches/weapon-body-materials-runtime.mjs';
+import {weaponMaterialTextures,createWeaponBodyMaterial} from '../patches/weapon-body-materials-runtime.mjs';
 import {decodeWeaponGlb} from '../patches/weapon-models-runtime.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const index=read('skin-packs/models/index.json');
+
+test('omitted projection and light-card surfaces never decode or upload unused textures',()=>{
+  const m={name:'omitted',hidden:true,map:'/unused.png',shader:{flow:{map:'/unused2.png'}}};
+  assert.deepEqual(weaponMaterialTextures(m),[]);
+  class Material{}
+  const mat=createWeaponBodyMaterial(m,{Material,tex(){throw Error('hidden surface uploaded a texture');}});
+  assert.equal(mat.name,m.name);assert.equal(mat.visible,false);
+});
+
+test('HDR reflections stay linear and receive a local highlight response before SDR output',()=>{
+  class Material{
+    constructor(options){Object.assign(this,options);this.userData={};this.color={setRGB(){}};this.emissive={setRGB(){}};this.normalScale={set(){}};}
+  }
+  const m={name:'source metal',color:[1,1,1],emissive:[0,0,0],shader:{},roughness:.4,metalness:1,emissiveIntensity:0},env={isDataTexture:true};
+  const options={Material,tex:()=>null,environment:env,clock:{time:{value:0},heat:{value:0}}};
+  const hdr=createWeaponBodyMaterial(m,{...options,hdr:true}),native=createWeaponBodyMaterial(m,options);
+  assert.equal(hdr.envMap,env);assert.equal(hdr.toneMapped,false);assert.equal(hdr.userData.aimSurface.hdr,true);
+  const shader=()=>({uniforms:{},vertexShader:'#include <uv_vertex>',fragmentShader:'#include <map_fragment>\n#include <emissivemap_fragment>\n#include <tonemapping_fragment>\n#include <colorspace_fragment>'});
+  const a=shader(),b=shader();hdr.onBeforeCompile(a);native.onBeforeCompile(b);
+  assert.ok(a.fragmentShader.indexOf('gl_FragColor.rgb=aimHighlightResponse')<a.fragmentShader.indexOf('#include <colorspace_fragment>'));
+  assert.ok(!a.fragmentShader.includes('#include <tonemapping_fragment>'));assert.ok(b.fragmentShader.includes('#include <tonemapping_fragment>'));
+  assert.notEqual(hdr.customProgramCacheKey(),native.customProgramCacheKey(),'SDR fallback and HDR materials cannot reuse an incompatible program');
+});
 
 test('an inherited zero-emission surface cannot become a white glowing gun',()=>{
   const texture=r=>r.ObjectPath;

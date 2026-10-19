@@ -1,10 +1,12 @@
 export function weaponMaterialTextures(m){
+  if(m.hidden)return [];
   return [...new Set([m.map,m.normalMap,m.ormMap,m.emissiveMap,...Object.values(m.shader??{}).flatMap(s=>[s.map,s.mask,s.gradient,s.noise])].filter(Boolean))];
 }
 
 // These effects shade the existing gun triangles. No camera cards, bloom pass,
 // refraction render target or displaced geometry can cover the player's view.
-export function createWeaponBodyMaterial(m,{Material,Physical=Material,tex,environment,clock}){
+export function createWeaponBodyMaterial(m,{Material,Physical=Material,tex,environment,clock,hdr=false}){
+  if(m.hidden){const mat=new Material();mat.name=m.name;mat.visible=false;return mat;}
   const orm=tex(m.ormMap,false),mat=new Physical({map:tex(m.map,true),normalMap:tex(m.normalMap,false),roughnessMap:orm,metalnessMap:orm,
     aoMap:m.surfacePacked?orm:null,aoMapIntensity:1,specularIntensityMap:m.surfacePacked?orm:null,specularIntensity:m.specular??1,
     roughness:orm?1:m.roughness,metalness:m.metalness,envMap:environment,envMapIntensity:m.envIntensity??.6,
@@ -20,7 +22,14 @@ export function createWeaponBodyMaterial(m,{Material,Physical=Material,tex,envir
   const sampler=(name,url,color=false)=>{uniforms[name]={value:tex(url,color)};declarations.push('uniform sampler2D '+name+';');};
   const vector=(name,value,type='vec3')=>{uniforms[name]={value};declarations.push('uniform '+type+' '+name+';');};
   const f=m.shader??{};
-  mat.userData.aimSurface={features:Object.keys(f),clock};
+  mat.userData.aimSurface={features:Object.keys(f),clock,hdr};
+  // The trainer renders to an SDR canvas without global tone mapping. Source
+  // HDR probes contain bright light hotspots: compress them on the gun shader
+  // only, rather than clipping its highlights or changing the map/exposure.
+  if(hdr){
+    mat.toneMapped=false;
+    declarations.push('vec3 aimHighlightResponse(vec3 c){vec3 x=max(c,vec3(0.0));return clamp((x*(2.51*x+0.03))/(x*(2.43*x+0.59)+0.14),0.0,1.0);}');
+  }
   if(f.tint){sampler('aimTintMask',f.tint.map);vector('aimTintColor',f.tint.color);color.push('diffuseColor.rgb*=mix(vec3(1.0),aimTintColor,texture2D(aimTintMask,vAimUv).r);');}
   if(f.plastic){sampler('aimPlastic',f.plastic.map);color.push('diffuseColor.a*=texture2D(aimPlastic,vAimUv).b;');}
   if(m.useDiffuseEmissive)emission.push('totalEmissiveRadiance*=diffuseColor.rgb;');
@@ -44,7 +53,8 @@ export function createWeaponBodyMaterial(m,{Material,Physical=Material,tex,envir
     shader.fragmentShader=declarations.join('\n')+'\n'+shader.fragmentShader
       .replace('#include <map_fragment>','#include <map_fragment>\n'+color.join('\n'))
       .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\n'+emission.join('\n')+'\ntotalEmissiveRadiance=clamp(totalEmissiveRadiance,vec3(0.0),vec3(3.0));');
+    if(hdr)shader.fragmentShader=shader.fragmentShader.replace('#include <tonemapping_fragment>','gl_FragColor.rgb=aimHighlightResponse(gl_FragColor.rgb);');
   };
-  mat.customProgramCacheKey=()=>JSON.stringify({features:Object.keys(f),uv2:[f.flow?.uv2,f.scroll?.uv2],diffuse:m.useDiffuseEmissive});
+  mat.customProgramCacheKey=()=>JSON.stringify({features:Object.keys(f),uv2:[f.flow?.uv2,f.scroll?.uv2],diffuse:m.useDiffuseEmissive,hdr});
   return mat;
 }

@@ -9,6 +9,7 @@ import {fileURLToPath} from 'node:url';
 import {importWeaponEffects} from './import-weapon-effects.mjs';
 import {resolveEffectMaterial,materialPath} from './weapon-effect-materials.mjs';
 import {weaponBodyMaterial,surfacePackFilter} from './weapon-body-materials.mjs';
+import {createWeaponEnvironmentImporter} from './import-weapon-environments.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'qa-artifacts/val-model-tools'));
@@ -60,12 +61,14 @@ function texture(ref,kind='color',aoRef=null){
 const rawMaterial=logical=>{const file=path.join(input,'properties',path.basename(logical)+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)).find(o=>o.Package?.toLowerCase()===logical.toLowerCase()):null;};
 const exportedMaterial=logical=>{const file=path.join(sourceRoot,logical.replace('/Game/','ShooterGame/Content/').replace('/Engine/','Engine/Content/')+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):null;};
 const materialCache=new Map();audit.bodyMaterials=[];audit.materialBindings=[];
+const importEnvironment=createWeaponEnvironmentImporter({sourceRoot,store,audit,repositoryRoot:root,originalDirectory:path.join(root,'skin-packs/environments/originals')});
 function material(ref){
   const name=path.basename(ref);
   if(materialCache.has(name))return materialCache.get(name);
   const file=materialFiles.get(name);if(!file)throw new Error('Missing material '+name);
   const logical=path.relative(sourceRoot,file).replaceAll('\\','/').replace('ShooterGame/Content/','/Game/').replace('Engine/Content/','/Engine/').replace(/\.json$/,'');
   const data=resolveEffectMaterial(logical,rawMaterial,exportedMaterial),m=weaponBodyMaterial(name,data,texture);
+  const environment=importEnvironment(name,data,m,logical);if(environment)m.environment=environment;
   materialCache.set(name,m);audit.bodyMaterials.push({name,source:logical,...m.source,features:Object.keys(m.shader)});return m;
 }
 function glb(asset,role,overrides){
