@@ -116,7 +116,7 @@ if(has('/skin-packs/index.json')){
    }else if(bytes.subarray(0,4).toString()!=='OggS')throw new Error('Invalid Ogg skin audio: '+url);
   }
   for(const collection of manifest.collections)for(const theme of collection.themes){
-   for(const weapon of collection.weapons){counts.eligibleFireCombinations++;if(theme.fire[weapon]){skinAsset(theme.fire[weapon],'fire');counts.fire++}else counts.missingFire++}
+   for(const weapon of collection.weapons){counts.eligibleFireCombinations++;if(theme.fire[weapon]){skinAsset(theme.fire[weapon],'fire');counts.fire++;counts.audio++}else counts.missingFire++}
    for(const url of Object.values(theme.kills)){skinAsset(url,'kill');counts.audio++;counts.killAudio++}
    if(theme.successive){skinAsset(theme.successive,'successive');counts.audio++;counts.successiveAudio++}
    for(const banner of theme.banners){skinAsset(banner.url,'banner');counts.banners++}

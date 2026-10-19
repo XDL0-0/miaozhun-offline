@@ -41,9 +41,19 @@ function audioOutput(root,destination,entry,relative){
   const source=reviewedSource(root,entry);
   if(!source)return null;
   const output=outputUrl(destination,relative);
+  const filters=[];
+  if(entry.excerpt){
+    const {startSeconds,endSeconds,gainDb,fadeOutSeconds}=entry.excerpt;
+    // Decode the original before trimming so seeking never includes an earlier
+    // compressed packet. Reset timestamps before applying the reviewed tail fade.
+    filters.push(`atrim=start=${startSeconds}:end=${endSeconds}`,'asetpts=PTS-STARTPTS');
+    if(gainDb!==undefined)filters.push(`volume=${gainDb}dB`);
+    if(fadeOutSeconds>0)filters.push(`afade=t=out:st=${endSeconds-startSeconds-fadeOutSeconds}:d=${fadeOutSeconds}`);
+  }
   // Explicit audio mapping ignores malformed source APIC cover-art PNGs.
   // Bitexact output fixes the Ogg stream serial and omits changing metadata.
   runFfmpeg(['-i',source,'-map','0:a:0','-vn','-sn','-dn','-map_metadata','-1',
+    ...(filters.length?['-af',filters.join(',')]:[]),
     '-c:a','libvorbis','-q:a','5','-fflags','+bitexact','-flags:a','+bitexact',output.target]);
   if(fs.readFileSync(output.target).subarray(0,4).toString()!=='OggS')throw new Error('Invalid Ogg output: '+relative);
   return output.url;
@@ -78,6 +88,18 @@ function validateReview(catalog,review){
       if(kind==='fire'&&!collection.weapons.includes(entry.weapon))throw new Error('Ineligible reviewed weapon: '+entry.weapon);
       if(kind==='audio'&&!(entry.role==='successive'&&entry.id==='successive'||entry.role==='kill'&&/^[1-6]$/.test(entry.id)))throw new Error('Invalid reviewed audio role/id');
       if(kind==='banners'&&!segment.test(entry.id))throw new Error('Unsafe banner identifier: '+entry.id);
+      if(Object.hasOwn(entry,'excerpt')){
+        if(kind==='banners')throw new Error('Reviewed banners cannot have audio excerpts');
+        const excerpt=entry.excerpt;
+        if(!excerpt||typeof excerpt!=='object'||Array.isArray(excerpt))throw new Error('Invalid reviewed audio excerpt: '+entry.path);
+        const {startSeconds,endSeconds,gainDb,fadeOutSeconds}=excerpt,duration=endSeconds-startSeconds;
+        if(!Number.isFinite(startSeconds)||startSeconds<0||!Number.isFinite(endSeconds)||endSeconds<=startSeconds||duration>5
+          ||Object.keys(excerpt).some(key=>!['startSeconds','endSeconds','gainDb','fadeOutSeconds'].includes(key))
+          ||Object.hasOwn(excerpt,'gainDb')&&(!Number.isFinite(gainDb)||gainDb< -18||gainDb>18)
+          ||Object.hasOwn(excerpt,'fadeOutSeconds')&&(!Number.isFinite(fadeOutSeconds)||fadeOutSeconds<0||fadeOutSeconds>Math.min(.2,duration))){
+          throw new Error('Invalid reviewed audio excerpt: '+entry.path);
+        }
+      }
       const key=[kind,entry.collection,entry.theme,entry.weapon??entry.id].join('/');
       if(seen.has(key))throw new Error('Duplicate reviewed media mapping: '+key);
       seen.add(key);

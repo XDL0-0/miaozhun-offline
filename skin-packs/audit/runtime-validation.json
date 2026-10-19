@@ -4,21 +4,22 @@
   "sourceMedia": {
     "uniqueKillClips": 79,
     "compositeBanners": 37,
-    "confirmedSkinGunfire": 0,
-    "missingWeaponThemeFireCombinations": 30
+    "confirmedSkinGunfire": 30,
+    "missingWeaponThemeFireCombinations": 0,
+    "retainedOriginalFireAudioTracks": 14
   },
   "build": {
     "command": "node prepare-offline.mjs",
     "passed": true,
     "rawInputs": "tracked skin-packs/media and asset-review.json; original site modules",
-    "mediaRepeatBuild": "identical hashes for 117 skin output files with the same ffmpeg build"
+    "mediaRepeatBuild": "identical hashes for 147 skin output files with the same ffmpeg build"
   },
   "tests": {
     "command": "node --test",
-    "passed": 86,
+    "passed": 90,
     "failed": 0,
     "runtimeTests": 22,
-    "fireSwitchFixtures": "synthetic; no original skin gunfire supplied",
+    "fireSwitchFixtures": "Actual retained AAC sources converted to 30 real OGG outputs and decoded with ffmpeg, plus synthetic failures and race fixtures. Browser checked all 30 real output preloads and audition starts.",
     "covers": [
       "per-weapon gunfire switch and eligibility",
       "all five ORA themes on all four requested guns",
@@ -27,13 +28,15 @@
       "async preload, deduplication, retry, complete-operation deadlines and stale completion",
       "actual patched audio class and settings lifecycle",
       "first kill with native killKit none, HUD timing, pause, expiry, round reset",
-      "strict patch guards and combined module syntax"
+      "strict patch guards and combined module syntax",
+      "all 30 actual source windows preserve original PCM waveform correlation >0.98 before fade",
+      "all 20 ORA firing outputs have distinct hashes; no theme or weapon substitution"
     ]
   },
   "offlineVerification": {
     "command": "node verify-offline.mjs",
     "passed": true,
-    "resources": 1944,
+    "resources": 1974,
     "scenes": 62,
     "maps": 6,
     "requiredMissing": 0,
@@ -47,14 +50,17 @@
     "server": "node server.mjs on Ubuntu Linux",
     "verified": [
       "audio settings mount",
-      "explicit missing-fire and ready-kill/banner statuses",
       "ORA theme switching and distinct preview images",
       "Watch continuous 1-5 audition",
-      "training-scene loading and canvas HUD mount with native killKit none"
+      "training-scene loading and canvas HUD mount with native killKit none",
+      "all 30 real fire assets reach ready state and start audition through the settings UI",
+      "each ordinary skin/weapon and each ORA gun/theme selected and checked",
+      "no console warning or error during the 30-combination check"
     ],
-    "manualLiveKills": "unverified: in-app browser loses pointer lock and pauses",
-    "screenshot": "skin-packs/audit/settings-preview.jpg",
-    "unrelatedObservedConsoleError": "Original B9C9f4Y8.js settings preview can pass a negative canvas arc radius at a narrow panel width; this module was not changed."
+    "manualLiveKills": "unverified: earlier in-app browser lost pointer lock and paused; not repeated during this media addition",
+    "screenshot": "skin-packs/audit/fire-ready-settings.jpg",
+    "unrelatedObservedConsoleError": "Previously observed narrow-width original preview canvas error; none occurred in this 30-combination follow-up check.",
+    "fireValidation": "skin-packs/audit/fire-browser-validation.json"
   },
-  "integrationStatus": "client bridges implemented and actual-client-function tests passed; missing gunfire is explicit and falls back to native effects; manual shooting limitation recorded above"
+  "integrationStatus": "All 30 reviewed fire mappings built and consumed by existing client bridges; 90 tests passed, including actual-client audio dispatch and real-byte decoded-cache switching. Browser confirmed all 30 fire preloads and audition starts. Manual live shooting limitation retained above."
 }

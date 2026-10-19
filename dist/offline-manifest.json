@@ -22,16 +22,16 @@
   ],
   "skinPacks": {
     "clientBridge": true,
-    "resourceStatus": "partial",
+    "resourceStatus": "complete",
     "collections": 9,
     "themes": 13,
-    "audio": 79,
+    "audio": 109,
     "killAudio": 66,
     "successiveAudio": 13,
     "banners": 37,
-    "fire": 0,
-    "missingFire": 30,
+    "fire": 30,
+    "missingFire": 0,
     "eligibleFireCombinations": 30
   },
-  "created": "2026-10-19T09:48:16.810Z"
+  "created": "2026-10-19T10:07:44.069Z"
 }

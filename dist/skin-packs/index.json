@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "compiledOn": "2026-10-19",
-  "sourceStatus": "partial",
-  "resourceStatus": "partial",
+  "sourceStatus": "complete",
+  "resourceStatus": "complete",
   "bannerFormat": "transparent-composite",
   "bannerSize": [
     300,
@@ -11,12 +11,12 @@
   "counts": {
     "collections": 9,
     "themes": 13,
-    "audio": 79,
+    "audio": 109,
     "killAudio": 66,
     "successiveAudio": 13,
     "banners": 37,
-    "fire": 0,
-    "missingFire": 30,
+    "fire": 30,
+    "missingFire": 0,
     "eligibleFireCombinations": 30
   },
   "collections": [
@@ -32,7 +32,7 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "vandal": null
+            "vandal": "/skin-packs/prelude-to-chaos/fire/default/vandal.ogg"
           },
           "kills": {
             "1": "/skin-packs/prelude-to-chaos/kill/default/kill-1.ogg",
@@ -64,9 +64,7 @@
               "url": "/skin-packs/prelude-to-chaos/banners/default/white.png"
             }
           ],
-          "missing": [
-            "fire:vandal"
-          ]
+          "missing": []
         }
       ]
     },
@@ -83,8 +81,8 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "vandal": null,
-            "phantom": null
+            "vandal": "/skin-packs/kuronami/fire/default/vandal.ogg",
+            "phantom": "/skin-packs/kuronami/fire/default/phantom.ogg"
           },
           "kills": {
             "1": "/skin-packs/kuronami/kill/default/kill-1.ogg",
@@ -116,10 +114,7 @@
               "url": "/skin-packs/kuronami/banners/default/white.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom"
-          ]
+          "missing": []
         }
       ]
     },
@@ -136,8 +131,8 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "vandal": null,
-            "phantom": null
+            "vandal": "/skin-packs/primordium/fire/default/vandal.ogg",
+            "phantom": "/skin-packs/primordium/fire/default/phantom.ogg"
           },
           "kills": {
             "1": "/skin-packs/primordium/kill/default/kill-1.ogg",
@@ -169,10 +164,7 @@
               "url": "/skin-packs/primordium/banners/default/venom.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom"
-          ]
+          "missing": []
         }
       ]
     },
@@ -188,7 +180,7 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "vandal": null
+            "vandal": "/skin-packs/rogue/fire/default/vandal.ogg"
           },
           "kills": {
             "1": "/skin-packs/rogue/kill/default/kill-1.ogg",
@@ -220,9 +212,7 @@
               "url": "/skin-packs/rogue/banners/default/red.png"
             }
           ],
-          "missing": [
-            "fire:vandal"
-          ]
+          "missing": []
         }
       ]
     },
@@ -238,7 +228,7 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "vandal": null
+            "vandal": "/skin-packs/rgx-11z-pro/fire/default/vandal.ogg"
           },
           "kills": {
             "1": "/skin-packs/rgx-11z-pro/kill/default/kill-1.ogg",
@@ -270,9 +260,7 @@
               "url": "/skin-packs/rgx-11z-pro/banners/default/yellow.png"
             }
           ],
-          "missing": [
-            "fire:vandal"
-          ]
+          "missing": []
         }
       ]
     },
@@ -288,7 +276,7 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "phantom": null
+            "phantom": "/skin-packs/ayakashi/fire/default/phantom.ogg"
           },
           "kills": {
             "1": "/skin-packs/ayakashi/kill/default/kill-1.ogg",
@@ -321,9 +309,7 @@
               "url": "/skin-packs/ayakashi/banners/default/red.png"
             }
           ],
-          "missing": [
-            "fire:phantom"
-          ]
+          "missing": []
         }
       ]
     },
@@ -339,7 +325,7 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "phantom": null
+            "phantom": "/skin-packs/nocturnum/fire/default/phantom.ogg"
           },
           "kills": {
             "1": "/skin-packs/nocturnum/kill/default/kill-1.ogg",
@@ -371,9 +357,7 @@
               "url": "/skin-packs/nocturnum/banners/default/yellow.png"
             }
           ],
-          "missing": [
-            "fire:phantom"
-          ]
+          "missing": []
         }
       ]
     },
@@ -389,7 +373,7 @@
           "id": "default",
           "label": "Default",
           "fire": {
-            "phantom": null
+            "phantom": "/skin-packs/mystbloom/fire/default/phantom.ogg"
           },
           "kills": {
             "1": "/skin-packs/mystbloom/kill/default/kill-1.ogg",
@@ -421,9 +405,7 @@
               "url": "/skin-packs/mystbloom/banners/default/purple.png"
             }
           ],
-          "missing": [
-            "fire:phantom"
-          ]
+          "missing": []
         }
       ]
     },
@@ -442,10 +424,10 @@
           "id": "base",
           "label": "Base",
           "fire": {
-            "vandal": null,
-            "phantom": null,
-            "sheriff": null,
-            "operator": null
+            "vandal": "/skin-packs/ora-by-onetap/fire/base/vandal.ogg",
+            "phantom": "/skin-packs/ora-by-onetap/fire/base/phantom.ogg",
+            "sheriff": "/skin-packs/ora-by-onetap/fire/base/sheriff.ogg",
+            "operator": "/skin-packs/ora-by-onetap/fire/base/operator.ogg"
           },
           "kills": {
             "1": "/skin-packs/ora-by-onetap/kill/base/kill-1.ogg",
@@ -462,21 +444,16 @@
               "url": "/skin-packs/ora-by-onetap/banners/base/default.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom",
-            "fire:sheriff",
-            "fire:operator"
-          ]
+          "missing": []
         },
         {
           "id": "watch",
           "label": "Watch",
           "fire": {
-            "vandal": null,
-            "phantom": null,
-            "sheriff": null,
-            "operator": null
+            "vandal": "/skin-packs/ora-by-onetap/fire/watch/vandal.ogg",
+            "phantom": "/skin-packs/ora-by-onetap/fire/watch/phantom.ogg",
+            "sheriff": "/skin-packs/ora-by-onetap/fire/watch/sheriff.ogg",
+            "operator": "/skin-packs/ora-by-onetap/fire/watch/operator.ogg"
           },
           "kills": {
             "1": "/skin-packs/ora-by-onetap/kill/watch/kill-1.ogg",
@@ -493,21 +470,16 @@
               "url": "/skin-packs/ora-by-onetap/banners/watch/default.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom",
-            "fire:sheriff",
-            "fire:operator"
-          ]
+          "missing": []
         },
         {
           "id": "renegade",
           "label": "RENEGADE",
           "fire": {
-            "vandal": null,
-            "phantom": null,
-            "sheriff": null,
-            "operator": null
+            "vandal": "/skin-packs/ora-by-onetap/fire/renegade/vandal.ogg",
+            "phantom": "/skin-packs/ora-by-onetap/fire/renegade/phantom.ogg",
+            "sheriff": "/skin-packs/ora-by-onetap/fire/renegade/sheriff.ogg",
+            "operator": "/skin-packs/ora-by-onetap/fire/renegade/operator.ogg"
           },
           "kills": {
             "1": "/skin-packs/ora-by-onetap/kill/renegade/kill-1.ogg",
@@ -524,21 +496,16 @@
               "url": "/skin-packs/ora-by-onetap/banners/renegade/default.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom",
-            "fire:sheriff",
-            "fire:operator"
-          ]
+          "missing": []
         },
         {
           "id": "raja",
           "label": "RAJA",
           "fire": {
-            "vandal": null,
-            "phantom": null,
-            "sheriff": null,
-            "operator": null
+            "vandal": "/skin-packs/ora-by-onetap/fire/raja/vandal.ogg",
+            "phantom": "/skin-packs/ora-by-onetap/fire/raja/phantom.ogg",
+            "sheriff": "/skin-packs/ora-by-onetap/fire/raja/sheriff.ogg",
+            "operator": "/skin-packs/ora-by-onetap/fire/raja/operator.ogg"
           },
           "kills": {
             "1": "/skin-packs/ora-by-onetap/kill/raja/kill-1.ogg",
@@ -555,21 +522,16 @@
               "url": "/skin-packs/ora-by-onetap/banners/raja/default.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom",
-            "fire:sheriff",
-            "fire:operator"
-          ]
+          "missing": []
         },
         {
           "id": "ignition",
           "label": "Ignition",
           "fire": {
-            "vandal": null,
-            "phantom": null,
-            "sheriff": null,
-            "operator": null
+            "vandal": "/skin-packs/ora-by-onetap/fire/ignition/vandal.ogg",
+            "phantom": "/skin-packs/ora-by-onetap/fire/ignition/phantom.ogg",
+            "sheriff": "/skin-packs/ora-by-onetap/fire/ignition/sheriff.ogg",
+            "operator": "/skin-packs/ora-by-onetap/fire/ignition/operator.ogg"
           },
           "kills": {
             "1": "/skin-packs/ora-by-onetap/kill/ignition/kill-1.ogg",
@@ -586,12 +548,7 @@
               "url": "/skin-packs/ora-by-onetap/banners/ignition/default.png"
             }
           ],
-          "missing": [
-            "fire:vandal",
-            "fire:phantom",
-            "fire:sheriff",
-            "fire:operator"
-          ]
+          "missing": []
         }
       ]
     }

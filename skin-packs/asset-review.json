@@ -2,16 +2,18 @@
   "schemaVersion": 1,
   "compiledOn": "2026-10-19",
   "review": {
-    "audio": "Every stored MP3 decoded with ffmpeg -map 0:a:0 -vn. Sources identify kill/inspect/finisher clips; none is an authenticated standalone gunfire sample.",
+    "audio": "Every stored kill MP3 decoded with ffmpeg -map 0:a:0 -vn. Gunfire uses 30 reviewed single-shot segments from downloaded official Riot CDN previews, retained as 14 complete original AAC tracks.",
     "banners": "Reviewed actual RGBA pixels in banners-contact-sheet.jpg. These are transparent composite icons with frames, emblems and ornaments already combined; independent animation/headshot layers were not supplied.",
     "provenance": "Local wiki download manifest paths and hashes verified against bytes. All 79 tracked kill clips match decoded source PCM; 76 pairs are also byte-identical.",
-    "scope": "30 catalog weapon/theme fire combinations remain missing. Do not relabel inspection or finisher audio as gunfire.",
+    "scope": "All 30 catalog weapon/theme fire combinations have independent reviewed single-shot segments. ORA has five distinct theme segments for each of four weapons. Inspection, kill and finisher clips are not relabeled as gunfire.",
     "evidence": [
       "skin-packs/audit/banners-contact-sheet.jpg",
       "skin-packs/audit/catalog-weapons-contact-sheet.jpg",
       "skin-packs/audit/animated-content-contact-sheet.jpg",
-      "skin-packs/audit/source-media-audit.json"
-    ]
+      "skin-packs/audit/source-media-audit.json",
+      "skin-packs/audit/fire-review.json"
+    ],
+    "fire": "Verified actual weapon model, muzzle flash/recoil/casing and matching audio attack. Full original AAC retained with decoded PCM equality to official MP4; exact cuts, 20ms tail fades and constant peak gains are recorded per entry. These are preview recordings, not unpacked game audio."
   },
   "banners": [
     {
@@ -1873,5 +1875,746 @@
       }
     }
   ],
-  "fire": []
+  "fire": [
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/prelude-to-chaos-vandal-level2.m4a",
+      "sha256": "23211f51f8f3943a8541fd97ba965b8088ed82339bdcb9c466d0a176919cb68b",
+      "excerpt": {
+        "startSeconds": 13.157,
+        "endSeconds": 13.645,
+        "gainDb": -0.934,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/prelude-to-chaos-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/72cecd6d-4f72-c3a2-f2f9-3590d2f8fc5a_default_universal.mp4",
+        "sha256": "ba287f6eea3339d8011a9dac0d8537c72641dc669c43acaf2274b696ead7ab46",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "522a264e-4ca7-adb0-6cf1-28b2ef938727",
+        "levelUuid": "273db50c-41fd-99eb-89fa-d0969ef739bb",
+        "levelName": "Prelude to Chaos Vandal Level 2",
+        "retainedAudioDecodedPcmSha256": "e8381041e37b83732aee3c2ed757f492b065d17172e7e906df2a8b6d88868ced",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/prelude-to-chaos-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/kuronami-vandal-level2.m4a",
+      "sha256": "0b597327fe4165b97b4d068714e332357202fe588327263bf36c60a9673ace32",
+      "excerpt": {
+        "startSeconds": 2.045,
+        "endSeconds": 2.71,
+        "gainDb": 0.149,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/kuronami-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/efece8bb-4c6a-3b39-9656-148460347405_default_universal.mp4",
+        "sha256": "564b33edf6f57b9ad7781b5aa5fedaf12f154eeb2fe7a21ecac36c437726180e",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "d8d5d7a1-4d81-8560-54bc-0692ab40f69b",
+        "levelUuid": "97a5aab0-43ba-2044-4eb4-5d91af25bf7b",
+        "levelName": "Kuronami Vandal Level 2",
+        "retainedAudioDecodedPcmSha256": "b4f6464141783c2b2d2f0c704849526738b939997ee68bd6c2210827852f5ddb",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/kuronami-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/kuronami-phantom-level2.m4a",
+      "sha256": "df122b82be569b90ad44f4194313ac43756947e9caa8d623b3250defe42eab55",
+      "excerpt": {
+        "startSeconds": 1.744,
+        "endSeconds": 2.45,
+        "gainDb": 12.631,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/kuronami-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/70fb1af1-4f0a-e38e-544f-d4b1325f3384_default_universal.mp4",
+        "sha256": "96cafe96797beb984afa90582c43174e482c016b707bd4da8fa0c53c0b5e0756",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "3f6410af-4fd7-74fb-c0f4-6ab61d30022c",
+        "levelUuid": "280f50f1-4234-fc12-96d8-7294c2acd0bd",
+        "levelName": "Kuronami Phantom Level 2",
+        "retainedAudioDecodedPcmSha256": "2a1b0929de9ced227e0255ab8a0f70a16dcc02bedca47af2c646b3afc93446bd",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/kuronami-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/primordium-vandal-level2.m4a",
+      "sha256": "e350cb263d0ab535e9a7e029bcd67a5b6cbc8c9d9825140ccb5640000c6ebd4a",
+      "excerpt": {
+        "startSeconds": 1.688,
+        "endSeconds": 2.185,
+        "gainDb": -0.568,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/primordium-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3f506b2c-4656-49c5-fdea-0487ec837e32_default_universal.mp4",
+        "sha256": "343e4da5a04af94e4d7927ecda37b75ba3a25dda01714ac10ce1cb4a84972bb3",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "a70fd508-44ea-8de3-3b30-d3a7eb9db42e",
+        "levelUuid": "75316609-467f-8f90-8d24-f898e3216d65",
+        "levelName": "Primordium Vandal Level 2",
+        "retainedAudioDecodedPcmSha256": "3f4f5d63a8bff688961311143345a8d2a67504f41c075caf49600e37411a90bf",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/primordium-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/primordium-phantom-level2.m4a",
+      "sha256": "7c3c38d4fdf5298fc73f6a71730a3570b1f1aacb05d5d6d66af5b7f976fa59b0",
+      "excerpt": {
+        "startSeconds": 1.603,
+        "endSeconds": 2.08,
+        "gainDb": 1.405,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/primordium-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/c00edd83-400b-649b-1630-589f5d226ac1_default_universal.mp4",
+        "sha256": "d24696ec2db020d274e4249ff426d54088bc8fd49273b0d0e041f6477159473e",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "34560475-4eaa-d2be-b37f-908463413482",
+        "levelUuid": "d1441f81-4d05-d9e5-d6c8-df8259d8ee01",
+        "levelName": "Primordium Phantom Level 2",
+        "retainedAudioDecodedPcmSha256": "3b5f55adb09d0e612e7f541668de8bf5d87626187da846dc4ab5b68cfd0e35a4",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/primordium-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/rogue-vandal-level2.m4a",
+      "sha256": "169c921179a8c4ff4815e13eb49495b407f487ba16dabc7030625700bc1669fb",
+      "excerpt": {
+        "startSeconds": 4.12,
+        "endSeconds": 4.485,
+        "gainDb": 5.278,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/rogue-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/b963d3e3-4327-32e5-5aa7-e8a8395b9cf3_default_universal.mp4",
+        "sha256": "d31051276841cc18bcff3065e16afbb8dc68962dcd97196eb96960afe1017886",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "1b9b0131-42fe-b6a7-d212-699b342ba642",
+        "levelUuid": "52969788-4ea9-5b96-039b-ecabf9812f82",
+        "levelName": "Rogue Vandal Level 2",
+        "retainedAudioDecodedPcmSha256": "2c7c2259477c724b3df840f244ba3ed83dbcdc16fa545d87335a152b07994c5c",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/rogue-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/rgx-11z-pro-vandal-level2.m4a",
+      "sha256": "a94469460188a3998220564817c471fb0dafb06c82806e9ffa89065d2e2d8a2a",
+      "excerpt": {
+        "startSeconds": 3.422,
+        "endSeconds": 3.925,
+        "gainDb": -1.304,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/rgx-11z-pro-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/ca980cdd-4248-f81c-ad08-9fb8c4725eba_default_universal.mp4",
+        "sha256": "c0e14d832d29c7786c1c89c5f24d7c0adb60fb7f1ce0ce9bd438a83930f3bc01",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "e5490f71-455b-74ad-f762-f5a876d4dff9",
+        "levelUuid": "524ebe7d-4a3b-cf50-ed55-1092d82cebf9",
+        "levelName": "RGX 11z Pro Vandal Level 2",
+        "retainedAudioDecodedPcmSha256": "139939a00c56355bd4e06b5a581445e6fe272d1dc3c5a0ff29a9deeb467d47fc",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/rgx-11z-pro-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ayakashi-phantom-level2.m4a",
+      "sha256": "efb54c732f37151451054b710e2ad98fc58e9655d7471a084e8adeb83d8e9e36",
+      "excerpt": {
+        "startSeconds": 2.086,
+        "endSeconds": 2.85,
+        "gainDb": 8.078,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/ayakashi-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/4804775a-45a0-9f96-79e4-178a94e45b9e_default_universal.mp4",
+        "sha256": "b865be3243b1820a50472236a2add3074fb6271a3fb64485df980e95fe1ece6a",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "c1b96274-4346-2ea4-65f4-ec957d217922",
+        "levelUuid": "73c3a1e0-4bc0-91d0-b249-90aa2b63d570",
+        "levelName": "Ayakashi Phantom Level 2",
+        "retainedAudioDecodedPcmSha256": "e63901ba0ae3a8c50d65534ab11a21f23415385ada2856c11d6d104799ba3afa",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ayakashi-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/nocturnum-phantom-level2.m4a",
+      "sha256": "edb07c76ed0c4fb3effcb1d62b8192939c51de92690b9aeb7d3e1e56c4ae3b09",
+      "excerpt": {
+        "startSeconds": 1.88,
+        "endSeconds": 2.51,
+        "gainDb": 0.14,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/nocturnum-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/e5fb7793-4955-4129-c967-bbbad3e533d3_default_universal.mp4",
+        "sha256": "2a12b8489b3756e926b3b7e33c0f568ecd74303db43703776383e837ed12f188",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "320c4baa-41e8-ac8f-91eb-0fbc7bf3c145",
+        "levelUuid": "446502a4-45f1-b94c-0330-9a90441d722a",
+        "levelName": "Nocturnum Phantom Level 2",
+        "retainedAudioDecodedPcmSha256": "ac1e1c285910a1c266d8fb67b5d2a943ad92a9359e543dfe9d86e97dcec855bc",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/nocturnum-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/mystbloom-phantom-level2.m4a",
+      "sha256": "1cba97c13e4cecc7c62db5415c90e5333fce46d18be08d49d15e89f4e5fbae9b",
+      "excerpt": {
+        "startSeconds": 1.576,
+        "endSeconds": 2.02,
+        "gainDb": 0.57,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/mystbloom-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7b940e3e-4f98-770e-de5b-db83c339c131_default_universal.mp4",
+        "sha256": "9c66af121ef45fdce43a4db9098feaadab8aae05859b6214fc5080e116b78d84",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "ce85f078-474a-eae4-3844-03a49625df15",
+        "levelUuid": "65d85f79-4934-48fc-ac0e-128bd43ad572",
+        "levelName": "Mystbloom Phantom Level 2",
+        "retainedAudioDecodedPcmSha256": "f16f74a148a3ff7d12572b3ab347ebd78b63ff223702b1c092df379ffba686bb",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/mystbloom-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "sha256": "e7df8fc8b222d12ca8fc97a92200a2b4661d89d40eaeddad1542757e8cb623a0",
+      "excerpt": {
+        "startSeconds": 32.735,
+        "endSeconds": 33.045,
+        "gainDb": 4.967,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-vandal-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/cf819e35-4a9b-e5ec-e299-e1ae69e9c1ca_default_universal.mp4",
+        "sha256": "66d8f24e2a1bd37de34c17adc12093c2adc3ae27a57a19c2d1a305aac3decd0d",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "4356a6c4-428b-a1ef-f31d-0e9bcfa69306",
+        "retainedAudioDecodedPcmSha256": "e1db3cfdcee1447cc37ad9d0f3dd899a99ff537adb4a2d3f4f4bbc93415f29a8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "sha256": "e7df8fc8b222d12ca8fc97a92200a2b4661d89d40eaeddad1542757e8cb623a0",
+      "excerpt": {
+        "startSeconds": 54.896,
+        "endSeconds": 55.206,
+        "gainDb": 4.054,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-vandal-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/cf819e35-4a9b-e5ec-e299-e1ae69e9c1ca_default_universal.mp4",
+        "sha256": "66d8f24e2a1bd37de34c17adc12093c2adc3ae27a57a19c2d1a305aac3decd0d",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "4356a6c4-428b-a1ef-f31d-0e9bcfa69306",
+        "retainedAudioDecodedPcmSha256": "e1db3cfdcee1447cc37ad9d0f3dd899a99ff537adb4a2d3f4f4bbc93415f29a8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "sha256": "e7df8fc8b222d12ca8fc97a92200a2b4661d89d40eaeddad1542757e8cb623a0",
+      "excerpt": {
+        "startSeconds": 76.471,
+        "endSeconds": 76.781,
+        "gainDb": 4.056,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-vandal-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/cf819e35-4a9b-e5ec-e299-e1ae69e9c1ca_default_universal.mp4",
+        "sha256": "66d8f24e2a1bd37de34c17adc12093c2adc3ae27a57a19c2d1a305aac3decd0d",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "4356a6c4-428b-a1ef-f31d-0e9bcfa69306",
+        "retainedAudioDecodedPcmSha256": "e1db3cfdcee1447cc37ad9d0f3dd899a99ff537adb4a2d3f4f4bbc93415f29a8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "sha256": "e7df8fc8b222d12ca8fc97a92200a2b4661d89d40eaeddad1542757e8cb623a0",
+      "excerpt": {
+        "startSeconds": 98.401,
+        "endSeconds": 98.711,
+        "gainDb": 3.18,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-vandal-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/cf819e35-4a9b-e5ec-e299-e1ae69e9c1ca_default_universal.mp4",
+        "sha256": "66d8f24e2a1bd37de34c17adc12093c2adc3ae27a57a19c2d1a305aac3decd0d",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "4356a6c4-428b-a1ef-f31d-0e9bcfa69306",
+        "retainedAudioDecodedPcmSha256": "e1db3cfdcee1447cc37ad9d0f3dd899a99ff537adb4a2d3f4f4bbc93415f29a8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "sha256": "e7df8fc8b222d12ca8fc97a92200a2b4661d89d40eaeddad1542757e8cb623a0",
+      "excerpt": {
+        "startSeconds": 123.432,
+        "endSeconds": 123.742,
+        "gainDb": 3.039,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-vandal-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/cf819e35-4a9b-e5ec-e299-e1ae69e9c1ca_default_universal.mp4",
+        "sha256": "66d8f24e2a1bd37de34c17adc12093c2adc3ae27a57a19c2d1a305aac3decd0d",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "4356a6c4-428b-a1ef-f31d-0e9bcfa69306",
+        "retainedAudioDecodedPcmSha256": "e1db3cfdcee1447cc37ad9d0f3dd899a99ff537adb4a2d3f4f4bbc93415f29a8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "sha256": "adab2ba749d1e1e8dd40dc3716217ee022d73c4f6f7a65f6519c0e35c4bc26ba",
+      "excerpt": {
+        "startSeconds": 32.564,
+        "endSeconds": 32.874,
+        "gainDb": 8.676,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-phantom-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb61a0d3-43bd-cd3e-a1fa-f3aab658ab39_default_universal.mp4",
+        "sha256": "e7fe2a7c5c1a2ef0e6cafb7178a4ccad42ebcd5f7edaa57132b64c37d7e7902c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "31304321-4fad-2e7c-a421-4bbbfe7a6dff",
+        "retainedAudioDecodedPcmSha256": "e59bb64bbeea7d36691431afea753e53906301aac4fa8307c6cf3d04104e6086",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "sha256": "adab2ba749d1e1e8dd40dc3716217ee022d73c4f6f7a65f6519c0e35c4bc26ba",
+      "excerpt": {
+        "startSeconds": 56.647,
+        "endSeconds": 56.957,
+        "gainDb": 9.497,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-phantom-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb61a0d3-43bd-cd3e-a1fa-f3aab658ab39_default_universal.mp4",
+        "sha256": "e7fe2a7c5c1a2ef0e6cafb7178a4ccad42ebcd5f7edaa57132b64c37d7e7902c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "31304321-4fad-2e7c-a421-4bbbfe7a6dff",
+        "retainedAudioDecodedPcmSha256": "e59bb64bbeea7d36691431afea753e53906301aac4fa8307c6cf3d04104e6086",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "sha256": "adab2ba749d1e1e8dd40dc3716217ee022d73c4f6f7a65f6519c0e35c4bc26ba",
+      "excerpt": {
+        "startSeconds": 80.629,
+        "endSeconds": 80.939,
+        "gainDb": 8.259,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-phantom-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb61a0d3-43bd-cd3e-a1fa-f3aab658ab39_default_universal.mp4",
+        "sha256": "e7fe2a7c5c1a2ef0e6cafb7178a4ccad42ebcd5f7edaa57132b64c37d7e7902c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "31304321-4fad-2e7c-a421-4bbbfe7a6dff",
+        "retainedAudioDecodedPcmSha256": "e59bb64bbeea7d36691431afea753e53906301aac4fa8307c6cf3d04104e6086",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "sha256": "adab2ba749d1e1e8dd40dc3716217ee022d73c4f6f7a65f6519c0e35c4bc26ba",
+      "excerpt": {
+        "startSeconds": 107.33,
+        "endSeconds": 107.64,
+        "gainDb": 7.523,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-phantom-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb61a0d3-43bd-cd3e-a1fa-f3aab658ab39_default_universal.mp4",
+        "sha256": "e7fe2a7c5c1a2ef0e6cafb7178a4ccad42ebcd5f7edaa57132b64c37d7e7902c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "31304321-4fad-2e7c-a421-4bbbfe7a6dff",
+        "retainedAudioDecodedPcmSha256": "e59bb64bbeea7d36691431afea753e53906301aac4fa8307c6cf3d04104e6086",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "sha256": "adab2ba749d1e1e8dd40dc3716217ee022d73c4f6f7a65f6519c0e35c4bc26ba",
+      "excerpt": {
+        "startSeconds": 132.573,
+        "endSeconds": 132.883,
+        "gainDb": 5.727,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-phantom-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb61a0d3-43bd-cd3e-a1fa-f3aab658ab39_default_universal.mp4",
+        "sha256": "e7fe2a7c5c1a2ef0e6cafb7178a4ccad42ebcd5f7edaa57132b64c37d7e7902c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "31304321-4fad-2e7c-a421-4bbbfe7a6dff",
+        "retainedAudioDecodedPcmSha256": "e59bb64bbeea7d36691431afea753e53906301aac4fa8307c6cf3d04104e6086",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "sha256": "e380374144dc5013cac675236ad66f48fdc25cd07f4241865d47aa8b3c2cf46b",
+      "excerpt": {
+        "startSeconds": 33.242,
+        "endSeconds": 33.752,
+        "gainDb": 4.711,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-sheriff-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/09ddb672-4ae2-617a-8e0e-878eb6bd66db_default_universal.mp4",
+        "sha256": "f86f6758a20f87cb116d12c04df0275cff92f5bf91464d282ed04b7f2556f0fa",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "5f35afb7-4de7-7b49-90ee-dd8bcd8ae8df",
+        "retainedAudioDecodedPcmSha256": "71cddc00990f61ceed6253b9b9e50e5af87b3c11aa2520754ba22eb17a26345a",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "sha256": "e380374144dc5013cac675236ad66f48fdc25cd07f4241865d47aa8b3c2cf46b",
+      "excerpt": {
+        "startSeconds": 56.56,
+        "endSeconds": 57.07,
+        "gainDb": 5.38,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-sheriff-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/09ddb672-4ae2-617a-8e0e-878eb6bd66db_default_universal.mp4",
+        "sha256": "f86f6758a20f87cb116d12c04df0275cff92f5bf91464d282ed04b7f2556f0fa",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "5f35afb7-4de7-7b49-90ee-dd8bcd8ae8df",
+        "retainedAudioDecodedPcmSha256": "71cddc00990f61ceed6253b9b9e50e5af87b3c11aa2520754ba22eb17a26345a",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "sha256": "e380374144dc5013cac675236ad66f48fdc25cd07f4241865d47aa8b3c2cf46b",
+      "excerpt": {
+        "startSeconds": 80.588,
+        "endSeconds": 81.098,
+        "gainDb": 5.259,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-sheriff-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/09ddb672-4ae2-617a-8e0e-878eb6bd66db_default_universal.mp4",
+        "sha256": "f86f6758a20f87cb116d12c04df0275cff92f5bf91464d282ed04b7f2556f0fa",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "5f35afb7-4de7-7b49-90ee-dd8bcd8ae8df",
+        "retainedAudioDecodedPcmSha256": "71cddc00990f61ceed6253b9b9e50e5af87b3c11aa2520754ba22eb17a26345a",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "sha256": "e380374144dc5013cac675236ad66f48fdc25cd07f4241865d47aa8b3c2cf46b",
+      "excerpt": {
+        "startSeconds": 107.678,
+        "endSeconds": 108.188,
+        "gainDb": 4.938,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-sheriff-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/09ddb672-4ae2-617a-8e0e-878eb6bd66db_default_universal.mp4",
+        "sha256": "f86f6758a20f87cb116d12c04df0275cff92f5bf91464d282ed04b7f2556f0fa",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "5f35afb7-4de7-7b49-90ee-dd8bcd8ae8df",
+        "retainedAudioDecodedPcmSha256": "71cddc00990f61ceed6253b9b9e50e5af87b3c11aa2520754ba22eb17a26345a",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "sha256": "e380374144dc5013cac675236ad66f48fdc25cd07f4241865d47aa8b3c2cf46b",
+      "excerpt": {
+        "startSeconds": 133.72,
+        "endSeconds": 134.23,
+        "gainDb": 4.186,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-sheriff-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/09ddb672-4ae2-617a-8e0e-878eb6bd66db_default_universal.mp4",
+        "sha256": "f86f6758a20f87cb116d12c04df0275cff92f5bf91464d282ed04b7f2556f0fa",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "5f35afb7-4de7-7b49-90ee-dd8bcd8ae8df",
+        "retainedAudioDecodedPcmSha256": "71cddc00990f61ceed6253b9b9e50e5af87b3c11aa2520754ba22eb17a26345a",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "sha256": "977457028293d61612d97a6d1724d04795a64f2611e0a5a27640f6dfb4f41c60",
+      "excerpt": {
+        "startSeconds": 43.911,
+        "endSeconds": 45.671,
+        "gainDb": 1.259,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-operator-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3d502769-4eab-e6f2-8032-4a9c37ead134_default_universal.mp4",
+        "sha256": "1c30df2f067030a4519d2d1ea948731e491b764e5eabf30c776a294b5b41b23c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "e71695ab-4551-7b82-cc33-2785f042c843",
+        "retainedAudioDecodedPcmSha256": "a0289f9a8dd494fd2b2f81cbd581c8f998ec40e6d231dea57ea222e20560c4f8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "sha256": "977457028293d61612d97a6d1724d04795a64f2611e0a5a27640f6dfb4f41c60",
+      "excerpt": {
+        "startSeconds": 70.08,
+        "endSeconds": 71.84,
+        "gainDb": 2.587,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-operator-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3d502769-4eab-e6f2-8032-4a9c37ead134_default_universal.mp4",
+        "sha256": "1c30df2f067030a4519d2d1ea948731e491b764e5eabf30c776a294b5b41b23c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "e71695ab-4551-7b82-cc33-2785f042c843",
+        "retainedAudioDecodedPcmSha256": "a0289f9a8dd494fd2b2f81cbd581c8f998ec40e6d231dea57ea222e20560c4f8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "sha256": "977457028293d61612d97a6d1724d04795a64f2611e0a5a27640f6dfb4f41c60",
+      "excerpt": {
+        "startSeconds": 98.9,
+        "endSeconds": 100.66,
+        "gainDb": 1.782,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-operator-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3d502769-4eab-e6f2-8032-4a9c37ead134_default_universal.mp4",
+        "sha256": "1c30df2f067030a4519d2d1ea948731e491b764e5eabf30c776a294b5b41b23c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "e71695ab-4551-7b82-cc33-2785f042c843",
+        "retainedAudioDecodedPcmSha256": "a0289f9a8dd494fd2b2f81cbd581c8f998ec40e6d231dea57ea222e20560c4f8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "sha256": "977457028293d61612d97a6d1724d04795a64f2611e0a5a27640f6dfb4f41c60",
+      "excerpt": {
+        "startSeconds": 132.7,
+        "endSeconds": 134.46,
+        "gainDb": 1.557,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-operator-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3d502769-4eab-e6f2-8032-4a9c37ead134_default_universal.mp4",
+        "sha256": "1c30df2f067030a4519d2d1ea948731e491b764e5eabf30c776a294b5b41b23c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "e71695ab-4551-7b82-cc33-2785f042c843",
+        "retainedAudioDecodedPcmSha256": "a0289f9a8dd494fd2b2f81cbd581c8f998ec40e6d231dea57ea222e20560c4f8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "sha256": "977457028293d61612d97a6d1724d04795a64f2611e0a5a27640f6dfb4f41c60",
+      "excerpt": {
+        "startSeconds": 170.197,
+        "endSeconds": 171.957,
+        "gainDb": 0.753,
+        "fadeOutSeconds": 0.02
+      },
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-operator-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3d502769-4eab-e6f2-8032-4a9c37ead134_default_universal.mp4",
+        "sha256": "1c30df2f067030a4519d2d1ea948731e491b764e5eabf30c776a294b5b41b23c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "e71695ab-4551-7b82-cc33-2785f042c843",
+        "retainedAudioDecodedPcmSha256": "a0289f9a8dd494fd2b2f81cbd581c8f998ec40e6d231dea57ea222e20560c4f8",
+        "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+        "reviewEvidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+        "reviewAudit": "skin-packs/audit/fire-review.json"
+      }
+    }
+  ]
 }

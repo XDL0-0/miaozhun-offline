@@ -1726,7 +1726,7 @@ d49711be3941d93a993f639af3acebdb59690723b5a4bf1b26b48563ac45a450  dist/media/vys
 3eccdeff5b174441cbe5a80e0956962378d27816a920dc4815b822022a412732  dist/media/vys-pre.CIJqPYp-.ogg
 aa73ba04f98ecbadc7bcd616454e7276532ba6875d85ae27871ac727e4f293dd  dist/media/yru-post.Bgf_dYrt.ogg
 4286fcd4c20f7e09e78b488f97c4eff841a0222e20d5172a57c28b1484ed0a1b  dist/media/yru-pre.BECko5qA.ogg
-2ed9a0a454dc2121fce18e9aa9697b6b77db61507b3ffc08ceff8c2593c8ad33  dist/offline-manifest.json
+f8d65b1c789fcce0009411900e15fed628a6fc0fb389ced64c61948003ca3092  dist/offline-manifest.json
 2ef89d0a0cd028c82cd0b5a42357ab46cc9d6de65f5a44720209fcd205ad96d9  dist/offline-runtime.js
 143d593e63a7b72f2dc05e27beb541af1b086de6ccd3cb65e1979c19baac7e78  dist/offline-ui.css
 3a61496b0e34088b7a0ca071eccf55942780a453a036b7e62b3c946b344d07a9  dist/og-aim.png
@@ -1803,6 +1803,7 @@ ef7b22711a9dd966f11f578dd57082c49251dd3a0f47db401fc7301c3884dbc5  dist/skin-pack
 5335da0d7c2592fde359c832618be10c17a53986fab814cbc3f669810bed98af  dist/skin-packs/ayakashi/banners/default/default.png
 ed9a40a36f6016e41274a07b2409c791ab968ecca907e11e17c86ca6d84a340b  dist/skin-packs/ayakashi/banners/default/pink.png
 703c2c6d6378bde28766b7adb221f1591ffef94ca0f56d7182a41d42df647e94  dist/skin-packs/ayakashi/banners/default/red.png
+041d3cc2cc6a1621e5c7762a6ae48f8cf90d944e971fc11d15be358bc8ec89f9  dist/skin-packs/ayakashi/fire/default/phantom.ogg
 ef2bc3ca7fcef77fa0171dffa598621bfa0b47956857a79ec8fa15d66f85db16  dist/skin-packs/ayakashi/kill/default/kill-1.ogg
 f13f479cc32db9c31a7040ddd4d8c132b157a5f3855ea307f1942e20c51e7834  dist/skin-packs/ayakashi/kill/default/kill-2.ogg
 e99fa783e4ab26654bbfe314a6b9e69e0197844a881516662c8709eb36991954  dist/skin-packs/ayakashi/kill/default/kill-3.ogg
@@ -1810,11 +1811,13 @@ e99fa783e4ab26654bbfe314a6b9e69e0197844a881516662c8709eb36991954  dist/skin-pack
 aa34451a68729f3a50fafeb7dc57cc8f36c37c851f29f0181ae9a8eb98d03f48  dist/skin-packs/ayakashi/kill/default/kill-5.ogg
 9800f31d0582062cdbba455dfa45510b8e1e4fbcd8cb581d6adad3eee2ed9a92  dist/skin-packs/ayakashi/kill/default/kill-6.ogg
 1a2936f69f3374cc9c16f8dee9203104fe62d31fddbc8dcfd1dc2327e8012ef7  dist/skin-packs/ayakashi/kill/default/successive.ogg
-c576098a400d3b2f7c5afb8efa432d7e0aed638b7a14d3677e44116cfaf455d6  dist/skin-packs/index.json
+038d45d0fbdcd19a8b739901fa5ec5c5b87362d21eea1d883f9c5882b370b44c  dist/skin-packs/index.json
 2430c9a24c0c8aaa4d28af941b3487b3db18a0b16bcf206ea9933f43815357be  dist/skin-packs/kuronami/banners/default/black.png
 ef28c3d684d7a47b029e1c607e19cf6840b98f8f305e4c7934fde41f700d038f  dist/skin-packs/kuronami/banners/default/default.png
 96674524c01a17158adf790bcb68f7dde57664bbd98d6b413efbc7bd845dd067  dist/skin-packs/kuronami/banners/default/purple.png
 4a82fde8d1148a22f5ccfb3dea50bd8594d60453caacf76b40f45c7a144506f8  dist/skin-packs/kuronami/banners/default/white.png
+cf154249e8ed78ae5001ffd8891c17f228474b2aadec775a9b1b3838ecf94e55  dist/skin-packs/kuronami/fire/default/phantom.ogg
+2ca2938bde38d1c65c2ea5548e71b56d5aea86b1d42994bf2fd002103eee5ff7  dist/skin-packs/kuronami/fire/default/vandal.ogg
 005e5fbfdf47ededca552fc59cffb58bd32c3d22b9203d5f99dcbb90beb2b919  dist/skin-packs/kuronami/kill/default/kill-1.ogg
 8bf30985a9057612481cba93da3c7e88fc9ebe03afe19e61987841a8207df676  dist/skin-packs/kuronami/kill/default/kill-2.ogg
 3849872a9d868eef9dc39151cf1aafb9c7c6e72ca759c0ae060f7805fc9a0cb9  dist/skin-packs/kuronami/kill/default/kill-3.ogg
@@ -1825,6 +1828,7 @@ a0d20faad69844d4c57acbcb9b529e98048d4c26355fe40814216ad30619b720  dist/skin-pack
 b05d843920486b221d6ea328aa2cd5d3a28582dde8e142e9cadb5cfd0363ccc0  dist/skin-packs/mystbloom/banners/default/default.png
 b24d85baccb84c620d5c504806c997a1ba3457fca113f019291aeeec9c6e39d6  dist/skin-packs/mystbloom/banners/default/orange.png
 d64a5fdaff404b2685d49d3778a52c8dbbb08056bcd5874928ef44eb80dfe4b5  dist/skin-packs/mystbloom/banners/default/purple.png
+b41696b585638cc05b94ca73a08c897f8ceaafec2f031808f997761757327492  dist/skin-packs/mystbloom/fire/default/phantom.ogg
 c7db0577a305a300da3198f3313e11e1e072ff0eb0307e15bbcad764f63d426c  dist/skin-packs/mystbloom/kill/default/kill-1.ogg
 4f4ec4d5e58a9633247088ed8141a4dc9c11945dfb4613237762f3e187344470  dist/skin-packs/mystbloom/kill/default/kill-2.ogg
 bdf08a8494fece5827c3294d0957b4984a7c7126ff2a78b5322595aed393528c  dist/skin-packs/mystbloom/kill/default/kill-3.ogg
@@ -1835,6 +1839,7 @@ ceaece5ab595042d46de6a94c359d72180174439d047e7864f8e00d167405322  dist/skin-pack
 8318bb39656870b1f694907d4b2194e77214f78bff1f35eaffee30c827c3fefb  dist/skin-packs/nocturnum/banners/default/blue.png
 bfdd52a6ef85f858173408387a285a8158ddd1d45992e5198fd531515f1b7f21  dist/skin-packs/nocturnum/banners/default/default.png
 2d93709e03c13b03205bd3ce866579380cd155bafdd9451a5bfae60c25f748db  dist/skin-packs/nocturnum/banners/default/yellow.png
+f913378e12747e5f3b6a96e8256f46bec2250ec8547fd992b02b5533fb62b492  dist/skin-packs/nocturnum/fire/default/phantom.ogg
 b292cca3ade2f424398c3685eb28b374ce210b02ad8906284dae04be0ff576b6  dist/skin-packs/nocturnum/kill/default/kill-1.ogg
 80ac3b219542e331989542c63f7c89b3a8b2bebfe27bafb439dcaa5259523a3c  dist/skin-packs/nocturnum/kill/default/kill-2.ogg
 5fe4392fcde318c266b63d5e4f7b101d3684b6024aeaf81134c0d0de80ec6c60  dist/skin-packs/nocturnum/kill/default/kill-3.ogg
@@ -1846,6 +1851,26 @@ a4f5a92f08d79e1099f8fdb288a2747f832de48644ead464acc291e9ceb89092  dist/skin-pack
 f10438dee04f079f0a3b527e3db1358d0b5016f404ebae053c504846bc7b0a1f  dist/skin-packs/ora-by-onetap/banners/raja/default.png
 2be9bf97b2ecb0bb353e437cbb7b2c1a08df7a99efd86a9a7eb429c12c77f6a1  dist/skin-packs/ora-by-onetap/banners/renegade/default.png
 5024c08ec4e3a6f1671a9e423ffa2cf3b247bb46f63ac212bc584529ebc96bd3  dist/skin-packs/ora-by-onetap/banners/watch/default.png
+5569a17e6f91132616d5634773de204d563e7602a1704f7c91becf129ccebc30  dist/skin-packs/ora-by-onetap/fire/base/operator.ogg
+2dc5b5e1aea4fd88aa39b213aa4c53365431f201743758ef7afff9914b16bdbd  dist/skin-packs/ora-by-onetap/fire/base/phantom.ogg
+59b86c724ff5c94bd45eadb192383113eb46ad226ce7b37d4eeb58e544f6d559  dist/skin-packs/ora-by-onetap/fire/base/sheriff.ogg
+0082ec42856097ee85c3d807a3beebd5a1b2f819bfc06c05e8e787222fab3756  dist/skin-packs/ora-by-onetap/fire/base/vandal.ogg
+2626e2156dab564e8ddd8695dfa66e497f4aeeee58954dd84ef26cca40318e30  dist/skin-packs/ora-by-onetap/fire/ignition/operator.ogg
+2eb0cc9cbd2ace883a6f35b0e013d89d4ac3fa18f7f79b9c9fbeb4e0c40085e5  dist/skin-packs/ora-by-onetap/fire/ignition/phantom.ogg
+2c00958e14727b6bc9ea351ae74f2392f4fbf9ea4b745a7cb03f82d9e3bc4af7  dist/skin-packs/ora-by-onetap/fire/ignition/sheriff.ogg
+5b35a6b226fde93d0b3432d58eec4493fc4d22ad732011276c2e296259a6ec96  dist/skin-packs/ora-by-onetap/fire/ignition/vandal.ogg
+53dd48e6d837c88f77477e9e90ad2a528af8ae8214a74541be172c6f81e9e648  dist/skin-packs/ora-by-onetap/fire/raja/operator.ogg
+22fd31e638a7f8a01503c4a490f71f4f075986dbca5cf55bfb448a6b8c2b8563  dist/skin-packs/ora-by-onetap/fire/raja/phantom.ogg
+2aeb8e18f81c4d1eb2c41316752ccb41f4650f22c2fca13831b33a49e2b215ed  dist/skin-packs/ora-by-onetap/fire/raja/sheriff.ogg
+d706645bc4f4f471f3e4458786e9b14b79e936af39d6c0d17416503d998d8655  dist/skin-packs/ora-by-onetap/fire/raja/vandal.ogg
+8f4f1aac1133e16f830e7e5ec0e6ca5aa25cd4b301443a1cd501a563235edf97  dist/skin-packs/ora-by-onetap/fire/renegade/operator.ogg
+e13a2054cd2d562ef56f6aef5c0630a1af017fbea81d240f4f13f7e21c40b728  dist/skin-packs/ora-by-onetap/fire/renegade/phantom.ogg
+f3bd4ae98143a6e2763228538bab4a3c70c3978785d5010da5cddf4223dc44ce  dist/skin-packs/ora-by-onetap/fire/renegade/sheriff.ogg
+f341a7b542047ff3d5df9c837c90bda6ea23a9b350a61faa4778b205f0a9d37a  dist/skin-packs/ora-by-onetap/fire/renegade/vandal.ogg
+38dba1f0724b2b61e73aeda81459f0cc242fa9c6f58e1346c86ceead15af5d02  dist/skin-packs/ora-by-onetap/fire/watch/operator.ogg
+50fd2c7e849af4c3a66f588f31105ca549a35f24565e4c7b7cd78e5e958da8c3  dist/skin-packs/ora-by-onetap/fire/watch/phantom.ogg
+d8779d72a737ca12a7b30f3d06a12747cb2a192d238a7c8cea7c373e7e60aef7  dist/skin-packs/ora-by-onetap/fire/watch/sheriff.ogg
+73ffef6ddc11eae555ceeb3a709bd4e6ecce16f478ca7e400bb58f98c192d796  dist/skin-packs/ora-by-onetap/fire/watch/vandal.ogg
 4c6e9e6e459bb27019e7ba665999515030dfb58e7027796f7cd3eaab79b041e0  dist/skin-packs/ora-by-onetap/kill/base/kill-1.ogg
 ea6a38f5f122579e3829cfcd0a808da87282333a1dbc5829e884c377d0def2c6  dist/skin-packs/ora-by-onetap/kill/base/kill-2.ogg
 e87d02758787310181ceba40d206eba2d7f7441c50bf568e4eac3a29d0a3692b  dist/skin-packs/ora-by-onetap/kill/base/kill-3.ogg
@@ -1880,6 +1905,7 @@ ce744187400ed91c7a2e5a9f095d9e50b568e4903f9f817fb9652f275e59b71a  dist/skin-pack
 061c8d44644f46e62d49dac9f0264cf92abc9d25ff1b532844fffd2cc091fbb4  dist/skin-packs/prelude-to-chaos/banners/default/default.png
 ba6e6d6ac523ab98e17eed6492db95f453d7a0b908fe59128c49aa453148f739  dist/skin-packs/prelude-to-chaos/banners/default/green.png
 173f7b2ebc1470151a18099da59427a1ac3f5312379aac4ffa42e563d7e1394e  dist/skin-packs/prelude-to-chaos/banners/default/white.png
+40bc3ba15b25adbedb4968b8a1251be8d2547283c1ccbe2940bbd2b58c184edb  dist/skin-packs/prelude-to-chaos/fire/default/vandal.ogg
 9f4cbf559b21d344b0a91ffe6047ed9ce76b893d1f07ed4fdde90caacf727e30  dist/skin-packs/prelude-to-chaos/kill/default/kill-1.ogg
 676a7661c6320ec1b8d7148dd8b6c768671c501432a9593cc9c404bcc455db36  dist/skin-packs/prelude-to-chaos/kill/default/kill-2.ogg
 ca5945868e4d0c7dfc83b1e1ed3ad99eab83bc33049d00aa91cc2a510cec2eb8  dist/skin-packs/prelude-to-chaos/kill/default/kill-3.ogg
@@ -1890,6 +1916,8 @@ e006249448060d04ac61b4ee51548651878624b064a63ca9b3517506c91d0d05  dist/skin-pack
 b6b5c0bf292b29b7b8ce3eea02d1b5cd089d439066f5e8da4e90a6387fcc7cac  dist/skin-packs/primordium/banners/default/default.png
 449582c6e079eef4e60dc101f3920d4ba8f07e3861a29ee6b1b6e60ed75c92c8  dist/skin-packs/primordium/banners/default/gold.png
 8149b6a3c2d5e3db3e6c67697d2fee8024e308705f4582f6cd7bb2c663e8dfb7  dist/skin-packs/primordium/banners/default/venom.png
+34e04faad40c0c5c218e341effbb4c999a649dbd126a99f31d455aa049a3be81  dist/skin-packs/primordium/fire/default/phantom.ogg
+f8ae68c8d10b37df33ff1385fa18d92f08c7f5591caa1c8f49320059b4f3257d  dist/skin-packs/primordium/fire/default/vandal.ogg
 6087e49fbb5d7bbda068210ac5078e484ae0b9bb6f3876edf2cf5745b6fba47e  dist/skin-packs/primordium/kill/default/kill-1.ogg
 5482993ff1b10519082d9fc223f8ef82d2655016e2f702976885b09b2ca09e24  dist/skin-packs/primordium/kill/default/kill-2.ogg
 ff8a26a3dda08ecb40f76a16cca105cfedcc06a7c67fffe0f2be257cf615431b  dist/skin-packs/primordium/kill/default/kill-3.ogg
@@ -1900,6 +1928,7 @@ e3c4b17484cdd46439f312131758632a67788bdf20c520ecda2187ba3741aa55  dist/skin-pack
 694fcc2381ffbd040fc29ba90af31c83e4a505b613c88194540e330e05d0b5a1  dist/skin-packs/rgx-11z-pro/banners/default/default.png
 1ecba000e633af49791cd8c9672e9a81028ed9c9213c19bf1172cd86669b1b23  dist/skin-packs/rgx-11z-pro/banners/default/red.png
 470238c38cc5f5b487e6fadd8875e11ff1ed2b5be3b4d4b3e3ead8a775b211ac  dist/skin-packs/rgx-11z-pro/banners/default/yellow.png
+23e47ba99aff4d926e58d95347c3aad674b7bc44833d8bcb4d061e8b96a4c668  dist/skin-packs/rgx-11z-pro/fire/default/vandal.ogg
 760c0a15c1cc9dcea05e957396710a5e57bfb6f090d555adea866d95267ceb41  dist/skin-packs/rgx-11z-pro/kill/default/kill-1.ogg
 36230442a8f3aefe93f3c9c9605de0db4752ab052b90a06f1f83387010d1cadd  dist/skin-packs/rgx-11z-pro/kill/default/kill-2.ogg
 adc5698c70a2bb95cd5eeab6c4f9d8a00cae5ddebb0f8880b5d58ed96fd23b5f  dist/skin-packs/rgx-11z-pro/kill/default/kill-3.ogg
@@ -1910,6 +1939,7 @@ f8a53807b347cc5f50786e5698502ef0b1b4a0adb8f4bddd038ad368f63be052  dist/skin-pack
 a99fba0750070cf3409afb7dec28801c21434ae7741013793b10acd7142f3cc9  dist/skin-packs/rogue/banners/default/default.png
 f53813483313145776b7fc31101d587a4fcfc0d6145a0d2f1dbdd3a6b3968def  dist/skin-packs/rogue/banners/default/green.png
 667dcf3988737598ffe662928463ad8e0cd694dd88245ccb3fd57662376fcc48  dist/skin-packs/rogue/banners/default/red.png
+93f0637ca363ab911e37c8782b8037a61e68deb4ac9e838859c39b2378c78638  dist/skin-packs/rogue/fire/default/vandal.ogg
 c78b439ca5944a7188494775a6983a572bb2bc1a15e236dd90357fc1aa60ab80  dist/skin-packs/rogue/kill/default/kill-1.ogg
 89bf2e480bfb016f7989082b63c4475df9754de2911ff1b37a283b322383aa2c  dist/skin-packs/rogue/kill/default/kill-2.ogg
 3bb99785ad3fc7ea45f1606ac59531456a0643dee7db0972dc1569db0adb8717  dist/skin-packs/rogue/kill/default/kill-3.ogg

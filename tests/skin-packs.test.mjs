@@ -54,7 +54,7 @@ test('ORA requires independent fire per weapon and theme, and actual composite b
   const assets=requiredAssets(ora),fire=assets.filter(asset=>asset.kind==='fire'),banners=assets.filter(asset=>asset.kind==='banner');
   assert.equal(fire.length,20);
   assert.equal(new Set(fire.map(asset=>asset.theme+'/'+asset.weapon)).size,20);
-  assert.ok(fire.every(asset=>asset.source===null),'unlocated gunfire has no fabricated filename');
+  assert.ok(fire.every(asset=>asset.source&&asset.sha256),'every weapon and theme has an independently reviewed gunfire excerpt');
   assert.equal(banners.length,5);
   assert.ok(banners.every(asset=>asset.id==='banner:default'&&asset.source.endsWith('/default.png')));
   assert.ok(!assets.some(asset=>/emblem|frame|ring|pip|headshot/.test(asset.id)));
@@ -64,14 +64,14 @@ test('ORA requires independent fire per weapon and theme, and actual composite b
   assert.equal(changed.filter(asset=>asset.source!==null).length,1,'Base fire must not stand in for other themes or weapons');
 });
 
-test('review audit counts unique runtime inputs and keeps missing gunfire explicit',()=>{
+test('review audit covers every catalog gunfire combination and all retained effects',()=>{
   const packs=audit(),assets=packs.flatMap(pack=>pack.assets);
   assert.equal(packs.length,9);
-  assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind!=='banner').length,79);
+  assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind!=='banner').length,109);
+  assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='fire').length,30);
   assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='banner').length,37);
-  assert.equal(packs.flatMap(pack=>pack.missing).length,30);
-  assert.ok(packs.every(pack=>pack.sourceStatus==='partial'&&!pack.complete));
-  assert.ok(packs.flatMap(pack=>pack.missing).every(asset=>asset.id.startsWith('fire:')&&asset.source===null));
+  assert.deepEqual(packs.flatMap(pack=>pack.missing),[]);
+  assert.ok(packs.every(pack=>pack.sourceStatus==='complete'&&pack.complete));
   assert.ok(assets.some(asset=>asset.kind==='kill'&&asset.id==='kill:6'&&asset.source.includes('/ayakashi/')));
 });
 

@@ -1,0 +1,1392 @@
+{
+  "compiledOn": "2026-10-19",
+  "reviewedFireCombinations": 30,
+  "ordinaryCombinations": 10,
+  "oraCombinations": 20,
+  "retainedOriginalAudioTracks": 14,
+  "mediaOwner": "Riot Games",
+  "discoveryIndex": "https://valorant-api.com/v1/weapons/skins",
+  "discoveryIndexNote": "Community index used to locate official Riot CDN previews; not a Riot API. Actual MP4 bytes and decoded audio were checked.",
+  "reviewMethod": "Matched actual weapon models and theme colors to isolated muzzle flashes, recoil and casing events. Located corresponding audio attacks using decoded waveforms, and ended every clip before the next trigger. All preview HUDs are hidden, so ammo-count evidence is unavailable.",
+  "sourceRetentionCommand": "ffmpeg -nostdin -v error -y -i SOURCE.mp4 -map 0:a:0 -vn -sn -dn -map_metadata -1 -c:a copy -fflags +bitexact -flags:a +bitexact OUTPUT.m4a",
+  "pcmEqualityCommand": "ffmpeg -nostdin -v error -i INPUT -map 0:a:0 -vn -f hash -hash sha256 -",
+  "outputProcessing": "Decode complete AAC track, trim reviewed time range, reset timestamps, apply constant gain targeting stereo peak 0.7 with headroom, fade final 20ms, encode Vorbis OGG. No denoising, sound synthesis, splicing, theme substitution or time stretching.",
+  "limitations": [
+    "These are authentic gunfire recordings extracted from official previews, not unpacked raw game sound files.",
+    "Late reverberation is cut before the next shot; ORA rifle clips are 0.31s and Sheriff clips 0.51s.",
+    "Operator clips include the natural bolt cycle.",
+    "Source video flashes can precede audible attacks by roughly 30\u2013180ms. Audio cuts follow actual waveforms; frame timestamps are separate.",
+    "Separate banner animation layers remain unavailable."
+  ],
+  "sourceTracks": [
+    {
+      "name": "Prelude to Chaos Vandal",
+      "path": "skin-packs/media/fire-sources/prelude-to-chaos-vandal-level2.m4a",
+      "bytes": 927801,
+      "sha256": "23211f51f8f3943a8541fd97ba965b8088ed82339bdcb9c466d0a176919cb68b",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=e8381041e37b83732aee3c2ed757f492b065d17172e7e906df2a8b6d88868ced",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/prelude-to-chaos-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/72cecd6d-4f72-c3a2-f2f9-3590d2f8fc5a_default_universal.mp4",
+        "sha256": "ba287f6eea3339d8011a9dac0d8537c72641dc669c43acaf2274b696ead7ab46",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "522a264e-4ca7-adb0-6cf1-28b2ef938727",
+        "levelUuid": "273db50c-41fd-99eb-89fa-d0969ef739bb",
+        "levelName": "Prelude to Chaos Vandal Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 30016657,
+        "retainedTrackBytes": 927801,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Kuronami Vandal",
+      "path": "skin-packs/media/fire-sources/kuronami-vandal-level2.m4a",
+      "bytes": 788339,
+      "sha256": "0b597327fe4165b97b4d068714e332357202fe588327263bf36c60a9673ace32",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=b4f6464141783c2b2d2f0c704849526738b939997ee68bd6c2210827852f5ddb",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/kuronami-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/efece8bb-4c6a-3b39-9656-148460347405_default_universal.mp4",
+        "sha256": "564b33edf6f57b9ad7781b5aa5fedaf12f154eeb2fe7a21ecac36c437726180e",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "d8d5d7a1-4d81-8560-54bc-0692ab40f69b",
+        "levelUuid": "97a5aab0-43ba-2044-4eb4-5d91af25bf7b",
+        "levelName": "Kuronami Vandal Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 20644547,
+        "retainedTrackBytes": 788339,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Kuronami Phantom",
+      "path": "skin-packs/media/fire-sources/kuronami-phantom-level2.m4a",
+      "bytes": 402125,
+      "sha256": "df122b82be569b90ad44f4194313ac43756947e9caa8d623b3250defe42eab55",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=2a1b0929de9ced227e0255ab8a0f70a16dcc02bedca47af2c646b3afc93446bd",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/kuronami-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/70fb1af1-4f0a-e38e-544f-d4b1325f3384_default_universal.mp4",
+        "sha256": "96cafe96797beb984afa90582c43174e482c016b707bd4da8fa0c53c0b5e0756",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "3f6410af-4fd7-74fb-c0f4-6ab61d30022c",
+        "levelUuid": "280f50f1-4234-fc12-96d8-7294c2acd0bd",
+        "levelName": "Kuronami Phantom Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 16090812,
+        "retainedTrackBytes": 402125,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Primordium Vandal",
+      "path": "skin-packs/media/fire-sources/primordium-vandal-level2.m4a",
+      "bytes": 712658,
+      "sha256": "e350cb263d0ab535e9a7e029bcd67a5b6cbc8c9d9825140ccb5640000c6ebd4a",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=3f4f5d63a8bff688961311143345a8d2a67504f41c075caf49600e37411a90bf",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/primordium-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3f506b2c-4656-49c5-fdea-0487ec837e32_default_universal.mp4",
+        "sha256": "343e4da5a04af94e4d7927ecda37b75ba3a25dda01714ac10ce1cb4a84972bb3",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "a70fd508-44ea-8de3-3b30-d3a7eb9db42e",
+        "levelUuid": "75316609-467f-8f90-8d24-f898e3216d65",
+        "levelName": "Primordium Vandal Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 16157106,
+        "retainedTrackBytes": 712658,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Primordium Phantom",
+      "path": "skin-packs/media/fire-sources/primordium-phantom-level2.m4a",
+      "bytes": 726263,
+      "sha256": "7c3c38d4fdf5298fc73f6a71730a3570b1f1aacb05d5d6d66af5b7f976fa59b0",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=3b5f55adb09d0e612e7f541668de8bf5d87626187da846dc4ab5b68cfd0e35a4",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/primordium-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/c00edd83-400b-649b-1630-589f5d226ac1_default_universal.mp4",
+        "sha256": "d24696ec2db020d274e4249ff426d54088bc8fd49273b0d0e041f6477159473e",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "34560475-4eaa-d2be-b37f-908463413482",
+        "levelUuid": "d1441f81-4d05-d9e5-d6c8-df8259d8ee01",
+        "levelName": "Primordium Phantom Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 15412961,
+        "retainedTrackBytes": 726263,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Rogue Vandal",
+      "path": "skin-packs/media/fire-sources/rogue-vandal-level2.m4a",
+      "bytes": 273320,
+      "sha256": "169c921179a8c4ff4815e13eb49495b407f487ba16dabc7030625700bc1669fb",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=2c7c2259477c724b3df840f244ba3ed83dbcdc16fa545d87335a152b07994c5c",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/rogue-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/b963d3e3-4327-32e5-5aa7-e8a8395b9cf3_default_universal.mp4",
+        "sha256": "d31051276841cc18bcff3065e16afbb8dc68962dcd97196eb96960afe1017886",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "1b9b0131-42fe-b6a7-d212-699b342ba642",
+        "levelUuid": "52969788-4ea9-5b96-039b-ecabf9812f82",
+        "levelName": "Rogue Vandal Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 12652893,
+        "retainedTrackBytes": 273320,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "RGX 11z Pro Vandal",
+      "path": "skin-packs/media/fire-sources/rgx-11z-pro-vandal-level2.m4a",
+      "bytes": 847019,
+      "sha256": "a94469460188a3998220564817c471fb0dafb06c82806e9ffa89065d2e2d8a2a",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=139939a00c56355bd4e06b5a581445e6fe272d1dc3c5a0ff29a9deeb467d47fc",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/rgx-11z-pro-vandal-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/ca980cdd-4248-f81c-ad08-9fb8c4725eba_default_universal.mp4",
+        "sha256": "c0e14d832d29c7786c1c89c5f24d7c0adb60fb7f1ce0ce9bd438a83930f3bc01",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "e5490f71-455b-74ad-f762-f5a876d4dff9",
+        "levelUuid": "524ebe7d-4a3b-cf50-ed55-1092d82cebf9",
+        "levelName": "RGX 11z Pro Vandal Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 80407016,
+        "retainedTrackBytes": 847019,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Ayakashi Phantom",
+      "path": "skin-packs/media/fire-sources/ayakashi-phantom-level2.m4a",
+      "bytes": 322397,
+      "sha256": "efb54c732f37151451054b710e2ad98fc58e9655d7471a084e8adeb83d8e9e36",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=e63901ba0ae3a8c50d65534ab11a21f23415385ada2856c11d6d104799ba3afa",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/ayakashi-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/4804775a-45a0-9f96-79e4-178a94e45b9e_default_universal.mp4",
+        "sha256": "b865be3243b1820a50472236a2add3074fb6271a3fb64485df980e95fe1ece6a",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "c1b96274-4346-2ea4-65f4-ec957d217922",
+        "levelUuid": "73c3a1e0-4bc0-91d0-b249-90aa2b63d570",
+        "levelName": "Ayakashi Phantom Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 10219579,
+        "retainedTrackBytes": 322397,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Nocturnum Phantom",
+      "path": "skin-packs/media/fire-sources/nocturnum-phantom-level2.m4a",
+      "bytes": 849562,
+      "sha256": "edb07c76ed0c4fb3effcb1d62b8192939c51de92690b9aeb7d3e1e56c4ae3b09",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=ac1e1c285910a1c266d8fb67b5d2a943ad92a9359e543dfe9d86e97dcec855bc",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/nocturnum-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/e5fb7793-4955-4129-c967-bbbad3e533d3_default_universal.mp4",
+        "sha256": "2a12b8489b3756e926b3b7e33c0f568ecd74303db43703776383e837ed12f188",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "320c4baa-41e8-ac8f-91eb-0fbc7bf3c145",
+        "levelUuid": "446502a4-45f1-b94c-0330-9a90441d722a",
+        "levelName": "Nocturnum Phantom Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 17972765,
+        "retainedTrackBytes": 849562,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "Mystbloom Phantom",
+      "path": "skin-packs/media/fire-sources/mystbloom-phantom-level2.m4a",
+      "bytes": 727964,
+      "sha256": "1cba97c13e4cecc7c62db5415c90e5333fce46d18be08d49d15e89f4e5fbae9b",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=f16f74a148a3ff7d12572b3ab347ebd78b63ff223702b1c092df379ffba686bb",
+      "source": {
+        "path": "skin-packs/local/fire-research/exclusive/mystbloom-phantom-level2.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7b940e3e-4f98-770e-de5b-db83c339c131_default_universal.mp4",
+        "sha256": "9c66af121ef45fdce43a4db9098feaadab8aae05859b6214fc5080e116b78d84",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "skinUuid": "ce85f078-474a-eae4-3844-03a49625df15",
+        "levelUuid": "65d85f79-4934-48fc-ac0e-128bd43ad572",
+        "levelName": "Mystbloom Phantom Level 2"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 14932044,
+        "retainedTrackBytes": 727964,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "ORA by OneTap Vandal",
+      "level": 5,
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "bytes": 3014620,
+      "sha256": "e7df8fc8b222d12ca8fc97a92200a2b4661d89d40eaeddad1542757e8cb623a0",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=e1db3cfdcee1447cc37ad9d0f3dd899a99ff537adb4a2d3f4f4bbc93415f29a8",
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-vandal-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/cf819e35-4a9b-e5ec-e299-e1ae69e9c1ca_default_universal.mp4",
+        "sha256": "66d8f24e2a1bd37de34c17adc12093c2adc3ae27a57a19c2d1a305aac3decd0d",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "4356a6c4-428b-a1ef-f31d-0e9bcfa69306"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 174493318,
+        "retainedTrackBytes": 3014620,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "ORA by OneTap Phantom",
+      "level": 5,
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "bytes": 3310021,
+      "sha256": "adab2ba749d1e1e8dd40dc3716217ee022d73c4f6f7a65f6519c0e35c4bc26ba",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=e59bb64bbeea7d36691431afea753e53906301aac4fa8307c6cf3d04104e6086",
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-phantom-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb61a0d3-43bd-cd3e-a1fa-f3aab658ab39_default_universal.mp4",
+        "sha256": "e7fe2a7c5c1a2ef0e6cafb7178a4ccad42ebcd5f7edaa57132b64c37d7e7902c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "31304321-4fad-2e7c-a421-4bbbfe7a6dff"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 223145471,
+        "retainedTrackBytes": 3310021,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "ORA by OneTap Sheriff",
+      "level": 5,
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "bytes": 3268270,
+      "sha256": "e380374144dc5013cac675236ad66f48fdc25cd07f4241865d47aa8b3c2cf46b",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=71cddc00990f61ceed6253b9b9e50e5af87b3c11aa2520754ba22eb17a26345a",
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-sheriff-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/09ddb672-4ae2-617a-8e0e-878eb6bd66db_default_universal.mp4",
+        "sha256": "f86f6758a20f87cb116d12c04df0275cff92f5bf91464d282ed04b7f2556f0fa",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "5f35afb7-4de7-7b49-90ee-dd8bcd8ae8df"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 160446941,
+        "retainedTrackBytes": 3268270,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    },
+    {
+      "name": "ORA by OneTap Operator",
+      "level": 5,
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "bytes": 3999677,
+      "sha256": "977457028293d61612d97a6d1724d04795a64f2611e0a5a27640f6dfb4f41c60",
+      "codec": "AAC copied without encoding",
+      "decodedPcmHash": "SHA256=a0289f9a8dd494fd2b2f81cbd581c8f998ec40e6d231dea57ea222e20560c4f8",
+      "source": {
+        "path": "skin-packs/local/fire-research/ora/official-operator-level5.mp4",
+        "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/3d502769-4eab-e6f2-8032-4a9c37ead134_default_universal.mp4",
+        "sha256": "1c30df2f067030a4519d2d1ea948731e491b764e5eabf30c776a294b5b41b23c",
+        "apiSource": "https://valorant-api.com/v1/weapons/skins",
+        "levelUuid": "e71695ab-4551-7b82-cc33-2785f042c843"
+      },
+      "acquisition": {
+        "status": "downloaded-and-decoded",
+        "httpStatus": 200,
+        "downloadedVideoBytes": 232360979,
+        "retainedTrackBytes": 3999677,
+        "sourceVideoPresentAtReview": true,
+        "decodedPcmEquality": "verified exact SHA256 equality between full MP4 audio and retained M4A"
+      }
+    }
+  ],
+  "clips": [
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/prelude-to-chaos-vandal-level2.m4a",
+      "startSeconds": 13.157,
+      "endSeconds": 13.645,
+      "visualEvidence": "One ADS tap: exactly one casing ejected at13.0833 and then continuously travels right; recoil returns by13.2333. Next visual trigger13.5833. Extended electric muzzle flare is one pulse, not separate shots.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 779,
+          "timeSeconds": 12.983333333333333
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 785,
+          "timeSeconds": 13.083333333333334
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 801,
+          "timeSeconds": 13.35
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/prelude-to-chaos-vandal.jpg",
+      "nextAttackMarginSeconds": 0.02,
+      "rawExcerptMetrics": {
+        "peak": 0.77949864,
+        "rms": 0.14578542,
+        "rmsDbfs": -16.73,
+        "peakGainFor0_8": 1.0263
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -126.03,
+        "last20msUnfadedRmsDbfs": -23.46,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.7794986367225647,
+      "gainDb": -0.934,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/kuronami-vandal-level2.m4a",
+      "startSeconds": 2.045,
+      "endSeconds": 2.71,
+      "visualEvidence": "Silver angular Vandal on Lotus; one cyan muzzle flash plus recoil and casing. Five isolated taps precede later automatic section.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 117,
+          "timeSeconds": 1.95
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 121,
+          "timeSeconds": 2.0166666666666666
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 135,
+          "timeSeconds": 2.25
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/kuronami-vandal.jpg",
+      "nextAttackMarginSeconds": 0.018,
+      "rawExcerptMetrics": {
+        "peak": 0.6880995,
+        "rms": 0.10955773,
+        "rmsDbfs": -19.21,
+        "peakGainFor0_8": 1.1626
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -200.0,
+        "last20msUnfadedRmsDbfs": -32.11,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.6880995035171509,
+      "gainDb": 0.149,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/kuronami-phantom-level2.m4a",
+      "startSeconds": 1.744,
+      "endSeconds": 2.45,
+      "visualEvidence": "Silver angular suppressed Phantom on Split; one cyan muzzle pulse and recoil recovery, with no targets or kills.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 93,
+          "timeSeconds": 1.55
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 99,
+          "timeSeconds": 1.65
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 114,
+          "timeSeconds": 1.9
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/kuronami-phantom.jpg",
+      "nextAttackMarginSeconds": 0.11,
+      "rawExcerptMetrics": {
+        "peak": 0.16350557,
+        "rms": 0.02432289,
+        "rmsDbfs": -32.28,
+        "peakGainFor0_8": 4.8928
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -94.68,
+        "last20msUnfadedRmsDbfs": -66.63,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.16350556910037994,
+      "gainDb": 12.631,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/primordium-vandal-level2.m4a",
+      "startSeconds": 1.688,
+      "endSeconds": 2.185,
+      "visualEvidence": "Bone and glowing red Vandal on Ascent; one orange muzzle flash, recoil and casing.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 96,
+          "timeSeconds": 1.6
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 100,
+          "timeSeconds": 1.6666666666666667
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 117,
+          "timeSeconds": 1.95
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/primordium-vandal.jpg",
+      "nextAttackMarginSeconds": 0.015,
+      "rawExcerptMetrics": {
+        "peak": 0.74726629,
+        "rms": 0.11851633,
+        "rmsDbfs": -18.52,
+        "peakGainFor0_8": 1.0706
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -200.0,
+        "last20msUnfadedRmsDbfs": -26.56,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.7472662925720215,
+      "gainDb": -0.568,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/primordium-phantom-level2.m4a",
+      "startSeconds": 1.603,
+      "endSeconds": 2.08,
+      "visualEvidence": "Bone and glowing red suppressed Phantom on Ascent; one orange muzzle flash and recoil.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 90,
+          "timeSeconds": 1.5
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 95,
+          "timeSeconds": 1.5833333333333333
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 111,
+          "timeSeconds": 1.85
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/primordium-phantom.jpg",
+      "nextAttackMarginSeconds": 0.015,
+      "rawExcerptMetrics": {
+        "peak": 0.59545529,
+        "rms": 0.09901356,
+        "rmsDbfs": -20.09,
+        "peakGainFor0_8": 1.3435
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -200.0,
+        "last20msUnfadedRmsDbfs": -43.19,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.5954552888870239,
+      "gainDb": 1.405,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/rogue-vandal-level2.m4a",
+      "startSeconds": 4.12,
+      "endSeconds": 4.485,
+      "visualEvidence": "Black tactical Vandal on Ascent; one red muzzle flash, recoil and casing after equip/inspect has ended.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 234,
+          "timeSeconds": 3.9
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 240,
+          "timeSeconds": 4.0
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 255,
+          "timeSeconds": 4.25
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/rogue-vandal.jpg",
+      "nextAttackMarginSeconds": 0.01,
+      "rawExcerptMetrics": {
+        "peak": 0.38123488,
+        "rms": 0.12719962,
+        "rmsDbfs": -17.91,
+        "peakGainFor0_8": 2.0984
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -90.21,
+        "last20msUnfadedRmsDbfs": -31.73,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.38123488426208496,
+      "gainDb": 5.278,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/rgx-11z-pro-vandal-level2.m4a",
+      "startSeconds": 3.422,
+      "endSeconds": 3.925,
+      "visualEvidence": "Green/yellow open-frame RGX Vandal on Fracture; one yellow muzzle flash with recoil after equip/inspect.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 198,
+          "timeSeconds": 3.3
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 202,
+          "timeSeconds": 3.3666666666666667
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 216,
+          "timeSeconds": 3.6
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/rgx-11z-pro-vandal.jpg",
+      "nextAttackMarginSeconds": 0.01,
+      "rawExcerptMetrics": {
+        "peak": 0.81335145,
+        "rms": 0.15879031,
+        "rmsDbfs": -15.98,
+        "peakGainFor0_8": 0.9836
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -82.81,
+        "last20msUnfadedRmsDbfs": -26.46,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.8133514523506165,
+      "gainDb": -1.304,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ayakashi-phantom-level2.m4a",
+      "startSeconds": 2.086,
+      "endSeconds": 2.85,
+      "visualEvidence": "Black/red mask-themed suppressed Phantom on Abyss; one red muzzle pulse and recoil after equip animation.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 117,
+          "timeSeconds": 1.95
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 122,
+          "timeSeconds": 2.033333333333333
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 138,
+          "timeSeconds": 2.3
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ayakashi-phantom.jpg",
+      "nextAttackMarginSeconds": 0.033,
+      "rawExcerptMetrics": {
+        "peak": 0.27616903,
+        "rms": 0.03976192,
+        "rmsDbfs": -28.01,
+        "peakGainFor0_8": 2.8968
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -130.76,
+        "last20msUnfadedRmsDbfs": -53.15,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.2761690318584442,
+      "gainDb": 8.078,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/nocturnum-phantom-level2.m4a",
+      "startSeconds": 1.88,
+      "endSeconds": 2.51,
+      "visualEvidence": "Purple/grey skull-themed suppressed Phantom on Haven; one magenta muzzle pulse and recoil after equip animation.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 105,
+          "timeSeconds": 1.75
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 109,
+          "timeSeconds": 1.8166666666666667
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 126,
+          "timeSeconds": 2.1
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/nocturnum-phantom.jpg",
+      "nextAttackMarginSeconds": 0.017,
+      "rawExcerptMetrics": {
+        "peak": 0.6888088,
+        "rms": 0.08569149,
+        "rmsDbfs": -21.34,
+        "peakGainFor0_8": 1.1614
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -142.79,
+        "last20msUnfadedRmsDbfs": -44.17,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.688808798789978,
+      "gainDb": 0.14,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/mystbloom-phantom-level2.m4a",
+      "startSeconds": 1.576,
+      "endSeconds": 2.02,
+      "visualEvidence": "Pink floral suppressed Phantom on Lotus; one pink muzzle pulse, recoil and casing, firing toward open scenery.",
+      "frames": [
+        {
+          "role": "before",
+          "frameIndexZeroBased": 87,
+          "timeSeconds": 1.45
+        },
+        {
+          "role": "shot",
+          "frameIndexZeroBased": 91,
+          "timeSeconds": 1.5166666666666666
+        },
+        {
+          "role": "after",
+          "frameIndexZeroBased": 105,
+          "timeSeconds": 1.75
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/mystbloom-phantom.jpg",
+      "nextAttackMarginSeconds": 0.017,
+      "rawExcerptMetrics": {
+        "peak": 0.65556604,
+        "rms": 0.09955209,
+        "rmsDbfs": -20.04,
+        "peakGainFor0_8": 1.2203
+      },
+      "mixAssessment": {
+        "kind": "Official in-game weapon preview, firing in empty scenery after equip; no speech/music/kill/finisher/reload event in selected window.",
+        "basis": "Visible isolated muzzle/casing/recoil event; waveform is quiet before attack and has no intervening second attack before end. Near-zero pre-shot PCM rules out continuous background music in the selected moment.",
+        "preShotRmsDbfs": -200.0,
+        "last20msUnfadedRmsDbfs": -30.48,
+        "tail": "Natural reverberation may extend past the next tap; this window truncates only the late tail, with a 20ms fade recommended."
+      },
+      "rawStereoPeak": 0.6555660367012024,
+      "gainDb": 0.57,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "startSeconds": 32.735,
+      "endSeconds": 33.045,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: gold/orange; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 32.525
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 32.655
+        },
+        {
+          "label": "after",
+          "timeSeconds": 32.845
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.3951338827610016,
+      "gainDb": 4.967,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "startSeconds": 54.896,
+      "endSeconds": 55.206,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: lime; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 54.686
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 54.816
+        },
+        {
+          "label": "after",
+          "timeSeconds": 55.006
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.4389461278915405,
+      "gainDb": 4.054,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "startSeconds": 76.471,
+      "endSeconds": 76.781,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: purple; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 76.261
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 76.391
+        },
+        {
+          "label": "after",
+          "timeSeconds": 76.581
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.43883708119392395,
+      "gainDb": 4.056,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "startSeconds": 98.401,
+      "endSeconds": 98.711,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: blue; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 98.191
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 98.321
+        },
+        {
+          "label": "after",
+          "timeSeconds": 98.511
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.48540419340133667,
+      "gainDb": 3.18,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "vandal",
+      "path": "skin-packs/media/fire-sources/ora-vandal-level5.m4a",
+      "startSeconds": 123.432,
+      "endSeconds": 123.742,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: red; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 123.222
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 123.352
+        },
+        {
+          "label": "after",
+          "timeSeconds": 123.542
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-vandal.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.4933178126811981,
+      "gainDb": 3.039,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "startSeconds": 32.564,
+      "endSeconds": 32.874,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: gold/orange; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 32.354
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 32.484
+        },
+        {
+          "label": "after",
+          "timeSeconds": 32.674
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.25780200958251953,
+      "gainDb": 8.676,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "startSeconds": 56.647,
+      "endSeconds": 56.957,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: lime; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 56.437
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 56.567
+        },
+        {
+          "label": "after",
+          "timeSeconds": 56.757
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.23454773426055908,
+      "gainDb": 9.497,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "startSeconds": 80.629,
+      "endSeconds": 80.939,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: purple; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 80.419
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 80.549
+        },
+        {
+          "label": "after",
+          "timeSeconds": 80.739
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.2704927921295166,
+      "gainDb": 8.259,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "startSeconds": 107.33,
+      "endSeconds": 107.64,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: blue; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 107.12
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 107.25
+        },
+        {
+          "label": "after",
+          "timeSeconds": 107.44
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.2944052815437317,
+      "gainDb": 7.523,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "phantom",
+      "path": "skin-packs/media/fire-sources/ora-phantom-level5.m4a",
+      "startSeconds": 132.573,
+      "endSeconds": 132.883,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: red; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 132.363
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 132.493
+        },
+        {
+          "label": "after",
+          "timeSeconds": 132.683
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-phantom.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.3620513379573822,
+      "gainDb": 5.727,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "startSeconds": 33.242,
+      "endSeconds": 33.752,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: gold/orange; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 33.032
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 33.162
+        },
+        {
+          "label": "after",
+          "timeSeconds": 33.352
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.4069620668888092,
+      "gainDb": 4.711,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "startSeconds": 56.56,
+      "endSeconds": 57.07,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: lime; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 56.35
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 56.48
+        },
+        {
+          "label": "after",
+          "timeSeconds": 56.67
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.37680307030677795,
+      "gainDb": 5.38,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "startSeconds": 80.588,
+      "endSeconds": 81.098,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: purple; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 80.378
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 80.508
+        },
+        {
+          "label": "after",
+          "timeSeconds": 80.698
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.3820687234401703,
+      "gainDb": 5.259,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "startSeconds": 107.678,
+      "endSeconds": 108.188,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: blue; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 107.468
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 107.598
+        },
+        {
+          "label": "after",
+          "timeSeconds": 107.788
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.3964499831199646,
+      "gainDb": 4.938,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "sheriff",
+      "path": "skin-packs/media/fire-sources/ora-sheriff-level5.m4a",
+      "startSeconds": 133.72,
+      "endSeconds": 134.23,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: red; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 133.51
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 133.64
+        },
+        {
+          "label": "after",
+          "timeSeconds": 133.83
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-sheriff.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "Conservative first-shot crop ends before next shot; natural tail shortened; use ~20ms fade-out.",
+      "rawStereoPeak": 0.4323146343231201,
+      "gainDb": 4.186,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "startSeconds": 43.911,
+      "endSeconds": 45.671,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: gold/orange; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 43.701
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 43.831
+        },
+        {
+          "label": "after",
+          "timeSeconds": 44.021
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "First hip shot against empty wall; includes natural decay and bolt action; ends before second shot.",
+      "rawStereoPeak": 0.6055577397346497,
+      "gainDb": 1.259,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "startSeconds": 70.08,
+      "endSeconds": 71.84,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: lime; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 69.87
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 70.0
+        },
+        {
+          "label": "after",
+          "timeSeconds": 70.19
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "First hip shot against empty wall; includes natural decay and bolt action; ends before second shot.",
+      "rawStereoPeak": 0.5197124481201172,
+      "gainDb": 2.587,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "startSeconds": 98.9,
+      "endSeconds": 100.66,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: purple; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 98.69
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 98.82
+        },
+        {
+          "label": "after",
+          "timeSeconds": 99.01
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "First hip shot against empty wall; includes natural decay and bolt action; ends before second shot.",
+      "rawStereoPeak": 0.5701526999473572,
+      "gainDb": 1.782,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "startSeconds": 132.7,
+      "endSeconds": 134.46,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: blue; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 132.49
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 132.62
+        },
+        {
+          "label": "after",
+          "timeSeconds": 132.81
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "First hip shot against empty wall; includes natural decay and bolt action; ends before second shot.",
+      "rawStereoPeak": 0.5851401090621948,
+      "gainDb": 1.557,
+      "fadeOutSeconds": 0.02
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "weapon": "operator",
+      "path": "skin-packs/media/fire-sources/ora-operator-level5.m4a",
+      "startSeconds": 170.197,
+      "endSeconds": 171.957,
+      "visualEvidence": "Official level5 sequence; matched labeled Wiki preview color: red; First shot against empty Haven wall before kill scenes; no kill trigger or target. Source official preview audio has no narration.",
+      "frames": [
+        {
+          "label": "before",
+          "timeSeconds": 169.987
+        },
+        {
+          "label": "shot",
+          "timeSeconds": 170.117
+        },
+        {
+          "label": "after",
+          "timeSeconds": 170.307
+        }
+      ],
+      "evidence": "skin-packs/audit/fire-evidence/ora-operator.jpg",
+      "audioVideoNote": "Original official video muzzle-flash frame precedes first audible attack by about90ms; audio cut uses actual waveform onset, not frame time.",
+      "excerptNote": "First hip shot against empty wall; includes natural decay and bolt action; ends before second shot.",
+      "rawStereoPeak": 0.6418761014938354,
+      "gainDb": 0.753,
+      "fadeOutSeconds": 0.02
+    }
+  ],
+  "runtimeAcceptance": "All30 Vorbis outputs built; all30 actual-byte cache-switch tests and browser preload/audition-start checks passed. See fire-output-validation.json, fire-browser-validation.json and runtime-validation.json."
+}

@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-19",
+  "origin": "http://127.0.0.1:18746",
+  "method": "UI selected each weapon, collection and theme; waited for fire/kill/banner ready; clicked fire audition and checked the visible audition-started status.",
+  "combinationsChecked": 30,
+  "consoleWarningsOrErrors": [],
+  "results": [
+    {
+      "weapon": "vandal",
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "kuronami",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "primordium",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "rogue",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "vandal",
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "primordium",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "ayakashi",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "kuronami",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "nocturnum",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "mystbloom",
+      "theme": "default",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "phantom",
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "sheriff",
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "sheriff",
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "sheriff",
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "sheriff",
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "sheriff",
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "operator",
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "operator",
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "operator",
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "operator",
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "fireReady": true,
+      "auditionStarted": true
+    },
+    {
+      "weapon": "operator",
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "fireReady": true,
+      "auditionStarted": true
+    }
+  ],
+  "restoredOriginalSelections": {
+    "vandal": {
+      "collection": "ora-by-onetap",
+      "theme": "ignition"
+    },
+    "phantom": {
+      "collection": "kuronami",
+      "theme": "default"
+    },
+    "sheriff": {
+      "collection": "ora-by-onetap",
+      "theme": "base"
+    },
+    "operator": {
+      "collection": "ora-by-onetap",
+      "theme": "ignition"
+    }
+  },
+  "manualLiveShooting": "Not repeated for this media addition; automated actual-client bridge and real-byte cache-switch tests cover the fire dispatch. Earlier in-app browser shooting lost pointer lock and paused."
+}

@@ -1,6 +1,6 @@
 # Vandal / Phantom skin packs + ORA by OneTap
 
-The offline client builds skin effects from reviewed originals in `skin-packs/media/`. The build currently supplies **79 kill-audio clips and 37 transparent composite kill banners** across nine collections and thirteen themes. **Gunfire remains missing for all 30 eligible weapon/theme combinations** and uses the client's original firing sound. Available kill sounds and banners work independently of missing assets.
+The offline client builds skin effects from reviewed originals in `skin-packs/media/`. The build supplies **30 genuine single-shot gunfire clips, 79 kill-audio clips and 37 transparent composite kill banners** across nine collections and thirteen themes. The 30 firing mappings cover ten ordinary skin/weapon pairs and all twenty ORA weapon/theme pairs. Available effects work independently, with native fallback if a resource fails.
 
 ## Selection
 
@@ -23,13 +23,13 @@ node server.mjs
 
 Open [the local client](http://127.0.0.1:18746/aim). The server listens only on `127.0.0.1:18746`. The Windows launcher remains available; rebuilding on Windows also requires `ffmpeg` on `PATH` and can use `.\runtime\node.exe` in place of `node`.
 
-`prepare-offline.mjs` applies the versioned patches and calls [build-skin-packs.mjs](../scripts/build-skin-packs.mjs). The builder checks reviewed SHA-256 hashes, converts MP3 to Vorbis OGG, normalizes transparent PNG banners to 300 × 300, and writes the **schema-2** `dist/skin-packs/index.json`. It rebuilds from repository media and [asset-review.json](./asset-review.json); `skin-packs/local/wiki-downloads/` and a new download are unnecessary. Rebuilding replaces generated skin output.
+`prepare-offline.mjs` applies the versioned patches and calls [build-skin-packs.mjs](../scripts/build-skin-packs.mjs). The builder checks reviewed SHA-256 hashes, converts MP3 and reviewed AAC excerpts to Vorbis OGG, normalizes transparent PNG banners to 300 × 300, and writes the **schema-2** `dist/skin-packs/index.json`. It rebuilds from repository media and [asset-review.json](./asset-review.json); `skin-packs/local/wiki-downloads/` and a new download are unnecessary. Rebuilding replaces generated skin output.
 
 ## Settings and playback
 
-In **参数设置 → 音效 → 枪械皮肤与击杀反馈**, select a gun, skin, theme and banner style. Selections and the separate fire, kill and banner switches are stored per gun in the browser. Ordinary collections offer four banner variants; ORA offers one composite banner per theme. The panel reports missing, loading, failed and ready assets, shows a banner preview, and provides individual and 1–5 kill auditions, an original-effect option, stop and reload controls.
+In **参数设置 → 音频 → 枪械皮肤与击杀反馈**, select a gun, skin, theme and banner style. Selections and the separate fire, kill and banner switches are stored per gun in the browser. Ordinary collections offer four banner variants; ORA offers one composite banner per theme. The panel reports missing, loading, failed and ready assets, shows a banner preview, and provides fire, individual and 1–5 kill auditions, an original-effect option, stop and reload controls.
 
-Audio and images load asynchronously. Audio is decoded before use; firing and kill events only read the decoded cache. An unavailable or failed asset falls back to the current original effect. **Every skin firing sample is currently missing**, and its audition button is disabled.
+Audio and images load asynchronously. Audio is decoded before use; firing and kill events only read the decoded cache. An unavailable or failed asset falls back to the current original effect. All 30 reviewed firing samples are available after preload; their audition controls follow the actual loading state. Missing or failed resources still disable their audition and use the native effect during play.
 
 Live kills follow the client's existing **1–5 cyclic sound sequence**: kill 6 uses clip 1, kill 7 uses clip 2. `successive.ogg` is an original multi-kill recording available for audition; Ayakashi's sixth clip is also audition-only. Neither replaces the live 1–5 sequence.
 
@@ -51,6 +51,8 @@ The manifest's `sourceStatus` and `resourceStatus` describe media coverage. They
 
 ## Provenance
 
-[asset-review.json](./asset-review.json) records original paths, source URLs, hashes, audio roles and banner variants. The [audit folder](./audit/) contains inventory and visual-review evidence. Original game media remains owned by Riot Games; use follows the project owner's reported official authorization. Source attribution does not change ownership.
+[asset-review.json](./asset-review.json) records original paths, source URLs, hashes, audio roles and banner variants. [fire-review.json](./audit/fire-review.json) adds all 30 firing time ranges, source identities and before/shot/after evidence. Fourteen complete original AAC tracks are retained in `media/fire-sources/`: copied from downloaded Riot CDN MP4 previews without encoding and checked for decoded PCM equality. Building needs these tracked audio sources, not the large ignored videos.
+
+Gunfire is extracted from official gameplay previews, rather than unpacked raw game sound files. Each range contains one shot and excludes equip, reload, kill and finisher events. Long reverberation tails are shortened before the next tap; Operator retains its natural bolt cycle. Exact time ranges, constant peak gains (target 0.7) and 20 ms tail fades are applied reproducibly by the builder. The original sources remain unchanged. The [audit folder](./audit/) contains inventory and visual-review evidence. Original game media remains owned by Riot Games; use follows the project owner's reported official authorization. Source attribution does not change ownership.
 
 Ranking source: [VALSTATS](https://reports.valstats.site/skin-popularity-v2/). Collection and kill-banner references: [VALORANT Wiki](https://wiki.playvalorant.com/en-us/Weapon_Skins), [Kill Banners](https://wiki.playvalorant.com/en-us/Kill_Banners). Per-file sources are recorded in the review data.
