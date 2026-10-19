@@ -62,8 +62,20 @@ def discover(slug):
             candidates[u] = tag.get_text(" ", strip=True)[:200]
     return page, candidates
 
+def resolve_file_page(url):
+    if "/File:" not in unquote(urlparse(url).path):
+        return url
+    soup = get_html(url)
+    for selector in (".fullMedia a.internal", ".fullMedia a[href]", "a.mw-thumbnail-link", "meta[property='og:audio']", "meta[property='og:image']"):
+        element = soup.select_one(selector)
+        if element:
+            link = element.get("href") or element.get("content")
+            if link: return urljoin(url, link)
+    raise ValueError("Could not locate original media link on File page")
+
 def fetch_media(url, dest):
-    with s.get(url, stream=True, timeout=70) as r:
+    media_url = resolve_file_page(url)
+    with s.get(media_url, stream=True, timeout=70) as r:
         r.raise_for_status()
         final = urlparse(r.url)
         # MediaWiki may redirect to Wikimedia upload hosts; only accept genuine media types.
