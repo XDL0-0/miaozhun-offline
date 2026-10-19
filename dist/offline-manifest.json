@@ -1,6 +1,6 @@
 {
   "app": "aim-offline",
-  "version": 1,
+  "version": 2,
   "originalVersion": "0.0.15",
   "sceneCount": 62,
   "originalSceneCount": 62,
@@ -14,5 +14,11 @@
   ],
   "network": "local-only",
   "origin": "http://127.0.0.1:18746",
-  "created": "2026-10-16T16:55:49.565Z"
+  "performanceOptimizations": [
+    "adjacent-tick-interpolation",
+    "shared-hud-raf",
+    "local-fps-limit",
+    "scene-prewarm"
+  ],
+  "created": "2026-10-16T17:49:06.224Z"
 }
