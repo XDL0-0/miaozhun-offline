@@ -171,9 +171,11 @@ test('inspect yields to reload, firing, ADS and a new equip; reload follows the 
 test('skin muzzle effects retain original emitters, bone attachments, curves and local texture closure',()=>{
   const fx=read(new URL('fire-effects.json',source));assert.equal(Object.keys(fx.guns).length,14);assert.equal(Object.keys(fx.systems).length,40);
   for(const [key,gun]of Object.entries(fx.guns))for(const rule of [...gun.hip,...gun.ads]){
-    const system=fx.systems[rule.sys];assert.ok(system?.emitters.length,key+' has a visible original particle system');
+    const system=fx.systems[rule.sys];assert.ok(system,key+' has its source particle system');
+    assert.ok(system.emitters.length||system.suppressed&&system.reason,'an omitted subsystem must explain why');
     for(const e of system.emitters){assert.ok(fx.materials[e.mat]);if(e.mesh)assert.ok(fx.meshes[e.mesh.name]);for(const m of e.mods)for(const v of Object.values(m))if(v?.v)assert.ok(v.v.every(Number.isFinite));}
   }
+  for(const [key,gun]of Object.entries(fx.guns))assert.ok(gun.hip.some(r=>fx.systems[r.sys].emitters.length),key+' retains visible source muzzle particles');
   for(const t of Object.values(fx.textures))assert.ok(fs.existsSync(local(t.file)));
   assert.ok(fx.guns['ayakashi/phantom'].hip.some(x=>x.attach==='Face_Brow'));
   assert.ok(fx.guns['kuronami/vandal'].hip.some(x=>x.attach==='Charging_Handle'));

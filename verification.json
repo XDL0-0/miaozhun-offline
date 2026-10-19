@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T20:51:57.070Z",
+  "generatedAt": "2026-10-19T21:52:00.287Z",
   "root": "G:\\TOOLS\\AimOffline\\dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
@@ -10,16 +10,16 @@
     "sceneCount": 62,
     "mapCount": 6
   },
-  "resourceCount": 2423,
-  "storedBytes": 336354113,
+  "resourceCount": 2418,
+  "storedBytes": 334238307,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
     "materialCandidates": 638,
     "moduleCandidates": 0,
     "moduleClosureEntries": 78,
-    "uniqueRequirements": 2322,
-    "satisfied": 2320,
+    "uniqueRequirements": 2317,
+    "satisfied": 2315,
     "moduleExclusions": [
       {
         "path": "js/BbCrAlFy.js",
@@ -1602,7 +1602,7 @@
     "weaponModels": {
       "weapons": 14,
       "collections": 9,
-      "assets": 340
+      "assets": 335
     }
   },
   "localization": {
@@ -2014,8 +2014,8 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "ae5762bfc3aad76bba5792d49e531d5e813b5702de6752b356625d3a7782ee0e",
-    "fileCount": 2423
+    "sha256": "effcfa19bcf71854ac7a44aa410b99b9436e28ac963bab01f49d18b30209e874",
+    "fileCount": 2418
   },
   "limitations": [
     "Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.",

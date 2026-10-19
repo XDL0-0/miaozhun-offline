@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
+import {resolveEffectMaterial,effectShapeTexture,materialPath} from './weapon-effect-materials.mjs';
 import {decodeWeaponGlb} from '../patches/weapon-models-runtime.mjs';
 
 // Translate cooked Cascade tables into the trainer's existing particle engine.
@@ -8,7 +9,7 @@ import {decodeWeaponGlb} from '../patches/weapon-models-runtime.mjs';
 export function importWeaponEffects({input,sourceRoot,entries,texture,store,audit}){
   const plans=JSON.parse(fs.readFileSync(path.join(input,'fire-plan.json'),'utf8'));
   const result={guns:{},systems:{},materials:{},meshes:{},textures:{}},byName=new Map(),issues=[];
-  const refPath=ref=>(ref?.ObjectPath??ref?.AssetPathName??'').replace(/\.[^/.]+$/,'');
+  const refPath=materialPath;
   const exported=(ref,ext)=>path.join(sourceRoot,refPath(ref).replace(/^\/Game\//,'ShooterGame/Content/').replace(/^\/Engine\//,'Engine/Content/')+'.'+ext);
   const enumName=(v,prefix='')=>(v??'').split('::').at(-1).replace(prefix,'');
   const vec=v=>[v?.X??0,v?.Y??0,v?.Z??0],rgb=v=>[v?.R??1,v?.G??1,v?.B??1];
@@ -27,36 +28,65 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
     if(dimensions===3)return {c3:raw.MinValueVec?vec(raw.MinValueVec):Array.isArray(fallback)?fallback:[fallback,fallback,fallback]};
     return {c:raw.MinValue??raw.MaxValue??fallback};
   }
+  const base=JSON.parse(fs.readFileSync(new URL('./weapon-native-effect-materials.json',import.meta.url)));
+  const readRaw=logical=>{const f=path.join(input,'properties',path.basename(logical)+'.json');if(!fs.existsSync(f))return null;return JSON.parse(fs.readFileSync(f)).find(o=>o.Package===logical);};
+  const readExport=logical=>{const f=exported({ObjectPath:logical+'.0'},'json');return fs.existsSync(f)?JSON.parse(fs.readFileSync(f)):null;};
+  const rejected=new Map(),converted=[];
   function tex(ref){
     const logical=refPath(ref);if(!logical)return null;const key='skin:'+logical;
     if(result.textures[key])return key;
     const normalized={ObjectPath:logical+'.0'},file=exported(normalized,'png');
     if(!fs.existsSync(file)){issues.push({kind:'missing texture',source:logical});return null;}
     const bytes=fs.readFileSync(file),url=texture(normalized);
-    result.textures[key]={file:url,w:bytes.readUInt32BE(16),h:bytes.readUInt32BE(20),srgb:true,clampX:false,clampY:false,nearest:false,alphaConst:false};
+    const native=base.textures?.[logical],lookup=/LUT|ColorGradient/i.test(logical);
+    const alpha=spawnSync(process.env.FFMPEG_PATH??'ffmpeg',['-v','error','-i',file,'-vf','format=rgba,alphaextract','-f','rawvideo','-pix_fmt','gray','pipe:1'],{windowsHide:true,maxBuffer:32*1024*1024});
+    if(alpha.status!==0)throw new Error('Cannot inspect sprite transparency: '+logical);
+    const alphaConst=alpha.stdout.every(v=>v===255);
+    result.textures[key]={file:url,w:bytes.readUInt32BE(16),h:bytes.readUInt32BE(20),srgb:native?.srgb??!lookup,clampX:native?.clampX??lookup,clampY:native?.clampY??lookup,nearest:native?.nearest??lookup,alphaConst};
     return key;
   }
   function material(ref){
-    const logical=refPath(ref),key='skin:'+logical;if(result.materials[key])return key;
-    const file=exported(ref,'json');if(!fs.existsSync(file)){issues.push({kind:'missing material',source:logical});return null;}
-    const data=JSON.parse(fs.readFileSync(file)),t=data.Textures??{},s=data.Scalars??{},c=data.Colors??{},sw=data.Switches??{};
-    let m;
-    const fakeLight=/FakeLight/i.test(logical)||data.BlendMode===4;
-    const lutRef=t.LUTs??t.LUT??Object.entries(t).find(([n])=>/LUT/i.test(n))?.[1]??(fakeLight?{ObjectPath:'/Game/VFX/Textures/ColorGradient/0_LUT_Variant_TEMPLATE_TEX.0'}:null);
-    const lut=lutRef&&fs.existsSync(exported(lutRef,'png'))?lutRef:null;
-    if(fakeLight&&lut){m={kind:'fakelight',lut:tex(lut),lutPos:s.LUT_Position??.5};if(!m.lut)return null;}
-    else{
-      const refs=[t.Emissive_Base,t['Emissive Color'],t.PM_Emissive,t.Emissive,t.Texture,t.Diffuse,t.Albedo,...Object.entries(t).filter(([n])=>!/Normal|Distort|LUT|Noise|Opacity Layer/i.test(n)).map(([,v])=>v),t.PM_Diffuse];
-      const ref=refs.find(r=>r&&!/DefaultDiffuse/.test(refPath(r))&&fs.existsSync(exported(r,'png'))),main=ref?tex(ref):null;
-      if(!main){
-        m={kind:'skinproc',mode:/Ring|Ripple|BlackHole/i.test(logical)?1:/Elec/i.test(logical)?2:0,power:s.FresnelPower??s.Power??2};
-        issues.push({kind:'procedural shader translation',source:logical});
-      }
-      else if(c.ColorA&&c.ColorB)m={kind:'uberlerp',tex:main,colA:rgb(c.ColorA),colB:rgb(c.ColorB)};
-      else m={kind:'mf',tex:main,lut:lut?tex(lut):null,lutMin:s.LUT_Min??0,lutMix:s.LUT_Mix??1,emissiveMult:Math.min(20,Math.max(.05,s['Emissive Intensity']??s['Emissive Multiplier']??s.EmissiveMult??1)),lutVariant:s.LUT_Variant??0,nLuts:s['Number of Luts']??4,errorFix:s['Error Fix']??.05,rot90:sw['Rotate 90 Degrees']??false,useLut:!!lut,useAlpha:false,texColor:sw['Use Texture Color']??false,particleColor:true};
-      m.tint=rgb(c.Emissive_ColorMult??c['Emissive Color']??c.EmissiveColor??c.Param??c.Tint??c.Color);
+    const logical=refPath(ref),key='skin:'+logical;if(result.materials[key])return key;if(rejected.has(key))return null;
+    const reject=reason=>{rejected.set(key,reason);issues.push({kind:'suppressed material',source:logical,reason});return null;};
+    if(!readExport(logical))return reject('Missing exported material');
+    const data=resolveEffectMaterial(logical,readRaw,readExport),t=data.Textures,s=data.Scalars,c=data.Colors,sw=data.Switches;
+    const template=base.materials?.[logical];let m;
+    if(template){
+      m=structuredClone(template);
+      for(const k of ['tex','texE','texO','lut'])if(m[k]){m[k]=tex({ObjectPath:m[k]+'.0'});if(!m[k])return reject('Missing source texture');}
+    }else if(/FakeLight/i.test(logical)||data.BlendMode===4){
+      const lut=t.LUTs??t.LUT;
+      if(!lut)return reject('Untranslated mesh-light shader; generic white gun glow removed');
+      m={kind:'fakelight',lut:tex(lut),lutPos:s.LUT_Position??.5,lutRow:((s.LUT_Variant??0)+.5)/(s['Number of Luts']??4)};if(!m.lut)return reject('Missing light lookup');
+    }else{
+      if(c.WPO&&t.WPO_Tex)return reject('Vertex-displaced flower shader unavailable; rigid crossing planes removed');
+      const raw=readRaw(logical),embedded=raw?.Type==='Material'&&raw.ReferencedTextures?.length===1?raw.ReferencedTextures[0]:null;
+      const ref=effectShapeTexture({...t,...(embedded?{Texture:embedded}:{})},r=>fs.existsSync(exported(r,'png')));
+      if(!ref)return reject('No reliable source silhouette; procedural fallback removed');
+      const main=tex(ref),textureInfo=result.textures[main],generic=data.parents.some(p=>/0_GenericA01_MAT$/.test(p));
+      // Camera-projected distortion, noise volumes and debug/default textures
+      // cannot be replaced by a textured rectangle without losing their mask.
+      if(sw.Diffuse_UVScreen||sw.Emissive_UVScreen)return reject('Screen-projected shader is unsupported');
+      const alphaRef=sw.Alpha_aToggle?t.Alpha_Base:null;
+      const opacity=alphaRef&&!/DefaultDiffuse|00_Debug|LUT|ColorGradient/.test(refPath(alphaRef))&&fs.existsSync(exported(alphaRef,'png'))?tex(alphaRef):null;
+      const lutRef=sw.LUT===true?t.LUTs??t.LUT:null;
+      const uv=prefix=>({scale:[s[prefix+'_ScaleU']??1,s[prefix+'_ScaleV']??1],offset:[s[prefix+'_OffsetU']??0,s[prefix+'_OffsetV']??0],rot:s[prefix+'_Rotate']??0,rate:s[prefix+'_RotateRate']??0,scroll:[s[prefix+'_ScrollU']??0,s[prefix+'_ScrollV']??0]});
+      const e=generic?uv('Emissive'):{scale:[1,1],offset:[0,0],rot:0,rate:0,scroll:[0,0]},o=generic?uv('Alpha'):e;
+      const dyn=(data.dynamic??[]).findIndex(n=>/^Dissolve$/i.test(n));
+      m={kind:'skinmask',tex:main,texO:opacity,lut:lutRef?tex(lutRef):null,e,o,
+        useAlpha:sw['Use Alpha Channel']??(!textureInfo.alphaConst),opacityAlpha:opacity?!result.textures[opacity].alphaConst:false,
+        tint:rgb(c.Emissive_ColorMult??c['Emissive Color']??c.EmissiveColor),
+        texColor:sw.Emissive_Base_32Bit??false,emissiveMult:s['Emissive Mult']??s['Emissive Intensity']??s.EmissiveMult??1,
+        alphaMult:Math.min(s.Alpha_ColorMult??1,4),polarE:sw.Emissive_PolarCoord??false,polarO:sw.Alpha_PolarCoord??false,
+        lutMin:s.LUT_Min??0,lutMax:s.LUT_Max??s.LUT_Mix??1,lutVariant:s.LUT_Variant??0,nLuts:s['Number of Luts']??4,
+        dissolve:dyn,dissolveSoft:1/Math.max(1,s.DissolveEdgeSoft??s.SoftValue??s.Alpha_Dissolve_HardEdgePower??10)};
+      // Exact source slot selection restores petals/eyes instead of sampling a
+      // noise mask or the flat Variant Color selector as RGB.
+      if(c['V0:ColorLight'])m.tint=rgb(c['V0:ColorLight']);
+      if(sw.Rotate90||sw['Rotate 90 Degrees'])m.e={...m.e,rot:m.e.rot+.25};
+      if(c.ColorA&&c.ColorB)m={kind:'uberlerp',tex:main,colA:rgb(c.ColorA),colB:rgb(c.ColorB)};
     }
-    result.materials[key]=m;return key;
+    result.materials[key]=m;converted.push({source:logical,kind:m.kind,parents:data.parents});return key;
   }
   function mesh(ref){
     const name='skin:'+refPath(ref);if(result.meshes[name])return name;
@@ -74,8 +104,10 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
     const name='skin:'+asset.replace('ShooterGame/Content/','/Game/').replace('.uasset',''),emitters=[];
     for(const ref of object.Properties.Emitters??[]){
       const source=resolve(ref),lod=resolve(source?.Properties?.LODLevels?.[0]),p=lod?.Properties??{},required=resolve(p.RequiredModule)?.Properties??{},spawn=resolve(p.SpawnModule)?.Properties??{};
+      if(p.bEnabled===false)continue;
       const td=resolve(p.TypeDataModule),tp=td?.Properties??{};
       const e={name:source?.Properties?.EmitterName??source?.Name,enabled:p.bEnabled!==false,detail:source?.Properties?.DetailModeBitmask??15,mat:material(required.Material),align:enumName(required.ScreenAlignment??'PSA_Square','PSA_'),local:required.bUseLocalSpace??false,duration:required.EmitterDuration??1,delay:required.EmitterDelay??0,loops:required.EmitterLoops??0,rate:dist(spawn.Rate??required.SpawnRate,1,0,objects),burst:(spawn.BurstList??required.BurstList??[]).map(b=>[b.Count,b.CountLow??-1,b.Time??0]),burstScale:dist(spawn.BurstScale,1,1,objects),sub:[required.SubImages_Horizontal??1,required.SubImages_Vertical??1],interp:enumName(required.InterpolationMethod??'PSUVIM_None','PSUVIM_'),randImgTime:required.RandomImageTime??1,uvFlip:enumName(required.UVFlippingMode??'None'),sort:enumName(required.SortMode??'None','PSORTMODE_'),lock:'NONE',pivot:[0,0],mesh:null,mods:[]};
+      if(!e.mat){issues.push({kind:'suppressed emitter',source:asset,emitter:e.name,reason:rejected.get('skin:'+refPath(required.Material))});continue;}
       if(td?.Type==='ParticleModuleTypeDataMesh'){
         const n=mesh(tp.Mesh);if(n)e.mesh={name:n,cameraFacing:tp.bCameraFacing??false,align:enumName(tp.MeshAlignment),axisLock:enumName(tp.AxisLockOption),overrideMaterial:tp.bOverrideMaterial??false,rpy:dist(tp.RollPitchYawRange,3,0,objects)};
       }else if(td){issues.push({kind:'unsupported particle type',source:asset,type:td.Type});e.enabled=false;}
@@ -113,10 +145,10 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
         }
         if(mod)e.mods.push(mod);
       }
-      const tint=result.materials[e.mat]?.tint;if(tint&&tint.some(v=>v!==1))e.mods.push({t:'colscale_life',c:{c3:tint},a:{c:1},emitterTime:false});
+      const tint=result.materials[e.mat]?.kind!=='skinmask'?result.materials[e.mat]?.tint:null;if(tint&&tint.some(v=>v!==1))e.mods.push({t:'colscale_life',c:{c3:tint},a:{c:1},emitterTime:false});
       if(e.enabled&&e.mat)emitters.push(e);
     }
-    result.systems[name]={emitters};byName.set(asset,name);return name;
+    result.systems[name]={emitters,...(!emitters.length?{suppressed:true,reason:'All source emitters require unsupported materials'}:{})};byName.set(asset,name);return name;
   }
   const packages=new Map();
   for(const plan of plans){
@@ -124,6 +156,6 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
     const gun={hip:rules(plan.hip),ads:rules(plan.ads),prev:'DestroyPrevious',tonemap:'ue'};
     packages.set(plan.name,gun);
   }
-  audit.particleImport={source:'Original skin firing blueprints and cooked Cascade tables',systems:byName.size,materials:Object.keys(result.materials).length,meshes:Object.keys(result.meshes).length,textures:Object.keys(result.textures).length,limitations:[...new Map(issues.map(i=>[JSON.stringify(i),i])).values()]};
+  audit.particleImport={source:'Original skin firing blueprints and cooked Cascade tables',systems:byName.size,materials:Object.keys(result.materials).length,meshes:Object.keys(result.meshes).length,textures:Object.keys(result.textures).length,converted,limitations:[...new Map(issues.map(i=>[JSON.stringify(i),i])).values()]};
   return {result,packages,urls(gun){return [...new Set([...gun.hip,...gun.ads].flatMap(rule=>result.systems[rule.sys].emitters.flatMap(e=>{const m=result.materials[e.mat];return [m.tex,m.lut,m.texE,m.texO].filter(Boolean).map(t=>result.textures[t].file);})))];}};
 }

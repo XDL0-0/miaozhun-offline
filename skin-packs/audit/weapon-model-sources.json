@@ -359,25 +359,12 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/5284cd1bc22076b4b7099888.png",
-      "bytes": 19523,
-      "sha256": "5284cd1bc22076b4b709988895b074b0ed003bbcb81e88ddee24a4693762823d",
+      "url": "/skin-packs/models/assets/fe9e1cdc8fbef51268969e47.png",
+      "bytes": 50454,
+      "sha256": "fe9e1cdc8fbef51268969e475b875678aa45b29ea7caf4587bc1ceedcbbb0d6f",
       "source": {
-        "path": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.png",
-        "sha256": "5284cd1bc22076b4b709988895b074b0ed003bbcb81e88ddee24a4693762823d",
-        "operation": "color",
-        "width": 128,
-        "height": 1024,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/b60502db2762b5f8993b2964.png",
-      "bytes": 128910,
-      "sha256": "b60502db2762b5f8993b296419b12fcdf10542b1b6c55f5184ade6e422dda981",
-      "source": {
-        "path": "ShooterGame/Content/VFX/Textures/Mask/T_Mask_Circle_01.png",
-        "sha256": "b60502db2762b5f8993b296419b12fcdf10542b1b6c55f5184ade6e422dda981",
+        "path": "ShooterGame/Content/VFX/ZWIP/AK_Project/Glow.png",
+        "sha256": "fe9e1cdc8fbef51268969e475b875678aa45b29ea7caf4587bc1ceedcbbb0d6f",
         "operation": "color",
         "width": 512,
         "height": 512,
@@ -385,28 +372,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/8c5f6280073b98ceb988e808.png",
-      "bytes": 95,
-      "sha256": "8c5f6280073b98ceb988e808a97ca37aed9bdacc4d03614e2cb39f003472a723",
+      "url": "/skin-packs/models/assets/7d804b74c727d845565ba934.png",
+      "bytes": 17021,
+      "sha256": "7d804b74c727d845565ba9342d6a62b50a10b78c6b86421e68dae7a6e9f3cb91",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/Mask/00_White_DIFF.png",
-        "sha256": "8c5f6280073b98ceb988e808a97ca37aed9bdacc4d03614e2cb39f003472a723",
-        "operation": "color",
-        "width": 8,
-        "height": 8,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/ba06cf0d601135cf39f34609.png",
-      "bytes": 187,
-      "sha256": "ba06cf0d601135cf39f346093f9d66af2b39f0600f372eaa9439344e9d9eec66",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Textures/LUT_Mage1_TEX3.png",
-        "sha256": "ba06cf0d601135cf39f346093f9d66af2b39f0600f372eaa9439344e9d9eec66",
+        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Leversniper/Ninja/VFX/Tex/Ray001_TEX.png",
+        "sha256": "7d804b74c727d845565ba9342d6a62b50a10b78c6b86421e68dae7a6e9f3cb91",
         "operation": "color",
         "width": 128,
-        "height": 4,
+        "height": 256,
         "resolution": "original"
       }
     },
@@ -450,15 +424,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/8eba732c240ee5994deffc50.png",
-      "bytes": 28458,
-      "sha256": "8eba732c240ee5994deffc50511ec60a9216340f6243f16f2f1dd1b057b913aa",
+      "url": "/skin-packs/models/assets/639c1c37e73379be92fb5a6b.png",
+      "bytes": 3137,
+      "sha256": "639c1c37e73379be92fb5a6b163dd3c3d7fa820ae006e0cc47201027898f0cf1",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/AlphaGradient/T_Mask_Ramp_TopDown_Clamped.png",
-        "sha256": "8eba732c240ee5994deffc50511ec60a9216340f6243f16f2f1dd1b057b913aa",
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash2_Greyscale_TEX_Grayscale.png",
+        "sha256": "639c1c37e73379be92fb5a6b163dd3c3d7fa820ae006e0cc47201027898f0cf1",
         "operation": "color",
-        "width": 512,
-        "height": 512,
+        "width": 128,
+        "height": 256,
         "resolution": "original"
       }
     },
@@ -502,41 +476,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/dc569dd2090630a3ab063326.png",
-      "bytes": 222,
-      "sha256": "dc569dd2090630a3ab0633263429c9ff8d33560cbfdada1752d7f4693b10a34f",
+      "url": "/skin-packs/models/assets/8c5f6280073b98ceb988e808.png",
+      "bytes": 95,
+      "sha256": "8c5f6280073b98ceb988e808a97ca37aed9bdacc4d03614e2cb39f003472a723",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX.png",
-        "sha256": "dc569dd2090630a3ab0633263429c9ff8d33560cbfdada1752d7f4693b10a34f",
+        "path": "ShooterGame/Content/VFX/Textures/Mask/00_White_DIFF.png",
+        "sha256": "8c5f6280073b98ceb988e808a97ca37aed9bdacc4d03614e2cb39f003472a723",
         "operation": "color",
-        "width": 128,
-        "height": 4,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/c1a06a233ff5ea1e4da97ad9.png",
-      "bytes": 10395,
-      "sha256": "c1a06a233ff5ea1e4da97ad9112c0f3e45c15533883a758398065e57d2def979",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Texture/Najin_MisRadial_10_TEX.png",
-        "sha256": "c1a06a233ff5ea1e4da97ad9112c0f3e45c15533883a758398065e57d2def979",
-        "operation": "color",
-        "width": 128,
-        "height": 128,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/c3e7baf0b0a2f2d3c61c3e60.png",
-      "bytes": 14399,
-      "sha256": "c3e7baf0b0a2f2d3c61c3e606c6a5462c66a9d7f2e73482acfbcdb397d594157",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Chroma/V3/Firing/Materials/Najin_MisRadial_05_2_TEX_V3.png",
-        "sha256": "c3e7baf0b0a2f2d3c61c3e606c6a5462c66a9d7f2e73482acfbcdb397d594157",
-        "operation": "color",
-        "width": 256,
-        "height": 256,
+        "width": 8,
+        "height": 8,
         "resolution": "original"
       }
     },
@@ -606,15 +554,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/2ce4599917f0ffe331411087.png",
-      "bytes": 13482,
-      "sha256": "2ce4599917f0ffe3314110877d596a5ccab9e8ec588f6feb9ba02136e2cc575d",
+      "url": "/skin-packs/models/assets/6671ef12c2bc7520880fe053.png",
+      "bytes": 115237,
+      "sha256": "6671ef12c2bc7520880fe053e037bf297c4b059d6ab03f7b36c3b89c09efa44d",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/NoiseDissolve/T_Noise_Blurry.png",
-        "sha256": "2ce4599917f0ffe3314110877d596a5ccab9e8ec588f6feb9ba02136e2cc575d",
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Dragon/VFX/DragonFire3_FB.png",
+        "sha256": "6671ef12c2bc7520880fe053e037bf297c4b059d6ab03f7b36c3b89c09efa44d",
         "operation": "color",
-        "width": 128,
-        "height": 128,
+        "width": 512,
+        "height": 512,
         "resolution": "original"
       }
     },
@@ -632,14 +580,14 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/9cbbfd34ddc0b64ad1472f5d.png",
-      "bytes": 38803,
-      "sha256": "9cbbfd34ddc0b64ad1472f5d11c2784dc43557e7e678256270a10529a31776e2",
+      "url": "/skin-packs/models/assets/9e693b1eaaf153c5743678cc.png",
+      "bytes": 81674,
+      "sha256": "9e693b1eaaf153c5743678cc6788f901e3822e58a8b5a4cf1af08360ea7780b1",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/NoiseDissolve/T_Noise_Smoke_Tiled_04_Blurry.png",
-        "sha256": "9cbbfd34ddc0b64ad1472f5d11c2784dc43557e7e678256270a10529a31776e2",
+        "path": "ShooterGame/Content/VFX/Textures/Mask/Wraith_Dissolve_Strip.png",
+        "sha256": "9e693b1eaaf153c5743678cc6788f901e3822e58a8b5a4cf1af08360ea7780b1",
         "operation": "color",
-        "width": 256,
+        "width": 1024,
         "height": 256,
         "resolution": "original"
       }
@@ -827,15 +775,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/fe9e1cdc8fbef51268969e47.png",
-      "bytes": 50454,
-      "sha256": "fe9e1cdc8fbef51268969e475b875678aa45b29ea7caf4587bc1ceedcbbb0d6f",
+      "url": "/skin-packs/models/assets/dc569dd2090630a3ab063326.png",
+      "bytes": 222,
+      "sha256": "dc569dd2090630a3ab0633263429c9ff8d33560cbfdada1752d7f4693b10a34f",
       "source": {
-        "path": "ShooterGame/Content/VFX/ZWIP/AK_Project/Glow.png",
-        "sha256": "fe9e1cdc8fbef51268969e475b875678aa45b29ea7caf4587bc1ceedcbbb0d6f",
+        "path": "ShooterGame/Content/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX.png",
+        "sha256": "dc569dd2090630a3ab0633263429c9ff8d33560cbfdada1752d7f4693b10a34f",
         "operation": "color",
-        "width": 512,
-        "height": 512,
+        "width": 128,
+        "height": 4,
         "resolution": "original"
       }
     },
@@ -849,19 +797,6 @@
         "operation": "color",
         "width": 128,
         "height": 256,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/898cf8694f15e83a4852b892.png",
-      "bytes": 1893554,
-      "sha256": "898cf8694f15e83a4852b892011d5c6408cd0e3f0831d2f7ca268aa1a0d953b5",
-      "source": {
-        "path": "Engine/Content/EngineMaterials/DefaultDiffuse.png",
-        "sha256": "898cf8694f15e83a4852b892011d5c6408cd0e3f0831d2f7ca268aa1a0d953b5",
-        "operation": "color",
-        "width": 1024,
-        "height": 1024,
         "resolution": "original"
       }
     },
@@ -885,6 +820,19 @@
       "source": {
         "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash1_FB_1x3_VFX.png",
         "sha256": "7235edd3e025ad6472978d6516e7cdf5889ea0f2087b3cea6d57be0fa60a454b",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/0a3dbd8667caf1d923cbd45c.png",
+      "bytes": 27567,
+      "sha256": "0a3dbd8667caf1d923cbd45ced051be8b4eef7010af056fa38ec0a3994f7bce8",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/Smoke_mask_01.png",
+        "sha256": "0a3dbd8667caf1d923cbd45ced051be8b4eef7010af056fa38ec0a3994f7bce8",
         "operation": "color",
         "width": 256,
         "height": 256,
@@ -957,15 +905,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/8b0cfa0e3d480964b155f7f2.png",
-      "bytes": 167491,
-      "sha256": "8b0cfa0e3d480964b155f7f2dd1561ffffbc7881e5779707de4aa9a5958cf7a6",
+      "url": "/skin-packs/models/assets/c2c833365b130345578e7f41.png",
+      "bytes": 5947,
+      "sha256": "c2c833365b130345578e7f41e05d274dc71a6d88c9268a2a8f441e7856012edf",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/Flipbook/BlastDirectional_8x1.png",
-        "sha256": "8b0cfa0e3d480964b155f7f2dd1561ffffbc7881e5779707de4aa9a5958cf7a6",
+        "path": "ShooterGame/Content/VFX/Textures/AlphaGradient/Pandemic_Ember.png",
+        "sha256": "c2c833365b130345578e7f41e05d274dc71a6d88c9268a2a8f441e7856012edf",
         "operation": "color",
-        "width": 1024,
-        "height": 512,
+        "width": 128,
+        "height": 128,
         "resolution": "original"
       }
     },
@@ -983,54 +931,28 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/e9626eaebad2cfc6f5f35486.png",
-      "bytes": 65294,
-      "sha256": "e9626eaebad2cfc6f5f35486e7b3410de1d2f838446ac3dd2e98bffc609cd099",
+      "url": "/skin-packs/models/assets/0cf6858a43fa0b9615522b1b.png",
+      "bytes": 346015,
+      "sha256": "0cf6858a43fa0b9615522b1b46558e7dd59356aa63b732150b832cc38c91debc",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/Mask/Wraith_4_halo.png",
-        "sha256": "e9626eaebad2cfc6f5f35486e7b3410de1d2f838446ac3dd2e98bffc609cd099",
-        "operation": "color",
-        "width": 512,
-        "height": 512,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/b1d299fd4e286c207d50c56e.png",
-      "bytes": 128279,
-      "sha256": "b1d299fd4e286c207d50c56e6589624b81e42583e6a584fa44c61faa032aba43",
-      "source": {
-        "path": "ShooterGame/Content/VFX/Textures/NoiseDissolve/Wraith_4Xtile90_Grayscale.png",
-        "sha256": "b1d299fd4e286c207d50c56e6589624b81e42583e6a584fa44c61faa032aba43",
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/King/VFX/Mats/MistRadial_3x3.png",
+        "sha256": "0cf6858a43fa0b9615522b1b46558e7dd59356aa63b732150b832cc38c91debc",
         "operation": "color",
         "width": 1024,
-        "height": 512,
+        "height": 1024,
         "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/21ba7f1d8018a1f114370637.png",
-      "bytes": 7137,
-      "sha256": "21ba7f1d8018a1f114370637bfa22bdfe28ac972d8c6e3bccfd2129053179fb8",
+      "url": "/skin-packs/models/assets/c5003826ee963d398fe7f008.png",
+      "bytes": 642108,
+      "sha256": "c5003826ee963d398fe7f008871b850be702b481b047d02e5ba936c6cba77281",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash2_Greyscale_TEX_Inverted.png",
-        "sha256": "21ba7f1d8018a1f114370637bfa22bdfe28ac972d8c6e3bccfd2129053179fb8",
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/Textures/Coven_Carbine_MuzzleFlash_RadialSmoke_FB.png",
+        "sha256": "c5003826ee963d398fe7f008871b850be702b481b047d02e5ba936c6cba77281",
         "operation": "color",
-        "width": 128,
-        "height": 256,
-        "resolution": "original"
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/480f1c5ef0f56e0ed7518f4e.png",
-      "bytes": 22568,
-      "sha256": "480f1c5ef0f56e0ed7518f4ed239f1b8b4e8d450ef51534e8144114e786cad5f",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Texture/Tex_Spirit_AutoShotGun_FlowerMask022.png",
-        "sha256": "480f1c5ef0f56e0ed7518f4ed239f1b8b4e8d450ef51534e8144114e786cad5f",
-        "operation": "color",
-        "width": 256,
-        "height": 256,
+        "width": 2048,
+        "height": 2048,
         "resolution": "original"
       }
     },
@@ -1126,15 +1048,15 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/0f49b679322322cc91ab4f11.png",
-      "bytes": 27772,
-      "sha256": "0f49b679322322cc91ab4f1123a9c6fe16c3a7034a9a642a9a303d9fa8080022",
+      "url": "/skin-packs/models/assets/8b0cfa0e3d480964b155f7f2.png",
+      "bytes": 167491,
+      "sha256": "8b0cfa0e3d480964b155f7f2dd1561ffffbc7881e5779707de4aa9a5958cf7a6",
       "source": {
-        "path": "ShooterGame/Content/VFX/Textures/Mask/OilyNoise01_TFX.png",
-        "sha256": "0f49b679322322cc91ab4f1123a9c6fe16c3a7034a9a642a9a303d9fa8080022",
+        "path": "ShooterGame/Content/VFX/Textures/Flipbook/BlastDirectional_8x1.png",
+        "sha256": "8b0cfa0e3d480964b155f7f2dd1561ffffbc7881e5779707de4aa9a5958cf7a6",
         "operation": "color",
-        "width": 256,
-        "height": 256,
+        "width": 1024,
+        "height": 512,
         "resolution": "original"
       }
     },
@@ -1148,6 +1070,19 @@
         "operation": "color",
         "width": 2,
         "height": 2,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/7e0194fb073b3d12f4f0cdd4.png",
+      "bytes": 2901,
+      "sha256": "7e0194fb073b3d12f4f0cdd41cacca965c941bee3e5369febf22da777d8bb1d9",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/CloudsGS_TEX_Grayscale.png",
+        "sha256": "7e0194fb073b3d12f4f0cdd41cacca965c941bee3e5369febf22da777d8bb1d9",
+        "operation": "color",
+        "width": 128,
+        "height": 64,
         "resolution": "original"
       }
     },
@@ -4395,101 +4330,1043 @@
   "particleImport": {
     "source": "Original skin firing blueprints and cooked Cascade tables",
     "systems": 40,
-    "materials": 124,
-    "meshes": 41,
-    "textures": 68,
+    "materials": 69,
+    "meshes": 7,
+    "textures": 63,
+    "converted": [
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlash_Main_MAT",
+        "kind": "uberlerp",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlashBlur_MAT",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/VFX/Materials/2_GlowTrans_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/2_GlowTransOptimized_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/FakeLighting_Test_1",
+        "kind": "fakelight",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_ElecLoop_MAT",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Base/BasePistolGlow_1",
+        "kind": "generic",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_MuzzleFlash_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Materials/Magepunk3_MuzzleFlash_glow_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Sidearms/Revolver/Ninja/VFX/Mat/MI_Ninja_MFlash1",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Sidearms/Revolver/Ninja/VFX/Mat/M_Ninja_Splash_Mat1"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Sidearms/Revolver/Ninja/VFX/Mat/MI_Ninja_MFlash",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Sidearms/Revolver/Ninja/VFX/Mat/M_Ninja_Splash_Mat1"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_MF_Splash_Mat",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_MF_Flash_Mat",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Materials/Magepunk3_MuzzleFlash_glow_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Chroma/V3/MF/Materials/Ninja_AK_MuzzleFlash_glow_MAT_V3",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_MF_Glowing_Mat",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Materials/Magepunk3_ADD_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_Muzzleflash_SidesMoon_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Chroma/V1/MF/Particles/Materials/Ninja_AK_MF_Spark_Mat",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Materials/Magepunk3_ADD_Variant_MI1",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Materials/Magepunk3_ADD_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/MI_Ninja_MFlash_A006",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/MI_Ninja_MFlash_A"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/MI_Ninja_MFlash_Ring002",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/MI_Ninja_MFlash_Ring"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_MI_Ninja_Wave",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/M_Aquarium_Splash"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_AK_MF_Splash_Mat",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/M_Ninja_Splash_Mat"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Mflash_01_B",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MAT_AK_Hellfire_Mflash_01_A"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Mflash_01_A",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MAT_AK_Hellfire_Mflash_01_A"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Smoke_04_A",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MAT_AK_Hellfire_Smoke_04"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Magma_03_A",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MAT_AK_Hellfire_Magma_Flipbook"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Ring02",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Ring01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Glow02",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Glow01_Inst2",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Glow01_Inst4",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Muzzleflash_Front_01",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_02_Inst",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_02"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_03_Inst",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_02"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_03",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_05",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_06",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Ring_07",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Materials/MI_Rogue_AK_Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Snake/VFX/Materials/Yuanhao/Snake_Carbine_Flare_Mat1",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Sparks_MI",
+        "kind": "mf",
+        "parents": [
+          "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Afterglow_Flash_07_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Afterglow_FlashCenter_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Afterglow_Flash_09_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Afterglow_Flash_01_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Afterglow_Glow_01_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Afterglow_Flash_04_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Shark/MFlash_Shark_FakeLighting_MI",
+        "kind": "fakelight",
+        "parents": [
+          "/Game/VFX/Materials/FakeLighting_Test_1"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Shark_Glow_03_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Shark_Flash_05_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/VFX/Materials/0_GenericA01_MAT",
+          "/Game/VFX/Materials/MuzzleFlashes/Base/BasePistolFlash5"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_Glow_MAT",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Cyberknight/VFX/MFlash/Carbine_Cyberknight_MFlash_Glow_05_IN",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Cyberknight/VFX/MFlash/Carbine_Cyberknight_MFlash_Glow_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Cyberknight/VFX/MFlash/Carbine_Cyberknight_MFlash_Glow_04_IN",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Cyberknight/VFX/MFlash/Carbine_Cyberknight_MFlash_Glow_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_Ring01",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/VFX/ParticleSystems/MFlash_1P_VFX_SO_Silence",
+        "kind": "uberlerp",
+        "parents": [
+          "/Game/VFX/Materials/tmctavish_uberShaders/tmctavish_uberBasic_colorLerp_Scroll_M"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Material/Yokai_Eyes_Mat_Inst_Inst",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Material/Yokai_Eyes_Mat1"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Idle_VFX/MI_Yokai_glow_01",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Idle_VFX/MAT_Yokai_glow_01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_MF_Ash_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_MF_Ash_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_MF_Radial_FB_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_MF_Radial_FB_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/Materials/Coven_Carbine_MuzzleFlash_RadialSmoke_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/Materials/Coven_Carbine_MuzzleFlash_RadialSmoke_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow02",
+        "kind": "skinmask",
+        "parents": []
+      },
+      {
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow01_Inst2",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow01_Inst",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Equip/Materials/Spirit_Flower_Par001",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Inspect/Materials/Spirit_Flower_Par"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Ring02",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Ring01"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego2_AK_MFlash_Flare_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego_GenericLUT_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego2_AK_MFlash_FlareCenter_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego_GenericLUT_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego2_AK_MFlash_Glow_MI",
+        "kind": "skinmask",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego_GenericLUT_MAT"
+        ]
+      },
+      {
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego2_AK_MFlash_FakeLightMI",
+        "kind": "fakelight",
+        "parents": [
+          "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego2_AK_MFlash_FakeLight_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SidesMoon_MI",
+        "kind": "mf",
+        "parents": [
+          "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_FrontSmoke_MI",
+        "kind": "mf",
+        "parents": [
+          "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash1_MAT"
+        ]
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_RadialSmoke_MAT",
+        "kind": "radialsmoke",
+        "parents": []
+      },
+      {
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_RadialSmoke_MI",
+        "kind": "mf",
+        "parents": [
+          "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash1_MAT"
+        ]
+      }
+    ],
     "limitations": [
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Aquarium/VFX/MI_Aquarium_Ripple_AK"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_Elec_MAT",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst1"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlash_Upgraded_VFX.uasset",
+        "emitter": "ElecStone",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst2"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_TipHit_MAT",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlash_Upgraded_VFX.uasset",
+        "emitter": "DomeFrontHit",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Materials/M_Ninja_MP5_Glow03"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst1",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Materials/Ninja_Ring03_Inst"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_0",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst1"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst2",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_5",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst2"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_7",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Smoke_05_A"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_9",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Magma_Line"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_Fire_Glowing_FakeLight_Mat",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Glow03"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_1",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Glow04"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_Fire_Glowing_FakeLight_Mat1",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Ring03_Inst"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_2",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/AK/Spirit2/VFX/Materials/M_Spirit_AutoShotGun_Glow03_Inst"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_FakeLight_Mat_03",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/VFX/Materials/MuzzleFlashes/Shark/MFlash_Shark_BurstSmoke_MI"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_6",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Shark_Flash_05_MI"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_FakeLight_Mat_04",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Glow_05_IN"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_8",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_BlackHole_Inst_Base"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_FakeLight_Mat_05",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_General_Smoke_Full_MI"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_10",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_MF_Smoke_MI"
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_FakeLight_Mat_07",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "procedural shader translation",
-        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow03_Inst"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX.uasset",
+        "emitter": "ParticleSpriteEmitter_11",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
       },
       {
-        "kind": "missing material",
-        "source": "/Engine/EngineMaterials/DefaultParticle"
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX_01.uasset",
+        "emitter": "ParticleSpriteEmitter_0",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_FakeLight_Mat_06",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX_01.uasset",
+        "emitter": "ParticleSpriteEmitter_10",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_ChargingHandle.uasset",
+        "emitter": "ParticleSpriteEmitter_1",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_FakeLight_Mat_02",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_ChargingHandle.uasset",
+        "emitter": "ParticleSpriteEmitter_2",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Materials/M_Ninja_MP5_Glow03",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Ninja2_Carbine_Fire01.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Materials/Ninja_Ring03_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Ninja2_Carbine_Fire01.uasset",
+        "emitter": "MuzzleFlashCenter",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst1",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_3",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_26",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst2",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "Flip",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_12",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_28",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_2",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_4",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_Fire_Glowing_FakeLight_Mat",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_30",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_Fire_Glowing_FakeLight_Mat1",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_31",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Ninja_CB_FireGlowing_FakeLight_Mat_03",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_0",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Ninja_CB_FireGlowing_FakeLight_Mat_06_Inst1",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_5",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Ninja_CB_FireGlowing_FakeLight_Mat_04",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_1",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Ninja_CB_FireGlowing_FakeLight_Mat_05",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow.uasset",
+        "emitter": "ParticleSpriteEmitter_6",
+        "reason": "Untranslated mesh-light shader; generic white gun glow removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Smoke_05_A",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/VFX/Particles/Fire/MFlash_AK_Hellfire_VFX_1P_Base.uasset",
+        "emitter": "SmokeLarge",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Magma_Line",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/VFX/Particles/Fire/MFlash_AK_Hellfire_VFX_1P_Inaccuracy.uasset",
+        "emitter": "ParticleSpriteEmitter_1",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Glow03",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Particles/P_MP5_Hellfire_Fire.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Particles/P_MP5_Hellfire_Fire.uasset",
+        "emitter": "SmokeLarge",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Glow04",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Ring03_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Particles/P_MP5_Hellfire_Fire.uasset",
+        "emitter": "MuzzleFlashCenter",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Particles/P_MP5_Hellfire_Fire02.uasset",
+        "emitter": "ParticleSpriteEmitter_1",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Spirit2/VFX/Materials/M_Spirit_AutoShotGun_Glow03_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Particles/MuzzleFlash/Rogue_AK_MFlash_1p_Base.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Particles/MuzzleFlash/Rogue_AK_MFlash_1p_Inaccuracy02.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Particles/MuzzleFlash/Rogue_AK_MFlash_ADS_1p_Base1.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Particles/MuzzleFlash/Rogue_AK_MFlash_ADS_1p_Inaccuracy02.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Shark/MFlash_Shark_BurstSmoke_MI",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/VFX/MFlash_AK_Afterglow_VFX_1P_Base.uasset",
+        "emitter": "smoke_spray",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/VFX/MFlash_AK_Afterglow_VFX_1P_Inaccuracy.uasset",
+        "emitter": "smoke_spray",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/VFX/MFlash_AKScope_Afterglow_VFX_1P_Inaccuracy.uasset",
+        "emitter": "smoke_spray",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Glow_05_IN",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Base.uasset",
+        "emitter": "ParticleSpriteEmitter_9",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_BlackHole_Inst_Base",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Base.uasset",
+        "emitter": "ParticleSpriteEmitter_2",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Base_Zoom.uasset",
+        "emitter": "ParticleSpriteEmitter_9",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Base_Zoom.uasset",
+        "emitter": "ParticleSpriteEmitter_2",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_General_Smoke_MI",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/ParticleSystems/Carbine_1P_Coven_MFlash_VFX_Silence_Base.uasset",
+        "emitter": "Smoke",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/Materials/Coven_Carbine_MuzzleFlash_Smoke_MI",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/ParticleSystems/Carbine_1P_Coven_MFlash_VFX_Silence_Base.uasset",
+        "emitter": "Barrel",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/Materials/Coven_Carbine_Muzzleflash_Ribbon_MI",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/ParticleSystems/Carbine_1P_Coven_MFlash_VFX_Silence_Inaccuracy.uasset",
+        "emitter": "Smoke",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/ParticleSystems/Carbine_1P_Coven_MFlash_VFX_Silence_Inaccuracy.uasset",
+        "emitter": "Barrel",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Smoke01_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX.uasset",
+        "emitter": "smokyBG",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Materials/M_Spirit_Carbine_Flower01_Inst",
+        "reason": "Vertex-displaced flower shader unavailable; rigid crossing planes removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX.uasset",
+        "emitter": "left",
+        "reason": "Vertex-displaced flower shader unavailable; rigid crossing planes removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX.uasset",
+        "emitter": "top",
+        "reason": "Vertex-displaced flower shader unavailable; rigid crossing planes removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX.uasset",
+        "emitter": "button",
+        "reason": "Vertex-displaced flower shader unavailable; rigid crossing planes removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX.uasset",
+        "emitter": "right",
+        "reason": "Vertex-displaced flower shader unavailable; rigid crossing planes removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow03_Inst",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX.uasset",
+        "emitter": "DarkGlow",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed material",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Materials/Ego2_AK_MFlash_FlareCenterTheme_MI",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_AK_MFlash_PS.uasset",
+        "emitter": "CenterFlare",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_AK_MFlashInaccuracy_PS.uasset",
+        "emitter": "CenterFlare",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_Revolver_MFlash_PS.uasset",
+        "emitter": "CenterFlare",
+        "reason": "No reliable source silhouette; procedural fallback removed"
+      },
+      {
+        "kind": "suppressed emitter",
+        "source": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/VFX/All/Muzzleflash/ParticleSystems/Ego2_Bolt_MFlash_PS.uasset",
+        "emitter": "CenterFlare",
+        "reason": "No reliable source silhouette; procedural fallback removed"
       }
     ]
   }

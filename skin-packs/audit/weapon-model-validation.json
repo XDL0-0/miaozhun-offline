@@ -33,8 +33,8 @@
               "skin:/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Base",
               "skin:/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Firing_EyeGlowing_P"
             ],
-            "particles": 11,
-            "batches": 11
+            "particles": 9,
+            "batches": 9
           }
         },
         {
@@ -178,8 +178,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlash_Upgraded_VFX"
             ],
-            "particles": 11,
-            "batches": 11
+            "particles": 9,
+            "batches": 9
           }
         },
         {
@@ -326,8 +326,8 @@
               "skin:/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX_01",
               "skin:/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_ChargingHandle"
             ],
-            "particles": 25,
-            "batches": 25
+            "particles": 11,
+            "batches": 11
           }
         },
         {
@@ -472,8 +472,8 @@
               "skin:/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Ninja2_Carbine_Fire01",
               "skin:/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow"
             ],
-            "particles": 21,
-            "batches": 21
+            "particles": 7,
+            "batches": 7
           }
         },
         {
@@ -762,8 +762,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Particles/P_MP5_Hellfire_Fire"
             ],
-            "particles": 6,
-            "batches": 6
+            "particles": 3,
+            "batches": 3
           }
         },
         {
@@ -907,8 +907,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Particles/MuzzleFlash/Rogue_AK_MFlash_1p_Base"
             ],
-            "particles": 14,
-            "batches": 14
+            "particles": 13,
+            "batches": 13
           }
         },
         {
@@ -1052,8 +1052,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Rifles/AK/Afterglow/VFX/MFlash_AK_Afterglow_VFX_1P_Base"
             ],
-            "particles": 10,
-            "batches": 10
+            "particles": 9,
+            "batches": 9
           }
         },
         {
@@ -1197,8 +1197,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/ParticleSystems/Carbine_1P_Coven_MFlash_VFX_Silence_Base"
             ],
-            "particles": 11,
-            "batches": 6
+            "particles": 5,
+            "batches": 3
           }
         },
         {
@@ -1342,8 +1342,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX"
             ],
-            "particles": 13,
-            "batches": 13
+            "particles": 6,
+            "batches": 6
           }
         },
         {
@@ -1487,8 +1487,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_AK_MFlash_PS"
             ],
-            "particles": 7,
-            "batches": 7
+            "particles": 6,
+            "batches": 6
           }
         },
         {
@@ -1777,8 +1777,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/Sidearms/Revolver/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_Revolver_MFlash_PS"
             ],
-            "particles": 9,
-            "batches": 9
+            "particles": 8,
+            "batches": 8
           }
         },
         {
@@ -1922,8 +1922,8 @@
             "systems": [
               "skin:/Game/Equippables/Guns/SniperRifles/Boltsniper/Ego2/VFX/All/Muzzleflash/ParticleSystems/Ego2_Bolt_MFlash_PS"
             ],
-            "particles": 7,
-            "batches": 5
+            "particles": 6,
+            "batches": 4
           }
         },
         {
