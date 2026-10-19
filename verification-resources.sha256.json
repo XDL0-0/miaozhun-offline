@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "algorithm": "SHA256",
   "root": "dist",
-  "createdAt": "2026-10-19T12:27:53.054Z",
+  "createdAt": "2026-10-19T14:32:12.408Z",
   "fileCount": 1976,
-  "storedBytes": 175631996,
+  "storedBytes": 175637496,
   "encryptedAssets": 410,
   "resources": [
     {
@@ -9234,8 +9234,8 @@
     },
     {
       "path": "/js/B9C9f4Y8.js",
-      "bytes": 508524,
-      "sha256": "1600a34936420eb4245311d1b888d5dccc79ee56634b2a2f161f2c65298ffbdf"
+      "bytes": 508395,
+      "sha256": "1f7db966a31fccab638f21180b86f36bb036e24e112811548f4609ba429e9645"
     },
     {
       "path": "/js/BB-zep8c.js",
@@ -9575,7 +9575,7 @@
     {
       "path": "/localization-report.json",
       "bytes": 1291,
-      "sha256": "9ba32de2e27dd5cc25a443ef1d6f42d9adcc3ac55add678eda6f86c4f3e40459"
+      "sha256": "eae472a5c80c3697661c6bb21934549c8b1406f249e7cf591d2d03d7d9b291f1"
     },
     {
       "path": "/logo.png",
@@ -9884,23 +9884,23 @@
     },
     {
       "path": "/offline-i18n.js",
-      "bytes": 526935,
-      "sha256": "37e76703596ea89d534d7a001de5cd9239c75380482be521d759c7a2f27ca8ee"
+      "bytes": 526993,
+      "sha256": "363a6115a9353cd784ea046b1ee5f850fc6161ac6bb2a5f998b3fb242c22bce3"
     },
     {
       "path": "/offline-manifest.json",
       "bytes": 817,
-      "sha256": "ae61caf7ba39fbcf0f3ffbe548823f4efce08f549abc2e92ceb7dfe79638b8e5"
+      "sha256": "2e9dfbe1afaa54849db4d54e09917c1de905022bd886392040999bba2894da1a"
     },
     {
       "path": "/offline-runtime.js",
-      "bytes": 26373,
-      "sha256": "fd37dd3eb6f737786de9722b3942a82952f1a2515c582e002ae53a1531700f70"
+      "bytes": 26700,
+      "sha256": "b9282dba8ba8c704f2493af5665f2b3a3e563cfa69dc3486057764b1dc060da2"
     },
     {
       "path": "/offline-ui.css",
-      "bytes": 2284,
-      "sha256": "e3797dc14af2f2eec6902ff9ec5f5996a0c44b76d955f4501d01d018c2d84ab6"
+      "bytes": 7528,
+      "sha256": "2da4bd174f1074b8275aca79fe64a2b948ac3290aa5c009f438684444b47bbf6"
     },
     {
       "path": "/og-aim.png",

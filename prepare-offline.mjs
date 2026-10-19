@@ -46,6 +46,25 @@ let hall=fs.readFileSync(hallFile,'utf8');
 const welcomeInitialState='B=E(!x.value&&!E_()&&!Wl(C.query[Hl]))';
 if(hall.split(welcomeInitialState).length!==2)throw new Error('首次启动弹窗版本不匹配，未修改');
 hall=hall.replace(welcomeInitialState,'B=E(!1)');
+// The waveform legend inherits centered text from the preview HUD, which clips
+// longer labels at the left edge. Give that legend an explicit left alignment.
+const waveformTextStyle='e.font=`700 12px ${Ll}`,e.textBaseline="middle",e.fillStyle=m?St:';
+if(hall.split(waveformTextStyle).length!==2)throw new Error('音频预览文字版本不匹配，未修改');
+hall=hall.replace(waveformTextStyle,'e.font=`700 12px ${Ll}`,e.textAlign="left",e.textBaseline="middle",e.fillStyle=m?St:');
+// Canvas annotations have one line; keep the Chinese copy readable in the
+// narrow preview too. English equivalents remain in the reviewed catalog.
+const compactPreviewCopy=[
+ ['按屏幕实际像素绘制：粗细 2 就是 2 个像素，与游戏一致','实际像素：2 px 与游戏中的 2 px 一致'],
+ ['按屏幕实际像素绘制，按 ','实际像素，按 '],
+ ['　点「应用预设」后才会换上','　应用预设后生效'],
+ ['游戏里的效果（示意）：训练场不显示，复制到 VALORANT 后生效','仅游戏内生效：复制到 VALORANT 使用'],
+ ['高级选项未开启：狙击镜使用默认红点，这一页的设置不生效','高级选项关闭：狙击镜仅显示默认红点'],
+ ['开镜准星：步枪、冲锋枪、机枪、捍卫者开镜时显示这一套','开镜准星：步枪、冲锋枪、机枪和捍卫者'],
+];
+for(const[before,after]of compactPreviewCopy){
+ if(hall.split(before).length!==2)throw new Error('准星预览说明版本不匹配，未修改');
+ hall=hall.replace(before,after);
+}
 fs.writeFileSync(hallFile,hall);
 const trainingFile=path.join(dist,'js/DVK7uRSu.js');
 let training=fs.readFileSync(trainingFile,'utf8');
@@ -89,7 +108,8 @@ for(const[name,text]of Object.entries(optimizedModules))if(text!==originalModule
 fs.copyFileSync(path.join(root,'patches/skin-packs-runtime.mjs'),path.join(moduleDirectory,'aim-skin-packs.mjs'));
 const skinManifest=buildSkinPacks({root});
 const offlineStyles=`.al-studio-shell [data-action="share-scene"],.al-studio-shell [data-action="my-cloud-scenes"],.al-studio-shell [data-action="pw-manage"],.al-studio-shell .pwb,.al-studio-shell .al-cloud-scene-share{display:none!important}`;
-fs.writeFileSync(path.join(dist,'offline-ui.css'),offlineStyles+'\n'+fs.readFileSync(path.join(root,'patches/skin-packs.css'),'utf8')+'\n'+fs.readFileSync(path.join(root,'patches/localization.css'),'utf8'));
+const uiStyles=['skin-packs.css','localization.css','layout.css','settings-layout.css','editor-layout.css'].map(name=>fs.readFileSync(path.join(root,'patches',name),'utf8'));
+fs.writeFileSync(path.join(dist,'offline-ui.css'),[offlineStyles,...uiStyles].join('\n'));
 const sceneDir=path.join(dist,'prod-api/api/v1/public/val/aimlab/scenes');
 const sceneCodes=new Set(fs.existsSync(sceneDir)?fs.readdirSync(sceneDir):[]);
 const workshopPath=path.join(dist,'prod-api/api/v1/public/val/aimlab/workshop');

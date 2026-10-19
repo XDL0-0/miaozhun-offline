@@ -1,0 +1,10 @@
+/* Keep the offline controls in their own row instead of covering app controls. */
+html .hall-root{height:calc(100vh - var(--hall-chrome-h,0px) - var(--offline-tools-space,42px))}
+html[lang] .al-studio-shell{height:calc(100dvh - var(--al-studio-chrome-h,0px) - var(--offline-tools-space,42px))}
+
+html[lang="en"] .hall-topnav .hall-brand b{font-size:16px;letter-spacing:0}
+html[lang] .al-wk-s-name{left:20px;right:18px;bottom:34px;white-space:normal;line-height:1.15}
+html[lang] .al-wk-s-count{left:20px;right:auto;bottom:10px}
+@media(max-width:1280px){
+ html[lang] .al-wk-slice:not(.is-on) .al-wk-s-name{bottom:12px}
+}
