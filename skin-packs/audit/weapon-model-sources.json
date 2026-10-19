@@ -3,6 +3,7 @@
   "source": "Read-only local VALORANT installation, UE 5.3 / patch 13.08",
   "mappingSha256": "5d97ee2942e623d2fbacd39c2214a413311b62aad681d4b31049ff6bd48bcdc4",
   "exporter": "FabianFG/CUE4Parse",
+  "exporterCommit": "2b8901c3ee9818558ad33e2496a58d50b82e99db",
   "models": [
     {
       "collection": "prelude-to-chaos",
@@ -293,6 +294,877 @@
   ],
   "assets": [
     {
+      "url": "/skin-packs/models/assets/ae9076da23c54ba4fb026ff1.png",
+      "bytes": 277032,
+      "sha256": "ae9076da23c54ba4fb026ff11798ec7b9c51abb9698630d84e140ef6b513d629",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlash_TFX.png",
+        "sha256": "ae9076da23c54ba4fb026ff11798ec7b9c51abb9698630d84e140ef6b513d629",
+        "operation": "color",
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/0bc0b5fed6a3fa6c6722a8c6.png",
+      "bytes": 35366,
+      "sha256": "0bc0b5fed6a3fa6c6722a8c696abd1e5ec636683e7303bf9865d47c2ba66a5aa",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash2_FB_1x3_VFX.png",
+        "sha256": "0bc0b5fed6a3fa6c6722a8c696abd1e5ec636683e7303bf9865d47c2ba66a5aa",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4d852eb29c65659b37f3f21d.png",
+      "bytes": 21200,
+      "sha256": "4d852eb29c65659b37f3f21dc6fdb074a9295df1812fc81a2509953662cac478",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/AlphaGradient/GlowA01_DIFF.png",
+        "sha256": "4d852eb29c65659b37f3f21dc6fdb074a9295df1812fc81a2509953662cac478",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/348d7b768993464d63c29b1d.png",
+      "bytes": 157,
+      "sha256": "348d7b768993464d63c29b1dcf45f80813bad3fd0764d4760063f490606b6ca7",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/ColorGradient/0_LUT_Variant_TEMPLATE_TEX.png",
+        "sha256": "348d7b768993464d63c29b1dcf45f80813bad3fd0764d4760063f490606b6ca7",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/45f8a9973240fe517c1df2c9.png",
+      "bytes": 956656,
+      "sha256": "45f8a9973240fe517c1df2c9e34e65e719359cc1d29038083ad3425411663d09",
+      "source": {
+        "path": "ShooterGame/Content/Characters/Hunter/S0/VFX/Textures/Lightning_3.png",
+        "sha256": "45f8a9973240fe517c1df2c9e34e65e719359cc1d29038083ad3425411663d09",
+        "operation": "color",
+        "width": 2048,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5284cd1bc22076b4b7099888.png",
+      "bytes": 19523,
+      "sha256": "5284cd1bc22076b4b709988895b074b0ed003bbcb81e88ddee24a4693762823d",
+      "source": {
+        "path": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/DebugNumberStrip.png",
+        "sha256": "5284cd1bc22076b4b709988895b074b0ed003bbcb81e88ddee24a4693762823d",
+        "operation": "color",
+        "width": 128,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/b60502db2762b5f8993b2964.png",
+      "bytes": 128910,
+      "sha256": "b60502db2762b5f8993b296419b12fcdf10542b1b6c55f5184ade6e422dda981",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/T_Mask_Circle_01.png",
+        "sha256": "b60502db2762b5f8993b296419b12fcdf10542b1b6c55f5184ade6e422dda981",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/8c5f6280073b98ceb988e808.png",
+      "bytes": 95,
+      "sha256": "8c5f6280073b98ceb988e808a97ca37aed9bdacc4d03614e2cb39f003472a723",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/00_White_DIFF.png",
+        "sha256": "8c5f6280073b98ceb988e808a97ca37aed9bdacc4d03614e2cb39f003472a723",
+        "operation": "color",
+        "width": 8,
+        "height": 8,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ba06cf0d601135cf39f34609.png",
+      "bytes": 187,
+      "sha256": "ba06cf0d601135cf39f346093f9d66af2b39f0600f372eaa9439344e9d9eec66",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Magepunk3/VFX/Textures/LUT_Mage1_TEX3.png",
+        "sha256": "ba06cf0d601135cf39f346093f9d66af2b39f0600f372eaa9439344e9d9eec66",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/83f2a1ba6bea821fe1921526.png",
+      "bytes": 101704,
+      "sha256": "83f2a1ba6bea821fe1921526dac6565ac1f6a9bdd4b8eef7f725d3899883f5b1",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Texture/Ninja_AK_WaterMuzzleFlash_Tex.png",
+        "sha256": "83f2a1ba6bea821fe1921526dac6565ac1f6a9bdd4b8eef7f725d3899883f5b1",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/3e7fb7c2b5fb7fc9905ef4f1.png",
+      "bytes": 104023,
+      "sha256": "3e7fb7c2b5fb7fc9905ef4f19810b8e897a3895c731b287ac1a08f99b0fa1302",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ninja/VFX/Texture/T_Ninja_Splash_010.png",
+        "sha256": "3e7fb7c2b5fb7fc9905ef4f19810b8e897a3895c731b287ac1a08f99b0fa1302",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5281f0d50893009760a7ef75.png",
+      "bytes": 25591,
+      "sha256": "5281f0d50893009760a7ef7542c37d58173d47874751bae7368a02e4ecd88314",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/VFX/Texture/Ninja_AK_Splash_01_Tex.png",
+        "sha256": "5281f0d50893009760a7ef7542c37d58173d47874751bae7368a02e4ecd88314",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/8eba732c240ee5994deffc50.png",
+      "bytes": 28458,
+      "sha256": "8eba732c240ee5994deffc50511ec60a9216340f6243f16f2f1dd1b057b913aa",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/AlphaGradient/T_Mask_Ramp_TopDown_Clamped.png",
+        "sha256": "8eba732c240ee5994deffc50511ec60a9216340f6243f16f2f1dd1b057b913aa",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/92cb048b789f85f49453d700.png",
+      "bytes": 70090,
+      "sha256": "92cb048b789f85f49453d70093d20e4f15e968f50a7ff70a7fc8c7844c89e70d",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/Impact_blur.png",
+        "sha256": "92cb048b789f85f49453d70093d20e4f15e968f50a7ff70a7fc8c7844c89e70d",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ac81518b3bd84b0409642ff6.png",
+      "bytes": 54600,
+      "sha256": "ac81518b3bd84b0409642ff61e8fa39d8245440cfc01e04a8625476e3aa77262",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/T_Mask_Circle_Gradient_02.png",
+        "sha256": "ac81518b3bd84b0409642ff61e8fa39d8245440cfc01e04a8625476e3aa77262",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/af9842a90616155a027e8534.png",
+      "bytes": 10146,
+      "sha256": "af9842a90616155a027e85345e6d6dfd3ef9ec841ae0254541eb3c59cd3eb7bb",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MoonGradient_TEX.png",
+        "sha256": "af9842a90616155a027e85345e6d6dfd3ef9ec841ae0254541eb3c59cd3eb7bb",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/dc569dd2090630a3ab063326.png",
+      "bytes": 222,
+      "sha256": "dc569dd2090630a3ab0633263429c9ff8d33560cbfdada1752d7f4693b10a34f",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX.png",
+        "sha256": "dc569dd2090630a3ab0633263429c9ff8d33560cbfdada1752d7f4693b10a34f",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/c1a06a233ff5ea1e4da97ad9.png",
+      "bytes": 10395,
+      "sha256": "c1a06a233ff5ea1e4da97ad9112c0f3e45c15533883a758398065e57d2def979",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Texture/Najin_MisRadial_10_TEX.png",
+        "sha256": "c1a06a233ff5ea1e4da97ad9112c0f3e45c15533883a758398065e57d2def979",
+        "operation": "color",
+        "width": 128,
+        "height": 128,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/c3e7baf0b0a2f2d3c61c3e60.png",
+      "bytes": 14399,
+      "sha256": "c3e7baf0b0a2f2d3c61c3e606c6a5462c66a9d7f2e73482acfbcdb397d594157",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Chroma/V3/Firing/Materials/Najin_MisRadial_05_2_TEX_V3.png",
+        "sha256": "c3e7baf0b0a2f2d3c61c3e606c6a5462c66a9d7f2e73482acfbcdb397d594157",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/39cd1019a740dca3bd6b3056.png",
+      "bytes": 104016,
+      "sha256": "39cd1019a740dca3bd6b3056a175694f8d2149770276606b70bbb7735369a836",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Texture/Najin_MisRadial_19_TEX.png",
+        "sha256": "39cd1019a740dca3bd6b3056a175694f8d2149770276606b70bbb7735369a836",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/98fcfeaaa918f96a25482329.png",
+      "bytes": 85014,
+      "sha256": "98fcfeaaa918f96a25482329628e3f1b5b06c0f27f8b4a461a63f98a2e248061",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Texture/T_Ninja_Tex.png",
+        "sha256": "98fcfeaaa918f96a25482329628e3f1b5b06c0f27f8b4a461a63f98a2e248061",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/45bf8f0a421a2a5bb2ec7a5c.png",
+      "bytes": 7754,
+      "sha256": "45bf8f0a421a2a5bb2ec7a5c1cfb7b9b9f9b24a2c06db4134f4d3c75f05ff032",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Texture/Najin_MisRadial_07_TEX.png",
+        "sha256": "45bf8f0a421a2a5bb2ec7a5c1cfb7b9b9f9b24a2c06db4134f4d3c75f05ff032",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a16bb001986154e308320770.png",
+      "bytes": 34826,
+      "sha256": "a16bb001986154e3083207704f0d9501b126ebf3d2c32c922cc300a80ea5a3f3",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash2_FB_1x3_VFX_Grayscale.png",
+        "sha256": "a16bb001986154e3083207704f0d9501b126ebf3d2c32c922cc300a80ea5a3f3",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e4b26e499f1a32f73b44fd8e.png",
+      "bytes": 23348,
+      "sha256": "e4b26e499f1a32f73b44fd8efa539a4f0f96f47f5f217cc9e15154bd34ef73c4",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash1_FB_1x3_VFX_Grayscale.png",
+        "sha256": "e4b26e499f1a32f73b44fd8efa539a4f0f96f47f5f217cc9e15154bd34ef73c4",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/2ce4599917f0ffe331411087.png",
+      "bytes": 13482,
+      "sha256": "2ce4599917f0ffe3314110877d596a5ccab9e8ec588f6feb9ba02136e2cc575d",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/NoiseDissolve/T_Noise_Blurry.png",
+        "sha256": "2ce4599917f0ffe3314110877d596a5ccab9e8ec588f6feb9ba02136e2cc575d",
+        "operation": "color",
+        "width": 128,
+        "height": 128,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/faa1d778f3dd36f7ae8f0210.png",
+      "bytes": 47423,
+      "sha256": "faa1d778f3dd36f7ae8f02108d9f7dd5a2c8a66507ddc8a4ede1dda0d3868d13",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/VFX/Textures/TEX_AK_Hellfire_Magma_13_A.png",
+        "sha256": "faa1d778f3dd36f7ae8f02108d9f7dd5a2c8a66507ddc8a4ede1dda0d3868d13",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/9cbbfd34ddc0b64ad1472f5d.png",
+      "bytes": 38803,
+      "sha256": "9cbbfd34ddc0b64ad1472f5d11c2784dc43557e7e678256270a10529a31776e2",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/NoiseDissolve/T_Noise_Smoke_Tiled_04_Blurry.png",
+        "sha256": "9cbbfd34ddc0b64ad1472f5d11c2784dc43557e7e678256270a10529a31776e2",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/cd5c6e96b889fd38ec24ea8d.png",
+      "bytes": 55151,
+      "sha256": "cd5c6e96b889fd38ec24ea8d06acdeac639244848f41668e34a087c98702c117",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/AlphaGradient/ball_gradient.png",
+        "sha256": "cd5c6e96b889fd38ec24ea8d06acdeac639244848f41668e34a087c98702c117",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/fc24b7237886257fe1f749f1.png",
+      "bytes": 64522,
+      "sha256": "fc24b7237886257fe1f749f135c1b11064c03f7df397d152e3c78c1edf6a1d15",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlashCenterGS_VFX.png",
+        "sha256": "fc24b7237886257fe1f749f135c1b11064c03f7df397d152e3c78c1edf6a1d15",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/67be59d90f599b3529f63024.png",
+      "bytes": 67750,
+      "sha256": "67be59d90f599b3529f6302441c1d0a0422f514ee8900502c3c220bf0e0f880e",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_Mask_09.png",
+        "sha256": "67be59d90f599b3529f6302441c1d0a0422f514ee8900502c3c220bf0e0f880e",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e79e114dd1975e940e7004ac.png",
+      "bytes": 15866,
+      "sha256": "e79e114dd1975e940e7004ac64cc3f56c0923462526d935f9f4fcff3d3b1156a",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash3_FB_1x4_VFX_Grayscale.png",
+        "sha256": "e79e114dd1975e940e7004ac64cc3f56c0923462526d935f9f4fcff3d3b1156a",
+        "operation": "color",
+        "width": 128,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/78fe91f3aaa38c40b0513b81.png",
+      "bytes": 367,
+      "sha256": "78fe91f3aaa38c40b0513b81045aa2976806edcb7601f50c23d4c582e4478f8d",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_LUT_01.png",
+        "sha256": "78fe91f3aaa38c40b0513b81045aa2976806edcb7601f50c23d4c582e4478f8d",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/32c5abe262694f39ccdef08f.png",
+      "bytes": 28741,
+      "sha256": "32c5abe262694f39ccdef08f1310039f18c5fa6f263c10314fa0fb6fdd7b5771",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_Fire_002.png",
+        "sha256": "32c5abe262694f39ccdef08f1310039f18c5fa6f263c10314fa0fb6fdd7b5771",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e0e30ea43b38db16e64ccc72.png",
+      "bytes": 12026,
+      "sha256": "e0e30ea43b38db16e64ccc722f8dc64e9ecb05e7ffe78baa88769e3aff534fd0",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_Fire_003.png",
+        "sha256": "e0e30ea43b38db16e64ccc722f8dc64e9ecb05e7ffe78baa88769e3aff534fd0",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/d78056d1ad181ed1880064ec.png",
+      "bytes": 7306,
+      "sha256": "d78056d1ad181ed1880064ec1df2325535b50425b95b851bddfc3d2e90c338dc",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash2_FB_1x4_VFX.png",
+        "sha256": "d78056d1ad181ed1880064ec1df2325535b50425b95b851bddfc3d2e90c338dc",
+        "operation": "color",
+        "width": 128,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/26e9d288fb48fb5d51332ecc.png",
+      "bytes": 410,
+      "sha256": "26e9d288fb48fb5d51332ecc13ea73c0ef6c4d09c7f8c7e9bd037f5984238aa4",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_LUT_02.png",
+        "sha256": "26e9d288fb48fb5d51332ecc13ea73c0ef6c4d09c7f8c7e9bd037f5984238aa4",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/99f1e7f047be81d1edeb875e.png",
+      "bytes": 21144,
+      "sha256": "99f1e7f047be81d1edeb875e158e6ef24f864fbb7e53cbd6f73f5916e15643b6",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_Fire_02B.png",
+        "sha256": "99f1e7f047be81d1edeb875e158e6ef24f864fbb7e53cbd6f73f5916e15643b6",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e40c64016e1b0018464dcd4b.png",
+      "bytes": 327,
+      "sha256": "e40c64016e1b0018464dcd4bd3e6febcc23e93b94e802db634eb0250033bb2ca",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_LUT_03.png",
+        "sha256": "e40c64016e1b0018464dcd4bd3e6febcc23e93b94e802db634eb0250033bb2ca",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/410484b3a885b08ac815ce2d.png",
+      "bytes": 16126,
+      "sha256": "410484b3a885b08ac815ce2d0d3da628c04ac4d5e4cf3e7127b048aa1af6a0f5",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_Fire_02C.png",
+        "sha256": "410484b3a885b08ac815ce2d0d3da628c04ac4d5e4cf3e7127b048aa1af6a0f5",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/cf9422e0cba47b5b562fa9a7.png",
+      "bytes": 12116,
+      "sha256": "cf9422e0cba47b5b562fa9a7f94e9b772f70798ef158727aff19ee656ad67450",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/VFX/Texture/VFX_Rogue_AK_MF_Fire_02D.png",
+        "sha256": "cf9422e0cba47b5b562fa9a7f94e9b772f70798ef158727aff19ee656ad67450",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/97e4c79369924845026250d8.png",
+      "bytes": 13945,
+      "sha256": "97e4c79369924845026250d8431e308b3d1fcf1a8b590ce252798625b5eeae3d",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Snake/VFX/Texture/T_Snake_Carbine_Lensflare_02.png",
+        "sha256": "97e4c79369924845026250d8431e308b3d1fcf1a8b590ce252798625b5eeae3d",
+        "operation": "color",
+        "width": 512,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/fe9e1cdc8fbef51268969e47.png",
+      "bytes": 50454,
+      "sha256": "fe9e1cdc8fbef51268969e475b875678aa45b29ea7caf4587bc1ceedcbbb0d6f",
+      "source": {
+        "path": "ShooterGame/Content/VFX/ZWIP/AK_Project/Glow.png",
+        "sha256": "fe9e1cdc8fbef51268969e475b875678aa45b29ea7caf4587bc1ceedcbbb0d6f",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/daa3a352d28187affa22b28f.png",
+      "bytes": 17706,
+      "sha256": "daa3a352d28187affa22b28f17f3fa9a8ca7c505dfcf0a39f8681fa432804a34",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash3_FB_1x4_VFX.png",
+        "sha256": "daa3a352d28187affa22b28f17f3fa9a8ca7c505dfcf0a39f8681fa432804a34",
+        "operation": "color",
+        "width": 128,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/898cf8694f15e83a4852b892.png",
+      "bytes": 1893554,
+      "sha256": "898cf8694f15e83a4852b892011d5c6408cd0e3f0831d2f7ca268aa1a0d953b5",
+      "source": {
+        "path": "Engine/Content/EngineMaterials/DefaultDiffuse.png",
+        "sha256": "898cf8694f15e83a4852b892011d5c6408cd0e3f0831d2f7ca268aa1a0d953b5",
+        "operation": "color",
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/d89498dd5dfabd778dc14713.png",
+      "bytes": 97196,
+      "sha256": "d89498dd5dfabd778dc147136a0b5cd69be031b075a83573ac77f7fde2919bd9",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlashCenter_VFX.png",
+        "sha256": "d89498dd5dfabd778dc147136a0b5cd69be031b075a83573ac77f7fde2919bd9",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/7235edd3e025ad6472978d65.png",
+      "bytes": 23781,
+      "sha256": "7235edd3e025ad6472978d6516e7cdf5889ea0f2087b3cea6d57be0fa60a454b",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash1_FB_1x3_VFX.png",
+        "sha256": "7235edd3e025ad6472978d6516e7cdf5889ea0f2087b3cea6d57be0fa60a454b",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/14c4cb02b7f0162459944765.png",
+      "bytes": 11041,
+      "sha256": "14c4cb02b7f0162459944765ffd4319af12ce0c95c8aa054af1326c6c88eeee0",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Cyberknight/VFX/MFlash/Carbine_Cyberknight_Rifles_MFlash_02_TX.png",
+        "sha256": "14c4cb02b7f0162459944765ffd4319af12ce0c95c8aa054af1326c6c88eeee0",
+        "operation": "color",
+        "width": 128,
+        "height": 128,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/0687bb6f0ad07d1ac6ebb6d3.png",
+      "bytes": 38870,
+      "sha256": "0687bb6f0ad07d1ac6ebb6d346361509d8fb2c1e4cd0ac7f2173b19681af0323",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/wraith_ribbon_pan_dissolve1_Grayscale.png",
+        "sha256": "0687bb6f0ad07d1ac6ebb6d346361509d8fb2c1e4cd0ac7f2173b19681af0323",
+        "operation": "color",
+        "width": 1024,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/98cd44f300ec12cbb898a198.png",
+      "bytes": 10170,
+      "sha256": "98cd44f300ec12cbb898a198829fedc32492f7b603d99c57ce16df40ce63470f",
+      "source": {
+        "path": "ShooterGame/Content/VFX/ParticleSystems/MFlash_1P_VFX_Silenced_SO.png",
+        "sha256": "98cd44f300ec12cbb898a198829fedc32492f7b603d99c57ce16df40ce63470f",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/32aef109deb775d29e32552f.png",
+      "bytes": 13798,
+      "sha256": "32aef109deb775d29e32552f45d06556d7c337eb136818f59f494b30bcae755c",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Texture/T_Yokai_025__new.png",
+        "sha256": "32aef109deb775d29e32552f45d06556d7c337eb136818f59f494b30bcae755c",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/1cbb1d619d051658731c3deb.png",
+      "bytes": 185578,
+      "sha256": "1cbb1d619d051658731c3deb5d8049c5d106001cd075c4df2189e4dbd7a7d638",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/T_Mask_Circle_Gradient.png",
+        "sha256": "1cbb1d619d051658731c3deb5d8049c5d106001cd075c4df2189e4dbd7a7d638",
+        "operation": "color",
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/8b0cfa0e3d480964b155f7f2.png",
+      "bytes": 167491,
+      "sha256": "8b0cfa0e3d480964b155f7f2dd1561ffffbc7881e5779707de4aa9a5958cf7a6",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Flipbook/BlastDirectional_8x1.png",
+        "sha256": "8b0cfa0e3d480964b155f7f2dd1561ffffbc7881e5779707de4aa9a5958cf7a6",
+        "operation": "color",
+        "width": 1024,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/69886fc40ecdb0b36c099cf7.png",
+      "bytes": 482,
+      "sha256": "69886fc40ecdb0b36c099cf74d0dfdc56933085a55e73c26d4c8ddebde5e81ee",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/VFX/Textures/Coven_Carbine_Main_LUT_TEX.png",
+        "sha256": "69886fc40ecdb0b36c099cf74d0dfdc56933085a55e73c26d4c8ddebde5e81ee",
+        "operation": "color",
+        "width": 128,
+        "height": 4,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e9626eaebad2cfc6f5f35486.png",
+      "bytes": 65294,
+      "sha256": "e9626eaebad2cfc6f5f35486e7b3410de1d2f838446ac3dd2e98bffc609cd099",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/Wraith_4_halo.png",
+        "sha256": "e9626eaebad2cfc6f5f35486e7b3410de1d2f838446ac3dd2e98bffc609cd099",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/b1d299fd4e286c207d50c56e.png",
+      "bytes": 128279,
+      "sha256": "b1d299fd4e286c207d50c56e6589624b81e42583e6a584fa44c61faa032aba43",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/NoiseDissolve/Wraith_4Xtile90_Grayscale.png",
+        "sha256": "b1d299fd4e286c207d50c56e6589624b81e42583e6a584fa44c61faa032aba43",
+        "operation": "color",
+        "width": 1024,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/21ba7f1d8018a1f114370637.png",
+      "bytes": 7137,
+      "sha256": "21ba7f1d8018a1f114370637bfa22bdfe28ac972d8c6e3bccfd2129053179fb8",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlash2_Greyscale_TEX_Inverted.png",
+        "sha256": "21ba7f1d8018a1f114370637bfa22bdfe28ac972d8c6e3bccfd2129053179fb8",
+        "operation": "color",
+        "width": 128,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/480f1c5ef0f56e0ed7518f4e.png",
+      "bytes": 22568,
+      "sha256": "480f1c5ef0f56e0ed7518f4ed239f1b8b4e8d450ef51534e8144114e786cad5f",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Texture/Tex_Spirit_AutoShotGun_FlowerMask022.png",
+        "sha256": "480f1c5ef0f56e0ed7518f4ed239f1b8b4e8d450ef51534e8144114e786cad5f",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/46fc52b58b7e76eca96d4d38.png",
+      "bytes": 54757,
+      "sha256": "46fc52b58b7e76eca96d4d38dba23ca87301e593b56482447ecb63ac163c55c8",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/MuzzleFlashCenter_Hype_VFX.png",
+        "sha256": "46fc52b58b7e76eca96d4d38dba23ca87301e593b56482447ecb63ac163c55c8",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a4886a730997dd47b1457297.png",
+      "bytes": 27667,
+      "sha256": "a4886a730997dd47b1457297e1b04e07542072e7bba69e50020fd914e8073e4a",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Texture/Spirit_Glow_01.png",
+        "sha256": "a4886a730997dd47b1457297e1b04e07542072e7bba69e50020fd914e8073e4a",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/847c5ba113c7fee50204fe74.png",
+      "bytes": 44705,
+      "sha256": "847c5ba113c7fee50204fe74e252f0f369978ab6c1882835cb641fa6ee74ceed",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Texture/Spirit_Petal_01.png",
+        "sha256": "847c5ba113c7fee50204fe74e252f0f369978ab6c1882835cb641fa6ee74ceed",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/7b46240ad02fc800bf201fd4.png",
+      "bytes": 7573,
+      "sha256": "7b46240ad02fc800bf201fd4080af576c979dda3a2def8f43c5ff9bf6cd81bcb",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Textures/Ego2_AK_MFlash_Flare_TFX.png",
+        "sha256": "7b46240ad02fc800bf201fd4080af576c979dda3a2def8f43c5ff9bf6cd81bcb",
+        "operation": "color",
+        "width": 128,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/1fd6a1e47aedeaa7ea50da3d.png",
+      "bytes": 543,
+      "sha256": "1fd6a1e47aedeaa7ea50da3d91a57d48db5c780c8110a2aca0766cd457ad77d2",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Textures/Ego2_AK_MFlash_LUT.png",
+        "sha256": "1fd6a1e47aedeaa7ea50da3d91a57d48db5c780c8110a2aca0766cd457ad77d2",
+        "operation": "color",
+        "width": 128,
+        "height": 8,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ef8798acfd70b6ed19764578.png",
+      "bytes": 47340,
+      "sha256": "ef8798acfd70b6ed19764578306c058df447088076b4f63c3ad2ef5235b155fc",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Textures/Ego2_AK_MFlash_FlareCenter_TFX.png",
+        "sha256": "ef8798acfd70b6ed19764578306c058df447088076b4f63c3ad2ef5235b155fc",
+        "operation": "color",
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/9a0209635fd583511eb5f677.png",
+      "bytes": 21000,
+      "sha256": "9a0209635fd583511eb5f677bbd5f0fc9e354ca99301330317a2e000ed6975f0",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/Textures/Ego2_AK_MFlash_Glow_TFX.png",
+        "sha256": "9a0209635fd583511eb5f677bbd5f0fc9e354ca99301330317a2e000ed6975f0",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/0f49b679322322cc91ab4f11.png",
+      "bytes": 27772,
+      "sha256": "0f49b679322322cc91ab4f1123a9c6fe16c3a7034a9a642a9a303d9fa8080022",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/Mask/OilyNoise01_TFX.png",
+        "sha256": "0f49b679322322cc91ab4f1123a9c6fe16c3a7034a9a642a9a303d9fa8080022",
+        "operation": "color",
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e739dfedcf262caa044dc6a2.png",
+      "bytes": 84,
+      "sha256": "e739dfedcf262caa044dc6a2b2a2135d009af452a46686d8055b1248403f55d3",
+      "source": {
+        "path": "ShooterGame/Content/VFX/Textures/AlphaGradient/00_Grad2x2_Grayscale.png",
+        "sha256": "e739dfedcf262caa044dc6a2b2a2135d009af452a46686d8055b1248403f55d3",
+        "operation": "color",
+        "width": 2,
+        "height": 2,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/1d9611ed3dad58366751aabf.png",
+      "bytes": 220803,
+      "sha256": "1d9611ed3dad58366751aabfd9a8d194aa8d6a91d35460e42a595eb5906a6973",
+      "source": {
+        "path": "ShooterGame/Content/Characters/Clay/S0/VFX/Textures/SplatRadialBody_4x3.png",
+        "sha256": "1d9611ed3dad58366751aabfd9a8d194aa8d6a91d35460e42a595eb5906a6973",
+        "operation": "color",
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/9884d542eca351deba6e971e.glb",
       "bytes": 1843072,
       "sha256": "9884d542eca351deba6e971e7acdb6a7580aef465f8677bb4330aef381125908",
@@ -302,47 +1174,55 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/b40c2c06dd09db89e5550f6d.png",
-      "bytes": 193997,
-      "sha256": "b40c2c06dd09db89e5550f6d9e0da9193423ba54cfb77c16023df1c9108a12eb",
+      "url": "/skin-packs/models/assets/9277630d1cc38d15830aa312.png",
+      "bytes": 273472,
+      "sha256": "9277630d1cc38d15830aa3121ac21226219d6948842acdcf13c99585d0985ebc",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_DemonStone_v1_AEM.png",
         "sha256": "f29ede99cddc869aeab53a0e8dd25c5535a8c49b6dfbf5756fd3e1bfd1126bf3",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/54732f9203ce785c72ce8b0f.png",
-      "bytes": 1019644,
-      "sha256": "54732f9203ce785c72ce8b0f578cafa51cf4b1070171b7e4fed480efc4f6d3e8",
+      "url": "/skin-packs/models/assets/8dd9121003aaf58a2ff8576a.png",
+      "bytes": 1476633,
+      "sha256": "8dd9121003aaf58a2ff8576a6e621749e99d6415e39fecf98878a655f30ee592",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_DemonStone_v1_DF.png",
         "sha256": "8dd9121003aaf58a2ff8576a6e621749e99d6415e39fecf98878a655f30ee592",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e4a6bbd795f6c2d266da1f19.png",
-      "bytes": 1250901,
-      "sha256": "e4a6bbd795f6c2d266da1f19a677711fe9bf3894b55f317e3ecd87ab3c508a51",
+      "url": "/skin-packs/models/assets/1bd9fa2ec523a069870373d9.png",
+      "bytes": 3761710,
+      "sha256": "1bd9fa2ec523a069870373d911fa75cd6745fb8f4f937a42c343e6569429dc8d",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_DemonStone_v1_NM.png",
         "sha256": "1bd9fa2ec523a069870373d911fa75cd6745fb8f4f937a42c343e6569429dc8d",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/c801c84a8338285ec896adde.png",
-      "bytes": 1190634,
-      "sha256": "c801c84a8338285ec896added6e6714030a0d59cd5d8da3cd942cc9e5d171da0",
+      "url": "/skin-packs/models/assets/69823d064c4c2b3156c070b8.png",
+      "bytes": 1633265,
+      "sha256": "69823d064c4c2b3156c070b83904250e86f8eaccae9e67c6af196a7123f4f5ca",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_DemonStone_v1_MRS.png",
         "sha256": "66f2397b86a4d4085192b9bb287dd9ac0ff95f6e4d899d4dfbc60dc40f607236",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -362,29 +1242,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_Demonstone_Magazine_v1_AEM.png",
         "sha256": "28dd065213f46237bab60ca72c55e6f9639400a6daeb94dd9046a9dd16e0beec",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/1d01bf700234bc3fe270e363.png",
-      "bytes": 93374,
-      "sha256": "1d01bf700234bc3fe270e3637bd06950be6d098e5687d2f86c9244ef6b41183f",
+      "url": "/skin-packs/models/assets/64a5eeef67ca2e70518211a1.png",
+      "bytes": 95745,
+      "sha256": "64a5eeef67ca2e70518211a1f17073837dd07c514571d61366fb4e35c0445c56",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_Demonstone_Magazine_v1_DF.png",
         "sha256": "64a5eeef67ca2e70518211a1f17073837dd07c514571d61366fb4e35c0445c56",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/6bea9611bd3d340142af1e37.png",
-      "bytes": 240331,
-      "sha256": "6bea9611bd3d340142af1e37b45787392a7b52fc112b993d395e2ecc4ae5e350",
+      "url": "/skin-packs/models/assets/1070294a6420918c9ce051a5.png",
+      "bytes": 240619,
+      "sha256": "1070294a6420918c9ce051a5452b3b2918ecd5a35753794248d9662ff34c38d5",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_Demonstone_Magazine_v1_NM.png",
         "sha256": "1070294a6420918c9ce051a5452b3b2918ecd5a35753794248d9662ff34c38d5",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -395,7 +1281,9 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Chromas/v1/Materials/AK_Demonstone_Magazine_v1_MRS.png",
         "sha256": "5f492644c31b4eca7efe212c767afb80030b6eb4893dd2cb832342a01ee9d639",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -408,25 +1296,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/0c28c45572cf9a68dfb17574.png",
-      "bytes": 112890,
-      "sha256": "0c28c45572cf9a68dfb17574434f65fad9cba8297e1bc95f6cff30abc8525e5e",
+      "url": "/skin-packs/models/assets/0e2fbe4040e160fe73ee4dfb.png",
+      "bytes": 114451,
+      "sha256": "0e2fbe4040e160fe73ee4dfba1a7dbf91fcd830d805b8831e14f273481372bfe",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/DemonStone/Materials/RedDot_DemonStone_DF.png",
         "sha256": "0e2fbe4040e160fe73ee4dfba1a7dbf91fcd830d805b8831e14f273481372bfe",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/13e78435964fd87cb04485dd.png",
-      "bytes": 247485,
-      "sha256": "13e78435964fd87cb04485ddd12638ee4419cc7847565fdece9507a95c3c1afe",
+      "url": "/skin-packs/models/assets/26bd9bdd575e331b6ac5169b.png",
+      "bytes": 240642,
+      "sha256": "26bd9bdd575e331b6ac5169ba42aa516b6196fdf61fdb6deca12ff2ffb469215",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/DemonStone/Materials/RedDot_DemonStone_NM.png",
         "sha256": "26bd9bdd575e331b6ac5169ba42aa516b6196fdf61fdb6deca12ff2ffb469215",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -437,7 +1329,108 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/DemonStone/Materials/RedDot_DemonStone_MRS.png",
         "sha256": "bf6d7e5e1bf46758d0033f10d207fd6e46af8ed5765b62b03389d2b5cd0a0194",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/66e605e78a4d855584373b61.bin.gz",
+      "bytes": 144653,
+      "sha256": "66e605e78a4d855584373b617b73be5e6fb6ef3cbc803e53819d45941b643ea6",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/FP_Core_AK_DemonStone_Reload.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "c8425cdfef83dde89daed8b510bbd87ea2b5b379c292aac1a80f6c562d844a12",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5beb433166c453231713236b.bin.gz",
+      "bytes": 6539,
+      "sha256": "5beb433166c453231713236b1ad69fd6555dc4971ca071e4e4058e7a33d25771",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/GN_Core_AK_DemonStone_Reload.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Models/GN_AK_DemonStone_Lv3_Skelmesh.uasset",
+        "sha256": "0dbc265165f0c484eb4beb011fac0de81e1c72c17489a666af39d2b953afcf21",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/b35f5cc754397c27fbfb7ed4.bin.gz",
+      "bytes": 11974,
+      "sha256": "b35f5cc754397c27fbfb7ed499c619b61de54405e215fbc5bd1456010c8b407d",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/GN_Core_AK_DemonStone_Reload_Cosmetic.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Models/GN_AK_DemonStone_Lv3_Skelmesh.uasset",
+        "sha256": "497993640020ef8d6ab7b9cc8906d0d35d43396a19ffaf19ed4c38651c5d1e59",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/c7a0a0b8b8ace8562df7ce25.bin.gz",
+      "bytes": 101345,
+      "sha256": "c7a0a0b8b8ace8562df7ce25c2f80abe9f3fe7f3cbe023fbc5bf5b187ab9d366",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/FP_Core_AK_DemonStone_Inspect.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "0382d4ba4374d1d93f3e9ec3d91058933e7a42f63e32ae5d019f5fd1f2f7fd3f",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a528ad72a748ceff39786f3e.bin.gz",
+      "bytes": 1413,
+      "sha256": "a528ad72a748ceff39786f3e24b5ac5cf0d6b930e6e9e97a028a4596ca1a80aa",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/GN_Core_AK_DemonStone_Inspect.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Models/GN_AK_DemonStone_Lv3_Skelmesh.uasset",
+        "sha256": "78469ad2c385bc3caf8ab621e373ee7c445ecda72b9b5dcdc1cedd8ed12a51f8",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/bdd7e75627cfed063d2c5df4.bin.gz",
+      "bytes": 11700,
+      "sha256": "bdd7e75627cfed063d2c5df44cc067629b4ee4469711ce74a8437c8c15b6754b",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/GN_Core_AK_DemonStone_Inspect_Cosmetic.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Models/GN_AK_DemonStone_Lv3_Skelmesh.uasset",
+        "sha256": "cc97688d818e5f81e1e01eeee062a8f9b1b028fa8b04be184563a5d7e1f44556",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/976d7aa9815ad15d0d3262f9.bin.gz",
+      "bytes": 26065,
+      "sha256": "976d7aa9815ad15d0d3262f9933e844b2c036fbf2a08f129172082682e50acd3",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/FP_Core_AK_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "fd02e16b3d88266667067f930ed964cb2d288fa6814c94df7a6e699aae7b8f4a",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4a5a37cde00391d621203488.bin.gz",
+      "bytes": 946,
+      "sha256": "4a5a37cde00391d62120348838dfb2a9a7d6d07769d6135dcae69e0fa947caa5",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/GN_Core_AK_DemonStone_Fire2.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Models/GN_AK_DemonStone_Lv3_Skelmesh.uasset",
+        "sha256": "c6c10f23633c53af62c3d86c80d8560271c9cfcedfb7d643ce6336c9b5d87789",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e226e4a1cb6d4ad976fc612d.bin.gz",
+      "bytes": 1114,
+      "sha256": "e226e4a1cb6d4ad976fc612d55487e24a58aa6ea75d46b7f9b723955b97286fd",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/1P/Anims/GN_Core_AK_DemonStone_Fire_Cosmetic.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/DemonStone/Models/GN_AK_DemonStone_Lv3_Skelmesh.uasset",
+        "sha256": "562cb033e283d4cc709f5d0ba946b241db9d0a31814fe4737c381afa34076328",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -450,58 +1443,68 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/b1f0054157b5dca8861ab405.png",
-      "bytes": 29729,
-      "sha256": "b1f0054157b5dca8861ab405edaa54ab53125c2ff3462f2a62087918a6e726e1",
+      "url": "/skin-packs/models/assets/0d3efe9234453257acbe8f90.png",
+      "bytes": 21375,
+      "sha256": "0d3efe9234453257acbe8f90eec819564f47cfee0719f0cfb1dde5555e2032bd",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_AEM.png",
         "sha256": "af9d4932d7a8ec8f2d3737c4125f66b7fe961624f587e4fa370d76234c879a18",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/36ad19bc9cef4c8ae1ea9514.png",
-      "bytes": 1134458,
-      "sha256": "36ad19bc9cef4c8ae1ea95142c65b132fbe04854d25491d7fa3c70e8f636916b",
+      "url": "/skin-packs/models/assets/94b639e52151b9f87c0da9c0.png",
+      "bytes": 1743113,
+      "sha256": "94b639e52151b9f87c0da9c03fe1349f668a406c295ed30a42d3b97e3c103f91",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_DF.png",
         "sha256": "94b639e52151b9f87c0da9c03fe1349f668a406c295ed30a42d3b97e3c103f91",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/a2f7a784a4ef9b043f6f8493.png",
-      "bytes": 1072059,
-      "sha256": "a2f7a784a4ef9b043f6f8493555f6da8b206143816c50cd4d67c5a299fd57da5",
+      "url": "/skin-packs/models/assets/c14db4a614651b3145f80c06.png",
+      "bytes": 3826471,
+      "sha256": "c14db4a614651b3145f80c064096d53363bd4f7933eccf91c8d34a6663ed0ad7",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_NM.png",
         "sha256": "c14db4a614651b3145f80c064096d53363bd4f7933eccf91c8d34a6663ed0ad7",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/f4b7eafd2fcb4f5a57690743.png",
-      "bytes": 808882,
-      "sha256": "f4b7eafd2fcb4f5a576907435411431a84faa47c1fad818f331cf6550c9f4d0a",
+      "url": "/skin-packs/models/assets/e0dd61b9b9512965f618881e.png",
+      "bytes": 1028629,
+      "sha256": "e0dd61b9b9512965f618881ebe54eba73036227010fed13fcc81fdece6304f8f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Materials/AK_Ninja_MRS.png",
         "sha256": "f1a52715aac020bd7e56e85551b5f25f05c3a34c7595c18acfaf1024a276536c",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e90e98932dbaf03129029a3d.png",
-      "bytes": 138437,
-      "sha256": "e90e98932dbaf03129029a3dfe7ffd9fd531ea02dbff11f5cf25bafe418fcda5",
+      "url": "/skin-packs/models/assets/6dadca7cac17e82aa02c10df.png",
+      "bytes": 141871,
+      "sha256": "6dadca7cac17e82aa02c10df032b08b68071d8464340b84be67baf66e36b9623",
       "source": {
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Astronaut/Astronaut_Decal_NM.png",
         "sha256": "6dadca7cac17e82aa02c10df032b08b68071d8464340b84be67baf66e36b9623",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -512,29 +1515,35 @@
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Ninja/Ninja_Shuriken_AEM.png",
         "sha256": "b244f9d3a4668c85a8ecfd4c980f392d66b36d3bed4429998c584cd58669788c",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e36d1542a06db46bc6b2e9e9.png",
-      "bytes": 130644,
-      "sha256": "e36d1542a06db46bc6b2e9e957adbf6fa95c147b32e7cb7cf1191ad86f689dce",
+      "url": "/skin-packs/models/assets/6d8bef1adef32919a6fca811.png",
+      "bytes": 130726,
+      "sha256": "6d8bef1adef32919a6fca811c48138760497d9af5d28f87a2300f74846e47f68",
       "source": {
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Ninja/Ninja_Shuriken_DF.png",
         "sha256": "6d8bef1adef32919a6fca811c48138760497d9af5d28f87a2300f74846e47f68",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/8c6d807708f45576e2f70ea0.png",
-      "bytes": 73203,
-      "sha256": "8c6d807708f45576e2f70ea0ce75419edfb0fae2f1e3fa33b69c151d2df5db7a",
+      "url": "/skin-packs/models/assets/cd372da6700b681cde79ce2e.png",
+      "bytes": 70570,
+      "sha256": "cd372da6700b681cde79ce2e0bc4772f70b7de40a6b7d6963fa93692493e53e3",
       "source": {
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Ninja/Ninja_Shuriken_NM.png",
         "sha256": "cd372da6700b681cde79ce2e0bc4772f70b7de40a6b7d6963fa93692493e53e3",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
       }
     },
     {
@@ -545,7 +1554,9 @@
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Ninja/Ninja_Shuriken_MRS.png",
         "sha256": "d294ae49e8f5910ae23e2ae1610106cee46351714c500b87c7c0713ec2e70587",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
       }
     },
     {
@@ -567,25 +1578,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/a2b1fd09c2cf50214b6cebf4.png",
-      "bytes": 114235,
-      "sha256": "a2b1fd09c2cf50214b6cebf423037d61fbd13f5d0f7239430780b0c157f04161",
+      "url": "/skin-packs/models/assets/9fd5baa34992d9063571a6a5.png",
+      "bytes": 116152,
+      "sha256": "9fd5baa34992d9063571a6a54ed2d65427cd397d85a0aecd137c997ed86e5563",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ninja/Materials/RedDot_Ninja_DF.png",
         "sha256": "9fd5baa34992d9063571a6a54ed2d65427cd397d85a0aecd137c997ed86e5563",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/1551675ea512332cfdf50a69.png",
-      "bytes": 181699,
-      "sha256": "1551675ea512332cfdf50a6987f3e7bb1f416396c0a6b160ba10c0c2688eb0d3",
+      "url": "/skin-packs/models/assets/d4f49b58b731e5527b4585ef.png",
+      "bytes": 177971,
+      "sha256": "d4f49b58b731e5527b4585ef80238533f830cf808d6d91c7cb28ef3891f76a3a",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ninja/Materials/RedDot_Ninja_NM.png",
         "sha256": "d4f49b58b731e5527b4585ef80238533f830cf808d6d91c7cb28ef3891f76a3a",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -596,7 +1611,53 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ninja/Materials/RedDot_Ninja_MRS.png",
         "sha256": "788f650cc66f84a2e5ebfd654d5c6ad000c547144f3349be3874380219872a42",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/cfe5960162913eb636a43940.bin.gz",
+      "bytes": 191608,
+      "sha256": "cfe5960162913eb636a439406a76ef05414aea649110e2c1a0c5aeacad3e8b05",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Anims/FP_Core_AK_Ninja_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "25d350070f4d5adc2e8aee8b6151c2da9f81fed592027ae85f82a182c8e3b116",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/71b48742c132083035fb216c.bin.gz",
+      "bytes": 7532,
+      "sha256": "71b48742c132083035fb216c7abdbefe48327c060cdc3dcf5a8e1d08b40b4254",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Anims/GN_Core_AK_Ninja_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Models/GN_AK_Ninja_Lv3_Skelmesh.uasset",
+        "sha256": "85883ce722de945f44a7bc6001cadc2ee431860697e6ea135344b802f32cf23f",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/fb8569e7d3a838ec56c4dff2.bin.gz",
+      "bytes": 144121,
+      "sha256": "fb8569e7d3a838ec56c4dff26b92a46700efa31e319e49ec06a9aca9002ed9b3",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/FP_Core_AK_S0_Inspect.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "8eb5725ba8cb82d6eb41d581f392afb64b7b642597de3d210786bfaaead65e91",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/053bf2e3e9c878ef9cdb90ba.bin.gz",
+      "bytes": 806,
+      "sha256": "053bf2e3e9c878ef9cdb90ba27702fa1f27db494b56ce6bb3931b5c06405f679",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Anims/GN_Core_AK_Ninja_Fire_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ninja/Models/GN_AK_Ninja_Lv3_Skelmesh.uasset",
+        "sha256": "37402235bf269b010f0d6fc4444ed93dd81dd9a8677b2794afd331a5dbec81b0",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -609,58 +1670,68 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/825f76e8073584dfcb96c9fa.png",
-      "bytes": 73111,
-      "sha256": "825f76e8073584dfcb96c9fa323c923594c435189b1a4bd9d954ffdf2552f4bf",
+      "url": "/skin-packs/models/assets/8f1edc2716d2c6180a8d802b.png",
+      "bytes": 88846,
+      "sha256": "8f1edc2716d2c6180a8d802bb90966ad8d568c1d5d4baf4ddd4bcf6fe75a2e0b",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Materials/Carbine_Ninja2_AEM.png",
         "sha256": "bc54619cd77322dc98782ce3fdb6d74ba50b0800367698217f034e0236efa7e4",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/9b1d6eabe52d849c1b4e20ce.png",
-      "bytes": 1029984,
-      "sha256": "9b1d6eabe52d849c1b4e20ce6eb10fd9dca979cd8b552f88f96cbe3faafeba02",
+      "url": "/skin-packs/models/assets/a8b4d18a5bff0689fe077b4b.png",
+      "bytes": 1388650,
+      "sha256": "a8b4d18a5bff0689fe077b4b01491d97ef00ccba9e5ab5210024d87a4bf3e072",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Materials/Carbine_Ninja2_DF.png",
         "sha256": "a8b4d18a5bff0689fe077b4b01491d97ef00ccba9e5ab5210024d87a4bf3e072",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/cd01c5897dfa2c317a18a46e.png",
-      "bytes": 942130,
-      "sha256": "cd01c5897dfa2c317a18a46e779bbf08a5edcdc39f25c1f13c7d0c5150652715",
+      "url": "/skin-packs/models/assets/96351abd08196e01792cc102.png",
+      "bytes": 3313385,
+      "sha256": "96351abd08196e01792cc102fd9555e721a4b0a8c01a1ee545174a6d98cc123f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Materials/Carbine_Ninja2_NM.png",
         "sha256": "96351abd08196e01792cc102fd9555e721a4b0a8c01a1ee545174a6d98cc123f",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/3b243b8edb94c992870e5f02.png",
-      "bytes": 810018,
-      "sha256": "3b243b8edb94c992870e5f024c0d2fc52eb3594b665ffb8170a426771231ecbe",
+      "url": "/skin-packs/models/assets/8f0eaa9b508f0c5226ee2f1d.png",
+      "bytes": 1028559,
+      "sha256": "8f0eaa9b508f0c5226ee2f1dcbe0f32675669745ede7c502457f272fd08b5c7d",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Materials/Carbine_Ninja2_MRS.png",
         "sha256": "6d3632adcdcdcb18c5b6bd238425ff6f3c41c831645ce39ad99a30573ef32211",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/76d5834d6d053ec7562e21f4.png",
-      "bytes": 129469,
-      "sha256": "76d5834d6d053ec7562e21f4d39bf28f73e2e297b2a25d937e94c1fe836605a5",
+      "url": "/skin-packs/models/assets/0d0c966d389c816446c2b0c7.png",
+      "bytes": 129467,
+      "sha256": "0d0c966d389c816446c2b0c72e570c106456236773143f8ff9f4d84703d945cd",
       "source": {
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Ninja2/Ninja2_Shuriken_DF.png",
         "sha256": "0d0c966d389c816446c2b0c72e570c106456236773143f8ff9f4d84703d945cd",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -671,7 +1742,9 @@
         "path": "ShooterGame/Content/Equippables/_Core/Materials/SpecialMaterials/Ninja2/Ninja2_Shuriken_MRS.png",
         "sha256": "d946227ed314478e4dc7bece593889fdb55a86ce342b7a716141dec0b41c9e77",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
       }
     },
     {
@@ -709,29 +1782,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ninja2/Materials/Silencer_Ninja2_AEM.png",
         "sha256": "8c149f4d028253976ed67a56919a6bb8b05db1d53fdb84a5039bab9de32b1245",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/dac513f4c818b69145082369.png",
-      "bytes": 92000,
-      "sha256": "dac513f4c818b69145082369233e74d514019a56dfb174e34d46c2de9a1572e0",
+      "url": "/skin-packs/models/assets/dd882228ff70ca0936904ce0.png",
+      "bytes": 96464,
+      "sha256": "dd882228ff70ca0936904ce02a55faf31279f0eb070d34e0b3ea653fc3101cd0",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ninja2/Materials/Silencer_Ninja2_DF.png",
         "sha256": "dd882228ff70ca0936904ce02a55faf31279f0eb070d34e0b3ea653fc3101cd0",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/280635c0362b09ac480ff4bb.png",
-      "bytes": 153190,
-      "sha256": "280635c0362b09ac480ff4bb768f1ef9296ce78a0fb4d2107b30e4c45b42da93",
+      "url": "/skin-packs/models/assets/db23b569188353959c5172ac.png",
+      "bytes": 151374,
+      "sha256": "db23b569188353959c5172ac4f4c1d970bfb2da3130a8db6ee994df0a15e6b30",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ninja2/Materials/Silencer_Ninja2_NM.png",
         "sha256": "db23b569188353959c5172ac4f4c1d970bfb2da3130a8db6ee994df0a15e6b30",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -742,7 +1821,64 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ninja2/Materials/Silencer_Ninja2_MRS.png",
         "sha256": "ac23b40f9b05caf65cf13c752b0d2123f7a79ceff05ea7e9fceae7a5700f4ac5",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ce2f5c37e6fe939ab9a8b2c6.bin.gz",
+      "bytes": 146564,
+      "sha256": "ce2f5c37e6fe939ab9a8b2c6fbe45ade964359a73cca92335e935951ba78d503",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Anims/FP_Core_Carbine_Ninja2_Reload.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "c68896553070cada7caf8b0658b6ae7dbf112bd7e032d9ec5e3266626ba7249c",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ee86e962c34c5bbd2760ad44.bin.gz",
+      "bytes": 5037,
+      "sha256": "ee86e962c34c5bbd2760ad4495d76597aff7e93e0dd48132fcb139dca45aa7a0",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Anims/GN_Core_Carbine_Ninja2_Reload_lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Models/GN_Carbine_Ninja2_Lv3_Skelmesh.uasset",
+        "sha256": "a04069f5c9cf7ee60785d0568af97266b7995b0bcf2e94b3ec00e818d1e81459",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/bdc82376d4415149bd7a7aa7.bin.gz",
+      "bytes": 166147,
+      "sha256": "bdc82376d4415149bd7a7aa7e24ab9689883a764fea9d2c3dc0c1500b294d8b7",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/FP_Core_Carbine_S0_Inspect.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "cc5cf13db6df06bad12ece46507a13d3965e6a583616e40ea4f41eadca868387",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a996424a3faa97c4759e8dcf.bin.gz",
+      "bytes": 24522,
+      "sha256": "a996424a3faa97c4759e8dcfa75c50db7cacf32ae4aa043f9eadb08e0113895e",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/FP_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "a02632eefa10b8b7074b6033d809f9ceee2dd45b31355d3fb300a8387e801a40",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5d213d91d27608a5bb194469.bin.gz",
+      "bytes": 466,
+      "sha256": "5d213d91d27608a5bb1944694e06e3d11432b2fe4e9f31241d866a7452fb9905",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ninja2/Models/GN_Carbine_Ninja2_Lv3_Skelmesh.uasset",
+        "sha256": "c8bdb1cacb31460111a138aeff140e6386a328f6517725742deae72069176556",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -762,40 +1898,48 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/Materials/AK_Hellfire_AEM.png",
         "sha256": "950bd93228c9210e9db3c58eeab9595c1d2de8f56be9c957f87bd71106c06b29",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/429103a529ba9380c480f5b3.png",
-      "bytes": 1525584,
-      "sha256": "429103a529ba9380c480f5b387ba4b15f41ac6136742bc33001bfec0c502f387",
+      "url": "/skin-packs/models/assets/a9bea3345b4c7f10305d867d.png",
+      "bytes": 3112044,
+      "sha256": "a9bea3345b4c7f10305d867d838ab1ef48b440603a3cbc889b75f5a59578b58c",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/Materials/AK_Hellfire_DF.png",
         "sha256": "a9bea3345b4c7f10305d867d838ab1ef48b440603a3cbc889b75f5a59578b58c",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/24f6afbbd0f159f4ad45efc7.png",
-      "bytes": 1372432,
-      "sha256": "24f6afbbd0f159f4ad45efc704791712efc6d39271069e7dc532e2d8e4c4a1da",
+      "url": "/skin-packs/models/assets/a39e6f67ba0749f67f3bee93.png",
+      "bytes": 4562761,
+      "sha256": "a39e6f67ba0749f67f3bee93b260ceb81c695cef8bc2b1bf03f8c4d35cf72053",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/Materials/AK_Hellfire_NM.png",
         "sha256": "a39e6f67ba0749f67f3bee93b260ceb81c695cef8bc2b1bf03f8c4d35cf72053",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/27e20dbdce94988835104d85.png",
-      "bytes": 1151809,
-      "sha256": "27e20dbdce94988835104d85ce6836677e7522cd06d905b2bb8eaefd8ed811fb",
+      "url": "/skin-packs/models/assets/4f64ad2209115690fbd0b919.png",
+      "bytes": 2269455,
+      "sha256": "4f64ad2209115690fbd0b91955154c3e124965692460ce3a9a2f1ef03d7bef87",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/Materials/AK_Hellfire_MRS.png",
         "sha256": "6c9810e05cb56a12cec1ccea91abd16327ce052a153210c655fac8c7c371e73f",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -824,29 +1968,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Hellfire/Materials/RedDot_Hellfire_AEM.png",
         "sha256": "2ed125b1136a656b13c80e4ad3ac0417cb195fc2d413695addbde128929798a1",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/8f9db532f5801ddfca870e33.png",
-      "bytes": 196542,
-      "sha256": "8f9db532f5801ddfca870e33bf1da2e3b928a17ebeb17c6a769cb9b980651449",
+      "url": "/skin-packs/models/assets/191ea66c104a672264146b7c.png",
+      "bytes": 195872,
+      "sha256": "191ea66c104a672264146b7c4a0e482a72c81c0c5c2acc6bec8eafd42e12d220",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Hellfire/Materials/RedDot_Hellfire_DF.png",
         "sha256": "191ea66c104a672264146b7c4a0e482a72c81c0c5c2acc6bec8eafd42e12d220",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e4892ee681d0eb974f3ea8a0.png",
-      "bytes": 206538,
-      "sha256": "e4892ee681d0eb974f3ea8a083e01432eedb0357e7dfebe8ab92b59913c0d82e",
+      "url": "/skin-packs/models/assets/db48b9e3577d1b21834aa474.png",
+      "bytes": 202568,
+      "sha256": "db48b9e3577d1b21834aa4740e2555dcffad10524cb30292e7a7c5995a9bcdc3",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Hellfire/Materials/RedDot_Hellfire_NM.png",
         "sha256": "db48b9e3577d1b21834aa4740e2555dcffad10524cb30292e7a7c5995a9bcdc3",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -857,7 +2007,42 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Hellfire/Materials/RedDot_Hellfire_MRS.png",
         "sha256": "a76ee00b0ac62d713dbb52757132eab2b822a9bb6016264123c939db48b27b00",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/728e8a2d4969aef5656966f2.bin.gz",
+      "bytes": 145470,
+      "sha256": "728e8a2d4969aef5656966f216ca10237cf7a32fcf6410c566d824ad4e9a20d5",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/FP_Core_AK_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "fc7f78d842b8c684f1f446f03f2610737e067124a3847c37e21120489cc68c10",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5ad18d34ac25cc7623996ed7.bin.gz",
+      "bytes": 7945,
+      "sha256": "5ad18d34ac25cc7623996ed73dd4ffb19701b53f8c1fd097ce939c7bda9d0735",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/GN_Core_AK_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/Models/GN_AK_Hellfire_Skelmesh.uasset",
+        "sha256": "08d2d9571bbc8d867940b86592dabf7250856166952fd1df5067b7fd160b4ef5",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a8fe814717553b2635525504.bin.gz",
+      "bytes": 787,
+      "sha256": "a8fe814717553b26355255045a1a1ecf0e0f362b0821290c8c22e146238c0a1a",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/GN_Core_AK_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Hellfire/Models/GN_AK_Hellfire_Skelmesh.uasset",
+        "sha256": "81601bc1ee931980551d937258dca6c9f1bd87d2e5dc6faea2c57282c25630cc",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -877,40 +2062,48 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Hellfire/Materials/Carbine_Hellfire_AEM.png",
         "sha256": "ff2ca4a2b87f359ac43e9a61de990010d0ac10700f360ac0a81fd81a0d95ed4c",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/f20765ddec318417d19cd5ae.png",
-      "bytes": 1583900,
-      "sha256": "f20765ddec318417d19cd5aecb7cc389fecacf7d3921d83dd4a9d65b2fadf9a2",
+      "url": "/skin-packs/models/assets/c3ae4200595dcf4210018d85.png",
+      "bytes": 3180618,
+      "sha256": "c3ae4200595dcf4210018d85cc7ed3da145f2bb81b1780b14c5afaf8863c8bd6",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Hellfire/Materials/Carbine_Hellfire_DF.png",
         "sha256": "c3ae4200595dcf4210018d85cc7ed3da145f2bb81b1780b14c5afaf8863c8bd6",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/b9ee1ca89b21dd1ba6bcf884.png",
-      "bytes": 1457081,
-      "sha256": "b9ee1ca89b21dd1ba6bcf884705d33f4232eba9aeb1936b3656c938bdff81b20",
+      "url": "/skin-packs/models/assets/e4496061f273208555fe4b45.png",
+      "bytes": 4729877,
+      "sha256": "e4496061f273208555fe4b4594fa7af3d9d255f556f7c6b6191f99435e68cc4c",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Hellfire/Materials/Carbine_Hellfire_NM.png",
         "sha256": "e4496061f273208555fe4b4594fa7af3d9d255f556f7c6b6191f99435e68cc4c",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/89be0f4328b09c7411635fab.png",
-      "bytes": 1254901,
-      "sha256": "89be0f4328b09c7411635fab522b46d9d141653caa0eb080a0f001f37e23bd03",
+      "url": "/skin-packs/models/assets/c40144dbc5648bbe34c97c47.png",
+      "bytes": 2784933,
+      "sha256": "c40144dbc5648bbe34c97c47c0dafd7686fe820f97c4c8aa1166ad9ffb10d99a",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Hellfire/Materials/Carbine_Hellfire_MRS.png",
         "sha256": "00946574be516332dee2edc8843b3330c6b76cba2651076e3bcf5b5eda6b32a6",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -939,29 +2132,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Hellfire/Materials/Silencer_Hellfire_AEM.png",
         "sha256": "3c8253cf30efb0ef6e48e3b274f9058da117e81588d3cc5e07290ef98b38f2a2",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e7cf04534707d7f99334acb1.png",
-      "bytes": 155176,
-      "sha256": "e7cf04534707d7f99334acb13f9ae64e7f65e63480ac8ede392ab494274f3f88",
+      "url": "/skin-packs/models/assets/8a615e32311d56f32ec5349a.png",
+      "bytes": 153892,
+      "sha256": "8a615e32311d56f32ec5349a89ac7feeb081110601f39e0f9b08ce7a91adfb9b",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Hellfire/Materials/Silencer_Hellfire_DF.png",
         "sha256": "8a615e32311d56f32ec5349a89ac7feeb081110601f39e0f9b08ce7a91adfb9b",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/9c8d9ad2c63d00fcf3c9e7f1.png",
-      "bytes": 241414,
-      "sha256": "9c8d9ad2c63d00fcf3c9e7f1c2495982031cf59dde8b671d14be3b77ee20d779",
+      "url": "/skin-packs/models/assets/268e4d01713879d673b16253.png",
+      "bytes": 234495,
+      "sha256": "268e4d01713879d673b162531cde7786a297b74d1337ad4b45f07924b864c85f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Hellfire/Materials/Silencer_Hellfire_NM.png",
         "sha256": "268e4d01713879d673b162531cde7786a297b74d1337ad4b45f07924b864c85f",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -972,7 +2171,42 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Hellfire/Materials/Silencer_Hellfire_MRS.png",
         "sha256": "be702e8cd20236a125af20e974acf1e9aeb2e80a0d652d43feed59c78026c771",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5f5a4d326bebcc90f07308a2.bin.gz",
+      "bytes": 149082,
+      "sha256": "5f5a4d326bebcc90f07308a29c669956f7ffd61069454d6a3280361df229df64",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/FP_Core_Carbine_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "2d284e4e553957d241b596b32916e55642e68f87d9c7002cccfd5885e53ad8b8",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/b4497b322608521279535bdb.bin.gz",
+      "bytes": 5454,
+      "sha256": "b4497b322608521279535bdb9cb1d9f358e4fa6d904daba468636b7e25a99da4",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Hellfire/Models/GN_Carbine_Hellfire_Skelmesh.uasset",
+        "sha256": "73b8ad6bf8e2ad7b570cb4ddd7c476869e08137ae083e803a68eb67672e2f920",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a63008f72eae79a92fcd2202.bin.gz",
+      "bytes": 445,
+      "sha256": "a63008f72eae79a92fcd220264f1f83636eeda3b50b43becc63a503fffb7975e",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Hellfire/Models/GN_Carbine_Hellfire_Skelmesh.uasset",
+        "sha256": "28748ceeebe53e439c563af70969da99159c8d3d196186ee40f57898e0387d10",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -985,91 +2219,107 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/d16dffd354cfeff844b6cb2b.png",
-      "bytes": 33771,
-      "sha256": "d16dffd354cfeff844b6cb2b0ca41afaf81f9ed136bad87894153657fbd71337",
+      "url": "/skin-packs/models/assets/1ed51a78c077e570595f9bf8.png",
+      "bytes": 22293,
+      "sha256": "1ed51a78c077e570595f9bf8e76b2c322b550e3cfa3005ee6d49959f87b5a743",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_AEM.png",
         "sha256": "4a10e1a693e45e857e27f134438dd8eba3cbf58efda3a21f2f97496727d0638c",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/9734ce832d92fbe501112e63.png",
-      "bytes": 922906,
-      "sha256": "9734ce832d92fbe501112e63fc04cefc0b162b36c44aab12d330b84e2e14094d",
+      "url": "/skin-packs/models/assets/e1a346055daf0318b15824d8.png",
+      "bytes": 1389492,
+      "sha256": "e1a346055daf0318b15824d86ac58607a8e6044682c5d8fd58e3dd5b5d2398fa",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_DF.png",
         "sha256": "e1a346055daf0318b15824d86ac58607a8e6044682c5d8fd58e3dd5b5d2398fa",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/f6738278a4baf1b18df2bb30.png",
-      "bytes": 1077285,
-      "sha256": "f6738278a4baf1b18df2bb30bcb7aee98c22809a979ad64c81ec7aaacb4322b2",
+      "url": "/skin-packs/models/assets/398ef7faf993b337e9f90c4e.png",
+      "bytes": 3956211,
+      "sha256": "398ef7faf993b337e9f90c4ed2a0c92ab59d388e3b1aeefd3289041f05c70d3f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_NM.png",
         "sha256": "398ef7faf993b337e9f90c4ed2a0c92ab59d388e3b1aeefd3289041f05c70d3f",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/ba64f0c6c06253d6cb884b01.png",
-      "bytes": 1317002,
-      "sha256": "ba64f0c6c06253d6cb884b018544385a587ef6fe486f35d434332d689d0a6cbe",
+      "url": "/skin-packs/models/assets/fc1d73b6d0066fd13446d7b9.png",
+      "bytes": 2013090,
+      "sha256": "fc1d73b6d0066fd13446d7b9a23a8fdc3dc80c51104d1ba45175c8385a445518",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_MRS.png",
         "sha256": "2285e871a950332b29271855f212c7b607f1b510ca3ce716560cb0cd5a26ab66",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/0389b7e6d26f297fbf7cfab7.png",
-      "bytes": 17828,
-      "sha256": "0389b7e6d26f297fbf7cfab7b9277fd88560715e90c8d9ea901629ad5f47382f",
+      "url": "/skin-packs/models/assets/dc74a59cfc7975448a367b0c.png",
+      "bytes": 21293,
+      "sha256": "dc74a59cfc7975448a367b0c17f14c8fb3ab3e994e142ced074675016f7f6d8e",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_Extra_AEM.png",
         "sha256": "e198de6fc7b339e312c88b587b16bd50cd602055f81e9297c7cddf03b0ff2ed3",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/6b9cae0eb1dac81ef739c44b.png",
-      "bytes": 614389,
-      "sha256": "6b9cae0eb1dac81ef739c44b0519b6746f523f256791b2f5792a1e95ccbc001a",
+      "url": "/skin-packs/models/assets/1049f59784f0dc2aa6887beb.png",
+      "bytes": 1085227,
+      "sha256": "1049f59784f0dc2aa6887beb05bc30652b0d080de875d571c87d36010049cab0",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_Extra_DF.png",
         "sha256": "1049f59784f0dc2aa6887beb05bc30652b0d080de875d571c87d36010049cab0",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/bdbd55ae7a28bd3181ad8263.png",
-      "bytes": 842332,
-      "sha256": "bdbd55ae7a28bd3181ad82638c97c47c983f12413b7a951af1b9dbcc3d8f0ed5",
+      "url": "/skin-packs/models/assets/6abfb870fdd11d037a868263.png",
+      "bytes": 3687008,
+      "sha256": "6abfb870fdd11d037a868263fe09a1193c4696d0ae40f35b7d79480c9c5df038",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_Extra_NM.png",
         "sha256": "6abfb870fdd11d037a868263fe09a1193c4696d0ae40f35b7d79480c9c5df038",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/a3d26db93c86fc738a4a1208.png",
-      "bytes": 896156,
-      "sha256": "a3d26db93c86fc738a4a1208336762ca896e4e874876bba652c5bf1eaf4dfe1d",
+      "url": "/skin-packs/models/assets/01d7a9a27b5c8e44c54285a6.png",
+      "bytes": 1441776,
+      "sha256": "01d7a9a27b5c8e44c54285a6e1bc10049e17901901690357a4a8c84f0a6d8ab3",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Materials/AK_Rogue_Extra_MRS.png",
         "sha256": "dea4530dd56cf689e12ebd928897390972c8f85b3056618f7151b993490c10c9",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -1082,47 +2332,55 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/a945e56e3a69c670395d7ba9.png",
-      "bytes": 36858,
-      "sha256": "a945e56e3a69c670395d7ba96b3a88121ed19c091251963ab7af252149d3e109",
+      "url": "/skin-packs/models/assets/66c6c4865ab302d2d3caf709.png",
+      "bytes": 22604,
+      "sha256": "66c6c4865ab302d2d3caf7092f8509233b73dddaa3884672e91bb6c14cd8ba0d",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_AEM.png",
         "sha256": "46b60909094ed768827e09e7ed2a1c2470872f40a17e331665573a1d1010691b",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/0cc86c94c283fd23eb27ca01.png",
-      "bytes": 1079592,
-      "sha256": "0cc86c94c283fd23eb27ca011f66fd6e329f1c94a3f4d6a195c07653bd78095f",
+      "url": "/skin-packs/models/assets/747b3c568fa12dd0d73a4fbc.png",
+      "bytes": 1632829,
+      "sha256": "747b3c568fa12dd0d73a4fbc3fddd707b8827bd6b854b321c77eb7ac9f379bef",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_DF.png",
         "sha256": "747b3c568fa12dd0d73a4fbc3fddd707b8827bd6b854b321c77eb7ac9f379bef",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e427886abfca77e0464c48ca.png",
-      "bytes": 1097354,
-      "sha256": "e427886abfca77e0464c48cad39ae7546c93baa60f354865ae38a25b8a0d2105",
+      "url": "/skin-packs/models/assets/9475372e8cf615046a058b60.png",
+      "bytes": 4002745,
+      "sha256": "9475372e8cf615046a058b60482141d99524dddf6a1c679b6af681c9792a2897",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_NM.png",
         "sha256": "9475372e8cf615046a058b60482141d99524dddf6a1c679b6af681c9792a2897",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/02bdfbffcf99a25d36341966.png",
-      "bytes": 1193743,
-      "sha256": "02bdfbffcf99a25d36341966efe7feaec102f570ada0d1047e1c368078bd5d2f",
+      "url": "/skin-packs/models/assets/4f3d22f9444763774812695c.png",
+      "bytes": 1759065,
+      "sha256": "4f3d22f9444763774812695cf996b737b35932881dd8c453bdaf278857ae7b61",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_MRS.png",
         "sha256": "7531d19db47c5a6763596fcfb80c951d02aaf50b58a4b0d9b74cff200a0eddd8",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -1133,18 +2391,22 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_Glass_AEM.png",
         "sha256": "af295a92501e0a598b05ca1b8eec7a7804155f8afdeb7f90683cee53ff536115",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/ca615cabd67fe9d6e3d47daf.png",
-      "bytes": 45789,
-      "sha256": "ca615cabd67fe9d6e3d47dafbd2de7f9da2c308c0ef8407a014bd47a95b2dcc4",
+      "url": "/skin-packs/models/assets/60cc0989e48909f479e88120.png",
+      "bytes": 46580,
+      "sha256": "60cc0989e48909f479e881207f6e5790490dbb2767a748dac848f4c5b2babab9",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_Glass_DF.png",
         "sha256": "60cc0989e48909f479e881207f6e5790490dbb2767a748dac848f4c5b2babab9",
         "operation": "color",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
@@ -1155,7 +2417,9 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Chromas/v3/Materials/AK_Rogue_v3_Glass_MRS.png",
         "sha256": "0b46109a0eff6683af29cf716a9ae53a7f2b45e08e5d69f4a5e5624ed7b4f346",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
       }
     },
     {
@@ -1168,25 +2432,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/b36f81caf99327664219dc11.png",
-      "bytes": 97862,
-      "sha256": "b36f81caf99327664219dc1181cf68e6edc14b49a6019fd6f7c2e3be1a62e166",
+      "url": "/skin-packs/models/assets/44ca6ce0be1d6cdf2a681127.png",
+      "bytes": 100465,
+      "sha256": "44ca6ce0be1d6cdf2a6811279e6c0181a3017f19b2d8054b7383cb528afc75be",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_DF.png",
         "sha256": "44ca6ce0be1d6cdf2a6811279e6c0181a3017f19b2d8054b7383cb528afc75be",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/dd2b2ba0d2431eda1cc61b59.png",
-      "bytes": 187617,
-      "sha256": "dd2b2ba0d2431eda1cc61b5916f34554fcaa3cee011cf4b0c30d69e7edb57af7",
+      "url": "/skin-packs/models/assets/e3652d9e89cf9f7d2a284775.png",
+      "bytes": 184364,
+      "sha256": "e3652d9e89cf9f7d2a2847754fa9fa231b2fb19c912ea77d3f434bb3702440c0",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_NM.png",
         "sha256": "e3652d9e89cf9f7d2a2847754fa9fa231b2fb19c912ea77d3f434bb3702440c0",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1197,29 +2465,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_MRS.png",
         "sha256": "5ae85bdf3873f266172ba4933d1d3487554298bcda1788e3171abbe36b8fe9e4",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/c04a127f267fe744b70ef3de.png",
-      "bytes": 31094,
-      "sha256": "c04a127f267fe744b70ef3def47d30dd5ccabf31fcdccf81b7041bc6c0b43a69",
+      "url": "/skin-packs/models/assets/6596b8ca2fcc8764a7648f5a.png",
+      "bytes": 31833,
+      "sha256": "6596b8ca2fcc8764a7648f5aff8ea1d0a6a72771414be5a9422df4fd0dd73e28",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_Glass_DF.png",
         "sha256": "6596b8ca2fcc8764a7648f5aff8ea1d0a6a72771414be5a9422df4fd0dd73e28",
         "operation": "color",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/b607e2c6e283d9dd20871297.png",
-      "bytes": 683781,
-      "sha256": "b607e2c6e283d9dd20871297488db6473214f5318bce077ee17ef8456f1c6d20",
+      "url": "/skin-packs/models/assets/340747655f9bfc099569a080.png",
+      "bytes": 680057,
+      "sha256": "340747655f9bfc099569a080f080b480e5d3d0db81ce126c0e4a332765b56a81",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_Glass_NM.png",
         "sha256": "340747655f9bfc099569a080f080b480e5d3d0db81ce126c0e4a332765b56a81",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
@@ -1230,7 +2504,64 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Rogue/Materials/RedDot_Rogue_Glass_MRS.png",
         "sha256": "d56c6ad765399df3da99c63d34bb0ca868814216a7465c1c98b3510b646a061d",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 256,
+        "height": 256,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/beacbb5e0d62a5e636a8a5f8.bin.gz",
+      "bytes": 141520,
+      "sha256": "beacbb5e0d62a5e636a8a5f8b5f8ce94e7319359122022d80c22ad0e87c85ba0",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Anims/FP_Core_AK_Rogue_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "c6f51d4394f39e1228dea8c280db6f824bcb0030c55d4a20f9f1728485d968b6",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/946bb511f02d57b5ed068436.bin.gz",
+      "bytes": 8281,
+      "sha256": "946bb511f02d57b5ed0684365e3623187dc23bb02b0f2ceec58108e9f66457c4",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/GN_Core_AK_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Models/GN_AK_Rogue_Lv3_Skelmesh.uasset",
+        "sha256": "9d7a96929d84475e90ceea242e74688898e13bf82e599547d0a217d46f3ac5c8",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/a6232ec35469b156ddac3a2e.bin.gz",
+      "bytes": 140483,
+      "sha256": "a6232ec35469b156ddac3a2e4e9784f695725cd6fc39159252f7f3a0b3e91f7c",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Anims/FP_Core_AK_Rogue_Inspect_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "750011ab5a6e5c0068bfa81d482f4bc2db793e352fbbea62d8752bc95da87747",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/751926b31d0e8f23d002341f.bin.gz",
+      "bytes": 10627,
+      "sha256": "751926b31d0e8f23d002341fdd9e60623e7100be0986774e9679630b8f881830",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Anims/FP_Core_AK_Rogue_Fire_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "c6bee67303e17677a1dca1c61c29a2247c084c439c1df176dbe6c787cddce72c",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/08ea8232389ccec46377dd83.bin.gz",
+      "bytes": 864,
+      "sha256": "08ea8232389ccec46377dd83d45357c1f7ed33344bd3e50e788c48f2bfe4e80a",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/GN_Core_AK_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Rogue/Models/GN_AK_Rogue_Lv3_Skelmesh.uasset",
+        "sha256": "74116cfd7523cf36e2dccb91a56ff8e71ec3f36b4f47b01c430bb0ed3c8b4964",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -1243,47 +2574,42 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/5440f38a0bf8d1a3d9b0fa16.png",
-      "bytes": 41361,
-      "sha256": "5440f38a0bf8d1a3d9b0fa164d2c24582b9d760aae6367f75e34dd86d4458310",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_AEM.png",
-        "sha256": "fd963992f1c2b6b1ca48dab1ec54c39e2ab917adcdd3dae5439e3d5c54ea9f2f",
-        "operation": "emissive",
-        "maxSize": 1024
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/ebb6dad5fe0fc8c604afa541.png",
-      "bytes": 1015119,
-      "sha256": "ebb6dad5fe0fc8c604afa5412aac39ff5ef1f71131c887445d0ed7a36ff2cd98",
+      "url": "/skin-packs/models/assets/dd95fd440d287bd133fb0dff.png",
+      "bytes": 1658234,
+      "sha256": "dd95fd440d287bd133fb0dff4fe0042c67c495a98b77e0d1c052954fd215473c",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_DF.png",
         "sha256": "dd95fd440d287bd133fb0dff4fe0042c67c495a98b77e0d1c052954fd215473c",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/33ca473735928ffc0ffee46d.png",
-      "bytes": 1273479,
-      "sha256": "33ca473735928ffc0ffee46d5ae2c0349bb812f2c2552b0a69753a690412dabf",
+      "url": "/skin-packs/models/assets/187d0452d00af705a7edf1af.png",
+      "bytes": 4425984,
+      "sha256": "187d0452d00af705a7edf1afd15c6d78b66d7162a757301f01094ebdb5b5a418",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_NM.png",
         "sha256": "187d0452d00af705a7edf1afd15c6d78b66d7162a757301f01094ebdb5b5a418",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/051fc662d4ededc2c2ea9190.png",
-      "bytes": 1008236,
-      "sha256": "051fc662d4ededc2c2ea919034436454a7a4c296512a8a9069180b0cf1a875bc",
+      "url": "/skin-packs/models/assets/0cf05a0e6d36a9a588d2eb5d.png",
+      "bytes": 1689723,
+      "sha256": "0cf05a0e6d36a9a588d2eb5df1caf56725eb2b6c6c53008cf952c38d0ade648c",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Materials/AK_Afterglow_MRS.png",
         "sha256": "89a03c0e3193756c095398ecd7e7effb716b183a9c8cc0011ff1e09635c619ce",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -1305,25 +2631,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/42e50a557d6ff8ef08be606c.png",
-      "bytes": 307190,
-      "sha256": "42e50a557d6ff8ef08be606cf95b6fe304228aa8369ae9b9ebcdaa47ad37b0b9",
+      "url": "/skin-packs/models/assets/44925e4e88f9a6322f26f92b.png",
+      "bytes": 309280,
+      "sha256": "44925e4e88f9a6322f26f92b347756913acb4232b8801a4e5352c3f249a28397",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Afterglow/Materials/RedDot_Afterglow_DF.png",
         "sha256": "44925e4e88f9a6322f26f92b347756913acb4232b8801a4e5352c3f249a28397",
         "operation": "color",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/488e9364c7c98a5b32f23395.png",
-      "bytes": 878678,
-      "sha256": "488e9364c7c98a5b32f23395e34897634bcd4f23b5e42e7b093637d7da65da98",
+      "url": "/skin-packs/models/assets/df42e09eb9207ceeca78705a.png",
+      "bytes": 872622,
+      "sha256": "df42e09eb9207ceeca78705a2278a05da7f75d4de28eccdf91e2e06fb682c60f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Afterglow/Materials/RedDot_Afterglow_NM.png",
         "sha256": "df42e09eb9207ceeca78705a2278a05da7f75d4de28eccdf91e2e06fb682c60f",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
@@ -1334,7 +2664,53 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Afterglow/Materials/RedDot_Afterglow_MRS.png",
         "sha256": "9ef7a76d22b80dfad7d0678a3abdadd5cb89c7f42416c01647d48f3cd170723a",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/3e37ee29d915ac4ee9311955.bin.gz",
+      "bytes": 8236,
+      "sha256": "3e37ee29d915ac4ee93119556d3f143acbec08ce124cf32842492784a60ad0d1",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/GN_Core_AK_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Models/GN_AK_Afterglow_Lv2_Skelmesh.uasset",
+        "sha256": "f052a7e325e01938d32332bd0227a454afe4e533c93a97b90d66c8dcd01b0f19",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/2eb02db4f1452a69a77d8a99.bin.gz",
+      "bytes": 159181,
+      "sha256": "2eb02db4f1452a69a77d8a99184d4c9598166564e5571ae4e4c149a6ea43f405",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Anims/FP_Core_AK_Afterglow_Inspect.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "6e6bef3d9cf1c1c790c74ce91ba43e7d46872e43769ce44e4f44a46c447ca996",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/83e14a89516217eeef83b80a.bin.gz",
+      "bytes": 1421,
+      "sha256": "83e14a89516217eeef83b80a2cb777f4f913503d4898238dd14e4e432bf85cc5",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Anims/EQ_Core_AK_Afterglow_Inspect.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Models/GN_AK_Afterglow_Lv2_Skelmesh.uasset",
+        "sha256": "c20cb2e6158642e32d545f5c77e6a90e7f23d9f674c86493be8319d4dd6152af",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ef026e4761bb3b6a1ec817f5.bin.gz",
+      "bytes": 862,
+      "sha256": "ef026e4761bb3b6a1ec817f5db4fab28e84a56066696d0d26789d80626f27a64",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Anims/GN_Core_AK_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Afterglow/Models/GN_AK_Afterglow_Lv2_Skelmesh.uasset",
+        "sha256": "941ebdbd97f63da3fd90b2edc9ecc08213239168be6b999fbab0229ec2651e57",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -1347,69 +2723,81 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/e6625847d5db5efbc21a3d50.png",
-      "bytes": 44586,
-      "sha256": "e6625847d5db5efbc21a3d50347026d15a1ffd9d3bb5af25df1e23637e30bea5",
+      "url": "/skin-packs/models/assets/4883e57126af5d140e8eed29.png",
+      "bytes": 31236,
+      "sha256": "4883e57126af5d140e8eed299239e6fdd690014cf78e42a7ee0788bb3a21ddbd",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_AEM.png",
         "sha256": "edfd06a62aedad32eb7eb957495f892e6d8fbe8a2ea7eb2788ed6b78527d7578",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/6523abcc0b6364d2ca18ef75.png",
-      "bytes": 848923,
-      "sha256": "6523abcc0b6364d2ca18ef7531b4923093f01843e2b504ecfe14828a187a6c57",
+      "url": "/skin-packs/models/assets/1db24c4832ce6e112426f8bb.png",
+      "bytes": 1912189,
+      "sha256": "1db24c4832ce6e112426f8bb8f7fceb923c36e29c814894c7b6a4ba4d5caff51",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_DF.png",
         "sha256": "1db24c4832ce6e112426f8bb8f7fceb923c36e29c814894c7b6a4ba4d5caff51",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/44d6fb9cdd4a1d68a3b706fe.png",
-      "bytes": 821760,
-      "sha256": "44d6fb9cdd4a1d68a3b706feec65e765a84087dc21738193087556a88d91d103",
+      "url": "/skin-packs/models/assets/3dd327cb01f8283825498f06.png",
+      "bytes": 2620746,
+      "sha256": "3dd327cb01f8283825498f066e0b6e25ca1f3d8857ef8d24be840619a94b10e7",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_NM.png",
         "sha256": "3dd327cb01f8283825498f066e0b6e25ca1f3d8857ef8d24be840619a94b10e7",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/a435c20e23464a7817328ef2.png",
-      "bytes": 804448,
-      "sha256": "a435c20e23464a7817328ef253ecc32f7bc3c072d1b005c56090151607cc0f41",
+      "url": "/skin-packs/models/assets/753f0e82c8f5b673cf01b003.png",
+      "bytes": 1030057,
+      "sha256": "753f0e82c8f5b673cf01b003b0070ec7067a349ee4997f2825b300c7a35414f6",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_MRS.png",
         "sha256": "a1775ce8808a095a949d00228e2e5ae06429bcd52aab5eb029a7fa9fbc4cf6a2",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/ac99e35e2649d93212ca0439.png",
-      "bytes": 57506,
-      "sha256": "ac99e35e2649d93212ca0439713ec85c20908e07fcd7ef5a2f4329ff89291d59",
+      "url": "/skin-packs/models/assets/80fe1a6216d23db2f6b8dc77.png",
+      "bytes": 60272,
+      "sha256": "80fe1a6216d23db2f6b8dc771c168336f4b074269e23eba93b8f70281ca84e0f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Crystal_DF.png",
         "sha256": "80fe1a6216d23db2f6b8dc771c168336f4b074269e23eba93b8f70281ca84e0f",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/6dc73121edd9c5035a5cc1a8.png",
-      "bytes": 147346,
-      "sha256": "6dc73121edd9c5035a5cc1a82e02da00a7521b43b1d4e767feb850a911f6886f",
+      "url": "/skin-packs/models/assets/e8482520576edb955caef14d.png",
+      "bytes": 146962,
+      "sha256": "e8482520576edb955caef14d9ee4754ad29b32faa3a53f0aef43c5232821eba0",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Crystal_NM.png",
         "sha256": "e8482520576edb955caef14d9ee4754ad29b32faa3a53f0aef43c5232821eba0",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1420,7 +2808,9 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Materials/Carbine_Yokai_Crystal_MRS.png",
         "sha256": "7a4c9743f70116e7bb3d30d9bbfeeb72cb8a038a9b33a9776e4c54e9179f2a0a",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1442,25 +2832,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/66a196011d184c800d983b4d.png",
-      "bytes": 165705,
-      "sha256": "66a196011d184c800d983b4d8c07ce47bd6dc21eff1155176625239cefa301be",
+      "url": "/skin-packs/models/assets/b5db29868878bab267b32f67.png",
+      "bytes": 165042,
+      "sha256": "b5db29868878bab267b32f6751b90d222eb92ed34b4f354936133a15ba1ad2c9",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Yokai/Materials/RedDot_Yokai_DF.png",
         "sha256": "b5db29868878bab267b32f6751b90d222eb92ed34b4f354936133a15ba1ad2c9",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/a7105046564272307a01f8af.png",
-      "bytes": 188346,
-      "sha256": "a7105046564272307a01f8afbf1a5567868a6c427005c8cf9e06a7f68389ae8c",
+      "url": "/skin-packs/models/assets/17e32a2b1c186c651ebcad80.png",
+      "bytes": 183569,
+      "sha256": "17e32a2b1c186c651ebcad80da9d6f775ac78c9a44a6f6ca8be22d40485177c6",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Yokai/Materials/RedDot_Yokai_NM.png",
         "sha256": "17e32a2b1c186c651ebcad80da9d6f775ac78c9a44a6f6ca8be22d40485177c6",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1471,7 +2865,9 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Yokai/Materials/RedDot_Yokai_MRS.png",
         "sha256": "4e501e474966029f4c3fa0f1db9718c75643249a603e46fa3d0391a0100eb4c1",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1484,25 +2880,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/1e706d521582420684ec558b.png",
-      "bytes": 154073,
-      "sha256": "1e706d521582420684ec558bb51adef88e12f8a2d1296c37cdb0067b66e8c2e4",
+      "url": "/skin-packs/models/assets/1defbc7e17f967c4862a90cb.png",
+      "bytes": 153401,
+      "sha256": "1defbc7e17f967c4862a90cbe6106802bb71a9d20258692cc90f4bde038ecc4a",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Yokai/Materials/Silencer_Yokai_DF.png",
         "sha256": "1defbc7e17f967c4862a90cbe6106802bb71a9d20258692cc90f4bde038ecc4a",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e9947b9c35167f153d476907.png",
-      "bytes": 199630,
-      "sha256": "e9947b9c35167f153d476907df0f020c1538be540cf361a1e66e1a98a571a78a",
+      "url": "/skin-packs/models/assets/ae306f396e8216c235111d24.png",
+      "bytes": 195512,
+      "sha256": "ae306f396e8216c235111d24a66646d56bfd8f1f3e42672023cc7dc9de8ae7fb",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Yokai/Materials/Silencer_Yokai_NM.png",
         "sha256": "ae306f396e8216c235111d24a66646d56bfd8f1f3e42672023cc7dc9de8ae7fb",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1513,7 +2913,86 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Yokai/Materials/Silencer_Yokai_MRS.png",
         "sha256": "763bc73856dbdbbce00aecd0c314df5d927780e6971949c6e9611f600e7a382b",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/6996de14426b8bbf35f7e0e5.bin.gz",
+      "bytes": 126880,
+      "sha256": "6996de14426b8bbf35f7e0e5d118299cb6582edc8e9c56332e006d3478c7fd65",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Anims/FP_Core_Carbine_Yokai_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "a8afde2e2ff1cfc5857a53dc2663610fece6e241b9555fe4b7bea45e7a7d5fd8",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/651d24574e8b2f92e31a5255.bin.gz",
+      "bytes": 21608,
+      "sha256": "651d24574e8b2f92e31a5255f8c372b0cbdcf05717c1ab6f3e27a344d93d131c",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Anims/GN_Core_Carbine_Yokai_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Models/GN_Carbine_Yokai_Lv3_Skelmesh.uasset",
+        "sha256": "03cf6666fed78ec1f5d4d5f458ef3911d071425bd5407b0ce704a089b2b5ad26",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ab8e4f16f4b2d1abb9c9a22f.bin.gz",
+      "bytes": 93530,
+      "sha256": "ab8e4f16f4b2d1abb9c9a22f2273e27a4920c19881a5b4228f60d48327d067de",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Anims/FP_Core_Carbine_Yokai_Inspect_intro_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "1874b0036b975efc53aa8bd7dda1868cec3973179c682217fdd8aad0445469a5",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/b2c7619c05a616c4aa4de162.bin.gz",
+      "bytes": 69140,
+      "sha256": "b2c7619c05a616c4aa4de1625f1e37f3de0ac3d88e9c455f2fb99250c880d795",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Anims/FP_Core_Carbine_Yokai_Inspect_Loop_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "05268e10fbfe58f20c092891a3be7891cc6a69e913a73b9ad12770b137e25b63",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/2e4ddb4dbdd379a474b8d1e7.bin.gz",
+      "bytes": 1961,
+      "sha256": "2e4ddb4dbdd379a474b8d1e75391ebd29dd7adb64ac2f04792bc8b49d01b3b6e",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Anims/GN_Core_Carbine_Yokai_Inspect_intro_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Models/GN_Carbine_Yokai_Lv3_Skelmesh.uasset",
+        "sha256": "8b77b13c2918edff4a22a8e547ac7f1716825adb84364f5b75ca2401c30dd40b",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/63cd36de5cd7f1bd34dfc171.bin.gz",
+      "bytes": 2806,
+      "sha256": "63cd36de5cd7f1bd34dfc171b377ddde37984674a19e732ab350405cb725ba16",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Anims/GN_Core_Carbine_Yokai_Inspect_Loop_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Models/GN_Carbine_Yokai_Lv3_Skelmesh.uasset",
+        "sha256": "aaa3ee275df3bf99f0824e5dcec9b8e4ff17c73a7b66c39ff3bfa0c31e1b9b9a",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/793c9e933c9a5e1828d70d7f.bin.gz",
+      "bytes": 776,
+      "sha256": "793c9e933c9a5e1828d70d7f1fd6779aa7577f41bfe3fcf55266bc2177b2fced",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Yokai/Models/GN_Carbine_Yokai_Lv3_Skelmesh.uasset",
+        "sha256": "84c53b759317aa6756b5b6b90b72d28dbf2ef48fee35a8622027c15bd91e662e",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -1526,47 +3005,55 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/e9476d3df08ae26aca563aba.png",
-      "bytes": 39110,
-      "sha256": "e9476d3df08ae26aca563abae3ad939acf71ee863f778f76b4794001611a85e4",
+      "url": "/skin-packs/models/assets/edaa93d87415b27fca76fbf4.png",
+      "bytes": 22017,
+      "sha256": "edaa93d87415b27fca76fbf4298a63bb1935d302d6a3c071cff6aaba6da13bc4",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_AEM.png",
         "sha256": "8766d7d1a23ccfa193f9d05cfe43b86ac8fd6079e00c8b2f4ba9fb214f32a3d2",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/1c633a5f374bb77a15dad55c.png",
-      "bytes": 1067898,
-      "sha256": "1c633a5f374bb77a15dad55c2ac92ee2e0993e3417a2b0ddc3961a58cdc063bb",
+      "url": "/skin-packs/models/assets/4f12dbee27f8d173c2913e5b.png",
+      "bytes": 1683208,
+      "sha256": "4f12dbee27f8d173c2913e5bd9cc81a016eae9ce4735681d9f40680f8274b9ef",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_DF.png",
         "sha256": "4f12dbee27f8d173c2913e5bd9cc81a016eae9ce4735681d9f40680f8274b9ef",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/95a89cecfdba8b028cb533b1.png",
-      "bytes": 1351945,
-      "sha256": "95a89cecfdba8b028cb533b1c9df737e7f609dde4cb5dcda2d4ad6bc58cab3af",
+      "url": "/skin-packs/models/assets/05e14898e411d1fd46fa94f9.png",
+      "bytes": 4469621,
+      "sha256": "05e14898e411d1fd46fa94f9fece6f3b0239c91f8949afe907aeee6b274f797a",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_NM.png",
         "sha256": "05e14898e411d1fd46fa94f9fece6f3b0239c91f8949afe907aeee6b274f797a",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/b9db9717e484da4f3625ce54.png",
-      "bytes": 1116108,
-      "sha256": "b9db9717e484da4f3625ce547017d314643307c1a41cd6559519c140bc0d50be",
+      "url": "/skin-packs/models/assets/16194330e4472f09db4fa755.png",
+      "bytes": 2089806,
+      "sha256": "16194330e4472f09db4fa755368f09e949dcda4ce731123619a712a6cc18296c",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_MRS.png",
         "sha256": "f628b315cc451facb827b7f9521b46abbc25170254df449204c9036d88e43a7c",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -1577,29 +3064,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_Feathers_AEM.png",
         "sha256": "bf36b3aafe811c5abf35e39f56e22cf8853665cfe9885d364ea6771c24b1c046",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/7ba0341803d231111e713cf9.png",
-      "bytes": 82958,
-      "sha256": "7ba0341803d231111e713cf91b16d43871c885164771d48e20ed3ae87bdcfa3b",
+      "url": "/skin-packs/models/assets/035958dfcbc75332139c9a23.png",
+      "bytes": 81345,
+      "sha256": "035958dfcbc75332139c9a23e7d66bf6519f4ec93eae9bb1e80aa8e778f41387",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_Feathers_DF.png",
         "sha256": "035958dfcbc75332139c9a23e7d66bf6519f4ec93eae9bb1e80aa8e778f41387",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/63b19155b308d4612506743c.png",
-      "bytes": 849583,
-      "sha256": "63b19155b308d4612506743c963b8abc49a907760d8b14a1af5b99dfb05ca130",
+      "url": "/skin-packs/models/assets/d454ae3955be86320f0a805d.png",
+      "bytes": 841821,
+      "sha256": "d454ae3955be86320f0a805dd1f345749a2bdf7d2375603c9c6fb18602ab786f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_Feathers_NM.png",
         "sha256": "d454ae3955be86320f0a805dd1f345749a2bdf7d2375603c9c6fb18602ab786f",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
@@ -1610,29 +3103,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Materials/Carbine_Coven_Feathers_MRS.png",
         "sha256": "ce384532f7b2c9d46766d7bef5a7988ec8586d48e13693148b0c95b833e3b2ac",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/d9cc44725f2d1366c5f12cd2.png",
-      "bytes": 146890,
-      "sha256": "d9cc44725f2d1366c5f12cd2949bd9a03ef89c2d389a11bf6fab51d372de1147",
+      "url": "/skin-packs/models/assets/8773e00d01b5117993a9e9a6.png",
+      "bytes": 139031,
+      "sha256": "8773e00d01b5117993a9e9a6f721b376e4cea612b2b5bbf097bc90a7d7639913",
       "source": {
         "path": "ShooterGame/Content/Environment/Asset/Decals/DamageCracks/M0/DamageCracks_M0_B_NM.png",
         "sha256": "8773e00d01b5117993a9e9a6f721b376e4cea612b2b5bbf097bc90a7d7639913",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/6256cbaed7214524f2d3c467.png",
-      "bytes": 56562,
-      "sha256": "6256cbaed7214524f2d3c467aa3c22210c171d82385653969b45cd931f4b3f5a",
+      "url": "/skin-packs/models/assets/1f5c762ef6e9f0eca56a1271.png",
+      "bytes": 50374,
+      "sha256": "1f5c762ef6e9f0eca56a1271f1c33cd315d1244e86d85e88fa7a983ef7fd828d",
       "source": {
         "path": "ShooterGame/Content/Environment/Asset/Decals/DamageCracks/M0/DamageCracks_M0_D_NM.png",
         "sha256": "1f5c762ef6e9f0eca56a1271f1c33cd315d1244e86d85e88fa7a983ef7fd828d",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 128,
+        "resolution": "original"
       }
     },
     {
@@ -1663,25 +3162,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/a482378c6062df772a464fef.png",
-      "bytes": 148227,
-      "sha256": "a482378c6062df772a464fef8787d58f54fab38e89715d660ee84fad9af416b6",
+      "url": "/skin-packs/models/assets/896653b907230187b93e7925.png",
+      "bytes": 149444,
+      "sha256": "896653b907230187b93e7925b38564797493e105b7f50a8c13995069f7657e3f",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Coven/Materials/Silencer_Coven_DF.png",
         "sha256": "896653b907230187b93e7925b38564797493e105b7f50a8c13995069f7657e3f",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/0f0c4ce6a9150729e873cde8.png",
-      "bytes": 282330,
-      "sha256": "0f0c4ce6a9150729e873cde852b1a5f37f46c407e4aca376a61679346a50c55f",
+      "url": "/skin-packs/models/assets/4b2f42672ec8a2b07d995f45.png",
+      "bytes": 274100,
+      "sha256": "4b2f42672ec8a2b07d995f45c0f007f05f6f508fc831517da3bf0bf64511becb",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Coven/Materials/Silencer_Coven_NM.png",
         "sha256": "4b2f42672ec8a2b07d995f45c0f007f05f6f508fc831517da3bf0bf64511becb",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1692,7 +3195,75 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Coven/Materials/Silencer_Coven_MRS.png",
         "sha256": "0b8f9538038f5eb98fe83e3dfae1d6f945c6097261ada469c601ae7a76a4aa1a",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/8dcceb6f48d19c9540472f98.bin.gz",
+      "bytes": 183791,
+      "sha256": "8dcceb6f48d19c9540472f9800928296c2574dddf1c72bbfb5f3a3350b4deb63",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Anims/FP_Core_Carbine_Coven_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "d48f324b68fa950c29e566b43e38df42ceb9a15f39110e244157b0dd4d006fe3",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4ebd3c2645a393d6c5d53c0f.bin.gz",
+      "bytes": 4691,
+      "sha256": "4ebd3c2645a393d6c5d53c0f3863fd02e8a8c5ee53e1b51d56675adb75112f3b",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Anims/GN_Core_Carbine_Coven_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Models/GN_Carbine_Coven_Lv3_Skelmesh.uasset",
+        "sha256": "572fd7929e4486a2ee79b10e5153568716811b20c1d5e8cfdead1387ba06ec27",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/3a6794aaf2604b7fc724abba.bin.gz",
+      "bytes": 48119,
+      "sha256": "3a6794aaf2604b7fc724abba82118c4ce5895617fca1000f5e7582c4da7d1123",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Anims/GN_Core_Carbine_Coven_Reload_Cosmetic.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Models/GN_Carbine_Coven_Lv3_Skelmesh.uasset",
+        "sha256": "b379d6b014035b7eac18f5f46f2b6509fd2a437cf46aa9d2d73dcb61fec9173f",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/9148c15eba544fe39cbcab27.bin.gz",
+      "bytes": 63752,
+      "sha256": "9148c15eba544fe39cbcab27d62f4f6b7cb537532217dc1f07f19fc8ec36d842",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Anims/GN_Core_Carbine_Coven_Inspect_Cosmetic.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Models/GN_Carbine_Coven_Lv3_Skelmesh.uasset",
+        "sha256": "3360f8465dd7cf32f30e4cf6c8af520202b422e73e6c88ee6fc879f396b30a4f",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4ddab281efdcb545ca7854b1.bin.gz",
+      "bytes": 1236,
+      "sha256": "4ddab281efdcb545ca7854b13151449bda827142a5e54933c906bbcddbbba677",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Models/GN_Carbine_Coven_Lv3_Skelmesh.uasset",
+        "sha256": "b573209dfbeaede4b9dd0a234076acc833f965af3d44367db2d0609bfb5696f2",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/7f73a55938d82064958e68ac.bin.gz",
+      "bytes": 7582,
+      "sha256": "7f73a55938d82064958e68ac6f9f508dad2ebb668ca04a3c3401d983daab99fa",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Anims/GN_Core_Carbine_Coven_FireAdd_Cosmetic.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Coven/Models/GN_Carbine_Coven_Lv3_Skelmesh.uasset",
+        "sha256": "497981f417c02cbe0b650f4c99930e6a08535e157ecb36ce9a812931466c10aa",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -1705,47 +3276,55 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/8420a6f4e91150f9f6c9c3ca.png",
-      "bytes": 187098,
-      "sha256": "8420a6f4e91150f9f6c9c3ca1d895dcd9be3f7ca580c24c3464d195c61947be1",
+      "url": "/skin-packs/models/assets/d8cfbdbf79a4c9a86f71873d.png",
+      "bytes": 327272,
+      "sha256": "d8cfbdbf79a4c9a86f71873da154c199048e9b5b9bd0b07af74eba0499a78e39",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_AEM.png",
         "sha256": "08f9ab9b56f827e0556f9ee09ae580c3ef7ebc8b872431f4e67f92b38409ee08",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/61251dcba65ac8b4bd3dcf55.png",
-      "bytes": 1267519,
-      "sha256": "61251dcba65ac8b4bd3dcf558ea08e794d1ac76e64968d88ccce5170069adee0",
+      "url": "/skin-packs/models/assets/b1e85f44c9cf767a21ecd99e.png",
+      "bytes": 1908383,
+      "sha256": "b1e85f44c9cf767a21ecd99e606a7d79d9d6f3168656a5dfc7bf2ec3940607fb",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_DF.png",
         "sha256": "b1e85f44c9cf767a21ecd99e606a7d79d9d6f3168656a5dfc7bf2ec3940607fb",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/faeb37dd67c6d78f32db125a.png",
-      "bytes": 1249922,
-      "sha256": "faeb37dd67c6d78f32db125ade2757f9104e3587aab7d7623901dde571412d24",
+      "url": "/skin-packs/models/assets/29dac6a09c2c7beaa996c465.png",
+      "bytes": 4255574,
+      "sha256": "29dac6a09c2c7beaa996c4657afa48cc88f7b94c65b04a2d75cc4181d64ceb32",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_NM.png",
         "sha256": "29dac6a09c2c7beaa996c4657afa48cc88f7b94c65b04a2d75cc4181d64ceb32",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e5ea4ea109190ffa9df26c88.png",
-      "bytes": 1089989,
-      "sha256": "e5ea4ea109190ffa9df26c886b1198604549ce343b6a4b910b2178b44e240a7c",
+      "url": "/skin-packs/models/assets/e1b11c3cf4a3820e0692f9f5.png",
+      "bytes": 1881383,
+      "sha256": "e1b11c3cf4a3820e0692f9f5f1e8d93814fb4c8df759384e1ada5553c9699bf4",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Materials/Carbine_Spirit_MRS.png",
         "sha256": "1a00420625efbab0352b23ad0fd442a5749eba305593b2cfd6e9fc0938f34aba",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -1774,29 +3353,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Spirit/Materials/RedDot_Spirit_AEM.png",
         "sha256": "271ec9f57bf303fcf00effed849350c212c8ac9c9289186926a6031a5309e1dd",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/0d5a9b4dc60c067072bbc068.png",
-      "bytes": 119717,
-      "sha256": "0d5a9b4dc60c067072bbc0688611317d72c9e68db366f7875b42b391816e8c3a",
+      "url": "/skin-packs/models/assets/ab3b9d6c81d60d422aad116d.png",
+      "bytes": 116956,
+      "sha256": "ab3b9d6c81d60d422aad116db529e4caf7871583c66498ed5f45d7282522767c",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Spirit/Materials/RedDot_Spirit_DF.png",
         "sha256": "ab3b9d6c81d60d422aad116db529e4caf7871583c66498ed5f45d7282522767c",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/c44338e07bc4945790f0958f.png",
-      "bytes": 204974,
-      "sha256": "c44338e07bc4945790f0958f0bc5843dec9cdc19c002861cb7226d14ce8fc8a3",
+      "url": "/skin-packs/models/assets/871032acd85269402f01819e.png",
+      "bytes": 200370,
+      "sha256": "871032acd85269402f01819e060d5d0566aa254287410833fb8e591ab5d17764",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Spirit/Materials/RedDot_Spirit_NM.png",
         "sha256": "871032acd85269402f01819e060d5d0566aa254287410833fb8e591ab5d17764",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1807,7 +3392,9 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Spirit/Materials/RedDot_Spirit_MRS.png",
         "sha256": "b6ef316e4dc88cb7db7cd9594c286f219de8374196ebb60f75202eb2a6487afb",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1827,29 +3414,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Spirit/Materials/Silencer_Spirit_AEM.png",
         "sha256": "f0491644f8547c8a84fe372b76de33659b925d9e0d872285f7410c0014404209",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/7aa207a960717bdbc39b9334.png",
-      "bytes": 104382,
-      "sha256": "7aa207a960717bdbc39b9334eed85c71163a06af142fa8f48e3e8bbcc69180d3",
+      "url": "/skin-packs/models/assets/66453e397d7456d35ba515d2.png",
+      "bytes": 102293,
+      "sha256": "66453e397d7456d35ba515d2e70988d5784048cf7dc31e169089c40139384dcf",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Spirit/Materials/Silencer_Spirit_DF.png",
         "sha256": "66453e397d7456d35ba515d2e70988d5784048cf7dc31e169089c40139384dcf",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/ba81988513487bdc46e54610.png",
-      "bytes": 190366,
-      "sha256": "ba81988513487bdc46e54610e11ed9df01ca8ae0b5768db9db0f89ca12ee6471",
+      "url": "/skin-packs/models/assets/7a9ade6cf5335bb6cb37de1c.png",
+      "bytes": 185588,
+      "sha256": "7a9ade6cf5335bb6cb37de1c7a73b1bcba09bf05a625dbec99ca7d4889506661",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Spirit/Materials/Silencer_Spirit_NM.png",
         "sha256": "7a9ade6cf5335bb6cb37de1c7a73b1bcba09bf05a625dbec99ca7d4889506661",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -1860,7 +3453,75 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Spirit/Materials/Silencer_Spirit_MRS.png",
         "sha256": "7bc57a74eff4dfe7acf3fbc606345701128f788a6f6e57f711f6fe8d5ce72a9e",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ad136067ee3653a5c7b448f4.bin.gz",
+      "bytes": 40521,
+      "sha256": "ad136067ee3653a5c7b448f4ac112ba00d7a6af6c403362f06b1726eeba36f5e",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/1P/Anims/GN_Core_Carbine_Spirit_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Models/GN_Carbine_Spirit_Lv3_Skelmesh.uasset",
+        "sha256": "7c4af947fb0725d2066611cdfaa8868ef1b33c7a844626c656a503bf311ad366",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/e2a7c7c30b7182ea790ea6b2.bin.gz",
+      "bytes": 90904,
+      "sha256": "e2a7c7c30b7182ea790ea6b271946c78477bfa57c7caab8c96546a5e94e8b5e4",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/1P/Anims/FP_Core_Carbine_Spirit_Inspect_intro_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "7f1b3036d6ad9c4d0adc7fcb01058a7d3146bf8ff404bb5219621b93a32bdf46",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/ff4c1fceb3ebd1ed3aa0f828.bin.gz",
+      "bytes": 49044,
+      "sha256": "ff4c1fceb3ebd1ed3aa0f8285a83e33c81561514c1776a86030d66ffc3938738",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/1P/Anims/FP_Core_Carbine_Spirit_Inspect_Loop_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "57e73bd54df5c25cf8c0f3518e549eb150b68381cb0560df967b3f1375904c5e",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/da3f503806aaf7bc7f93cf3f.bin.gz",
+      "bytes": 19490,
+      "sha256": "da3f503806aaf7bc7f93cf3f208e89b1ae84d61345d969ad68c044c582d339f9",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/1P/Anims/GN_Core_Carbine_Spirit_Inspect_intro_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Models/GN_Carbine_Spirit_Lv3_Skelmesh.uasset",
+        "sha256": "00946f1ff8fd0d4385699cc49e636112577a48de4dd6880c09e6a92f742b85b6",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/5874c4f61a0ba19745fc4ac7.bin.gz",
+      "bytes": 33796,
+      "sha256": "5874c4f61a0ba19745fc4ac792c4c99f10568ecba4d531ae4f84869bd30f35d8",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/1P/Anims/GN_Core_Carbine_Spirit_Inspect_Loop_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Models/GN_Carbine_Spirit_Lv3_Skelmesh.uasset",
+        "sha256": "021c4d28da6e856338c9f46a04596fb59b8896c6cbf6e7ba9685c03798bdd82e",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/f6aade05230134634a28f678.bin.gz",
+      "bytes": 943,
+      "sha256": "f6aade05230134634a28f67838a3d9308ea47fd1b1a9f714a1cf8c01a27fac76",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Spirit/Models/GN_Carbine_Spirit_Lv3_Skelmesh.uasset",
+        "sha256": "8d6954b17dad0d0ccc035c036ea3b81470ae03149141f9af6d96cf77b2c999d2",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -1873,91 +3534,107 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/252a1ecc191ea0f752887ec1.png",
-      "bytes": 86021,
-      "sha256": "252a1ecc191ea0f752887ec19c72c8e0cf775b9d707c58f830803bc85d771a0f",
+      "url": "/skin-packs/models/assets/0ed1aafc96c908df95c67889.png",
+      "bytes": 132920,
+      "sha256": "0ed1aafc96c908df95c67889c3cb44b626be2016f4664e4c155d497834d9f71e",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_AEM.png",
         "sha256": "c5b41667b0c7b3848e02b6cea75a9e2d2543bb7615455a903e2da44100cd611c",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/b75fc952817ee0af2fc1f18f.png",
-      "bytes": 655663,
-      "sha256": "b75fc952817ee0af2fc1f18f530aa49406c0246fa9590e436bff5d95b95ad70b",
+      "url": "/skin-packs/models/assets/963f0c6883df37ba81fe8580.png",
+      "bytes": 885364,
+      "sha256": "963f0c6883df37ba81fe8580694050e34a2a18352e7a3826a155582d151755bc",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_DF.png",
         "sha256": "963f0c6883df37ba81fe8580694050e34a2a18352e7a3826a155582d151755bc",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/8c017754e779c9c2c1749246.png",
-      "bytes": 904112,
-      "sha256": "8c017754e779c9c2c1749246a4e51e6a0b4caf1928d2b1bc24bfef5d18f5293b",
+      "url": "/skin-packs/models/assets/b966f62f85defad346f801f3.png",
+      "bytes": 3357419,
+      "sha256": "b966f62f85defad346f801f386b217dfb06e27689c4d7858b04750065053dd97",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_NM.png",
         "sha256": "b966f62f85defad346f801f386b217dfb06e27689c4d7858b04750065053dd97",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/af2ed38444e6af7353e836c2.png",
-      "bytes": 861888,
-      "sha256": "af2ed38444e6af7353e836c265cdfb6f994fce9dee4a15057516517ddaa5a115",
+      "url": "/skin-packs/models/assets/4dca687a3c10e5081685600d.png",
+      "bytes": 1266350,
+      "sha256": "4dca687a3c10e5081685600d6ed498e5032ecc5b64e087e2e57f0e9f75241c4d",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_MRS.png",
         "sha256": "c5570de4bbc73a9990b2fc924518ef85fff6ef19ea18732805cfa245d0e4340b",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/7301e35514a66c53d1ecfe1a.png",
-      "bytes": 76229,
-      "sha256": "7301e35514a66c53d1ecfe1a1af498e969f86b987bee6f4dbdd1fcdd6e83cbe5",
+      "url": "/skin-packs/models/assets/1fd26d4e37c120b774f68edd.png",
+      "bytes": 204019,
+      "sha256": "1fd26d4e37c120b774f68edd56e34970d5aa4aa4601272857d85085e96c42e2b",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_Screen_AEM.png",
         "sha256": "cafe6019edd8152377d3c335adc4fd87d9352a98439f966dcb096d25fe3020c0",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/5aa33280a9a98c30694cd6ca.png",
-      "bytes": 58501,
-      "sha256": "5aa33280a9a98c30694cd6ca5468de67d6e3126c4357188e10333659c8cdad4b",
+      "url": "/skin-packs/models/assets/ae4a54d506db2a7130d47071.png",
+      "bytes": 122382,
+      "sha256": "ae4a54d506db2a7130d47071f4d7f4543fbfa1a45fb18bf36630f35e85927ee7",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_Screen_DF.png",
         "sha256": "ae4a54d506db2a7130d47071f4d7f4543fbfa1a45fb18bf36630f35e85927ee7",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e4a5d80895c426309b2e59e2.png",
-      "bytes": 131,
-      "sha256": "e4a5d80895c426309b2e59e2c03c39ddd1b4cf885451e66ae90c907c71ad0d0b",
+      "url": "/skin-packs/models/assets/80fbeaa5970e4311009bfd3e.png",
+      "bytes": 121,
+      "sha256": "80fbeaa5970e4311009bfd3ea484ca15d92a5242668291c5054f4b530ccef3d0",
       "source": {
         "path": "ShooterGame/Content/Equippables/_Core/Materials/Textures/flatnormal.png",
         "sha256": "80fbeaa5970e4311009bfd3ea484ca15d92a5242668291c5054f4b530ccef3d0",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 32,
+        "height": 32,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/58ded95bcd392708a28c01b1.png",
-      "bytes": 120462,
-      "sha256": "58ded95bcd392708a28c01b1a56e7cd37b8e26fb73c3ae76942a493bf61a608a",
+      "url": "/skin-packs/models/assets/ba9130ea7be0f5c9640d2b9e.png",
+      "bytes": 307210,
+      "sha256": "ba9130ea7be0f5c9640d2b9e31970f10fb647e5801decd7798072ba9d6d9c8c8",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Materials/AK_Ego2_Screen_MRS.png",
         "sha256": "50fc45cd28adca2c7e79f3023752d3707d3942ab6786f0db4f6e85cc66ae40b2",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -1986,29 +3663,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ego2/Materials/RedDot_Ego2_AEM.png",
         "sha256": "1b275cea97ac2094375eefbd13d4cbd26fe9f886f1436845673fc287ca4a485f",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/f6fd72309e2fdf20bb57bbb6.png",
-      "bytes": 67613,
-      "sha256": "f6fd72309e2fdf20bb57bbb671da9e641ba73569921b2e63a65d1d4613248798",
+      "url": "/skin-packs/models/assets/a7c68b09093480a786625bac.png",
+      "bytes": 69030,
+      "sha256": "a7c68b09093480a786625bac3926462b9a21fb9d266bd1286bc99605c0d46442",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ego2/Materials/RedDot_Ego2_DF.png",
         "sha256": "a7c68b09093480a786625bac3926462b9a21fb9d266bd1286bc99605c0d46442",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/0f6688084dfddd09a78214e9.png",
-      "bytes": 191993,
-      "sha256": "0f6688084dfddd09a78214e9303011dd253ffb2465d6eb91b83651d8ae2a32ec",
+      "url": "/skin-packs/models/assets/315f6129221f50300c34cf39.png",
+      "bytes": 190268,
+      "sha256": "315f6129221f50300c34cf399419a21e14ba579cfb8577e20a416e17475d45cd",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ego2/Materials/RedDot_Ego2_NM.png",
         "sha256": "315f6129221f50300c34cf399419a21e14ba579cfb8577e20a416e17475d45cd",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -2019,7 +3702,53 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Ego2/Materials/RedDot_Ego2_MRS.png",
         "sha256": "a2b83830d90d390e12dd9fa79a84a573a10137a9928072d880f0b859aa2f9bf7",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/3260c6586987cc87fcb088bd.bin.gz",
+      "bytes": 141019,
+      "sha256": "3260c6586987cc87fcb088bd254b3fc3c766a02492b4078e4cc0f45b2332583d",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Anims/FP_Core_AK_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "eb68f05282f448eaa15a568aaea0a256ad07a8336d9e783ee741972c648fb34a",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/f81a70e2c0b8502aa105065b.bin.gz",
+      "bytes": 8043,
+      "sha256": "f81a70e2c0b8502aa105065bb23acd3d70ebeaefca48e9aa2ec1738ec62e8758",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Anims/GN_Core_AK_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Models/GN_AK_Ego2_Lv3_Skelmesh.uasset",
+        "sha256": "9ecc162697eed47edcf2c70fb349977027bb03d6f295ea609e09cd908aaed303",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/7615c69ea82c881b98af3349.bin.gz",
+      "bytes": 127908,
+      "sha256": "7615c69ea82c881b98af33493b58640e5278530299705cc2d633c6ebe88b6be8",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Anims/FP_Core_AK_Ego2_Inspect.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "5e20fde1f05d4503a49a9da2ec4d4f59e81834693063cf6be1eb07cb8623ceb5",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4f32b00654faf107104357f5.bin.gz",
+      "bytes": 802,
+      "sha256": "4f32b00654faf107104357f53f04a40a2c1bf625b62c9add75c71cd4981934e2",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Anims/GN_Core_AK_Ego2_Fire.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Ego2/Models/GN_AK_Ego2_Lv3_Skelmesh.uasset",
+        "sha256": "6f80333b8fec8b07325629cc59f66416e610f2badba24fd4e2c9834d49ad2443",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -2032,80 +3761,94 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/c061cfd2ce982623844f2b5b.png",
-      "bytes": 23967,
-      "sha256": "c061cfd2ce982623844f2b5bdc0f73765e819cd0956ed84983e47e7efaa96c70",
+      "url": "/skin-packs/models/assets/dd896e5e17389658acda1928.png",
+      "bytes": 21293,
+      "sha256": "dd896e5e17389658acda19288f30c592a99ab034a5b96896de9500a7162509fd",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_AEM.png",
         "sha256": "ccd0995df89e4ffc9466a649a8e5d931178141c3e16b751db1d3b851d3868709",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/6c4054c36b75bfc63c40d1cf.png",
-      "bytes": 672462,
-      "sha256": "6c4054c36b75bfc63c40d1cfd22779a91287d8151a823a6f464360add10e8d25",
+      "url": "/skin-packs/models/assets/a5f34514ed270a5ce968afbc.png",
+      "bytes": 921952,
+      "sha256": "a5f34514ed270a5ce968afbc7844a0d89c4c98853ed2947f0f849438f802c82b",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_DF.png",
         "sha256": "a5f34514ed270a5ce968afbc7844a0d89c4c98853ed2947f0f849438f802c82b",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/42415b6e090a8e641bce526b.png",
-      "bytes": 854640,
-      "sha256": "42415b6e090a8e641bce526b821787cdd82de0d72f1cf9e7b75f369ec5b9b349",
+      "url": "/skin-packs/models/assets/9f633fea82e2bec4f215f857.png",
+      "bytes": 3007891,
+      "sha256": "9f633fea82e2bec4f215f8576fb5dc8f3927db0ea6cbccd0f218224c906b32b4",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_NM.png",
         "sha256": "9f633fea82e2bec4f215f8576fb5dc8f3927db0ea6cbccd0f218224c906b32b4",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/1cad39cb812c4cbba6d7c163.png",
-      "bytes": 758509,
-      "sha256": "1cad39cb812c4cbba6d7c163088160c1d899c40ea5104f4be1a9a9813a122d86",
+      "url": "/skin-packs/models/assets/2fba2137af9785d2a90bc721.png",
+      "bytes": 1124637,
+      "sha256": "2fba2137af9785d2a90bc72116e91a87d7e3ea07a3b8bdb8b880fd1a2181a746",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_MRS.png",
         "sha256": "19f58af9b13a7926ef9fce1113008f7348a7e62ed00b58edd123c8525a0b2efc",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/c772d6a38727af1594055f10.png",
-      "bytes": 126306,
-      "sha256": "c772d6a38727af1594055f1031183aa9881ab8dbd34a1711b76757c8483dfcd5",
+      "url": "/skin-packs/models/assets/ee4c56f0e4a9c85d5c30ef03.png",
+      "bytes": 336215,
+      "sha256": "ee4c56f0e4a9c85d5c30ef03d008bb4d3add49dc24230a8c92b4c614660945bc",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_Screen_AEM.png",
         "sha256": "bcf92682bf2ca26ebd51663897d177b28ea657b579736d4d20ef28c5811942ba",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/c3433fa2e63d370dc0356afd.png",
-      "bytes": 44114,
-      "sha256": "c3433fa2e63d370dc0356afd3358578b6d6b564e6ae3729504cf08351445c3bd",
+      "url": "/skin-packs/models/assets/e27a79779b00d7ed3285ab09.png",
+      "bytes": 79424,
+      "sha256": "e27a79779b00d7ed3285ab09f78bd39cd3aca71b37fdd7e618dac9c4b7f46951",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_Screen_DF.png",
         "sha256": "e27a79779b00d7ed3285ab09f78bd39cd3aca71b37fdd7e618dac9c4b7f46951",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/0028995d429276d1cbe495bc.png",
-      "bytes": 97707,
-      "sha256": "0028995d429276d1cbe495bc1dbfbbe473c1e2e7e0a4550ff51d61c8ab43e0c8",
+      "url": "/skin-packs/models/assets/98ea57334bf921706ce78ac2.png",
+      "bytes": 176268,
+      "sha256": "98ea57334bf921706ce78ac2cc89a8183f8a0e1e060f2d880e7ce735a7745bf8",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Materials/Carbine_Ego2_Screen_MRS.png",
         "sha256": "eb77e5dec25801c36ade1bf4692baf4ec8cc7e055616f78b59a172ab88b11ee2",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -2127,25 +3870,29 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/0be6fb0c3666d3841d0d8026.png",
-      "bytes": 72241,
-      "sha256": "0be6fb0c3666d3841d0d8026580e42d3f3561b44305ffb9893ef5f4582026408",
+      "url": "/skin-packs/models/assets/6039dd36416cab5547cb8393.png",
+      "bytes": 73002,
+      "sha256": "6039dd36416cab5547cb8393615e5f7e820769d494ad0dc6cd8b24e7a85e95de",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ego2/Materials/Silencer_Ego2_DF.png",
         "sha256": "6039dd36416cab5547cb8393615e5f7e820769d494ad0dc6cd8b24e7a85e95de",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/8934eb5af38a6f36227f4801.png",
-      "bytes": 165979,
-      "sha256": "8934eb5af38a6f36227f48014a4491fc7bb5177f43143759b95d8323d4f7aca8",
+      "url": "/skin-packs/models/assets/b0d93e2028804f02e8b1d076.png",
+      "bytes": 164614,
+      "sha256": "b0d93e2028804f02e8b1d07600f0ef95b4bd9e0e538180827d5729330d40f464",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ego2/Materials/Silencer_Ego2_NM.png",
         "sha256": "b0d93e2028804f02e8b1d07600f0ef95b4bd9e0e538180827d5729330d40f464",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -2156,7 +3903,53 @@
         "path": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Ego2/Materials/Silencer_Ego2_MRS.png",
         "sha256": "82497763c03c9a3f943403b607307a74fe96db2083b6617a9bc0c8a7b840bab7",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/32a6c15d238c69f85ae4afd2.bin.gz",
+      "bytes": 146382,
+      "sha256": "32a6c15d238c69f85ae4afd2ca780c9b7a7ee3f0c0d4e277aa07e8c35b123768",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Anims/FP_Core_Carbine_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "2fe434cf8b691dfb26e85de3b8089ec12c54e188fa3abe4f82dad3ec31714ab2",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/fe198bed58aa3237b3d0ac8a.bin.gz",
+      "bytes": 5594,
+      "sha256": "fe198bed58aa3237b3d0ac8aea7ec4ba1ceddd5adc7b3649bf75930c96469228",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Anims/GN_Core_Carbine_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Models/GN_Carbine_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "85b6f4a54faf14b915c0b85c67b75f0d7f7c9522ab46686eb65688b76765a7d0",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4b3c2476b0be16e13f0a23e2.bin.gz",
+      "bytes": 142377,
+      "sha256": "4b3c2476b0be16e13f0a23e200ce2ebf2afd306421ef1525972303f81b2977ee",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Anims/FP_Core_Carbine_Ego2_Inspect_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "45ccc6277eb4a64fc17a546d89901163da271041c39ec53f78d8945f26113e61",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/7ffc39ff5b5f551e5186f948.bin.gz",
+      "bytes": 448,
+      "sha256": "7ffc39ff5b5f551e5186f948a2cb57b26cc0ac7f5b00ae2718a2e583f51122ab",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/S0/1P/Anims/GN_Core_Carbine_S0_FireAdd.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Ego2/Models/GN_Carbine_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "5f98ef4d065e2f13119113077d6eab945bc3cba99bae6255491ebac11d5ea0e2",
+        "operation": "retargeted original skeletal animation"
       }
     },
     {
@@ -2169,80 +3962,81 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/d6569f064c117316b2b00ae8.png",
-      "bytes": 19815,
-      "sha256": "d6569f064c117316b2b00ae84f82430c6a7a215e2a0d3df01998fe503d934229",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_AEM.png",
-        "sha256": "b1cccb25bbff111c2fb54897e741180697296f899a443fa83f13e873da0df080",
-        "operation": "emissive",
-        "maxSize": 1024
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/8182c1f1ef9f60eebb1a604b.png",
-      "bytes": 557811,
-      "sha256": "8182c1f1ef9f60eebb1a604b2219875e7fac69bb6eaaf98ad7debba8de83427a",
+      "url": "/skin-packs/models/assets/e5fca8cce68c13910a61bc75.png",
+      "bytes": 770731,
+      "sha256": "e5fca8cce68c13910a61bc7563506a1f789435179b18a60c958a8db17e0da5c8",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_DF.png",
         "sha256": "e5fca8cce68c13910a61bc7563506a1f789435179b18a60c958a8db17e0da5c8",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/bf4ea85e56c301d644bb162d.png",
-      "bytes": 822321,
-      "sha256": "bf4ea85e56c301d644bb162ded131a82cd33de567c372141eeea5d5e035b43db",
+      "url": "/skin-packs/models/assets/15b25aec99fdbc0a96e1088b.png",
+      "bytes": 3086356,
+      "sha256": "15b25aec99fdbc0a96e1088b802ca2508159b0bc318501b7d596cb70e5a91e4b",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_NM.png",
         "sha256": "15b25aec99fdbc0a96e1088b802ca2508159b0bc318501b7d596cb70e5a91e4b",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/e60a378135a37073ba9bcc53.png",
-      "bytes": 792376,
-      "sha256": "e60a378135a37073ba9bcc537831565bdab5918633634f564745b5017a36e1ba",
+      "url": "/skin-packs/models/assets/6b7e956a9fa9fa98756a3c1a.png",
+      "bytes": 1367123,
+      "sha256": "6b7e956a9fa9fa98756a3c1af979a803f6ffb6023f9704ddcd5fef357e8b6dea",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_MRS.png",
         "sha256": "f399f9e1a0d4c1d94b0090aa29623cbadfa5bf15a67cf0821de4cc58a4451982",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/4f0fa89961557d1115cfd716.png",
-      "bytes": 91451,
-      "sha256": "4f0fa89961557d1115cfd7160c195a91282ec7dcbe82eed1603b7a3550b702e4",
+      "url": "/skin-packs/models/assets/f6d09879a9a0391400aaf219.png",
+      "bytes": 217099,
+      "sha256": "f6d09879a9a0391400aaf21912fb09ae35365191602afc7cfcc1f55c748135d9",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_Screen_AEM.png",
         "sha256": "33c35212f857dd62c7885e190241f8ab05b7323d71f8726a5ab9d62b4a88de1c",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/591efc211b40a1c8550265dd.png",
-      "bytes": 51205,
-      "sha256": "591efc211b40a1c8550265dd41775d5ceb494a839fdcb96eb788415e2510578d",
+      "url": "/skin-packs/models/assets/cee004c6a7997a409e0764c6.png",
+      "bytes": 77007,
+      "sha256": "cee004c6a7997a409e0764c6ebe4debd23f305a600f65cd904d3dac17a96a2ca",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_Screen_DF.png",
         "sha256": "cee004c6a7997a409e0764c6ebe4debd23f305a600f65cd904d3dac17a96a2ca",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/bbd6458325b6f678d480c590.png",
-      "bytes": 65741,
-      "sha256": "bbd6458325b6f678d480c5904c34f0ec288e5d9b2c6bca6e57fe3a295940371a",
+      "url": "/skin-packs/models/assets/42c1fa3c11bec57d26331aca.png",
+      "bytes": 89801,
+      "sha256": "42c1fa3c11bec57d26331aca1a52532df012d1874d388a322f66a1f5cf32ddf3",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Materials/Revolver_Ego2_Screen_MRS.png",
         "sha256": "335c4dd3565f2e1ab7a09c2452cd7d7c40904df97311e5b8af3df67a233720ed",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -2255,6 +4049,72 @@
       }
     },
     {
+      "url": "/skin-packs/models/assets/b2061191d7d15d1a2e75487a.bin.gz",
+      "bytes": 135098,
+      "sha256": "b2061191d7d15d1a2e75487a7d008652e570c932bb88e25fd2479c869b871da7",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Anims/FP_Core_Revolver_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "401fb70a087784b64c5a13945cf7ad56cd1cbf1bb3e5e6a47cc0ac376adc4ae0",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/970175ce5401fc6c1bcb7f59.bin.gz",
+      "bytes": 21438,
+      "sha256": "970175ce5401fc6c1bcb7f59ad2e08b4839cf9bbad1ecf175f17c6bbc74a08b1",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/S0/1P/Anims/GN_Core_Revolver_S0_Reload.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Models/GN_Revolver_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "651fc879b5ff44541418733c935f1363f1dca717a0260735edf25af5926009ef",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/c4f28ca80252dffc544d6287.bin.gz",
+      "bytes": 165963,
+      "sha256": "c4f28ca80252dffc544d62873e7c273b2bdaf8bb23a078dcb3f3f467e133f1ad",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Anims/FP_Core_Revolver_Ego2_Inspect_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "78995cbef3943efb4dfe5c0c038aab19c08f4a274295149a719110a00ec63c92",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/81c3a85946c65d5c493b4d73.bin.gz",
+      "bytes": 6631,
+      "sha256": "81c3a85946c65d5c493b4d7312e587ced9a5d7b975eb269d0f9f8608f584f832",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Anims/GN_Core_Revolver_Ego2_Inspect_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Models/GN_Revolver_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "bba51078d48d0926b379d6c87a3195e1bf0f89fdb09441228f583d33b0a6690f",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/6e007016e4b47f3d89290ec9.bin.gz",
+      "bytes": 39260,
+      "sha256": "6e007016e4b47f3d89290ec9981d1ab9efc5b36de37c997e73104212372f96df",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/S0/1P/Anims/FP_Core_Revolver_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "904344b3f36d5d109116dc327c7804cd361407ddcc2b42406f72bcefd6de9bf7",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/0988ce3d9848d2d0e93576a9.bin.gz",
+      "bytes": 2597,
+      "sha256": "0988ce3d9848d2d0e93576a95bcc1e27b6e7930c6bf01dcc97cd46591e8256bc",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/S0/1P/Anims/GN_Core_Revolver_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/Sidearms/Revolver/Ego2/Models/GN_Revolver_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "d3d4d64ff2e77b6099112a130d00d039bafd3fc6a6d3944929d5a0177d5208a9",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
       "url": "/skin-packs/models/assets/3decf534d9903fec556078a6.glb",
       "bytes": 703020,
       "sha256": "3decf534d9903fec556078a6057ffd9c99c2004be25a085320f0ed201d1b6e37",
@@ -2264,91 +4124,94 @@
       }
     },
     {
-      "url": "/skin-packs/models/assets/c127ea068ff3a0cebfa94673.png",
-      "bytes": 21472,
-      "sha256": "c127ea068ff3a0cebfa94673ce670bfba2fc8b38488fe68f966ef0f0bab137d4",
-      "source": {
-        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_AEM.png",
-        "sha256": "59be9373853146d6e7ea47d28c30182af8a2701bf43f11bc73227ad900d30fbd",
-        "operation": "emissive",
-        "maxSize": 1024
-      }
-    },
-    {
-      "url": "/skin-packs/models/assets/496f32cd135b094c50708b1f.png",
-      "bytes": 683816,
-      "sha256": "496f32cd135b094c50708b1f0e3b936d7fbcf43def0d8975524d246a99c658f2",
+      "url": "/skin-packs/models/assets/22cd68a3de8a330c5c27a5ca.png",
+      "bytes": 960022,
+      "sha256": "22cd68a3de8a330c5c27a5cadad28644f2e89e05fa7955e08c4a9a5b241c507b",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_DF.png",
         "sha256": "22cd68a3de8a330c5c27a5cadad28644f2e89e05fa7955e08c4a9a5b241c507b",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/5bec673f0e68e2c1c99a6ceb.png",
-      "bytes": 755674,
-      "sha256": "5bec673f0e68e2c1c99a6ceb33a8de8e77b9d637bd9904475d50c94831a92004",
+      "url": "/skin-packs/models/assets/aafa6c973b11edfd201e7295.png",
+      "bytes": 2760695,
+      "sha256": "aafa6c973b11edfd201e729515226ab0e471bf16c0dfeb65acc64aa3f0060a52",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_NM.png",
         "sha256": "aafa6c973b11edfd201e729515226ab0e471bf16c0dfeb65acc64aa3f0060a52",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/7a934fcb60abcffcc2be8259.png",
-      "bytes": 731154,
-      "sha256": "7a934fcb60abcffcc2be8259506ba88219255e649e9b4ffc4bdfbdb6a06dee53",
+      "url": "/skin-packs/models/assets/bb5653b56be043333cb22a1c.png",
+      "bytes": 997488,
+      "sha256": "bb5653b56be043333cb22a1cd90f6ace2a93757a2e20f8b47659907e62d06656",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_MRS.png",
         "sha256": "4b1004f9c6232b04a30ebcda4264ee9d8c15e124797b2ba9b9057541d2c1c9d8",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/bcc0a1f0c719c92c7b299393.png",
-      "bytes": 14545,
-      "sha256": "bcc0a1f0c719c92c7b299393fef2e7bd7ceef5c743ca9fb02203b67974f775a8",
+      "url": "/skin-packs/models/assets/1125d195ce58afcaf797c0a7.png",
+      "bytes": 33797,
+      "sha256": "1125d195ce58afcaf797c0a7c44cb13b41931cbe4e0f242955a1e9d092c3b394",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_Screen_AEM.png",
         "sha256": "3e94bb459f3655c725e3833d4bc6b0cef98742de7b1e86cbc152dceab0dd9730",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/64a26511b415f1015b34ea80.png",
-      "bytes": 58820,
-      "sha256": "64a26511b415f1015b34ea80f1dfba71fe6a7de318d9c528070ad79e36597973",
+      "url": "/skin-packs/models/assets/b402cd640c81d9e805a0b2f9.png",
+      "bytes": 87320,
+      "sha256": "b402cd640c81d9e805a0b2f9755da86a8c4b21d6c0c2e3222f82f869c3f94786",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_Screen_DF.png",
         "sha256": "b402cd640c81d9e805a0b2f9755da86a8c4b21d6c0c2e3222f82f869c3f94786",
         "operation": "color",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/2766a5b9e7f09de63c025d6f.png",
-      "bytes": 204,
-      "sha256": "2766a5b9e7f09de63c025d6f0c0fb52273562162f2720a0513de4b795e68d8b9",
+      "url": "/skin-packs/models/assets/9147ed500c629d01ebc6e967.png",
+      "bytes": 223,
+      "sha256": "9147ed500c629d01ebc6e967b18ea16adaf2dbb86f5a5db8767d463e560eaa1d",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_Screen_NM.png",
         "sha256": "9147ed500c629d01ebc6e967b18ea16adaf2dbb86f5a5db8767d463e560eaa1d",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 64,
+        "height": 64,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/232ac07074c37252c36fa306.png",
-      "bytes": 126408,
-      "sha256": "232ac07074c37252c36fa30623516b664741660dfb64e811cf0e56c96a069e70",
+      "url": "/skin-packs/models/assets/58d924df9677da6f26e4f0c1.png",
+      "bytes": 176387,
+      "sha256": "58d924df9677da6f26e4f0c1d0391c90f682276b899cfe97fb1e5491ed08127e",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Materials/BoltSniper_Ego2_Screen_MRS.png",
         "sha256": "f2f3a333b6f7967405e182c038f96fa767acf1e332e8d07342a0c1f8452e76c1",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 2048,
+        "height": 2048,
+        "resolution": "original"
       }
     },
     {
@@ -2377,29 +4240,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Scope_AEM.png",
         "sha256": "17b4186ceef58c1a5e76abf105552a7e3911e447ca3d1d8c1e1bc15fbecb3d7e",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/1fbad636b8a18f6e888d31ba.png",
-      "bytes": 167201,
-      "sha256": "1fbad636b8a18f6e888d31bac0f7af254c04653cf0d79c94eb0cf936c34051cc",
+      "url": "/skin-packs/models/assets/25799d158182d312deb695a5.png",
+      "bytes": 169913,
+      "sha256": "25799d158182d312deb695a57fdec105f524f7d833b37b4afc9eb38bdfd5c4b0",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Scope_DF.png",
         "sha256": "25799d158182d312deb695a57fdec105f524f7d833b37b4afc9eb38bdfd5c4b0",
         "operation": "color",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/89626f7957ba69537f75bd3f.png",
-      "bytes": 504290,
-      "sha256": "89626f7957ba69537f75bd3f7fdcc89c370ee70f3e6a58048dbf7e59d9048fc2",
+      "url": "/skin-packs/models/assets/297d5c2bb2095c135ad21b9c.png",
+      "bytes": 504727,
+      "sha256": "297d5c2bb2095c135ad21b9c75f40a067cd7a9581ea2db0ffc242645bae137ec",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Scope_NM.png",
         "sha256": "297d5c2bb2095c135ad21b9c75f40a067cd7a9581ea2db0ffc242645bae137ec",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
@@ -2410,7 +4279,9 @@
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Scope_MRS.png",
         "sha256": "31a504f9d7e912775607061e54b1a5dd4fbcc21fec10256c42cc7b1722127ead",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 1024,
+        "height": 1024,
+        "resolution": "original"
       }
     },
     {
@@ -2421,29 +4292,35 @@
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Glass_AEM.png",
         "sha256": "37877c290647eeaf7be6fe829b672067d7cd0491fff653dc467a107c642d4e83",
         "operation": "emissive",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/7d054679cc9f88e7c6b333c8.png",
-      "bytes": 25197,
-      "sha256": "7d054679cc9f88e7c6b333c8eb53c7fbce72e6f78684ded61b6abc782b30b6fb",
+      "url": "/skin-packs/models/assets/4f4c3170de42bde91e86c9d7.png",
+      "bytes": 25545,
+      "sha256": "4f4c3170de42bde91e86c9d7b4307add0c512b4117cbeb90f6bdc6fcb3283b63",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Glass_DF.png",
         "sha256": "4f4c3170de42bde91e86c9d7b4307add0c512b4117cbeb90f6bdc6fcb3283b63",
         "operation": "color",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
-      "url": "/skin-packs/models/assets/05456a4692f1f6f083d61edb.png",
-      "bytes": 45958,
-      "sha256": "05456a4692f1f6f083d61edba833ef33a43e301e47172bb12800770bf0eb746b",
+      "url": "/skin-packs/models/assets/4fbf78405fd7335648b99c7a.png",
+      "bytes": 44638,
+      "sha256": "4fbf78405fd7335648b99c7ae415c88238c5973b0a4d472f4a3acc3007fb4db9",
       "source": {
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Glass_NM.png",
         "sha256": "4fbf78405fd7335648b99c7ae415c88238c5973b0a4d472f4a3acc3007fb4db9",
         "operation": "normal",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
       }
     },
     {
@@ -2454,9 +4331,166 @@
         "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Attachments/2xScope/Materials/BoltSniper_Ego2_Glass_MRS.png",
         "sha256": "d1885fb70af30c0faf6b04d1d06ea744476274b643e1aff9a0f26719c2d23e50",
         "operation": "orm",
-        "maxSize": 1024
+        "width": 512,
+        "height": 512,
+        "resolution": "original"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/4e3a7fc05f0aa4ea2cd1fd62.bin.gz",
+      "bytes": 228701,
+      "sha256": "4e3a7fc05f0aa4ea2cd1fd62bcbda3ebdb272892df2a751ce24a8bd99dc41386",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Anims/FP_Core_Boltsniper_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "47ac8a9c4e736e032dac87e3efbd28cac6d680c83586eabeb46a4183da0977de",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/1b5aad0d25b684e1fd02c3b3.bin.gz",
+      "bytes": 5257,
+      "sha256": "1b5aad0d25b684e1fd02c3b3a11a6bcafbe9fe46c301688279f771f4349282b6",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Anims/GN_Core_Boltsniper_Ego2_Reload_Lv3.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Models/GN_Boltsniper_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "10a71f8df544865c8dba3cbcf2f99d0690728c2f951326a03ee29b8c7d502933",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/91660694429fd3c125fe9bf9.bin.gz",
+      "bytes": 162135,
+      "sha256": "91660694429fd3c125fe9bf9aaa2ec76f54e7636cd7389e0ab14f3aba2cd1f67",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/S0/1P/Anims/FP_Core_Boltsniper_S0_Inspect.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "81aba5247a4bb53849796ccd9867402a40633a3d2a8b5d7f33a277cea6e1ec70",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/d8a1f561965cd2f709463a78.bin.gz",
+      "bytes": 188630,
+      "sha256": "d8a1f561965cd2f709463a78c620e2bb531ba1c9a51bebd57f0074562c34220b",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/S0/1P/Anims/FP_Core_Boltsniper_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Characters/Phoenix/S0/1P/Models/FP_Phoenix_S0_Skelmesh.uasset",
+        "sha256": "68a402e7fc3d6f426adf630805c9f28db550268d0e61414c58e501c483f05c55",
+        "operation": "retargeted original skeletal animation"
+      }
+    },
+    {
+      "url": "/skin-packs/models/assets/09551990588d838dd203ef5b.bin.gz",
+      "bytes": 2869,
+      "sha256": "09551990588d838dd203ef5b13b1815622310c0a49fad92ddfdccb535271afbf",
+      "source": {
+        "path": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/S0/1P/Anims/GN_Core_Boltsniper_S0_Fire.uasset",
+        "target": "ShooterGame/Content/Equippables/Guns/SniperRifles/Boltsniper/Ego2/Models/GN_Boltsniper_Ego2_Lv1_Skelmesh.uasset",
+        "sha256": "07d6b95e7bfd29861ca1fbbe53523218c2b0e49a827628f0466c9251a9da0209",
+        "operation": "retargeted original skeletal animation"
       }
     }
   ],
-  "exporterCommit": "2b8901c3ee9818558ad33e2496a58d50b82e99db"
+  "particleImport": {
+    "source": "Original skin firing blueprints and cooked Cascade tables",
+    "systems": 40,
+    "materials": 124,
+    "meshes": 41,
+    "textures": 68,
+    "limitations": [
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Aquarium/VFX/MI_Aquarium_Ripple_AK"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst1"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst2"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Materials/Ninja_AK_FireGlowing_Mat_Inst"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Materials/M_Ninja_MP5_Glow03"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Ninja/VFX/Materials/Ninja_Ring03_Inst"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst1"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Mat/Reload/Ninja_AK_FireGlowing_Mat_Inst2"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Smoke_05_A"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Materials/MI_AK_Hellfire_Magma_Line"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Glow03"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Glow04"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Materials/M_Hellfire_MP5_Ring03_Inst"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/AK/Spirit2/VFX/Materials/M_Spirit_AutoShotGun_Glow03_Inst"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Shark/MFlash_Shark_BurstSmoke_MI"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/VFX/Materials/MuzzleFlashes/Afterglow/MFlash_Shark_Flash_05_MI"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Glow_05_IN"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_BlackHole_Inst_Base"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_General_Smoke_Full_MI"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/Materials/Coven_MF_Smoke_MI"
+      },
+      {
+        "kind": "procedural shader translation",
+        "source": "/Game/Equippables/Guns/Shotguns/AutoShotgun/Spirit/VFX/Particle/Fire/Materials/M_Spirit_AutoShotGun_Glow03_Inst"
+      },
+      {
+        "kind": "missing material",
+        "source": "/Engine/EngineMaterials/DefaultParticle"
+      }
+    ]
+  }
 }

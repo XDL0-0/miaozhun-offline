@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
+import {decodeWeaponMotion,animationState,createWeaponMotionPlayer} from '../patches/weapon-motion-runtime.mjs';
 import {decodeWeaponGlb,createWeaponModelLoader} from '../patches/weapon-models-runtime.mjs';
 import {applyWeaponModelsPatch} from '../patches/weapon-models.mjs';
 import {createSkinPackRuntime} from '../patches/skin-packs-runtime.mjs';
@@ -51,8 +53,9 @@ test('all retained model assets match their review hashes; textures are bounded 
   assert.equal(review.models.length,14);assert.equal(review.assets.length,index.counts.assets);
   for(const entry of review.assets){
     const b=fs.readFileSync(local(entry.url));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),entry.sha256,entry.url);
-    if(entry.url.endsWith('.png')){assert.equal(b.toString('ascii',1,4),'PNG');assert.ok(b.readUInt32BE(16)<=1024&&b.readUInt32BE(20)<=1024);}
-    else{const decoded=decodeWeaponGlb(binary(b));for(const p of decoded.primitives){assert.ok(p.position.every(Number.isFinite));assert.ok(p.normal.every(Number.isFinite));assert.ok(p.index.length>0);if(p.weight)for(let i=0;i<p.weight.length;i+=4)assert.ok(Math.abs(p.weight[i]+p.weight[i+1]+p.weight[i+2]+p.weight[i+3]-1)<.002);}}
+    if(entry.url.endsWith('.png')){assert.equal(b.toString('ascii',1,4),'PNG');assert.equal(b.readUInt32BE(16),entry.source.width);assert.equal(b.readUInt32BE(20),entry.source.height);assert.equal(entry.source.resolution,'original');assert.ok(entry.source.width<=4096&&entry.source.height<=4096);}
+    else if(entry.url.endsWith('.glb')){const decoded=decodeWeaponGlb(binary(b));for(const p of decoded.primitives){assert.ok(p.position.every(Number.isFinite));assert.ok(p.normal.every(Number.isFinite));assert.ok(p.index.length>0);if(p.weight)for(let i=0;i<p.weight.length;i+=4)assert.ok(Math.abs(p.weight[i]+p.weight[i+1]+p.weight[i+2]+p.weight[i+3]-1)<.002);}}
+    else{assert.ok(entry.url.endsWith('.bin.gz'));assert.equal(crypto.createHash('sha256').update(gunzipSync(b)).digest('hex'),entry.source.sha256);}
   }
 });
 
@@ -72,7 +75,8 @@ test('loader decodes every delivered model with no external requests and dedupli
   const h=harness();
   for(const key of Object.keys(index.models)){
     h.choose(key);const asset=await h.loader.load(key.split('/')[1]);assert.equal(asset?.key,key);
-    const urls=asset.parts.flatMap(p=>p.materials.flatMap(m=>[m.map,m.normalMap,m.ormMap,m.emissiveMap].filter(Boolean)));
+    const pack=read(local(index.models[key]));
+    const urls=[...asset.parts.flatMap(p=>p.materials.flatMap(m=>[m.map,m.normalMap,m.ormMap,m.emissiveMap].filter(Boolean))),...pack.effects.textures];
     assert.equal(asset.pictures.size,new Set(urls).size);
   }
   assert.ok(h.fetches.every(url=>url.startsWith('/skin-packs/models/')));
@@ -129,8 +133,66 @@ test('model toggle migrates old saved selections and persists independently from
 });
 
 test('native viewmodel bridge is version-pinned, reversible and never changes weapon simulation definitions',()=>{
-  const name='CFqO0zvx.js',source=fs.readFileSync(new URL('site/js/'+name,root),'utf8'),input={[name]:source,'CymPR-fm.js':'unchanged simulation'};
-  const patched=applyWeaponModelsPatch(input);assert.equal(input[name],source);assert.equal(patched['CymPR-fm.js'],input['CymPR-fm.js']);
-  assert.match(patched[name],/appearance':await __aimLoadWeaponModel/);assert.match(patched[name],/__aimAppearance\?\.update\(\)/);assert.match(patched[name],/__aimAppearance\?\.dispose\(\)/);
+  const name='CFqO0zvx.js',source=fs.readFileSync(new URL('site/js/'+name,root),'utf8'),game=fs.readFileSync(new URL('site/js/CymPR-fm.js',root),'utf8'),input={[name]:source,'CymPR-fm.js':game};
+  const patched=applyWeaponModelsPatch(input);assert.equal(input[name],source);assert.equal(input['CymPR-fm.js'],game);
+  assert.match(patched[name],/appearance':await __aimLoadWeaponModel/);assert.match(patched[name],/__aimAppearance\?\.update\(bf,/);assert.match(patched[name],/__aimAppearance\?\.dispose\(\)/);
+  assert.match(patched['CymPR-fm.js'],/_t.push\(\{at:\(ke.tick\+1\)\*he,inspect:true,weapon:qe\(\)\}/);
+  assert.equal(patched['CymPR-fm.js'].split('ke.step(Be)').length,game.split('ke.step(Be)').length);
   assert.throws(()=>applyWeaponModelsPatch(patched),/already patched/);assert.throws(()=>applyWeaponModelsPatch({[name]:source.replace("'setGun'","'setGunChanged'")}),/version mismatch/);
+});
+
+test('all skin reload/inspect/fire montages decode original retargeted offline tracks',()=>{
+  const sources=read(new URL('skin-packs/audit/weapon-model-sources.json',root)),unique=new Set();
+  assert.ok(sources.assets.filter(a=>a.url.endsWith('.png')&&a.source.width===2048).length>=70,'full-resolution 2K maps are retained');
+  for(const url of Object.values(index.models)){
+    const pack=read(local(url));
+    for(const action of ['reload','inspect','fire'])assert.ok(pack.motions.actions[action].arms,pack.collection+' '+action);
+    for(const [id,clip]of Object.entries(pack.motions.clips)){
+      unique.add(id);const bytes=gunzipSync(fs.readFileSync(local(clip.data))),data=decodeWeaponMotion(clip,binary(bytes));assert.ok(data.values.length>0);
+      assert.equal(data.names.length,data.rest.length);
+    }
+    for(const action of Object.values(pack.motions.actions))for(const track of Object.values(action))for(const segment of track.segments){assert.ok(pack.motions.clips[segment.clip]);assert.ok(segment.to>segment.from);assert.ok(segment.rate>0);}
+  }
+  assert.equal(unique.size,71);
+});
+
+test('inspect yields to reload, firing, ADS and a new equip; reload follows the actual game duration',()=>{
+  const actions={reload:{arms:{duration:3}},inspect:{arms:{duration:6}},fire:{arms:{duration:.3}}};
+  const state={seconds:3,shots:[],melee:[{at:1,inspect:true,weapon:'phantom'}],equipAt:0,reloadSince:null,adsBlend:0};
+  assert.equal(animationState(actions,state,'phantom').action,'inspect');assert.equal(animationState(actions,state,'vandal'),null);
+  assert.equal(animationState(actions,{...state,reloadSince:1,reloadDuration:2},'phantom').time,1.5);
+  assert.equal(animationState(actions,{...state,shots:[2.9]},'phantom').action,'fire');
+  assert.equal(animationState(actions,{...state,adsBlend:1},'phantom'),null);
+  assert.equal(animationState(actions,{...state,equipAt:2},'phantom'),null);
+  assert.equal(animationState(actions,{...state,seconds:8},'phantom'),null);
+  assert.equal(state.melee.length,1,'visual animation never mutates recorded input');
+});
+
+test('skin muzzle effects retain original emitters, bone attachments, curves and local texture closure',()=>{
+  const fx=read(new URL('fire-effects.json',source));assert.equal(Object.keys(fx.guns).length,14);assert.equal(Object.keys(fx.systems).length,40);
+  for(const [key,gun]of Object.entries(fx.guns))for(const rule of [...gun.hip,...gun.ads]){
+    const system=fx.systems[rule.sys];assert.ok(system?.emitters.length,key+' has a visible original particle system');
+    for(const e of system.emitters){assert.ok(fx.materials[e.mat]);if(e.mesh)assert.ok(fx.meshes[e.mesh.name]);for(const m of e.mods)for(const v of Object.values(m))if(v?.v)assert.ok(v.v.every(Number.isFinite));}
+  }
+  for(const t of Object.values(fx.textures))assert.ok(fs.existsSync(local(t.file)));
+  assert.ok(fx.guns['ayakashi/phantom'].hip.some(x=>x.attach==='Face_Brow'));
+  assert.ok(fx.guns['kuronami/vandal'].hip.some(x=>x.attach==='Charging_Handle'));
+});
+
+test('skin hand scales return to native values after inspect end, interruption and disposal',()=>{
+  const vector=()=>({x:0,y:0,z:0,set(x,y,z){Object.assign(this,{x,y,z});return this;}});
+  class Quaternion{set(x,y,z,w){Object.assign(this,{x,y,z,w});return this;}normalize(){return this;}slerp(q){return this.set(q.x,q.y,q.z,q.w);}}
+  const bone={name:'MasterWeapon',position:vector(),scale:vector().set(1,1,1),quaternion:new Quaternion().set(0,0,0,1)};
+  const meta={names:['MasterWeapon'],rest:[[0,0,0,0,0,0,1,1,1,1]],frames:2,duration:2,sampleRate:.5};
+  const values=new Float32Array([1,0,0,0,0,0,1,.5,.5,.5,3,0,0,0,0,0,1,.5,.5,.5]);
+  const clip=decodeWeaponMotion(meta,values.buffer),track={duration:2,segments:[{clip:'original',start:0,from:0,to:2,rate:1,loops:1}]};
+  const player=createWeaponMotionPlayer({motions:{clips:{original:clip},actions:{inspect:{arms:track}}},armsRig:{index:new Map([['MasterWeapon',0]]),bones:[bone]},armsScales:[[1,1,1]],gunBones:[],baseRig:{index:new Map()},Quaternion,weapon:'phantom'});
+  const inspect=(at,seconds)=>({seconds,melee:[{at,inspect:true,weapon:'phantom'}],shots:[]});
+  player.update(inspect(.1,.112));assert.ok(Math.abs(bone.scale.x-.95)<1e-5,'hand scale blends into inspection without a size jump');
+  assert.equal(player.update(inspect(.1,1)).action,'inspect');assert.equal(bone.scale.x,.5);assert.ok(Math.abs(bone.position.x-1.9)<1e-5);
+  assert.equal(player.update(inspect(.1,4)),null);assert.equal(bone.scale.x,1);
+  player.update(inspect(4.1,5));assert.equal(bone.scale.x,.5);
+  assert.equal(player.update(inspect(4.1,5.1),true),null);assert.equal(bone.scale.x,1);
+  assert.equal(player.update(inspect(4.1,5.2)),null,'an interrupted inspection does not resume');
+  player.update(inspect(6.1,7));assert.equal(bone.scale.x,.5);player.dispose();assert.equal(bone.scale.x,1);
 });

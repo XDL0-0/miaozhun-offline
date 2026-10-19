@@ -6,6 +6,8 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {inventoryFonts} from './verify-font-inventory.mjs';
 import {decodeWeaponGlb} from './patches/weapon-models-runtime.mjs';
+import {decodeWeaponMotion} from './patches/weapon-motion-runtime.mjs';
+import {gunzipSync} from 'node:zlib';
 
 const packageRoot=path.dirname(fileURLToPath(import.meta.url));
 const arg=process.argv.find(x=>x.startsWith('--root='));
@@ -146,7 +148,10 @@ try{
  const indexPath='/skin-packs/models/index.json';requireAsset(indexPath,'weapon model catalogue');
  const index=readJson(path.join(root,indexPath.slice(1))),seen=new Set();
  if(index.schemaVersion!==1||Object.keys(index.models??{}).length!==14)throw new Error('Incomplete weapon model catalogue');
- const safe=url=>typeof url==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb)$/.test(url);
+ const safe=url=>typeof url==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb|bin\.gz)$/.test(url);
+ const fxPath='/skin-packs/models/fire-effects.json';requireAsset(fxPath,'skin firing effects');
+ const fx=readJson(path.join(root,fxPath.slice(1)));
+ for(const texture of Object.values(fx.textures??{})){if(!safe(texture.file))throw new Error('Invalid skin effect texture');requireAsset(texture.file,fxPath);seen.add(texture.file);}
  for(const [key,url]of Object.entries(index.models)){
   if(!safe(url))throw new Error('Invalid weapon model package path');requireAsset(url,indexPath);
   const pack=readJson(path.join(root,url.slice(1)));
@@ -158,9 +163,16 @@ try{
    for(const mat of part.materials)for(const field of ['map','normalMap','ormMap','emissiveMap']){
     const texture=mat[field];if(!texture)continue;if(!safe(texture))throw new Error('Invalid weapon texture path');requireAsset(texture,key+' '+mat.name);seen.add(texture);
     const png=fs.readFileSync(path.join(root,texture.slice(1)));
-    if(!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||png.readUInt32BE(16)>1024||png.readUInt32BE(20)>1024)throw new Error('Invalid weapon texture '+texture);
+    if(!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||png.readUInt32BE(16)>4096||png.readUInt32BE(20)>4096)throw new Error('Invalid weapon texture '+texture);
    }
   }
+  if(!fx.guns[key]?.hip?.length||!pack.motions?.actions?.reload?.arms||!pack.motions.actions.inspect?.arms)throw new Error('Incomplete skin motions/effects '+key);
+  for(const clip of Object.values(pack.motions.clips)){
+   if(!safe(clip.data))throw new Error('Invalid skin motion path');requireAsset(clip.data,key+' original animation');seen.add(clip.data);
+   const bytes=gunzipSync(fs.readFileSync(path.join(root,clip.data.slice(1))));decodeWeaponMotion(clip,bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));
+  }
+  for(const action of Object.values(pack.motions.actions))for(const track of Object.values(action))for(const s of track.segments){if(!pack.motions.clips[s.clip]||!(s.to>s.from)||!(s.rate>0))throw new Error('Invalid skin montage segment '+key);}
+  for(const url of pack.effects.textures){if(!safe(url))throw new Error('Invalid skin sprite path');requireAsset(url,key+' preloaded fire sprite');}
  }
  if(index.counts.assets!==seen.size)throw new Error('Weapon model asset count mismatch');
  if(skinPacks)skinPacks.weaponModels={...index.counts};

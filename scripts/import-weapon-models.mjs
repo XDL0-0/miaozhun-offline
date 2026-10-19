@@ -3,8 +3,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {gzipSync} from 'node:zlib';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {importWeaponEffects} from './import-weapon-effects.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'qa-artifacts/val-model-tools'));
@@ -26,16 +28,20 @@ function store(bytes,ext,source){
 }
 function texture(ref,kind='color'){
   if(!ref?.ObjectPath)return null;
-  const logical=ref.ObjectPath.replace(/^\/Game\//,'ShooterGame/Content/').replace(/\.\d+$/,'')+'.png';
+  const logical=ref.ObjectPath.replace(/^\/Game\//,'ShooterGame/Content/').replace(/^\/Engine\//,'Engine/Content/').replace(/\.\d+$/,'')+'.png';
   const file=path.join(sourceRoot,logical),key=logical+':'+kind;
   if(textures.has(key))return textures.get(key);
   if(!fs.existsSync(file))throw new Error('Missing required texture: '+logical);
-  let filter="scale=w='min(1024,iw)':h='min(1024,ih)':force_original_aspect_ratio=decrease";
-  if(kind==='orm')filter+=',colorchannelmixer=rr=0:rg=0:rb=1:gr=0:gg=1:gb=0:br=1:bg=0:bb=0';
-  if(kind==='emissive')filter+=',colorchannelmixer=rr=0:rg=1:rb=0:gr=0:gg=1:gb=0:br=0:bg=1:bb=0';
-  const result=spawnSync(process.env.FFMPEG_PATH??'ffmpeg',['-v','error','-i',file,'-vf',filter,'-frames:v','1','-threads','1','-f','image2pipe','-c:v','png','pipe:1'],{maxBuffer:24*1024*1024,windowsHide:true});
-  if(result.status!==0)throw new Error('Texture conversion failed: '+logical+' '+result.stderr);
-  const url=store(result.stdout,'png',{path:logical,sha256:sha(fs.readFileSync(file)),operation:kind,maxSize:1024});
+  const original=fs.readFileSync(file),width=original.readUInt32BE(16),height=original.readUInt32BE(20);
+  let bytes=original;
+  const filter=kind==='orm'?'colorchannelmixer=rr=0:rg=0:rb=1:gr=0:gg=1:gb=0:br=1:bg=0:bb=0':kind==='emissive'?'colorchannelmixer=rr=0:rg=1:rb=0:gr=0:gg=1:gb=0:br=0:bg=1:bb=0':null;
+  if(filter){
+    const result=spawnSync(process.env.FFMPEG_PATH??'ffmpeg',['-v','error','-i',file,'-vf',filter,'-frames:v','1','-threads','1','-f','image2pipe','-c:v','png','pipe:1'],{maxBuffer:64*1024*1024,windowsHide:true});
+    if(result.status!==0)throw new Error('Texture conversion failed: '+logical+' '+result.stderr);
+    bytes=result.stdout;
+  }
+  if(bytes.readUInt32BE(16)!==width||bytes.readUInt32BE(20)!==height)throw new Error('Texture resolution changed: '+logical);
+  const url=store(bytes,'png',{path:logical,sha256:sha(original),operation:kind,width,height,resolution:'original'});
   textures.set(key,url);return url;
 }
 const rgb=c=>c?[c.R,c.G,c.B].map(x=>Math.max(0,Math.min(1,Number(x)||0))):[1,1,1];
@@ -62,6 +68,30 @@ function glb(asset,role){
   return {role,url:store(bytes,'glb',{path:asset,sha256:sha(bytes)}),materials:(json.materials??[]).map(m=>material(m.name))};
 }
 const index={schemaVersion:1,models:{},counts:{weapons:0,collections:9,assets:0}};
+const motionPlans=JSON.parse(fs.readFileSync(path.join(input,'motion-plan.json'),'utf8'));
+const motionCache=new Map();
+function motionClip(id){
+  if(motionCache.has(id))return motionCache.get(id);
+  const meta=JSON.parse(fs.readFileSync(path.join(input,'motions',id+'.json'),'utf8'));
+  const bytes=fs.readFileSync(path.join(input,'motions',id+'.bin'));
+  if(bytes.length!==meta.names.length*meta.frames*40)throw new Error('Invalid motion length '+id);
+  const url=store(gzipSync(bytes,{level:9}),'bin.gz',{path:meta.asset,target:meta.target,sha256:sha(bytes),operation:'retargeted original skeletal animation'});
+  const clip={names:meta.names,rest:meta.rest,frames:meta.frames,duration:meta.duration,sampleRate:meta.sampleRate,data:url};
+  motionCache.set(id,clip);return clip;
+}
+function motions(entry){
+  const plan=motionPlans.find(p=>p.name===entry.name);if(!plan)throw new Error('Missing motion plan '+entry.name);
+  const clips={},actions={};
+  for(const [action,tracks]of Object.entries(plan.actions)){
+    actions[action]={};
+    for(const [role,track]of Object.entries(tracks))if(track){
+      const segments=track.segments.map(s=>{const clip=motionClip(s.clip);clips[s.clip]=clip;return {...s,to:s.to??clip.duration};});
+      actions[action][role]={source:track.source,segments,duration:Math.max(...segments.map(s=>s.start+(s.to-s.from)/Math.abs(s.rate)*s.loops))};
+    }
+  }
+  return {clips,actions};
+}
+const effects=importWeaponEffects({input,sourceRoot,entries,texture,store,audit});
 for(const entry of entries){
   const weapon=entry.name.split(' ').at(-1).toLowerCase(),name=entry.name.slice(0,-weapon.length-1),collection=collections[name];
   if(!collection)throw new Error('Unrecognized collection '+name);
@@ -73,7 +103,10 @@ for(const entry of entries){
   if(sight&&weapon!=='sheriff')parts.push(glb(sight,'sight'));
   const silencer=entry.attachments.find(p=>/Silencer.*Staticmesh/i.test(p));
   if(weapon==='phantom'&&silencer)parts.push(glb(silencer,'silencer'));
-  const packageData={schemaVersion:1,collection,weapon,parts};
+  const fire=effects.packages.get(entry.name),key=`${collection}/${weapon}`;
+  if(!fire?.hip.length)throw new Error('Missing skin muzzle effects '+entry.name);
+  effects.result.guns[key]=fire;
+  const packageData={schemaVersion:1,collection,weapon,parts,motions:motions(entry),effects:{textures:effects.urls(fire)}};
   const relative=`${collection}/${weapon}.json`;fs.mkdirSync(path.dirname(path.join(output,relative)),{recursive:true});
   fs.writeFileSync(path.join(output,relative),JSON.stringify(packageData));
   index.models[`${collection}/${weapon}`]='/skin-packs/models/'+relative;
@@ -81,5 +114,8 @@ for(const entry of entries){
 }
 index.counts.weapons=Object.keys(index.models).length;index.counts.assets=written.size;
 fs.writeFileSync(path.join(output,'index.json'),JSON.stringify(index,null,2));
+fs.writeFileSync(path.join(output,'fire-effects.json'),JSON.stringify(effects.result));
 fs.writeFileSync(path.join(root,'skin-packs/audit/weapon-model-sources.json'),JSON.stringify(audit,null,2));
+// Remove only generated, content-addressed assets superseded by this import.
+for(const name of fs.readdirSync(path.join(output,'assets')))if(/^[a-f0-9]{24}\.(?:glb|png|bin\.gz)$/.test(name)&&!written.has(name))fs.unlinkSync(path.join(output,'assets',name));
 console.log(JSON.stringify(index.counts));

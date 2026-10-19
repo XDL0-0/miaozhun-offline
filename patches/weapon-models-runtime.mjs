@@ -1,8 +1,9 @@
 import {skinPacks} from './skin-packs-runtime.mjs';
+import {decodeWeaponMotion,createWeaponMotionPlayer} from './weapon-motion-runtime.mjs';
 
 const WEAPONS=new Set(['vandal','phantom','sheriff','operator']);
 const weaponOf=stem=>stem==='viewmodel'?'vandal':stem;
-const validPath=p=>typeof p==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb)$/.test(p);
+const validPath=p=>typeof p==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb|bin\.gz)$/.test(p);
 const TYPES={5121:Uint8Array,5123:Uint16Array,5125:Uint32Array,5126:Float32Array};
 const SIZES={SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16};
 
@@ -97,6 +98,12 @@ export function createWeaponModelLoader({skins=skinPacks,fetcher=(...args)=>fetc
       const manifest=await request(url,true);
       if(manifest.schemaVersion!==1||manifest.weapon!==weapon||`${manifest.collection}/${weapon}`!==key||!Array.isArray(manifest.parts)||manifest.parts.length>6)throw new Error('Invalid weapon package');
       const pictures=new Map(),imageTasks=new Map();
+      await Promise.all((manifest.effects?.textures??[]).map(async url=>{if(!imageTasks.has(url))imageTasks.set(url,image(url).then(img=>pictures.set(url,img)));return imageTasks.get(url);}));
+      const motions=manifest.motions?{actions:manifest.motions.actions,clips:{}}:null;
+      if(motions)await Promise.all(Object.entries(manifest.motions.clips).map(async([id,clip])=>{
+        const compressed=await request(clip.data),buffer=await new Response(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+        motions.clips[id]=decodeWeaponMotion(clip,buffer);
+      }));
       const decoded=await Promise.all(manifest.parts.map(async part=>{
         if(!['body','magazine','sight','silencer'].includes(part.role)||!Array.isArray(part.materials))throw new Error('Invalid weapon part');
         const data=decodeWeaponGlb(await request(part.url));
@@ -108,7 +115,7 @@ export function createWeaponModelLoader({skins=skinPacks,fetcher=(...args)=>fetc
         return {...part,data};
       }));
       if(decoded.filter(p=>p.role==='body').length!==1||decoded.filter(p=>p.role==='magazine').length!==1)throw new Error('Incomplete weapon model');
-      const result={key,weapon,parts:decoded,pictures};cache.set(key,result);
+      const result={key,weapon,parts:decoded,pictures,motions};cache.set(key,result);
       // Controllers retain their own image references; evicting raw assets never
       // disposes an in-use GPU texture, and old selections can be collected.
       while(cache.size>4)cache.delete(cache.keys().next().value);
@@ -118,17 +125,19 @@ export function createWeaponModelLoader({skins=skinPacks,fetcher=(...args)=>fetc
     try{return await task;}catch(error){globalThis.console?.warn('Skin weapon load failed; using the native model',error);return null;}
     finally{if(pending.get(key)===task)pending.delete(key);}
   }
-  return {load,selectionKey,initialize};
+  return {load,selectionKey,initialize,picture(url){for(const pack of cache.values()){const image=pack.pictures.get(url);if(image)return image;}return null;}};
 }
 
 export const weaponModels=createWeaponModelLoader();
 export const loadWeaponModel=stem=>weaponModels.load(stem);
+export const weaponEffectImage=url=>weaponModels.picture(url);
 
 // All Three.js types come from the existing renderer. There is one renderer,
 // one animation clock and one pair of hands, including left-handed viewmodels.
-export function createWeaponAppearance({types,parent,baseRig,baseRest,originals,stem,initial,environment,skins=skinPacks,loader=weaponModels}){
+export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,originals,stem,initial,environment,skins=skinPacks,loader=weaponModels}){
   const {Group,Geometry,Attribute,Bone,Skeleton,SkinnedMesh,Mesh,Material,Texture,Vector3,Quaternion,srgb,repeat}=types;
   const weapon=weaponOf(stem),nativeMeshes=originals.filter(Boolean);
+  const armsScales=armsRig?.bones.map(b=>[b.scale.x,b.scale.y,b.scale.z]);
   let current=null,disposed=false,serial=0,key=null,requestedGun='vandal';
   const savedVisibility=new Map(nativeMeshes.map(m=>[m,m.visible]));
   function restore(){for(const [mesh,visible]of savedVisibility)mesh.visible=visible;}
@@ -138,13 +147,13 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,originals,
   }
   function construct(assets){
     const group=new Group();group.name='skin:'+assets.key;
-    const geometries=new Set(),materials=new Set(),textures=new Map(),skeletons=new Set(),rigs=[],partMeshes=[];
-    function dispose(){for(const mesh of partMeshes)mesh.parent?.remove(mesh);parent.remove(group);for(const g of geometries)g.dispose();for(const m of materials)m.dispose();for(const t of textures.values())t.dispose();for(const s of skeletons)s.dispose();}
+    const geometries=new Set(),materials=new Set(),textures=new Map(),skeletons=new Set(),rigs=[],partMeshes=[];let motion=null;
+    function dispose(){motion?.dispose();for(const mesh of partMeshes)mesh.parent?.remove(mesh);parent.remove(group);for(const g of geometries)g.dispose();for(const m of materials)m.dispose();for(const t of textures.values())t.dispose();for(const s of skeletons)s.dispose();}
     function tex(url,color){
       if(!url)return null;const id=url+':'+color;
       if(textures.has(id))return textures.get(id);
       const picture=assets.pictures.get(url);if(!picture)throw new Error('Texture not decoded');
-      const t=new Texture(picture);t.flipY=false;t.wrapS=repeat;t.wrapT=repeat;if(color)t.colorSpace=srgb;t.needsUpdate=true;textures.set(id,t);return t;
+      const t=new Texture(picture);t.flipY=false;t.wrapS=repeat;t.wrapT=repeat;t.anisotropy=8;if(color)t.colorSpace=srgb;t.needsUpdate=true;textures.set(id,t);return t;
     }
     function mats(part){return part.materials.map(m=>{
       const orm=tex(m.ormMap,false),mat=new Material({map:tex(m.map,true),normalMap:tex(m.normalMap,false),roughnessMap:orm,metalnessMap:orm,
@@ -191,7 +200,8 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,originals,
         }
       }
       // Some spare sockets belong to the native rig, outside our group.
-      return {key:assets.key,group,bindings:rigs,bones,skeleton,dispose,muzzle:boneMap.get('Muzzle')};
+      motion=assets.motions&&armsRig?createWeaponMotionPlayer({motions:assets.motions,armsRig,armsScales,gunBones:bones,baseRig,Quaternion,weapon}):null;
+      return {key:assets.key,group,bindings:rigs,bones,boneMap,rest:body.data.bones,skeleton,dispose,motion,muzzle:boneMap.get('Muzzle')};
     }catch(error){dispose();throw error;}
   }
   function swap(assets){
@@ -199,12 +209,15 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,originals,
     try{if(assets)next=construct(assets);}catch(error){globalThis.console?.warn('Skin weapon construction failed; using the native model',error);}
     current?.dispose();current=next;visibility();
   }
-  function update(){
+  function update(state={},blocked=false){
     if(!current)return;
+    current.bones.forEach((bone,i)=>{const rest=current.rest[i];bone.position.set(...rest.t);bone.quaternion.set(...rest.q);bone.scale.set(...rest.s);});
     for(const b of current.bindings){
       b.skin.position.set(b.rest[0]+b.base.position.x-b.basePosition[0],b.rest[1]+b.base.position.y-b.basePosition[1],b.rest[2]+b.base.position.z-b.basePosition[2]);
       b.delta.multiplyQuaternions(b.baseInverse,b.base.quaternion);b.skin.quaternion.multiplyQuaternions(b.restQ,b.delta).normalize();
     }
+    const active=current.motion?.update(state,blocked);
+    current.group.userData.motion=active?.action??'idle';
     current.group.updateMatrixWorld(true);current.skeleton.update();
   }
   async function refresh(){
@@ -219,6 +232,8 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,originals,
   if(key&&!current){key=null;void refresh();}
   const point=new Vector3();
   return {update,setGun(value){requestedGun=value;visibility();},
+    get muzzle(){return current?.muzzle??null;},
+    effectBone(name){return current?.boneMap.get(name)??null;},
     get active(){return !!current;},get key(){return current?.key??null;},
     measureMuzzle(camera){if(!current?.muzzle)return null;parent.updateWorldMatrix(true,true);current.muzzle.getWorldPosition(point);point.applyMatrix4(camera.matrixWorldInverse);return {x:point.x,y:point.y,z:point.z};},
     dispose(){if(disposed)return;disposed=true;++serial;unsubscribe();current?.dispose();current=null;restore();},
