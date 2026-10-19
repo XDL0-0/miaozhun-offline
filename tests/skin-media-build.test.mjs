@@ -237,6 +237,10 @@ test('changed banner layers and invalid placement fail before previous output is
     banner.pipRadius=-1;
     fs.writeFileSync(path.join(f.root,'skin-packs/asset-review.json'),JSON.stringify(f.review));
     assert.throws(()=>buildSkinPacks(f),/banner geometry/);
+    banner.pipRadius=72.5;
+    banner.pipSprite={source:[0,0,banner.layers.pip.width+1,20],size:[20,20]};
+    fs.writeFileSync(path.join(f.root,'skin-packs/asset-review.json'),JSON.stringify(f.review));
+    assert.throws(()=>buildSkinPacks(f),/pip sprite/);
     assert.equal(fs.readFileSync(path.join(f.destination,'previous-build'),'utf8'),'preserve');
   }finally{fs.rmSync(f.root,{recursive:true,force:true})}
 });

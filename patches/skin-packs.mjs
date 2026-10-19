@@ -41,6 +41,10 @@ export function applySkinPacksPatch(modules) {
   let banner = result['DVK7uRSu.js'];
   banner = replaceOne(banner, "cG=cC['view']['current']['seq'],cH=!0x1",
     "cG=cC['view']['current']['seq']-(cC['kit']?.startsWith('skin:')&&cC['view']['current']['seq']>0?1:0),cH=!0x1", 'consume a fresh first kill when the skin HUD mounts');
+  banner = replaceOne(banner, "cU&&cV&&cV['clearRect'](0x0,0x0,cU['width'],cU['height']);",
+    "cU&&cV&&(cV['setTransform'](0x1,0x0,0x0,0x1,0x0,0x0),cV['clearRect'](0x0,0x0,cU['width'],cU['height']));", 'clear all canvas quadrants in backing-pixel coordinates');
+  banner = replaceOne(banner, "ul(cU['now']-cK)",
+    "ul(Math.max(0,cU['now']-cK))", 'retain kills that arrive before the next HUD clock update');
   banner = replaceOne(banner, "function Dt(cA,cB=ll,cC=il){const cD=nl[cA],cE={};",
     "function Dt(cA,cB=ll,cC=il){const skin=__aimSkins.bannerDefinition(cA);if(skin)return skin;const cD=nl[cA],cE={};if(!cD)return null;", 'cached skin banner definition');
   banner = replaceOne(banner, "for(const cV of Pt)cF[cV]=cN(cE['layers'][cV]);",
@@ -50,11 +54,11 @@ export function applySkinPacksPatch(modules) {
   banner = replaceOne(banner, "if(!cV||!cW||!cE)return;const {frame:cX,ring:cY,emblem:cZ,pip:d0,headshot:d1}=cF;",
     "if(!cV||!cW||!cE)return;if(cE['composite']){__aimDrawSkinBanner(cV,cW,cF['composite'],cU,cI,cJ);return;}const {frame:cX,ring:cY,emblem:cZ,pip:d0,headshot:d1}=cF;", 'composite draw in existing timed HUD');
   banner = replaceOne(banner, "cP(cW,d0,d5['x'],d5['y'],d5['rotation'],d7?cU['newPipScale']:0x1),",
-    "(cE['pipFallback']==='generic-chevron'?__aimDrawSkinPip(cW,d5['x'],d5['y'],d5['rotation'],d7?cU['newPipScale']:0x1):cP(cW,d0,d5['x'],d5['y'],d5['rotation'],d7?cU['newPipScale']:0x1)),", 'visible radial marker fallback for documented empty pip layers');
+    "(cE['pipSprite']?__aimDrawSkinSprite(cW,d0,cE['pipSprite'],d5['x'],d5['y'],d5['rotation'],d7?cU['newPipScale']:0x1):cE['pipFallback']==='generic-chevron'?__aimDrawSkinPip(cW,d5['x'],d5['y'],d5['rotation'],d7?cU['newPipScale']:0x1):cP(cW,d0,d5['x'],d5['y'],d5['rotation'],d7?cU['newPipScale']:0x1)),", 'source sprite drawing and legacy empty-pip fallback');
   banner = replaceOne(banner, "'setup'(cA,{emit:cB}){const cC=d(Se);bP();function cD(dQ)",
     "'setup'(cA,{emit:cB}){const cC=d(Se);const __aimSkinRevision=x(0);E(__aimSkins.subscribe(()=>{__aimSkinRevision.value+=1}));bP();function cD(dQ)", 'reactive selection and async load subscription');
   banner = replaceOne(banner, "cG=e(()=>{const dQ=cC['audioSettings']['value']['killKit'];return cC['sceneSource']['value']==='custom'&&av(dQ)&&Dt(dQ)?dQ:null;})",
     "cG=e(()=>{__aimSkinRevision.value;const skin=__aimSkins.bannerKit();if(skin)return skin;const dQ=cC['audioSettings']['value']['killKit'];return cC['sceneSource']['value']==='custom'&&av(dQ)&&Dt(dQ)?dQ:null;})", 'selected weapon banner with native fallback');
-  result['DVK7uRSu.js'] = 'import{skinPacks as __aimSkins,drawCompositeBanner as __aimDrawSkinBanner,drawFallbackPip as __aimDrawSkinPip}from"./aim-skin-packs.mjs";\n' + banner;
+  result['DVK7uRSu.js'] = 'import{skinPacks as __aimSkins,drawCompositeBanner as __aimDrawSkinBanner,drawFallbackPip as __aimDrawSkinPip,drawSpritePip as __aimDrawSkinSprite}from"./aim-skin-packs.mjs";\n' + banner;
   return result;
 }

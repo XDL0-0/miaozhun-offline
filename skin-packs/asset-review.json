@@ -3,7 +3,7 @@
   "compiledOn": "2026-10-19",
   "review": {
     "audio": "Every stored kill MP3 decoded with ffmpeg -map 0:a:0 -vn. Gunfire uses 30 reviewed single-shot segments from downloaded official Riot CDN previews, retained as 14 complete original AAC tracks.",
-    "banners": "Composite PNGs remain settings thumbnails. Gameplay now uses separately reviewed frame, ring, emblem, pip and headshot PNG layers from Kingdom Archives, preserving source pixel dimensions and measured placement. The same skin-colored pip is placed radially 1–5 times by the existing client HUD; no first-kill composite is drawn during layered gameplay. Ayakashi supplies four transparent 1x1 pip placeholders; an explicit generic-chevron fallback provides visible radial kill states for those four palettes.",
+    "banners": "Gameplay uses reviewed frame, ring, emblem, pip and headshot source pixels. Ayakashi pips sample the isolated colored flame region [200,36,63,96] of each retained original RGBA composite at native logical size 31.5x48; empty independent pip placeholders are no longer used. No generated or generic replacement artwork is used for current skins.",
     "provenance": "Local wiki download manifest paths and hashes verified against bytes. All 79 tracked kill clips match decoded source PCM; 76 pairs are also byte-identical.",
     "scope": "All 30 catalog weapon/theme fire combinations have independent reviewed single-shot segments. ORA has five distinct theme segments for each of four weapons. Inspection, kill and finisher clips are not relabeled as gunfire.",
     "evidence": [
@@ -64,13 +64,15 @@
           }
         },
         "pip": {
-          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip.png",
-          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-          "width": 1,
-          "height": 1,
+          "path": "skin-packs/media/ayakashi/banners/default/default.png",
+          "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7",
+          "width": 468,
+          "height": 469,
           "source": {
-            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip.png"
+            "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner.png",
+            "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+            "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner.png?1e0b5",
+            "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7"
           }
         },
         "headshot": {
@@ -84,13 +86,23 @@
           }
         }
       },
-      "pipRadius": 85,
+      "pipRadius": 108.5,
       "headshotOffset": [
         -0.3,
         -18.5
       ],
-      "pipFallback": "generic-chevron",
-      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
+      "pipSprite": {
+        "source": [
+          200,
+          36,
+          63,
+          96
+        ],
+        "size": [
+          31.5,
+          48
+        ]
+      }
     },
     {
       "collection": "ayakashi",
@@ -139,13 +151,15 @@
           }
         },
         "pip": {
-          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v3.png",
-          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-          "width": 1,
-          "height": 1,
+          "path": "skin-packs/media/ayakashi/banners/default/blue.png",
+          "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3",
+          "width": 468,
+          "height": 469,
           "source": {
-            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v3.png"
+            "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Blue.png",
+            "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+            "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Blue.png?f2a15",
+            "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3"
           }
         },
         "headshot": {
@@ -159,13 +173,23 @@
           }
         }
       },
-      "pipRadius": 85,
+      "pipRadius": 108.5,
       "headshotOffset": [
         -0.3,
         -18.5
       ],
-      "pipFallback": "generic-chevron",
-      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
+      "pipSprite": {
+        "source": [
+          200,
+          36,
+          63,
+          96
+        ],
+        "size": [
+          31.5,
+          48
+        ]
+      }
     },
     {
       "collection": "ayakashi",
@@ -214,13 +238,15 @@
           }
         },
         "pip": {
-          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v2.png",
-          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-          "width": 1,
-          "height": 1,
+          "path": "skin-packs/media/ayakashi/banners/default/pink.png",
+          "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13",
+          "width": 468,
+          "height": 469,
           "source": {
-            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v2.png"
+            "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Pink.png",
+            "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+            "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Pink.png?089ec",
+            "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13"
           }
         },
         "headshot": {
@@ -234,13 +260,23 @@
           }
         }
       },
-      "pipRadius": 85,
+      "pipRadius": 108.5,
       "headshotOffset": [
         -0.3,
         -18.5
       ],
-      "pipFallback": "generic-chevron",
-      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
+      "pipSprite": {
+        "source": [
+          200,
+          36,
+          63,
+          96
+        ],
+        "size": [
+          31.5,
+          48
+        ]
+      }
     },
     {
       "collection": "ayakashi",
@@ -289,13 +325,15 @@
           }
         },
         "pip": {
-          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v1.png",
-          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-          "width": 1,
-          "height": 1,
+          "path": "skin-packs/media/ayakashi/banners/default/red.png",
+          "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d",
+          "width": 468,
+          "height": 469,
           "source": {
-            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v1.png"
+            "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Red.png",
+            "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+            "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Red.png?0c837",
+            "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d"
           }
         },
         "headshot": {
@@ -309,13 +347,23 @@
           }
         }
       },
-      "pipRadius": 85,
+      "pipRadius": 108.5,
       "headshotOffset": [
         -0.3,
         -18.5
       ],
-      "pipFallback": "generic-chevron",
-      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
+      "pipSprite": {
+        "source": [
+          200,
+          36,
+          63,
+          96
+        ],
+        "size": [
+          31.5,
+          48
+        ]
+      }
     },
     {
       "collection": "kuronami",

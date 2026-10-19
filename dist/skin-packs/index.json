@@ -16,7 +16,7 @@
     "successiveAudio": 13,
     "banners": 37,
     "layeredBanners": 37,
-    "bannerLayers": 86,
+    "bannerLayers": 89,
     "fire": 30,
     "missingFire": 0,
     "eligibleFireCombinations": 30
@@ -538,15 +538,26 @@
                 "frame": "/skin-packs/layers/c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0.png",
                 "ring": "/skin-packs/layers/4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c.png",
                 "emblem": "/skin-packs/layers/932f489b97454de1cabcff4aa29f209731b841cee3c1386d269a9d867fe08913.png",
-                "pip": "/skin-packs/layers/98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b.png"
+                "pip": "/skin-packs/layers/1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7.png"
               },
               "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
-              "pipRadius": 85,
+              "pipRadius": 108.5,
               "headshotOffset": [
                 -0.3,
                 -18.5
               ],
-              "pipFallback": "generic-chevron"
+              "pipSprite": {
+                "source": [
+                  200,
+                  36,
+                  63,
+                  96
+                ],
+                "size": [
+                  31.5,
+                  48
+                ]
+              }
             },
             {
               "id": "blue",
@@ -556,15 +567,26 @@
                 "frame": "/skin-packs/layers/c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0.png",
                 "ring": "/skin-packs/layers/4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c.png",
                 "emblem": "/skin-packs/layers/83fb8483b8608625a6a2a080c78ab451bc7b8b6eb3e803a340291729e5ffeeab.png",
-                "pip": "/skin-packs/layers/98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b.png"
+                "pip": "/skin-packs/layers/c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3.png"
               },
               "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
-              "pipRadius": 85,
+              "pipRadius": 108.5,
               "headshotOffset": [
                 -0.3,
                 -18.5
               ],
-              "pipFallback": "generic-chevron"
+              "pipSprite": {
+                "source": [
+                  200,
+                  36,
+                  63,
+                  96
+                ],
+                "size": [
+                  31.5,
+                  48
+                ]
+              }
             },
             {
               "id": "pink",
@@ -574,15 +596,26 @@
                 "frame": "/skin-packs/layers/c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0.png",
                 "ring": "/skin-packs/layers/4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c.png",
                 "emblem": "/skin-packs/layers/81fd082d9233cd9ad6a8ae6629e676ae3a994365c16f0f01000b9a0edb55a23b.png",
-                "pip": "/skin-packs/layers/98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b.png"
+                "pip": "/skin-packs/layers/f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13.png"
               },
               "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
-              "pipRadius": 85,
+              "pipRadius": 108.5,
               "headshotOffset": [
                 -0.3,
                 -18.5
               ],
-              "pipFallback": "generic-chevron"
+              "pipSprite": {
+                "source": [
+                  200,
+                  36,
+                  63,
+                  96
+                ],
+                "size": [
+                  31.5,
+                  48
+                ]
+              }
             },
             {
               "id": "red",
@@ -592,15 +625,26 @@
                 "frame": "/skin-packs/layers/c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0.png",
                 "ring": "/skin-packs/layers/4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c.png",
                 "emblem": "/skin-packs/layers/ff40fe5aad2892e08977af5b063681360e5ec5fe3b213ffc4fca4f436c0dd354.png",
-                "pip": "/skin-packs/layers/98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b.png"
+                "pip": "/skin-packs/layers/c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d.png"
               },
               "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
-              "pipRadius": 85,
+              "pipRadius": 108.5,
               "headshotOffset": [
                 -0.3,
                 -18.5
               ],
-              "pipFallback": "generic-chevron"
+              "pipSprite": {
+                "source": [
+                  200,
+                  36,
+                  63,
+                  96
+                ],
+                "size": [
+                  31.5,
+                  48
+                ]
+              }
             }
           ],
           "missing": []

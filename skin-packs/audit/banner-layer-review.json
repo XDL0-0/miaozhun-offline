@@ -387,13 +387,15 @@
       }
     },
     {
-      "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip.png",
-      "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-      "width": 1,
-      "height": 1,
+      "path": "skin-packs/media/ayakashi/banners/default/default.png",
+      "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7",
+      "width": 468,
+      "height": 469,
       "source": {
-        "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-        "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip.png"
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner.png?1e0b5",
+        "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7"
       }
     },
     {
@@ -417,13 +419,15 @@
       }
     },
     {
-      "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v3.png",
-      "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-      "width": 1,
-      "height": 1,
+      "path": "skin-packs/media/ayakashi/banners/default/blue.png",
+      "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3",
+      "width": 468,
+      "height": 469,
       "source": {
-        "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-        "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v3.png"
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Blue.png?f2a15",
+        "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3"
       }
     },
     {
@@ -437,13 +441,15 @@
       }
     },
     {
-      "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v2.png",
-      "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-      "width": 1,
-      "height": 1,
+      "path": "skin-packs/media/ayakashi/banners/default/pink.png",
+      "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13",
+      "width": 468,
+      "height": 469,
       "source": {
-        "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-        "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v2.png"
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Pink.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Pink.png?089ec",
+        "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13"
       }
     },
     {
@@ -457,13 +463,15 @@
       }
     },
     {
-      "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v1.png",
-      "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
-      "width": 1,
-      "height": 1,
+      "path": "skin-packs/media/ayakashi/banners/default/red.png",
+      "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d",
+      "width": 468,
+      "height": 469,
       "source": {
-        "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
-        "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v1.png"
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Red.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Red.png?0c837",
+        "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d"
       }
     },
     {
@@ -1287,9 +1295,9 @@
       }
     }
   ],
-  "uniqueOutputLayers": 86,
+  "uniqueOutputLayers": 89,
   "limitations": [
-    "Ayakashi pip PNGs are transparent 1x1 placeholders. Its four variants retain source frame/ring/emblem but use documented generic white radial chevrons, not an invented skin-specific asset.",
-    "Unreal shader/VFX animation is not reproduced."
-  ]
+    "Original Unreal shader/VFX animation is not reproduced. Ayakashi uses original composite flame fragments with the native client animation."
+  ],
+  "followUp": "Ayakashi now uses the colored flame fragments in its four retained original RGBA composites. See ayakashi-flame-review.json for source rectangles, sizes and hashes. Empty downloaded independent pips are retained only as historical acquisition evidence."
 }

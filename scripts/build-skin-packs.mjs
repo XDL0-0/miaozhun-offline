@@ -122,6 +122,15 @@ function validateReview(catalog,review){
           ||(entry.layers.pip.width===1||entry.layers.pip.height===1)&&entry.pipFallback!=='generic-chevron'){
           throw new Error('Invisible banner pip requires an explicit fallback: '+entry.path);
         }
+        if(entry.pipSprite!==undefined){
+          const sprite=entry.pipSprite,source=sprite?.source,size=sprite?.size;
+          if(!Array.isArray(source)||source.length!==4||source.some(value=>!Number.isInteger(value))
+            ||source[0]<0||source[1]<0||source[2]<1||source[3]<1
+            ||source[0]+source[2]>entry.layers.pip.width||source[1]+source[3]>entry.layers.pip.height
+            ||!Array.isArray(size)||size.length!==2||size.some(value=>!Number.isFinite(value)||value<=0||value>150)){
+            throw new Error('Invalid reviewed pip sprite: '+entry.path);
+          }
+        }
       }
       if(Object.hasOwn(entry,'excerpt')){
         if(kind==='banners')throw new Error('Reviewed banners cannot have audio excerpts');
@@ -195,7 +204,7 @@ export function buildSkinPacks({root=projectRoot,destination}={}){
             if(Object.values(layers).every(Boolean)){
               const {headshot,...parts}=layers;
               Object.assign(banner,{layers:parts,headshot,pipRadius:entry.pipRadius,headshotOffset:entry.headshotOffset,
-                ...(entry.pipFallback?{pipFallback:entry.pipFallback}:{})});
+                ...(entry.pipFallback?{pipFallback:entry.pipFallback}:{}),...(entry.pipSprite?{pipSprite:entry.pipSprite}:{})});
               for(const value of Object.values(layers))layerUrls.add(value);
               counts.layeredBanners++;
             }else{

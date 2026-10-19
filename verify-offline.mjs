@@ -126,6 +126,10 @@ if(has('/skin-packs/index.json')){
     if(banner.layers){
      if(!['frame','ring','emblem','pip'].every(layer=>banner.layers[layer])||!(banner.pipRadius>0&&banner.pipRadius<=150)||!Array.isArray(banner.headshotOffset)||banner.headshotOffset.length!==2||banner.headshotOffset.some(value=>!Number.isFinite(value)||Math.abs(value)>150))throw new Error('Invalid skin banner geometry');
      for(const url of [...Object.values(banner.layers),banner.headshot].filter(Boolean)){skinAsset(url,'banner-layer');layerUrls.add(url)}
+     if(banner.pipSprite){
+      const {source,size}=banner.pipSprite,pip=has(banner.layers.pip)?fs.readFileSync(path.join(root,banner.layers.pip.slice(1))):null;
+      if(!Array.isArray(source)||source.length!==4||source.some(value=>!Number.isInteger(value))||source[0]<0||source[1]<0||source[2]<=0||source[3]<=0||!Array.isArray(size)||size.length!==2||size.some(value=>!Number.isFinite(value)||value<=0||value>150)||pip&&(source[0]+source[2]>pip.readUInt32BE(16)||source[1]+source[3]>pip.readUInt32BE(20)))throw new Error('Invalid skin pip sprite geometry');
+     }
      counts.layeredBanners++;
     }
    }

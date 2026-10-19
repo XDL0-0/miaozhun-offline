@@ -207,7 +207,7 @@ export function createSkinPackRuntime(options = {}) {
     if (!url) return null;
     const banner = manifest?.collections.flatMap(collection => collection.themes.flatMap(theme => theme.banners)).find(item => item.url === url);
     if (banner?.layers) return bannerParts(banner).every(part => images.has(part))
-      ? {layers: banner.layers, headshot: banner.headshot, pipRadius: banner.pipRadius, headshotOffset: banner.headshotOffset, pipFallback: banner.pipFallback} : null;
+      ? {layers: banner.layers, headshot: banner.headshot, pipRadius: banner.pipRadius, headshotOffset: banner.headshotOffset, pipFallback: banner.pipFallback, pipSprite: banner.pipSprite} : null;
     return images.has(url) ? {composite: url, pipRadius: 100, headshotOffset: [0, -90]} : null;
   }
   function setActiveWeapon(weapon) {
@@ -262,9 +262,18 @@ export function createSkinPackRuntime(options = {}) {
   };
 }
 
-// Some source packs (Ayakashi) supply transparent 1x1 pip placeholders. Keep
-// their emblem/ring, but provide visible generic radial markers instead of
-// pretending that the source includes the original game's missing effect.
+// Reuse the real flame pixels retained in Ayakashi's transparent source artwork.
+export function drawSpritePip(context, image, sprite, x, y, rotation, scale = 1) {
+  // Sample the original transparent artwork directly. No generated replacement
+  // pixels or image construction is needed on the kill/render path.
+  const [sx, sy, sw, sh] = sprite.source, [width, height] = sprite.size;
+  context.save(); context.translate(x, y); context.rotate(rotation); context.scale(scale, scale);
+  context.drawImage(image, sx, sy, sw, sh, -width / 2, -height / 2, width, height);
+  context.restore();
+}
+
+// Retain compatibility with older schema-2 packs that explicitly request a
+// generic marker. Current reviewed skins no longer require this fallback.
 export function drawFallbackPip(context, x, y, rotation, scale = 1) {
   context.save(); context.translate(x, y); context.rotate(rotation); context.scale(scale, scale);
   context.fillStyle = '#f3f5f8'; context.beginPath();

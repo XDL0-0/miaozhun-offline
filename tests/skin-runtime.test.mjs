@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {spawnSync} from 'node:child_process';
-import {SKIN_WEAPONS,createSkinPackRuntime,drawCompositeBanner,killIndex} from '../patches/skin-packs-runtime.mjs';
+import {SKIN_WEAPONS,createSkinPackRuntime,drawCompositeBanner,drawSpritePip,killIndex} from '../patches/skin-packs-runtime.mjs';
 import {applySkinPacksPatch} from '../patches/skin-packs.mjs';
 import {applyInterpolationPatch} from '../patches/interpolation.mjs';
 import {applyHudPatch} from '../patches/hud.mjs';
@@ -463,6 +463,7 @@ test('all 37 delivered skin variants draw changing radial artwork through the ac
       c:value=>value,x:value=>({value:value===null?canvas:value}),A:(get,callback)=>callback(get()),D(){},E(){},
       Dt:key=>h.runtime.bannerDefinition(key),__aimSkins:h.runtime,Pt:['frame','ring','emblem','pip'],
       __aimDrawSkinPip(ctx,x,y){assert.equal(banner.pipFallback,'generic-chevron');calls.push({url:banner.layers.pip,at:[x,y],fallback:true})},
+      __aimDrawSkinSprite:drawSpritePip,
       Image:class{constructor(){assert.fail('gameplay must reuse decoded layers')}},
       ul:()=>({scale:1,alpha:1,ringRotation:0,ringGlow:0,newPipAlpha:1,newPipScale:1,headshotScale:1}),wt:killIndex,ol:positions,
       window:{devicePixelRatio:2},al:300,
@@ -511,8 +512,37 @@ test('actual HUD consumes the first recent skin kill on mount, preserves native 
   waiting.tick();assert.equal(waiting.state().showing,true,'unchanged game time keeps paused kill feedback at the same age');
   waiting.view.now=12.31;waiting.tick();assert.equal(waiting.state().showing,false);
   const expired=hud(patched['DVK7uRSu.js'],{at:1,now:10});expired.tick();assert.equal(expired.state().showing,false);
+  const early=hud(patched['DVK7uRSu.js'],{seq:1,kills:3,at:10,now:10-1/128});
+  early.tick();early.view.now=10.15;early.tick();
+  assert.equal(early.state().showing,true,'a kill arriving one simulation tick before the HUD clock must remain pending');
+  assert.equal(early.state().pips,3);
   const nativeBefore=hud(originals['DVK7uRSu.js'],{kit:'skinGaia'}),nativeAfter=hud(patched['DVK7uRSu.js'],{kit:'skinGaia'});
   nativeBefore.tick();nativeAfter.tick();assert.equal(nativeBefore.state().showing,false);assert.equal(nativeAfter.state().showing,false);
+});
+
+test('actual HUD clears the whole backing canvas after an animated transform, including the lower-right quadrant',()=>{
+  const source=patched['DVK7uRSu.js'],start=source.indexOf('function cQ(){'),end=source.indexOf('function cR(',start);
+  const operations=[];let matrix=[.55,0,0,.55,150,150];
+  const context={setTransform(...next){matrix=next;operations.push(['transform',...next])},clearRect(...bounds){operations.push(['clear',...bounds,...matrix])}};
+  const clear=vm.runInNewContext('('+source.slice(start,end)+')',{cD:{value:{width:300,height:300,getContext:()=>context}}});
+  clear();
+  assert.deepEqual(operations.at(-1),['clear',0,0,300,300,1,0,0,1,0,0],'expiry must clear in backing-pixel coordinates instead of only the transformed bottom-right region');
+});
+
+test('Ayakashi uses four real source flame sprites instead of blank or generic pips',()=>{
+  const manifest=JSON.parse(fs.readFileSync(new URL('../dist/skin-packs/index.json',import.meta.url),'utf8'));
+  const banners=manifest.collections.find(collection=>collection.id==='ayakashi').themes[0].banners;
+  assert.equal(banners.length,4);assert.equal(new Set(banners.map(banner=>banner.layers.pip)).size,4);
+  for(const banner of banners){
+    assert.equal(banner.pipFallback,undefined);
+    assert.deepEqual(banner.pipSprite,{source:[200,36,63,96],size:[31.5,48]});
+    const calls=[],image={url:banner.layers.pip};
+    const context={save(){},restore(){},translate(){},rotate(){},scale(){},drawImage(...args){calls.push(args)}};
+    drawSpritePip(context,image,banner.pipSprite,0,-banner.pipRadius,0,1);
+    assert.deepEqual(calls,[[image,200,36,63,96,-15.75,-24,31.5,48]],'only the real flame fragment may be drawn, not a second full composite emblem');
+    const pixels=fs.readFileSync(new URL('../dist'+banner.layers.pip,import.meta.url));
+    assert.equal(pixels.readUInt32BE(16),468);assert.equal(pixels.readUInt32BE(20),469);
+  }
 });
 
 test('strict skin patch composes after all performance transforms, preserves inputs and every emitted module parses',()=>{

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "algorithm": "SHA256",
   "root": "dist",
-  "createdAt": "2026-10-19T16:48:18.834Z",
-  "fileCount": 2062,
-  "storedBytes": 176191458,
+  "createdAt": "2026-10-19T18:07:04.882Z",
+  "fileCount": 2065,
+  "storedBytes": 176537734,
   "encryptedAssets": 410,
   "resources": [
     {
@@ -9434,8 +9434,8 @@
     },
     {
       "path": "/js/DVK7uRSu.js",
-      "bytes": 153676,
-      "sha256": "90854872f6ab480a56853969921067824079652f1fea3b855e28e244ac99650b"
+      "bytes": 153886,
+      "sha256": "823f0a43c9f53b51df9d1eefad5a96c3d351f7b4d57522579f900c2b005050a0"
     },
     {
       "path": "/js/DXaB1Kn3.js",
@@ -9534,8 +9534,8 @@
     },
     {
       "path": "/js/aim-skin-packs.mjs",
-      "bytes": 25552,
-      "sha256": "419aae9cd0d6f46bbd93321ead092fb0a0b02022b5ac788ec242442a37b1df0f"
+      "bytes": 26096,
+      "sha256": "a3af1cac0e1fc637aa08339d4fe925feb6a3c4bdf0c6c399c7bf6cd0f753b871"
     },
     {
       "path": "/js/hJDQGPKm.js",
@@ -9890,7 +9890,7 @@
     {
       "path": "/offline-manifest.json",
       "bytes": 867,
-      "sha256": "321f3c06d09d2ebae0c2e3c4ce0b15d9d32fca4eb76ee53a75a2b3a17b4486ed"
+      "sha256": "fb2b0b4926b144af43d170f5aa356e386b2815144c5883d05d7e77cf1240a44e"
     },
     {
       "path": "/offline-runtime.js",
@@ -10314,8 +10314,8 @@
     },
     {
       "path": "/skin-packs/index.json",
-      "bytes": 46108,
-      "sha256": "25046433762ea19cfc50a9cdd1c08cc3284d4b8ccfbc1f17c6275f7eff8a9363"
+      "bytes": 47008,
+      "sha256": "5627d9358ef50e19d75e9c233f41fdbf491d8138ec7f204a4e04a26ed5e1e961"
     },
     {
       "path": "/skin-packs/kuronami/banners/default/black.png",
@@ -10396,6 +10396,11 @@
       "path": "/skin-packs/layers/1b8e4fe3b3940af8aede47b25acb3de46054c47485744b1689450b0027ced610.png",
       "bytes": 2575,
       "sha256": "1b8e4fe3b3940af8aede47b25acb3de46054c47485744b1689450b0027ced610"
+    },
+    {
+      "path": "/skin-packs/layers/1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7.png",
+      "bytes": 83111,
+      "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7"
     },
     {
       "path": "/skin-packs/layers/1c89f153aa3f23051df9fd034b7a0c80691acdb7cc3b0c807320062ba50c073a.png",
@@ -10648,11 +10653,6 @@
       "sha256": "9701e903773634e6785ec993771c5490058d319a7a9d869d87c25cd93c387d68"
     },
     {
-      "path": "/skin-packs/layers/98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b.png",
-      "bytes": 81,
-      "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b"
-    },
-    {
       "path": "/skin-packs/layers/a1174106172c892791f4c33290ce708b4c8278f757424070934794e9356f5384.png",
       "bytes": 9611,
       "sha256": "a1174106172c892791f4c33290ce708b4c8278f757424070934794e9356f5384"
@@ -10706,6 +10706,16 @@
       "path": "/skin-packs/layers/be497d4b83c45acda596f1498922b454c830a55a0e7b8ebce5a7a16b53c1a522.png",
       "bytes": 7188,
       "sha256": "be497d4b83c45acda596f1498922b454c830a55a0e7b8ebce5a7a16b53c1a522"
+    },
+    {
+      "path": "/skin-packs/layers/c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3.png",
+      "bytes": 85947,
+      "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3"
+    },
+    {
+      "path": "/skin-packs/layers/c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d.png",
+      "bytes": 88937,
+      "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d"
     },
     {
       "path": "/skin-packs/layers/c116f194b4b275231babc41641b70c66060aa49a430b84f0d6729d36fc476891.png",
@@ -10801,6 +10811,11 @@
       "path": "/skin-packs/layers/f6e9ef09c2c648c6eb4e0327378dd7f7a08506a799fc70ab6ce40c70bf7d2109.png",
       "bytes": 2038,
       "sha256": "f6e9ef09c2c648c6eb4e0327378dd7f7a08506a799fc70ab6ce40c70bf7d2109"
+    },
+    {
+      "path": "/skin-packs/layers/f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13.png",
+      "bytes": 86708,
+      "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13"
     },
     {
       "path": "/skin-packs/layers/ff40fe5aad2892e08977af5b063681360e5ec5fe3b213ffc4fca4f436c0dd354.png",
