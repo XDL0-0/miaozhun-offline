@@ -19,6 +19,7 @@ const createWeaponAppearanceImpl=createWeaponAppearance;
 const aQ=fs.readFileSync(file('site/js/aQOfOAp-.js'),'utf8');
 const rendererAlias=aQ.slice(aQ.lastIndexOf('export{')).match(/\bDp as (\w+)\b/)[1];
 const cases=Object.keys(index.models).sort((a,b)=>Number(b.includes('ayakashi'))-Number(a.includes('ayakashi')));
+const materialReview=process.argv.includes('--materials');
 fs.writeFileSync(file('dist/__weapon-review.html'),`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>皮肤枪模验证</title>
 <style>body{margin:0;background:#10171f;color:#e8eff7;font:14px system-ui}header{padding:18px 22px}h1{font-size:22px;margin:0 0 8px}p{margin:4px 0;color:#aebed0}#results{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;padding:0 20px 20px}figure{margin:0;background:#1b2633;border:1px solid #334659;border-radius:10px;overflow:hidden}figure img{width:100%;display:block}figcaption{padding:8px 12px}#report{white-space:pre-wrap;padding:20px}#app{display:none}</style>
 <header><h1>皮肤动作与高清贴图 · 离线实机验证</h1><p>原始 2K 贴图 · 专属换弹与检视 · 原始枪口粒子及枪身发光 · Y 检视</p><p id="status">正在检查模型、骨骼、动作和开火特效…</p><p id="key-proof">键盘检视检查：等待动作验证完成</p></header><section id="results"></section><pre id="report"></pre><div id="app"></div>
@@ -37,6 +38,7 @@ try{
   const [collection,gun]=key.split('/');choose(gun,collection);const pack=await load(gun==='vandal'?'viewmodel':gun);if(!pack)throw Error('Native pack missing '+key);
   const model=create(pack);model.setFovHorizontal(90);model.setGun('vandal');
   const frames=[];const layer=model.fxLayer(),effects=weaponEffects({detail:15}),armScales=new Map();await effects.prepare(gun,renderer,model);
+  let surfaceCheck=null;
   const inspect=[{at:.01,inspect:true,weapon:gun}];
   for(const [state,seconds,shots,reload,hand,ads,melee] of [['idle',0,[],null,'right',0,[]],['fire',.04,[0],null,'right',0,[]],['reload',1.25,[],1.25,'right',0,[]],['inspect',2.5,[],null,'right',0,inspect],['inspect-fire',2.54,[2.5],null,'right',0,inspect],['inspect-reload',2.7,[],.2,'right',0,inspect],['inspect-cancelled',3,[],null,'right',0,inspect],['inspect-repeat',5.2,[],null,'right',0,[{at:4.01,inspect:true,weapon:gun}]],['inspect-ended',14,[],null,'right',0,[{at:4.01,inspect:true,weapon:gun}]],['left',0,[],null,'left',0,[]],['ads',0,[],null,'right',1,[]]]){
    model.setHand(hand);model.update({seconds,shots,melee,speed:0,reloadSince:reload,reloadDuration:3,adsBlend:ads,fireIntervalSeconds:.1});renderer.clear();model.render(renderer,{aspect:16/9});
@@ -48,9 +50,19 @@ try{
    layer.scene.traverse(obj=>{if(!obj.isBone||!/^L_|^R_|^MasterWeapon$/.test(obj.name))return;if(state==='idle')armScales.set(obj.uuid,obj.scale.toArray());if(state==='inspect-ended'){const original=armScales.get(obj.uuid);if(original&&obj.scale.toArray().some((v,k)=>Math.abs(v-original[k])>1e-5))throw Error('Hand scale not restored '+key+' '+obj.name);}});
    if(['inspect','inspect-repeat'].includes(state)&&motion!=='inspect'||state==='reload'&&motion!=='reload'||['inspect-cancelled','inspect-ended'].includes(state)&&motion==='inspect')throw Error('Wrong animation state '+key+' '+state+' '+motion);
    const stats=effects.stats();if(state==='fire'&&(!stats.systems.length||!stats.particles))throw Error('No skin muzzle particles '+key+' '+JSON.stringify(stats));
-   frames.push({state,motion,skinMesh,triangles:renderer.info.render.triangles,calls:renderer.info.render.calls,effects:stats});
-   if(state==='idle'||collection==='ayakashi'&&['fire','reload','inspect'].includes(state)){
+   const visibleMaterials=[];layer.scene.traverseVisible(obj=>{if(!obj.geometry)return;for(const m of Array.isArray(obj.material)?obj.material:[obj.material])if(m?.visible!==false)visibleMaterials.push({mesh:obj.name,material:m.name,map:!!m.map,color:m.color?.toArray(),emissiveIntensity:m.emissiveIntensity,transparent:m.transparent});});
+   frames.push({state,motion,skinMesh,triangles:renderer.info.render.triangles,calls:renderer.info.render.calls,effects:stats,...(${materialReview}?{visibleMaterials}:{})});
+   if(state==='idle'||collection==='ayakashi'&&['fire','reload','inspect'].includes(state)||${materialReview}&&(state==='inspect'||gun==='operator'&&['reload','ads'].includes(state))){
     const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');img.src=renderer.domElement.toDataURL('image/png');img.alt=collection+' '+gun+' '+state;caption.textContent=collection+' · '+gun.toUpperCase()+' · '+state;figure.append(img,caption);document.getElementById('results').append(figure);
+   }
+   if(${materialReview}&&state==='idle'){
+    const canvas=document.createElement('canvas');canvas.width=320;canvas.height=180;const ctx=canvas.getContext('2d',{willReadFrequently:true});
+    const snapshot=()=>{ctx.drawImage(renderer.domElement,0,0,320,180);return ctx.getImageData(0,0,320,180).data;};
+    const before=snapshot(),features=new Set(),clocks=new Set();layer.scene.traverseVisible(o=>{for(const m of Array.isArray(o.material)?o.material:[o.material])if(m?.userData.aimSurface){const s=m.userData.aimSurface;s.features.forEach(f=>features.add(f));clocks.add(s.clock);}});
+    for(const c of clocks){c.time.value=2;c.heat.value=.75;}renderer.clear();model.render(renderer,{aspect:16/9});const after=snapshot();
+    let animated=0,white=0,opaqueBackgroundChanges=0;for(let i=0;i<before.length;i+=4){if(before[i]>225&&before[i+1]>225&&before[i+2]>225)white++;if(Math.max(Math.abs(before[i]-after[i]),Math.abs(before[i+1]-after[i+1]),Math.abs(before[i+2]-after[i+2]))>5){animated++;if(before[i]===24&&before[i+1]===36&&before[i+2]===49)opaqueBackgroundChanges++;}}
+    surfaceCheck={features:[...features],animatedPixels:animated,whitePixels:white,outsidePixels:opaqueBackgroundChanges,probePixels:320*180};
+    if(opaqueBackgroundChanges>10)throw Error('Surface effect escaped the existing gun silhouette '+key);
    }
   }
   choose(gun,'default');
@@ -62,7 +74,7 @@ try{
   let restored=false;layer.scene.traverse(obj=>{if(obj.name==='skin:'+key)restored=true;});if(!restored)throw Error('Skin did not return '+key);
   effects.dispose();model.dispose();
   const memory={...renderer.info.memory};if(memory.geometries!==baselineMemory.geometries||memory.textures!==baselineMemory.textures)throw Error('GPU resources leaked '+key+' '+JSON.stringify(memory)+' baseline '+JSON.stringify(baselineMemory));
-  results.push({key,frames,defaultRestored:true,skinRestored:true,memoryAfterDispose:memory});status.textContent='已检查 '+results.length+' / '+cases.length+' 套枪模';
+  results.push({key,frames,...(surfaceCheck?{surfaceCheck}:{}),defaultRestored:true,skinRestored:true,memoryAfterDispose:memory});status.textContent='已检查 '+results.length+' / '+cases.length+' 套枪模';
  }
  status.textContent='通过：'+results.length+' 套枪模，'+results.length*11+' 个动作、开火特效与左右手状态。';
 }catch(e){errors.push(e.stack);status.textContent='验证失败：'+e.message;console.error(e);}

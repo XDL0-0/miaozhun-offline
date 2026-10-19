@@ -19,7 +19,9 @@ export function resolveEffectMaterial(logical,readRaw,readExport,seen=new Set())
   for(const [name,values] of [['Textures',p.TextureParameterValues],['Scalars',p.ScalarParameterValues],['Colors',p.VectorParameterValues],['Switches',p.StaticParametersRuntime?.StaticSwitchParameters]]){
     for(const v of values??[])if(v.bOverride!==false)data[name][v.ParameterInfo.Name]=v.ParameterValue??v.Value;
   }
-  data.BlendMode=exported.BlendMode??inherited.BlendMode;
+  const blend={BLEND_Opaque:0,BLEND_Masked:1,BLEND_Translucent:2,BLEND_TranslucentGreyTransmittance:2,BLEND_Additive:3,BLEND_Modulate:4,BLEND_AlphaComposite:5,BLEND_AlphaHoldout:6};
+  const override=p.BasePropertyOverrides;
+  data.BlendMode=blend[(override?.bOverride_BlendMode?override.BlendMode:p.BlendMode)?.split('::').at(-1)]??inherited.BlendMode??exported.BlendMode;
   return data;
 }
 

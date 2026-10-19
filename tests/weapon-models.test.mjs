@@ -1,3 +1,4 @@
+import {weaponMaterialTextures} from '../patches/weapon-body-materials-runtime.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -76,7 +77,7 @@ test('loader decodes every delivered model with no external requests and dedupli
   for(const key of Object.keys(index.models)){
     h.choose(key);const asset=await h.loader.load(key.split('/')[1]);assert.equal(asset?.key,key);
     const pack=read(local(index.models[key]));
-    const urls=[...asset.parts.flatMap(p=>p.materials.flatMap(m=>[m.map,m.normalMap,m.ormMap,m.emissiveMap].filter(Boolean))),...pack.effects.textures];
+    const urls=[...asset.parts.flatMap(p=>p.materials.flatMap(weaponMaterialTextures)),...pack.effects.textures];
     assert.equal(asset.pictures.size,new Set(urls).size);
   }
   assert.ok(h.fetches.every(url=>url.startsWith('/skin-packs/models/')));
@@ -143,9 +144,9 @@ test('native viewmodel bridge is version-pinned, reversible and never changes we
 
 test('all skin reload/inspect/fire montages decode original retargeted offline tracks',()=>{
   const sources=read(new URL('skin-packs/audit/weapon-model-sources.json',root)),unique=new Set();
-  assert.ok(sources.assets.filter(a=>a.url.endsWith('.png')&&a.source.width===2048).length>=70,'full-resolution 2K maps are retained');
   for(const url of Object.values(index.models)){
     const pack=read(local(url));
+    assert.ok(pack.parts.find(p=>p.role==='body').materials.some(m=>sources.assets.some(a=>a.url===m.map&&a.source.width===2048)),'each gun retains its original 2K body albedo');
     for(const action of ['reload','inspect','fire'])assert.ok(pack.motions.actions[action].arms,pack.collection+' '+action);
     for(const [id,clip]of Object.entries(pack.motions.clips)){
       unique.add(id);const bytes=gunzipSync(fs.readFileSync(local(clip.data))),data=decodeWeaponMotion(clip,binary(bytes));assert.ok(data.values.length>0);

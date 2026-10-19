@@ -1,3 +1,4 @@
+import {weaponMaterialTextures} from './patches/weapon-body-materials-runtime.mjs';
 // Verify the delivered local package, without contacting the network or opening a browser.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -160,8 +161,8 @@ try{
    if(!safe(part.url))throw new Error('Invalid weapon GLB path');requireAsset(part.url,key+' '+part.role);seen.add(part.url);
    const bytes=fs.readFileSync(path.join(root,part.url.slice(1))),decoded=decodeWeaponGlb(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));
    if(decoded.primitives.some(p=>p.material>=part.materials.length||!p.position.every(Number.isFinite)))throw new Error('Invalid weapon geometry '+key);
-   for(const mat of part.materials)for(const field of ['map','normalMap','ormMap','emissiveMap']){
-    const texture=mat[field];if(!texture)continue;if(!safe(texture))throw new Error('Invalid weapon texture path');requireAsset(texture,key+' '+mat.name);seen.add(texture);
+   for(const mat of part.materials)for(const texture of weaponMaterialTextures(mat)){
+    if(!safe(texture))throw new Error('Invalid weapon texture path');requireAsset(texture,key+' '+mat.name);seen.add(texture);
     const png=fs.readFileSync(path.join(root,texture.slice(1)));
     if(!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||png.readUInt32BE(16)>4096||png.readUInt32BE(20)>4096)throw new Error('Invalid weapon texture '+texture);
    }

@@ -36,9 +36,15 @@ node server.mjs
 
 枪模使用各系列标准配色；横幅配色只控制击杀横幅，ORA 五个音效主题共用其标准枪身。枪身贴图保留原始尺寸（主要为 **2048×2048**），不再缩到 1024，并启用各向异性过滤。动作按原游戏的蒙太奇配置接入：有些皮肤本来就共用基础动作，独立手部、弹匣与枪身活动部件则使用对应原始动画。换弹动作按训练的实际装弹时间同步，不改变换弹时长。
 
+枪身现按 79 种原始材质的父级默认值和实例覆盖构建。MRS 与 AEM 重组为同一张表面贴图的遮蔽、粗糙度、金属和高光四个通道，数据贴图在线性空间读取；底色保持正常色彩转换，不再额外提亮。ORA Operator 的枪身、弹匣、瞄具及镜片恢复原始零自发光设置，修复整体发白。透明与裁切状态按来源配置，RGX 的塑料外壳使用独立透明度遮罩，灯带使用专属亮度。
+
+保留第二套原始 UV，接入波澜等水晶材质的流动贴图、绮樱花瓣扫光、Primordium 开火热光、Ayakashi 遮罩边缘光及对应表面涂层。效果只在已有枪身三角形内着色，不添加屏幕色片、折射渲染目标、泛光或顶点位移；自发光限制在可控范围内。网页的物理表面材质仍是近似，不能完全复现 Riot 自定义的明暗梯度与专用着色器，参见 [Riot 着色器说明](https://www.riotgames.com/en/news/valorant-shaders-and-gameplay-clarity)。实际白模修正及材质画面见 [枪身前后对比](skin-packs/audit/weapon-body-material-comparison.png)，逐项检查见 [枪身材质验证](skin-packs/audit/weapon-body-material-validation.json)。
+
 开火材质读取父材质默认值和实例覆盖，使用对应的原始轮廓、透明通道、UV 旋转/滚动、动态溶解及查色表。查色表、噪声和默认贴图不再作为火焰轮廓；RGX 的棕色矩形已修正。无法可靠转换的程序光球、网格光罩、烟雾体积和缺少顶点变形的花瓣交叉面已停用，保留可用的小花瓣等原始粒子。当前保留 69 种可用材质；40 套来源配置中有 4 套附加光效因全部材质不受支持而停用，每项原因均有记录。所有 14 套枪械仍有可用枪口粒子。复杂枪身材质和特效与 Unreal 原版仍有差异，终结技未接入。逐项来源、转换及停用记录、SHA-256 见 [枪模素材审核](skin-packs/audit/weapon-model-sources.json)。离线包运行及常规重建不需要安装 VALORANT、Blender 或导出工具。
 
 开发验证可运行 `node scripts/review-weapon-models.mjs`，再访问本机 `/__weapon-review.html`；它使用内存中的独立皮肤配置，检查原生视图模型、换弹、检视、开火特效、动作打断、默认外观恢复和相对原版基线的 GPU 资源释放。最近一次结果见 [枪模验证记录](skin-packs/audit/weapon-model-validation.json)。验证完成后删除生成的 `dist/__weapon-*` 临时文件，再运行离线校验。
+
+使用 `node scripts/review-weapon-models.mjs --materials` 同时保存检视特写、实际材质绑定，并冻结枪的位置只推进材质时钟，检查动画像素与背景边界。该检查不改写用户皮肤选择、成绩或录像。
 
 `node scripts/review-weapon-effects.mjs` 另生成本机 `/__weapon-fx-review.html`，对全部枪械执行腰射/瞄准、低/高散布共 56 组五发连射，检查 4088 帧。它按固定相机和背景的像素变化检测大色块回归，检查不写入用户配置。RGX 在该测试中变化超过 48/255 的画面面积从最多 26.49% 降至 1.15%；该数据不是帧率测试或实战遮挡比例。完整前后数据见 [特效验证记录](skin-packs/audit/weapon-effects-validation.json)，画面见 [RGX 修正前后](skin-packs/audit/weapon-effects-comparison.png)。
 

@@ -107,8 +107,9 @@ const originalModules=Object.fromEntries(fs.readdirSync(moduleDirectory).filter(
 const optimizedModules=applyWeaponModelsPatch(applySkinPacksPatch(applyPrewarmPatch(applyFrameratePatch(applyHudPatch(applyInterpolationPatch(originalModules))))));
 for(const[name,text]of Object.entries(optimizedModules))if(text!==originalModules[name])fs.writeFileSync(path.join(moduleDirectory,name),text);
 fs.copyFileSync(path.join(root,'patches/skin-packs-runtime.mjs'),path.join(moduleDirectory,'aim-skin-packs.mjs'));
-fs.writeFileSync(path.join(moduleDirectory,'aim-weapon-models.mjs'),fs.readFileSync(path.join(root,'patches/weapon-models-runtime.mjs'),'utf8').replace("'./skin-packs-runtime.mjs'","'./aim-skin-packs.mjs'").replace("'./weapon-motion-runtime.mjs'","'./aim-weapon-motion.mjs'"));
+fs.writeFileSync(path.join(moduleDirectory,'aim-weapon-models.mjs'),fs.readFileSync(path.join(root,'patches/weapon-models-runtime.mjs'),'utf8').replace("'./skin-packs-runtime.mjs'","'./aim-skin-packs.mjs'").replace("'./weapon-motion-runtime.mjs'","'./aim-weapon-motion.mjs'").replace("'./weapon-body-materials-runtime.mjs'","'./aim-weapon-body-materials.mjs'"));
 fs.copyFileSync(path.join(root,'patches/weapon-motion-runtime.mjs'),path.join(moduleDirectory,'aim-weapon-motion.mjs'));
+fs.copyFileSync(path.join(root,'patches/weapon-body-materials-runtime.mjs'),path.join(moduleDirectory,'aim-weapon-body-materials.mjs'));
 const skinManifest=buildSkinPacks({root});
 fs.cpSync(path.join(root,'skin-packs/models'),path.join(dist,'skin-packs/models'),{recursive:true});
 const weaponModelManifest=JSON.parse(fs.readFileSync(path.join(root,'skin-packs/models/index.json'),'utf8'));

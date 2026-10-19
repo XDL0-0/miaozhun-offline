@@ -1,5 +1,6 @@
 import {skinPacks} from './aim-skin-packs.mjs';
 import {decodeWeaponMotion,createWeaponMotionPlayer} from './aim-weapon-motion.mjs';
+import {weaponMaterialTextures,createWeaponBodyMaterial} from './aim-weapon-body-materials.mjs';
 
 const WEAPONS=new Set(['vandal','phantom','sheriff','operator']);
 const weaponOf=stem=>stem==='viewmodel'?'vandal':stem;
@@ -48,10 +49,11 @@ export function decodeWeaponGlb(buffer){
   for(const mesh of json.meshes??[])for(const p of mesh.primitives){
     if((p.mode??4)!==4)throw new Error('Weapon primitive must use triangles');
     const position=convertVectors(accessor(p.attributes.POSITION),100),normal=convertVectors(accessor(p.attributes.NORMAL));
-    const uv=accessor(p.attributes.TEXCOORD_0),index=accessor(p.indices);
+    const uv=accessor(p.attributes.TEXCOORD_0),uv1=p.attributes.TEXCOORD_1===undefined?null:accessor(p.attributes.TEXCOORD_1),index=accessor(p.indices);
     const joint=p.attributes.JOINTS_0===undefined?null:accessor(p.attributes.JOINTS_0),weight=joint?accessor(p.attributes.WEIGHTS_0):null;
     if(position.length!==normal.length||uv.length!==position.length/3*2||index.length%3||index.some(i=>i>=position.length/3)||joint?.some(i=>i>=bones.length))throw new Error('Invalid weapon geometry');
-    primitives.push({position,normal,uv,index,joint,weight,material:p.material??0});
+    if(uv1&&uv1.length!==uv.length)throw new Error('Invalid secondary weapon UVs');
+    primitives.push({position,normal,uv,uv1,index,joint,weight,material:p.material??0});
   }
   if(!primitives.length)throw new Error('Empty weapon model');
   return {bones,primitives};
@@ -107,7 +109,7 @@ export function createWeaponModelLoader({skins=skinPacks,fetcher=(...args)=>fetc
       const decoded=await Promise.all(manifest.parts.map(async part=>{
         if(!['body','magazine','sight','silencer'].includes(part.role)||!Array.isArray(part.materials))throw new Error('Invalid weapon part');
         const data=decodeWeaponGlb(await request(part.url));
-        await Promise.all(part.materials.flatMap(mat=>['map','normalMap','ormMap','emissiveMap'].map(k=>mat[k]).filter(Boolean)).map(url=>{
+        await Promise.all(part.materials.flatMap(weaponMaterialTextures).map(url=>{
           if(!imageTasks.has(url))imageTasks.set(url,image(url).then(img=>pictures.set(url,img)));
           return imageTasks.get(url);
         }));
@@ -135,7 +137,7 @@ export const weaponEffectImage=url=>weaponModels.picture(url);
 // All Three.js types come from the existing renderer. There is one renderer,
 // one animation clock and one pair of hands, including left-handed viewmodels.
 export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,originals,stem,initial,environment,skins=skinPacks,loader=weaponModels}){
-  const {Group,Geometry,Attribute,Bone,Skeleton,SkinnedMesh,Mesh,Material,Texture,Vector3,Quaternion,srgb,repeat}=types;
+  const {Group,Geometry,Attribute,Bone,Skeleton,SkinnedMesh,Mesh,Material,Physical,Texture,Vector3,Quaternion,srgb,repeat}=types;
   const weapon=weaponOf(stem),nativeMeshes=originals.filter(Boolean);
   const armsScales=armsRig?.bones.map(b=>[b.scale.x,b.scale.y,b.scale.z]);
   let current=null,disposed=false,serial=0,key=null,requestedGun='vandal';
@@ -148,6 +150,7 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
   function construct(assets){
     const group=new Group();group.name='skin:'+assets.key;
     const geometries=new Set(),materials=new Set(),textures=new Map(),skeletons=new Set(),rigs=[],partMeshes=[];let motion=null;
+    const clock={time:{value:0},heat:{value:0}};
     function dispose(){motion?.dispose();for(const mesh of partMeshes)mesh.parent?.remove(mesh);parent.remove(group);for(const g of geometries)g.dispose();for(const m of materials)m.dispose();for(const t of textures.values())t.dispose();for(const s of skeletons)s.dispose();}
     function tex(url,color){
       if(!url)return null;const id=url+':'+color;
@@ -156,15 +159,10 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
       const t=new Texture(picture);t.flipY=false;t.wrapS=repeat;t.wrapT=repeat;t.anisotropy=8;if(color)t.colorSpace=srgb;t.needsUpdate=true;textures.set(id,t);return t;
     }
     function mats(part){return part.materials.map(m=>{
-      const orm=tex(m.ormMap,false),mat=new Material({map:tex(m.map,true),normalMap:tex(m.normalMap,false),roughnessMap:orm,metalnessMap:orm,
-        roughness:orm?1:m.roughness,metalness:orm?1:m.metalness,envMap:environment,envMapIntensity:1,
-        transparent:!!m.transparent,opacity:m.opacity,depthWrite:!m.transparent,emissiveMap:tex(m.emissiveMap,true),emissiveIntensity:m.emissiveIntensity});
-      mat.name=m.name;mat.color.setRGB(...m.color);mat.emissive.setRGB(...m.emissive);mat.normalScale?.set(1,-1);mat.visible=!m.hidden;
-      mat.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>','#include <map_fragment>\ndiffuseColor.rgb=pow(max(diffuseColor.rgb,vec3(0.0)),vec3(0.45));');};
-      mat.customProgramCacheKey=()=> 'aim-skin-albedo-0.45';materials.add(mat);return mat;
+      const mat=createWeaponBodyMaterial(m,{Material,Physical,tex,environment,clock});materials.add(mat);return mat;
     });}
     function geometry(p){
-      const g=new Geometry();g.setAttribute('position',new Attribute(p.position,3));g.setAttribute('normal',new Attribute(p.normal,3));g.setAttribute('uv',new Attribute(p.uv,2));g.setIndex(new Attribute(p.index,1));
+      const g=new Geometry();g.setAttribute('position',new Attribute(p.position,3));g.setAttribute('normal',new Attribute(p.normal,3));g.setAttribute('uv',new Attribute(p.uv,2));g.setAttribute('aimUv2',new Attribute(p.uv1??p.uv,2));g.setIndex(new Attribute(p.index,1));
       if(p.joint){g.setAttribute('skinIndex',new Attribute(p.joint,4));g.setAttribute('skinWeight',new Attribute(p.weight,4));}
       geometries.add(g);return g;
     }
@@ -201,7 +199,7 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
       }
       // Some spare sockets belong to the native rig, outside our group.
       motion=assets.motions&&armsRig?createWeaponMotionPlayer({motions:assets.motions,armsRig,armsScales,gunBones:bones,baseRig,Quaternion,weapon}):null;
-      return {key:assets.key,group,bindings:rigs,bones,boneMap,rest:body.data.bones,skeleton,dispose,motion,muzzle:boneMap.get('Muzzle')};
+      return {key:assets.key,group,bindings:rigs,bones,boneMap,rest:body.data.bones,skeleton,dispose,motion,clock,muzzle:boneMap.get('Muzzle')};
     }catch(error){dispose();throw error;}
   }
   function swap(assets){
@@ -211,6 +209,9 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
   }
   function update(state={},blocked=false){
     if(!current)return;
+    current.clock.time.value=Number.isFinite(state.seconds)?state.seconds:0;
+    const latestShot=state.shots?.at(-1),shotTime=typeof latestShot==='number'?latestShot:latestShot?.at;
+    current.clock.heat.value=Number.isFinite(shotTime)?Math.exp(-Math.max(0,current.clock.time.value-shotTime)*5):0;
     current.bones.forEach((bone,i)=>{const rest=current.rest[i];bone.position.set(...rest.t);bone.quaternion.set(...rest.q);bone.scale.set(...rest.s);});
     for(const b of current.bindings){
       b.skin.position.set(b.rest[0]+b.base.position.x-b.basePosition[0],b.rest[1]+b.base.position.y-b.basePosition[1],b.rest[2]+b.base.position.z-b.basePosition[2]);

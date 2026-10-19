@@ -7,6 +7,8 @@ import {gzipSync} from 'node:zlib';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {importWeaponEffects} from './import-weapon-effects.mjs';
+import {resolveEffectMaterial,materialPath} from './weapon-effect-materials.mjs';
+import {weaponBodyMaterial,surfacePackFilter} from './weapon-body-materials.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'qa-artifacts/val-model-tools'));
@@ -26,14 +28,24 @@ function store(bytes,ext,source){
   if(!written.has(name)){fs.writeFileSync(file,bytes);written.add(name);audit.assets.push({url:'/skin-packs/models/assets/'+name,bytes:bytes.length,sha256:hash,source});}
   return '/skin-packs/models/assets/'+name;
 }
-function texture(ref,kind='color'){
-  if(!ref?.ObjectPath)return null;
-  const logical=ref.ObjectPath.replace(/^\/Game\//,'ShooterGame/Content/').replace(/^\/Engine\//,'Engine/Content/').replace(/\.\d+$/,'')+'.png';
-  const file=path.join(sourceRoot,logical),key=logical+':'+kind;
+function texture(ref,kind='color',aoRef=null){
+  const source=materialPath(ref);if(!source)return null;
+  const logical=source.replace(/^\/Game\//,'ShooterGame/Content/').replace(/^\/Engine\//,'Engine/Content/')+'.png';
+  const aoLogical=materialPath(aoRef).replace(/^\/Game\//,'ShooterGame/Content/').replace(/^\/Engine\//,'Engine/Content/')+'.png';
+  const file=path.join(sourceRoot,logical),key=logical+':'+kind+':'+(aoRef?aoLogical:'');
   if(textures.has(key))return textures.get(key);
   if(!fs.existsSync(file))throw new Error('Missing required texture: '+logical);
   const original=fs.readFileSync(file),width=original.readUInt32BE(16),height=original.readUInt32BE(20);
-  let bytes=original;
+  let bytes=original,occlusion=null;
+  if(kind==='surface'){
+    const aoFile=aoRef?path.join(sourceRoot,aoLogical):null;
+    const args=['-v','error','-i',file];
+    if(aoFile){args.push('-i',aoFile,'-filter_complex',surfacePackFilter(width,height));occlusion={path:aoLogical,sha256:sha(fs.readFileSync(aoFile))};}
+    else args.push('-vf','format=rgba,colorchannelmixer=rr=0:rg=0:rb=1:gr=0:gg=1:gb=0:br=1:bg=0:bb=0:aa=0:ab=1,lutrgb=r=255');
+    const packed=spawnSync(process.env.FFMPEG_PATH??'ffmpeg',[...args,'-frames:v','1','-threads','1','-f','image2pipe','-c:v','png','pipe:1'],{maxBuffer:64*1024*1024,windowsHide:true});
+    if(packed.status!==0)throw new Error('Surface packing failed: '+logical+' '+packed.stderr);
+    bytes=packed.stdout;
+  }
   const filter=kind==='orm'?'colorchannelmixer=rr=0:rg=0:rb=1:gr=0:gg=1:gb=0:br=1:bg=0:bb=0':kind==='emissive'?'colorchannelmixer=rr=0:rg=1:rb=0:gr=0:gg=1:gb=0:br=0:bg=1:bb=0':null;
   if(filter){
     const result=spawnSync(process.env.FFMPEG_PATH??'ffmpeg',['-v','error','-i',file,'-vf',filter,'-frames:v','1','-threads','1','-f','image2pipe','-c:v','png','pipe:1'],{maxBuffer:64*1024*1024,windowsHide:true});
@@ -41,24 +53,18 @@ function texture(ref,kind='color'){
     bytes=result.stdout;
   }
   if(bytes.readUInt32BE(16)!==width||bytes.readUInt32BE(20)!==height)throw new Error('Texture resolution changed: '+logical);
-  const url=store(bytes,'png',{path:logical,sha256:sha(original),operation:kind,width,height,resolution:'original'});
+  const url=store(bytes,'png',{path:logical,sha256:sha(original),operation:kind,...(occlusion?{occlusion}:{}),width,height,resolution:'original'});
   textures.set(key,url);return url;
 }
-const rgb=c=>c?[c.R,c.G,c.B].map(x=>Math.max(0,Math.min(1,Number(x)||0))):[1,1,1];
+const rawMaterial=logical=>{const file=path.join(input,'properties',path.basename(logical)+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)).find(o=>o.Package===logical):null;};
+const exportedMaterial=logical=>{const file=path.join(sourceRoot,logical.replace('/Game/','ShooterGame/Content/').replace('/Engine/','Engine/Content/')+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):null;};
+const materialCache=new Map();audit.bodyMaterials=[];
 function material(name){
+  if(materialCache.has(name))return materialCache.get(name);
   const file=materialFiles.get(name);if(!file)throw new Error('Missing material '+name);
-  const m=JSON.parse(fs.readFileSync(file,'utf8')),t=m.Textures??{},c=m.Colors??{},s=m.Scalars??{};
-  const diffuse=t.PM_Diffuse??t.Albedo;
-  const glass=/glass|transparent/i.test(name),led=/LED|bakedlight/i.test(name);
-  const emission=c['LED Emissive Color']??c['Emissive Color']??c['EmissiveColor'];
-  const glow=t.AEM?texture(t.AEM,'emissive'):led&&diffuse?texture(diffuse):null;
-  const strength=glow?Math.min(2,Math.max(0,Number(s['Weapon Emissive Intensity']??s['Emissive Intensity']??(led?.6:.35)))):0;
-  return {name,map:diffuse?texture(diffuse):null,normalMap:t.PM_Normals?texture(t.PM_Normals,'normal'):null,ormMap:t.PM_SpecularMasks?texture(t.PM_SpecularMasks,'orm'):null,
-    emissiveMap:glow,emissive:rgb(emission),emissiveIntensity:strength,color:diffuse?[1,1,1]:rgb(c['BG Bottom Color']??c['Base Color']??c['Color']),
-    roughness:glass?.2:.58,metalness:glass?.15:.28,transparent:glass,opacity:glass?(diffuse?.35:.16):1,
-    // UE-only trail/lighting volumes have no solid surface. Structural shell
-    // materials are part of the real gun and must remain visible at rest.
-    hidden:/LightTrails|BakedLight/i.test(name)};
+  const logical=path.relative(sourceRoot,file).replaceAll('\\','/').replace('ShooterGame/Content/','/Game/').replace('Engine/Content/','/Engine/').replace(/\.json$/,'');
+  const data=resolveEffectMaterial(logical,rawMaterial,exportedMaterial),m=weaponBodyMaterial(name,data,texture);
+  materialCache.set(name,m);audit.bodyMaterials.push({name,source:logical,...m.source,features:Object.keys(m.shader)});return m;
 }
 function glb(asset,role){
   const file=path.join(sourceRoot,asset.replace(/\.uasset$/i,'.glb'));
