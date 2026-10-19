@@ -1,0 +1,2796 @@
+{
+  "fetchedAtUtc": "2026-10-19T11:59:51.095066+00:00",
+  "provenance": "Public third-party extraction of VALORANT client map data. This endpoint is not operated by Riot Games; English labels are copied verbatim from its en-US game records, not independently presented as a Riot API. Local Chinese labels and transformed map coordinates match the corresponding zh-CN records.",
+  "sources": {
+    "english": "https://valorant-api.com/v1/maps?language=en-US",
+    "chinese": "https://valorant-api.com/v1/maps?language=zh-CN"
+  },
+  "sourceSha256": {
+    "english": "24708a7fedd523be1529d48bfaa916bf56725877fd728d3ed86db03bf6a90095",
+    "chinese": "0e67eb6cc0f2e6802ced91f17c9088aa3f275998f477fbcf09974cbfdcfc405c"
+  },
+  "coordinateTransform": {
+    "localX": "round(api.location.y / 100, 2)",
+    "localZ": "round(-api.location.x / 100, 2)"
+  },
+  "labelComposition": "superRegionName + \" \" + regionName; both copied verbatim from en-US records",
+  "riotPrimaryCrossChecks": [
+    {
+      "url": "https://playvalorant.com/en-us/maps/",
+      "supports": "Official English map names Ascent, Split, Haven, Summit, Lotus, Abyss; local/API asset paths establish map identity."
+    },
+    {
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-0-50/",
+      "supports": "Split official callouts A Main, A Ramps, B Tower, B Main, Mid Top."
+    },
+    {
+      "url": "https://playvalorant.com/en-gb/news/game-updates/valorant-patch-notes-1-02/",
+      "supports": "Haven official callouts C Link, A Link, C Long, A Sewer; Ascent A Main and spawn/Garden areas."
+    },
+    {
+      "url": "https://playvalorant.com/en-gb/news/dev/the-birth-of-ascent/",
+      "supports": "Ascent official map description identifies the boathouse and Courtyard, Garden, Market callouts. Exact B Boat House spelling comes from client record extraction."
+    }
+  ],
+  "maps": {
+    "ascent": {
+      "displayName": "Ascent",
+      "uuid": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+      "mapUrl": "/Game/Maps/Ascent/Ascent",
+      "assetPath": "ShooterGame/Content/Maps/Ascent/Ascent_PrimaryAsset",
+      "localFile": "site/aim-maps/ascent.minimap.json",
+      "count": 22,
+      "callouts": [
+        {
+          "localName": "A区 树木",
+          "englishLabel": "A Tree",
+          "localCoordinates": {
+            "x": -59.39,
+            "z": -39.81
+          },
+          "rawApiCoordinates": {
+            "x": 3980.9062,
+            "y": -5938.758,
+            "z": 400.00003
+          },
+          "apiCalloutIndex": 0,
+          "regionName": "Tree",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002595427517772942
+        },
+        {
+          "localName": "A区 大厅",
+          "englishLabel": "A Lobby",
+          "localCoordinates": {
+            "x": -30.14,
+            "z": -44.89
+          },
+          "rawApiCoordinates": {
+            "x": 4489.032,
+            "y": -3014.0515,
+            "z": 400
+          },
+          "apiCalloutIndex": 1,
+          "regionName": "Lobby",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0006063208721472371
+        },
+        {
+          "localName": "A区 大道",
+          "englishLabel": "A Main",
+          "localCoordinates": {
+            "x": -47.1,
+            "z": -53.22
+          },
+          "rawApiCoordinates": {
+            "x": 5321.6206,
+            "y": -4710.1274,
+            "z": 399.99994
+          },
+          "apiCalloutIndex": 2,
+          "regionName": "Main",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.00400218840136237
+        },
+        {
+          "localName": "A区 窗口",
+          "englishLabel": "A Window",
+          "localCoordinates": {
+            "x": -81.81,
+            "z": -40.23
+          },
+          "rawApiCoordinates": {
+            "x": 4023.0244,
+            "y": -8180.692,
+            "z": 803.03015
+          },
+          "apiCalloutIndex": 3,
+          "regionName": "Window",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0030896498183423772
+        },
+        {
+          "localName": "A区 部署区",
+          "englishLabel": "A Site",
+          "localCoordinates": {
+            "x": -66.26,
+            "z": -61.54
+          },
+          "rawApiCoordinates": {
+            "x": 6153.585,
+            "y": -6626.2114,
+            "z": 499.99933
+          },
+          "apiCalloutIndex": 4,
+          "regionName": "Site",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004657413015819942
+        },
+        {
+          "localName": "攻方 重生点",
+          "englishLabel": "Attacker Side Spawn",
+          "localCoordinates": {
+            "x": 0.5,
+            "z": -0.6
+          },
+          "rawApiCoordinates": {
+            "x": 60,
+            "y": 50,
+            "z": 190
+          },
+          "apiCalloutIndex": 5,
+          "regionName": "Spawn",
+          "superRegionName": "Attacker Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 大厅",
+          "englishLabel": "B Lobby",
+          "localCoordinates": {
+            "x": -13.9,
+            "z": 14.91
+          },
+          "rawApiCoordinates": {
+            "x": -1490.5864,
+            "y": -1389.9706,
+            "z": 199.99994
+          },
+          "apiCalloutIndex": 6,
+          "regionName": "Lobby",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.00414643606004069
+        },
+        {
+          "localName": "B区 大道",
+          "englishLabel": "B Main",
+          "localCoordinates": {
+            "x": -58.41,
+            "z": 19.84
+          },
+          "rawApiCoordinates": {
+            "x": -1983.6713,
+            "y": -5840.8125,
+            "z": 100
+          },
+          "apiCalloutIndex": 7,
+          "regionName": "Main",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003784176792909566
+        },
+        {
+          "localName": "B区 船屋",
+          "englishLabel": "B Boat House",
+          "localCoordinates": {
+            "x": -77.63,
+            "z": 44.85
+          },
+          "rawApiCoordinates": {
+            "x": -4484.774,
+            "y": -7763.3584,
+            "z": -105.08359
+          },
+          "apiCalloutIndex": 8,
+          "regionName": "Boat House",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004237057469521079
+        },
+        {
+          "localName": "中区 坡底",
+          "englishLabel": "Mid Bottom",
+          "localCoordinates": {
+            "x": -59.52,
+            "z": -11.22
+          },
+          "rawApiCoordinates": {
+            "x": 1122.2262,
+            "y": -5951.704,
+            "z": 200.00006
+          },
+          "apiCalloutIndex": 9,
+          "regionName": "Bottom",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0037253515270443457
+        },
+        {
+          "localName": "B区 部署区",
+          "englishLabel": "B Site",
+          "localCoordinates": {
+            "x": -75.49,
+            "z": 23.44
+          },
+          "rawApiCoordinates": {
+            "x": -2344.065,
+            "y": -7548.511,
+            "z": 99.33539
+          },
+          "apiCalloutIndex": 10,
+          "regionName": "Site",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0049330112507364465
+        },
+        {
+          "localName": "中区 窄道",
+          "englishLabel": "Mid Catwalk",
+          "localCoordinates": {
+            "x": -41.27,
+            "z": -23.16
+          },
+          "rawApiCoordinates": {
+            "x": 2315.7944,
+            "y": -4127.2554,
+            "z": 415.80453
+          },
+          "apiCalloutIndex": 11,
+          "regionName": "Catwalk",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0032787271920640157
+        },
+        {
+          "localName": "中区 小房间",
+          "englishLabel": "Mid Cubby",
+          "localCoordinates": {
+            "x": -51.3,
+            "z": -33.87
+          },
+          "rawApiCoordinates": {
+            "x": 3387.3167,
+            "y": -5129.764,
+            "z": 400.00037
+          },
+          "apiCalloutIndex": 12,
+          "regionName": "Cubby",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003949618842365194
+        },
+        {
+          "localName": "守方 重生点",
+          "englishLabel": "Defender Side Spawn",
+          "localCoordinates": {
+            "x": -97.45,
+            "z": -19.95
+          },
+          "rawApiCoordinates": {
+            "x": 1995.2354,
+            "y": -9744.923,
+            "z": 300.0053
+          },
+          "apiCalloutIndex": 13,
+          "regionName": "Spawn",
+          "superRegionName": "Defender Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002476734947467388
+        },
+        {
+          "localName": "A区 花园",
+          "englishLabel": "A Garden",
+          "localCoordinates": {
+            "x": -75.51,
+            "z": -37.74
+          },
+          "rawApiCoordinates": {
+            "x": 3773.6653,
+            "y": -7551.3535,
+            "z": 570.3553
+          },
+          "apiCalloutIndex": 14,
+          "regionName": "Garden",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004868124279430662
+        },
+        {
+          "localName": "中区 市场",
+          "englishLabel": "Mid Market",
+          "localCoordinates": {
+            "x": -73.63,
+            "z": -10.89
+          },
+          "rawApiCoordinates": {
+            "x": 1089.1044,
+            "y": -7363.1914,
+            "z": 306.9743
+          },
+          "apiCalloutIndex": 15,
+          "regionName": "Market",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0021802137509873173
+        },
+        {
+          "localName": "中区 庭院",
+          "englishLabel": "Mid Courtyard",
+          "localCoordinates": {
+            "x": -45.87,
+            "z": -12.23
+          },
+          "rawApiCoordinates": {
+            "x": 1222.7029,
+            "y": -4586.6,
+            "z": 200.13477
+          },
+          "apiCalloutIndex": 16,
+          "regionName": "Courtyard",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004982654011661696
+        },
+        {
+          "localName": "中区 小道",
+          "englishLabel": "Mid Link",
+          "localCoordinates": {
+            "x": -42.8,
+            "z": 6.32
+          },
+          "rawApiCoordinates": {
+            "x": -632.0929,
+            "y": -4280.2573,
+            "z": 200.00018
+          },
+          "apiCalloutIndex": 17,
+          "regionName": "Link",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002735574893879855
+        },
+        {
+          "localName": "中区 比萨",
+          "englishLabel": "Mid Pizza",
+          "localCoordinates": {
+            "x": -72.62,
+            "z": -18.02
+          },
+          "rawApiCoordinates": {
+            "x": 1801.5667,
+            "y": -7262.1704,
+            "z": 300.00006
+          },
+          "apiCalloutIndex": 18,
+          "regionName": "Pizza",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004656018148585312
+        },
+        {
+          "localName": "A区 高台",
+          "englishLabel": "A Rafters",
+          "localCoordinates": {
+            "x": -82.1,
+            "z": -61.3
+          },
+          "rawApiCoordinates": {
+            "x": 6129.893,
+            "y": -8210,
+            "z": 806.1185
+          },
+          "apiCalloutIndex": 19,
+          "regionName": "Rafters",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.001069999999998572
+        },
+        {
+          "localName": "中区 坡顶",
+          "englishLabel": "Mid Top",
+          "localCoordinates": {
+            "x": -21.3,
+            "z": -27.54
+          },
+          "rawApiCoordinates": {
+            "x": 2753.9297,
+            "y": -2129.6155,
+            "z": 400
+          },
+          "apiCalloutIndex": 20,
+          "regionName": "Top",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003908738159561403
+        },
+        {
+          "localName": "A区 酒庄",
+          "englishLabel": "A Wine",
+          "localCoordinates": {
+            "x": -46.89,
+            "z": -73.59
+          },
+          "rawApiCoordinates": {
+            "x": 7358.7407,
+            "y": -4689.2705,
+            "z": 300.00034
+          },
+          "apiCalloutIndex": 21,
+          "regionName": "Wine",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0037470887366083476
+        }
+      ]
+    },
+    "bonsai": {
+      "displayName": "Split",
+      "uuid": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+      "mapUrl": "/Game/Maps/Bonsai/Bonsai",
+      "assetPath": "ShooterGame/Content/Maps/Bonsai/Bonsai_PrimaryAsset",
+      "localFile": "site/aim-maps/bonsai.minimap.json",
+      "count": 24,
+      "callouts": [
+        {
+          "localName": "A区 后房",
+          "englishLabel": "A Back",
+          "localCoordinates": {
+            "x": -78.58,
+            "z": -73.45
+          },
+          "rawApiCoordinates": {
+            "x": 7345.049,
+            "y": -7858.0405,
+            "z": -0.001953125
+          },
+          "apiCalloutIndex": 0,
+          "regionName": "Back",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0006357082664239623
+        },
+        {
+          "localName": "A区 大厅",
+          "englishLabel": "A Lobby",
+          "localCoordinates": {
+            "x": -24.58,
+            "z": -68.14
+          },
+          "rawApiCoordinates": {
+            "x": 6814.217,
+            "y": -2457.7468,
+            "z": 300
+          },
+          "apiCalloutIndex": 1,
+          "regionName": "Lobby",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003334655004638471
+        },
+        {
+          "localName": "A区 大道",
+          "englishLabel": "A Main",
+          "localCoordinates": {
+            "x": -44.93,
+            "z": -62.8
+          },
+          "rawApiCoordinates": {
+            "x": 6279.9795,
+            "y": -4492.833,
+            "z": 199.95233
+          },
+          "apiCalloutIndex": 2,
+          "regionName": "Main",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0016825352893808316
+        },
+        {
+          "localName": "A区 高台",
+          "englishLabel": "A Rafters",
+          "localCoordinates": {
+            "x": -62.58,
+            "z": -54.35
+          },
+          "rawApiCoordinates": {
+            "x": 5434.726,
+            "y": -6258.442,
+            "z": 549.9768
+          },
+          "apiCalloutIndex": 3,
+          "regionName": "Rafters",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005200384601165947
+        },
+        {
+          "localName": "A区 坡道",
+          "englishLabel": "A Ramps",
+          "localCoordinates": {
+            "x": -47.5,
+            "z": -43.3
+          },
+          "rawApiCoordinates": {
+            "x": 4330,
+            "y": -4750,
+            "z": 590
+          },
+          "apiCalloutIndex": 4,
+          "regionName": "Ramps",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 屏幕",
+          "englishLabel": "A Screens",
+          "localCoordinates": {
+            "x": -88.69,
+            "z": -56.49
+          },
+          "rawApiCoordinates": {
+            "x": 5648.7144,
+            "y": -8868.611,
+            "z": 200.00006
+          },
+          "apiCalloutIndex": 5,
+          "regionName": "Screens",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004825850805804546
+        },
+        {
+          "localName": "A区 下水道",
+          "englishLabel": "A Sewer",
+          "localCoordinates": {
+            "x": -23.67,
+            "z": -48.63
+          },
+          "rawApiCoordinates": {
+            "x": 4862.6064,
+            "y": -2367.2578,
+            "z": 59.34729
+          },
+          "apiCalloutIndex": 6,
+          "regionName": "Sewer",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004705122740163574
+        },
+        {
+          "localName": "A区 部署区",
+          "englishLabel": "A Site",
+          "localCoordinates": {
+            "x": -67.61,
+            "z": -65.89
+          },
+          "rawApiCoordinates": {
+            "x": 6588.6597,
+            "y": -6761.131,
+            "z": 100.00012
+          },
+          "apiCalloutIndex": 7,
+          "regionName": "Site",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0036464378508414596
+        },
+        {
+          "localName": "A区 塔楼",
+          "englishLabel": "A Tower",
+          "localCoordinates": {
+            "x": -67.48,
+            "z": -46.37
+          },
+          "rawApiCoordinates": {
+            "x": 4636.7925,
+            "y": -6748.2334,
+            "z": 650.00006
+          },
+          "apiCalloutIndex": 8,
+          "regionName": "Tower",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0031230083253132993
+        },
+        {
+          "localName": "攻方 重生点",
+          "englishLabel": "Attacker Side Spawn",
+          "localCoordinates": {
+            "x": 0.6,
+            "z": -19.02
+          },
+          "rawApiCoordinates": {
+            "x": 1901.97,
+            "y": 59.588867,
+            "z": 300.00012
+          },
+          "apiCalloutIndex": 9,
+          "regionName": "Spawn",
+          "superRegionName": "Attacker Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004122260832225361
+        },
+        {
+          "localName": "B区 小巷",
+          "englishLabel": "B Alley",
+          "localCoordinates": {
+            "x": -80.66,
+            "z": 11.58
+          },
+          "rawApiCoordinates": {
+            "x": -1158.0048,
+            "y": -8066.301,
+            "z": 399.99982
+          },
+          "apiCalloutIndex": 10,
+          "regionName": "Alley",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003010382699926997
+        },
+        {
+          "localName": "B区 后房",
+          "englishLabel": "B Back",
+          "localCoordinates": {
+            "x": -74.17,
+            "z": 31.07
+          },
+          "rawApiCoordinates": {
+            "x": -3107.181,
+            "y": -7417.2607,
+            "z": 300.00012
+          },
+          "apiCalloutIndex": 11,
+          "regionName": "Back",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0031737279341467984
+        },
+        {
+          "localName": "B区 小道",
+          "englishLabel": "B Link",
+          "localCoordinates": {
+            "x": -23.7,
+            "z": 0.28
+          },
+          "rawApiCoordinates": {
+            "x": -27.670135,
+            "y": -2369.784,
+            "z": 349.99997
+          },
+          "apiCalloutIndex": 12,
+          "regionName": "Link",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003942929345359894
+        },
+        {
+          "localName": "B区 车库",
+          "englishLabel": "B Garage",
+          "localCoordinates": {
+            "x": -38.48,
+            "z": 21.91
+          },
+          "rawApiCoordinates": {
+            "x": -2190.7827,
+            "y": -3848.0293,
+            "z": 300.00018
+          },
+          "apiCalloutIndex": 13,
+          "regionName": "Garage",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0021926645890331144
+        },
+        {
+          "localName": "B区 高台",
+          "englishLabel": "B Rafters",
+          "localCoordinates": {
+            "x": -60.71,
+            "z": 6.37
+          },
+          "rawApiCoordinates": {
+            "x": -637.1397,
+            "y": -6070.6167,
+            "z": 922.2615
+          },
+          "apiCalloutIndex": 14,
+          "regionName": "Rafters",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004079644347250522
+        },
+        {
+          "localName": "B区 部署区",
+          "englishLabel": "B Site",
+          "localCoordinates": {
+            "x": -62.65,
+            "z": 21.67
+          },
+          "rawApiCoordinates": {
+            "x": -2167.2456,
+            "y": -6264.7715,
+            "z": 399.99982
+          },
+          "apiCalloutIndex": 15,
+          "regionName": "Site",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003354573147212023
+        },
+        {
+          "localName": "B区 台阶",
+          "englishLabel": "B Stairs",
+          "localCoordinates": {
+            "x": -67.61,
+            "z": -10.61
+          },
+          "rawApiCoordinates": {
+            "x": 1061.493,
+            "y": -6760.976,
+            "z": 839.9651
+          },
+          "apiCalloutIndex": 16,
+          "regionName": "Stairs",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004935838327984545
+        },
+        {
+          "localName": "B区 塔楼",
+          "englishLabel": "B Tower",
+          "localCoordinates": {
+            "x": -52.9,
+            "z": -1.69
+          },
+          "rawApiCoordinates": {
+            "x": 168.89589,
+            "y": -5290.194,
+            "z": 900
+          },
+          "apiCalloutIndex": 17,
+          "regionName": "Tower",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002201701435258219
+        },
+        {
+          "localName": "B区 大厅",
+          "englishLabel": "B Lobby",
+          "localCoordinates": {
+            "x": -19.84,
+            "z": 12.72
+          },
+          "rawApiCoordinates": {
+            "x": -1271.6421,
+            "y": -1983.6248,
+            "z": 300.00012
+          },
+          "apiCalloutIndex": 18,
+          "regionName": "Lobby",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0051852430029837
+        },
+        {
+          "localName": "守方 重生点",
+          "englishLabel": "Defender Side Spawn",
+          "localCoordinates": {
+            "x": -89.65,
+            "z": -21.42
+          },
+          "rawApiCoordinates": {
+            "x": 2142.3635,
+            "y": -8964.969,
+            "z": 500.00012
+          },
+          "apiCalloutIndex": 19,
+          "regionName": "Spawn",
+          "superRegionName": "Defender Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003648194759055783
+        },
+        {
+          "localName": "中区 坡底",
+          "englishLabel": "Mid Bottom",
+          "localCoordinates": {
+            "x": -28.99,
+            "z": -19.23
+          },
+          "rawApiCoordinates": {
+            "x": 1922.6552,
+            "y": -2899.4626,
+            "z": 450
+          },
+          "apiCalloutIndex": 20,
+          "regionName": "Bottom",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005769625637768872
+        },
+        {
+          "localName": "中区 邮箱",
+          "englishLabel": "Mid Mail",
+          "localCoordinates": {
+            "x": -48.09,
+            "z": -11.55
+          },
+          "rawApiCoordinates": {
+            "x": 1155.3333,
+            "y": -4808.6436,
+            "z": 800.00024
+          },
+          "apiCalloutIndex": 21,
+          "regionName": "Mail",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004879650089911934
+        },
+        {
+          "localName": "中区 坡顶",
+          "englishLabel": "Mid Top",
+          "localCoordinates": {
+            "x": -45.97,
+            "z": -20.22
+          },
+          "rawApiCoordinates": {
+            "x": 2021.9575,
+            "y": -4596.936,
+            "z": 649.9999
+          },
+          "apiCalloutIndex": 22,
+          "regionName": "Top",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0007682610233542242
+        },
+        {
+          "localName": "中区 通风口",
+          "englishLabel": "Mid Vent",
+          "localCoordinates": {
+            "x": -53.39,
+            "z": -31.55
+          },
+          "rawApiCoordinates": {
+            "x": 3155.1648,
+            "y": -5338.5215,
+            "z": 650
+          },
+          "apiCalloutIndex": 23,
+          "regionName": "Vent",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005060842716391164
+        }
+      ]
+    },
+    "triad": {
+      "displayName": "Haven",
+      "uuid": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+      "mapUrl": "/Game/Maps/Triad/Triad",
+      "assetPath": "ShooterGame/Content/Maps/Triad/Triad_PrimaryAsset",
+      "localFile": "site/aim-maps/triad.minimap.json",
+      "count": 21,
+      "callouts": [
+        {
+          "localName": "A区 花园",
+          "englishLabel": "A Garden",
+          "localCoordinates": {
+            "x": -46.84,
+            "z": -31.0
+          },
+          "rawApiCoordinates": {
+            "x": 3100.261,
+            "y": -4683.6016,
+            "z": 300.0001
+          },
+          "apiCalloutIndex": 0,
+          "regionName": "Garden",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004762809674973861
+        },
+        {
+          "localName": "A区 小道",
+          "englishLabel": "A Link",
+          "localCoordinates": {
+            "x": -107.16,
+            "z": -42.44
+          },
+          "rawApiCoordinates": {
+            "x": 4244.4214,
+            "y": -10715.68,
+            "z": 299.99994
+          },
+          "apiCalloutIndex": 1,
+          "regionName": "Link",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005291294359605319
+        },
+        {
+          "localName": "A区 大厅",
+          "englishLabel": "A Lobby",
+          "localCoordinates": {
+            "x": -62.6,
+            "z": -34.39
+          },
+          "rawApiCoordinates": {
+            "x": 3438.537,
+            "y": -6260.409,
+            "z": 300.00006
+          },
+          "apiCalloutIndex": 2,
+          "regionName": "Lobby",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.006177782773782011
+        },
+        {
+          "localName": "A区 长道",
+          "englishLabel": "A Long",
+          "localCoordinates": {
+            "x": -69.01,
+            "z": -62.1
+          },
+          "rawApiCoordinates": {
+            "x": 6209.695,
+            "y": -6901.142,
+            "z": 100
+          },
+          "apiCalloutIndex": 3,
+          "regionName": "Long",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0033643572937485998
+        },
+        {
+          "localName": "A区 下水道",
+          "englishLabel": "A Sewer",
+          "localCoordinates": {
+            "x": -79.16,
+            "z": -34.53
+          },
+          "rawApiCoordinates": {
+            "x": 3452.8735,
+            "y": -7915.7246,
+            "z": 0.00010681152
+          },
+          "apiCalloutIndex": 4,
+          "regionName": "Sewer",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003030633762098079
+        },
+        {
+          "localName": "A区 部署区",
+          "englishLabel": "A Site",
+          "localCoordinates": {
+            "x": -92.26,
+            "z": -63.09
+          },
+          "rawApiCoordinates": {
+            "x": 6309.3076,
+            "y": -9225.703,
+            "z": 300
+          },
+          "apiCalloutIndex": 5,
+          "regionName": "Site",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004275824598838101
+        },
+        {
+          "localName": "攻方 重生点",
+          "englishLabel": "Attacker Side Spawn",
+          "localCoordinates": {
+            "x": -26.43,
+            "z": -17.42
+          },
+          "rawApiCoordinates": {
+            "x": 1741.7622,
+            "y": -2642.7925,
+            "z": 278.31885
+          },
+          "apiCalloutIndex": 6,
+          "regionName": "Spawn",
+          "superRegionName": "Attacker Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0031560274079939325
+        },
+        {
+          "localName": "B区 后房",
+          "englishLabel": "B Back",
+          "localCoordinates": {
+            "x": -106.65,
+            "z": -19.66
+          },
+          "rawApiCoordinates": {
+            "x": 1966.1608,
+            "y": -10664.775,
+            "z": 300.00006
+          },
+          "apiCalloutIndex": 7,
+          "regionName": "Back",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002765531413674305
+        },
+        {
+          "localName": "B区 部署区",
+          "englishLabel": "B Site",
+          "localCoordinates": {
+            "x": -92.31,
+            "z": -18.85
+          },
+          "rawApiCoordinates": {
+            "x": 1884.706,
+            "y": -9231.335,
+            "z": 700.1339
+          },
+          "apiCalloutIndex": 8,
+          "regionName": "Site",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004457140338816157
+        },
+        {
+          "localName": "C区 小道",
+          "englishLabel": "C Link",
+          "localCoordinates": {
+            "x": -100.04,
+            "z": 0.88
+          },
+          "rawApiCoordinates": {
+            "x": -87.761444,
+            "y": -10004.415,
+            "z": 299.99963
+          },
+          "apiCalloutIndex": 9,
+          "regionName": "Link",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004786793970243967
+        },
+        {
+          "localName": "C区 大厅",
+          "englishLabel": "C Lobby",
+          "localCoordinates": {
+            "x": -57.2,
+            "z": 16.42
+          },
+          "rawApiCoordinates": {
+            "x": -1642.189,
+            "y": -5720.345,
+            "z": 100.90173
+          },
+          "apiCalloutIndex": 10,
+          "regionName": "Lobby",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003933776811157939
+        },
+        {
+          "localName": "C区 长道",
+          "englishLabel": "C Long",
+          "localCoordinates": {
+            "x": -59.91,
+            "z": 33.57
+          },
+          "rawApiCoordinates": {
+            "x": -3356.814,
+            "y": -5990.872,
+            "z": 99.999756
+          },
+          "apiCalloutIndex": 11,
+          "regionName": "Long",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002257875107260688
+        },
+        {
+          "localName": "C区 车库",
+          "englishLabel": "C Garage",
+          "localCoordinates": {
+            "x": -80.0,
+            "z": -1.8
+          },
+          "rawApiCoordinates": {
+            "x": 180.07678,
+            "y": -7999.5845,
+            "z": 99.99872
+          },
+          "apiCalloutIndex": 12,
+          "regionName": "Garage",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004225345174062952
+        },
+        {
+          "localName": "C区 窗口",
+          "englishLabel": "C Window",
+          "localCoordinates": {
+            "x": -89.93,
+            "z": 0.1
+          },
+          "rawApiCoordinates": {
+            "x": -10.126678,
+            "y": -8993.241,
+            "z": 300
+          },
+          "apiCalloutIndex": 13,
+          "regionName": "Window",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002722651569405885
+        },
+        {
+          "localName": "C区 部署区",
+          "englishLabel": "C Site",
+          "localCoordinates": {
+            "x": -90.11,
+            "z": 23.78
+          },
+          "rawApiCoordinates": {
+            "x": -2378.1328,
+            "y": -9010.557,
+            "z": 199.99994
+          },
+          "apiCalloutIndex": 14,
+          "regionName": "Site",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004624768534747055
+        },
+        {
+          "localName": "C区 小房间",
+          "englishLabel": "C Cubby",
+          "localCoordinates": {
+            "x": -65.62,
+            "z": 21.2
+          },
+          "rawApiCoordinates": {
+            "x": -2119.7693,
+            "y": -6561.603,
+            "z": 200.00006
+          },
+          "apiCalloutIndex": 15,
+          "regionName": "Cubby",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004591639031987175
+        },
+        {
+          "localName": "守方 重生点",
+          "englishLabel": "Defender Side Spawn",
+          "localCoordinates": {
+            "x": -127.15,
+            "z": -29.46
+          },
+          "rawApiCoordinates": {
+            "x": 2946.3042,
+            "y": -12714.707,
+            "z": 300.0011
+          },
+          "apiCalloutIndex": 16,
+          "regionName": "Spawn",
+          "superRegionName": "Defender Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004223584259848618
+        },
+        {
+          "localName": "中区 门",
+          "englishLabel": "Mid Doors",
+          "localCoordinates": {
+            "x": -62.63,
+            "z": -1.51
+          },
+          "rawApiCoordinates": {
+            "x": 151.11594,
+            "y": -6262.9155,
+            "z": 95.41321
+          },
+          "apiCalloutIndex": 17,
+          "regionName": "Doors",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.001434654439232249
+        },
+        {
+          "localName": "中区 庭院",
+          "englishLabel": "Mid Courtyard",
+          "localCoordinates": {
+            "x": -67.13,
+            "z": -18.22
+          },
+          "rawApiCoordinates": {
+            "x": 1822.1299,
+            "y": -6712.6875,
+            "z": 94.86078
+          },
+          "apiCalloutIndex": 18,
+          "regionName": "Courtyard",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0033842319660420624
+        },
+        {
+          "localName": "中区 窗口",
+          "englishLabel": "Mid Window",
+          "localCoordinates": {
+            "x": -55.68,
+            "z": -19.5
+          },
+          "rawApiCoordinates": {
+            "x": 1950.2218,
+            "y": -5567.912,
+            "z": 300.0006
+          },
+          "apiCalloutIndex": 19,
+          "regionName": "Window",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002386194459801565
+        },
+        {
+          "localName": "A区 塔楼",
+          "englishLabel": "A Tower",
+          "localCoordinates": {
+            "x": -104.73,
+            "z": -67.21
+          },
+          "rawApiCoordinates": {
+            "x": 6721.4043,
+            "y": -10472.5205,
+            "z": 900.0001
+          },
+          "apiCalloutIndex": 20,
+          "regionName": "Tower",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.006271991230868769
+        }
+      ]
+    },
+    "plummet": {
+      "displayName": "Summit",
+      "uuid": "756da597-416b-c0f2-f47b-afbdf28670bc",
+      "mapUrl": "/Game/Maps/Plummet/Plummet",
+      "assetPath": "ShooterGame/Content/Maps/Plummet/Plummet_PrimaryAsset",
+      "localFile": "site/aim-maps/plummet.minimap.json",
+      "count": 24,
+      "callouts": [
+        {
+          "localName": "中区 坡底",
+          "englishLabel": "Mid Bottom",
+          "localCoordinates": {
+            "x": 58.25,
+            "z": -75.0
+          },
+          "rawApiCoordinates": {
+            "x": 7500,
+            "y": 5825,
+            "z": 425
+          },
+          "apiCalloutIndex": 0,
+          "regionName": "Bottom",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 坡顶",
+          "englishLabel": "Mid Top",
+          "localCoordinates": {
+            "x": 65.25,
+            "z": -40.25
+          },
+          "rawApiCoordinates": {
+            "x": 4025,
+            "y": 6525,
+            "z": 425
+          },
+          "apiCalloutIndex": 1,
+          "regionName": "Top",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 大厅",
+          "englishLabel": "A Lobby",
+          "localCoordinates": {
+            "x": 86.25,
+            "z": -31.75
+          },
+          "rawApiCoordinates": {
+            "x": 3174.9998,
+            "y": 8625,
+            "z": 200
+          },
+          "apiCalloutIndex": 2,
+          "regionName": "Lobby",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 1.999999998503199e-06
+        },
+        {
+          "localName": "A区 大道",
+          "englishLabel": "A Main",
+          "localCoordinates": {
+            "x": 86.25,
+            "z": -55.0
+          },
+          "rawApiCoordinates": {
+            "x": 5500,
+            "y": 8625,
+            "z": 200
+          },
+          "apiCalloutIndex": 3,
+          "regionName": "Main",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 花园",
+          "englishLabel": "A Garden",
+          "localCoordinates": {
+            "x": 99.25,
+            "z": -76.75
+          },
+          "rawApiCoordinates": {
+            "x": 7675,
+            "y": 9925,
+            "z": 200
+          },
+          "apiCalloutIndex": 4,
+          "regionName": "Garden",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 部署区",
+          "englishLabel": "A Site",
+          "localCoordinates": {
+            "x": 116.0,
+            "z": -76.75
+          },
+          "rawApiCoordinates": {
+            "x": 7675,
+            "y": 11600,
+            "z": 200
+          },
+          "apiCalloutIndex": 5,
+          "regionName": "Site",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 画架",
+          "englishLabel": "A Art",
+          "localCoordinates": {
+            "x": 99.25,
+            "z": -95.25
+          },
+          "rawApiCoordinates": {
+            "x": 9525,
+            "y": 9925,
+            "z": 350
+          },
+          "apiCalloutIndex": 6,
+          "regionName": "Art",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 洞穴",
+          "englishLabel": "A Cave",
+          "localCoordinates": {
+            "x": 121.25,
+            "z": -95.25
+          },
+          "rawApiCoordinates": {
+            "x": 9525,
+            "y": 12125,
+            "z": 350
+          },
+          "apiCalloutIndex": 7,
+          "regionName": "Cave",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 大堂",
+          "englishLabel": "A Hall",
+          "localCoordinates": {
+            "x": 86.0,
+            "z": -95.25
+          },
+          "rawApiCoordinates": {
+            "x": 9525,
+            "y": 8600,
+            "z": 350
+          },
+          "apiCalloutIndex": 8,
+          "regionName": "Hall",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 小道",
+          "englishLabel": "A Link",
+          "localCoordinates": {
+            "x": 80.5,
+            "z": -82.5
+          },
+          "rawApiCoordinates": {
+            "x": 8250,
+            "y": 8050,
+            "z": 200
+          },
+          "apiCalloutIndex": 9,
+          "regionName": "Link",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 大厅",
+          "englishLabel": "B Lobby",
+          "localCoordinates": {
+            "x": 32.25,
+            "z": -51.25
+          },
+          "rawApiCoordinates": {
+            "x": 5125,
+            "y": 3225,
+            "z": 100
+          },
+          "apiCalloutIndex": 10,
+          "regionName": "Lobby",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "守方 重生点",
+          "englishLabel": "Defender Side Spawn",
+          "localCoordinates": {
+            "x": 61.75,
+            "z": -120.75
+          },
+          "rawApiCoordinates": {
+            "x": 12075,
+            "y": 6175,
+            "z": 675
+          },
+          "apiCalloutIndex": 11,
+          "regionName": "Spawn",
+          "superRegionName": "Defender Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 窗户",
+          "englishLabel": "Mid Window",
+          "localCoordinates": {
+            "x": 58.25,
+            "z": -87.0
+          },
+          "rawApiCoordinates": {
+            "x": 8700,
+            "y": 5825,
+            "z": 675
+          },
+          "apiCalloutIndex": 12,
+          "regionName": "Window",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 健身房",
+          "englishLabel": "B Gym",
+          "localCoordinates": {
+            "x": 31.0,
+            "z": -105.25
+          },
+          "rawApiCoordinates": {
+            "x": 10525,
+            "y": 3100.0002,
+            "z": 675
+          },
+          "apiCalloutIndex": 13,
+          "regionName": "Gym",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 1.999999998503199e-06
+        },
+        {
+          "localName": "B区 奖杯",
+          "englishLabel": "B Trophy",
+          "localCoordinates": {
+            "x": 36.75,
+            "z": -90.75
+          },
+          "rawApiCoordinates": {
+            "x": 9075,
+            "y": 3675.0002,
+            "z": 425
+          },
+          "apiCalloutIndex": 14,
+          "regionName": "Trophy",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 2.0000000020559128e-06
+        },
+        {
+          "localName": "B区 高台",
+          "englishLabel": "B Tower",
+          "localCoordinates": {
+            "x": 14.5,
+            "z": -101.75
+          },
+          "rawApiCoordinates": {
+            "x": 10175,
+            "y": 1450.0001,
+            "z": 675
+          },
+          "apiCalloutIndex": 15,
+          "regionName": "Tower",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 9.999999992515995e-07
+        },
+        {
+          "localName": "B区 下坡",
+          "englishLabel": "B Drop",
+          "localCoordinates": {
+            "x": 0.75,
+            "z": -98.5
+          },
+          "rawApiCoordinates": {
+            "x": 9850,
+            "y": 75.00015,
+            "z": 325
+          },
+          "apiCalloutIndex": 16,
+          "regionName": "Drop",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 1.5000000000986446e-06
+        },
+        {
+          "localName": "B区 部署区",
+          "englishLabel": "B Site",
+          "localCoordinates": {
+            "x": 13.75,
+            "z": -85.5
+          },
+          "rawApiCoordinates": {
+            "x": 8550,
+            "y": 1375.0001,
+            "z": 325
+          },
+          "apiCalloutIndex": 17,
+          "regionName": "Site",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 9.999999992515995e-07
+        },
+        {
+          "localName": "B区 小道",
+          "englishLabel": "B Link",
+          "localCoordinates": {
+            "x": 37.75,
+            "z": -75.0
+          },
+          "rawApiCoordinates": {
+            "x": 7500,
+            "y": 3775,
+            "z": 425
+          },
+          "apiCalloutIndex": 18,
+          "regionName": "Link",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 喷泉",
+          "englishLabel": "Mid Fountain",
+          "localCoordinates": {
+            "x": 61.75,
+            "z": -56.75
+          },
+          "rawApiCoordinates": {
+            "x": 5675,
+            "y": 6175,
+            "z": 425
+          },
+          "apiCalloutIndex": 19,
+          "regionName": "Fountain",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 拐角",
+          "englishLabel": "Mid Bend",
+          "localCoordinates": {
+            "x": 78.5,
+            "z": -64.75
+          },
+          "rawApiCoordinates": {
+            "x": 6475,
+            "y": 7850,
+            "z": 425
+          },
+          "apiCalloutIndex": 20,
+          "regionName": "Bend",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 青砖路",
+          "englishLabel": "Mid Tiles",
+          "localCoordinates": {
+            "x": 42.34,
+            "z": -49.61
+          },
+          "rawApiCoordinates": {
+            "x": 4960.938,
+            "y": 4233.579,
+            "z": 425
+          },
+          "apiCalloutIndex": 21,
+          "regionName": "Tiles",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004255408323540914
+        },
+        {
+          "localName": "B区 大道",
+          "englishLabel": "B Main",
+          "localCoordinates": {
+            "x": 18.5,
+            "z": -65.0
+          },
+          "rawApiCoordinates": {
+            "x": 6500,
+            "y": 1849.9999,
+            "z": 425
+          },
+          "apiCalloutIndex": 22,
+          "regionName": "Main",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 1.0000000010279564e-06
+        },
+        {
+          "localName": "攻方 重生点",
+          "englishLabel": "Attacker Side Spawn",
+          "localCoordinates": {
+            "x": -1.0,
+            "z": -11.0
+          },
+          "rawApiCoordinates": {
+            "x": 1100,
+            "y": -100,
+            "z": 200
+          },
+          "apiCalloutIndex": 23,
+          "regionName": "Spawn",
+          "superRegionName": "Attacker Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        }
+      ]
+    },
+    "jam": {
+      "displayName": "Lotus",
+      "uuid": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+      "mapUrl": "/Game/Maps/Jam/Jam",
+      "assetPath": "ShooterGame/Content/Maps/Jam/Jam_PrimaryAsset",
+      "localFile": "site/aim-maps/jam.minimap.json",
+      "count": 28,
+      "callouts": [
+        {
+          "localName": "A区 高地",
+          "englishLabel": "A Top",
+          "localCoordinates": {
+            "x": 50.46,
+            "z": -92.6
+          },
+          "rawApiCoordinates": {
+            "x": 9260.3,
+            "y": 5045.5884,
+            "z": 80.35567
+          },
+          "apiCalloutIndex": 0,
+          "regionName": "Top",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005093275566865411
+        },
+        {
+          "localName": "A区 下坡",
+          "englishLabel": "A Drop",
+          "localCoordinates": {
+            "x": 60.93,
+            "z": -95.16
+          },
+          "rawApiCoordinates": {
+            "x": 9516.38,
+            "y": 6092.8936,
+            "z": 232.63
+          },
+          "apiCalloutIndex": 1,
+          "regionName": "Drop",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0039461495156653216
+        },
+        {
+          "localName": "A区 部署区",
+          "englishLabel": "A Site",
+          "localCoordinates": {
+            "x": 55.57,
+            "z": -77.36
+          },
+          "rawApiCoordinates": {
+            "x": 7735.5396,
+            "y": 5557.309,
+            "z": 232.63
+          },
+          "apiCalloutIndex": 2,
+          "regionName": "Site",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005544809825413869
+        },
+        {
+          "localName": "A区 小屋",
+          "englishLabel": "A Hut",
+          "localCoordinates": {
+            "x": 55.57,
+            "z": -79.17
+          },
+          "rawApiCoordinates": {
+            "x": 7917.4614,
+            "y": 5557.309,
+            "z": 232.63098
+          },
+          "apiCalloutIndex": 3,
+          "regionName": "Hut",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.00555311588210038
+        },
+        {
+          "localName": "A区 树",
+          "englishLabel": "A Tree",
+          "localCoordinates": {
+            "x": 55.57,
+            "z": -61.5
+          },
+          "rawApiCoordinates": {
+            "x": 6149.525,
+            "y": 5557.309,
+            "z": 232.63074
+          },
+          "apiCalloutIndex": 4,
+          "regionName": "Tree",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005666621568449278
+        },
+        {
+          "localName": "A区 通道门",
+          "englishLabel": "A Door",
+          "localCoordinates": {
+            "x": 52.04,
+            "z": -56.09
+          },
+          "rawApiCoordinates": {
+            "x": 5608.7563,
+            "y": 5203.91,
+            "z": 232.63055
+          },
+          "apiCalloutIndex": 5,
+          "regionName": "Door",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0025978777877346143
+        },
+        {
+          "localName": "A区 大道",
+          "englishLabel": "A Main",
+          "localCoordinates": {
+            "x": 41.6,
+            "z": -52.88
+          },
+          "rawApiCoordinates": {
+            "x": 5288.3022,
+            "y": 4159.762,
+            "z": 232.63074
+          },
+          "apiCalloutIndex": 6,
+          "regionName": "Main",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003846671808202428
+        },
+        {
+          "localName": "A区 碎石",
+          "englishLabel": "A Rubble",
+          "localCoordinates": {
+            "x": 49.18,
+            "z": -44.01
+          },
+          "rawApiCoordinates": {
+            "x": 4401.0713,
+            "y": 4918.189,
+            "z": 232.66272
+          },
+          "apiCalloutIndex": 7,
+          "regionName": "Rubble",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0020200170791377027
+        },
+        {
+          "localName": "A区 树根",
+          "englishLabel": "A Root",
+          "localCoordinates": {
+            "x": 32.94,
+            "z": -44.01
+          },
+          "rawApiCoordinates": {
+            "x": 4401.0713,
+            "y": 3294.1523,
+            "z": 232.66956
+          },
+          "apiCalloutIndex": 8,
+          "regionName": "Root",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0016816355134257087
+        },
+        {
+          "localName": "A区 大厅",
+          "englishLabel": "A Lobby",
+          "localCoordinates": {
+            "x": 29.27,
+            "z": -26.86
+          },
+          "rawApiCoordinates": {
+            "x": 2685.951,
+            "y": 2927.1755,
+            "z": 232.66956
+          },
+          "apiCalloutIndex": 9,
+          "regionName": "Lobby",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0018221210168363458
+        },
+        {
+          "localName": "C区 大厅",
+          "englishLabel": "C Lobby",
+          "localCoordinates": {
+            "x": -15.77,
+            "z": -14.04
+          },
+          "rawApiCoordinates": {
+            "x": 1403.5685,
+            "y": -1576.5884,
+            "z": 100.21295
+          },
+          "apiCalloutIndex": 10,
+          "regionName": "Lobby",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.005963277706091582
+        },
+        {
+          "localName": "B区 柱子",
+          "englishLabel": "B Pillars",
+          "localCoordinates": {
+            "x": 6.68,
+            "z": -35.65
+          },
+          "rawApiCoordinates": {
+            "x": 3565.3691,
+            "y": 668.18317,
+            "z": 167.20193
+          },
+          "apiCalloutIndex": 11,
+          "regionName": "Pillars",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004120510391932848
+        },
+        {
+          "localName": "B区 大道",
+          "englishLabel": "B Main",
+          "localCoordinates": {
+            "x": -0.48,
+            "z": -48.77
+          },
+          "rawApiCoordinates": {
+            "x": 4876.832,
+            "y": -47.87195,
+            "z": 167.20193
+          },
+          "apiCalloutIndex": 12,
+          "regionName": "Main",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002112363664239947
+        },
+        {
+          "localName": "C区 通道门",
+          "englishLabel": "C Door",
+          "localCoordinates": {
+            "x": -17.53,
+            "z": -48.19
+          },
+          "rawApiCoordinates": {
+            "x": 4818.6655,
+            "y": -1752.8021,
+            "z": 232.62439
+          },
+          "apiCalloutIndex": 13,
+          "regionName": "Door",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0038865750989743324
+        },
+        {
+          "localName": "B区 部署区",
+          "englishLabel": "B Site",
+          "localCoordinates": {
+            "x": 6.68,
+            "z": -63.68
+          },
+          "rawApiCoordinates": {
+            "x": 6368.0327,
+            "y": 668.18317,
+            "z": 167.20438
+          },
+          "apiCalloutIndex": 14,
+          "regionName": "Site",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0018606595309191567
+        },
+        {
+          "localName": "A区 小道",
+          "englishLabel": "A Link",
+          "localCoordinates": {
+            "x": 20.88,
+            "z": -60.11
+          },
+          "rawApiCoordinates": {
+            "x": 6011.0664,
+            "y": 2087.6528,
+            "z": 167.20193
+          },
+          "apiCalloutIndex": 15,
+          "regionName": "Link",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0035349229128816156
+        },
+        {
+          "localName": "B区 上层",
+          "englishLabel": "B Upper",
+          "localCoordinates": {
+            "x": 15.17,
+            "z": -76.83
+          },
+          "rawApiCoordinates": {
+            "x": 7682.943,
+            "y": 1517.3606,
+            "z": 167.20193
+          },
+          "apiCalloutIndex": 16,
+          "regionName": "Upper",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0036507719731575174
+        },
+        {
+          "localName": "C区 瀑布",
+          "englishLabel": "C Waterfall",
+          "localCoordinates": {
+            "x": -19.94,
+            "z": -67.2
+          },
+          "rawApiCoordinates": {
+            "x": 6719.804,
+            "y": -1994.2986,
+            "z": 71.56726
+          },
+          "apiCalloutIndex": 17,
+          "regionName": "Waterfall",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003571805705800256
+        },
+        {
+          "localName": "C区 小道",
+          "englishLabel": "C Link",
+          "localCoordinates": {
+            "x": -13.78,
+            "z": -75.04
+          },
+          "rawApiCoordinates": {
+            "x": 7504.109,
+            "y": -1377.893,
+            "z": 71.56726
+          },
+          "apiCalloutIndex": 18,
+          "regionName": "Link",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.001527416118802172
+        },
+        {
+          "localName": "A区 台阶",
+          "englishLabel": "A Stairs",
+          "localCoordinates": {
+            "x": 38.61,
+            "z": -82.58
+          },
+          "rawApiCoordinates": {
+            "x": 8257.875,
+            "y": 3860.9312,
+            "z": 232.63
+          },
+          "apiCalloutIndex": 19,
+          "regionName": "Stairs",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.001426830052946953
+        },
+        {
+          "localName": "C区 土丘",
+          "englishLabel": "C Mound",
+          "localCoordinates": {
+            "x": -15.77,
+            "z": -38.64
+          },
+          "rawApiCoordinates": {
+            "x": 3863.7183,
+            "y": -1576.5884,
+            "z": 125.12698
+          },
+          "apiCalloutIndex": 20,
+          "regionName": "Mound",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.004987679320083165
+        },
+        {
+          "localName": "C区 大道",
+          "englishLabel": "C Main",
+          "localCoordinates": {
+            "x": -31.48,
+            "z": -53.11
+          },
+          "rawApiCoordinates": {
+            "x": 5311.2646,
+            "y": -3148.162,
+            "z": 74.64343
+          },
+          "apiCalloutIndex": 21,
+          "regionName": "Main",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.00310253380320459
+        },
+        {
+          "localName": "C区 弯道",
+          "englishLabel": "C Bend",
+          "localCoordinates": {
+            "x": -52.81,
+            "z": -56.58
+          },
+          "rawApiCoordinates": {
+            "x": 5657.522,
+            "y": -5281.4395,
+            "z": 80.35518
+          },
+          "apiCalloutIndex": 22,
+          "regionName": "Bend",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.006493413971093253
+        },
+        {
+          "localName": "C区 部署区",
+          "englishLabel": "C Site",
+          "localCoordinates": {
+            "x": -42.66,
+            "z": -66.77
+          },
+          "rawApiCoordinates": {
+            "x": 6676.6636,
+            "y": -4265.876,
+            "z": 80.35567
+          },
+          "apiCalloutIndex": 23,
+          "regionName": "Site",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003585260938889392
+        },
+        {
+          "localName": "C区 走廊",
+          "englishLabel": "C Hall",
+          "localCoordinates": {
+            "x": -42.66,
+            "z": -79.02
+          },
+          "rawApiCoordinates": {
+            "x": 7902.0615,
+            "y": -4265.876,
+            "z": 80.35567
+          },
+          "apiCalloutIndex": 24,
+          "regionName": "Hall",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0013841333028233609
+        },
+        {
+          "localName": "C区 碎石路",
+          "englishLabel": "C Gravel",
+          "localCoordinates": {
+            "x": -17.52,
+            "z": -89.37
+          },
+          "rawApiCoordinates": {
+            "x": 8936.881,
+            "y": -1752.2874,
+            "z": 80.35567
+          },
+          "apiCalloutIndex": 25,
+          "regionName": "Gravel",
+          "superRegionName": "C",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.003110623088709226
+        },
+        {
+          "localName": "守方 重生点",
+          "englishLabel": "Defender Side Spawn",
+          "localCoordinates": {
+            "x": 16.98,
+            "z": -96.87
+          },
+          "rawApiCoordinates": {
+            "x": 9686.767,
+            "y": 1697.8223,
+            "z": 80.35567
+          },
+          "apiCalloutIndex": 26,
+          "regionName": "Spawn",
+          "superRegionName": "Defender Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.002930295036341036
+        },
+        {
+          "localName": "攻方 重生点",
+          "englishLabel": "Attacker Side Spawn",
+          "localCoordinates": {
+            "x": 7.77,
+            "z": -14.01
+          },
+          "rawApiCoordinates": {
+            "x": 1401.2915,
+            "y": 777.29834,
+            "z": 232.63013
+          },
+          "apiCalloutIndex": 27,
+          "regionName": "Spawn",
+          "superRegionName": "Attacker Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.00417107906422337
+        }
+      ]
+    },
+    "infinity": {
+      "displayName": "Abyss",
+      "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+      "mapUrl": "/Game/Maps/Infinity/Infinity",
+      "assetPath": "ShooterGame/Content/Maps/Infinity/Infinity_PrimaryAsset",
+      "localFile": "site/aim-maps/infinity.minimap.json",
+      "count": 23,
+      "callouts": [
+        {
+          "localName": "A区 窄桥",
+          "englishLabel": "A Bridge",
+          "localCoordinates": {
+            "x": -3.75,
+            "z": -57.0
+          },
+          "rawApiCoordinates": {
+            "x": 5700,
+            "y": -375,
+            "z": 900
+          },
+          "apiCalloutIndex": 0,
+          "regionName": "Bridge",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 小道",
+          "englishLabel": "A Link",
+          "localCoordinates": {
+            "x": -24.5,
+            "z": -28.0
+          },
+          "rawApiCoordinates": {
+            "x": 2800,
+            "y": -2450,
+            "z": 1075
+          },
+          "apiCalloutIndex": 1,
+          "regionName": "Link",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 大厅",
+          "englishLabel": "A Lobby",
+          "localCoordinates": {
+            "x": 34.0,
+            "z": -32.5
+          },
+          "rawApiCoordinates": {
+            "x": 3250,
+            "y": 3400,
+            "z": 975
+          },
+          "apiCalloutIndex": 2,
+          "regionName": "Lobby",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 大道",
+          "englishLabel": "A Main",
+          "localCoordinates": {
+            "x": 16.5,
+            "z": -38.0
+          },
+          "rawApiCoordinates": {
+            "x": 3800,
+            "y": 1650,
+            "z": 975
+          },
+          "apiCalloutIndex": 3,
+          "regionName": "Main",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 部署区",
+          "englishLabel": "A Site",
+          "localCoordinates": {
+            "x": -2.0,
+            "z": -43.0
+          },
+          "rawApiCoordinates": {
+            "x": 4300,
+            "y": -200,
+            "z": 800
+          },
+          "apiCalloutIndex": 4,
+          "regionName": "Site",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "攻方 重生点",
+          "englishLabel": "Attacker Side Spawn",
+          "localCoordinates": {
+            "x": 49.5,
+            "z": -9.5
+          },
+          "rawApiCoordinates": {
+            "x": 950,
+            "y": 4950,
+            "z": 850
+          },
+          "apiCalloutIndex": 5,
+          "regionName": "Spawn",
+          "superRegionName": "Attacker Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 瞭望台",
+          "englishLabel": "A Tower",
+          "localCoordinates": {
+            "x": -1.25,
+            "z": -30.25
+          },
+          "rawApiCoordinates": {
+            "x": 3025,
+            "y": -125,
+            "z": 1350
+          },
+          "apiCalloutIndex": 6,
+          "regionName": "Tower",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 拐角",
+          "englishLabel": "Mid Bend",
+          "localCoordinates": {
+            "x": 10.75,
+            "z": 17.0
+          },
+          "rawApiCoordinates": {
+            "x": -1700,
+            "y": 1075,
+            "z": 950
+          },
+          "apiCalloutIndex": 7,
+          "regionName": "Bend",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 小道",
+          "englishLabel": "B Link",
+          "localCoordinates": {
+            "x": -23.5,
+            "z": 20.0
+          },
+          "rawApiCoordinates": {
+            "x": -2000,
+            "y": -2350,
+            "z": 925
+          },
+          "apiCalloutIndex": 8,
+          "regionName": "Link",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 大厅",
+          "englishLabel": "B Lobby",
+          "localCoordinates": {
+            "x": 40.25,
+            "z": 36.5
+          },
+          "rawApiCoordinates": {
+            "x": -3650,
+            "y": 4025,
+            "z": 400
+          },
+          "apiCalloutIndex": 9,
+          "regionName": "Lobby",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 大道",
+          "englishLabel": "B Main",
+          "localCoordinates": {
+            "x": 15.25,
+            "z": 44.5
+          },
+          "rawApiCoordinates": {
+            "x": -4450,
+            "y": 1525,
+            "z": 525
+          },
+          "apiCalloutIndex": 10,
+          "regionName": "Main",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 高台",
+          "englishLabel": "B Nest",
+          "localCoordinates": {
+            "x": 21.5,
+            "z": 49.75
+          },
+          "rawApiCoordinates": {
+            "x": -4975,
+            "y": 2150,
+            "z": 900
+          },
+          "apiCalloutIndex": 11,
+          "regionName": "Nest",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 坡底",
+          "englishLabel": "Mid Bottom",
+          "localCoordinates": {
+            "x": 5.75,
+            "z": 4.0
+          },
+          "rawApiCoordinates": {
+            "x": -400,
+            "y": 575,
+            "z": 975
+          },
+          "apiCalloutIndex": 12,
+          "regionName": "Bottom",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 部署区",
+          "englishLabel": "B Site",
+          "localCoordinates": {
+            "x": -11.75,
+            "z": 44.25
+          },
+          "rawApiCoordinates": {
+            "x": -4425,
+            "y": -1175,
+            "z": 700
+          },
+          "apiCalloutIndex": 13,
+          "regionName": "Site",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 天桥",
+          "englishLabel": "Mid Catwalk",
+          "localCoordinates": {
+            "x": 5.25,
+            "z": -6.0
+          },
+          "rawApiCoordinates": {
+            "x": 600,
+            "y": 525,
+            "z": 1300
+          },
+          "apiCalloutIndex": 14,
+          "regionName": "Catwalk",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 险路",
+          "englishLabel": "B Danger",
+          "localCoordinates": {
+            "x": 7.0,
+            "z": 58.5
+          },
+          "rawApiCoordinates": {
+            "x": -5850,
+            "y": 700,
+            "z": 625
+          },
+          "apiCalloutIndex": 15,
+          "regionName": "Danger",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "守方 重生点",
+          "englishLabel": "Defender Side Spawn",
+          "localCoordinates": {
+            "x": -52.75,
+            "z": -9.5
+          },
+          "rawApiCoordinates": {
+            "x": 950,
+            "y": -5275,
+            "z": 1125
+          },
+          "apiCalloutIndex": 16,
+          "regionName": "Spawn",
+          "superRegionName": "Defender Side",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 图书馆",
+          "englishLabel": "Mid Library",
+          "localCoordinates": {
+            "x": -6.0,
+            "z": 3.25
+          },
+          "rawApiCoordinates": {
+            "x": -325,
+            "y": -600,
+            "z": 975
+          },
+          "apiCalloutIndex": 17,
+          "regionName": "Library",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 密道",
+          "englishLabel": "A Secret",
+          "localCoordinates": {
+            "x": -38.5,
+            "z": -37.75
+          },
+          "rawApiCoordinates": {
+            "x": 3775,
+            "y": -3850,
+            "z": 1025
+          },
+          "apiCalloutIndex": 18,
+          "regionName": "Secret",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 保安室",
+          "englishLabel": "A Security",
+          "localCoordinates": {
+            "x": -29.75,
+            "z": -49.0
+          },
+          "rawApiCoordinates": {
+            "x": 4900,
+            "y": -2975,
+            "z": 950
+          },
+          "apiCalloutIndex": 19,
+          "regionName": "Security",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "中区 坡顶",
+          "englishLabel": "Mid Top",
+          "localCoordinates": {
+            "x": -23.75,
+            "z": -7.75
+          },
+          "rawApiCoordinates": {
+            "x": 775,
+            "y": -2375,
+            "z": 1075
+          },
+          "apiCalloutIndex": 20,
+          "regionName": "Top",
+          "superRegionName": "Mid",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "B区 瞭望台",
+          "englishLabel": "B Tower",
+          "localCoordinates": {
+            "x": -25.0,
+            "z": 39.25
+          },
+          "rawApiCoordinates": {
+            "x": -3925,
+            "y": -2500,
+            "z": 1100
+          },
+          "apiCalloutIndex": 21,
+          "regionName": "Tower",
+          "superRegionName": "B",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        },
+        {
+          "localName": "A区 通风口",
+          "englishLabel": "A Vent",
+          "localCoordinates": {
+            "x": -3.25,
+            "z": -17.0
+          },
+          "rawApiCoordinates": {
+            "x": 1700,
+            "y": -325,
+            "z": 1325
+          },
+          "apiCalloutIndex": 22,
+          "regionName": "Vent",
+          "superRegionName": "A",
+          "localCoordinateRoundingMatches": true,
+          "chineseClientLabelMatches": true,
+          "coordinateDistanceMeters": 0.0
+        }
+      ]
+    }
+  },
+  "unavailable": []
+}

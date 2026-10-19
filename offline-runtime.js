@@ -65,7 +65,7 @@
    if(!button){button=document.createElement('button');button.className='al-wk-fav';button.type='button';button.dataset.offlineFavorite='';button.textContent='♥';(card.querySelector('.al-wk-art')||card).append(button);}
    setAttr(button,'data-offline-code',code);
    const on=favorites.has(code);setClass(button,'is-on',on);setAttr(button,'aria-pressed',String(on));
-   const title=card.querySelector('.al-wk-name,.al-wk-card-title,h3,h2')?.textContent.trim()||card.querySelector('[aria-label^="开始游玩："]')?.getAttribute('aria-label').slice(5)||code;
+   const title=card.querySelector('.al-wk-name,.al-wk-card-title,h3,h2')?.textContent.trim()||card.querySelector('[aria-label^="开始游玩："]')?.getAttribute('aria-label').slice(globalThis.__aimI18n.t('开始游玩：').length)||code;
    setAttr(button,'aria-label',(on?'取消本机收藏：':'收藏到本机：')+title);setAttr(button,'title',on?'取消本机收藏':'收藏到本机');
    const excluded=favoritesOnly&&(!on||seen.has(code));setFlag(card,'data-offline-excluded',excluded);
    if(!excluded){visible++;seen.add(code);}
@@ -207,7 +207,14 @@
     location.reload();
    }catch(error){alert('恢复失败：'+error.message)}finally{importButton.disabled=false}
   };tools.append(importButton,input);
-  statusLabel=document.createElement('span');statusLabel.setAttribute('role','status');statusLabel.setAttribute('aria-live','polite');tools.append(statusLabel);document.body.append(tools);
-  const app=document.getElementById('app');if(app)new MutationObserver(observeChanges).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['aria-pressed','class','data-toggle','data-share-code']});tidy();
+  statusLabel=document.createElement('span');statusLabel.setAttribute('role','status');statusLabel.setAttribute('aria-live','polite');tools.append(statusLabel);globalThis.__aimI18n.mountLanguageSelector(tools);document.body.append(tools);
+  const app=document.getElementById('app'),observer=new MutationObserver(observeChanges),observeOptions={childList:true,subtree:true,attributes:true,attributeFilter:['aria-pressed','class','data-toggle','data-share-code']};
+  if(app)observer.observe(app,observeOptions);
+  // The retained trainer mounts its UI beside #app. Give that portal the same
+  // targeted offline controls/notices; HUD text still skips adaptation scans.
+  function watchPortal(root){if(root instanceof Element&&root.matches('.aimlab-page')&&!app?.contains(root)){observer.observe(root,observeOptions);tidySubtree(root);}}
+  document.querySelectorAll('.aimlab-page').forEach(watchPortal);
+  new MutationObserver(records=>{for(const record of records)for(const node of record.addedNodes)watchPortal(node)}).observe(document.body,{childList:true});
+  tidy();
  });
 })();

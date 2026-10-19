@@ -246,6 +246,16 @@ for(const req of requirements.values()){
  }
 }
 const missing=[...missingMap.values()].sort((a,b)=>a.path.localeCompare(b.path));
+let localization=null;
+try{
+ const manifest=readJson(path.join(root,'offline-manifest.json'));
+ localization=readJson(path.join(root,'localization-report.json'));
+ if(manifest.version<4||manifest.defaultLanguage!=='zh-CN'||JSON.stringify(manifest.languages)!==JSON.stringify(['zh-CN','en']))throw new Error('Bilingual application manifest is missing');
+ if(localization.schemaVersion!==1||!Array.isArray(localization.missing)||localization.missing.length)throw new Error('Localization coverage is incomplete');
+ if(maps.some(map=>!Number.isInteger(localization.minimapCallouts?.[map])||localization.minimapCallouts[map]<=0))throw new Error('English minimap coverage is incomplete');
+ const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),i18nAt=html.indexOf('src="/offline-i18n.js"'),runtimeAt=html.indexOf('src="/offline-runtime.js"'),clientAt=html.indexOf('src="/js/index.');
+ if(i18nAt<0||i18nAt>=runtimeAt||runtimeAt>=clientAt||!has('/offline-i18n.js'))throw new Error('Language runtime must load before offline adaptation and client modules');
+}catch(error){failures.push({stage:'localization integrity',error:error.message})}
 const requiredMissing=missing.filter(x=>!x.optional),optionalMissing=missing.filter(x=>x.optional);
 const resourceManifest={schemaVersion:1,algorithm:'SHA256',root:'dist',createdAt:new Date().toISOString(),fileCount:resources.length,storedBytes:resources.reduce((sum,x)=>sum+x.bytes,0),encryptedAssets:encrypted,resources};
 const hashFile=path.join(packageRoot,'verification-resources.sha256.json');
@@ -256,7 +266,7 @@ const result={schemaVersion:2,generatedAt:new Date().toISOString(),root,success:
  checks:{network:'No network used: fetch reads dist only and blocks external hosts',encryptedFormat:'Every .enc file authenticated, decrypted and decompressed with the current original-format codec',sceneCount:expectedSceneCount,mapCount:maps.length},
  resourceCount:resources.length,storedBytes:resourceManifest.storedBytes,encryptedResources:encrypted,jsonResources:jsonCount,
  inventory:{materialCandidates:materials.length,moduleCandidates:moduleCandidates.length,moduleClosureEntries:moduleReport.all?.length??moduleCandidates.length,uniqueRequirements:requirements.size,satisfied:satisfied.length,moduleExclusions:moduleReport.excluded??[]},
- scenes:scenes.length,sceneDetails:scenes,maps:mapReports,skinPacks,fonts:{files:fontInventory.report.files,cachedFiles:fontInventory.report.cachedFiles,groups:fontInventory.report.groups,satisfiedGroups:fontInventory.report.satisfiedGroups,missingGroups:fontInventory.report.missingGroups,byFamily:fontInventory.report.byFamily,excluded:fontInventory.report.excluded},missingRequiredAssets:requiredMissing,missingOptionalAssets:optionalMissing,aliases,alternativeGroups:alternatives,ignoredReferences:ignored,failures,
+ scenes:scenes.length,sceneDetails:scenes,maps:mapReports,skinPacks,localization,fonts:{files:fontInventory.report.files,cachedFiles:fontInventory.report.cachedFiles,groups:fontInventory.report.groups,satisfiedGroups:fontInventory.report.satisfiedGroups,missingGroups:fontInventory.report.missingGroups,byFamily:fontInventory.report.byFamily,excluded:fontInventory.report.excluded},missingRequiredAssets:requiredMissing,missingOptionalAssets:optionalMissing,aliases,alternativeGroups:alternatives,ignoredReferences:ignored,failures,
  sha256Manifest:{file:path.basename(hashFile),sha256:sha256(fs.readFileSync(hashFile)),fileCount:resources.length},
  limitations:['Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.','A lightmap atlas is considered present when either complete PNG or complete AVIF pair exists; Edge supports the saved AVIF assets.']};
 fs.writeFileSync(reportFile,JSON.stringify(result,null,2));

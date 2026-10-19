@@ -1,2 +1,12 @@
 .al-studio-shell [data-action="share-scene"],.al-studio-shell [data-action="my-cloud-scenes"],.al-studio-shell [data-action="pw-manage"],.al-studio-shell .pwb,.al-studio-shell .al-cloud-scene-share{display:none!important}
 .aim-skin-settings{margin:20px 0;padding:18px;border:1px solid #52606d;border-radius:12px;background:rgba(115,130,145,.07);color:inherit}.aim-skin-settings h3{margin:0 0 8px}.aim-skin-settings p{font-size:13px;line-height:1.7}.aim-skin-controls,.aim-skin-modes,.aim-skin-auditions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.aim-skin-controls label{display:flex;flex-direction:column;gap:5px;min-width:135px;font-size:13px}.aim-skin-settings select,.aim-skin-settings button{font:inherit;color:inherit;border:1px solid #71808c;border-radius:6px;padding:7px 10px;background:transparent}.aim-skin-settings option{color:#17212b;background:#fff}.aim-skin-settings button{cursor:pointer}.aim-skin-settings button:hover:not(:disabled){background:rgba(115,155,165,.2)}.aim-skin-settings button:disabled{opacity:.45;cursor:default}.aim-skin-modes label{display:flex;align-items:center;gap:6px;font-size:13px}.aim-skin-banner-preview{display:flex;align-items:center;gap:16px;margin:12px 0}.aim-skin-banner-preview img{width:150px;height:150px;object-fit:contain;background:#18212c;border-radius:10px}.aim-skin-banner-preview figcaption,.aim-skin-notice{font-size:12px;line-height:1.6}.aim-skin-settings :focus-visible{outline:2px solid #52b9c9;outline-offset:3px}@media(max-width:600px){.aim-skin-controls label{min-width:115px;flex:1}.aim-skin-banner-preview{flex-wrap:wrap}}
+
+.offline-language{display:inline-flex;align-items:center;gap:6px}
+#offline-tools select{color:#d8f8e8;background:#1b3028;border:1px solid #577666;border-radius:4px;padding:3px 5px;font:inherit;cursor:pointer}
+#offline-tools select:focus-visible{outline:2px solid #a4e9c8;outline-offset:2px}
+html[lang="en"] .hall-tab{white-space:normal;line-height:1.25}
+html[lang="en"] .hall-rail-item{white-space:normal;line-height:1.3}
+html[lang="en"] .hall-skin-field{min-width:0}
+html[lang="en"] .hall-skin-checks label{white-space:normal}
+html[lang="en"] .al-studio-shell button{overflow-wrap:normal}
+html[lang="en"] .al-studio-brand-mark small{font-size:9px;letter-spacing:0;white-space:nowrap}

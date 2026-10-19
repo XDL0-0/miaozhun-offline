@@ -1,0 +1,270 @@
+{
+  "checkedOn": "2026-10-19",
+  "scope": "Official VALORANT terminology audit for the English UI. Source IDs disambiguate aliases; app-specific names are editorial translations.",
+  "official": {
+    "weapons": {
+      "source": "https://playvalorant.com/en-us/arsenal/",
+      "mapping": {
+        "标配": "Classic",
+        "短炮": "Shorty",
+        "狂怒": "Frenzy",
+        "鬼魅": "Ghost",
+        "幽灵": "Ghost",
+        "正义": "Sheriff",
+        "蜂刺": "Stinger",
+        "骇灵": "Spectre",
+        "雄鹿": "Bucky",
+        "判官": "Judge",
+        "獠犬": "Bulldog",
+        "戍卫": "Guardian",
+        "捍卫者": "Guardian",
+        "幻影": "Phantom",
+        "狂徒": "Vandal",
+        "飞将": "Marshal",
+        "警官": "Marshal",
+        "莽侠": "Outlaw",
+        "逃犯": "Outlaw",
+        "冥驹": "Operator",
+        "大狙": "Operator",
+        "战神": "Ares",
+        "奥丁": "Odin",
+        "近战": "Melee",
+        "手枪": "Sidearms",
+        "冲锋枪": "SMGs",
+        "霰弹枪": "Shotguns",
+        "步枪": "Rifles",
+        "狙击枪": "Snipers",
+        "机枪": "Heavies"
+      },
+      "notes": [
+        "The project gunGhost audio preset uses 幽灵; the buy menu uses 鬼魅. Both mean Ghost.",
+        "The newer Bandit is on Riot's current arsenal but is absent from this project's weapon list; translation does not require adding it.",
+        "For generic explanatory prose, pistols and machine guns are fine; use Sidearms and Heavies for matching arsenal category labels."
+      ]
+    },
+    "agents": {
+      "source": "https://playvalorant.com/en-us/agents/",
+      "mapping": {
+        "捷风": "Jett",
+        "雷兹": "Raze",
+        "不死鸟": "Phoenix",
+        "芮娜": "Reyna",
+        "蕾娜": "Reyna",
+        "夜露": "Yoru",
+        "霓虹": "Neon",
+        "壹决": "Iso",
+        "幻棱": "Waylay",
+        "猎枭": "Sova",
+        "铁臂": "Breach",
+        "斯凯": "Skye",
+        "K/O": "KAY/O",
+        "黑梦": "Fade",
+        "盖可": "Gekko",
+        "钛狐": "Tejo",
+        "幽影": "Omen",
+        "炼狱": "Brimstone",
+        "蝰蛇": "Viper",
+        "星礈": "Astra",
+        "海神": "Harbor",
+        "暮蝶": "Clove",
+        "迷核": "Miks",
+        "贤者": "Sage",
+        "零": "Cypher",
+        "奇乐": "Killjoy",
+        "尚勃勒": "Chamber",
+        "钢索": "Deadlock",
+        "钢锁": "Deadlock",
+        "维斯": "Vyse",
+        "禁灭": "Veto",
+        "决斗者": "Duelist",
+        "先锋": "Initiator",
+        "控场者": "Controller",
+        "哨位": "Sentinel",
+        "英雄": "Agent"
+      },
+      "notes": [
+        "KAY/O must keep slash and uppercase spelling.",
+        "零 means Cypher only in the agent-name context. It also appears in zero-star results and ordinary numeric text.",
+        "The same source code uses both 钢索 and 钢锁 for Deadlock."
+      ]
+    },
+    "maps": {
+      "source": "https://playvalorant.com/en-us/maps/",
+      "mapping": {
+        "源工重镇": "Bind",
+        "隐世修所": "Haven",
+        "霓虹町": "Split",
+        "亚海悬城": "Ascent",
+        "森寒冬港": "Icebox",
+        "微风岛屿": "Breeze",
+        "裂变峡谷": "Fracture",
+        "深海明珠": "Pearl",
+        "莲华古城": "Lotus",
+        "日落之城": "Sunset",
+        "幽邃地窟": "Abyss",
+        "盐海矿镇": "Corrode",
+        "天枢云阙": "Summit"
+      },
+      "notes": [
+        "Use official single map names rather than translating the Chinese descriptive name literally.",
+        "The （复刻） suffix describes the application's map recreation and is not part of an official map name. Suggested rendering: (Recreation)."
+      ]
+    },
+    "abilities": {
+      "mapping": {
+        "逐风": "Tailwind",
+        "瞬云": "Cloudburst",
+        "全面封锁": "Lockdown",
+        "束缚": "Detained",
+        "曲球": "Curveball",
+        "闪光爆破": "Flashpoint",
+        "引路之光": "Guiding Light",
+        "盲点": "Blindside",
+        "弧光玫瑰": "Arc Rose"
+      },
+      "sources": [
+        "https://playvalorant.com/en-us/agents/jett/",
+        "https://playvalorant.com/en-us/agents/killjoy/",
+        "https://playvalorant.com/en-us/agents/breach/",
+        "https://playvalorant.com/en-us/agents/skye/",
+        "https://playvalorant.com/en-us/agents/phoenix/",
+        "https://playvalorant.com/en-us/agents/yoru/",
+        "https://playvalorant.com/en-us/agents/vyse/",
+        "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-9-10/",
+        "https://playvalorant.com/en-gb/news/game-updates/valorant-patch-notes-10-09/"
+      ],
+      "notes": [
+        "Killjoy's ultimate is Lockdown; its status effect is detained/detain, not bound or rooted.",
+        "Flashpoint is Breach's named ability. The editor's 闪光站点 is a generic Flash Waypoint/Flash Point; avoid confusing it with Breach's ability.",
+        "Agent pages render only their initially selected ability in plain HTML. Patch 9.10 directly names Flashpoint, Guiding Light and Tailwind; patch 10.09 directly names Lockdown. Curveball is spelled as one word in Riot's older patch notes, although some newer editorial text uses Curve Ball."
+      ]
+    },
+    "crosshairAndGunplay": {
+      "mapping": {
+        "准星": "Crosshair",
+        "主准星": "Primary",
+        "开镜准星": "Aim Down Sights",
+        "狙击镜": "Sniper Scope",
+        "使用高级选项": "Use Advanced Options",
+        "自定义颜色": "Custom Color",
+        "移动误差": "Movement Error",
+        "射击误差": "Firing Error",
+        "后坐力": "Recoil",
+        "散布": "Spread",
+        "点射": "Tap Fire",
+        "扫射": "Spray",
+        "连发": "Burst Fire",
+        "训练场": "The Range"
+      },
+      "sources": [
+        "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-5-04/",
+        "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-3-03/",
+        "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-0-50/",
+        "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-9-10/",
+        "https://playvalorant.com/en-gb/news/dev/the-state-of-hit-registration/",
+        "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-902/"
+      ],
+      "notes": [
+        "Primary, Aim Down Sights, and Sniper Scope are Riot's exact Crosshair tab labels (patch 5.04). In standalone prose use primary crosshair and ADS crosshair for clarity.",
+        "连发 can mean continuous automatic fire as well as a short burst. Translate contextually: weapon fire over a held trigger is automatic fire, not necessarily burst fire.",
+        "弹道 can refer to trajectories, spread, or recoil pattern in this application. Do not map all occurrences to ballistics."
+      ]
+    },
+    "skinNames": {
+      "mapping": {
+        "盖亚的复仇": "Gaia's Vengeance",
+        "混沌序曲": "Prelude to Chaos",
+        "2021全球冠军赛": "Champions 2021"
+      },
+      "preserveExistingEnglish": [
+        "Prelude to Chaos",
+        "Kuronami",
+        "Primordium",
+        "Rogue",
+        "RGX 11z Pro",
+        "Ayakashi",
+        "Nocturnum",
+        "Mystbloom",
+        "ORA by OneTap"
+      ],
+      "sources": {
+        "Gaia's Vengeance": "https://playvalorant.com/en-us/news/announcements/what-s-new-in-valorant-episode-4-act-ii/",
+        "Prelude to Chaos": "https://playvalorant.com/en-us/news/game-updates/what-s-new-in-valorant-episode-5-act-i/",
+        "Champions 2021": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-12-02/",
+        "RGX 11z Pro": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-6-10/",
+        "Kuronami": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-12-07/",
+        "Nocturnum": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-12-07/",
+        "Mystbloom": "https://playvalorant.com/en-gb/news/game-updates/valorant-patch-notes-9-0/",
+        "Primordium": "https://www.youtube.com/watch?v=6SPuDeBwTpU",
+        "Ayakashi": "https://www.youtube.com/watch?v=ZSEMYF4AU2g",
+        "Rogue": "https://www.youtube.com/watch?v=b1u1kUdDOys"
+      },
+      "notes": [
+        "Ayakashi, Primordium and Rogue trailer titles/URLs were verified in the official playvalorant.com category page's __NEXT_DATA__ article metadata.",
+        "ORA by OneTap is already English in catalog.json. Its supplied referencePage is a community wiki; do not describe wiki.playvalorant.com as Riot-authored documentation. The wiki explicitly says it is not owned or operated by Riot.",
+        "ORA theme keys base/watch/renegade/raja/ignition should stay stable. The wiki displays Base (my lawyer said don't), Watch, RENEGADE, RAJA, Ignition; publisher-primary theme-label confirmation was not recovered, so preserve existing project labels rather than claiming new official names.",
+        "Use Kill Banner for 击杀横幅 (Riot patch 10.09 uses this exact term); finisher is a distinct last-kill effect."
+      ]
+    }
+  },
+  "standardClientLabelsNotDirectlyQuotedInBrowsedPrimarySources": {
+    "轻型护甲": "Light Shields",
+    "重型护甲": "Heavy Shields",
+    "再生护甲": "Regen Shield",
+    "灵敏度": "Sensitivity",
+    "开镜灵敏度倍数": "ADS Sensitivity Multiplier",
+    "狙击开镜灵敏度倍数": "Scoped Sensitivity Multiplier",
+    "内侧线": "Inner Lines",
+    "外侧线": "Outer Lines",
+    "轮廓": "Outlines",
+    "中心点": "Center Dot",
+    "透明度": "Opacity",
+    "厚度": "Thickness",
+    "偏移": "Offset",
+    "开火": "Fire",
+    "开镜": "Aim Down Sights",
+    "换弹": "Reload",
+    "检视": "Inspect Weapon",
+    "主武器": "Equip Primary Weapon",
+    "行走（静步）": "Walk",
+    "下蹲": "Crouch",
+    "跳跃": "Jump"
+  },
+  "appSpecificRecommendedEnglish": {
+    "瞄准专家": "Aim Expert",
+    "瓦工坊": "VALORANT Workshop",
+    "瓦创意工坊": "Scene Editor",
+    "场景编辑器": "Scene Editor",
+    "小球项目": "Target Drills",
+    "预瞄": "Crosshair Placement / Pre-aim (contextual)",
+    "架枪": "Hold an Angle",
+    "背闪": "Turn Away from Flashes",
+    "跟枪": "Tracking",
+    "甩枪": "Flicking",
+    "压枪": "Recoil Control",
+    "辅助预瞄": "Pre-aim Assistance",
+    "实时预瞄线": "Live Head-Level Guide",
+    "预瞄点": "Pre-aim Markers",
+    "急停": "Counter-strafing / Stop-and-Shoot (contextual)",
+    "急停刹车": "Stopping Deceleration",
+    "本机收藏": "Local Favorites",
+    "本机离线版": "Offline Edition",
+    "完整备份": "Full Backup",
+    "复刻": "Recreation"
+  },
+  "criticalPitfalls": [
+    "Do not translate Chinese strings by blindly replacing words in the rendered DOM: 零 is also zero, 幽灵 can be a descriptive word, and narrow weapon aliases appear inside prose.",
+    "Editor object name 全面封锁 must remain Lockdown. Flash Station/Waypoint is an app editor construct, whereas Flashpoint is a specific Breach ability.",
+    "The app uses 急停 for both the training category and release-key deceleration; counter-strafing specifically means using opposite movement input. Use stop/decelerate where that is the actual described behavior.",
+    "Do not translate the workshop/editor as an official Riot mode or brand. These are app-specific features.",
+    "Skin catalog names and runtime IDs are already in English; localize labels while preserving keys and filenames.",
+    "Traditional or mainland Chinese alternatives in the same bundle must collapse to the same canonical English game name, but only in the relevant context."
+  ],
+  "contextualCases": {
+    "零": "Cypher in agent and bundled scene labels; 0 in the group counter by source context",
+    "一": "1 in numeral helper; Mon in calendar weekday properties",
+    "超凡": "Immortal, based on internal rank ID",
+    "神话": "Radiant, based on internal rank ID",
+    "赋能": "Ascendant, based on internal rank ID"
+  }
+}
