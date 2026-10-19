@@ -1,11 +1,11 @@
 const __aimOfflineLocale=globalThis.__aimI18n??{t:value=>value,format:(template,values)=>template.replace(/\{(\d+)\}/g,(match,index)=>index<values.length?String(values[index]):match)};
 // Shared by the settings panel and the game. Playback only reads decoded caches.
-export const SKIN_WEAPONS = ['vandal', 'phantom', 'sheriff', 'operator'];
+export const SKIN_WEAPONS = ['vandal', 'phantom', 'sheriff', 'operator', 'melee'];
 const STORAGE_KEY = 'aim-offline.skin-packs.v2';
 const original = () => ({collection: 'default', theme: 'default', banner: 'default', modelEnabled: true, fireEnabled: true, killEnabled: true, bannerEnabled: true});
 export const killIndex = kills => (Math.max(1, Math.floor(Number(kills) || 1)) - 1) % 5 + 1;
 const safePath = value => typeof value === 'string' && /^\/skin-packs\/[a-z0-9/-]+\.(ogg|png)$/.test(value) ? value : null;
-const bannerParts = banner => banner?.layers ? [...Object.values(banner.layers), banner.headshot].filter(Boolean) : [banner?.url];
+const bannerParts = banner => banner?.frames ? banner.frames : banner?.layers ? [...Object.values(banner.layers), banner.headshot].filter(Boolean) : [banner?.url];
 
 export function createSkinPackRuntime(options = {}) {
   const fetcher = options.fetcher ?? (globalThis.fetch && globalThis.fetch.bind(globalThis));
@@ -120,6 +120,7 @@ export function createSkinPackRuntime(options = {}) {
     const weapons = weapon ? [weapon] : SKIN_WEAPONS;
     const tasks = [];
     for (const current of weapons) {
+      if (current === 'melee') continue;
       const {selection, theme} = details(current);
       if (!theme) continue;
       if (selection.fireEnabled) tasks.push(loadAudio(theme.fire[current], context));
@@ -148,12 +149,15 @@ export function createSkinPackRuntime(options = {}) {
           if (!Array.isArray(collection.weapons) || !Array.isArray(collection.themes)) throw new Error((__aimOfflineLocale.t('皮肤目录格式错误')));
           for (const theme of collection.themes) {
             if (!theme.fire || !theme.kills || !Array.isArray(theme.banners)) throw new Error((__aimOfflineLocale.t('主题目录格式错误')));
-            for (const banner of theme.banners) if (banner.layers && (
+            for (const banner of theme.banners) {
+              if (banner.frames && (!Array.isArray(banner.frames) || banner.frames.length < 5 || banner.frames.length > 6 || !banner.frames.every(safePath))) throw new Error((__aimOfflineLocale.t('主题目录格式错误')));
+              if (banner.layers && (
               !['frame', 'ring', 'emblem', 'pip'].every(layer => safePath(banner.layers[layer])) ||
               !Number.isFinite(banner.pipRadius) || banner.pipRadius <= 0 || banner.pipRadius > 150 ||
               !Array.isArray(banner.headshotOffset) || banner.headshotOffset.length !== 2 ||
               banner.headshotOffset.some(value => !Number.isFinite(value) || Math.abs(value) > 150)
-            )) throw new Error((__aimOfflineLocale.t('主题目录格式错误')));
+              )) throw new Error((__aimOfflineLocale.t('主题目录格式错误')));
+            }
           }
         }
         manifest = value; manifestError = '';
@@ -190,14 +194,17 @@ export function createSkinPackRuntime(options = {}) {
     } catch { try { source?.disconnect(); output?.disconnect(); } catch {} return null; }
   }
   function playFire(context, master, weapon, when = context.currentTime) {
+    if (weapon === 'melee') return false;
     const {selection, theme} = details(weapon);
     return selection?.fireEnabled && theme ? !!playBuffer(context, master, theme.fire[weapon], when) : false;
   }
   function playKill(context, master, weapon, kills, when = context.currentTime) {
+    if (weapon === 'melee') return null;
     const {selection, theme} = details(weapon);
     return selection?.killEnabled && theme ? playBuffer(context, master, theme.kills[killIndex(kills)], when) : null;
   }
   function bannerKit() {
+    if (activeWeapon === 'melee') return null;
     const {selection, theme} = details(activeWeapon);
     const banner = theme?.banners.find(item => item.id === selection.banner);
     return selection?.bannerEnabled && banner && bannerParts(banner).every(url => images.has(url)) ? 'skin:' + banner.url : null;
@@ -206,6 +213,7 @@ export function createSkinPackRuntime(options = {}) {
     const url = kit?.startsWith('skin:') ? safePath(kit.slice(5)) : null;
     if (!url) return null;
     const banner = manifest?.collections.flatMap(collection => collection.themes.flatMap(theme => theme.banners)).find(item => item.url === url);
+    if (banner?.frames) return bannerParts(banner).every(part => images.has(part)) ? {composite: url, frames: banner.frames, pipRadius: 100, headshotOffset: [0, -90]} : null;
     if (banner?.layers) return bannerParts(banner).every(part => images.has(part))
       ? {layers: banner.layers, headshot: banner.headshot, pipRadius: banner.pipRadius, headshotOffset: banner.headshotOffset, pipFallback: banner.pipFallback, pipSprite: banner.pipSprite} : null;
     return images.has(url) ? {composite: url, pipRadius: 100, headshotOffset: [0, -90]} : null;
@@ -284,6 +292,10 @@ export function drawFallbackPip(context, x, y, rotation, scale = 1) {
 // Legacy schema-2 packs may still supply a composite. Reviewed layered packs use
 // the native HUD's frame/ring/emblem/pip drawing path instead of this fallback.
 export function drawCompositeBanner(canvas, context, image, animation, kills, headshot, pixelRatio = globalThis.devicePixelRatio || 1) {
+  const frames = Array.isArray(image);
+  // Match the trainer's existing five-kill audio cycle during long drills.
+  // The optional sixth source image is retained without freezing later kills.
+  if (frames) image = image[killIndex(kills) - 1];
   if (!image?.complete || !(image.naturalWidth > 0)) return false;
   const size = Math.max(1, Math.round(canvas.clientWidth * pixelRatio));
   if (canvas.width !== size || canvas.height !== size) canvas.width = canvas.height = size;
@@ -295,7 +307,7 @@ export function drawCompositeBanner(canvas, context, image, animation, kills, he
   context.drawImage(image, -136, -146, 272, 272);
   const count = killIndex(kills);
   context.fillStyle = '#fff';
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; !frames && i < count; i++) {
     context.beginPath(); context.arc((i - (count - 1) / 2) * 17, 135, i === count - 1 ? 4 * animation.newPipScale : 4, 0, Math.PI * 2); context.fill();
   }
   if (headshot) { context.font = 'bold 13px sans-serif'; context.textAlign = 'center'; context.fillText('HEADSHOT', 0, 120); }
@@ -335,10 +347,16 @@ export function mountSkinSettings(host, getAudioSettings = () => ({})) {
     if (disposed) return;
     const focused = section.contains(doc.activeElement) ? doc.activeElement?.getAttribute('aria-label') : null;
     const manifest = skinPacks.manifest, selection = skinPacks.selection(weapon), {collection, theme} = skinPacks.details(weapon);
-    controls.replaceChildren(dropdown((__aimOfflineLocale.t('枪械')), [{id: 'vandal', label: (__aimOfflineLocale.t('Vandal · 狂徒'))}, {id: 'phantom', label: (__aimOfflineLocale.t('Phantom · 幻影'))}, {id: 'sheriff', label: (__aimOfflineLocale.t('Sheriff · 正义'))}, {id: 'operator', label: (__aimOfflineLocale.t('Operator · 冥驹'))}], weapon, value => { weapon = value; notice = ''; skinPacks.stopAudition(); render(); }), dropdown((__aimOfflineLocale.t('皮肤')), [{id: 'default', label: (__aimOfflineLocale.t('原版默认'))}, ...(manifest?.collections.filter(item => item.weapons.includes(weapon)).map(item => ({id: item.id, label: item.name})) ?? [])], selection.collection, value => update({collection: value}), !manifest));
+    controls.replaceChildren(dropdown((__aimOfflineLocale.t('枪械')), [{id: 'vandal', label: (__aimOfflineLocale.t('Vandal · 狂徒'))}, {id: 'phantom', label: (__aimOfflineLocale.t('Phantom · 幻影'))}, {id: 'sheriff', label: (__aimOfflineLocale.t('Sheriff · 正义'))}, {id: 'operator', label: (__aimOfflineLocale.t('Operator · 冥驹'))}, {id: 'melee', label: (__aimOfflineLocale.t('近战（刀）'))}], weapon, value => { weapon = value; notice = ''; skinPacks.stopAudition(); render(); }), dropdown((__aimOfflineLocale.t('皮肤')), [{id: 'default', label: (__aimOfflineLocale.t('原版默认'))}, ...(manifest?.collections.filter(item => item.weapons.includes(weapon)).map(item => ({id: item.id, label: item.name})) ?? [])], selection.collection, value => update({collection: value}), !manifest));
     content.replaceChildren();
     if (theme) {
       controls.append(dropdown((__aimOfflineLocale.t('主题')), collection.themes.map(item => ({id: item.id, label: item.label})), selection.theme, value => update({theme: value}), collection.themes.length === 1));
+      if (weapon === 'melee') {
+        const modes = make('div', '', 'aim-skin-modes'), wrapper = make('label'), input = make('input');
+        input.type = 'checkbox'; input.setAttribute('aria-label', (__aimOfflineLocale.t('近战皮肤'))); input.checked = selection.modelEnabled;
+        input.addEventListener('change', () => update({modelEnabled: input.checked})); wrapper.append(input, doc.createTextNode((__aimOfflineLocale.t('近战皮肤')))); modes.append(wrapper);
+        content.append(modes, make('p', (__aimOfflineLocale.t('切换近战武器后显示所选皮肤。'))));
+      } else {
       controls.append(dropdown((__aimOfflineLocale.t('横幅样式')), theme.banners, selection.banner, value => update({banner: value}), theme.banners.length < 2));
       const modes = make('div', '', 'aim-skin-modes');
       for (const [key, label] of [['modelEnabled', (__aimOfflineLocale.t('皮肤枪模'))], ['fireEnabled', (__aimOfflineLocale.t('皮肤开火音效'))], ['killEnabled', (__aimOfflineLocale.t('皮肤击杀音效'))], ['bannerEnabled', (__aimOfflineLocale.t('皮肤击杀横幅'))]]) {
@@ -364,8 +382,9 @@ export function mountSkinSettings(host, getAudioSettings = () => ({})) {
         preview.append(picture, make('figcaption', (__aimOfflineLocale.t('击杀横幅预览 · 游戏中显示连杀计数与爆头反馈'))));
       } else preview.append(make('figcaption', (__aimOfflineLocale.t('横幅缺失或加载失败，游戏中使用原版效果'))));
       content.append(preview);
+      }
       const retry = make('button', (__aimOfflineLocale.t('重新加载皮肤素材'))); retry.type = 'button'; retry.addEventListener('click', () => { previewFailures.clear(); void skinPacks.prepare().then(render); }); content.append(retry);
-    } else content.append(make('p', manifest ? (__aimOfflineLocale.t('使用原版开火、击杀音效和击杀横幅。原版音效可在原版音效区试听。')) : (__aimOfflineLocale.t('正在异步读取皮肤目录…'))));
+    } else content.append(make('p', manifest ? weapon === 'melee' ? (__aimOfflineLocale.t('使用原版近战模型。')) : (__aimOfflineLocale.t('使用原版开火、击杀音效和击杀横幅。原版音效可在原版音效区试听。')) : (__aimOfflineLocale.t('正在异步读取皮肤目录…'))));
     if (skinPacks.manifestError) { const retry = make('button', (__aimOfflineLocale.t('重试读取皮肤目录'))); retry.type = 'button'; retry.addEventListener('click', () => void skinPacks.prepare()); content.append(retry); }
     renderStatus();
     if (focused) Array.from(section.querySelectorAll('[aria-label]')).find(node => node.getAttribute('aria-label') === focused)?.focus({preventScroll: true});

@@ -7,28 +7,35 @@ export const surfacePackFilter=(width,height)=>`[0:v]format=gbrap,colorchannelmi
 export function weaponBodyMaterial(name,data,texture){
   const t=data.Textures??{},c=data.Colors??{},s=data.Scalars??{},sw=data.Switches??{},parents=data.parents??[];
   const family=parents.join(' '),crystal=/Crystal|Sprit_Emissive/.test(family),petal=/BloomPetal|Petal_Line/.test(family),yokai=/Yokai_Clearcoat/.test(family),decal=/Decal/.test(family+' '+name);
-  const diffuse=decal?t['Decal Texture']??t.Albedo??t.PM_Diffuse:t.Albedo??t.PM_Diffuse;
+  const jelly=/champions_jelly/i.test(name),gold=jelly&&(s.goldState??0)>0;
+  const sourceDiffuse=jelly?(gold?t['Gold Diffuse']:null):decal?t['Decal Texture']??t.Albedo??t.PM_Diffuse:t.Albedo??t.PM_Diffuse;
+  // Exporter PM_Diffuse can point to an environment cube used by an Infinity
+  // shader. It is not a 2D albedo and must never become an opaque proxy plane.
+  const cubeDiffuse=/TextureCube/.test(sourceDiffuse?.ObjectName??'')||/\/cubemap\//i.test(sourceDiffuse?.ObjectPath??'');
+  const diffuse=cubeDiffuse?null:sourceDiffuse;
   const plastic=!!t['MRS (Plastic Opacity, Roughness, Specular)'];
-  const mask=t.AEM,packed=t['MRS (Plastic Opacity, Roughness, Specular)']??t.MRS??t.PM_SpecularMasks,led=/LED/.test(name),bareLight=/Demonstone_Emissive/.test(family);
+  const mask=t.AEM,packed=jelly?(gold?t['Gold MRS']:null):t['MRS (Plastic Opacity, Roughness, Specular)']??t.MRS??t.PM_SpecularMasks,led=/LED/.test(name),bareLight=/Demonstone_Emissive/.test(family);
   const sourceIntensity=(led?s['LED Emissive Base Intensity']:undefined)??s['Weapon Emissive Intensity']??s['Emissive Intensity']??s.Emissive_Intensity??(bareLight?s['Emissive Intensity Light']:0)??0;
   const emission=rgb(c['LED Emissive Color']??c['Emissive Color']??c.Emissive_Color??c.EmissiveColor);
   const transparent=[2,3].includes(data.BlendMode),opacity=clamp(s.Opacity??s['Base Opacity']??1,0,1);
-  const m={name,map:diffuse?texture(diffuse):null,normalMap:t.Normal||t.PM_Normals?texture(t.Normal??t.PM_Normals,'normal'):null,
+  const normal=jelly?(gold?t['Gold Normal']:null):t.Normal??t.PM_Normals;
+  const m={name,map:diffuse?texture(diffuse):null,normalMap:normal?texture(normal,'normal'):null,
     ormMap:packed?texture(packed,'surface',mask):null,surfacePacked:!!packed,
     emissiveMap:!led&&mask&&sourceIntensity>0&&emission.some(x=>x>0)?texture(mask,'emissive'):null,
     emissive:emission,emissiveIntensity:clamp(sourceIntensity,0,3),useDiffuseEmissive:sw.UseDiffuseEmissive===true,
-    color:rgb(c['Albedo Tint']??c['Base Color']??c['BG Bottom Color']??c.Color,diffuse?[1,1,1]:[.08,.08,.08]),
+    color:rgb((jelly?c['Glass Tint']:null)??c['Albedo Tint']??c['Base Color']??c['BG Bottom Color']??c.Color,diffuse?[1,1,1]:[.08,.08,.08]),
     brightness:clamp(s['Albedo Brightness Medium']??1,.1,2),roughness:packed?1:clamp(s.Roughness??.5,.04,1),metalness:plastic?0:packed?1:clamp(s.Metalness??s.Metal??0,0,1),
     specular:clamp(s['Adjust Light Specular Levels']??s.Specular??s.Spec??1,0,1),envIntensity:clamp(s['Probe Influence']??s['HDRI Strength']??s['HDRI Brightness']??.6,0,1.5),
-    clearcoat:crystal||yokai||/Transparent/.test(name)?.8:0,clearcoatRoughness:clamp(s['Clearcoat Roughness']??.16,.06,1),
+    clearcoat:crystal||yokai||jelly||/Transparent/.test(name)?.8:0,clearcoatRoughness:clamp(s['Clearcoat Roughness']??.16,.06,1),
     iridescence:clamp(s['Iridesence Mask Intensity']??0,0,1),
     transparent,opacity,additive:data.BlendMode===3,alphaTest:data.BlendMode===1?clamp(s['Alpha threshold']??s.DissolveThreshold??.25,.01,.9):transparent?.005:0,
-    doubleSided:petal||decal,hidden:/LightTrails|BakedLight/i.test(name)||transparent&&opacity===0,
-    shader:{},source:{parents,emissiveIntensity:sourceIntensity,blendMode:data.BlendMode??0}};
+    doubleSided:petal||decal,hidden:/LightTrails|BakedLight/i.test(name)||transparent&&opacity===0||cubeDiffuse&&transparent,
+    shader:{},source:{parents,emissiveIntensity:sourceIntensity,blendMode:data.BlendMode??0,...(cubeDiffuse?{omitted:'Infinity environment-cube projection requires the original shader; opaque proxy removed'}:{})}};
   // Source colour selectors and decals are applied on existing mesh UVs only.
   if(decal&&t['Decal Color Mask']&&c['Color 01'])m.shader.tint={map:texture(t['Decal Color Mask'],'normal'),color:rgb(c['Color 01'])};
   if(plastic)m.shader.plastic={map:m.ormMap};
   if(crystal&&t['Crystal Inner']&&t['Emissive Gradient'])m.shader.flow={map:texture(t['Crystal Inner'],'normal'),gradient:texture(t['Emissive Gradient']),tiling:s['Texture Tiling']??1,pan:[s['Panner X']??0,s['Panner Y']??0],intensity:clamp((s['Smoke Emissive Intensity']??0)*.06,0,.6),uv2:true};
+  if(jelly&&t.Liquid&&t['Liquid Graident'])m.shader.flow={map:texture(t.Liquid,'normal'),gradient:texture(t['Liquid Graident']),tiling:c.LiquidScale?.R??3,pan:[s['Liquid Speed X']??.02,s['Liquid Speed Y']??.01],intensity:clamp((s['Emissive Strength']??0)*.15,0,.6),uv2:false};
   if(petal&&sw.EnableEmissiveScroll&&t.EmissiveScrollTex)m.shader.scroll={map:texture(t.EmissiveScrollTex,'normal'),color:rgb(c.ScrollColor??c['Scroll Color']),speed:s.EmissiveScrollSpeed??.15,tiling:s['UV Unit']??1,intensity:clamp(s.ScrollIntensity??0,0,.6),uv2:sw['Use UV2']===true};
   if(/Petal_Line/.test(family)&&t.FlowerAEM)m.shader.line={map:texture(t.FlowerAEM,'normal'),color:rgb(c.LineColor),speed:s.BreathingSpeed??.3,intensity:clamp(s.ScrollIntensity??.5,0,.6),min:clamp(s.MinOpacity??.3,0,1)};
   if(yokai&&t['Fresnel Mask']&&t['Fresnel Noise'])m.shader.rim={map:texture(t['Fresnel Mask'],'normal'),noise:texture(t['Fresnel Noise'],'normal'),color:rgb(c['Fresnel Color']),power:Math.max(1,s.FresnelPower??2),tiling:[s['Fresnel Noise U Tiling']??1,s['Fresnel Noise V Tiling']??1],pan:[s['Fresnel Noise U Speed']??0,s['Fresnel Noise V Speed']??0],intensity:clamp((s['Fresnel Mask Intensity']??0)*.15,0,.6)};

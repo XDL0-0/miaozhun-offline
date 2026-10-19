@@ -18,7 +18,8 @@ const sourceRoot=path.join(input,'exports');
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(d=>d.isDirectory()?walk(path.join(dir,d.name)):[path.join(dir,d.name)]);
 const allFiles=walk(sourceRoot);
 const materialFiles=new Map(allFiles.filter(f=>f.endsWith('.json')).map(f=>[path.basename(f,'.json'),f]));
-const collections={'Prelude to Chaos':'prelude-to-chaos',Kuronami:'kuronami',Primordium:'primordium',Rogue:'rogue','RGX 11z Pro':'rgx-11z-pro',Ayakashi:'ayakashi',Nocturnum:'nocturnum',Mystbloom:'mystbloom','ORA by OneTap':'ora-by-onetap'};
+const catalog=JSON.parse(fs.readFileSync(path.join(root,'skin-packs/catalog.json'),'utf8'));
+const collections=Object.fromEntries(catalog.collections.map(c=>[c.name,c.id]));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 fs.mkdirSync(path.join(output,'assets'),{recursive:true});
 const audit={schemaVersion:1,source:'Read-only local VALORANT installation, UE 5.3 / patch 13.08',mappingSha256:'5d97ee2942e623d2fbacd39c2214a413311b62aad681d4b31049ff6bd48bcdc4',exporter:'FabianFG/CUE4Parse',exporterCommit:'2b8901c3ee9818558ad33e2496a58d50b82e99db',models:[],assets:[]};
@@ -56,24 +57,28 @@ function texture(ref,kind='color',aoRef=null){
   const url=store(bytes,'png',{path:logical,sha256:sha(original),operation:kind,...(occlusion?{occlusion}:{}),width,height,resolution:'original'});
   textures.set(key,url);return url;
 }
-const rawMaterial=logical=>{const file=path.join(input,'properties',path.basename(logical)+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)).find(o=>o.Package===logical):null;};
+const rawMaterial=logical=>{const file=path.join(input,'properties',path.basename(logical)+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)).find(o=>o.Package?.toLowerCase()===logical.toLowerCase()):null;};
 const exportedMaterial=logical=>{const file=path.join(sourceRoot,logical.replace('/Game/','ShooterGame/Content/').replace('/Engine/','Engine/Content/')+'.json');return fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):null;};
-const materialCache=new Map();audit.bodyMaterials=[];
-function material(name){
+const materialCache=new Map();audit.bodyMaterials=[];audit.materialBindings=[];
+function material(ref){
+  const name=path.basename(ref);
   if(materialCache.has(name))return materialCache.get(name);
   const file=materialFiles.get(name);if(!file)throw new Error('Missing material '+name);
   const logical=path.relative(sourceRoot,file).replaceAll('\\','/').replace('ShooterGame/Content/','/Game/').replace('Engine/Content/','/Engine/').replace(/\.json$/,'');
   const data=resolveEffectMaterial(logical,rawMaterial,exportedMaterial),m=weaponBodyMaterial(name,data,texture);
   materialCache.set(name,m);audit.bodyMaterials.push({name,source:logical,...m.source,features:Object.keys(m.shader)});return m;
 }
-function glb(asset,role){
+function glb(asset,role,overrides){
   const file=path.join(sourceRoot,asset.replace(/\.uasset$/i,'.glb'));
   const bytes=fs.readFileSync(file);if(bytes.toString('ascii',0,4)!=='glTF')throw new Error('Invalid GLB '+asset);
   const json=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)).toString());
   for(const uri of [...(json.buffers??[]),...(json.images??[])])if(uri.uri)throw new Error('External GLB reference '+asset);
-  return {role,url:store(bytes,'glb',{path:asset,sha256:sha(bytes)}),materials:(json.materials??[]).map(m=>material(m.name))};
+  if(Array.isArray(overrides))throw new Error('Material overrides must use source names, not reordered GLB indices: '+asset);
+  const slots=(json.materials??[]).map((m,i)=>({slot:i,source:m.name,material:overrides?.[m.name]??m.name}));
+  audit.materialBindings.push({asset,role,slots});
+  return {role,url:store(bytes,'glb',{path:asset,sha256:sha(bytes)}),materials:slots.map(s=>material(s.material))};
 }
-const index={schemaVersion:1,models:{},counts:{weapons:0,collections:9,assets:0}};
+const index={schemaVersion:1,models:{},variants:{},counts:{weapons:0,collections:catalog.collections.length,variants:0,assets:0}};
 const motionPlans=JSON.parse(fs.readFileSync(path.join(input,'motion-plan.json'),'utf8'));
 const motionCache=new Map();
 function motionClip(id){
@@ -86,7 +91,7 @@ function motionClip(id){
   motionCache.set(id,clip);return clip;
 }
 function motions(entry){
-  const plan=motionPlans.find(p=>p.name===entry.name);if(!plan)throw new Error('Missing motion plan '+entry.name);
+  const plan=motionPlans.find(p=>p.name===entry.name&&(!entry.theme||!p.theme||p.theme===entry.theme));if(!plan)throw new Error('Missing motion plan '+entry.name);
   const clips={},actions={};
   for(const [action,tracks]of Object.entries(plan.actions)){
     actions[action]={};
@@ -99,26 +104,31 @@ function motions(entry){
 }
 const effects=importWeaponEffects({input,sourceRoot,entries,texture,store,audit});
 for(const entry of entries){
-  const weapon=entry.name.split(' ').at(-1).toLowerCase(),name=entry.name.slice(0,-weapon.length-1),collection=collections[name];
+  const weapon=entry.weapon??entry.name.split(' ').at(-1).toLowerCase(),name=entry.name.slice(0,-weapon.length-1),collection=entry.collection??collections[name];
   if(!collection)throw new Error('Unrecognized collection '+name);
-  const body=entry.models.find(p=>/Skelmesh\.uasset$/i.test(p)&&!/SniperScope/i.test(p));
+  const body=entry.body??entry.models.find(p=>/Skelmesh\.uasset$/i.test(p)&&!/SniperScope/i.test(p));
   const magazine=entry.models.find(p=>/Magazine/i.test(p));
-  if(!body||!magazine)throw new Error('Incomplete gun '+entry.name);
-  const parts=[glb(body,'body'),glb(magazine,'magazine')];
-  const sight=weapon==='operator'?entry.models.find(p=>/SniperScope.*Staticmesh/i.test(p)):entry.attachments.find(p=>/RedDot.*Staticmesh/i.test(p));
-  if(sight&&weapon!=='sheriff')parts.push(glb(sight,'sight'));
-  const silencer=entry.attachments.find(p=>/Silencer.*Staticmesh/i.test(p));
-  if(weapon==='phantom'&&silencer)parts.push(glb(silencer,'silencer'));
-  const fire=effects.packages.get(entry.name),key=`${collection}/${weapon}`;
-  if(!fire?.hip.length)throw new Error('Missing skin muzzle effects '+entry.name);
-  effects.result.guns[key]=fire;
-  const packageData={schemaVersion:1,collection,weapon,parts,motions:motions(entry),effects:{textures:effects.urls(fire)}};
-  const relative=`${collection}/${weapon}.json`;fs.mkdirSync(path.dirname(path.join(output,relative)),{recursive:true});
+  if(!body||weapon!=='melee'&&!magazine)throw new Error('Incomplete weapon '+entry.name);
+  const parts=[glb(body,'body',entry.bodyMaterials??entry.materialOverrides?.body)];
+  if(magazine)parts.push(glb(magazine,'magazine',entry.magazineMaterials));
+  const sight=weapon==='operator'?entry.models.find(p=>/SniperScope.*Staticmesh/i.test(p)):(entry.attachments??[]).find(p=>/RedDot.*Staticmesh/i.test(p));
+  if(sight&&weapon!=='sheriff')parts.push(glb(sight,'sight',entry.sightMaterials));
+  const silencer=(entry.attachments??[]).find(p=>/Silencer.*Staticmesh/i.test(p));
+  if(weapon==='phantom'&&silencer)parts.push(glb(silencer,'silencer',entry.silencerMaterials));
+  const fire=effects.packages.get(entry.name),baseKey=`${collection}/${weapon}`,key=baseKey+(entry.theme?'/'+entry.theme:'');
+  if(weapon!=='melee'&&!fire?.hip.length)throw new Error('Missing skin muzzle effects '+entry.name);
+  if(fire)effects.result.guns[key]=fire;
+  if(fire)effects.result.guns[baseKey]??=fire;
+  const packageData={schemaVersion:1,collection,weapon,...(entry.theme?{theme:entry.theme}:{}),parts,motions:motions(entry),effects:{textures:fire?effects.urls(fire):[]},...(entry.attachment?{attachment:entry.attachment}:{})};
+  const relative=`${collection}/${weapon}${entry.theme?'-'+entry.theme:''}.json`;fs.mkdirSync(path.dirname(path.join(output,relative)),{recursive:true});
   fs.writeFileSync(path.join(output,relative),JSON.stringify(packageData));
-  index.models[`${collection}/${weapon}`]='/skin-packs/models/'+relative;
-  audit.models.push({collection,weapon,source:entry.dir,parts:parts.map(p=>({role:p.role,url:p.url}))});
+  const url='/skin-packs/models/'+relative;
+  index.models[baseKey]??=url;
+  if(entry.theme)(index.variants[baseKey]??={})[entry.theme]=url;
+  audit.models.push({collection,weapon,...(entry.theme?{theme:entry.theme}:{}),source:entry.dir,parts:parts.map(p=>({role:p.role,url:p.url}))});
 }
 index.counts.weapons=Object.keys(index.models).length;index.counts.assets=written.size;
+index.counts.variants=Object.values(index.variants).reduce((n,v)=>n+Object.keys(v).length,0);
 fs.writeFileSync(path.join(output,'index.json'),JSON.stringify(index,null,2));
 fs.writeFileSync(path.join(output,'fire-effects.json'),JSON.stringify(effects.result));
 fs.writeFileSync(path.join(root,'skin-packs/audit/weapon-model-sources.json'),JSON.stringify(audit,null,2));

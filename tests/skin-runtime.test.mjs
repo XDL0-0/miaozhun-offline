@@ -22,7 +22,7 @@ function theme(collection,id,weapons){
 }
 function fixture(){
   return {schemaVersion:2,collections:[
-    {id:'ora-by-onetap',name:'ORA by OneTap',tier:'Ultra',weapons:[...SKIN_WEAPONS],themes:oraThemes.map(id=>theme('ora-by-onetap',id,SKIN_WEAPONS))},
+    {id:'ora-by-onetap',name:'ORA by OneTap',tier:'Ultra',weapons:SKIN_WEAPONS.filter(w=>w!=='melee'),themes:oraThemes.map(id=>theme('ora-by-onetap',id,SKIN_WEAPONS.filter(w=>w!=='melee')))},
     {id:'prelude-to-chaos',name:'Prelude to Chaos',tier:'Exclusive',weapons:['vandal'],themes:[theme('prelude-to-chaos','default',['vandal'])]},
     {id:'mystbloom',name:'Mystbloom',tier:'Exclusive',weapons:['phantom'],themes:[theme('mystbloom','default',['phantom'])]},
   ]};
@@ -144,7 +144,7 @@ test('ready player gunfire switches by gun and selection without fetching, decod
 
 test('every ORA theme selects its own fire, five kill clips and banner for all four supported guns',async()=>{
   const h=harness();await h.runtime.initialize();const context=audioContext(),master=context.createGain();
-  for(const id of oraThemes)for(const weapon of SKIN_WEAPONS){
+  for(const id of oraThemes)for(const weapon of SKIN_WEAPONS.filter(w=>w!=='melee')){
     await pick(h.runtime,weapon,'ora-by-onetap',id);
     const data=selectedTheme(h,'ora-by-onetap',id),before=h.counts();
     assert.equal(h.runtime.playFire(context,master,weapon,30),true);assert.equal(firedUrl(context),data.fire[weapon]);
@@ -445,7 +445,18 @@ test('a layered banner waits for every decoded part, falls back on failure and r
   failed.imageFailures.clear();await failed.runtime.prepare();assert(failed.runtime.bannerKit());
 });
 
-test('all 37 delivered skin variants draw changing radial artwork through the actual HUD for kills 1–5 and repeated cycles',async()=>{
+test('count-indexed banners require safe complete predecoded frames before becoming ready',async()=>{
+  const data=fixture(),banner=data.collections[0].themes[0].banners[0];
+  banner.frames=Array.from({length:6},(_,i)=>'/skin-packs/champions-2026/banners/attacking/kill-'+(i+1)+'.png');
+  const bad=clone(data);bad.collections[0].themes[0].banners[0].frames[2]='https://example.com/remote.png';
+  assert.equal(await harness(bad).runtime.initialize(),null);
+  const h=harness(data);h.imageFailures.add(banner.frames[2]);await h.runtime.initialize();await pick(h.runtime,'vandal');h.runtime.setActiveWeapon('vandal');
+  assert.equal(h.runtime.bannerKit(),null);assert.equal(h.runtime.availability('vandal').banner,'failed');
+  h.imageFailures.clear();await h.runtime.preload('vandal');assert.equal(h.runtime.bannerDefinition(h.runtime.bannerKit()).frames.length,6);
+  const before=h.counts();for(const url of banner.frames)assert.ok(h.runtime.getImage(url));assert.deepEqual(h.counts(),before);
+});
+
+test('every delivered layered or count-indexed banner changes its artwork through the actual HUD for kills 1–5',async()=>{
   const manifest=JSON.parse(fs.readFileSync(new URL('../dist/skin-packs/index.json',import.meta.url),'utf8'));
   const h=harness(manifest);await h.runtime.initialize();
   const source=patched['DVK7uRSu.js'],start=source.indexOf("const dl=c({'__name':'KillBannerHud'"),end=source.indexOf(',cl=w(',start);
@@ -453,22 +464,32 @@ test('all 37 delivered skin variants draw changing radial artwork through the ac
   const positions=vm.runInNewContext('('+source.slice(radialStart,radialEnd)+')');
   let variants=0;
   for(const collection of manifest.collections)for(const theme of collection.themes)for(const banner of theme.banners){
-    assert(banner.layers,collection.id+'/'+banner.id+' must not draw a static first-kill composite');
+    assert(banner.layers||banner.frames,collection.id+'/'+banner.id+' must not draw a static first-kill composite');
     const weapon=collection.weapons[0];await h.runtime.select(weapon,{collection:collection.id,theme:theme.id,banner:banner.id});h.runtime.setActiveWeapon(weapon);
     const calls=[],stack=[];let translation=[0,0],exposed;
     const context={setTransform(){},clearRect(){calls.length=0},save(){stack.push([...translation])},restore(){translation=stack.pop()},
-      translate(x,y){translation=[translation[0]+x,translation[1]+y]},rotate(){},scale(){},drawImage(image){calls.push({url:image.url,at:[...translation]})}};
+      translate(x,y){translation=[translation[0]+x,translation[1]+y]},rotate(){},scale(){},fillText(){},drawImage(image){calls.push({url:image.url,at:[...translation]})}};
     const canvas={clientWidth:150,width:300,height:300,getContext:()=>context},view={seq:0,kills:0,headshot:false,at:10,now:10.4};
     const component=vm.runInNewContext(source.slice(start+'const dl='.length,end),{
       c:value=>value,x:value=>({value:value===null?canvas:value}),A:(get,callback)=>callback(get()),D(){},E(){},
       Dt:key=>h.runtime.bannerDefinition(key),__aimSkins:h.runtime,Pt:['frame','ring','emblem','pip'],
       __aimDrawSkinPip(ctx,x,y){assert.equal(banner.pipFallback,'generic-chevron');calls.push({url:banner.layers.pip,at:[x,y],fallback:true})},
       __aimDrawSkinSprite:drawSpritePip,
+      __aimDrawSkinBanner:drawCompositeBanner,
       Image:class{constructor(){assert.fail('gameplay must reuse decoded layers')}},
       ul:()=>({scale:1,alpha:1,ringRotation:0,ringGlow:0,newPipAlpha:1,newPipScale:1,headshotScale:1}),wt:killIndex,ol:positions,
       window:{devicePixelRatio:2},al:300,
     });
     component.setup({view:{current:view},kit:h.runtime.bannerKit()},{expose:api=>{exposed=api}});
+    if(banner.frames){
+      const before=h.counts(),drawn=[];
+      for(const kill of [1,2,3,4,5,6,7,10,11]){
+        Object.assign(view,{seq:view.seq+1,kills:kill});exposed.tick();
+        assert.equal(calls[0]?.url,banner.frames[killIndex(kill)-1]);drawn.push(calls[0]?.url);
+      }
+      assert.equal(new Set(drawn.slice(0,5)).size,5,'original whole frames change for all five kills');
+      assert.deepEqual(h.counts(),before,'drawing frames performs no loading');variants++;continue;
+    }
     const pipBytes=fs.readFileSync(new URL('../dist'+banner.layers.pip,import.meta.url));
     if(pipBytes.readUInt32BE(16)===1||pipBytes.readUInt32BE(20)===1)assert.equal(banner.pipFallback,'generic-chevron','invisible source pips must have a visible radial fallback');
     const before=h.counts(),patterns=[];
@@ -487,7 +508,7 @@ test('all 37 delivered skin variants draw changing radial artwork through the ac
     assert.equal(patterns[0],patterns[5]);assert.equal(patterns[1],patterns[6]);assert.equal(patterns[4],patterns[7]);
     assert.deepEqual(h.counts(),before);variants++;
   }
-  assert.equal(variants,37);
+  assert.equal(variants,manifest.counts.banners);
 });
 
 test('actual HUD consumes the first recent skin kill on mount, preserves native mount behavior and rejects expired events',()=>{

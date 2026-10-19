@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T22:18:42.333Z",
+  "generatedAt": "2026-10-19T23:08:36.601Z",
   "root": "G:\\TOOLS\\AimOffline\\dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
@@ -10,16 +10,16 @@
     "sceneCount": 62,
     "mapCount": 6
   },
-  "resourceCount": 2432,
-  "storedBytes": 352256278,
+  "resourceCount": 2810,
+  "storedBytes": 482728831,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
     "materialCandidates": 638,
     "moduleCandidates": 0,
     "moduleClosureEntries": 78,
-    "uniqueRequirements": 2330,
-    "satisfied": 2328,
+    "uniqueRequirements": 2708,
+    "satisfied": 2706,
     "moduleExclusions": [
       {
         "path": "js/BbCrAlFy.js",
@@ -1590,19 +1590,20 @@
   ],
   "skinPacks": {
     "resourceStatus": "complete",
-    "audio": 109,
-    "killAudio": 66,
-    "successiveAudio": 13,
-    "banners": 37,
-    "layeredBanners": 37,
-    "bannerLayers": 89,
-    "fire": 30,
+    "audio": 160,
+    "killAudio": 103,
+    "successiveAudio": 20,
+    "banners": 44,
+    "layeredBanners": 40,
+    "bannerLayers": 92,
+    "fire": 37,
     "missingFire": 0,
-    "eligibleFireCombinations": 30,
+    "eligibleFireCombinations": 37,
     "weaponModels": {
-      "weapons": 14,
-      "collections": 9,
-      "assets": 348
+      "weapons": 26,
+      "collections": 15,
+      "variants": 4,
+      "assets": 627
     }
   },
   "localization": {
@@ -1612,8 +1613,8 @@
       "en"
     ],
     "defaultLanguage": "zh-CN",
-    "catalogEntries": 6332,
-    "sourceKeys": 6311,
+    "catalogEntries": 6335,
+    "sourceKeys": 6314,
     "bundledPresentationKeys": 428,
     "minimapCallouts": {
       "ascent": 22,
@@ -1625,7 +1626,7 @@
     },
     "modules": {
       "4JWOlA2c.js": 10,
-      "aim-skin-packs.mjs": 52,
+      "aim-skin-packs.mjs": 56,
       "aQOfOAp-.js": 137,
       "B51EgnC9.js": 42,
       "B7oA57Lm.js": 73,
@@ -2014,8 +2015,8 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "4b5e98c54324f46a574dce5ca689e3a8c28209d577dd0d70856515efe3bfb2aa",
-    "fileCount": 2432
+    "sha256": "85af2a76d357e5e2a35e45e7ef2a04b305c14955273a15723c48a71c5c2d0cc8",
+    "fileCount": 2810
   },
   "limitations": [
     "Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.",

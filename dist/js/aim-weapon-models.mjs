@@ -2,8 +2,8 @@ import {skinPacks} from './aim-skin-packs.mjs';
 import {decodeWeaponMotion,createWeaponMotionPlayer} from './aim-weapon-motion.mjs';
 import {weaponMaterialTextures,createWeaponBodyMaterial} from './aim-weapon-body-materials.mjs';
 
-const WEAPONS=new Set(['vandal','phantom','sheriff','operator']);
-const weaponOf=stem=>stem==='viewmodel'?'vandal':stem;
+const WEAPONS=new Set(['vandal','phantom','sheriff','operator','melee']);
+const weaponOf=stem=>stem==='viewmodel'?'vandal':stem==='knife'?'melee':stem;
 const validPath=p=>typeof p==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb|bin\.gz)$/.test(p);
 const TYPES={5121:Uint8Array,5123:Uint16Array,5125:Uint32Array,5126:Float32Array};
 const SIZES={SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16};
@@ -88,17 +88,23 @@ export function createWeaponModelLoader({skins=skinPacks,fetcher=(...args)=>fetc
   }
   const selectionKey=weapon=>{
     const s=skins.selection(weapon);
-    return WEAPONS.has(weapon)&&s.collection!=='default'&&s.modelEnabled!==false?`${s.collection}/${weapon}`:null;
+    if(!WEAPONS.has(weapon)||s.collection==='default'||s.modelEnabled===false)return null;
+    const base=`${s.collection}/${weapon}`;
+    return catalogue?.variants?.[base]?.[s.theme]?base+'/'+s.theme:base;
   };
   async function load(stem){
     const weapon=weaponOf(stem);if(!WEAPONS.has(weapon))return null;
-    await skins.initialize();const key=selectionKey(weapon);if(!key)return null;
+    await skins.initialize();if(!selectionKey(weapon))return null;
+    try{await initialize();}catch(error){globalThis.console?.warn('Skin weapon catalogue unavailable',error);return null;}
+    const key=selectionKey(weapon);if(!key)return null;
     if(cache.has(key)){const v=cache.get(key);cache.delete(key);cache.set(key,v);return v;}
     if(pending.has(key))return pending.get(key);
     const task=(async()=>{
-      const catalogue=await initialize(),url=catalogue.models[key];if(!url)throw new Error('Skin model unavailable: '+key);
+      const [collection,,theme]=key.split('/'),base=collection+'/'+weapon;
+      const url=theme?catalogue.variants?.[base]?.[theme]:catalogue.models[key];if(!url)throw new Error('Skin model unavailable: '+key);
       const manifest=await request(url,true);
-      if(manifest.schemaVersion!==1||manifest.weapon!==weapon||`${manifest.collection}/${weapon}`!==key||!Array.isArray(manifest.parts)||manifest.parts.length>6)throw new Error('Invalid weapon package');
+      if(manifest.schemaVersion!==1||manifest.weapon!==weapon||`${manifest.collection}/${weapon}`!==base||theme&&manifest.theme!==theme||!Array.isArray(manifest.parts)||manifest.parts.length>6)throw new Error('Invalid weapon package');
+      if(manifest.attachment&&(!/^[A-Za-z][A-Za-z0-9_]{0,63}$/.test(manifest.attachment.bone)||manifest.attachment.q&&(!Array.isArray(manifest.attachment.q)||manifest.attachment.q.length!==4||manifest.attachment.q.some(n=>!Number.isFinite(n))||Math.abs(Math.hypot(...manifest.attachment.q)-1)>.02)))throw new Error('Invalid weapon attachment');
       const pictures=new Map(),imageTasks=new Map();
       await Promise.all((manifest.effects?.textures??[]).map(async url=>{if(!imageTasks.has(url))imageTasks.set(url,image(url).then(img=>pictures.set(url,img)));return imageTasks.get(url);}));
       const motions=manifest.motions?{actions:manifest.motions.actions,clips:{}}:null;
@@ -116,8 +122,8 @@ export function createWeaponModelLoader({skins=skinPacks,fetcher=(...args)=>fetc
         if(data.primitives.some(p=>p.material>=part.materials.length))throw new Error('Missing weapon material slot');
         return {...part,data};
       }));
-      if(decoded.filter(p=>p.role==='body').length!==1||decoded.filter(p=>p.role==='magazine').length!==1)throw new Error('Incomplete weapon model');
-      const result={key,weapon,parts:decoded,pictures,motions};cache.set(key,result);
+      if(decoded.filter(p=>p.role==='body').length!==1||decoded.filter(p=>p.role==='magazine').length!==(weapon==='melee'?0:1))throw new Error('Incomplete weapon model');
+      const result={key,weapon,parts:decoded,pictures,motions,attachment:manifest.attachment};cache.set(key,result);
       // Controllers retain their own image references; evicting raw assets never
       // disposes an in-use GPU texture, and old selections can be collected.
       while(cache.size>4)cache.delete(cache.keys().next().value);
@@ -149,9 +155,10 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
   }
   function construct(assets){
     const group=new Group();group.name='skin:'+assets.key;
+    let anchor=null;
     const geometries=new Set(),materials=new Set(),textures=new Map(),skeletons=new Set(),rigs=[],partMeshes=[];let motion=null;
     const clock={time:{value:0},heat:{value:0}};
-    function dispose(){motion?.dispose();for(const mesh of partMeshes)mesh.parent?.remove(mesh);parent.remove(group);for(const g of geometries)g.dispose();for(const m of materials)m.dispose();for(const t of textures.values())t.dispose();for(const s of skeletons)s.dispose();}
+    function dispose(){motion?.dispose();for(const mesh of partMeshes)mesh.parent?.remove(mesh);group.parent?.remove(group);anchor?.parent?.remove(anchor);for(const g of geometries)g.dispose();for(const m of materials)m.dispose();for(const t of textures.values())t.dispose();for(const s of skeletons)s.dispose();}
     function tex(url,color){
       if(!url)return null;const id=url+':'+color;
       if(textures.has(id))return textures.get(id);
@@ -172,7 +179,13 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
       if(!bones.length)throw new Error('Skin body must be rigged');
       body.data.bones.forEach((b,i)=>{(b.parent<0?group:bones[b.parent]).add(bones[i]);});
       const boneMap=new Map(bones.map(b=>[b.name,b])),skeleton=new Skeleton(bones);skeletons.add(skeleton);
-      parent.add(group);parent.updateWorldMatrix(true,true);
+      if(assets.attachment){
+        const index=armsRig?.index.get(assets.attachment.bone),bone=armsRig?.bones[index];
+        if(!bone)throw new Error('Skin hand attachment bone missing: '+assets.attachment.bone);
+        anchor=new Group();anchor.name='skin:attachment';
+        if(assets.attachment.q)anchor.quaternion.set(...assets.attachment.q);else anchor.quaternion.copy(parent.quaternion);
+        bone.add(anchor);anchor.add(group);anchor.updateWorldMatrix(true,true);
+      }else{parent.add(group);parent.updateWorldMatrix(true,true);}
       const bodyMaterials=mats(body);
       for(const p of body.data.primitives){const mesh=new SkinnedMesh(geometry(p),bodyMaterials[p.material]);mesh.name='skin:body';mesh.frustumCulled=false;group.add(mesh);mesh.bind(skeleton);}
       const bindings=body.data.bones.flatMap((b,i)=>{
@@ -219,13 +232,15 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
     }
     const active=current.motion?.update(state,blocked);
     current.group.userData.motion=active?.action??'idle';
-    current.group.updateMatrixWorld(true);current.skeleton.update();
+    // Skin actions can move the hand socket after the native rig was sampled.
+    // Refresh its ancestors before uploading the skin's world-space bone data.
+    current.group.updateWorldMatrix(true,true);current.skeleton.update();
   }
   async function refresh(){
     const next=loader.selectionKey(weapon);if(next===key||disposed)return;key=next;const version=++serial;
-    if(!next){swap(null);return;}
+    if(!next){key=null;swap(null);return;}
     const assets=await loader.load(weapon);
-    if(!disposed&&version===serial&&loader.selectionKey(weapon)===next){swap(assets?.key===next?assets:null);update();}
+    if(!disposed&&version===serial){key=loader.selectionKey(weapon);swap(assets?.key===key?assets:null);update();}
   }
   key=loader.selectionKey(weapon);if(initial?.key===key)swap(initial);
   const unsubscribe=skins.subscribe(()=>{void refresh();});
@@ -233,6 +248,7 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
   if(key&&!current){key=null;void refresh();}
   const point=new Vector3();
   return {update,setGun(value){requestedGun=value;visibility();},
+    setVisible(visible){if(current)current.group.visible=visible;},
     get muzzle(){return current?.muzzle??null;},
     effectBone(name){return current?.boneMap.get(name)??null;},
     get active(){return !!current;},get key(){return current?.key??null;},

@@ -48,7 +48,7 @@ export function applySkinPacksPatch(modules) {
   banner = replaceOne(banner, "function Dt(cA,cB=ll,cC=il){const cD=nl[cA],cE={};",
     "function Dt(cA,cB=ll,cC=il){const skin=__aimSkins.bannerDefinition(cA);if(skin)return skin;const cD=nl[cA],cE={};if(!cD)return null;", 'cached skin banner definition');
   banner = replaceOne(banner, "for(const cV of Pt)cF[cV]=cN(cE['layers'][cV]);",
-    "if(cE['composite'])cF['composite']=__aimSkins.getImage(cE['composite']);else for(const cV of Pt)cF[cV]=cU?.startsWith('skin:')?__aimSkins.getImage(cE['layers'][cV]):cN(cE['layers'][cV]);", 'reuse asynchronously decoded banner layers');
+    "if(cE['composite'])cF['composite']=cE['frames']?cE['frames'].map(url=>__aimSkins.getImage(url)):__aimSkins.getImage(cE['composite']);else for(const cV of Pt)cF[cV]=cU?.startsWith('skin:')?__aimSkins.getImage(cE['layers'][cV]):cN(cE['layers'][cV]);", 'reuse asynchronously decoded banner layers');
   banner = replaceOne(banner, "cE['headshot']&&(cF['headshot']=cN(cE['headshot']));",
     "cE['headshot']&&(cF['headshot']=cU?.startsWith('skin:')?__aimSkins.getImage(cE['headshot']):cN(cE['headshot']));", 'reuse decoded headshot layer');
   banner = replaceOne(banner, "if(!cV||!cW||!cE)return;const {frame:cX,ring:cY,emblem:cZ,pip:d0,headshot:d1}=cF;",

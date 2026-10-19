@@ -17,12 +17,12 @@ const digest=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const key=entry=>[entry.collection,entry.theme,entry.weapon].join('/');
 const toolsAvailable=spawnSync('ffmpeg',['-version']).status===0&&spawnSync('ffprobe',['-version']).status===0;
 
-test('reviewed gunfire covers all 30 combinations with separate ORA theme windows',()=>{
-  const expected=catalog.collections.flatMap(collection=>collection.themes.flatMap(theme=>collection.weapons.map(weapon=>
+test('reviewed gunfire covers every rifle/theme combination with separate ORA theme windows',()=>{
+  const expected=catalog.collections.flatMap(collection=>collection.themes.flatMap(theme=>collection.weapons.filter(w=>w!=='melee').map(weapon=>
     [collection.id,theme,weapon].join('/'))));
-  assert.equal(expected.length,30);
+  assert.equal(expected.length,37);
   assert.deepEqual(review.fire.map(key).sort(),expected.sort());
-  assert.equal(new Set(review.fire.map(entry=>entry.path)).size,14,'ten ordinary and four ORA original soundtracks are retained');
+  assert.equal(new Set(review.fire.filter(e=>!e.collection.startsWith('champions-')).map(entry=>entry.path)).size,14,'the previous original soundtracks are retained');
   const hashes=new Map();
   for(const entry of review.fire){
     assert.equal(path.extname(entry.path),'.m4a','the review points to retained original audio, not a generated excerpt');
@@ -61,7 +61,7 @@ function correlation(actual,original,count){
   return cross/Math.sqrt(actualEnergy*originalEnergy);
 }
 
-test('actual gunfire outputs preserve the reviewed sound and play all 30 selections from decoded cache', {skip:!toolsAvailable},async()=>{
+test('actual gunfire outputs preserve every reviewed sound and play from decoded cache', {skip:!toolsAvailable},async()=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'aim-real-fire-')),destination=path.join(root,'dist/skin-packs');
   try{
     // Exercise the real builder and retained source bytes without rebuilding unrelated effects or shared dist.
@@ -74,12 +74,12 @@ test('actual gunfire outputs preserve the reviewed sound and play all 30 selecti
     }
     const manifest=buildSkinPacks({root,destination});
     assert.equal(manifest.schemaVersion,2);
-    assert.equal(manifest.counts.fire,30);
+    assert.equal(manifest.counts.fire,review.fire.length);
     assert.equal(manifest.counts.missingFire,0);
-    assert.equal(manifest.counts.audio,30);
+    assert.equal(manifest.counts.audio,review.fire.length);
     const urls=manifest.collections.flatMap(collection=>collection.themes.flatMap(theme=>Object.values(theme.fire)));
-    assert.equal(new Set(urls).size,30,'every weapon and theme has its own runtime mapping');
-    const fetched=new Map(),decoded=new Map(),sources=[],oraHashes=new Set();let decoderCreations=0;
+    assert.equal(new Set(urls).size,review.fire.length,'every weapon and theme has its own runtime mapping');
+    const fetched=new Map(),decoded=new Map(),expectedDecodes=new Map(),sources=[],oraHashes=new Set();let decoderCreations=0;
     const runtime=createSkinPackRuntime({
       storage:{getItem:()=>null,setItem(){}},
       async fetcher(url){
@@ -109,6 +109,7 @@ test('actual gunfire outputs preserve the reviewed sound and play all 30 selecti
       assert.ok(Math.abs(stream.duration_ts*numerator/denominator-(entry.excerpt.endSeconds-entry.excerpt.startSeconds))<=numerator/denominator,
         key(entry)+' has the reviewed container duration within one native sample');
       const hash=digest(output);
+      expectedDecodes.set(hash,(expectedDecodes.get(hash)??0)+1);
       if(entry.collection==='ora-by-onetap')oraHashes.add(hash);
       await runtime.select(entry.weapon,{collection:entry.collection,theme:entry.theme});
       assert.equal(runtime.availability(entry.weapon).fire,'ready',key(entry));
@@ -128,11 +129,11 @@ test('actual gunfire outputs preserve the reviewed sound and play all 30 selecti
     }
     assert.equal(oraHashes.size,20,'all ORA guns and themes produce distinct audio bytes');
     assert.equal(decoderCreations,1);
-    assert.equal(fetched.size,31,'the manifest and 30 actual gunfire files were fetched');
+    assert.equal(fetched.size,1+review.fire.length,'the manifest and all actual gunfire files were fetched');
     assert.ok([...fetched.values()].every(count=>count===1));
-    assert.ok([...decoded.values()].every(count=>count===1));
+    for(const [hash,count]of expectedDecodes)assert.equal(decoded.get(hash),count,'each mapped URL decodes once, including two factions sharing authentic audio');
     for(const entry of review.fire)await runtime.select(entry.weapon,{collection:entry.collection,theme:entry.theme});
     assert.ok([...fetched.values()].every(count=>count===1),'returning to an earlier skin retains decoded cache');
-    assert.ok([...decoded.values()].every(count=>count===1),'returning to an earlier theme does not decode again');
+    for(const [hash,count]of expectedDecodes)assert.equal(decoded.get(hash),count,'returning to an earlier theme does not decode again');
   }finally{fs.rmSync(root,{recursive:true,force:true})}
 });

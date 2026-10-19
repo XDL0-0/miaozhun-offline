@@ -1,4 +1,8 @@
-# Skin media status — 2026-10-19
+# Skin media status — 2026-10-20
+
+The Champions follow-up adds every annual collection from 2021 through 2026, including their six rifles and six melee weapons. Both attacking/Snake and defending/Dragon appearances are selectable for the 2026 rifle and fan. The current catalogue has 15 collections and 26 weapon combinations. The records below describe the earlier nine-collection baseline; the Champions acquisition and its source hashes are recorded in [champions-media-review.json](./audit/champions-media-review.json) and [champions-banner-recipes.json](./audit/champions-banner-recipes.json).
+
+Champions 2021–2023 use the original layered kill-banner artwork. Champions 2024–2025 retain the six original count-specific images; Champions 2026 composes each count from its original UI textures and layout endpoints. All images are decoded before training. The existing HUD cycles cached images 1–5 with the audio during long drills; the sixth banner image remains retained source material. Melee appearance preferences are saved separately and do not replace gunshot audio. Firing coverage is now 37/37, including both 2026 selections. The new 2022 shot retains the last automatic-burst shot and its tail; its first few milliseconds contain preceding low-level reverberation from the source preview.
 
 Downloaded, reviewed, staged and integrated describe different steps. The original wiki inventory contains screenshots, icons and non-firing sounds; those do not become playable effects merely by being downloaded. The follow-up firing acquisition and its acceptance are recorded separately below.
 
@@ -46,7 +50,7 @@ The 37 composite PNGs remain settings thumbnails. Gameplay uses separately acqui
 
 The in-app browser previously lost pointer lock during manual shooting and paused, so manual live kill playback remains unverified. This follow-up did not repeat that test. The actual patched audio and HUD functions passed automated tests, including first kill with native banner disabled, pause, expiry and round reset. The new firing tests additionally build and decode all thirty real source excerpts and exercise their runtime selection/cache path.
 
-Live kill playback follows the original 1–5 cycle and wraps after five. Successive recordings and Ayakashi kill 6 are available for audition only. Playback events read predecoded caches; missing or failed media retains the original effect.
+Live kill playback follows the original 1–5 cycle and wraps after five. Successive recordings and the sixth kill audio for Ayakashi and Champions 2026 are available for audition only. Playback events read predecoded caches; missing or failed media retains the original effect.
 
 ## Source records
 

@@ -29,7 +29,7 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
     return {c:raw.MinValue??raw.MaxValue??fallback};
   }
   const base=JSON.parse(fs.readFileSync(new URL('./weapon-native-effect-materials.json',import.meta.url)));
-  const readRaw=logical=>{const f=path.join(input,'properties',path.basename(logical)+'.json');if(!fs.existsSync(f))return null;return JSON.parse(fs.readFileSync(f)).find(o=>o.Package===logical);};
+  const readRaw=logical=>{const f=path.join(input,'properties',path.basename(logical)+'.json');if(!fs.existsSync(f))return null;return JSON.parse(fs.readFileSync(f)).find(o=>o.Package?.toLowerCase()===logical.toLowerCase());};
   const readExport=logical=>{const f=exported({ObjectPath:logical+'.0'},'json');return fs.existsSync(f)?JSON.parse(fs.readFileSync(f)):null;};
   const rejected=new Map(),converted=[];
   function tex(ref){
@@ -48,8 +48,19 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
   function material(ref){
     const logical=refPath(ref),key='skin:'+logical;if(result.materials[key])return key;if(rejected.has(key))return null;
     const reject=reason=>{rejected.set(key,reason);issues.push({kind:'suppressed material',source:logical,reason});return null;};
-    if(!readExport(logical))return reject('Missing exported material');
+    if(!readExport(logical)&&!readRaw(logical))return reject('Missing source material');
     const data=resolveEffectMaterial(logical,readRaw,readExport),t=data.Textures,s=data.Scalars,c=data.Colors,sw=data.Switches;
+    // These cooked base materials use fixed texture references instead of named
+    // parameters. Select their actual silhouette and colour lookup explicitly;
+    // never sample PM_Diffuse here, which the exporter assigns to the LUT.
+    const fixedShapes={
+      Champions2024_Carbine_MFlash_Laser_MAT:'T_Ashen_DMR_Muzzle_B_1x3_Flipped',
+      Champions2024_Carbine_MFlash_Nova_MAT:'Champions2024_Carbine_MFlash_NovaSpikes_TFX',
+      Champions2024_Carbine_MFlash_VCTlogo_MAT:'VCTburst_TFX',
+      Champions_2024_Carbine_MFlash_Specs_MAT:'ember',
+    };
+    const fixed=fixedShapes[path.basename(logical)];
+    if(fixed&&t[fixed]){t.Texture=t[fixed];if(t.LUT_Champions2024_TEX){t.LUTs=t.LUT_Champions2024_TEX;sw.LUT=true;}}
     const template=base.materials?.[logical];let m;
     if(template){
       m=structuredClone(template);
@@ -86,7 +97,7 @@ export function importWeaponEffects({input,sourceRoot,entries,texture,store,audi
       if(sw.Rotate90||sw['Rotate 90 Degrees'])m.e={...m.e,rot:m.e.rot+.25};
       if(c.ColorA&&c.ColorB)m={kind:'uberlerp',tex:main,colA:rgb(c.ColorA),colB:rgb(c.ColorB)};
     }
-    result.materials[key]=m;converted.push({source:logical,kind:m.kind,parents:data.parents});return key;
+    result.materials[key]=m;converted.push({source:logical,kind:m.kind,parents:data.parents,...(fixed?{fixedSourceSilhouette:fixed,conversion:'Original fixed silhouette and lookup; procedural material reduced to supported masked particles'}:{})});return key;
   }
   function mesh(ref){
     const name='skin:'+refPath(ref);if(result.meshes[name])return name;

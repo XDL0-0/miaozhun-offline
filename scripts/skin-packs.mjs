@@ -28,14 +28,15 @@ export function requiredAssets(collection,review=reviewAt(projectRoot)){
   for(const theme of collection.themes){
     const matching=entries=>(entries??[]).filter(entry=>entry.collection===collection.id&&entry.theme===theme);
     const audio=matching(review.audio),banners=matching(review.banners),fire=matching(review.fire);
-    for(const weapon of collection.weapons)add('fire',theme,'fire:'+weapon,fire.find(entry=>entry.weapon===weapon),weapon);
+    for(const weapon of collection.weapons.filter(weapon=>weapon!=='melee'))add('fire',theme,'fire:'+weapon,fire.find(entry=>entry.weapon===weapon),weapon);
     for(let n=1;n<=5;n++)add('kill',theme,'kill:'+n,audio.find(entry=>entry.role==='kill'&&entry.id===String(n)));
-    // Ayakashi's sixth clip is retained for audition, outside the game's 1–5 cycle.
+    // Optional sixth clips are retained for audition, outside the game's 1–5 cycle.
     for(const entry of audio.filter(entry=>entry.role==='kill'&&Number(entry.id)>5))add('kill',theme,'kill:'+entry.id,entry);
     add('successive',theme,'successive',audio.find(entry=>entry.role==='successive'));
     if(banners.length)for(const entry of banners){
       add('banner',theme,'banner:'+entry.id,entry);
       for(const [layer,source]of Object.entries(entry.layers??{}))add('banner-layer',theme,'banner:'+entry.id+':'+layer,source);
+      for(const [i,source]of (entry.frames??[]).entries())add('banner-frame',theme,'banner:'+entry.id+':kill-'+(i+1),source);
     }
     else add('banner',theme,'banner',null);
   }

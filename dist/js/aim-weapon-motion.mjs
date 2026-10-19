@@ -1,7 +1,7 @@
 // Original skin animation tracks, retargeted at import time to the delivered
 // Phoenix hands and each skin's own skeleton. Sampling uses the simulation clock.
 export function decodeWeaponMotion(meta,buffer){
-  if(!meta||!Array.isArray(meta.names)||meta.names.length<1||meta.names.length>256||new Set(meta.names).size!==meta.names.length||!Number.isInteger(meta.frames)||meta.frames<2||meta.frames>4000||!(meta.duration>0&&meta.duration<60)||!(meta.sampleRate>0&&meta.sampleRate<=241)||!Array.isArray(meta.rest)||meta.rest.length!==meta.names.length)throw new Error('Invalid weapon animation');
+  if(!meta||!Array.isArray(meta.names)||meta.names.length<1||meta.names.length>256||new Set(meta.names).size!==meta.names.length||!Number.isInteger(meta.frames)||meta.frames<1||meta.frames>4000||!(meta.duration>0&&meta.duration<60)||!((meta.sampleRate>0||meta.frames===1&&meta.sampleRate===0)&&meta.sampleRate<=241)||!Array.isArray(meta.rest)||meta.rest.length!==meta.names.length)throw new Error('Invalid weapon animation');
   if(buffer.byteLength!==meta.frames*meta.names.length*40)throw new Error('Truncated weapon animation');
   const values=new Float32Array(buffer);
   for(let i=0;i<values.length;i++)if(!Number.isFinite(values[i])||Math.abs(values[i])>100000)throw new Error('Invalid weapon animation sample');
@@ -16,10 +16,25 @@ export function animationState(actions,state,weapon){
     return {action:'reload',time:Math.min(duration,state.reloadSince*duration/real),weight:Math.min(1,state.reloadSince/.06)};
   }
   const shots=state.shots??[],shot=shots.at(-1)??-Infinity;
-  const inspect=(state.melee??[]).findLast(e=>e.inspect===true&&(!e.weapon||e.weapon===weapon));
-  if(inspect&&actions.inspect&&shot<inspect.at&&(state.equipAt??-Infinity)<inspect.at&&(state.adsBlend??0)<.01){
+  const events=(state.melee??[]).filter(e=>!e.weapon||e.weapon===weapon);
+  const inspect=events.findLast(e=>e.inspect===true),attack=events.findLast(e=>e.inspect!==true);
+  if(inspect&&actions.inspect&&shot<inspect.at&&(weapon!=='melee'||(attack?.at??-Infinity)<inspect.at)&&(state.equipAt??-Infinity)<inspect.at&&(state.adsBlend??0)<.01){
     const elapsed=now-inspect.at,duration=actions.inspect.arms.duration;
     if(elapsed>=0&&elapsed<duration)return {action:'inspect',time:elapsed,weight:Math.min(1,elapsed/.12,(duration-elapsed)/.16)};
+  }
+  if(weapon==='melee'){
+    if(attack&&(state.equipAt??-Infinity)<=attack.at){
+      const attacks=Object.keys(actions).filter(name=>/^attack[1-9]$/.test(name)).sort(),combo=Math.floor(attack.combo??0);
+      const name=attack.heavy&&actions.heavy?'heavy':attacks.length?attacks[((combo%attacks.length)+attacks.length)%attacks.length]:'fire';
+      const track=actions[name]?.arms??actions[name]?.gun,duration=track?.duration,elapsed=now-attack.at;
+      if(elapsed>=0&&elapsed<duration)return {action:name,time:elapsed,weight:Math.min(1,elapsed/.035,(duration-elapsed)/.1)};
+    }
+    if(actions.equip&&Number.isFinite(state.equipAt)){
+      const elapsed=now-state.equipAt,duration=(actions.equip.arms??actions.equip.gun).duration;
+      if(elapsed>=0&&elapsed<duration&&(attack?.at??-Infinity)<state.equipAt)return {action:'equip',time:elapsed,weight:Math.min(1,elapsed/.04,(duration-elapsed)/.1)};
+    }
+    if(actions.idle){const duration=(actions.idle.arms??actions.idle.gun).duration;return {action:'idle',time:((now%duration)+duration)%duration,weight:1};}
+    return null;
   }
   if(actions.fire){const elapsed=now-shot,duration=actions.fire.arms.duration;if(elapsed>=0&&elapsed<duration)return {action:'fire',time:elapsed,weight:1};}
   return null;

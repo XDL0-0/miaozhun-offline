@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "compiledOn": "2026-10-19",
+  "compiledOn": "2026-10-20",
   "purpose": "Ranked skin catalog and reviewed original-media inputs for the offline skin-pack build; source provenance is recorded in asset-review.json.",
   "ranking": {
     "source": "https://reports.valstats.site/skin-popularity-v2/",
@@ -265,6 +265,54 @@
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
       "notes": "ORA has five independent kill-banner/kill-audio themes and theme-specific gunfire; its four rifles/sidearms are included despite being outside the popularity top-10 and orange edition."
+    },
+    {
+      "id": "champions-2021", "name": "Champions 2021", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["vandal", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+      "meleeName": "Champions 2021 Karambit"
+    },
+    {
+      "id": "champions-2022", "name": "Champions 2022", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["phantom", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+      "meleeName": "Champions 2022 Butterfly Knife"
+    },
+    {
+      "id": "champions-2023", "name": "Champions 2023", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["vandal", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+      "meleeName": "Champions 2023 Kunai"
+    },
+    {
+      "id": "champions-2024", "name": "Champions 2024", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["phantom", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+      "meleeName": "Champions 2024 Blade"
+    },
+    {
+      "id": "champions-2025", "name": "Champions 2025", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["vandal", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+      "meleeName": "Champions 2025 Butterfly Knife"
+    },
+    {
+      "id": "champions-2026", "name": "Champions 2026", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["phantom", "melee"], "themes": ["attacking", "defending"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+      "meleeName": "Champions 2026 Fan"
     }
   ]
 }

@@ -1,0 +1,1975 @@
+{
+  "schemaVersion": 1,
+  "source": "Read-only local VALORANT patch 13.08 mesh material slots and upgraded skin Blueprint overrides",
+  "exporter": "CUE4Parse --slots; FSkeletalMaterial/FStaticMaterial original slot index, name and interface; LOD0 section material indices",
+  "entries": [
+    {
+      "name": "Champions 2021 Vandal",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions/Levels/AK_Champions_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Models/GN_AK_S0_Skelmesh.uasset",
+          "assetSha256": "ad83f6f99874f57f0fac810128d4eb6bd14fca9e5263afa17954f383382ae688",
+          "originalGLBMaterials": [
+            "AK_S0_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": [
+            "AK_Champions_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "AK_S0_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/S0/1P/Materials/AK_S0_MI.0",
+              "exportMaterialName": "AK_S0_MI",
+              "targetMaterialName": "AK_Champions_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "AK_S0_MI": "AK_Champions_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/S0/1P/Models/GN_AK_Magazine_S0_Staticmesh.uasset",
+          "assetSha256": "5582b8f088c2a0a5175abf3254b5cf588199ce6363cf796d540070a7904d77f2",
+          "originalGLBMaterials": [
+            "AK_S0_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": [
+            "AK_Champions_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "AK_S0_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/S0/1P/Materials/AK_S0_MI.0",
+              "exportMaterialName": "AK_S0_MI",
+              "targetMaterialName": "AK_Champions_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "AK_S0_MI": "AK_Champions_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions/Levels/AK_Champions_Lv1_Skin.uasset",
+          "propertiesSha256": "a58417c9e353cd5fdd0028832530d5f1f56ffb7f364d9bb1617b2858e4e7e4be"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions/Levels/AK_Champions_Lv2_Skin.uasset",
+          "propertiesSha256": "feffc09aeb65524fdb790dbb06a44ca4d59ef19620a7d30be421b4d9cd4c817e"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions/Levels/AK_Champions_Lv3_Skin.uasset",
+          "propertiesSha256": "c645746d887e8959f4f3604797ca603da3eb66422b1c5c38230586eb64bf0bda"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions/Levels/AK_Champions_Lv4_Skin.uasset",
+          "propertiesSha256": "d0b4d9fb63a83736e7717b147941426ef370d265bed0e6fd8efdefc9c8a804b9"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2022 Phantom",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/Levels/Carbine_Champions2_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/1P/Models/GN_Carbine_Champions2_Lv1_Skelmesh.uasset",
+          "assetSha256": "c4d134143b6d5037603eb0594a1220323046e5d6df5aa52d930a0c7ae45a45f8",
+          "originalGLBMaterials": [
+            "Carbine_Champions2_Emissive_MI",
+            "Carbine_Champions2_Crystal_MI",
+            "Carbine_Champions2_Glass_MI",
+            "Carbine_Champions2_GoldTrim_MI"
+          ],
+          "usedUEMaterialIndices": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2_Crystal_MI",
+            "Carbine_Champions2_GoldTrim_MI",
+            "Carbine_Champions2_Glass_MI",
+            "Carbine_Champions2_Emissive_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Emmissive",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Crystal_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Crystal_MI",
+              "targetMaterialName": "Carbine_Champions2_Crystal_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Crystal",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_GoldTrim_MI.0",
+              "exportMaterialName": "Carbine_Champions2_GoldTrim_MI",
+              "targetMaterialName": "Carbine_Champions2_GoldTrim_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Glass_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Glass_MI",
+              "targetMaterialName": "Carbine_Champions2_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "GoldTrim",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Emissive_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Emissive_MI",
+              "targetMaterialName": "Carbine_Champions2_Emissive_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2_Emissive_MI": "Carbine_Champions2_Emissive_MI",
+            "Carbine_Champions2_Crystal_MI": "Carbine_Champions2_Crystal_MI",
+            "Carbine_Champions2_Glass_MI": "Carbine_Champions2_Glass_MI",
+            "Carbine_Champions2_GoldTrim_MI": "Carbine_Champions2_GoldTrim_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/1P/Models/GN_Carbine_Magazine_Champions2_Lv1_Staticmesh.uasset",
+          "assetSha256": "e54d561ffc1803c71ea85e5530681d38a55311644dd4a43cac1d6e4e4d65ec45",
+          "originalGLBMaterials": [
+            "Carbine_Champions2_GoldTrim_MI",
+            "Carbine_Champions2_Attachment_Glass_MI",
+            "Carbine_Champions2_Emissive_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2_GoldTrim_MI",
+            "Carbine_Champions2_Glass_MI",
+            "Carbine_Champions2_Emissive_Magazine_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Carbine_Champions2_GoldTrim_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_GoldTrim_MI.0",
+              "exportMaterialName": "Carbine_Champions2_GoldTrim_MI",
+              "targetMaterialName": "Carbine_Champions2_GoldTrim_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Carbine_Champions2_Glass_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Attachment_Glass_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Attachment_Glass_MI",
+              "targetMaterialName": "Carbine_Champions2_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Carbine_Champions2_Emissive_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Emissive_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Emissive_MI",
+              "targetMaterialName": "Carbine_Champions2_Emissive_Magazine_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2_GoldTrim_MI": "Carbine_Champions2_GoldTrim_MI",
+            "Carbine_Champions2_Attachment_Glass_MI": "Carbine_Champions2_Glass_MI",
+            "Carbine_Champions2_Emissive_MI": "Carbine_Champions2_Emissive_Magazine_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "sight",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Champions2/Models/GN_RedDot_Champions2_Lv1_Staticmesh.uasset",
+          "assetSha256": "59d7f208b00907b71d73aaae94173278b14c25292c2152ff67745ab3ab37c8aa",
+          "originalGLBMaterials": [
+            "RedDot_Champions2_MI",
+            "Carbine_Champions2_Attachment_Glass_MI",
+            "Carbine_Champions2_Emissive_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "RedDot_Champions2_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2/Materials/RedDot_Champions2_MI.0",
+              "exportMaterialName": "RedDot_Champions2_MI",
+              "targetMaterialName": "RedDot_Champions2_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "RedDot_Champions2_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2/Materials/RedDot_Champions2_MI.0",
+              "exportMaterialName": "RedDot_Champions2_MI",
+              "targetMaterialName": "RedDot_Champions2_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Carbine_Champions2_Glass2_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Attachment_Glass_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Attachment_Glass_MI",
+              "targetMaterialName": "Carbine_Champions2_Attachment_Glass_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Carbine_Champions2_Emissive_Test_Jun3_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Emissive_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Emissive_MI",
+              "targetMaterialName": "Carbine_Champions2_Emissive_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "silencer",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Champions2/Models/GN_Silencer_Champions2_Lv1_Staticmesh.uasset",
+          "assetSha256": "d0cc6e462a0fc75c793f44d5e7da02de845800fef9d10b4a75d2e1f4b3c4f628",
+          "originalGLBMaterials": [
+            "Silencer_Champions2_MI",
+            "Carbine_Champions2_Attachment_Glass_MI",
+            "Carbine_Champions2_Emissive_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Silencer_Champions2_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2/Materials/Silencer_Champions2_MI.0",
+              "exportMaterialName": "Silencer_Champions2_MI",
+              "targetMaterialName": "Silencer_Champions2_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Carbine_Champions2_Glass_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Attachment_Glass_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Attachment_Glass_MI",
+              "targetMaterialName": "Carbine_Champions2_Attachment_Glass_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Carbine_Champions2_Emissive_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2/Materials/Carbine_Champions2_Emissive_MI.0",
+              "exportMaterialName": "Carbine_Champions2_Emissive_MI",
+              "targetMaterialName": "Carbine_Champions2_Emissive_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/Levels/Carbine_Champions2_Lv1_Skin.uasset",
+          "propertiesSha256": "3fb0baeceb9261bfede1d34dc6e53aaedcff30c08866dc58940c5f2790916bdc"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/Levels/Carbine_Champions2_Lv2_Skin.uasset",
+          "propertiesSha256": "80239c529611eca6f71f3e4aca3bf0b3b16bed90b9aabb57ea6a1e653a1c3cec"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/Levels/Carbine_Champions2_Lv3_Skin.uasset",
+          "propertiesSha256": "a24cd7f95f5e6f3deba85db5802735d0856cbe30293960a79d9db26314324b5d"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2/Levels/Carbine_Champions2_Lv4_Skin.uasset",
+          "propertiesSha256": "005d3e6e03f83cafd1f121403b9357e4368e5c96069bcf1b1fe481982295c077"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2023 Vandal",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Levels/AK_Champions2023_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Models/GN_AK_Champions2023_Lv1_Skelmesh.uasset",
+          "assetSha256": "a316a77db6bdd05318d54e9a9d227584d2f39906febb4db0c09c205132bdc0a4",
+          "originalGLBMaterials": [
+            "1P_Champions2023_Ray_MI",
+            "AK_Champions2023_MI",
+            "AK_Champions2023_Glass_NoSparkMI",
+            "1P_Champions2023_Emissive_Gradient_LUT_MI"
+          ],
+          "usedUEMaterialIndices": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "originalUEOverrides": [
+            "AK_Champions2023_MI",
+            "1P_Champions2023_Ray_Lv4_MI",
+            "1P_Infinity_ChampionTopGlass_MI",
+            "1P_Champions2023_Emissive_Gradient_LUT_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "AK_Champions2023",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/AK_Champions2023_MI.0",
+              "exportMaterialName": "AK_Champions2023_MI",
+              "targetMaterialName": "AK_Champions2023_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champs2023Rays",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_Ray_MI.0",
+              "exportMaterialName": "1P_Champions2023_Ray_MI",
+              "targetMaterialName": "1P_Champions2023_Ray_Lv4_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Champs2023Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/AK_Champions2023_Glass_NoSparkMI.0",
+              "exportMaterialName": "AK_Champions2023_Glass_NoSparkMI",
+              "targetMaterialName": "1P_Infinity_ChampionTopGlass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Champs2023EmissOutside",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_Emissive_Gradient_LUT_MI.0",
+              "exportMaterialName": "1P_Champions2023_Emissive_Gradient_LUT_MI",
+              "targetMaterialName": "1P_Champions2023_Emissive_Gradient_LUT_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "1P_Champions2023_Ray_MI": "1P_Champions2023_Ray_Lv4_MI",
+            "AK_Champions2023_MI": "AK_Champions2023_MI",
+            "AK_Champions2023_Glass_NoSparkMI": "1P_Infinity_ChampionTopGlass_MI",
+            "1P_Champions2023_Emissive_Gradient_LUT_MI": "1P_Champions2023_Emissive_Gradient_LUT_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Models/GN_AK_Magazine_Champions2023_Lv1_Staticmesh.uasset",
+          "assetSha256": "60fb50c484d550447ce2a2a19d3fff8855bdb5fa37725dc66fd573a3931cf2d8",
+          "originalGLBMaterials": [
+            "AK_Champions2023_MI",
+            "1P_Champions2023_RayMagazine_MI",
+            "AK_Champions2023_Glass_NoSparkMI",
+            "1P_Champions2023_Emissive_Outside_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "originalUEOverrides": [
+            "AK_Champions2023_MI",
+            "1P_Champions2023_RayMagazine_MI",
+            "AK_Champions2023_Glass_NoSparkMI",
+            "1P_Champions2023_Emissive_Outside_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "LogoAK_Champions2023",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/AK_Champions2023_MI.0",
+              "exportMaterialName": "AK_Champions2023_MI",
+              "targetMaterialName": "AK_Champions2023_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champs2023Rays",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_RayMagazine_MI.0",
+              "exportMaterialName": "1P_Champions2023_RayMagazine_MI",
+              "targetMaterialName": "1P_Champions2023_RayMagazine_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Champs2023_Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/AK_Champions2023_Glass_NoSparkMI.0",
+              "exportMaterialName": "AK_Champions2023_Glass_NoSparkMI",
+              "targetMaterialName": "AK_Champions2023_Glass_NoSparkMI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Champs2023Emission",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Champions2023/Materials/Blockout/1P_Champions2023_Emissive_Outside_MI.0",
+              "exportMaterialName": "1P_Champions2023_Emissive_Outside_MI",
+              "targetMaterialName": "1P_Champions2023_Emissive_Outside_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "AK_Champions2023_MI": "AK_Champions2023_MI",
+            "1P_Champions2023_RayMagazine_MI": "1P_Champions2023_RayMagazine_MI",
+            "AK_Champions2023_Glass_NoSparkMI": "AK_Champions2023_Glass_NoSparkMI",
+            "1P_Champions2023_Emissive_Outside_MI": "1P_Champions2023_Emissive_Outside_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "sight",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Champions2023/Models/GN_RedDot_Champions2023_Staticmesh.uasset",
+          "assetSha256": "540691a5d1ff88f85665fa1f132c949e9114ec7fd51e5afec4fc58aa04c30ff1",
+          "originalGLBMaterials": [
+            "RedDot_Champions2023_MI",
+            "1P_Infinity_ChampionRedDOt_MI",
+            "1P_Infinity_ChampionRedDOtFront_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2023_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2023/Materials/RedDot_Champions2023_MI.0",
+              "exportMaterialName": "RedDot_Champions2023_MI",
+              "targetMaterialName": "RedDot_Champions2023_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champs2023Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2023/Materials/1P_Infinity_ChampionRedDOt_MI.0",
+              "exportMaterialName": "1P_Infinity_ChampionRedDOt_MI",
+              "targetMaterialName": "1P_Infinity_ChampionRedDOt_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Champs2023GlassAway",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2023/Materials/1P_Infinity_ChampionRedDOtFront_MI.0",
+              "exportMaterialName": "1P_Infinity_ChampionRedDOtFront_MI",
+              "targetMaterialName": "1P_Infinity_ChampionRedDOtFront_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Levels/AK_Champions2023_Lv1_Skin.uasset",
+          "propertiesSha256": "7cb10d59591547f581355d0a8f7eaeabe8a023f5826159db9246ba1426df1116"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Levels/AK_Champions2023_Lv2_Skin.uasset",
+          "propertiesSha256": "8e59236712445e1c96a264fd17733b5ab4b4f3ccf483270a8e9e642880e2b475"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Levels/AK_Champions2023_Lv3_Skin.uasset",
+          "propertiesSha256": "bfe5bafe100213084efca7ac7fb7b5146baddb6d037597f7adc8362cdc818598"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Champions2023/Levels/AK_Champions2023_Lv4_Skin.uasset",
+          "propertiesSha256": "a957526eabc88625d2419d8478590b2bc85f740746235411c792095ec86c3335"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2024 Phantom",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Levels/Carbine_Champions2024_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Models/GN_Carbine_Champions2024_Lv4.uasset",
+          "assetSha256": "33463c4a252a6f287b24a837bfe6b7dc46834edf2da34fb1b310c1a709ee4fd5",
+          "originalGLBMaterials": [
+            "champions_jellyTest_MI",
+            "Champions24_Spark_MI_V1",
+            "Carbine_Champions2024_MI",
+            "1P_Champions2024_Tritium_MI",
+            "Carbine_Champions2024_Glass_MI"
+          ],
+          "usedUEMaterialIndices": [
+            3,
+            2,
+            0,
+            4,
+            1
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2024_CF_MI",
+            "Carbine_Champions2024_Glass_MI",
+            "Champions24_Spark_MI_V1",
+            "champions_jellyTest_MI",
+            "1P_Champions2024_Tritium_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Carbine_Champions2024",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2024/Materials/Carbine_Champions2024_MI.0",
+              "exportMaterialName": "Carbine_Champions2024_MI",
+              "targetMaterialName": "Carbine_Champions2024_CF_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Carbine_Champions2024_Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2024/Materials/Carbine_Champions2024_Glass_MI.0",
+              "exportMaterialName": "Carbine_Champions2024_Glass_MI",
+              "targetMaterialName": "Carbine_Champions2024_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Carbine_Champions2024_Spark",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Champions24_Spark_MI_V1.0",
+              "exportMaterialName": "Champions24_Spark_MI_V1",
+              "targetMaterialName": "Champions24_Spark_MI_V1",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Carbine_Champions2024_Gold",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/champions_jellyTest_MI.0",
+              "exportMaterialName": "champions_jellyTest_MI",
+              "targetMaterialName": "champions_jellyTest_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 4,
+              "slot": "Carbine_Champions2024_Tritium",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/1P_Champions2024_Tritium_MI.0",
+              "exportMaterialName": "1P_Champions2024_Tritium_MI",
+              "targetMaterialName": "1P_Champions2024_Tritium_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "champions_jellyTest_MI": "champions_jellyTest_MI",
+            "Champions24_Spark_MI_V1": "Champions24_Spark_MI_V1",
+            "Carbine_Champions2024_MI": "Carbine_Champions2024_CF_MI",
+            "1P_Champions2024_Tritium_MI": "1P_Champions2024_Tritium_MI",
+            "Carbine_Champions2024_Glass_MI": "Carbine_Champions2024_Glass_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Models/GN_Carbine_Magazine_Champions2024_Staticmesh.uasset",
+          "assetSha256": "cb4c453033dbaf154e267fa25aab0d117252820bc6003756ca1840911f94df4d",
+          "originalGLBMaterials": [
+            "Carbine_Champions2024_MI",
+            "Blockout_DarkPurple_Glass_MI",
+            "1P_Champions2024_Tritium_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2024_CF_MI",
+            "Carbine_Champions2024_Glass_MI",
+            "1P_Champions2024_Tritium_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Carbine_Champions2024",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2024/Materials/Carbine_Champions2024_MI.0",
+              "exportMaterialName": "Carbine_Champions2024_MI",
+              "targetMaterialName": "Carbine_Champions2024_CF_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Carbine_Champions2024_Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/BlockoutMaterials/Blockout_DarkPurple_Glass_MI.0",
+              "exportMaterialName": "Blockout_DarkPurple_Glass_MI",
+              "targetMaterialName": "Carbine_Champions2024_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Carbine_Champions2024_Tritium",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/1P_Champions2024_Tritium_MI.0",
+              "exportMaterialName": "1P_Champions2024_Tritium_MI",
+              "targetMaterialName": "1P_Champions2024_Tritium_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2024_MI": "Carbine_Champions2024_CF_MI",
+            "Blockout_DarkPurple_Glass_MI": "Carbine_Champions2024_Glass_MI",
+            "1P_Champions2024_Tritium_MI": "1P_Champions2024_Tritium_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "sight",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Champions2024/Models/GN_RedDot_Champions2024_Staticmesh.uasset",
+          "assetSha256": "6aa12f9c6bc19a677154c71d21dd6744f84a06c30df1a053abe5404bbca7158c",
+          "originalGLBMaterials": [
+            "RedDot_Champions2024_MI",
+            "1P_Champions2024_Tritium_MI",
+            "1P_Champions2024_RedDotGlass_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "RedDot_Champions2024",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2024/Materials/RedDot_Champions2024_MI.0",
+              "exportMaterialName": "RedDot_Champions2024_MI",
+              "targetMaterialName": "RedDot_Champions2024_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "RedDot_Champions2024_White",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2024/Materials/RedDot_Champions2024_MI.0",
+              "exportMaterialName": "RedDot_Champions2024_MI",
+              "targetMaterialName": "RedDot_Champions2024_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "RedDot_Champions2024_Tritium",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/1P_Champions2024_Tritium_MI.0",
+              "exportMaterialName": "1P_Champions2024_Tritium_MI",
+              "targetMaterialName": "1P_Champions2024_Tritium_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "RedDot_Champions2024_Glass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Glass/1P_Champions2024_RedDotGlass_MI.0",
+              "exportMaterialName": "1P_Champions2024_RedDotGlass_MI",
+              "targetMaterialName": "1P_Champions2024_RedDotGlass_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "silencer",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Champions2024/Models/GN_Silencer_Champions2024_Staticmesh.uasset",
+          "assetSha256": "9e737176641ca7053ca8ab0745f6bf0ec324720f659414ad5114ffc4b6374a75",
+          "originalGLBMaterials": [
+            "Silencer_Champions2024_MI",
+            "1P_Champions2024_Tritium_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Silencer_Champions2024",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2024/Materials/Silencer_Champions2024_MI.0",
+              "exportMaterialName": "Silencer_Champions2024_MI",
+              "targetMaterialName": "Silencer_Champions2024_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Silencer_Champions2024_White",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2024/Materials/Silencer_Champions2024_MI.0",
+              "exportMaterialName": "Silencer_Champions2024_MI",
+              "targetMaterialName": "Silencer_Champions2024_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Silencer_Champions2024_Tritium",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/1P_Champions2024_Tritium_MI.0",
+              "exportMaterialName": "1P_Champions2024_Tritium_MI",
+              "targetMaterialName": "1P_Champions2024_Tritium_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Levels/Carbine_Champions2024_Lv1_Skin.uasset",
+          "propertiesSha256": "9f9af59b8e9c384f6ed22c77101f5ea57bdc1dddc3095aa607aa96723d759c2b"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Levels/Carbine_Champions2024_Lv2_Skin.uasset",
+          "propertiesSha256": "d48d56740121f9ec97ffb86a140d26e04fd1cd1cbe1897eccd4477bd6671d49e"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Levels/Carbine_Champions2024_Lv3_Skin.uasset",
+          "propertiesSha256": "759a9898e3ea41cf66c6e99b992d0b3f69e0afdd442e6224e3e10b96464024f9"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2024/Levels/Carbine_Champions2024_Lv4_Skin.uasset",
+          "propertiesSha256": "509e225a5c2f52e3f4f2ca7878af43bc9a6e9b81b15c9a34323bdc379dabc93d"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2025 Vandal",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Levels/AK_Midas_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Models/GN_AK_Midas_Lv3_Skelmesh.uasset",
+          "assetSha256": "2c5512e650542217699f01eb3755d6d56ae7e9b0f3076ddbce6d6a6025a45373",
+          "originalGLBMaterials": [
+            "AK_Midas_Lv3_MI",
+            "AK_Midas_Glass_MI",
+            "1P_Midas_Number_MI",
+            "1P_Midas_Number_MI_2",
+            "AK_Midas_Decals_MI",
+            "1P_Midas_Number_MI_3",
+            "AK_Midas_Decals_Cards_MI"
+          ],
+          "usedUEMaterialIndices": [
+            1,
+            0,
+            2,
+            3,
+            5,
+            4,
+            6
+          ],
+          "originalUEOverrides": [
+            "AK_Midas_Glass_MI",
+            "AK_Midas_Lv3_MI",
+            "1P_Midas_Number_MI_1",
+            "1P_Midas_Number_MI_2",
+            "1P_Midas_Number_MI_3",
+            "AK_Midas_Decals_MI",
+            "AK_Midas_Decals_Cards_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "AK_Midas_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Glass_MI.0",
+              "exportMaterialName": "AK_Midas_Glass_MI",
+              "targetMaterialName": "AK_Midas_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "AK_Midas_Glass_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Lv3_MI.0",
+              "exportMaterialName": "AK_Midas_Lv3_MI",
+              "targetMaterialName": "AK_Midas_Lv3_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Midas_KC_Digit_0",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Midas/1P_Midas_Number_MI.0",
+              "exportMaterialName": "1P_Midas_Number_MI",
+              "targetMaterialName": "1P_Midas_Number_MI_1",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Midas_KC_Digit_1",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/1P_Midas_Number_MI_2.0",
+              "exportMaterialName": "1P_Midas_Number_MI_2",
+              "targetMaterialName": "1P_Midas_Number_MI_2",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 4,
+              "slot": "AK_Midas_Decals_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/1P_Midas_Number_MI_3.0",
+              "exportMaterialName": "1P_Midas_Number_MI_3",
+              "targetMaterialName": "1P_Midas_Number_MI_3",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 5,
+              "slot": "Midas_KC_Digit_2",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Decals_MI.0",
+              "exportMaterialName": "AK_Midas_Decals_MI",
+              "targetMaterialName": "AK_Midas_Decals_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 6,
+              "slot": "AK_Midas_Decals_Cards_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Decals_Cards_MI.0",
+              "exportMaterialName": "AK_Midas_Decals_Cards_MI",
+              "targetMaterialName": "AK_Midas_Decals_Cards_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "AK_Midas_Lv3_MI": "AK_Midas_Lv3_MI",
+            "AK_Midas_Glass_MI": "AK_Midas_Glass_MI",
+            "1P_Midas_Number_MI": "1P_Midas_Number_MI_1",
+            "1P_Midas_Number_MI_2": "1P_Midas_Number_MI_2",
+            "AK_Midas_Decals_MI": "AK_Midas_Decals_MI",
+            "1P_Midas_Number_MI_3": "1P_Midas_Number_MI_3",
+            "AK_Midas_Decals_Cards_MI": "AK_Midas_Decals_Cards_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Models/GN_AK_Magazine_Midas_Lv3_Staticmesh.uasset",
+          "assetSha256": "28c35b9b6b777213dc412d65cb7b572b3ecd2f1039f3dd4fcd8351a445d2e629",
+          "originalGLBMaterials": [
+            "AK_Midas_Glass_MI",
+            "AK_Midas_Lv3_MI",
+            "AK_Midas_Decals_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": [
+            "AK_Midas_Glass_MI",
+            "AK_Midas_Lv3_MI",
+            "AK_Midas_Decals_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "AK_Midas_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Glass_MI.0",
+              "exportMaterialName": "AK_Midas_Glass_MI",
+              "targetMaterialName": "AK_Midas_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "AK_Midas_Glass_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Lv3_MI.0",
+              "exportMaterialName": "AK_Midas_Lv3_MI",
+              "targetMaterialName": "AK_Midas_Lv3_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "AK_Midas_Decals_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Decals_MI.0",
+              "exportMaterialName": "AK_Midas_Decals_MI",
+              "targetMaterialName": "AK_Midas_Decals_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "AK_Midas_Glass_MI": "AK_Midas_Glass_MI",
+            "AK_Midas_Lv3_MI": "AK_Midas_Lv3_MI",
+            "AK_Midas_Decals_MI": "AK_Midas_Decals_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "sight",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Midas/Models/GN_RedDot_Midas_Lv1_Staticmesh.uasset",
+          "assetSha256": "f03e1c52398df9d1ee71abd6c0513d62d3cd7cd519be2033dbaa29163fb66b36",
+          "originalGLBMaterials": [
+            "RedDot_Midas_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Scope_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Midas/Materials/RedDot_Midas_MI.0",
+              "exportMaterialName": "RedDot_Midas_MI",
+              "targetMaterialName": "RedDot_Midas_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Levels/AK_Midas_Lv1_Skin.uasset",
+          "propertiesSha256": "2e7060d1512cf25dcf0ecaa607cc9ef812f32286703628d4a86b924245d67f12"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Levels/AK_Midas_Lv2_Skin.uasset",
+          "propertiesSha256": "d0651136d4210f0ccfc7901460f0df07ba1cd45a2b60aebc8c88769623337714"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Levels/AK_Midas_Lv3_Skin.uasset",
+          "propertiesSha256": "e18a5214d80a7613f064400d53578cd4807f6caf7e3bb020dad6b1cbb26616cc"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/AK/Midas/Levels/AK_Midas_Lv4_Skin.uasset",
+          "propertiesSha256": "70624c1ecb7815d08c806a65e5ad52bc606ed1794b960982194e3fbb1a127c9b"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2026 Phantom defending",
+      "theme": "defending",
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Models/GN_Carbine_Champions2026_Lv3_Skelmesh.uasset",
+          "assetSha256": "c1d345e7d881b106507e7d9a8474f2c12be9e49fbdb71c38d9f8c43a3a20ddbd",
+          "originalGLBMaterials": [
+            "Carbine_Champions2026_MI",
+            "MAT_Temp_Champions2026_Screen_Defender",
+            "VCT26Season_Decals_Alpha"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2026_MI",
+            "MAT_Temp_Champions2026_Screen_Defender",
+            "VCT26Season_Decals_Alpha"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Dragon",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/Carbine_Champions2026_MI.0",
+              "exportMaterialName": "Carbine_Champions2026_MI",
+              "targetMaterialName": "Carbine_Champions2026_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champions2026_Screen_Dragon",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/champs_temp/MAT_Temp_Champions2026_Screen_Defender.0",
+              "exportMaterialName": "MAT_Temp_Champions2026_Screen_Defender",
+              "targetMaterialName": "MAT_Temp_Champions2026_Screen_Defender",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "lambert1",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/VCT26Season_Decals_Alpha.0",
+              "exportMaterialName": "VCT26Season_Decals_Alpha",
+              "targetMaterialName": "VCT26Season_Decals_Alpha",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2026_MI": "Carbine_Champions2026_MI",
+            "MAT_Temp_Champions2026_Screen_Defender": "MAT_Temp_Champions2026_Screen_Defender",
+            "VCT26Season_Decals_Alpha": "VCT26Season_Decals_Alpha"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Models/GN_Carbine_Magazine_Champions2026_Lv3_Staticmesh.uasset",
+          "assetSha256": "35f4784a45908c3b49d70229f76d2c04fd7f8723bceec5a3175526e6f8939cd9",
+          "originalGLBMaterials": [
+            "Carbine_Champions2026_MI",
+            "MAT_Temp_Champions2026_Screen_Defender"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2026_MI",
+            "MAT_Temp_Champions2026_Screen_Defender"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Body",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/Carbine_Champions2026_MI.0",
+              "exportMaterialName": "Carbine_Champions2026_MI",
+              "targetMaterialName": "Carbine_Champions2026_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champions2026_Screen_Dragon1",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/champs_temp/MAT_Temp_Champions2026_Screen_Defender.0",
+              "exportMaterialName": "MAT_Temp_Champions2026_Screen_Defender",
+              "targetMaterialName": "MAT_Temp_Champions2026_Screen_Defender",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2026_MI": "Carbine_Champions2026_MI",
+            "MAT_Temp_Champions2026_Screen_Defender": "MAT_Temp_Champions2026_Screen_Defender"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "sight",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Champions2026/Models/GN_RedDot_Champions2026_Staticmesh.uasset",
+          "assetSha256": "91c1e857f1d269c2230f8aa895b158dc4a7274deaa677910a5ff2b9bfee81c58",
+          "originalGLBMaterials": [
+            "RedDot_Champions2026_Dragon",
+            "VCT25Season_Decals_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1
+          ],
+          "originalUEOverrides": [
+            "RedDot_Champions2026_Dragon",
+            "VCT25Season_Decals_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Reddot",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2026/Materials/RedDot_Champions2026_Dragon.0",
+              "exportMaterialName": "RedDot_Champions2026_Dragon",
+              "targetMaterialName": "RedDot_Champions2026_Dragon",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "lambert1",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_MI.0",
+              "exportMaterialName": "VCT25Season_Decals_MI",
+              "targetMaterialName": "VCT25Season_Decals_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "RedDot_Champions2026_Dragon": "RedDot_Champions2026_Dragon",
+            "VCT25Season_Decals_MI": "VCT25Season_Decals_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "silencer",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Champions2026/Models/GN_Silencer_Champions2026_Staticmesh.uasset",
+          "assetSha256": "7cd411a7f9cbf0df275b631daea7cda3fa607eb0e9995507c00529ff05539219",
+          "originalGLBMaterials": [
+            "Silencer_Champions2026_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": [
+            "Silencer_Champions2026_Dragon"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Suppressor",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2026/Materials/Silencer_Champions2026_MI.0",
+              "exportMaterialName": "Silencer_Champions2026_MI",
+              "targetMaterialName": "Silencer_Champions2026_Dragon",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Silencer_Champions2026_MI": "Silencer_Champions2026_Dragon"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv1_Skin.uasset",
+          "propertiesSha256": "ece87cc79415f787b4269c75f84c1c61bac2531314884d9bc50182a0b5823a29"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv2_Skin.uasset",
+          "propertiesSha256": "22bef5f4b071595615809f9308331520a162054c6345d8c8139c840b1438e65b"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv3_Skin.uasset",
+          "propertiesSha256": "3d11948d06d351adf48e779f1f723a6ec5816e72536a86191c4ee82dcbed58f8"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv4_Skin.uasset",
+          "propertiesSha256": "180cd880d084c0c483c4a0c10321fc7074170eacd730a2582e906c8828067e09"
+        }
+      ],
+      "sourceTeamState": "EAresTeamRole::Defender"
+    },
+    {
+      "name": "Champions 2026 Phantom attacking",
+      "theme": "attacking",
+      "sourceLevel": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv4_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Models/GN_Carbine_Champions2026_Lv1_Skelmesh.uasset",
+          "assetSha256": "77869dc479bcc0e712e081d5633775804e80fad75fc5f9d3b372a2cd9d43e615",
+          "originalGLBMaterials": [
+            "Carbine_Champions2026_Snake_MI",
+            "MAT_Temp_Champions2026_Screen_Attacker",
+            "None"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2026_Snake_MI",
+            "MAT_Temp_Champions2026_Screen_Attacker",
+            "VCT26Season_Decals_Omega"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Body",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/Carbine_Champions2026_Snake_MI.0",
+              "exportMaterialName": "Carbine_Champions2026_Snake_MI",
+              "targetMaterialName": "Carbine_Champions2026_Snake_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champions2026_Screen_Dragon3",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/champs_temp/MAT_Temp_Champions2026_Screen_Attacker.0",
+              "exportMaterialName": "MAT_Temp_Champions2026_Screen_Attacker",
+              "targetMaterialName": "MAT_Temp_Champions2026_Screen_Attacker",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "lambert1",
+              "lod0Used": true,
+              "sourceMaterial": null,
+              "exportMaterialName": "None",
+              "targetMaterialName": "VCT26Season_Decals_Omega",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Default_Material",
+              "lod0Used": false,
+              "sourceMaterial": null,
+              "exportMaterialName": "None",
+              "targetMaterialName": "None",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2026_Snake_MI": "Carbine_Champions2026_Snake_MI",
+            "MAT_Temp_Champions2026_Screen_Attacker": "MAT_Temp_Champions2026_Screen_Attacker",
+            "None": "VCT26Season_Decals_Omega"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "magazine",
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Models/GN_Carbine_Magazine_Champions2026_Staticmesh.uasset",
+          "assetSha256": "ecb0715794234e0a92c3f4a8491f15781f32438a170cd5fb0e9851e7c5144dbc",
+          "originalGLBMaterials": [
+            "Carbine_Champions2026_Snake_MI",
+            "MAT_Temp_Champions2026_Screen_Attacker"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1
+          ],
+          "originalUEOverrides": [
+            "Carbine_Champions2026_Snake_MI",
+            "MAT_Temp_Champions2026_Screen_Attacker"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Body",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/Carbine_Champions2026_Snake_MI.0",
+              "exportMaterialName": "Carbine_Champions2026_Snake_MI",
+              "targetMaterialName": "Carbine_Champions2026_Snake_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Champions2026_Screen_Dragon",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/Carbine/Champions2026/Materials/champs_temp/MAT_Temp_Champions2026_Screen_Attacker.0",
+              "exportMaterialName": "MAT_Temp_Champions2026_Screen_Attacker",
+              "targetMaterialName": "MAT_Temp_Champions2026_Screen_Attacker",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Carbine_Champions2026_Snake_MI": "Carbine_Champions2026_Snake_MI",
+            "MAT_Temp_Champions2026_Screen_Attacker": "MAT_Temp_Champions2026_Screen_Attacker"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "sight",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/RedDot/Champions2026/Models/GN_RedDot_Champions2026_Staticmesh.uasset",
+          "assetSha256": "91c1e857f1d269c2230f8aa895b158dc4a7274deaa677910a5ff2b9bfee81c58",
+          "originalGLBMaterials": [
+            "RedDot_Champions2026_Dragon",
+            "VCT25Season_Decals_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1
+          ],
+          "originalUEOverrides": [
+            "RedDot_Champions2026_MI",
+            "VCT25Season_Snake_Decals_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Reddot",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/RedDot/Champions2026/Materials/RedDot_Champions2026_Dragon.0",
+              "exportMaterialName": "RedDot_Champions2026_Dragon",
+              "targetMaterialName": "RedDot_Champions2026_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "lambert1",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_MI.0",
+              "exportMaterialName": "VCT25Season_Decals_MI",
+              "targetMaterialName": "VCT25Season_Snake_Decals_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "RedDot_Champions2026_Dragon": "RedDot_Champions2026_MI",
+            "VCT25Season_Decals_MI": "VCT25Season_Snake_Decals_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        },
+        {
+          "role": "silencer",
+          "asset": "ShooterGame/Content/Equippables/Guns/Attachments/Silencer/Champions2026/Models/GN_Silencer_Champions2026_Staticmesh.uasset",
+          "assetSha256": "7cd411a7f9cbf0df275b631daea7cda3fa607eb0e9995507c00529ff05539219",
+          "originalGLBMaterials": [
+            "Silencer_Champions2026_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": [
+            "Silencer_Champions2026_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Champions2026_Carbine_Suppressor",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Attachments/Silencer/Champions2026/Materials/Silencer_Champions2026_MI.0",
+              "exportMaterialName": "Silencer_Champions2026_MI",
+              "targetMaterialName": "Silencer_Champions2026_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Silencer_Champions2026_MI": "Silencer_Champions2026_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv1_Skin.uasset",
+          "propertiesSha256": "ece87cc79415f787b4269c75f84c1c61bac2531314884d9bc50182a0b5823a29"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv2_Skin.uasset",
+          "propertiesSha256": "22bef5f4b071595615809f9308331520a162054c6345d8c8139c840b1438e65b"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv3_Skin.uasset",
+          "propertiesSha256": "3d11948d06d351adf48e779f1f723a6ec5816e72536a86191c4ee82dcbed58f8"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Guns/Rifles/Carbine/Champions2026/Levels/Carbine_Champions2026_Lv4_Skin.uasset",
+          "propertiesSha256": "180cd880d084c0c483c4a0c10321fc7074170eacd730a2582e906c8828067e09"
+        }
+      ],
+      "sourceTeamState": "EAresTeamRole::Attacker"
+    },
+    {
+      "name": "Champions 2021 Melee",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Champions/Levels/Melee_Champions_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions/Models/EQ_Melee_Champions_Lv1_Skelmesh.uasset",
+          "assetSha256": "eff3c949c93aae2822729406a4aabb44a6d940ea730a2b8783dd11cd326c72ca",
+          "originalGLBMaterials": [
+            "Melee_Champions_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Melee_Champions_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions/Materials/Melee_Champions_MI.0",
+              "exportMaterialName": "Melee_Champions_MI",
+              "targetMaterialName": "Melee_Champions_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions/Levels/Melee_Champions_Lv1_Skin.uasset",
+          "propertiesSha256": "20c33c4c68aafa52374c085dcb63cb8000b3a832152c512ea9406e86f8770f00"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions/Levels/Melee_Champions_Lv2_Skin.uasset",
+          "propertiesSha256": "a4dc9dc768d427f2676dfec0e5eea7db9b395f17e81f48729348569c47f60987"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions/Levels/Melee_Champions_Lv3_Skin.uasset",
+          "propertiesSha256": "ab4312672b2eb55bb44871380928b12528aaea5bc77add9b74846237e612284e"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2022 Melee",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Champions2/Levels/Melee_Champions2_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2/Models/EQ_Melee_Champions2_Lv2_Skelmesh.uasset",
+          "assetSha256": "90099fdccadf3d1668e63dff633cbc77426e70a39e9b798eae65168b8f814964",
+          "originalGLBMaterials": [
+            "Melee_Champions2_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Melee_Champions2_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2/Materials/Melee_Champions2_MI.0",
+              "exportMaterialName": "Melee_Champions2_MI",
+              "targetMaterialName": "Melee_Champions2_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2/Levels/Melee_Champions2_Lv1_Skin.uasset",
+          "propertiesSha256": "6a60b12a041c9fd91b518d796a0da3b89f9cfe649ef4465b91e6678dbae1cdf6"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2/Levels/Melee_Champions2_Lv2_Skin.uasset",
+          "propertiesSha256": "d5f60ab49dbffa5886c1f05e17044815ae619d99dd432c1d41c81d7b4b8620d7"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2/Levels/Melee_Champions2_Lv3_Skin.uasset",
+          "propertiesSha256": "e139a8a3c3841cde698a9270a8449265af7f9a52f82ad78ef51496e1e1a0eabf"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2023 Melee",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Champions2023/Levels/Melee_Champions2023_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2023/Models/EQ_Melee_Aggressive_Champions2023_Skelmesh.uasset",
+          "assetSha256": "bc420f8ecb5c4155ce884230b0f261d2fcbfbad7b0f2e19bd6e20a22c3c1b6b5",
+          "originalGLBMaterials": [
+            "Melee_Champions2023_MI",
+            "1P_Infinity_ChampionsMelee_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            2,
+            1
+          ],
+          "originalUEOverrides": [
+            "Melee_Champions2023_MI",
+            "Melee_Champions2023_MI",
+            "1P_Infinity_ChampionsMelee_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Melee_Champions_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2023/Materials/Melee_Champions2023_MI.0",
+              "exportMaterialName": "Melee_Champions2023_MI",
+              "targetMaterialName": "Melee_Champions2023_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Melee_ChampionsScreen",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2023/Materials/Melee_Champions2023_MI.0",
+              "exportMaterialName": "Melee_Champions2023_MI",
+              "targetMaterialName": "Melee_Champions2023_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Melee_ChampionsGlass",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2023/Materials/1P_Infinity_ChampionsMelee_MI.0",
+              "exportMaterialName": "1P_Infinity_ChampionsMelee_MI",
+              "targetMaterialName": "1P_Infinity_ChampionsMelee_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Melee_Champions2023_MI": "Melee_Champions2023_MI",
+            "1P_Infinity_ChampionsMelee_MI": "1P_Infinity_ChampionsMelee_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2023/Levels/Melee_Champions2023_Lv1_Skin.uasset",
+          "propertiesSha256": "af14febc00b51b5f80e15f471e4264b43cf3f7f780ed09d183d839caf5f1d52f"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2023/Levels/Melee_Champions2023_Lv2_Skin.uasset",
+          "propertiesSha256": "6f0aa29c488db0e03dc578507518208adbdfae6bcbf8809c0da171bd47f1826f"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2023/Levels/Melee_Champions2023_Lv3_Skin.uasset",
+          "propertiesSha256": "aa211b80c2759a429fe1a31d8a7a50bfde5f581dd083a3a089fa82d119848b0a"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2024 Melee",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Champions2024/Levels/Melee_Champions2024_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2024/Models/EQ_Melee_Champions2024_Lv3_Skelmesh.uasset",
+          "assetSha256": "52793e9e3b0501c92b3f9eb02451e18acc71d7fede56dadf91f2425464c43b7e",
+          "originalGLBMaterials": [
+            "1P_Champions2024_Tritium_MI",
+            "Melee_Champions2024_CF_MI",
+            "Melee_champions_jellyTest_MI",
+            "Champions24_Spark_MI_V1"
+          ],
+          "usedUEMaterialIndices": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "originalUEOverrides": null,
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Melee_Champions2024",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2024/Materials/Melee_Champions2024_CF_MI.0",
+              "exportMaterialName": "Melee_Champions2024_CF_MI",
+              "targetMaterialName": "Melee_Champions2024_CF_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "Melee_Champions2024_Tritium",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/1P_Champions2024_Tritium_MI.0",
+              "exportMaterialName": "1P_Champions2024_Tritium_MI",
+              "targetMaterialName": "1P_Champions2024_Tritium_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Melee_Champions2024_White",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2024/Materials/Melee_champions_jellyTest_MI.0",
+              "exportMaterialName": "Melee_champions_jellyTest_MI",
+              "targetMaterialName": "Melee_champions_jellyTest_MI",
+              "assignment": "original mesh default"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "Carbine_Champions2024_Turbine",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/_Core/Materials/SpecialMaterials/Champions2024/Champions24_Spark_MI_V1.0",
+              "exportMaterialName": "Champions24_Spark_MI_V1",
+              "targetMaterialName": "Champions24_Spark_MI_V1",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": null,
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2024/Levels/Melee_Champions2024_Lv1_Skin.uasset",
+          "propertiesSha256": "ed1f810ae02652756c81145c1add25c833c1decebaec2a791ce5ad2c9d117e34"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2024/Levels/Melee_Champions2024_Lv2_Skin.uasset",
+          "propertiesSha256": "08f75b79d390c3dec1d83fac462b03c643ab4f5f271f5e10cda6d1f47dcf218c"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2024/Levels/Melee_Champions2024_Lv3_Skin.uasset",
+          "propertiesSha256": "c38c03e738b8003a75cac01e2b2a37b949858eb8b7ae6fc0ca89666bd61c2e4e"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2025 Melee",
+      "theme": null,
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Midas/Levels/Melee_Midas_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Midas/Models/EQ_Melee_Midas_Lv2_Skelmesh.uasset",
+          "assetSha256": "194c0621dedff7e25f775b424416a369892a4698bb36cbdb0822173a9277d2b6",
+          "originalGLBMaterials": [
+            "Melee_Midas_Lv2_MI",
+            "AK_Midas_Decals_Cards_MI",
+            "Melee_Midas_Glass_MI"
+          ],
+          "usedUEMaterialIndices": [
+            1,
+            2,
+            0
+          ],
+          "originalUEOverrides": [
+            "Melee_Midas_Glass_MI",
+            "Melee_Midas_Lv2_MI",
+            "Melee_Midas_Decals_Cards_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "Melee_Midas_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Midas/Materials/Melee_Midas_Glass_MI.0",
+              "exportMaterialName": "Melee_Midas_Glass_MI",
+              "targetMaterialName": "Melee_Midas_Glass_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "AK_Midas_Decals_Lv1_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Midas/Materials/Melee_Midas_Lv2_MI.0",
+              "exportMaterialName": "Melee_Midas_Lv2_MI",
+              "targetMaterialName": "Melee_Midas_Lv2_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "Melee_Madis_Glass_MI",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Guns/Rifles/AK/Midas/Materials/AK_Midas_Decals_Cards_MI.0",
+              "exportMaterialName": "AK_Midas_Decals_Cards_MI",
+              "targetMaterialName": "Melee_Midas_Decals_Cards_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Melee_Midas_Lv2_MI": "Melee_Midas_Lv2_MI",
+            "AK_Midas_Decals_Cards_MI": "Melee_Midas_Decals_Cards_MI",
+            "Melee_Midas_Glass_MI": "Melee_Midas_Glass_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Midas/Levels/Melee_Midas_Lv1_Skin.uasset",
+          "propertiesSha256": "bcb9ffbe261430b477f721062cf6ec4edacb05b697c6f99261fd2ca215741c91"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Midas/Levels/Melee_Midas_Lv2_Skin.uasset",
+          "propertiesSha256": "03182815ea49e446326dc41ec0aae40ccd955be5b13b0deb53d573927c59b16e"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Midas/Levels/Melee_Midas_Lv3_Skin.uasset",
+          "propertiesSha256": "00bc5632e8365af2a7b531dda208d104c9995b0171fe0ee553f8ee1108f61d7e"
+        }
+      ]
+    },
+    {
+      "name": "Champions 2026 Melee",
+      "theme": "defending",
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Models/EQ_Melee_Champions2026_Lv3_Skelmesh.uasset",
+          "assetSha256": "2aeb00592ad3de5d32fe1403c1375185fca12de1133b6cdf4b7a8458be6bf803",
+          "originalGLBMaterials": [
+            "Melee_Champions2026_MI",
+            "Melee_Champions2026_Fan_MI",
+            "Champs26_Melee_TopFrag_DefGlow_MI",
+            "Champs26_Melee_Aura_Glow_MI",
+            "VCT25Season_Decals_MI",
+            "VCT25Season_Decals_Lettering_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "originalUEOverrides": [
+            "Melee_Champions2026_MI",
+            "Melee_Champions2026_Fan_MI",
+            "Champs26_Melee_TopFrag_DefGlow_MI",
+            "Champs26_Melee_Aura_Glow_MI",
+            "VCT25Season_Decals_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "EQ_Melee_Champions2026_Knife",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_MI.0",
+              "exportMaterialName": "Melee_Champions2026_MI",
+              "targetMaterialName": "Melee_Champions2026_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "FAN_BLACK",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_Fan_MI.0",
+              "exportMaterialName": "Melee_Champions2026_Fan_MI",
+              "targetMaterialName": "Melee_Champions2026_Fan_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "TopFragAura",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_TopFrag_DefGlow_MI.0",
+              "exportMaterialName": "Champs26_Melee_TopFrag_DefGlow_MI",
+              "targetMaterialName": "Champs26_Melee_TopFrag_DefGlow_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "TopFragOutline",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_Aura_Glow_MI.0",
+              "exportMaterialName": "Champs26_Melee_Aura_Glow_MI",
+              "targetMaterialName": "Champs26_Melee_Aura_Glow_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 4,
+              "slot": "Champions2026Decal",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_MI.0",
+              "exportMaterialName": "VCT25Season_Decals_MI",
+              "targetMaterialName": "VCT25Season_Decals_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 5,
+              "slot": "lettering",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_Lettering_MI.0",
+              "exportMaterialName": "VCT25Season_Decals_Lettering_MI",
+              "targetMaterialName": "VCT25Season_Decals_Lettering_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Melee_Champions2026_MI": "Melee_Champions2026_MI",
+            "Melee_Champions2026_Fan_MI": "Melee_Champions2026_Fan_MI",
+            "Champs26_Melee_TopFrag_DefGlow_MI": "Champs26_Melee_TopFrag_DefGlow_MI",
+            "Champs26_Melee_Aura_Glow_MI": "Champs26_Melee_Aura_Glow_MI",
+            "VCT25Season_Decals_MI": "VCT25Season_Decals_MI",
+            "VCT25Season_Decals_Lettering_MI": "VCT25Season_Decals_Lettering_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv1_Skin.uasset",
+          "propertiesSha256": "a2f66e75bd0c4eed32bbe70e552d008e1fe87226ab97ac96e56ad041d048352d"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv2_Skin.uasset",
+          "propertiesSha256": "e5c615dadebed4214f8fe607d373732cca48bb025a9cca522ea1126b43f6704e"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv3_Skin.uasset",
+          "propertiesSha256": "335afdb446357c94fb182e06bcea65a8eab8fcff7ca5279b539948d738b17cc2"
+        }
+      ],
+      "sourceTeamState": "EAresTeamRole::Defender"
+    },
+    {
+      "name": "Champions 2026 Melee",
+      "theme": "attacking",
+      "sourceLevel": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv3_Skin.uasset",
+      "parts": [
+        {
+          "role": "body",
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Models/EQ_Melee_Champions2026_Lv3_Skelmesh.uasset",
+          "assetSha256": "2aeb00592ad3de5d32fe1403c1375185fca12de1133b6cdf4b7a8458be6bf803",
+          "originalGLBMaterials": [
+            "Melee_Champions2026_MI",
+            "Melee_Champions2026_Fan_MI",
+            "Champs26_Melee_TopFrag_DefGlow_MI",
+            "Champs26_Melee_Aura_Glow_MI",
+            "VCT25Season_Decals_MI",
+            "VCT25Season_Decals_Lettering_MI"
+          ],
+          "usedUEMaterialIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "originalUEOverrides": [
+            "Melee_Champions2026_Snake_MI",
+            "Melee_Champions2026_Fan_Snake_MI",
+            "Champs26_Melee_TopFrag_AtkGlow_MI",
+            "Champs26_Melee_Aura_AtkGlow_MI",
+            "VCT25Season_Snake_Decals_MI"
+          ],
+          "bindings": [
+            {
+              "ueIndex": 0,
+              "slot": "EQ_Melee_Champions2026_Knife",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_MI.0",
+              "exportMaterialName": "Melee_Champions2026_MI",
+              "targetMaterialName": "Melee_Champions2026_Snake_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 1,
+              "slot": "FAN_BLACK",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/Melee_Champions2026_Fan_MI.0",
+              "exportMaterialName": "Melee_Champions2026_Fan_MI",
+              "targetMaterialName": "Melee_Champions2026_Fan_Snake_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 2,
+              "slot": "TopFragAura",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_TopFrag_DefGlow_MI.0",
+              "exportMaterialName": "Champs26_Melee_TopFrag_DefGlow_MI",
+              "targetMaterialName": "Champs26_Melee_TopFrag_AtkGlow_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 3,
+              "slot": "TopFragOutline",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/VFX/TopFrag/Champs26_Melee_Aura_Glow_MI.0",
+              "exportMaterialName": "Champs26_Melee_Aura_Glow_MI",
+              "targetMaterialName": "Champs26_Melee_Aura_AtkGlow_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 4,
+              "slot": "Champions2026Decal",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_MI.0",
+              "exportMaterialName": "VCT25Season_Decals_MI",
+              "targetMaterialName": "VCT25Season_Snake_Decals_MI",
+              "assignment": "upgraded Blueprint override at original UE material index"
+            },
+            {
+              "ueIndex": 5,
+              "slot": "lettering",
+              "lod0Used": true,
+              "sourceMaterial": "/Game/Equippables/Melee/Champions2026/Materials/VCT25Season_Decals_Lettering_MI.0",
+              "exportMaterialName": "VCT25Season_Decals_Lettering_MI",
+              "targetMaterialName": "VCT25Season_Decals_Lettering_MI",
+              "assignment": "original mesh default"
+            }
+          ],
+          "appliedByMaterialName": {
+            "Melee_Champions2026_MI": "Melee_Champions2026_Snake_MI",
+            "Melee_Champions2026_Fan_MI": "Melee_Champions2026_Fan_Snake_MI",
+            "Champs26_Melee_TopFrag_DefGlow_MI": "Champs26_Melee_TopFrag_AtkGlow_MI",
+            "Champs26_Melee_Aura_Glow_MI": "Champs26_Melee_Aura_AtkGlow_MI",
+            "VCT25Season_Decals_MI": "VCT25Season_Snake_Decals_MI",
+            "VCT25Season_Decals_Lettering_MI": "VCT25Season_Decals_Lettering_MI"
+          },
+          "reason": "GLB deduplicates and reorders materials; bindings use original UE LOD0 section material indices mapped to material names"
+        }
+      ],
+      "sourceBlueprintChain": [
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv1_Skin.uasset",
+          "propertiesSha256": "a2f66e75bd0c4eed32bbe70e552d008e1fe87226ab97ac96e56ad041d048352d"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv2_Skin.uasset",
+          "propertiesSha256": "e5c615dadebed4214f8fe607d373732cca48bb025a9cca522ea1126b43f6704e"
+        },
+        {
+          "asset": "ShooterGame/Content/Equippables/Melee/Champions2026/Levels/Melee_Champions2026_Lv3_Skin.uasset",
+          "propertiesSha256": "335afdb446357c94fb182e06bcea65a8eab8fcff7ca5279b539948d738b17cc2"
+        }
+      ],
+      "sourceTeamState": "EAresTeamRole::Attacker"
+    }
+  ],
+  "conflicts": []
+}

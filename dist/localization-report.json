@@ -5,8 +5,8 @@
     "en"
   ],
   "defaultLanguage": "zh-CN",
-  "catalogEntries": 6332,
-  "sourceKeys": 6311,
+  "catalogEntries": 6335,
+  "sourceKeys": 6314,
   "bundledPresentationKeys": 428,
   "minimapCallouts": {
     "ascent": 22,
@@ -18,7 +18,7 @@
   },
   "modules": {
     "4JWOlA2c.js": 10,
-    "aim-skin-packs.mjs": 52,
+    "aim-skin-packs.mjs": 56,
     "aQOfOAp-.js": 137,
     "B51EgnC9.js": 42,
     "B7oA57Lm.js": 73,

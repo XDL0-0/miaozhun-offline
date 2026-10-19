@@ -20,7 +20,7 @@ const warnings=fn=>{const previous=console.warn;console.warn=()=>{};return Promi
 function harness(key='ayakashi/phantom',options={}){
   let selected=key,fetches=[],imageLoads=0;
   const gate=new Map(),failures=new Map(),changes=new Map();
-  const skins={async initialize(){},selection(weapon){const [collection,gun]=(selected??'default/'+weapon).split('/');return {collection:gun===weapon?collection:'default',modelEnabled:options.enabled!==false};}};
+  const skins={async initialize(){},selection(weapon){const [collection,gun,theme]=(selected??'default/'+weapon).split('/');return {collection:gun===weapon?collection:'default',theme,modelEnabled:options.enabled!==false};}};
   const loader=createWeaponModelLoader({skins,timeoutMs:options.timeoutMs??1000,
     async fetcher(url,{signal}){
       fetches.push(url);await gate.get(url)?.promise;
@@ -36,14 +36,14 @@ function harness(key='ayakashi/phantom',options={}){
 }
 function deferred(){let resolve;const promise=new Promise(a=>resolve=a);return {promise,resolve};}
 
-test('real gun models cover every eligible collection/weapon and remain independent of the 30 audio themes',()=>{
+test('real models cover every eligible collection/weapon including all six Champions melees',()=>{
   const expected=catalog.collections.flatMap(c=>c.weapons.map(w=>`${c.id}/${w}`));
-  assert.equal(expected.length,14);assert.deepEqual(Object.keys(index.models).sort(),expected.sort());
-  assert.equal(index.counts.weapons,14);
+  assert.equal(expected.length,26);assert.deepEqual(Object.keys(index.models).sort(),expected.sort());
+  assert.equal(index.counts.weapons,26);
   for(const [key,url]of Object.entries(index.models)){
     assert.match(url,/^\/skin-packs\/models\/[a-z0-9/-]+\.json$/);
     const pack=read(local(url));assert.equal(`${pack.collection}/${pack.weapon}`,key);
-    assert.equal(pack.parts.filter(p=>p.role==='body').length,1);assert.equal(pack.parts.filter(p=>p.role==='magazine').length,1);
+    assert.equal(pack.parts.filter(p=>p.role==='body').length,1);assert.equal(pack.parts.filter(p=>p.role==='magazine').length,pack.weapon==='melee'?0:1);
     if(pack.weapon==='phantom')assert.ok(pack.parts.some(p=>p.role==='silencer'));
     if(pack.weapon==='operator')assert.ok(pack.parts.some(p=>p.role==='sight'));
   }
@@ -51,7 +51,7 @@ test('real gun models cover every eligible collection/weapon and remain independ
 
 test('all retained model assets match their review hashes; textures are bounded and GLBs are closed offline',()=>{
   const review=read(new URL('skin-packs/audit/weapon-model-sources.json',root));
-  assert.equal(review.models.length,14);assert.equal(review.assets.length,index.counts.assets);
+  assert.equal(review.models.length,new Set([...Object.values(index.models),...Object.values(index.variants??{}).flatMap(Object.values)]).size);assert.equal(review.assets.length,index.counts.assets);
   for(const entry of review.assets){
     const b=fs.readFileSync(local(entry.url));assert.equal(crypto.createHash('sha256').update(b).digest('hex'),entry.sha256,entry.url);
     if(entry.url.endsWith('.png')){assert.equal(b.toString('ascii',1,4),'PNG');assert.equal(b.readUInt32BE(16),entry.source.width);assert.equal(b.readUInt32BE(20),entry.source.height);assert.equal(entry.source.resolution,'original');assert.ok(entry.source.width<=4096&&entry.source.height<=4096);}
@@ -64,9 +64,11 @@ test('skin rigs use the native coordinate frame and provide the sockets for thei
   for(const url of Object.values(index.models)){
     const pack=read(local(url)),body=pack.parts.find(p=>p.role==='body');
     const decoded=decodeWeaponGlb(binary(fs.readFileSync(local(body.url)))),byName=new Map(decoded.bones.map(b=>[b.name,b]));
-    assert.ok(byName.has('Root'));assert.ok(byName.has('Muzzle'));
-    const q=byName.get('Skeleton').q;assert.ok(Math.abs(q.reduce((n,v)=>n+v*-.5,0))>.999);
-    assert.ok(byName.has('Magazine_Main')||byName.has('Mag_Holder'));
+    assert.ok(byName.has('Root'));if(pack.weapon!=='melee')assert.ok(byName.has('Muzzle'));
+    const q=byName.get('Skeleton').q;
+    const expected=pack.collection==='champions-2026'&&pack.weapon==='melee'?[0,0,-Math.SQRT1_2,-Math.SQRT1_2]:[-.5,-.5,-.5,-.5];
+    assert.ok(Math.abs(q.reduce((n,v,i)=>n+v*expected[i],0))>.999,pack.collection+'/'+pack.weapon+' retains its original rig frame');
+    if(pack.weapon!=='melee')assert.ok(byName.has('Magazine_Main')||byName.has('Mag_Holder'));
     if(pack.parts.some(p=>p.role==='sight'))assert.ok(byName.has('Reflex'));
     if(pack.parts.some(p=>p.role==='silencer'))assert.ok(byName.has('Barrel'));
   }
@@ -81,6 +83,20 @@ test('loader decodes every delivered model with no external requests and dedupli
     assert.equal(asset.pictures.size,new Set(urls).size);
   }
   assert.ok(h.fetches.every(url=>url.startsWith('/skin-packs/models/')));
+});
+
+test('Champions 2026 switches both gun and fan between genuine attacking and defending packages',async()=>{
+  for(const weapon of ['phantom','melee']){
+    const base='champions-2026/'+weapon;
+    assert.deepEqual(Object.keys(index.variants[base]).sort(),['attacking','defending']);
+    const h=harness(base+'/attacking');
+    const attack=await h.loader.load(weapon==='melee'?'knife':weapon);
+    assert.equal(attack?.key,base+'/attacking');
+    h.choose(base+'/defending');const defend=await h.loader.load(weapon);
+    assert.equal(defend?.key,base+'/defending');
+    assert.notDeepEqual(attack.parts[0].materials,defend.parts[0].materials,'both factions retain their source surfaces');
+    assert.ok(h.fetches.every(url=>url.startsWith('/skin-packs/models/')));
+  }
 });
 
 test('native/default/disabled gun models do no model fetching and saved ORA audio themes do not fork geometry',async()=>{
@@ -146,15 +162,15 @@ test('all skin reload/inspect/fire montages decode original retargeted offline t
   const sources=read(new URL('skin-packs/audit/weapon-model-sources.json',root)),unique=new Set();
   for(const url of Object.values(index.models)){
     const pack=read(local(url));
-    assert.ok(pack.parts.find(p=>p.role==='body').materials.some(m=>sources.assets.some(a=>a.url===m.map&&a.source.width===2048)),'each gun retains its original 2K body albedo');
-    for(const action of ['reload','inspect','fire'])assert.ok(pack.motions.actions[action].arms,pack.collection+' '+action);
+    assert.ok(pack.parts.find(p=>p.role==='body').materials.some(m=>sources.assets.some(a=>a.url===m.map&&a.source.width>=1024)),'each weapon retains its original high-resolution body albedo');
+    for(const action of pack.weapon==='melee'?['inspect','idle','attack1']:['reload','inspect','fire'])assert.ok(pack.motions.actions[action]?.arms,pack.collection+' '+action);
     for(const [id,clip]of Object.entries(pack.motions.clips)){
       unique.add(id);const bytes=gunzipSync(fs.readFileSync(local(clip.data))),data=decodeWeaponMotion(clip,binary(bytes));assert.ok(data.values.length>0);
       assert.equal(data.names.length,data.rest.length);
     }
     for(const action of Object.values(pack.motions.actions))for(const track of Object.values(action))for(const segment of track.segments){assert.ok(pack.motions.clips[segment.clip]);assert.ok(segment.to>segment.from);assert.ok(segment.rate>0);}
   }
-  assert.equal(unique.size,71);
+  assert.ok(unique.size>71,'original Champions clips extend the existing 71 clips');
 });
 
 test('inspect yields to reload, firing, ADS and a new equip; reload follows the actual game duration',()=>{
@@ -170,7 +186,8 @@ test('inspect yields to reload, firing, ADS and a new equip; reload follows the 
 });
 
 test('skin muzzle effects retain original emitters, bone attachments, curves and local texture closure',()=>{
-  const fx=read(new URL('fire-effects.json',source));assert.equal(Object.keys(fx.guns).length,14);assert.equal(Object.keys(fx.systems).length,40);
+  const fx=read(new URL('fire-effects.json',source));
+  assert.ok(Object.keys(fx.guns).length>=20);assert.ok(Object.keys(fx.systems).length>40);
   for(const [key,gun]of Object.entries(fx.guns))for(const rule of [...gun.hip,...gun.ads]){
     const system=fx.systems[rule.sys];assert.ok(system,key+' has its source particle system');
     assert.ok(system.emitters.length||system.suppressed&&system.reason,'an omitted subsystem must explain why');

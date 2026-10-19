@@ -122,11 +122,15 @@ if(has('/skin-packs/index.json')){
    }else if(bytes.subarray(0,4).toString()!=='OggS')throw new Error('Invalid Ogg skin audio: '+url);
   }
   for(const collection of manifest.collections)for(const theme of collection.themes){
-   for(const weapon of collection.weapons){counts.eligibleFireCombinations++;if(theme.fire[weapon]){skinAsset(theme.fire[weapon],'fire');counts.fire++;counts.audio++}else counts.missingFire++}
+   for(const weapon of collection.weapons.filter(weapon=>weapon!=='melee')){counts.eligibleFireCombinations++;if(theme.fire[weapon]){skinAsset(theme.fire[weapon],'fire');counts.fire++;counts.audio++}else counts.missingFire++}
    for(const url of Object.values(theme.kills)){skinAsset(url,'kill');counts.audio++;counts.killAudio++}
    if(theme.successive){skinAsset(theme.successive,'successive');counts.audio++;counts.successiveAudio++}
    for(const banner of theme.banners){
     skinAsset(banner.url,'banner');counts.banners++;
+    if(banner.frames){
+     if(!Array.isArray(banner.frames)||banner.frames.length<5||banner.frames.length>6)throw new Error('Invalid skin banner frames');
+     for(const url of banner.frames)skinAsset(url,'banner');
+    }
     if(banner.layers){
      if(!['frame','ring','emblem','pip'].every(layer=>banner.layers[layer])||!(banner.pipRadius>0&&banner.pipRadius<=150)||!Array.isArray(banner.headshotOffset)||banner.headshotOffset.length!==2||banner.headshotOffset.some(value=>!Number.isFinite(value)||Math.abs(value)>150))throw new Error('Invalid skin banner geometry');
      for(const url of [...Object.values(banner.layers),banner.headshot].filter(Boolean)){skinAsset(url,'banner-layer');layerUrls.add(url)}
@@ -148,15 +152,19 @@ if(has('/skin-packs/index.json')){
 try{
  const indexPath='/skin-packs/models/index.json';requireAsset(indexPath,'weapon model catalogue');
  const index=readJson(path.join(root,indexPath.slice(1))),seen=new Set();
- if(index.schemaVersion!==1||Object.keys(index.models??{}).length!==14)throw new Error('Incomplete weapon model catalogue');
+ const catalog=readJson(path.join(packageRoot,'skin-packs/catalog.json'));
+ const expected=catalog.collections.flatMap(c=>c.weapons.map(w=>c.id+'/'+w)).sort();
+ if(index.schemaVersion!==1||JSON.stringify(Object.keys(index.models??{}).sort())!==JSON.stringify(expected))throw new Error('Incomplete weapon model catalogue');
  const safe=url=>typeof url==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb|bin\.gz)$/.test(url);
  const fxPath='/skin-packs/models/fire-effects.json';requireAsset(fxPath,'skin firing effects');
  const fx=readJson(path.join(root,fxPath.slice(1)));
  for(const texture of Object.values(fx.textures??{})){if(!safe(texture.file))throw new Error('Invalid skin effect texture');requireAsset(texture.file,fxPath);seen.add(texture.file);}
- for(const [key,url]of Object.entries(index.models)){
+ const packages=new Map(Object.entries(index.models));
+ for(const [base,themes]of Object.entries(index.variants??{}))for(const [theme,url]of Object.entries(themes))packages.set(base+'/'+theme,url);
+ for(const [key,url]of packages){
   if(!safe(url))throw new Error('Invalid weapon model package path');requireAsset(url,indexPath);
   const pack=readJson(path.join(root,url.slice(1)));
-  if(pack.schemaVersion!==1||key!==pack.collection+'/'+pack.weapon||pack.parts.filter(p=>p.role==='body').length!==1||pack.parts.filter(p=>p.role==='magazine').length!==1)throw new Error('Incomplete weapon model '+key);
+  if(pack.schemaVersion!==1||!([pack.collection+'/'+pack.weapon,pack.collection+'/'+pack.weapon+'/'+pack.theme].includes(key))||pack.parts.filter(p=>p.role==='body').length!==1||pack.parts.filter(p=>p.role==='magazine').length!==(pack.weapon==='melee'?0:1))throw new Error('Incomplete weapon model '+key);
   for(const part of pack.parts){
    if(!safe(part.url))throw new Error('Invalid weapon GLB path');requireAsset(part.url,key+' '+part.role);seen.add(part.url);
    const bytes=fs.readFileSync(path.join(root,part.url.slice(1))),decoded=decodeWeaponGlb(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));
@@ -167,7 +175,7 @@ try{
     if(!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||png.readUInt32BE(16)>4096||png.readUInt32BE(20)>4096)throw new Error('Invalid weapon texture '+texture);
    }
   }
-  if(!fx.guns[key]?.hip?.length||!pack.motions?.actions?.reload?.arms||!pack.motions.actions.inspect?.arms)throw new Error('Incomplete skin motions/effects '+key);
+  if(pack.weapon!=='melee'&&(!fx.guns[key]?.hip?.length||!pack.motions?.actions?.reload?.arms)||!pack.motions?.actions?.inspect?.arms)throw new Error('Incomplete skin motions/effects '+key);
   for(const clip of Object.values(pack.motions.clips)){
    if(!safe(clip.data))throw new Error('Invalid skin motion path');requireAsset(clip.data,key+' original animation');seen.add(clip.data);
    const bytes=gunzipSync(fs.readFileSync(path.join(root,clip.data.slice(1))));decodeWeaponMotion(clip,bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));

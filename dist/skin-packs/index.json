@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "compiledOn": "2026-10-19",
+  "compiledOn": "2026-10-20",
   "sourceStatus": "complete",
   "resourceStatus": "complete",
   "bannerFormat": "layered",
@@ -9,17 +9,17 @@
     300
   ],
   "counts": {
-    "collections": 9,
-    "themes": 13,
-    "audio": 109,
-    "killAudio": 66,
-    "successiveAudio": 13,
-    "banners": 37,
-    "layeredBanners": 37,
-    "bannerLayers": 89,
-    "fire": 30,
+    "collections": 15,
+    "themes": 20,
+    "audio": 160,
+    "killAudio": 103,
+    "successiveAudio": 20,
+    "banners": 44,
+    "layeredBanners": 40,
+    "bannerLayers": 92,
+    "fire": 37,
     "missingFire": 0,
-    "eligibleFireCombinations": 30
+    "eligibleFireCombinations": 37
   },
   "collections": [
     {
@@ -1039,6 +1039,303 @@
               "headshotOffset": [
                 0,
                 -25
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "id": "champions-2021",
+      "name": "Champions 2021",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal",
+        "melee"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": "/skin-packs/champions-2021/fire/default/vandal.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2021/kill/default/kill-1.ogg",
+            "2": "/skin-packs/champions-2021/kill/default/kill-2.ogg",
+            "3": "/skin-packs/champions-2021/kill/default/kill-3.ogg",
+            "4": "/skin-packs/champions-2021/kill/default/kill-4.ogg",
+            "5": "/skin-packs/champions-2021/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/champions-2021/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2021/banners/default/default.png",
+              "layers": {
+                "frame": "/skin-packs/layers/7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649.png",
+                "ring": "/skin-packs/layers/f611c1f254b8d2ede83a185a09ea0a1e3146d37adbcaee695d2ccfceca05894a.png",
+                "emblem": "/skin-packs/layers/70084dfc131091265be2bf733ab6c8e8056856cd8f814763c84e53c771cf94e5.png",
+                "pip": "/skin-packs/layers/0b659ca37d7bb1731b13e59a4f61c4843a21f367d999731fcf38022a3603c417.png"
+              },
+              "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
+              "pipRadius": 67,
+              "headshotOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "id": "champions-2022",
+      "name": "Champions 2022",
+      "tier": "Exclusive",
+      "weapons": [
+        "phantom",
+        "melee"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "phantom": "/skin-packs/champions-2022/fire/default/phantom.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2022/kill/default/kill-1.ogg",
+            "2": "/skin-packs/champions-2022/kill/default/kill-2.ogg",
+            "3": "/skin-packs/champions-2022/kill/default/kill-3.ogg",
+            "4": "/skin-packs/champions-2022/kill/default/kill-4.ogg",
+            "5": "/skin-packs/champions-2022/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/champions-2022/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2022/banners/default/default.png",
+              "layers": {
+                "frame": "/skin-packs/layers/7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649.png",
+                "ring": "/skin-packs/layers/f611c1f254b8d2ede83a185a09ea0a1e3146d37adbcaee695d2ccfceca05894a.png",
+                "emblem": "/skin-packs/layers/70084dfc131091265be2bf733ab6c8e8056856cd8f814763c84e53c771cf94e5.png",
+                "pip": "/skin-packs/layers/0b659ca37d7bb1731b13e59a4f61c4843a21f367d999731fcf38022a3603c417.png"
+              },
+              "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
+              "pipRadius": 67,
+              "headshotOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "id": "champions-2023",
+      "name": "Champions 2023",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal",
+        "melee"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": "/skin-packs/champions-2023/fire/default/vandal.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2023/kill/default/kill-1.ogg",
+            "2": "/skin-packs/champions-2023/kill/default/kill-2.ogg",
+            "3": "/skin-packs/champions-2023/kill/default/kill-3.ogg",
+            "4": "/skin-packs/champions-2023/kill/default/kill-4.ogg",
+            "5": "/skin-packs/champions-2023/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/champions-2023/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2023/banners/default/default.png",
+              "layers": {
+                "frame": "/skin-packs/layers/7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649.png",
+                "ring": "/skin-packs/layers/f611c1f254b8d2ede83a185a09ea0a1e3146d37adbcaee695d2ccfceca05894a.png",
+                "emblem": "/skin-packs/layers/70084dfc131091265be2bf733ab6c8e8056856cd8f814763c84e53c771cf94e5.png",
+                "pip": "/skin-packs/layers/0b659ca37d7bb1731b13e59a4f61c4843a21f367d999731fcf38022a3603c417.png"
+              },
+              "headshot": "/skin-packs/layers/1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea.png",
+              "pipRadius": 67,
+              "headshotOffset": [
+                0,
+                0
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "id": "champions-2024",
+      "name": "Champions 2024",
+      "tier": "Exclusive",
+      "weapons": [
+        "phantom",
+        "melee"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "phantom": "/skin-packs/champions-2024/fire/default/phantom.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2024/kill/default/kill-1.ogg",
+            "2": "/skin-packs/champions-2024/kill/default/kill-2.ogg",
+            "3": "/skin-packs/champions-2024/kill/default/kill-3.ogg",
+            "4": "/skin-packs/champions-2024/kill/default/kill-4.ogg",
+            "5": "/skin-packs/champions-2024/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/champions-2024/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2024/banners/default/default.png",
+              "frames": [
+                "/skin-packs/champions-2024/banners/default/default-kill-1.png",
+                "/skin-packs/champions-2024/banners/default/default-kill-2.png",
+                "/skin-packs/champions-2024/banners/default/default-kill-3.png",
+                "/skin-packs/champions-2024/banners/default/default-kill-4.png",
+                "/skin-packs/champions-2024/banners/default/default-kill-5.png",
+                "/skin-packs/champions-2024/banners/default/default-kill-6.png"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "id": "champions-2025",
+      "name": "Champions 2025",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal",
+        "melee"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": "/skin-packs/champions-2025/fire/default/vandal.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2025/kill/default/kill-1.ogg",
+            "2": "/skin-packs/champions-2025/kill/default/kill-2.ogg",
+            "3": "/skin-packs/champions-2025/kill/default/kill-3.ogg",
+            "4": "/skin-packs/champions-2025/kill/default/kill-4.ogg",
+            "5": "/skin-packs/champions-2025/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/champions-2025/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2025/banners/default/default.png",
+              "frames": [
+                "/skin-packs/champions-2025/banners/default/default-kill-1.png",
+                "/skin-packs/champions-2025/banners/default/default-kill-2.png",
+                "/skin-packs/champions-2025/banners/default/default-kill-3.png",
+                "/skin-packs/champions-2025/banners/default/default-kill-4.png",
+                "/skin-packs/champions-2025/banners/default/default-kill-5.png",
+                "/skin-packs/champions-2025/banners/default/default-kill-6.png"
+              ]
+            }
+          ],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "id": "champions-2026",
+      "name": "Champions 2026",
+      "tier": "Exclusive",
+      "weapons": [
+        "phantom",
+        "melee"
+      ],
+      "themes": [
+        {
+          "id": "attacking",
+          "label": "Attacking · Snake",
+          "fire": {
+            "phantom": "/skin-packs/champions-2026/fire/attacking/phantom.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2026/kill/attacking/kill-1.ogg",
+            "2": "/skin-packs/champions-2026/kill/attacking/kill-2.ogg",
+            "3": "/skin-packs/champions-2026/kill/attacking/kill-3.ogg",
+            "4": "/skin-packs/champions-2026/kill/attacking/kill-4.ogg",
+            "5": "/skin-packs/champions-2026/kill/attacking/kill-5.ogg",
+            "6": "/skin-packs/champions-2026/kill/attacking/kill-6.ogg"
+          },
+          "successive": "/skin-packs/champions-2026/kill/attacking/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2026/banners/attacking/default.png",
+              "frames": [
+                "/skin-packs/champions-2026/banners/attacking/default-kill-1.png",
+                "/skin-packs/champions-2026/banners/attacking/default-kill-2.png",
+                "/skin-packs/champions-2026/banners/attacking/default-kill-3.png",
+                "/skin-packs/champions-2026/banners/attacking/default-kill-4.png",
+                "/skin-packs/champions-2026/banners/attacking/default-kill-5.png",
+                "/skin-packs/champions-2026/banners/attacking/default-kill-6.png"
+              ]
+            }
+          ],
+          "missing": []
+        },
+        {
+          "id": "defending",
+          "label": "Defending · Dragon",
+          "fire": {
+            "phantom": "/skin-packs/champions-2026/fire/defending/phantom.ogg"
+          },
+          "kills": {
+            "1": "/skin-packs/champions-2026/kill/defending/kill-1.ogg",
+            "2": "/skin-packs/champions-2026/kill/defending/kill-2.ogg",
+            "3": "/skin-packs/champions-2026/kill/defending/kill-3.ogg",
+            "4": "/skin-packs/champions-2026/kill/defending/kill-4.ogg",
+            "5": "/skin-packs/champions-2026/kill/defending/kill-5.ogg",
+            "6": "/skin-packs/champions-2026/kill/defending/kill-6.ogg"
+          },
+          "successive": "/skin-packs/champions-2026/kill/defending/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/champions-2026/banners/defending/default.png",
+              "frames": [
+                "/skin-packs/champions-2026/banners/defending/default-kill-1.png",
+                "/skin-packs/champions-2026/banners/defending/default-kill-2.png",
+                "/skin-packs/champions-2026/banners/defending/default-kill-3.png",
+                "/skin-packs/champions-2026/banners/defending/default-kill-4.png",
+                "/skin-packs/champions-2026/banners/defending/default-kill-5.png",
+                "/skin-packs/champions-2026/banners/defending/default-kill-6.png"
               ]
             }
           ],

@@ -9,7 +9,8 @@ export function applyWeaponModelsPatch(modules){
   view=replaceOne(view,"return{'manifest':J,'blob':K,'gunTexture':N", "return{'stem':F,'appearance':await __aimLoadWeaponModel(F),'manifest':J,'blob':K,'gunTexture':N",'preload real models before native GPU prewarm');
   view=replaceOne(view,"function qn(J){const {manifest:P,blob:R}=J,", "function qn(J){let __aimAppearance=null;const {manifest:P,blob:R}=J,",'appearance ownership');
   view=replaceOne(view,"'setGun'(bf){if(!ay)return;const bg=bf==='ak47';ay['visible']=bg,af['visible']=!bg;}","'setGun'(bf){if(ay){const bg=bf==='ak47';ay['visible']=bg,af['visible']=!bg;}__aimAppearance?.setGun(bf);}",'skin and native model selection');
-  view=replaceOne(view,"const bx=aO(bf,bg?.['detained']===!0x0);", "__aimAppearance?.update(bf,bf.hidden===true||bk!==null||bh>0||bg?.detained===true);const bx=aO(bf,bg?.['detained']===!0x0);",'one native animation clock');
+  view=replaceOne(view,"const bx=aO(bf,bg?.['detained']===!0x0);", "__aimAppearance?.update(bf,bf.hidden===true||(J.stem!=='knife'&&bk!==null)||bh>0||bg?.detained===true);const bx=aO(bf,bg?.['detained']===!0x0);",'one native animation clock');
+  view=replaceOne(view,"aR=bh,a9['root']['updateMatrixWorld']", "__aimAppearance?.setVisible(ah['visible']),aR=bh,a9['root']['updateMatrixWorld']",'skin hand-socket visibility follows native abilities');
   view=replaceOne(view,"'measureMuzzle'(bf='vandal'){a0['updateMatrixWorld']", "'measureMuzzle'(bf='vandal'){const skin=__aimAppearance?.measureMuzzle(a1);if(skin)return skin;a0['updateMatrixWorld']",'skin muzzle measurement');
   view=replaceOne(view,"'muzzle':al,", "'muzzle':__aimAppearance?.muzzle??al,'skinBone':name=>__aimAppearance?.effectBone(name),",'skin particle attachment');
   view=replaceOne(view,"'fxLayer'(){", "'skinEffectsKey'(){return __aimAppearance?.key??null;},'fxLayer'(){",'active effects selection');

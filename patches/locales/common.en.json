@@ -1509,5 +1509,8 @@
   "离线版只在本机保存成绩，不支持账号、排行榜或上传分享。": "Offline mode saves results on this device. Accounts, leaderboards and uploading are unavailable.",
   "这个场景尚未保存在本机。": "This scene is not saved on this device.",
   "资源未保存在本机：": "Asset is not saved locally: ",
-  "切换语言前无法保存当前场景，请先导出场景后重试。": "The current scene could not be saved before switching languages. Export the scene and try again."
+  "切换语言前无法保存当前场景，请先导出场景后重试。": "The current scene could not be saved before switching languages. Export the scene and try again.",
+  "近战皮肤": "Melee Skin",
+  "切换近战武器后显示所选皮肤。": "The selected skin appears when you switch to melee.",
+  "使用原版近战模型。": "Use the default melee model."
 }

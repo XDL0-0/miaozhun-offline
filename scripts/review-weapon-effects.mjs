@@ -4,6 +4,9 @@ import './review-weapon-models.mjs';
 import fs from 'node:fs';
 const root=new URL('../',import.meta.url),file=name=>new URL(name,root);
 const index=JSON.parse(fs.readFileSync(file('dist/skin-packs/models/index.json')));
+const caseFiles=new Map();
+for(const [key,url]of Object.entries(index.models))if(!key.endsWith('/melee'))caseFiles.set(url,key);
+for(const [base,themes]of Object.entries(index.variants??{}))if(!base.endsWith('/melee'))for(const [theme,url]of Object.entries(themes))if(!caseFiles.has(url))caseFiles.set(url,base+'/'+theme);
 const source=fs.readFileSync(file('site/js/aQOfOAp-.js'),'utf8');
 const alias=source.slice(source.lastIndexOf('export{')).match(/\bDp as (\w+)\b/)[1];
 fs.writeFileSync(file('dist/__weapon-fx-review.html'),`<!doctype html><meta charset="utf-8"><title>离线开火特效检查</title>
@@ -14,13 +17,13 @@ import {${alias} as Renderer} from '/js/aQOfOAp-.js';
 import {l as load,c as create} from '/__weapon-view.mjs';
 import {choose} from '/__weapon-harness.mjs';
 import {weaponEffects} from '/__weapon-game.mjs';
-const cases=${JSON.stringify(Object.keys(index.models))},results=[],errors=[];
+const cases=${JSON.stringify([...caseFiles.values()])},results=[],errors=[];
 const renderer=new Renderer({antialias:true,preserveDrawingBuffer:true});renderer.setSize(1280,720,false);renderer.setClearColor(0x182431,1);
 const probe=document.createElement('canvas');probe.width=320;probe.height=180;const ctx=probe.getContext('2d',{willReadFrequently:true});
 const capture=()=>{ctx.drawImage(renderer.domElement,0,0,320,180);return ctx.getImageData(0,0,320,180).data;};
 try{
  for(const key of cases){
-  const [collection,gun]=key.split('/');choose(gun,collection);const model=create(await load(gun==='vandal'?'viewmodel':gun));model.setGun('vandal');model.setFovHorizontal(90);
+  const [collection,gun,theme]=key.split('/');choose(gun,collection,theme);const model=create(await load(gun==='vandal'?'viewmodel':gun));model.setGun('vandal');model.setFovHorizontal(90);
   const layer=model.fxLayer(),frames=[];const strip=document.createElement('canvas');strip.width=1280;strip.height=180;const stripCtx=strip.getContext('2d');
   for(const [scenario,zoomed,spread] of [['hip',false,.1],['hip-spread',false,5],['ads',true,.1],['ads-spread',true,5]]){
    const effects=weaponEffects({detail:15});await effects.prepare(gun,renderer,model);

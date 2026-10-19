@@ -5,7 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const themeLabels={default:'Default',base:'Base',watch:'Watch',renegade:'RENEGADE',raja:'RAJA',ignition:'Ignition'};
+const themeLabels={default:'Default',base:'Base',watch:'Watch',renegade:'RENEGADE',raja:'RAJA',ignition:'Ignition',attacking:'Attacking · Snake',defending:'Defending · Dragon'};
 const segment=/^[a-z0-9-]+$/;
 const sha256=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 
@@ -103,6 +103,7 @@ function validateReview(catalog,review){
       if(kind==='fire'&&!collection.weapons.includes(entry.weapon))throw new Error('Ineligible reviewed weapon: '+entry.weapon);
       if(kind==='audio'&&!(entry.role==='successive'&&entry.id==='successive'||entry.role==='kill'&&/^[1-6]$/.test(entry.id)))throw new Error('Invalid reviewed audio role/id');
       if(kind==='banners'&&!segment.test(entry.id))throw new Error('Unsafe banner identifier: '+entry.id);
+      if(kind==='banners'&&entry.frames!==undefined&&(!Array.isArray(entry.frames)||entry.frames.length<5||entry.frames.length>6))throw new Error('Invalid reviewed banner frames: '+entry.path);
       if(kind==='banners'&&entry.layers!==undefined){
         if(!entry.layers||typeof entry.layers!=='object'||Array.isArray(entry.layers)
           ||!['frame','ring','emblem','pip'].every(layer=>entry.layers[layer])
@@ -166,6 +167,7 @@ export function buildSkinPacks({root=projectRoot,destination}={}){
   for(const entries of [review.audio??[],review.banners??[],review.fire??[]])for(const entry of entries){
     reviewedSource(root,entry);
     for(const layer of Object.values(entry.layers??{}))reviewedSource(root,layer);
+    for(const frame of entry.frames??[])reviewedSource(root,frame);
   }
   fs.rmSync(destination,{recursive:true,force:true});
   fs.mkdirSync(destination,{recursive:true});
@@ -176,7 +178,7 @@ export function buildSkinPacks({root=projectRoot,destination}={}){
     themes:collection.themes.map(theme=>{
       counts.themes++;
       const result={id:theme,label:themeLabels[theme]??theme,fire:{},kills:{},successive:null,banners:[],missing:[]};
-      for(const weapon of collection.weapons){
+      for(const weapon of collection.weapons.filter(weapon=>weapon!=='melee')){
         counts.eligibleFireCombinations++;
         const entry=(review.fire??[]).find(e=>e.collection===collection.id&&e.theme===theme&&e.weapon===weapon);
         const url=entry?audioOutput(root,destination,entry,`${collection.id}/fire/${theme}/${weapon}.ogg`):null;
@@ -199,6 +201,10 @@ export function buildSkinPacks({root=projectRoot,destination}={}){
         const url=bannerOutput(root,destination,entry,`${collection.id}/banners/${theme}/${entry.id}.png`);
         if(url){
           const banner={id:entry.id,label:entry.label,url};
+          if(entry.frames){
+            banner.frames=entry.frames.map((frame,i)=>bannerOutput(root,destination,frame,`${collection.id}/banners/${theme}/${entry.id}-kill-${i+1}.png`));
+            if(!banner.frames.every(Boolean)){result.missing.push('banner-frames:'+entry.id);continue;}
+          }
           if(entry.layers){
             const layers=Object.fromEntries(Object.entries(entry.layers).map(([key,value])=>[key,bannerLayerOutput(root,destination,value)]));
             if(Object.values(layers).every(Boolean)){

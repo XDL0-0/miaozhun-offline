@@ -28,22 +28,23 @@
   "skinPacks": {
     "clientBridge": true,
     "resourceStatus": "complete",
-    "collections": 9,
-    "themes": 13,
-    "audio": 109,
-    "killAudio": 66,
-    "successiveAudio": 13,
-    "banners": 37,
-    "layeredBanners": 37,
-    "bannerLayers": 89,
-    "fire": 30,
+    "collections": 15,
+    "themes": 20,
+    "audio": 160,
+    "killAudio": 103,
+    "successiveAudio": 20,
+    "banners": 44,
+    "layeredBanners": 40,
+    "bannerLayers": 92,
+    "fire": 37,
     "missingFire": 0,
-    "eligibleFireCombinations": 30
+    "eligibleFireCombinations": 37
   },
   "weaponModels": {
-    "weapons": 14,
-    "collections": 9,
-    "assets": 348
+    "weapons": 26,
+    "collections": 15,
+    "variants": 4,
+    "assets": 627
   },
-  "created": "2026-10-19T22:14:46.642Z"
+  "created": "2026-10-19T22:55:26.575Z"
 }

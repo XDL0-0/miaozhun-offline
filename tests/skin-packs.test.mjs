@@ -43,7 +43,7 @@ test('all exclusive top-ten skins are represented with exact weapon coverage',()
   for(const weapon of ['vandal','phantom'])for(const x of catalog.ranking.top10[weapon].filter(x=>x.tier==='Exclusive')){
     assert.ok(grouped.get(x.name)?.includes(weapon),x.name+' / '+weapon);
   }
-  assert.equal(grouped.size,8);
+  assert.equal(catalog.collections.filter(c=>c.tier==='Exclusive'&&c.inTop10).length,8);
 });
 
 test('ORA requires independent fire per weapon and theme, previews and radial banner layers',()=>{
@@ -67,15 +67,26 @@ test('ORA requires independent fire per weapon and theme, previews and radial ba
 });
 
 test('review audit covers every catalog gunfire combination and all retained effects',()=>{
-  const packs=audit(),assets=packs.flatMap(pack=>pack.assets);
-  assert.equal(packs.length,9);
+  const all=audit(),packs=all.filter(pack=>!pack.id.startsWith('champions-')),assets=packs.flatMap(pack=>pack.assets);
+  assert.equal(all.length,catalog.collections.length);assert.equal(packs.length,9);
   assert.equal(assets.filter(asset=>asset.status==='present'&&['fire','kill','successive'].includes(asset.kind)).length,109);
   assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='fire').length,30);
   assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='banner').length,37);
   assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='banner-layer').length,185);
-  assert.deepEqual(packs.flatMap(pack=>pack.missing),[]);
-  assert.ok(packs.every(pack=>pack.sourceStatus==='complete'&&pack.complete));
+  assert.deepEqual(all.flatMap(pack=>pack.missing),[]);
+  assert.ok(all.every(pack=>pack.sourceStatus==='complete'&&pack.complete));
   assert.ok(assets.some(asset=>asset.kind==='kill'&&asset.id==='kill:6'&&asset.source.includes('/ayakashi/')));
+});
+
+test('all six annual Champions collections include their rifle and melee, with both 2026 factions',()=>{
+  const champions=catalog.collections.filter(c=>c.id.startsWith('champions-'));
+  assert.deepEqual(champions.map(c=>c.id),[2021,2022,2023,2024,2025,2026].map(y=>'champions-'+y));
+  for(const [i,c]of champions.entries()){
+    assert.deepEqual(c.weapons,[i%2?'phantom':'vandal','melee']);
+    assert.match(c.meleeName,/Karambit|Butterfly|Kunai|Blade|Fan/);
+    assert.ok(requiredAssets(c).filter(a=>a.kind==='fire').every(a=>a.weapon!=='melee'));
+  }
+  assert.deepEqual(champions.at(-1).themes,['attacking','defending']);
 });
 
 test('audit distinguishes missing review, absent bytes, and changed bytes without accepting local lookalikes',()=>{

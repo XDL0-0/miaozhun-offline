@@ -25,6 +25,14 @@ test('dedicated LED brightness and plastic opacity do not inherit ordinary metal
   assert.equal(plastic.metalness,0);assert.ok(plastic.shader.plastic.map);assert.equal(plastic.transparent,true);
 });
 
+test('Champions source lookup and cube projections cannot turn into white diffuse proxy planes',()=>{
+  const texture=r=>r.ObjectPath;
+  const infinity=weaponBodyMaterial('Infinity_RedDot',{Textures:{PM_Diffuse:{ObjectName:"TextureCube'Environment'",ObjectPath:'/Game/VFX/Textures/cubemap/Environment.0'}},BlendMode:2},texture);
+  assert.equal(infinity.map,null);assert.equal(infinity.hidden,true);assert.match(infinity.source.omitted,/environment-cube/);
+  const jelly=weaponBodyMaterial('champions_jellyTest_MI',{Textures:{Albedo:{ObjectPath:'generic-white'},Liquid:{ObjectPath:'original-liquid'},'Liquid Graident':{ObjectPath:'original-gradient'}},Colors:{'Glass Tint':{R:.17,G:0,B:.53}},Scalars:{'Emissive Strength':2.2,'Liquid Speed X':.02,'Liquid Speed Y':.01},BlendMode:0},texture);
+  assert.equal(jelly.map,null);assert.equal(jelly.shader.flow.map,'original-liquid');assert.equal(jelly.shader.flow.gradient,'original-gradient');assert.deepEqual(jelly.color,[.17,0,.53]);assert.ok(jelly.shader.flow.intensity<=.6);
+});
+
 test('surface packing preserves AO, roughness, metalness and specular as independent channels',()=>{
   const ff=process.env.FFMPEG_PATH??'ffmpeg',directory=fs.mkdtempSync(path.join(os.tmpdir(),'aim-surface-test-'));
   const a=path.join(directory,'mrs.rgba'),b=path.join(directory,'aem.rgba');
