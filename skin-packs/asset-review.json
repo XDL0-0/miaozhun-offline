@@ -1,0 +1,1877 @@
+{
+  "schemaVersion": 1,
+  "compiledOn": "2026-10-19",
+  "review": {
+    "audio": "Every stored MP3 decoded with ffmpeg -map 0:a:0 -vn. Sources identify kill/inspect/finisher clips; none is an authenticated standalone gunfire sample.",
+    "banners": "Reviewed actual RGBA pixels in banners-contact-sheet.jpg. These are transparent composite icons with frames, emblems and ornaments already combined; independent animation/headshot layers were not supplied.",
+    "provenance": "Local wiki download manifest paths and hashes verified against bytes. All 79 tracked kill clips match decoded source PCM; 76 pairs are also byte-identical.",
+    "scope": "30 catalog weapon/theme fire combinations remain missing. Do not relabel inspection or finisher audio as gunfire.",
+    "evidence": [
+      "skin-packs/audit/banners-contact-sheet.jpg",
+      "skin-packs/audit/catalog-weapons-contact-sheet.jpg",
+      "skin-packs/audit/animated-content-contact-sheet.jpg",
+      "skin-packs/audit/source-media-audit.json"
+    ]
+  },
+  "banners": [
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/ayakashi/banners/default/default.png",
+      "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7",
+      "width": 468,
+      "height": 469,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner.png?1e0b5",
+        "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "id": "blue",
+      "label": "Blue",
+      "path": "skin-packs/media/ayakashi/banners/default/blue.png",
+      "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3",
+      "width": 468,
+      "height": 469,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Blue.png?f2a15",
+        "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "id": "pink",
+      "label": "Pink",
+      "path": "skin-packs/media/ayakashi/banners/default/pink.png",
+      "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13",
+      "width": 468,
+      "height": 469,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Pink.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Pink.png?089ec",
+        "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "id": "red",
+      "label": "Red",
+      "path": "skin-packs/media/ayakashi/banners/default/red.png",
+      "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d",
+      "width": 468,
+      "height": 469,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Banner_Red.png",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Red.png?0c837",
+        "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/kuronami/banners/default/default.png",
+      "sha256": "c6744c2e39dccd1644cdbdd97642adafc43769b589a9a36d6a6830253f20c6df",
+      "width": 880,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner.png?d37f8",
+        "sha256": "c6744c2e39dccd1644cdbdd97642adafc43769b589a9a36d6a6830253f20c6df"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "id": "black",
+      "label": "Black",
+      "path": "skin-packs/media/kuronami/banners/default/black.png",
+      "sha256": "e394e9394e26d87c2aceedbedb2629dada8a874ae67b762ee89e81dd4ec40788",
+      "width": 880,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_Banner_Black.png",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner_Black.png?426ca",
+        "sha256": "e394e9394e26d87c2aceedbedb2629dada8a874ae67b762ee89e81dd4ec40788"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "id": "purple",
+      "label": "Purple",
+      "path": "skin-packs/media/kuronami/banners/default/purple.png",
+      "sha256": "c3f1304ff0fd2393e3a45b43eff3736ebbcecde9e2bcf21d572216f5a93cf33f",
+      "width": 880,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_Banner_Purple.png",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner_Purple.png?1c34e",
+        "sha256": "c3f1304ff0fd2393e3a45b43eff3736ebbcecde9e2bcf21d572216f5a93cf33f"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "id": "white",
+      "label": "White",
+      "path": "skin-packs/media/kuronami/banners/default/white.png",
+      "sha256": "e662695bd4d22c3e51f9c2497e3a4826e2ee1748c922c57742ef5321dc1f86e7",
+      "width": 880,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_Banner_White.png",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner_White.png?aad6a",
+        "sha256": "e662695bd4d22c3e51f9c2497e3a4826e2ee1748c922c57742ef5321dc1f86e7"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/mystbloom/banners/default/default.png",
+      "sha256": "e15519c149f0035a6c26f443b9642609a65adf1afe0613dc5ee535d8aaa5c2da",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner.png?483bf",
+        "sha256": "e15519c149f0035a6c26f443b9642609a65adf1afe0613dc5ee535d8aaa5c2da"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "id": "blue",
+      "label": "Blue",
+      "path": "skin-packs/media/mystbloom/banners/default/blue.png",
+      "sha256": "aa460c69f870a7f77297d8b3eb4fd62aa4377918d515d20154cad39858a3a58f",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner_Blue.png?1a331",
+        "sha256": "aa460c69f870a7f77297d8b3eb4fd62aa4377918d515d20154cad39858a3a58f"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "id": "orange",
+      "label": "Orange",
+      "path": "skin-packs/media/mystbloom/banners/default/orange.png",
+      "sha256": "d4f411090bd5bb1448222c7c19cf450793f150bf98660a59eb433941e683a2f0",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_Banner_Orange.png",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner_Orange.png?bb020",
+        "sha256": "d4f411090bd5bb1448222c7c19cf450793f150bf98660a59eb433941e683a2f0"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "id": "purple",
+      "label": "Purple",
+      "path": "skin-packs/media/mystbloom/banners/default/purple.png",
+      "sha256": "ffcfb1e119cfccb526730e670fc032b5315d1933d5adb0fe11c0c29d37bd8842",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_Banner_Purple.png",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner_Purple.png?7f1b6",
+        "sha256": "ffcfb1e119cfccb526730e670fc032b5315d1933d5adb0fe11c0c29d37bd8842"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/nocturnum/banners/default/default.png",
+      "sha256": "d5a34bf657257f9bd61784e114f2bef4b6429e2814b11911e5cb66d8bf79afce",
+      "width": 212,
+      "height": 212,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner.png?03bf0",
+        "sha256": "d5a34bf657257f9bd61784e114f2bef4b6429e2814b11911e5cb66d8bf79afce"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "id": "black",
+      "label": "Black",
+      "path": "skin-packs/media/nocturnum/banners/default/black.png",
+      "sha256": "4fd90afaa07f5ba45a7bebded8c46f0809af562825d0c6f80b363b69890bd49d",
+      "width": 212,
+      "height": 212,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_Banner_Black.png",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner_Black.png?c48ce",
+        "sha256": "4fd90afaa07f5ba45a7bebded8c46f0809af562825d0c6f80b363b69890bd49d"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "id": "blue",
+      "label": "Blue",
+      "path": "skin-packs/media/nocturnum/banners/default/blue.png",
+      "sha256": "12ff42b91b727e14ec0905443d61a8d4b1d3fb9a5eb46607b1eb407896369d52",
+      "width": 212,
+      "height": 212,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner_Blue.png?b1f2d",
+        "sha256": "12ff42b91b727e14ec0905443d61a8d4b1d3fb9a5eb46607b1eb407896369d52"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "id": "yellow",
+      "label": "Yellow",
+      "path": "skin-packs/media/nocturnum/banners/default/yellow.png",
+      "sha256": "133340464c216a067966c55f774cf4e0a5550bd78926ee38cc5f1875fdb86e53",
+      "width": 212,
+      "height": 212,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_Banner_Yellow.png",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner_Yellow.png?cbc75",
+        "sha256": "133340464c216a067966c55f774cf4e0a5550bd78926ee38cc5f1875fdb86e53"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/ora-by-onetap/banners/base/default.png",
+      "sha256": "b1b6bd01c7bf0d70fa9fe0d0b5f15657f041261029b295a4166e25f0561ab80a",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner.png?ad06f",
+        "sha256": "b1b6bd01c7bf0d70fa9fe0d0b5f15657f041261029b295a4166e25f0561ab80a"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/ora-by-onetap/banners/ignition/default.png",
+      "sha256": "096727658f29f010855c095b3b59d7c0034a75d8eedd42d13a4203636e3127c7",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Banner_Ignition.png",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_Ignition.png?663f2",
+        "sha256": "096727658f29f010855c095b3b59d7c0034a75d8eedd42d13a4203636e3127c7"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/ora-by-onetap/banners/raja/default.png",
+      "sha256": "01c4602005c6dcdd3d243ab204d79912dde0245b75623468a25a5f47b24d6e04",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Banner_RAJA.png",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_RAJA.png?d7578",
+        "sha256": "01c4602005c6dcdd3d243ab204d79912dde0245b75623468a25a5f47b24d6e04"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/ora-by-onetap/banners/renegade/default.png",
+      "sha256": "cad6e3d8efaf2365dd1995b1b31391de4f259a670abd8c420ed97494125f6121",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Banner_RENEGADE.png",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_RENEGADE.png?7d5c8",
+        "sha256": "cad6e3d8efaf2365dd1995b1b31391de4f259a670abd8c420ed97494125f6121"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/ora-by-onetap/banners/watch/default.png",
+      "sha256": "9d02b857af4ea204c4ef83ead93a833866e2bcf9e00cbb0dd02c33b838045209",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Banner_Watch.png",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_Watch.png?bfc07",
+        "sha256": "9d02b857af4ea204c4ef83ead93a833866e2bcf9e00cbb0dd02c33b838045209"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/prelude-to-chaos/banners/default/default.png",
+      "sha256": "df242b2c74065b73d9c201ef012e2de8274c7be3213543207ccdfc34a8eda594",
+      "width": 280,
+      "height": 280,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner.png?2b426",
+        "sha256": "df242b2c74065b73d9c201ef012e2de8274c7be3213543207ccdfc34a8eda594"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "id": "blue",
+      "label": "Blue",
+      "path": "skin-packs/media/prelude-to-chaos/banners/default/blue.png",
+      "sha256": "9a599a76fa953f5dca1023ec60bc08e96cdcbd94adf8919c1b691ad712720d6c",
+      "width": 438,
+      "height": 437,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner_Blue.png?d504a",
+        "sha256": "9a599a76fa953f5dca1023ec60bc08e96cdcbd94adf8919c1b691ad712720d6c"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "id": "green",
+      "label": "Green",
+      "path": "skin-packs/media/prelude-to-chaos/banners/default/green.png",
+      "sha256": "6c8aabf2056f7b9a4ebda991b6140cf2458fc265debb00b96ecf0a9b49778d74",
+      "width": 438,
+      "height": 437,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_Banner_Green.png",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner_Green.png?917b7",
+        "sha256": "6c8aabf2056f7b9a4ebda991b6140cf2458fc265debb00b96ecf0a9b49778d74"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "id": "white",
+      "label": "White",
+      "path": "skin-packs/media/prelude-to-chaos/banners/default/white.png",
+      "sha256": "c51d1d1d12e0be7659f9a41f8ad893ea563b9cceccaebf339bfbd7702c7f336d",
+      "width": 438,
+      "height": 437,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_Banner_White.png",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner_White.png?81ffe",
+        "sha256": "c51d1d1d12e0be7659f9a41f8ad893ea563b9cceccaebf339bfbd7702c7f336d"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/primordium/banners/default/default.png",
+      "sha256": "421af5f07c779dcb2676d3264b16febf1c28f6ebd7abc6afdd10d0ce7cd962ef",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner.png?2cea0",
+        "sha256": "421af5f07c779dcb2676d3264b16febf1c28f6ebd7abc6afdd10d0ce7cd962ef"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "id": "cobalt",
+      "label": "Cobalt",
+      "path": "skin-packs/media/primordium/banners/default/cobalt.png",
+      "sha256": "f3868fd82899bfc891e19539a6aa07a76e3aceb8d08685c546fabbf7ebdf1267",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_Banner_Cobalt.png",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner_Cobalt.png?1adb9",
+        "sha256": "f3868fd82899bfc891e19539a6aa07a76e3aceb8d08685c546fabbf7ebdf1267"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "id": "gold",
+      "label": "Gold",
+      "path": "skin-packs/media/primordium/banners/default/gold.png",
+      "sha256": "84235fb3c2dacd60a7c288afe4e8d4a0a29c029cf77e98b65c91efd528e18db1",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_Banner_Gold.png",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner_Gold.png?52eae",
+        "sha256": "84235fb3c2dacd60a7c288afe4e8d4a0a29c029cf77e98b65c91efd528e18db1"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "id": "venom",
+      "label": "Venom",
+      "path": "skin-packs/media/primordium/banners/default/venom.png",
+      "sha256": "c6e3fe7026af19c0709db31526829916cb9b3d73132c98df93ce0bbc9503a387",
+      "width": 962,
+      "height": 963,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_Banner_Venom.png",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner_Venom.png?9cc13",
+        "sha256": "c6e3fe7026af19c0709db31526829916cb9b3d73132c98df93ce0bbc9503a387"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/rgx-11z-pro/banners/default/default.png",
+      "sha256": "1627ddcf8ab1602ed3e8818ee5a9c686781c246e3aa5176048b4e28d147418b7",
+      "width": 200,
+      "height": 256,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner.png?17354",
+        "sha256": "1627ddcf8ab1602ed3e8818ee5a9c686781c246e3aa5176048b4e28d147418b7"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "id": "blue",
+      "label": "Blue",
+      "path": "skin-packs/media/rgx-11z-pro/banners/default/blue.png",
+      "sha256": "c06f9ff9f485ada44373f6e895e67c7ccc3f62972ad3c7b12b2ff2594bbe75a2",
+      "width": 688,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner_Blue.png?010e7",
+        "sha256": "c06f9ff9f485ada44373f6e895e67c7ccc3f62972ad3c7b12b2ff2594bbe75a2"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "id": "red",
+      "label": "Red",
+      "path": "skin-packs/media/rgx-11z-pro/banners/default/red.png",
+      "sha256": "b2f8f2f66ae940acf019c57d7865eff3389d1fe014ff6d817db129cde5a55914",
+      "width": 688,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_Banner_Red.png",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner_Red.png?771b8",
+        "sha256": "b2f8f2f66ae940acf019c57d7865eff3389d1fe014ff6d817db129cde5a55914"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "id": "yellow",
+      "label": "Yellow",
+      "path": "skin-packs/media/rgx-11z-pro/banners/default/yellow.png",
+      "sha256": "db711db4f91af6532188cfa35e93c42a5665cf74e668b5e54f78e68a95aed5e0",
+      "width": 688,
+      "height": 880,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_Banner_Yellow.png",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner_Yellow.png?522b9",
+        "sha256": "db711db4f91af6532188cfa35e93c42a5665cf74e668b5e54f78e68a95aed5e0"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "id": "default",
+      "label": "Default",
+      "path": "skin-packs/media/rogue/banners/default/default.png",
+      "sha256": "70ac57cadea958c92cfbf6a8777b894641c53f00407f80907944ed11b399fdd9",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_Banner.png",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner.png?8c88e",
+        "sha256": "70ac57cadea958c92cfbf6a8777b894641c53f00407f80907944ed11b399fdd9"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "id": "blue",
+      "label": "Blue",
+      "path": "skin-packs/media/rogue/banners/default/blue.png",
+      "sha256": "600d99ad825c039593f2c51d8364eca36b7d2bc40961b62368d99f09d4d6a197",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_Banner_Blue.png",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner_Blue.png?1c344",
+        "sha256": "600d99ad825c039593f2c51d8364eca36b7d2bc40961b62368d99f09d4d6a197"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "id": "green",
+      "label": "Green",
+      "path": "skin-packs/media/rogue/banners/default/green.png",
+      "sha256": "069eebcefca2be468a429d8581625ef8413d68292ff91a9fe09120e795e7dc19",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_Banner_Green.png",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner_Green.png?1c344",
+        "sha256": "069eebcefca2be468a429d8581625ef8413d68292ff91a9fe09120e795e7dc19"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "id": "red",
+      "label": "Red",
+      "path": "skin-packs/media/rogue/banners/default/red.png",
+      "sha256": "5950114abf584b94fccdb115c6b5a450d98dbfe2214b9281b1d249320264895c",
+      "width": 300,
+      "height": 300,
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_Banner_Red.png",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner_Red.png?1c344",
+        "sha256": "5950114abf584b94fccdb115c6b5a450d98dbfe2214b9281b1d249320264895c"
+      }
+    }
+  ],
+  "audio": [
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/ayakashi/kill/default/kill-1.mp3",
+      "sha256": "6515fcc0e93f5fa397380189da3a0af082fc533fe9bbe378b2b020f6d7205e2f",
+      "duration": 2.088,
+      "decodedAudioMD5": "da7ed49b9c118fbdc5468f3d712b9fc4",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_1.mp3?a8a78",
+        "sha256": "6515fcc0e93f5fa397380189da3a0af082fc533fe9bbe378b2b020f6d7205e2f"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/ayakashi/kill/default/kill-2.mp3",
+      "sha256": "8c89f2390e902bbdde62ca52847c136063de0157de721c53761e952835d506ec",
+      "duration": 2.256,
+      "decodedAudioMD5": "3030b5f20d273c7663bf5a63bcd46e8f",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_2.mp3?4858e",
+        "sha256": "8c89f2390e902bbdde62ca52847c136063de0157de721c53761e952835d506ec"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/ayakashi/kill/default/kill-3.mp3",
+      "sha256": "c7870933d92f07075fcad6fea4531bee3ce892733a860c616b5556b4cd2616f4",
+      "duration": 2.232,
+      "decodedAudioMD5": "9d7d08262303acac1bdd075dda0ed714",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_3.mp3?dc395",
+        "sha256": "c7870933d92f07075fcad6fea4531bee3ce892733a860c616b5556b4cd2616f4"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/ayakashi/kill/default/kill-4.mp3",
+      "sha256": "eb74882857189f0f364f36e5777f8d3e4f04ba25051933f4f375040f44374e76",
+      "duration": 2.088,
+      "decodedAudioMD5": "02176704c626dfe8f8bb113d8498ae72",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_4.mp3?564f8",
+        "sha256": "eb74882857189f0f364f36e5777f8d3e4f04ba25051933f4f375040f44374e76"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/ayakashi/kill/default/kill-5.mp3",
+      "sha256": "37bcd1d2145e782a97fbf1f470387bbe6229689f19971f73348f867f4c23201d",
+      "duration": 6.912,
+      "decodedAudioMD5": "dae5a0ce5d926df7f680f09a1440565f",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_5.mp3?908d2",
+        "sha256": "37bcd1d2145e782a97fbf1f470387bbe6229689f19971f73348f867f4c23201d"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "kill",
+      "id": "6",
+      "path": "skin-packs/media/ayakashi/kill/default/kill-6.mp3",
+      "sha256": "61dd803759257f4f5c84f48e0280b9a9f42ebf9afeb1c2d7402e5df625cea02c",
+      "duration": 5.304,
+      "decodedAudioMD5": "710d6c40118ffde603cb20561d4c2fc6",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_6.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_6.mp3?c4c63",
+        "sha256": "61dd803759257f4f5c84f48e0280b9a9f42ebf9afeb1c2d7402e5df625cea02c"
+      }
+    },
+    {
+      "collection": "ayakashi",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/ayakashi/kill/default/successive.mp3",
+      "sha256": "0b545443ccd34cdeabd241a624896bff5ef7efc78ee4d1737ff54ceeda82447a",
+      "duration": 20.328,
+      "decodedAudioMD5": "eae34f34c4a9121f97b73d9e745bf58e",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ayakashi/Ayakashi_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Successive.mp3?e39b4",
+        "sha256": "0b545443ccd34cdeabd241a624896bff5ef7efc78ee4d1737ff54ceeda82447a"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/kuronami/kill/default/kill-1.mp3",
+      "sha256": "54e0d98bb3e75473ed6055499a36b63dc1393a149f4222a0e80e69b2e1987a3e",
+      "duration": 3.12,
+      "decodedAudioMD5": "f55760b19cd6d798e95a829de623c8de",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_1.mp3?7e9be",
+        "sha256": "54e0d98bb3e75473ed6055499a36b63dc1393a149f4222a0e80e69b2e1987a3e"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/kuronami/kill/default/kill-2.mp3",
+      "sha256": "d71023c45f9006e7d0cc459aa48f1b3ca34175b6d4381fb7273254f6a18d92b6",
+      "duration": 3.12,
+      "decodedAudioMD5": "8ea36f07cb8c036a9e058f0052984e05",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_2.mp3?bd202",
+        "sha256": "d71023c45f9006e7d0cc459aa48f1b3ca34175b6d4381fb7273254f6a18d92b6"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/kuronami/kill/default/kill-3.mp3",
+      "sha256": "52317fe1abf113ec44d80dbbc5f89a1e31c609e2ece9e808a4a1a464dd53d358",
+      "duration": 3.12,
+      "decodedAudioMD5": "81e6f736859bd853cb5bb7aa6dec7922",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_3.mp3?0e365",
+        "sha256": "52317fe1abf113ec44d80dbbc5f89a1e31c609e2ece9e808a4a1a464dd53d358"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/kuronami/kill/default/kill-4.mp3",
+      "sha256": "fe0f40a69eae407d96e0fd38299911b5058527a469435d6b3b3567ceee215015",
+      "duration": 3.12,
+      "decodedAudioMD5": "1bb83c2b2997d7e9583653f905ba6128",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_4.mp3?25429",
+        "sha256": "fe0f40a69eae407d96e0fd38299911b5058527a469435d6b3b3567ceee215015"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/kuronami/kill/default/kill-5.mp3",
+      "sha256": "20ff468c52288fecf78061372d7e77535bace2231f0579a455798ee7f97316be",
+      "duration": 6.192,
+      "decodedAudioMD5": "f0f8332589f2ba6e76a5c521ae85e022",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_5.mp3?9ac5f",
+        "sha256": "20ff468c52288fecf78061372d7e77535bace2231f0579a455798ee7f97316be"
+      }
+    },
+    {
+      "collection": "kuronami",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/kuronami/kill/default/successive.mp3",
+      "sha256": "70bdccc24456c3162367ed7caeb62ef37fb9f9e4fc39db4820c16d348d5d15b7",
+      "duration": 15.528,
+      "decodedAudioMD5": "939e94516c4d7db385ae0b074a995a52",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/kuronami/Kuronami_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Successive.mp3?a8bb7",
+        "sha256": "6929ebbdfa8368016e48b42e2d653c023e5374226b1b202f882060e2862988f4"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/mystbloom/kill/default/kill-1.mp3",
+      "sha256": "1c8a59ad5421392181ed18a7bd43d47785bb3092f984fc850a810942c2717585",
+      "duration": 3.24,
+      "decodedAudioMD5": "b61052d6b5709a707412a7ace8a1f36b",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_1.mp3?de93e",
+        "sha256": "1c8a59ad5421392181ed18a7bd43d47785bb3092f984fc850a810942c2717585"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/mystbloom/kill/default/kill-2.mp3",
+      "sha256": "8d6db1e19e8e4131b6d9a18fa3033688291af14351d7492c80f1611d53bb8685",
+      "duration": 3.24,
+      "decodedAudioMD5": "10169b6f6c25e26ec1cf6e1a8db92598",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_2.mp3?cae48",
+        "sha256": "8d6db1e19e8e4131b6d9a18fa3033688291af14351d7492c80f1611d53bb8685"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/mystbloom/kill/default/kill-3.mp3",
+      "sha256": "93c8a8e5c916af697a6e1154471f27fad5143e872f20a6d7f3f789ed5a419742",
+      "duration": 3.24,
+      "decodedAudioMD5": "64977fc0a53eb55cc5e509c2296ffcc6",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_3.mp3?4573c",
+        "sha256": "93c8a8e5c916af697a6e1154471f27fad5143e872f20a6d7f3f789ed5a419742"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/mystbloom/kill/default/kill-4.mp3",
+      "sha256": "77e616c10dd8755b109c27d1cb62fc587bb89426fbae7a6857f22f9dbf06bc70",
+      "duration": 3.168,
+      "decodedAudioMD5": "f96e3d4d18e6f777176bdb420ca12b3e",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_4.mp3?62b06",
+        "sha256": "77e616c10dd8755b109c27d1cb62fc587bb89426fbae7a6857f22f9dbf06bc70"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/mystbloom/kill/default/kill-5.mp3",
+      "sha256": "e6415c736e6f374095b53983c0bb7cbd6e535022e47dcd90f7206815400a632a",
+      "duration": 6.24,
+      "decodedAudioMD5": "2e1bc8c478654a6999d8d3a22297e462",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_5.mp3?97d30",
+        "sha256": "e6415c736e6f374095b53983c0bb7cbd6e535022e47dcd90f7206815400a632a"
+      }
+    },
+    {
+      "collection": "mystbloom",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/mystbloom/kill/default/successive.mp3",
+      "sha256": "e1f3a08b9322fe3a9651710b6b0ce326b00d65db8e92455ba4fc3afb73b3db0c",
+      "duration": 14.232,
+      "decodedAudioMD5": "fd06ed228114fde41555143bba81175b",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/mystbloom/Mystbloom_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Successive.mp3?05d3b",
+        "sha256": "b36438942d5c27c775c10593ccc2b1ce0cb440f2d4f236d5b68ea8e074e33d47"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/nocturnum/kill/default/kill-1.mp3",
+      "sha256": "37c9bdb86104ac99e57ff340a53a698963f8a177b72c442ae2409e04442d2840",
+      "duration": 3.108571,
+      "decodedAudioMD5": "87d2237562564f8257335ec75329c730",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_1.mp3?718ec",
+        "sha256": "37c9bdb86104ac99e57ff340a53a698963f8a177b72c442ae2409e04442d2840"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/nocturnum/kill/default/kill-2.mp3",
+      "sha256": "6f20c28713342aa24c3692b65c62be7fe593f570a5d06171d77b9d823536ca23",
+      "duration": 3.108571,
+      "decodedAudioMD5": "a9ba35298aeb8fd747a2eaaa1d2428c8",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_2.mp3?f7385",
+        "sha256": "6f20c28713342aa24c3692b65c62be7fe593f570a5d06171d77b9d823536ca23"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/nocturnum/kill/default/kill-3.mp3",
+      "sha256": "3eb6e1745de2f353af0c8d96b72a549e30f021f0bb5b4df2580a97366e3c2eb4",
+      "duration": 3.108571,
+      "decodedAudioMD5": "e339433c0c09e23e46630c6141a61131",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_3.mp3?68a85",
+        "sha256": "3eb6e1745de2f353af0c8d96b72a549e30f021f0bb5b4df2580a97366e3c2eb4"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/nocturnum/kill/default/kill-4.mp3",
+      "sha256": "9854e3ccff1fa79a94ec6e8bcbc8c45a9c21946e87dc425e6781bb6088470480",
+      "duration": 3.108571,
+      "decodedAudioMD5": "36875309bcb0469ea1d900149673eadd",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_4.mp3?13c5c",
+        "sha256": "9854e3ccff1fa79a94ec6e8bcbc8c45a9c21946e87dc425e6781bb6088470480"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/nocturnum/kill/default/kill-5.mp3",
+      "sha256": "d4305110a125912ce0a9fcaf3879af794b5d16d3506e4516c8cfe7ce09923069",
+      "duration": 6.19102,
+      "decodedAudioMD5": "01aad90f6b764dc60b6180b3d1005ea5",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_5.mp3?a49eb",
+        "sha256": "d4305110a125912ce0a9fcaf3879af794b5d16d3506e4516c8cfe7ce09923069"
+      }
+    },
+    {
+      "collection": "nocturnum",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/nocturnum/kill/default/successive.mp3",
+      "sha256": "32547aaa0ccf13cd5c938564737fdd85a96ae6834dcb24fa249a0ff41c862678",
+      "duration": 14.132245,
+      "decodedAudioMD5": "cbba8a78e679eb6a0b03a1e5af431118",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/nocturnum/Nocturnum_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Successive.mp3?7776e",
+        "sha256": "5c6ccc8d1dfe864444f6ae3fff4ac02f4b7c5e0087133507bb5dc6adf5ac5075"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/ora-by-onetap/kill/base/kill-1.mp3",
+      "sha256": "c629057898e9905c2554a856440ae1f4e1ef96e1fc1d89ff79f85d1deca85180",
+      "duration": 3.108571,
+      "decodedAudioMD5": "90cabed8030536a8d94687e12b9eb923",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_1.mp3?d32c8",
+        "sha256": "c629057898e9905c2554a856440ae1f4e1ef96e1fc1d89ff79f85d1deca85180"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/ora-by-onetap/kill/base/kill-2.mp3",
+      "sha256": "5c6355dc982760b318c553585ff73a944b439c4734c7efa948bcb81e59187789",
+      "duration": 3.108571,
+      "decodedAudioMD5": "09fe5abbce2dd395acb1c616af32f553",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_2.mp3?23360",
+        "sha256": "5c6355dc982760b318c553585ff73a944b439c4734c7efa948bcb81e59187789"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/ora-by-onetap/kill/base/kill-3.mp3",
+      "sha256": "497491ab5c65e46dfe0dbae476deeb1aa96445581db8fc4dbcd4cda645adec28",
+      "duration": 3.108571,
+      "decodedAudioMD5": "9186a342cf59c8a96efc9cddb9550561",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_3.mp3?3ca54",
+        "sha256": "497491ab5c65e46dfe0dbae476deeb1aa96445581db8fc4dbcd4cda645adec28"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/ora-by-onetap/kill/base/kill-4.mp3",
+      "sha256": "f0a60caca9449eaa7dbdc770ea7b34f690df1e622f57afb077c4e6867788549e",
+      "duration": 3.108571,
+      "decodedAudioMD5": "9489c04dd9c39606679296487352cf8a",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_4.mp3?41275",
+        "sha256": "f0a60caca9449eaa7dbdc770ea7b34f690df1e622f57afb077c4e6867788549e"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/ora-by-onetap/kill/base/kill-5.mp3",
+      "sha256": "df79b1782463c07ac98b279cd757a45fdd0847df9cd4e38a7157b4746d7d00b1",
+      "duration": 6.034286,
+      "decodedAudioMD5": "0c8bbc835ccf1d3c6acb116076592615",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_5.mp3?ef5b7",
+        "sha256": "df79b1782463c07ac98b279cd757a45fdd0847df9cd4e38a7157b4746d7d00b1"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "base",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/ora-by-onetap/kill/base/successive.mp3",
+      "sha256": "87962470cc671cf19dbb0451efdba994ec9a9a75d9047436f4f86bda8b17930b",
+      "duration": 14.027755,
+      "decodedAudioMD5": "ee5d502dc4f2848c033d64f73be076d0",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Successive.mp3?1b84b",
+        "sha256": "87962470cc671cf19dbb0451efdba994ec9a9a75d9047436f4f86bda8b17930b"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/ora-by-onetap/kill/ignition/kill-1.mp3",
+      "sha256": "69d07fda87e2fbd16c473c4aa44b32b925198b9c7db2307e375ed0fc9bf71c80",
+      "duration": 3.108571,
+      "decodedAudioMD5": "6ce612dd9c76550f640fe845e19c9690",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_1_Ignition.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_1_Ignition.mp3?42add",
+        "sha256": "69d07fda87e2fbd16c473c4aa44b32b925198b9c7db2307e375ed0fc9bf71c80"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/ora-by-onetap/kill/ignition/kill-2.mp3",
+      "sha256": "162aa694f15848583e90cede1b558df8da1371a6a0f00873dd4ac19bef8887e4",
+      "duration": 3.108571,
+      "decodedAudioMD5": "ba4c869c749cf7edccce1a2106a3c5ba",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_2_Ignition.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_2_Ignition.mp3?b27f8",
+        "sha256": "162aa694f15848583e90cede1b558df8da1371a6a0f00873dd4ac19bef8887e4"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/ora-by-onetap/kill/ignition/kill-3.mp3",
+      "sha256": "589bb8a494b86d9df8b6e17825768974f10740a6c6dcbf022bf2befcc2c73bba",
+      "duration": 3.108571,
+      "decodedAudioMD5": "b2805c1fb1bdef18cbc5b6ee21ea7340",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_3_Ignition.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_3_Ignition.mp3?5043f",
+        "sha256": "589bb8a494b86d9df8b6e17825768974f10740a6c6dcbf022bf2befcc2c73bba"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/ora-by-onetap/kill/ignition/kill-4.mp3",
+      "sha256": "77a0616bf015efa59ea6838a2875f219945a4c7cee8f96b9e00fb0f3c298eb8e",
+      "duration": 3.108571,
+      "decodedAudioMD5": "4497cd96f7612ee7942a2d11e87f3798",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_4_Ignition.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_4_Ignition.mp3?6b272",
+        "sha256": "77a0616bf015efa59ea6838a2875f219945a4c7cee8f96b9e00fb0f3c298eb8e"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/ora-by-onetap/kill/ignition/kill-5.mp3",
+      "sha256": "b3e1c8b30310ea15c20329620742a5057fefd7b09937da71608f6908d20dc94c",
+      "duration": 6.19102,
+      "decodedAudioMD5": "4663b9da59e7e6bf1417e784ae849f74",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_5_Ignition.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_5_Ignition.mp3?bd951",
+        "sha256": "b3e1c8b30310ea15c20329620742a5057fefd7b09937da71608f6908d20dc94c"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "ignition",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/ora-by-onetap/kill/ignition/successive.mp3",
+      "sha256": "2461c09b6808c165528232f3cb34e22d5e67bc16a856b28a1e63f183a2cf7085",
+      "duration": 14.341224,
+      "decodedAudioMD5": "55725e3499cc3b9d06043bbe3e711dae",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Successive_Ignition.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Successive_Ignition.mp3?60715",
+        "sha256": "2461c09b6808c165528232f3cb34e22d5e67bc16a856b28a1e63f183a2cf7085"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/ora-by-onetap/kill/raja/kill-1.mp3",
+      "sha256": "8c2c6d33f10a6f1c682d56d2fd5fdf9e795426d66edfdb944e67ae1d4b9da3de",
+      "duration": 3.108571,
+      "decodedAudioMD5": "4d9599cf8bca6b7bc7d13a9cf4ad93cc",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_1_RAJA.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_1_RAJA.mp3?eb84e",
+        "sha256": "8c2c6d33f10a6f1c682d56d2fd5fdf9e795426d66edfdb944e67ae1d4b9da3de"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/ora-by-onetap/kill/raja/kill-2.mp3",
+      "sha256": "45c3c8cf35cad409ca99a592d8079a58047a4a3d5abdccecbfb9339047f1ff2b",
+      "duration": 3.108571,
+      "decodedAudioMD5": "ec4053df3118dac5b5febf98328a7c00",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_2_RAJA.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_2_RAJA.mp3?c5de4",
+        "sha256": "45c3c8cf35cad409ca99a592d8079a58047a4a3d5abdccecbfb9339047f1ff2b"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/ora-by-onetap/kill/raja/kill-3.mp3",
+      "sha256": "5e66af8cc690d0fb736f4c6ecb44015ab67b976536acd6d62fbf755bb1e05858",
+      "duration": 3.108571,
+      "decodedAudioMD5": "d9028bc75f84e2926b2d8a252ad591ca",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_3_RAJA.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_3_RAJA.mp3?5297c",
+        "sha256": "5e66af8cc690d0fb736f4c6ecb44015ab67b976536acd6d62fbf755bb1e05858"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/ora-by-onetap/kill/raja/kill-4.mp3",
+      "sha256": "72fc69cfe86af2d754437d518d346e0f22f5bbf42b1925c2fc88fa530dcb3bc8",
+      "duration": 3.108571,
+      "decodedAudioMD5": "27dd2464ec852d2145eb554dc9c7e8e2",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_4_RAJA.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_4_RAJA.mp3?7c04a",
+        "sha256": "72fc69cfe86af2d754437d518d346e0f22f5bbf42b1925c2fc88fa530dcb3bc8"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/ora-by-onetap/kill/raja/kill-5.mp3",
+      "sha256": "b334e512f738ad16151b23f4a83cd8780d3ae4c24311be5b0d9c0fd7c351067f",
+      "duration": 6.19102,
+      "decodedAudioMD5": "685479fc49e8d37315c073ae62d59c09",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_5_RAJA.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_5_RAJA.mp3?40fe7",
+        "sha256": "b334e512f738ad16151b23f4a83cd8780d3ae4c24311be5b0d9c0fd7c351067f"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "raja",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/ora-by-onetap/kill/raja/successive.mp3",
+      "sha256": "048a267a8e77d52d796e59e17604790a1ca27bd4675597abec7ed4aa1c2861f5",
+      "duration": 14.132245,
+      "decodedAudioMD5": "7020e3607c32beb6888a515b8b60ee50",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Successive_RAJA.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Successive_RAJA.mp3?9d331",
+        "sha256": "048a267a8e77d52d796e59e17604790a1ca27bd4675597abec7ed4aa1c2861f5"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/ora-by-onetap/kill/renegade/kill-1.mp3",
+      "sha256": "fb3eaad52ee58f7f8b96838aeb3340204675d5bf45d42586e44f9eabccd6dbdd",
+      "duration": 3.108571,
+      "decodedAudioMD5": "925de143a2e89546f236ce0340cf66e9",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_1_RENEGADE.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_1_RENEGADE.mp3?0e2bd",
+        "sha256": "fb3eaad52ee58f7f8b96838aeb3340204675d5bf45d42586e44f9eabccd6dbdd"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/ora-by-onetap/kill/renegade/kill-2.mp3",
+      "sha256": "ef4b0d23e6a74e03b7b9f3cbd0645c086b65c191b9352c4b55fb832e72018796",
+      "duration": 3.108571,
+      "decodedAudioMD5": "58c413b190485a2ff16f9753594dd37f",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_2_RENEGADE.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_2_RENEGADE.mp3?b751b",
+        "sha256": "ef4b0d23e6a74e03b7b9f3cbd0645c086b65c191b9352c4b55fb832e72018796"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/ora-by-onetap/kill/renegade/kill-3.mp3",
+      "sha256": "c1a669adfdba8af483b9aa0e7ce3ac7ff99407f72ef8587a242ca3500eb4139a",
+      "duration": 3.108571,
+      "decodedAudioMD5": "85ec81709bc0e2740080d46ee490ce8d",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_3_RENEGADE.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_3_RENEGADE.mp3?f4057",
+        "sha256": "c1a669adfdba8af483b9aa0e7ce3ac7ff99407f72ef8587a242ca3500eb4139a"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/ora-by-onetap/kill/renegade/kill-4.mp3",
+      "sha256": "91211e3bb74a9457b37a1f247a7b7081dcc1cd42d1081716de1d0bc823d626ef",
+      "duration": 3.108571,
+      "decodedAudioMD5": "fa6bf81f60374fa71f00ca90cb1a5014",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_4_RENEGADE.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_4_RENEGADE.mp3?c94a2",
+        "sha256": "91211e3bb74a9457b37a1f247a7b7081dcc1cd42d1081716de1d0bc823d626ef"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/ora-by-onetap/kill/renegade/kill-5.mp3",
+      "sha256": "cee5838711408311924ae40c5f2d96e47c81f664f181e7b34a9f3385373f9f6c",
+      "duration": 6.19102,
+      "decodedAudioMD5": "c9773528c952dd55e7c3883e82d1b5ef",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_5_RENEGADE.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_5_RENEGADE.mp3?6b949",
+        "sha256": "cee5838711408311924ae40c5f2d96e47c81f664f181e7b34a9f3385373f9f6c"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "renegade",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/ora-by-onetap/kill/renegade/successive.mp3",
+      "sha256": "ca2a789d212b83bbe4e9bfe243adf96e17ed84e81e6aee6f11b95bd1257085da",
+      "duration": 14.132245,
+      "decodedAudioMD5": "d9b8d3854a84be4a7459fd98ae100aa1",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Successive_RENEGADE.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Successive_RENEGADE.mp3?99495",
+        "sha256": "ca2a789d212b83bbe4e9bfe243adf96e17ed84e81e6aee6f11b95bd1257085da"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/ora-by-onetap/kill/watch/kill-1.mp3",
+      "sha256": "c686f9a2767c5e0ee94cb8a4dff81b192be490a4610f475114dddfccf0bea457",
+      "duration": 3.108571,
+      "decodedAudioMD5": "d3a038bc6f04a54263f66d3ba27b7e68",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_1_Watch.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_1_Watch.mp3?022a6",
+        "sha256": "c686f9a2767c5e0ee94cb8a4dff81b192be490a4610f475114dddfccf0bea457"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/ora-by-onetap/kill/watch/kill-2.mp3",
+      "sha256": "6ef93e83f81fe3a0aa83cab32c603b00707bb575eb7cc881c0dd100258344ad3",
+      "duration": 3.108571,
+      "decodedAudioMD5": "99c13bc9caf48f7414e8a0bda4f32340",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_2_Watch.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_2_Watch.mp3?be0a0",
+        "sha256": "6ef93e83f81fe3a0aa83cab32c603b00707bb575eb7cc881c0dd100258344ad3"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/ora-by-onetap/kill/watch/kill-3.mp3",
+      "sha256": "51f3cf4a6115e0b4c30a57ccbdc90e521b1980d4e4cf569a681a24f4735821f8",
+      "duration": 3.108571,
+      "decodedAudioMD5": "8fcebfb97ac080e687bb0b760ebfdd67",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_3_Watch.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_3_Watch.mp3?82dff",
+        "sha256": "51f3cf4a6115e0b4c30a57ccbdc90e521b1980d4e4cf569a681a24f4735821f8"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/ora-by-onetap/kill/watch/kill-4.mp3",
+      "sha256": "13a0badf381ceb96f04e4d719c59d5a264813311f5bc3402b2b5d76826a22057",
+      "duration": 3.108571,
+      "decodedAudioMD5": "786c9fefcfda4954e0e9e22749fcf034",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_4_Watch.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_4_Watch.mp3?44397",
+        "sha256": "13a0badf381ceb96f04e4d719c59d5a264813311f5bc3402b2b5d76826a22057"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/ora-by-onetap/kill/watch/kill-5.mp3",
+      "sha256": "92542bdb42fe147f6c5f8b6c3b2c974aef56eb70d63e05a21744cce44da39785",
+      "duration": 6.426122,
+      "decodedAudioMD5": "6695a3b2301426f945b3857554e8b3f0",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_5_Watch.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_5_Watch.mp3?ee5db",
+        "sha256": "92542bdb42fe147f6c5f8b6c3b2c974aef56eb70d63e05a21744cce44da39785"
+      }
+    },
+    {
+      "collection": "ora-by-onetap",
+      "theme": "watch",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/ora-by-onetap/kill/watch/successive.mp3",
+      "sha256": "19e80ba43b905326a3c9edd714571970e829b7fdb09bbbe1b1f8c08e1301f294",
+      "duration": 14.445714,
+      "decodedAudioMD5": "c64f4d9c551309358fc67a00c7c17c72",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/ora-by-onetap/ORA_by_OneTap_Kill_Successive_Watch.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Successive_Watch.mp3?c92bc",
+        "sha256": "19e80ba43b905326a3c9edd714571970e829b7fdb09bbbe1b1f8c08e1301f294"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/prelude-to-chaos/kill/default/kill-1.mp3",
+      "sha256": "a654d560942e8f67d5a4bbf00430790a43398df497b39dfca1167e5a1a32ee61",
+      "duration": 3.143786,
+      "decodedAudioMD5": "f8cf7a7f9cecf0cb5c517164257aab4f",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_1.mp3?8bde2",
+        "sha256": "a654d560942e8f67d5a4bbf00430790a43398df497b39dfca1167e5a1a32ee61"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/prelude-to-chaos/kill/default/kill-2.mp3",
+      "sha256": "89ad46402da9a20bda55e6e984378f48af42d3af5ab6768edf9eded608c426e8",
+      "duration": 3.143786,
+      "decodedAudioMD5": "723e0158a8461500853ff8f02dcff7e4",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_2.mp3?efcec",
+        "sha256": "89ad46402da9a20bda55e6e984378f48af42d3af5ab6768edf9eded608c426e8"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/prelude-to-chaos/kill/default/kill-3.mp3",
+      "sha256": "3b1b7016307c926f9215ba485b142a328470f424576f8056872638835fd2eb25",
+      "duration": 3.143786,
+      "decodedAudioMD5": "0c52b42baed803d30f6bb8c3361c8665",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_3.mp3?efcec",
+        "sha256": "3b1b7016307c926f9215ba485b142a328470f424576f8056872638835fd2eb25"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/prelude-to-chaos/kill/default/kill-4.mp3",
+      "sha256": "489e209ffc81bb538e60cc39d237e7979d62082bd9b468a48f54595dc984d8de",
+      "duration": 3.143786,
+      "decodedAudioMD5": "144aa99822d820cbc73a68f3b8c893cd",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_4.mp3?efcec",
+        "sha256": "489e209ffc81bb538e60cc39d237e7979d62082bd9b468a48f54595dc984d8de"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/prelude-to-chaos/kill/default/kill-5.mp3",
+      "sha256": "4265d9140dcc53fff8710531c752f8efa68a0adac95a0d5c1d6b7010b15c277d",
+      "duration": 7.192786,
+      "decodedAudioMD5": "f667f6bc7bfdccaea34eb941f2573a31",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_5.mp3?efcec",
+        "sha256": "4265d9140dcc53fff8710531c752f8efa68a0adac95a0d5c1d6b7010b15c277d"
+      }
+    },
+    {
+      "collection": "prelude-to-chaos",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/prelude-to-chaos/kill/default/successive.mp3",
+      "sha256": "af6231192921c4a1df0c06bc5094f0f190206a46b149922f5fb5d45f049f394d",
+      "duration": 11.859592,
+      "decodedAudioMD5": "6ec59836371ebc3d4424b8f7d81b05e8",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/prelude-to-chaos/Prelude_to_Chaos_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Successive.mp3?88a1d",
+        "sha256": "af6231192921c4a1df0c06bc5094f0f190206a46b149922f5fb5d45f049f394d"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/primordium/kill/default/kill-1.mp3",
+      "sha256": "726db6677c66f5ba0ba92e1f18dc0ec7ea4840449127c259008417e512813817",
+      "duration": 3.216,
+      "decodedAudioMD5": "04686d78b4c2783e55cbf8c538278392",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_1.mp3?f6f63",
+        "sha256": "726db6677c66f5ba0ba92e1f18dc0ec7ea4840449127c259008417e512813817"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/primordium/kill/default/kill-2.mp3",
+      "sha256": "d04782247ca2680ba293e82b4afaf4ef99c1b0444c56f94a9764baa237e5a8d9",
+      "duration": 3.24,
+      "decodedAudioMD5": "0bb035e697d975dda03c8eef7568aa9b",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_2.mp3?32f72",
+        "sha256": "d04782247ca2680ba293e82b4afaf4ef99c1b0444c56f94a9764baa237e5a8d9"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/primordium/kill/default/kill-3.mp3",
+      "sha256": "51f147b420b3894552e3b48eacb6d8e47abc7a88ff5dd93061d82de5a3c6e89c",
+      "duration": 3.24,
+      "decodedAudioMD5": "7fa7df6af44add1a007ccf20ec0eb19a",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_3.mp3?b55bb",
+        "sha256": "51f147b420b3894552e3b48eacb6d8e47abc7a88ff5dd93061d82de5a3c6e89c"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/primordium/kill/default/kill-4.mp3",
+      "sha256": "ed0c1e20e982d1c5c3417fe1c2d61f90d00433b9709f69892b2401b2e095fdd0",
+      "duration": 3.24,
+      "decodedAudioMD5": "e58edceeb51151c0d304811be24811f3",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_4.mp3?7624f",
+        "sha256": "ed0c1e20e982d1c5c3417fe1c2d61f90d00433b9709f69892b2401b2e095fdd0"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/primordium/kill/default/kill-5.mp3",
+      "sha256": "909b097bbf57f2948b91f118fb50b1d3bda875bbd5e24e45e51e7a8b08b09364",
+      "duration": 6.144,
+      "decodedAudioMD5": "a6237d7bc4c8ff038ccb26eabba871bb",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_5.mp3?f6aa6",
+        "sha256": "909b097bbf57f2948b91f118fb50b1d3bda875bbd5e24e45e51e7a8b08b09364"
+      }
+    },
+    {
+      "collection": "primordium",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/primordium/kill/default/successive.mp3",
+      "sha256": "c576a31a1aaa90505fe628a935df65ffae54c6f61a44337718f0396d8fe1c603",
+      "duration": 14.136,
+      "decodedAudioMD5": "09b1069ab335235f6c0daf5fa756a451",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/primordium/Primordium_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Successive.mp3?0f6d8",
+        "sha256": "c576a31a1aaa90505fe628a935df65ffae54c6f61a44337718f0396d8fe1c603"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/rgx-11z-pro/kill/default/kill-1.mp3",
+      "sha256": "9ecb9bc116742ab653d8ee3f39e5b46475543c79a6954beaf38cb6c6b7608e3c",
+      "duration": 2.046643,
+      "decodedAudioMD5": "209f72f9aae4aff5d90556eeb369f666",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_1.mp3?12c68",
+        "sha256": "9ecb9bc116742ab653d8ee3f39e5b46475543c79a6954beaf38cb6c6b7608e3c"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/rgx-11z-pro/kill/default/kill-2.mp3",
+      "sha256": "9a5488cbf2392c48e648de2f0b5a7a1a3d14df7a315db3813dc67b46fba4b1ff",
+      "duration": 2.098929,
+      "decodedAudioMD5": "342ecf73f001ab84cc29dbe88d23740a",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_2.mp3?12c68",
+        "sha256": "9a5488cbf2392c48e648de2f0b5a7a1a3d14df7a315db3813dc67b46fba4b1ff"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/rgx-11z-pro/kill/default/kill-3.mp3",
+      "sha256": "e01f02e57b97c8cfa80baa17166a923554b57ba3b1473bd716a24ae3dea05392",
+      "duration": 2.098929,
+      "decodedAudioMD5": "b19ba2872760a0410553ac285f906696",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_3.mp3?12c68",
+        "sha256": "e01f02e57b97c8cfa80baa17166a923554b57ba3b1473bd716a24ae3dea05392"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/rgx-11z-pro/kill/default/kill-4.mp3",
+      "sha256": "f524c5171a69710c5179452ea2a4180b068fcae2851e10a70f4a71cfc588ea68",
+      "duration": 1.968286,
+      "decodedAudioMD5": "003f189a0ea1718dbd39ee750d54ad2f",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_4.mp3?12c68",
+        "sha256": "f524c5171a69710c5179452ea2a4180b068fcae2851e10a70f4a71cfc588ea68"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/rgx-11z-pro/kill/default/kill-5.mp3",
+      "sha256": "95471a04428b3a1375ffefd7287d23faa835dc3ade3514d6467688dd0d38e340",
+      "duration": 4.345429,
+      "decodedAudioMD5": "6e5adbc1715207b13c2f6af77160ed75",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_5.mp3?12c68",
+        "sha256": "95471a04428b3a1375ffefd7287d23faa835dc3ade3514d6467688dd0d38e340"
+      }
+    },
+    {
+      "collection": "rgx-11z-pro",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/rgx-11z-pro/kill/default/successive.mp3",
+      "sha256": "e6eae6549173d2153f4696b76e9adaca82fc7416ddfa6dafc0202f6e5a337cf6",
+      "duration": 10.266122,
+      "decodedAudioMD5": "955e14ea67a0f1bace80046ce99f673b",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rgx-11z-pro/RGX_11z_Pro_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Successive.mp3?e452c",
+        "sha256": "e6eae6549173d2153f4696b76e9adaca82fc7416ddfa6dafc0202f6e5a337cf6"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "role": "kill",
+      "id": "1",
+      "path": "skin-packs/media/rogue/kill/default/kill-1.mp3",
+      "sha256": "fd0a8219eb704897d9c6ae8061dc6dcf58349f14d798ee8bb1dc23fe25efd4ca",
+      "duration": 3.096,
+      "decodedAudioMD5": "36bf03269bc46119764b5ec63a32c196",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_1.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_1.mp3?40876",
+        "sha256": "fd0a8219eb704897d9c6ae8061dc6dcf58349f14d798ee8bb1dc23fe25efd4ca"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "role": "kill",
+      "id": "2",
+      "path": "skin-packs/media/rogue/kill/default/kill-2.mp3",
+      "sha256": "d86b88268988f4597af96058176206f1c313e48efd60b6a5e896b5a54f8d2b4c",
+      "duration": 3.12,
+      "decodedAudioMD5": "bb652911d0d2b1c8ab829202e06fda1e",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_2.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_2.mp3?40876",
+        "sha256": "d86b88268988f4597af96058176206f1c313e48efd60b6a5e896b5a54f8d2b4c"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "role": "kill",
+      "id": "3",
+      "path": "skin-packs/media/rogue/kill/default/kill-3.mp3",
+      "sha256": "55cbf27a267dbf99f891fadc2d0dc1e879050f6a92c7d9f325f3b0f005f9f471",
+      "duration": 3.12,
+      "decodedAudioMD5": "3973bbc04c4ce0bcfe2109f6f81d0acd",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_3.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_3.mp3?d7161",
+        "sha256": "55cbf27a267dbf99f891fadc2d0dc1e879050f6a92c7d9f325f3b0f005f9f471"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "role": "kill",
+      "id": "4",
+      "path": "skin-packs/media/rogue/kill/default/kill-4.mp3",
+      "sha256": "9cd4bc02634729e7a3b2895223f3a9fdf6f307538f80d3fac78d6bbd32351e7f",
+      "duration": 3.096,
+      "decodedAudioMD5": "2f46be58bb27428432bd2220418d5bfc",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_4.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_4.mp3?d7161",
+        "sha256": "9cd4bc02634729e7a3b2895223f3a9fdf6f307538f80d3fac78d6bbd32351e7f"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "role": "kill",
+      "id": "5",
+      "path": "skin-packs/media/rogue/kill/default/kill-5.mp3",
+      "sha256": "19829a3a051fc66e9f8a9475adee127ccf1a8921c13fa0c6be2f56a2714c7a14",
+      "duration": 6.192,
+      "decodedAudioMD5": "3a0dfdc65a27c00069ae6786c66d4928",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_5.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_5.mp3?d7161",
+        "sha256": "19829a3a051fc66e9f8a9475adee127ccf1a8921c13fa0c6be2f56a2714c7a14"
+      }
+    },
+    {
+      "collection": "rogue",
+      "theme": "default",
+      "role": "successive",
+      "id": "successive",
+      "path": "skin-packs/media/rogue/kill/default/successive.mp3",
+      "sha256": "4969652a2a060f567fcb8f8c28c839c77dbfea2cf3a3793de577e11836156da1",
+      "duration": 12.936,
+      "decodedAudioMD5": "1089adac911a412181b05aba46eb01cc",
+      "source": {
+        "path": "skin-packs/local/wiki-downloads/rogue/Rogue_Kill_Successive.mp3",
+        "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
+        "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Successive.mp3?d7161",
+        "sha256": "4969652a2a060f567fcb8f8c28c839c77dbfea2cf3a3793de577e11836156da1"
+      }
+    }
+  ],
+  "fire": []
+}

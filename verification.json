@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T17:49:37.599Z",
-  "root": "G:\\TOOLS\\AimOffline\\dist",
+  "generatedAt": "2026-10-19T09:52:01.232Z",
+  "root": "/home/yuyuan/miaozhun-offline/dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
   "checks": {
@@ -10,16 +10,16 @@
     "sceneCount": 62,
     "mapCount": 6
   },
-  "resourceCount": 1826,
-  "storedBytes": 164536932,
+  "resourceCount": 1944,
+  "storedBytes": 174375965,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
     "materialCandidates": 638,
     "moduleCandidates": 0,
     "moduleClosureEntries": 78,
-    "uniqueRequirements": 1729,
-    "satisfied": 1727,
+    "uniqueRequirements": 1846,
+    "satisfied": 1844,
     "moduleExclusions": [
       {
         "path": "js/BbCrAlFy.js",
@@ -1588,6 +1588,16 @@
       }
     }
   ],
+  "skinPacks": {
+    "resourceStatus": "partial",
+    "audio": 79,
+    "killAudio": 66,
+    "successiveAudio": 13,
+    "banners": 37,
+    "fire": 0,
+    "missingFire": 30,
+    "eligibleFireCombinations": 30
+  },
   "fonts": {
     "files": 1013,
     "cachedFiles": 1013,
@@ -1935,8 +1945,8 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "184cd8da1a0122f5ab75bf64f612635519c3076854095802c5d0d7245254f6aa",
-    "fileCount": 1826
+    "sha256": "f00fdd42f434d0911738d72f973fbb10e07b0ec18748017d02fe9bdd06471ff6",
+    "fileCount": 1944
   },
   "limitations": [
     "Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.",

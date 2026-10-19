@@ -1,77 +1,56 @@
-# Vandal / Phantom skin-pack catalog + ORA by OneTap
+# Vandal / Phantom skin packs + ORA by OneTap
 
-This branch extends `performance-improvements` with a **source-verified catalog and local-only, permission-aware media staging workflow**. No third-party original audio or kill-banner binaries are included, licensed, or embedded into the game by this change.
+The offline client builds skin effects from reviewed originals in `skin-packs/media/`. The build currently supplies **79 kill-audio clips and 37 transparent composite kill banners** across nine collections and thirteen themes. **Gunfire remains missing for all 30 eligible weapon/theme combinations** and uses the client's original firing sound. Available kill sounds and banners work independently of missing assets.
 
 ## Selection
 
-The September 2026 VALSTATS report used 60,024 equipped-player inventories. Its top-ten tables include the default skin. Filtering each weapon's top ten to the orange **Exclusive** edition gives:
+The September 2026 VALSTATS report recorded 60,024 equipped-player inventories. Its top-ten tables include the default skin. Filtering each weapon's top ten to orange **Exclusive** edition gives:
 
 - **Vandal:** Prelude to Chaos, Kuronami, Primordium, Rogue, RGX 11z Pro.
 - **Phantom:** Primordium, Ayakashi, Kuronami, Nocturnum, Mystbloom.
-- **Additional user request:** ORA by OneTap (Ultra, not orange). Include Vandal, Phantom, Sheriff, Operator, and **all five** themes: base, watch, renegade, raja, ignition.
+- **Additional request:** ORA by OneTap (Ultra), with Vandal, Phantom, Sheriff and Operator. Each gun supports **Base, Watch, RENEGADE, RAJA and Ignition** selections.
 
-The full ordered top-ten lists and authoritative collection reference pages are recorded in [catalog.json](./catalog.json). These are *equipped usage* rankings, not universal popularity or purchase rankings.
+The ordered tables and collection reference pages remain in [catalog.json](./catalog.json). These measure equipped usage. Shared collection kill effects are reused for each eligible weapon; ORA's five themes retain separate media.
 
-## Ownership and distribution
+## Build and run on Linux
 
-Riot's current terms and third-party game/app policies do **not** grant blanket redistribution or in-game reuse rights for original skin effects merely because a project is noncommercial or its repository is private. See:
-
-- https://www.riotgames.com/en/legal
-- https://developer.riotgames.com/policies/general
-- https://www.riotgames.com/en/terms-of-service
-
-The source references in the catalog are provided so an authorized developer can identify specific assets. **Do not treat a wiki's audio download link as a license.** When permitted/created/original media files are available, place them into ignored `skin-packs/local/`; verify your rights before distributing or committing.
-
-## Local asset layout
-
-For each collection ID in `catalog.json`, supply the following files:
-
-```text
-skin-packs/local/<collection-id>/
-  weapons/<weapon>/fire.ogg
-  themes/<theme>/
-    kill-1.ogg
-    kill-2.ogg
-    kill-3.ogg
-    kill-4.ogg
-    kill-5.ogg
-    successive.ogg
-    emblem.png
-    frame.png
-    ring.png
-    pip.png
-    headshot.png
-```
-
-For ordinary Exclusive collections, theme is `default`. For ORA, each of the five themes above has independent kill audio and banner layers; weapon gunfire is initially modeled as one file per weapon, so **theme-specific ORA gunfire requires a later runtime extension**, not a false claim of parity.
-
-The banner layer shape follows the existing `DVK7uRSu.js` data model (`frame`, `ring`, `emblem`, `pip`, `headshot`). This is a source organization format rather than an assertion that extracted Riot assets have those exact separate files.
-
-## Commands
-
-Run with system Node.js on Ubuntu or Windows:
+Install Node.js and ensure `ffmpeg` is on `PATH`, then run from the repository root:
 
 ```bash
-node scripts/skin-packs.mjs --scaffold
-node scripts/skin-packs.mjs --audit
-node scripts/skin-packs.mjs --stage
-node --test tests/skin-packs.test.mjs
+node prepare-offline.mjs
+node server.mjs
 ```
 
-- `--scaffold` creates ignored folder structure and a `REQUIRED_ASSETS.txt` inventory.
-- `--audit` reports missing and present files without downloading anything.
-- `--stage` copies **complete, locally supplied** collection folders into `dist/skin-packs/`, generating a manifest of staged packs. If a collection is incomplete, it is skipped rather than falsely reported as available.
-- The tools perform **no online download, asset extraction or rights bypass**. Staging does not modify the original offline client, install a theme-selection menu or activate skins; those tasks remain separate integration work once cleared media is supplied.
+Open [the local client](http://127.0.0.1:18746/aim). The server listens only on `127.0.0.1:18746`. The Windows launcher remains available; rebuilding on Windows also requires `ffmpeg` on `PATH` and can use `.\runtime\node.exe` in place of `node`.
 
-## Integration pointers
+`prepare-offline.mjs` applies the versioned patches and calls [build-skin-packs.mjs](../scripts/build-skin-packs.mjs). The builder checks reviewed SHA-256 hashes, converts MP3 to Vorbis OGG, normalizes transparent PNG banners to 300 × 300, and writes the **schema-2** `dist/skin-packs/index.json`. It rebuilds from repository media and [asset-review.json](./asset-review.json); `skin-packs/local/wiki-downloads/` and a new download are unnecessary. Rebuilding replaces generated skin output.
 
-- `dist/js/CymPR-fm.js`: `fireKit`, `hitKit`, `killKit`, `playFire`, `playKill`.
-- `dist/js/DVK7uRSu.js`: existing three kill-banner themes and composite layers.
-- `prepare-offline.mjs`: reproducible build entry point; any future client patches should go in `patches/`, not be applied directly to only `dist/`.
+## Settings and playback
 
-## Data sources
+In **参数设置 → 音效 → 枪械皮肤与击杀反馈**, select a gun, skin, theme and banner style. Selections and the separate fire, kill and banner switches are stored per gun in the browser. Ordinary collections offer four banner variants; ORA offers one composite banner per theme. The panel reports missing, loading, failed and ready assets, shows a banner preview, and provides individual and 1–5 kill auditions, an original-effect option, stop and reload controls.
 
-- https://reports.valstats.site/skin-popularity-v2/
-- https://wiki.playvalorant.com/en-us/Weapon_Skins
-- https://wiki.playvalorant.com/en-us/Kill_Banners
-- See per-collection `referencePage` fields in `catalog.json`.
+Audio and images load asynchronously. Audio is decoded before use; firing and kill events only read the decoded cache. An unavailable or failed asset falls back to the current original effect. **Every skin firing sample is currently missing**, and its audition button is disabled.
+
+Live kills follow the client's existing **1–5 cyclic sound sequence**: kill 6 uses clip 1, kill 7 uses clip 2. `successive.ogg` is an original multi-kill recording available for audition; Ayakashi's sixth clip is also audition-only. Neither replaces the live 1–5 sequence.
+
+The imported banners are complete transparent images. The HUD draws the selected composite and adds its kill count and headshot feedback; the source does not provide separate frame, ring, emblem or headshot animation layers.
+
+## Audit and staging
+
+```bash
+node scripts/skin-packs.mjs --audit
+node scripts/skin-packs.mjs --stage
+node --test tests/skin-packs.test.mjs tests/skin-media-build.test.mjs
+```
+
+- `--audit` checks actual reviewed input paths and hashes. It distinguishes absent review mappings, absent files and changed files, and lists each missing weapon/theme capability without inventing source filenames. It does not verify browser integration.
+- `--stage` uses the same schema-2 builder as `prepare-offline.mjs`. It retains every usable clip and banner in partially supplied themes and explicitly records missing assets. Staging alone is a file build, separate from installing the client patches and checking playback.
+- `--scaffold` remains a compatibility command that prints the review inventory. It creates no legacy local folders or fake layer requirements.
+
+The manifest's `sourceStatus` and `resourceStatus` describe media coverage. They do not certify that the browser has decoded a file or that a training session has exercised it. See [ASSET_STATUS.md](./ASSET_STATUS.md) for evidence and remaining gaps.
+
+## Provenance
+
+[asset-review.json](./asset-review.json) records original paths, source URLs, hashes, audio roles and banner variants. The [audit folder](./audit/) contains inventory and visual-review evidence. Original game media remains owned by Riot Games; use follows the project owner's reported official authorization. Source attribution does not change ownership.
+
+Ranking source: [VALSTATS](https://reports.valstats.site/skin-popularity-v2/). Collection and kill-banner references: [VALORANT Wiki](https://wiki.playvalorant.com/en-us/Weapon_Skins), [Kill Banners](https://wiki.playvalorant.com/en-us/Kill_Banners). Per-file sources are recorded in the review data.

@@ -1,0 +1,147 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+
+const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const themeLabels={default:'Default',base:'Base',watch:'Watch',renegade:'RENEGADE',raja:'RAJA',ignition:'Ignition'};
+const segment=/^[a-z0-9-]+$/;
+const sha256=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+
+function runFfmpeg(args){
+  const result=spawnSync('ffmpeg',['-nostdin','-hide_banner','-loglevel','error','-y',...args],{
+    encoding:'utf8',maxBuffer:4*1024*1024,
+  });
+  if(result.error)throw new Error(`Skin media build requires ffmpeg: ${result.error.message}`);
+  if(result.status!==0)throw new Error(`Skin media conversion failed: ${result.stderr.trim()}`);
+}
+
+function reviewedSource(root,entry){
+  if(!entry?.path||!/^skin-packs\/media\/(?:[a-zA-Z0-9._-]+\/)*[a-zA-Z0-9._-]+$/.test(entry.path)
+    ||entry.path.split('/').includes('..')||!/^[a-f0-9]{64}$/.test(entry.sha256??'')){
+    throw new Error('Unsafe or unhashed reviewed media path: '+entry?.path);
+  }
+  const filename=path.join(root,...entry.path.split('/'));
+  if(!fs.existsSync(filename))return null;
+  if(!fs.statSync(filename).isFile())throw new Error('Reviewed media must be a file: '+entry.path);
+  const mediaRoot=fs.realpathSync(path.join(root,'skin-packs','media'))+path.sep;
+  if(!fs.realpathSync(filename).startsWith(mediaRoot))throw new Error('Reviewed media escapes its source directory: '+entry.path);
+  if(sha256(filename)!==entry.sha256)throw new Error('Reviewed media hash mismatch: '+entry.path);
+  return filename;
+}
+
+function outputUrl(destination,relative){
+  const target=path.join(destination,...relative.split('/'));
+  fs.mkdirSync(path.dirname(target),{recursive:true});
+  return {target,url:'/skin-packs/'+relative};
+}
+
+function audioOutput(root,destination,entry,relative){
+  const source=reviewedSource(root,entry);
+  if(!source)return null;
+  const output=outputUrl(destination,relative);
+  // Explicit audio mapping ignores malformed source APIC cover-art PNGs.
+  // Bitexact output fixes the Ogg stream serial and omits changing metadata.
+  runFfmpeg(['-i',source,'-map','0:a:0','-vn','-sn','-dn','-map_metadata','-1',
+    '-c:a','libvorbis','-q:a','5','-fflags','+bitexact','-flags:a','+bitexact',output.target]);
+  if(fs.readFileSync(output.target).subarray(0,4).toString()!=='OggS')throw new Error('Invalid Ogg output: '+relative);
+  return output.url;
+}
+
+function bannerOutput(root,destination,entry,relative){
+  const source=reviewedSource(root,entry);
+  if(!source)return null;
+  const output=outputUrl(destination,relative);
+  runFfmpeg(['-i',source,'-map','0:v:0','-an','-sn','-dn','-map_metadata','-1',
+    '-vf','scale=300:300:force_original_aspect_ratio=decrease:flags=lanczos,format=rgba,pad=300:300:(ow-iw)/2:(oh-ih)/2:color=0x00000000',
+    '-frames:v','1','-c:v','png','-threads','1','-fflags','+bitexact','-flags:v','+bitexact',output.target]);
+  const bytes=fs.readFileSync(output.target);
+  if(!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
+    ||bytes.readUInt32BE(16)!==300||bytes.readUInt32BE(20)!==300){
+    throw new Error('Invalid normalized banner: '+relative);
+  }
+  return output.url;
+}
+
+function validateReview(catalog,review){
+  const seen=new Set();
+  for(const collection of catalog.collections){
+    for(const id of [collection.id,...collection.weapons,...collection.themes]){
+      if(!segment.test(id))throw new Error('Unsafe catalog identifier: '+id);
+    }
+  }
+  for(const [kind,entries] of Object.entries({audio:review.audio??[],banners:review.banners??[],fire:review.fire??[]})){
+    for(const entry of entries){
+      const collection=catalog.collections.find(c=>c.id===entry.collection);
+      if(!collection||!collection.themes.includes(entry.theme))throw new Error('Unknown reviewed collection/theme: '+entry.collection+'/'+entry.theme);
+      if(kind==='fire'&&!collection.weapons.includes(entry.weapon))throw new Error('Ineligible reviewed weapon: '+entry.weapon);
+      if(kind==='audio'&&!(entry.role==='successive'&&entry.id==='successive'||entry.role==='kill'&&/^[1-6]$/.test(entry.id)))throw new Error('Invalid reviewed audio role/id');
+      if(kind==='banners'&&!segment.test(entry.id))throw new Error('Unsafe banner identifier: '+entry.id);
+      const key=[kind,entry.collection,entry.theme,entry.weapon??entry.id].join('/');
+      if(seen.has(key))throw new Error('Duplicate reviewed media mapping: '+key);
+      seen.add(key);
+    }
+  }
+}
+
+/** Build only reviewed tracked originals; local/wiki-downloads is never read. */
+export function buildSkinPacks({root=projectRoot,destination}={}){
+  root=path.resolve(root);
+  destination=path.resolve(destination??path.join(root,'dist','skin-packs'));
+  const sources=path.join(root,'skin-packs');
+  if(destination===path.parse(destination).root||destination===root||destination===sources||sources.startsWith(destination+path.sep)
+    ||destination.startsWith(sources+path.sep))throw new Error('Skin output must be separate from its source tree');
+  const catalog=JSON.parse(fs.readFileSync(path.join(sources,'catalog.json'),'utf8'));
+  const review=JSON.parse(fs.readFileSync(path.join(sources,'asset-review.json'),'utf8'));
+  if(review.schemaVersion!==1)throw new Error('Unsupported skin asset review version');
+  validateReview(catalog,review);
+  // Verify every existing reviewed input before clearing previous output.
+  for(const entries of [review.audio??[],review.banners??[],review.fire??[]])for(const entry of entries)reviewedSource(root,entry);
+  fs.rmSync(destination,{recursive:true,force:true});
+  fs.mkdirSync(destination,{recursive:true});
+  const counts={collections:catalog.collections.length,themes:0,audio:0,killAudio:0,successiveAudio:0,banners:0,fire:0,missingFire:0,eligibleFireCombinations:0};
+  const collections=catalog.collections.map(collection=>({
+    id:collection.id,name:collection.name,tier:collection.tier,weapons:[...collection.weapons],
+    themes:collection.themes.map(theme=>{
+      counts.themes++;
+      const result={id:theme,label:themeLabels[theme]??theme,fire:{},kills:{},successive:null,banners:[],missing:[]};
+      for(const weapon of collection.weapons){
+        counts.eligibleFireCombinations++;
+        const entry=(review.fire??[]).find(e=>e.collection===collection.id&&e.theme===theme&&e.weapon===weapon);
+        const url=entry?audioOutput(root,destination,entry,`${collection.id}/fire/${theme}/${weapon}.ogg`):null;
+        result.fire[weapon]=url;
+        if(url){counts.fire++;counts.audio++}
+        else{counts.missingFire++;result.missing.push('fire:'+weapon)}
+      }
+      for(let n=1;n<=6;n++){
+        const entry=(review.audio??[]).find(e=>e.collection===collection.id&&e.theme===theme&&e.role==='kill'&&e.id===String(n));
+        const url=entry?audioOutput(root,destination,entry,`${collection.id}/kill/${theme}/kill-${n}.ogg`):null;
+        if(url){result.kills[n]=url;counts.audio++;counts.killAudio++}
+        else if(n<=5||entry)result.missing.push('kill:'+n);
+      }
+      const successive=(review.audio??[]).find(e=>e.collection===collection.id&&e.theme===theme&&e.role==='successive');
+      result.successive=successive?audioOutput(root,destination,successive,`${collection.id}/kill/${theme}/successive.ogg`):null;
+      if(result.successive){counts.audio++;counts.successiveAudio++}
+      else result.missing.push('successive');
+      const bannerEntries=(review.banners??[]).filter(e=>e.collection===collection.id&&e.theme===theme);
+      for(const entry of bannerEntries){
+        const url=bannerOutput(root,destination,entry,`${collection.id}/banners/${theme}/${entry.id}.png`);
+        if(url){result.banners.push({id:entry.id,label:entry.label,url});counts.banners++}
+        else result.missing.push('banner:'+entry.id);
+      }
+      if(!bannerEntries.length)result.missing.push('banner');
+      return result;
+    }),
+  }));
+  const partial=collections.some(c=>c.themes.some(t=>t.missing.length));
+  const manifest={schemaVersion:2,compiledOn:catalog.compiledOn,sourceStatus:partial?'partial':'complete',resourceStatus:partial?'partial':'complete',
+    bannerFormat:'transparent-composite',bannerSize:[300,300],counts,collections};
+  fs.writeFileSync(path.join(destination,'index.json'),JSON.stringify(manifest,null,2)+'\n');
+  return manifest;
+}
+
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+  const manifest=buildSkinPacks();
+  console.log(JSON.stringify({sourceStatus:manifest.sourceStatus,resourceStatus:manifest.resourceStatus,...manifest.counts},null,2));
+}

@@ -1,6 +1,6 @@
 {
   "app": "aim-offline",
-  "version": 2,
+  "version": 3,
   "originalVersion": "0.0.15",
   "sceneCount": 62,
   "originalSceneCount": 62,
@@ -20,5 +20,18 @@
     "local-fps-limit",
     "scene-prewarm"
   ],
-  "created": "2026-10-16T17:49:06.224Z"
+  "skinPacks": {
+    "clientBridge": true,
+    "resourceStatus": "partial",
+    "collections": 9,
+    "themes": 13,
+    "audio": 79,
+    "killAudio": 66,
+    "successiveAudio": 13,
+    "banners": 37,
+    "fire": 0,
+    "missingFire": 30,
+    "eligibleFireCombinations": 30
+  },
+  "created": "2026-10-19T09:48:16.810Z"
 }

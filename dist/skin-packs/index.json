@@ -1,0 +1,599 @@
+{
+  "schemaVersion": 2,
+  "compiledOn": "2026-10-19",
+  "sourceStatus": "partial",
+  "resourceStatus": "partial",
+  "bannerFormat": "transparent-composite",
+  "bannerSize": [
+    300,
+    300
+  ],
+  "counts": {
+    "collections": 9,
+    "themes": 13,
+    "audio": 79,
+    "killAudio": 66,
+    "successiveAudio": 13,
+    "banners": 37,
+    "fire": 0,
+    "missingFire": 30,
+    "eligibleFireCombinations": 30
+  },
+  "collections": [
+    {
+      "id": "prelude-to-chaos",
+      "name": "Prelude to Chaos",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": null
+          },
+          "kills": {
+            "1": "/skin-packs/prelude-to-chaos/kill/default/kill-1.ogg",
+            "2": "/skin-packs/prelude-to-chaos/kill/default/kill-2.ogg",
+            "3": "/skin-packs/prelude-to-chaos/kill/default/kill-3.ogg",
+            "4": "/skin-packs/prelude-to-chaos/kill/default/kill-4.ogg",
+            "5": "/skin-packs/prelude-to-chaos/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/prelude-to-chaos/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/prelude-to-chaos/banners/default/default.png"
+            },
+            {
+              "id": "blue",
+              "label": "Blue",
+              "url": "/skin-packs/prelude-to-chaos/banners/default/blue.png"
+            },
+            {
+              "id": "green",
+              "label": "Green",
+              "url": "/skin-packs/prelude-to-chaos/banners/default/green.png"
+            },
+            {
+              "id": "white",
+              "label": "White",
+              "url": "/skin-packs/prelude-to-chaos/banners/default/white.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kuronami",
+      "name": "Kuronami",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal",
+        "phantom"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": null,
+            "phantom": null
+          },
+          "kills": {
+            "1": "/skin-packs/kuronami/kill/default/kill-1.ogg",
+            "2": "/skin-packs/kuronami/kill/default/kill-2.ogg",
+            "3": "/skin-packs/kuronami/kill/default/kill-3.ogg",
+            "4": "/skin-packs/kuronami/kill/default/kill-4.ogg",
+            "5": "/skin-packs/kuronami/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/kuronami/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/kuronami/banners/default/default.png"
+            },
+            {
+              "id": "black",
+              "label": "Black",
+              "url": "/skin-packs/kuronami/banners/default/black.png"
+            },
+            {
+              "id": "purple",
+              "label": "Purple",
+              "url": "/skin-packs/kuronami/banners/default/purple.png"
+            },
+            {
+              "id": "white",
+              "label": "White",
+              "url": "/skin-packs/kuronami/banners/default/white.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "primordium",
+      "name": "Primordium",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal",
+        "phantom"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": null,
+            "phantom": null
+          },
+          "kills": {
+            "1": "/skin-packs/primordium/kill/default/kill-1.ogg",
+            "2": "/skin-packs/primordium/kill/default/kill-2.ogg",
+            "3": "/skin-packs/primordium/kill/default/kill-3.ogg",
+            "4": "/skin-packs/primordium/kill/default/kill-4.ogg",
+            "5": "/skin-packs/primordium/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/primordium/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/primordium/banners/default/default.png"
+            },
+            {
+              "id": "cobalt",
+              "label": "Cobalt",
+              "url": "/skin-packs/primordium/banners/default/cobalt.png"
+            },
+            {
+              "id": "gold",
+              "label": "Gold",
+              "url": "/skin-packs/primordium/banners/default/gold.png"
+            },
+            {
+              "id": "venom",
+              "label": "Venom",
+              "url": "/skin-packs/primordium/banners/default/venom.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": null
+          },
+          "kills": {
+            "1": "/skin-packs/rogue/kill/default/kill-1.ogg",
+            "2": "/skin-packs/rogue/kill/default/kill-2.ogg",
+            "3": "/skin-packs/rogue/kill/default/kill-3.ogg",
+            "4": "/skin-packs/rogue/kill/default/kill-4.ogg",
+            "5": "/skin-packs/rogue/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/rogue/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/rogue/banners/default/default.png"
+            },
+            {
+              "id": "blue",
+              "label": "Blue",
+              "url": "/skin-packs/rogue/banners/default/blue.png"
+            },
+            {
+              "id": "green",
+              "label": "Green",
+              "url": "/skin-packs/rogue/banners/default/green.png"
+            },
+            {
+              "id": "red",
+              "label": "Red",
+              "url": "/skin-packs/rogue/banners/default/red.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rgx-11z-pro",
+      "name": "RGX 11z Pro",
+      "tier": "Exclusive",
+      "weapons": [
+        "vandal"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "vandal": null
+          },
+          "kills": {
+            "1": "/skin-packs/rgx-11z-pro/kill/default/kill-1.ogg",
+            "2": "/skin-packs/rgx-11z-pro/kill/default/kill-2.ogg",
+            "3": "/skin-packs/rgx-11z-pro/kill/default/kill-3.ogg",
+            "4": "/skin-packs/rgx-11z-pro/kill/default/kill-4.ogg",
+            "5": "/skin-packs/rgx-11z-pro/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/rgx-11z-pro/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/rgx-11z-pro/banners/default/default.png"
+            },
+            {
+              "id": "blue",
+              "label": "Blue",
+              "url": "/skin-packs/rgx-11z-pro/banners/default/blue.png"
+            },
+            {
+              "id": "red",
+              "label": "Red",
+              "url": "/skin-packs/rgx-11z-pro/banners/default/red.png"
+            },
+            {
+              "id": "yellow",
+              "label": "Yellow",
+              "url": "/skin-packs/rgx-11z-pro/banners/default/yellow.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ayakashi",
+      "name": "Ayakashi",
+      "tier": "Exclusive",
+      "weapons": [
+        "phantom"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "phantom": null
+          },
+          "kills": {
+            "1": "/skin-packs/ayakashi/kill/default/kill-1.ogg",
+            "2": "/skin-packs/ayakashi/kill/default/kill-2.ogg",
+            "3": "/skin-packs/ayakashi/kill/default/kill-3.ogg",
+            "4": "/skin-packs/ayakashi/kill/default/kill-4.ogg",
+            "5": "/skin-packs/ayakashi/kill/default/kill-5.ogg",
+            "6": "/skin-packs/ayakashi/kill/default/kill-6.ogg"
+          },
+          "successive": "/skin-packs/ayakashi/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/ayakashi/banners/default/default.png"
+            },
+            {
+              "id": "blue",
+              "label": "Blue",
+              "url": "/skin-packs/ayakashi/banners/default/blue.png"
+            },
+            {
+              "id": "pink",
+              "label": "Pink",
+              "url": "/skin-packs/ayakashi/banners/default/pink.png"
+            },
+            {
+              "id": "red",
+              "label": "Red",
+              "url": "/skin-packs/ayakashi/banners/default/red.png"
+            }
+          ],
+          "missing": [
+            "fire:phantom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nocturnum",
+      "name": "Nocturnum",
+      "tier": "Exclusive",
+      "weapons": [
+        "phantom"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "phantom": null
+          },
+          "kills": {
+            "1": "/skin-packs/nocturnum/kill/default/kill-1.ogg",
+            "2": "/skin-packs/nocturnum/kill/default/kill-2.ogg",
+            "3": "/skin-packs/nocturnum/kill/default/kill-3.ogg",
+            "4": "/skin-packs/nocturnum/kill/default/kill-4.ogg",
+            "5": "/skin-packs/nocturnum/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/nocturnum/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/nocturnum/banners/default/default.png"
+            },
+            {
+              "id": "black",
+              "label": "Black",
+              "url": "/skin-packs/nocturnum/banners/default/black.png"
+            },
+            {
+              "id": "blue",
+              "label": "Blue",
+              "url": "/skin-packs/nocturnum/banners/default/blue.png"
+            },
+            {
+              "id": "yellow",
+              "label": "Yellow",
+              "url": "/skin-packs/nocturnum/banners/default/yellow.png"
+            }
+          ],
+          "missing": [
+            "fire:phantom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mystbloom",
+      "name": "Mystbloom",
+      "tier": "Exclusive",
+      "weapons": [
+        "phantom"
+      ],
+      "themes": [
+        {
+          "id": "default",
+          "label": "Default",
+          "fire": {
+            "phantom": null
+          },
+          "kills": {
+            "1": "/skin-packs/mystbloom/kill/default/kill-1.ogg",
+            "2": "/skin-packs/mystbloom/kill/default/kill-2.ogg",
+            "3": "/skin-packs/mystbloom/kill/default/kill-3.ogg",
+            "4": "/skin-packs/mystbloom/kill/default/kill-4.ogg",
+            "5": "/skin-packs/mystbloom/kill/default/kill-5.ogg"
+          },
+          "successive": "/skin-packs/mystbloom/kill/default/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/mystbloom/banners/default/default.png"
+            },
+            {
+              "id": "blue",
+              "label": "Blue",
+              "url": "/skin-packs/mystbloom/banners/default/blue.png"
+            },
+            {
+              "id": "orange",
+              "label": "Orange",
+              "url": "/skin-packs/mystbloom/banners/default/orange.png"
+            },
+            {
+              "id": "purple",
+              "label": "Purple",
+              "url": "/skin-packs/mystbloom/banners/default/purple.png"
+            }
+          ],
+          "missing": [
+            "fire:phantom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ora-by-onetap",
+      "name": "ORA by OneTap",
+      "tier": "Ultra",
+      "weapons": [
+        "vandal",
+        "phantom",
+        "sheriff",
+        "operator"
+      ],
+      "themes": [
+        {
+          "id": "base",
+          "label": "Base",
+          "fire": {
+            "vandal": null,
+            "phantom": null,
+            "sheriff": null,
+            "operator": null
+          },
+          "kills": {
+            "1": "/skin-packs/ora-by-onetap/kill/base/kill-1.ogg",
+            "2": "/skin-packs/ora-by-onetap/kill/base/kill-2.ogg",
+            "3": "/skin-packs/ora-by-onetap/kill/base/kill-3.ogg",
+            "4": "/skin-packs/ora-by-onetap/kill/base/kill-4.ogg",
+            "5": "/skin-packs/ora-by-onetap/kill/base/kill-5.ogg"
+          },
+          "successive": "/skin-packs/ora-by-onetap/kill/base/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/ora-by-onetap/banners/base/default.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom",
+            "fire:sheriff",
+            "fire:operator"
+          ]
+        },
+        {
+          "id": "watch",
+          "label": "Watch",
+          "fire": {
+            "vandal": null,
+            "phantom": null,
+            "sheriff": null,
+            "operator": null
+          },
+          "kills": {
+            "1": "/skin-packs/ora-by-onetap/kill/watch/kill-1.ogg",
+            "2": "/skin-packs/ora-by-onetap/kill/watch/kill-2.ogg",
+            "3": "/skin-packs/ora-by-onetap/kill/watch/kill-3.ogg",
+            "4": "/skin-packs/ora-by-onetap/kill/watch/kill-4.ogg",
+            "5": "/skin-packs/ora-by-onetap/kill/watch/kill-5.ogg"
+          },
+          "successive": "/skin-packs/ora-by-onetap/kill/watch/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/ora-by-onetap/banners/watch/default.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom",
+            "fire:sheriff",
+            "fire:operator"
+          ]
+        },
+        {
+          "id": "renegade",
+          "label": "RENEGADE",
+          "fire": {
+            "vandal": null,
+            "phantom": null,
+            "sheriff": null,
+            "operator": null
+          },
+          "kills": {
+            "1": "/skin-packs/ora-by-onetap/kill/renegade/kill-1.ogg",
+            "2": "/skin-packs/ora-by-onetap/kill/renegade/kill-2.ogg",
+            "3": "/skin-packs/ora-by-onetap/kill/renegade/kill-3.ogg",
+            "4": "/skin-packs/ora-by-onetap/kill/renegade/kill-4.ogg",
+            "5": "/skin-packs/ora-by-onetap/kill/renegade/kill-5.ogg"
+          },
+          "successive": "/skin-packs/ora-by-onetap/kill/renegade/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/ora-by-onetap/banners/renegade/default.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom",
+            "fire:sheriff",
+            "fire:operator"
+          ]
+        },
+        {
+          "id": "raja",
+          "label": "RAJA",
+          "fire": {
+            "vandal": null,
+            "phantom": null,
+            "sheriff": null,
+            "operator": null
+          },
+          "kills": {
+            "1": "/skin-packs/ora-by-onetap/kill/raja/kill-1.ogg",
+            "2": "/skin-packs/ora-by-onetap/kill/raja/kill-2.ogg",
+            "3": "/skin-packs/ora-by-onetap/kill/raja/kill-3.ogg",
+            "4": "/skin-packs/ora-by-onetap/kill/raja/kill-4.ogg",
+            "5": "/skin-packs/ora-by-onetap/kill/raja/kill-5.ogg"
+          },
+          "successive": "/skin-packs/ora-by-onetap/kill/raja/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/ora-by-onetap/banners/raja/default.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom",
+            "fire:sheriff",
+            "fire:operator"
+          ]
+        },
+        {
+          "id": "ignition",
+          "label": "Ignition",
+          "fire": {
+            "vandal": null,
+            "phantom": null,
+            "sheriff": null,
+            "operator": null
+          },
+          "kills": {
+            "1": "/skin-packs/ora-by-onetap/kill/ignition/kill-1.ogg",
+            "2": "/skin-packs/ora-by-onetap/kill/ignition/kill-2.ogg",
+            "3": "/skin-packs/ora-by-onetap/kill/ignition/kill-3.ogg",
+            "4": "/skin-packs/ora-by-onetap/kill/ignition/kill-4.ogg",
+            "5": "/skin-packs/ora-by-onetap/kill/ignition/kill-5.ogg"
+          },
+          "successive": "/skin-packs/ora-by-onetap/kill/ignition/successive.ogg",
+          "banners": [
+            {
+              "id": "default",
+              "label": "Default",
+              "url": "/skin-packs/ora-by-onetap/banners/ignition/default.png"
+            }
+          ],
+          "missing": [
+            "fire:vandal",
+            "fire:phantom",
+            "fire:sheriff",
+            "fire:operator"
+          ]
+        }
+      ]
+    }
+  ]
+}

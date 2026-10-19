@@ -1,0 +1,11 @@
+{
+  "compiledOn": "2026-10-19",
+  "allOutputAudioCodec": "vorbis",
+  "validAudioOutputs": 79,
+  "validTransparent300x300PNGs": 37,
+  "reproducibleOutputFiles": 117,
+  "fullRepeatBuildIdentical": true,
+  "reviewedGunfire": 0,
+  "missingFireCombinations": 30,
+  "tests": "node --test tests/skin-media-build.test.mjs: 3 passed"
+}

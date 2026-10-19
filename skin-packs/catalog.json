@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "compiledOn": "2026-10-19",
-  "purpose": "Research and licensed-asset import catalog; no Riot-owned media is distributed here.",
+  "purpose": "Ranked skin catalog and reviewed original-media inputs for the offline skin-pack build; source provenance is recorded in asset-review.json.",
   "ranking": {
     "source": "https://reports.valstats.site/skin-popularity-v2/",
     "sampleInventories": 60024,
@@ -132,7 +132,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection"
     },
@@ -148,7 +148,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Kuronami_Collection"
     },
@@ -164,7 +164,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Primordium_Collection"
     },
@@ -179,7 +179,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Rogue_Collection"
     },
@@ -194,7 +194,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection"
     },
@@ -209,7 +209,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection"
     },
@@ -224,7 +224,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection"
     },
@@ -239,7 +239,7 @@
       "themes": [
         "default"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection"
     },
@@ -261,7 +261,7 @@
         "raja",
         "ignition"
       ],
-      "assetStatus": "not_included",
+      "assetStatus": "partial_kills_banners_reviewed_fire_missing",
       "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
       "referencePage": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
       "notes": "ORA has five independent kill-banner/kill-audio themes and theme-specific gunfire; its four rifles/sidearms are included despite being outside the popularity top-10 and orange edition."

@@ -92,11 +92,38 @@ for(const file of files){
  }else if(/\.woff2?$/.test(p)){
   const expected=p.endsWith('.woff2')?'wOF2':'wOFF';
   if(stored.subarray(0,4).toString()!==expected)failures.push({path:p,stage:'font integrity',error:'Invalid '+expected+' signature'});
- }else if(/\.js$/.test(p)){
+ }else if(/\.(?:mjs|js)$/.test(p)){
   const syntax=spawnSync(process.execPath,['--check',file],{encoding:'utf8',windowsHide:true});
   if(syntax.status!==0)failures.push({path:p,stage:'JavaScript syntax',error:(syntax.stderr||syntax.error?.message||'JavaScript parser failed').slice(0,1200)});
  }
  resources.push(entry);
+}
+// The skin manifest is the source of runtime availability, including partial
+// themes. Every advertised URL must be playable/decodable local media.
+let skinPacks=null;
+if(has('/skin-packs/index.json')){
+ try{
+  const manifest=readJson(path.join(root,'skin-packs/index.json'));
+  if(manifest.schemaVersion!==2)throw new Error('Unsupported skin manifest version');
+  const counts={audio:0,killAudio:0,successiveAudio:0,banners:0,fire:0,missingFire:0,eligibleFireCombinations:0};
+  function skinAsset(url,kind){
+   if(typeof url!=='string'||!/^\/skin-packs\/[a-z0-9/-]+\.(?:ogg|png)$/.test(url))throw new Error('Unsafe skin asset URL');
+   requireAsset(url,'skin pack '+kind);
+   if(!has(url))return;
+   const bytes=fs.readFileSync(path.join(root,url.slice(1)));
+   if(kind==='banner'){
+    if(bytes.length<26||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||bytes.readUInt32BE(16)!==300||bytes.readUInt32BE(20)!==300||bytes[25]!==6)throw new Error('Invalid normalized RGBA skin banner: '+url);
+   }else if(bytes.subarray(0,4).toString()!=='OggS')throw new Error('Invalid Ogg skin audio: '+url);
+  }
+  for(const collection of manifest.collections)for(const theme of collection.themes){
+   for(const weapon of collection.weapons){counts.eligibleFireCombinations++;if(theme.fire[weapon]){skinAsset(theme.fire[weapon],'fire');counts.fire++}else counts.missingFire++}
+   for(const url of Object.values(theme.kills)){skinAsset(url,'kill');counts.audio++;counts.killAudio++}
+   if(theme.successive){skinAsset(theme.successive,'successive');counts.audio++;counts.successiveAudio++}
+   for(const banner of theme.banners){skinAsset(banner.url,'banner');counts.banners++}
+  }
+  for(const [key,value]of Object.entries(counts))if(manifest.counts[key]!==value)throw new Error('Skin manifest count mismatch: '+key);
+  skinPacks={resourceStatus:manifest.resourceStatus,...counts};
+ }catch(error){failures.push({path:'/skin-packs/index.json',stage:'skin pack integrity',error:error.message})}
 }
 // Expand every decoded manifest. Packed /Game identities are metadata, not URLs.
 for(const [p,data]of decrypted){
@@ -229,9 +256,9 @@ const result={schemaVersion:2,generatedAt:new Date().toISOString(),root,success:
  checks:{network:'No network used: fetch reads dist only and blocks external hosts',encryptedFormat:'Every .enc file authenticated, decrypted and decompressed with the current original-format codec',sceneCount:expectedSceneCount,mapCount:maps.length},
  resourceCount:resources.length,storedBytes:resourceManifest.storedBytes,encryptedResources:encrypted,jsonResources:jsonCount,
  inventory:{materialCandidates:materials.length,moduleCandidates:moduleCandidates.length,moduleClosureEntries:moduleReport.all?.length??moduleCandidates.length,uniqueRequirements:requirements.size,satisfied:satisfied.length,moduleExclusions:moduleReport.excluded??[]},
- scenes:scenes.length,sceneDetails:scenes,maps:mapReports,fonts:{files:fontInventory.report.files,cachedFiles:fontInventory.report.cachedFiles,groups:fontInventory.report.groups,satisfiedGroups:fontInventory.report.satisfiedGroups,missingGroups:fontInventory.report.missingGroups,byFamily:fontInventory.report.byFamily,excluded:fontInventory.report.excluded},missingRequiredAssets:requiredMissing,missingOptionalAssets:optionalMissing,aliases,alternativeGroups:alternatives,ignoredReferences:ignored,failures,
+ scenes:scenes.length,sceneDetails:scenes,maps:mapReports,skinPacks,fonts:{files:fontInventory.report.files,cachedFiles:fontInventory.report.cachedFiles,groups:fontInventory.report.groups,satisfiedGroups:fontInventory.report.satisfiedGroups,missingGroups:fontInventory.report.missingGroups,byFamily:fontInventory.report.byFamily,excluded:fontInventory.report.excluded},missingRequiredAssets:requiredMissing,missingOptionalAssets:optionalMissing,aliases,alternativeGroups:alternatives,ignoredReferences:ignored,failures,
  sha256Manifest:{file:path.basename(hashFile),sha256:sha256(fs.readFileSync(hashFile)),fileCount:resources.length},
  limitations:['Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.','A lightmap atlas is considered present when either complete PNG or complete AVIF pair exists; Edge supports the saved AVIF assets.']};
 fs.writeFileSync(reportFile,JSON.stringify(result,null,2));
-console.log(JSON.stringify({success:result.success,resourceCount:result.resourceCount,encryptedResources:encrypted,jsonResources:jsonCount,scenes:scenes.length,maps:mapReports.filter(x=>x.complete).length,fonts:result.fonts,requiredMissingCount:requiredMissing.length,requiredMissing:requiredMissing.map(x=>x.path).slice(0,30),optionalMissingCount:optionalMissing.length,optionalMissing:optionalMissing.map(x=>x.path).slice(0,10),failures,report:reportFile,sha256Manifest:hashFile},null,2));
+console.log(JSON.stringify({success:result.success,resourceCount:result.resourceCount,encryptedResources:encrypted,jsonResources:jsonCount,scenes:scenes.length,maps:mapReports.filter(x=>x.complete).length,skinPacks,fonts:result.fonts,requiredMissingCount:requiredMissing.length,requiredMissing:requiredMissing.map(x=>x.path).slice(0,30),optionalMissingCount:optionalMissing.length,optionalMissing:optionalMissing.map(x=>x.path).slice(0,10),failures,report:reportFile,sha256Manifest:hashFile},null,2));
 if(!result.success)process.exitCode=1;

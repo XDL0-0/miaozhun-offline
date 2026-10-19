@@ -1,23 +1,43 @@
 # 瞄准专家本机离线版
 
-Windows 本机离线训练包。双击 `瞄准专家-离线版.exe`，启动仅监听 `127.0.0.1:18746` 的服务，并使用 Edge 打开训练界面。
+Windows / Linux 本机离线训练包。Windows 可双击 `瞄准专家-离线版.exe`；Linux 可用系统 Node.js 启动。服务仅监听 `127.0.0.1:18746`，训练界面为 [http://127.0.0.1:18746/aim](http://127.0.0.1:18746/aim)。
 
-`site/` 保存采集的原始公开客户端资源，`dist/` 保存可运行的离线版本。`prepare-offline.mjs` 根据原始资源及离线适配脚本重建 `dist/`；`verify-offline.mjs` 检查素材、场景和 JavaScript。自带 Node 运行时位于 `runtime/`。
+`site/` 保存采集的原始公开客户端资源，`dist/` 保存可运行的离线版本。`prepare-offline.mjs` 根据原始资源及版本化补丁重建 `dist/`；`verify-offline.mjs` 检查素材、场景和 JavaScript。Windows 自带 Node 运行时位于 `runtime/`。
 
 成绩、设置、收藏、录像与编辑器草稿保存在使用此应用的浏览器本机存储中，不包含在仓库内；可在界面中点击“完整备份”单独导出。
 
-首次提交是进一步性能优化前的离线基线，标签为 `offline-baseline-2026-10-16`。第三方客户端及素材保留其原有权利归属。
+## 构建与启动
+
+Linux 需要 Node.js，皮肤素材构建还需要 `ffmpeg` 位于 `PATH`。在仓库目录运行：
+
+```bash
+node prepare-offline.mjs
+node verify-offline.mjs
+node server.mjs
+```
+
+构建直接使用仓库内已审查的原始媒体，无需重新下载，也不依赖 `skin-packs/local/wiki-downloads/`。Windows 重建时同样需要 `ffmpeg`，并可将以上 `node` 替换为 `.\runtime\node.exe`。已有离线包可直接启动服务。
+
+## 枪械皮肤与击杀反馈
+
+在“参数设置 → 音效 → 枪械皮肤与击杀反馈”中，为 Vandal、Phantom、Sheriff、Operator 分别选择可用皮肤、主题与横幅样式，并试听击杀音效。ORA by OneTap 的 Base、Watch、RENEGADE、RAJA、Ignition 五个主题均支持这四种枪械；其他皮肤按原有枪械覆盖范围提供。选择保存在浏览器本机。
+
+当前已审查并构建 **79 段击杀音效与 37 张透明合成击杀横幅**。**30 个枪械/主题组合的独立开火音效全部缺失**，会使用当前原版开火效果；这不影响已有击杀音效与横幅。面板分别显示素材缺失、加载中、失败及就绪状态，并提供单杀、连续 1–5 杀、Successive 原始片段与横幅预览。
+
+素材异步加载并提前解码；游戏开火、击杀时只读取已解码缓存，缺失或失败的素材使用原版效果。实战击杀音沿用原客户端的 1–5 循环，超过五杀从第 1 段重新开始。Successive 原始片段及 Ayakashi 第 6 杀仅用于试听。横幅为完整合成图片，HUD 叠加连杀计数与爆头反馈。
+
+下载、构建与浏览器实测状态分别记录在 [素材状态](skin-packs/ASSET_STATUS.md)；构建方式、来源与详细操作见 [皮肤说明](skin-packs/README.md)。
 
 ## 性能优化与验证
 
 `patches/` 中的补丁在构建时应用，原始 `site/` 保留不变。当前优化覆盖相邻模拟步的移动插值、共享 HUD 刷新、本机数值限帧和场景资源预热。数值帧率上限可在“参数设置”中选择，与刷新率设置共同生效。
 
-在本目录的 PowerShell 中运行：
+运行行为测试：
 
-```powershell
-.\runtime\node.exe --test
-.\runtime\node.exe prepare-offline.mjs
-.\runtime\node.exe verify-offline.mjs
+```bash
+node --test
 ```
 
-测试覆盖实际客户端函数的行为；完整校验检查本机素材和脚本。真实训练中的流畅度仍取决于地图、画面设置与设备负载。
+测试覆盖实际客户端函数和皮肤媒体构建行为；完整校验检查本机素材和脚本。真实训练中的流畅度仍取决于地图、画面设置与设备负载。
+
+首次提交是进一步性能优化前的离线基线，标签为 `offline-baseline-2026-10-16`。第三方客户端及素材保留其原有权利归属。

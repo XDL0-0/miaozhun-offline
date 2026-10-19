@@ -1,31 +1,49 @@
-# Imported media status — 2026-10-19
+# Skin media status — 2026-10-19
 
-Source: VALORANT Wiki's linked public Google Drive **Cosmetic SFX files** folder:
-https://drive.google.com/drive/folders/1PkJyMg_Kj7-rJHoptMudeT5VorBwM8jG
+Downloaded, reviewed, staged and integrated describe different steps. The source inventory contains many screenshots, icons and non-firing sounds; those do not become playable skin effects merely by being downloaded.
 
-This branch currently stores **79 original MP3 files (13,425,505 bytes)** in `skin-packs/media/`, verified by reading the branch's recursive Git tree.
+| Step | Evidence / current result |
+|---|---|
+| Downloaded inventory | `skin-packs/local/wiki-downloads/`: 1,100 files — 978 PNG, 10 GIF and 112 MP3. This ignored acquisition directory is unnecessary for rebuilding. |
+| Reviewed build inputs | `skin-packs/media/` plus `asset-review.json`: 79 kill MP3 and 37 transparent composite banner PNG, with source URLs and SHA-256 hashes. |
+| Staged runtime media | Schema-2 `dist/skin-packs/index.json`: 79 Vorbis OGG and 37 transparent 300 × 300 PNG. All nine collections and thirteen themes are retained with explicit missing entries. |
+| Client integration | Settings selection, per-gun persistence, audition, asynchronous preload, decoded-cache playback, native fallback and composite HUD bridges are implemented in versioned patches. All 86 tests passed, including the actual client audio, round readiness and Kill Banner functions. Browser settings, theme switching, Watch 1–5 audition and training-scene loading were checked. |
+| Still missing | Authenticated standalone firing sounds: **0 / 30 weapon/theme combinations supplied**. All firing uses the current original client effect. Separate banner animation layers were not supplied. |
 
-| Collection | Original MP3 files |
-|---|---:|
-| ORA by OneTap (Base, Watch, RENEGADE, RAJA, Ignition) | 30 |
-| Prelude to Chaos | 6 |
-| Kuronami | 6 |
-| Primordium | 6 |
-| Rogue | 6 |
-| RGX 11z Pro | 6 |
-| Ayakashi (Kill 1–6 + Successive) | 7 |
-| Nocturnum | 6 |
-| Mystbloom | 6 |
-| **Total** | **79** |
+## Reviewed coverage
 
-Files were copied as original MP3, without resampling or editing. They are categorized under `skin-packs/media/<collection>/kill/<theme>/`.
+| Collection | Kill MP3 | Composite banners | Missing fire combinations |
+|---|---:|---:|---:|
+| Prelude to Chaos | 6 | 4 | 1 |
+| Kuronami | 6 | 4 | 2 |
+| Primordium | 6 | 4 | 2 |
+| Rogue | 6 | 4 | 1 |
+| RGX 11z Pro | 6 | 4 | 1 |
+| Ayakashi | 7 | 4 | 1 |
+| Nocturnum | 6 | 4 | 1 |
+| Mystbloom | 6 | 4 | 1 |
+| ORA by OneTap, all five themes | 30 | 5 | 20 |
+| **Total** | **79** | **37** | **30** |
 
-## Still NOT completed
+Each theme includes kill clips 1–5 and one Successive recording. Ayakashi additionally includes kill 6. ORA's Base, Watch, RENEGADE, RAJA and Ignition are selectable for all four requested guns: Vandal, Phantom, Sheriff and Operator. Its 20 fire mappings are independently missing; another theme or weapon's sound is not substituted.
 
-- Gunfire / firing sound samples for each weapon and theme (not found in this source folder's selected kill-SFX inventory).
-- Kill-banner images / icon textures (not downloaded).
-- Browser runtime integration: existing `fireKit`/`killKit`/`killbanner` selectors do not yet load `skin-packs/media`.
-- Updating `scripts/skin-packs.mjs` staging format: earlier scaffold expects local OGG+PNG input, whereas the directly sourced media here are MP3.
-- Game testing and UI audition.
+The 79 tracked kill clips duplicate the corresponding wiki download's decoded audio; they are **79 unique kill clips**, not 158. The other 33 downloaded MP3s comprise 32 inspect clips and one finisher clip. None is a confirmed standalone firing sample. Downloaded weapon screenshots, page icons and GIFs are also excluded from the skin runtime.
 
-Original game media rights must be handled under the project owner's reported official authorization; this file does not represent independent verification of rights.
+The 37 reviewed PNGs are complete transparent banner composites: four variants for each of eight ordinary collections and one for each ORA theme. They cannot establish separate frame, ring, emblem, pip or headshot layers. The HUD adds count/headshot feedback to the composite.
+
+## Build and verification
+
+- Build from repository inputs with `node prepare-offline.mjs`; start on Linux with `node server.mjs`. Rebuilding requires Node.js and `ffmpeg` on `PATH`, and needs no network download.
+- `node scripts/skin-packs.mjs --audit` reports reviewed source presence, SHA-256 mismatches and real missing capabilities. `--stage` runs the schema-2 builder; neither command claims browser acceptance.
+- [build-validation.json](./audit/build-validation.json) records 79 valid Vorbis outputs, 37 transparent 300 × 300 PNGs and byte-identical repeated builds across 117 output files including the manifest.
+- Linux local serving and offline-resource verification have passed. Runtime validation is recorded separately in [runtime-validation.json](./audit/runtime-validation.json). The settings panel shows each asset's live loading/readiness/failure state.
+
+The in-app browser lost pointer lock during manual shooting, so live manual kill playback was not accepted as browser evidence. The actual patched playback and HUD functions passed automated tests, including the first kill with the native banner disabled, pause, expiry and round reset. Firing-switch tests use synthetic media fixtures because no real skin firing sample is supplied.
+
+Live kill playback follows the original 1–5 cycle and wraps after five. Successive recordings and Ayakashi kill 6 are available for audition only. Playback events read predecoded caches; missing or failed media retains the original effect.
+
+## Source records
+
+Source review: [asset-review.json](./asset-review.json), [source-media-audit.json](./audit/source-media-audit.json), and [banner contact sheet](./audit/banners-contact-sheet.jpg). Kill-audio provenance also references the wiki-linked [Cosmetic SFX Drive folder](https://drive.google.com/drive/folders/1PkJyMg_Kj7-rJHoptMudeT5VorBwM8jG).
+
+Original game media remains Riot Games property. The project owner reports official authorization for this use; this status report records technical evidence and provenance.
