@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "algorithm": "SHA256",
   "root": "dist",
-  "createdAt": "2026-10-19T12:20:33.164Z",
+  "createdAt": "2026-10-19T12:27:53.054Z",
   "fileCount": 1976,
-  "storedBytes": 175632027,
+  "storedBytes": 175631996,
   "encryptedAssets": 410,
   "resources": [
     {
@@ -9234,8 +9234,8 @@
     },
     {
       "path": "/js/B9C9f4Y8.js",
-      "bytes": 508555,
-      "sha256": "82a606d663b5984931c28f9e65993071e55bd22696e05566e89681fed44478aa"
+      "bytes": 508524,
+      "sha256": "1600a34936420eb4245311d1b888d5dccc79ee56634b2a2f161f2c65298ffbdf"
     },
     {
       "path": "/js/BB-zep8c.js",
@@ -9890,7 +9890,7 @@
     {
       "path": "/offline-manifest.json",
       "bytes": 817,
-      "sha256": "4bc6eafe30cb84276ad7f046f3862cd5cf24a40b9c4772a5a2080960f342d501"
+      "sha256": "ae61caf7ba39fbcf0f3ffbe548823f4efce08f549abc2e92ceb7dfe79638b8e5"
     },
     {
       "path": "/offline-runtime.js",

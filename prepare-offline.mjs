@@ -39,6 +39,14 @@ if(fs.existsSync(studioFile)){
   .replace('a("small",null,"瞄准专家")','a("small",null,"本机场景库 · 支持 JSON 导入/导出")');
  fs.writeFileSync(studioFile,studio);
 }
+const hallFile=path.join(dist,'js/B9C9f4Y8.js');
+let hall=fs.readFileSync(hallFile,'utf8');
+// Disable the initial community/desktop promotion before localization, for all
+// languages and fresh profiles, without relying on the welcome snooze storage.
+const welcomeInitialState='B=E(!x.value&&!E_()&&!Wl(C.query[Hl]))';
+if(hall.split(welcomeInitialState).length!==2)throw new Error('首次启动弹窗版本不匹配，未修改');
+hall=hall.replace(welcomeInitialState,'B=E(!1)');
+fs.writeFileSync(hallFile,hall);
 const trainingFile=path.join(dist,'js/DVK7uRSu.js');
 let training=fs.readFileSync(trainingFile,'utf8');
 // Workshop rounds are already recorded with their complete scene document. Make

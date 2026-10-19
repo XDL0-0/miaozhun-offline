@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T12:20:33.166Z",
+  "generatedAt": "2026-10-19T12:27:53.057Z",
   "root": "/home/yuyuan/miaozhun-offline/dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
@@ -11,7 +11,7 @@
     "mapCount": 6
   },
   "resourceCount": 1976,
-  "storedBytes": 175632027,
+  "storedBytes": 175631996,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
@@ -2007,7 +2007,7 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "437ace720417964a0aaee5e371f1e56510b41ef57aa163648b030eb08d1bf43e",
+    "sha256": "6b2a8d4eb7ed42d949d3e045c7758cf24082e2a933e5844651c659a021ffae83",
     "fileCount": 1976
   },
   "limitations": [
