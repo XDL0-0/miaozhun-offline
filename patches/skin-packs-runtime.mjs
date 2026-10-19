@@ -4,6 +4,7 @@ const STORAGE_KEY = 'aim-offline.skin-packs.v2';
 const original = () => ({collection: 'default', theme: 'default', banner: 'default', fireEnabled: true, killEnabled: true, bannerEnabled: true});
 export const killIndex = kills => (Math.max(1, Math.floor(Number(kills) || 1)) - 1) % 5 + 1;
 const safePath = value => typeof value === 'string' && /^\/skin-packs\/[a-z0-9/-]+\.(ogg|png)$/.test(value) ? value : null;
+const bannerParts = banner => banner?.layers ? [...Object.values(banner.layers), banner.headshot].filter(Boolean) : [banner?.url];
 
 export function createSkinPackRuntime(options = {}) {
   const fetcher = options.fetcher ?? (globalThis.fetch && globalThis.fetch.bind(globalThis));
@@ -122,7 +123,11 @@ export function createSkinPackRuntime(options = {}) {
       if (!theme) continue;
       if (selection.fireEnabled) tasks.push(loadAudio(theme.fire[current], context));
       if (selection.killEnabled) for (const url of Object.values(theme.kills)) tasks.push(loadAudio(url, context));
-      if (selection.bannerEnabled) tasks.push(loadImage(theme.banners.find(item => item.id === selection.banner)?.url));
+      if (selection.bannerEnabled) {
+        const banner = theme.banners.find(item => item.id === selection.banner);
+        // Decode every layer before the scene gate opens; kills only read caches.
+        for (const url of new Set([banner?.url, ...bannerParts(banner)])) tasks.push(loadImage(url));
+      }
     }
     await Promise.all(tasks);
     emit();
@@ -140,7 +145,15 @@ export function createSkinPackRuntime(options = {}) {
         if (value.schemaVersion !== 2 || !Array.isArray(value.collections)) throw new Error('皮肤目录版本不匹配');
         for (const collection of value.collections) {
           if (!Array.isArray(collection.weapons) || !Array.isArray(collection.themes)) throw new Error('皮肤目录格式错误');
-          for (const theme of collection.themes) if (!theme.fire || !theme.kills || !Array.isArray(theme.banners)) throw new Error('主题目录格式错误');
+          for (const theme of collection.themes) {
+            if (!theme.fire || !theme.kills || !Array.isArray(theme.banners)) throw new Error('主题目录格式错误');
+            for (const banner of theme.banners) if (banner.layers && (
+              !['frame', 'ring', 'emblem', 'pip'].every(layer => safePath(banner.layers[layer])) ||
+              !Number.isFinite(banner.pipRadius) || banner.pipRadius <= 0 || banner.pipRadius > 150 ||
+              !Array.isArray(banner.headshotOffset) || banner.headshotOffset.length !== 2 ||
+              banner.headshotOffset.some(value => !Number.isFinite(value) || Math.abs(value) > 150)
+            )) throw new Error('主题目录格式错误');
+          }
         }
         manifest = value; manifestError = '';
         for (const weapon of SKIN_WEAPONS) { try { selections[weapon] = normalized(weapon, saved[weapon]); } catch { selections[weapon] = original(); } }
@@ -186,11 +199,15 @@ export function createSkinPackRuntime(options = {}) {
   function bannerKit() {
     const {selection, theme} = details(activeWeapon);
     const banner = theme?.banners.find(item => item.id === selection.banner);
-    return selection?.bannerEnabled && banner && images.has(banner.url) ? 'skin:' + banner.url : null;
+    return selection?.bannerEnabled && banner && bannerParts(banner).every(url => images.has(url)) ? 'skin:' + banner.url : null;
   }
   function bannerDefinition(kit) {
     const url = kit?.startsWith('skin:') ? safePath(kit.slice(5)) : null;
-    return url && images.has(url) ? {composite: url, pipRadius: 100, headshotOffset: [0, -90]} : null;
+    if (!url) return null;
+    const banner = manifest?.collections.flatMap(collection => collection.themes.flatMap(theme => theme.banners)).find(item => item.url === url);
+    if (banner?.layers) return bannerParts(banner).every(part => images.has(part))
+      ? {layers: banner.layers, headshot: banner.headshot, pipRadius: banner.pipRadius, headshotOffset: banner.headshotOffset, pipFallback: banner.pipFallback} : null;
+    return images.has(url) ? {composite: url, pipRadius: 100, headshotOffset: [0, -90]} : null;
   }
   function setActiveWeapon(weapon) {
     const next = SKIN_WEAPONS.includes(weapon) ? weapon : null;
@@ -201,7 +218,9 @@ export function createSkinPackRuntime(options = {}) {
     const {selection, theme} = details(weapon);
     const banner = theme?.banners.find(item => item.id === selection.banner);
     const status = url => !safePath(url) ? 'missing' : failures.has(url) ? 'failed' : buffers.has(url) || images.has(url) ? 'ready' : 'loading';
-    return {fire: status(theme?.fire[weapon]), kills: Array.from({length: 5}, (_, i) => status(theme?.kills[i + 1])), banner: status(banner?.url)};
+    const parts = bannerParts(banner).map(status);
+    const bannerStatus = ['missing', 'failed', 'loading'].find(state => parts.includes(state)) ?? 'ready';
+    return {fire: status(theme?.fire[weapon]), kills: Array.from({length: 5}, (_, i) => status(theme?.kills[i + 1])), banner: bannerStatus};
   }
   async function audition(weapon, kind, kills = 1, audioSettings = {}) {
     stopAudition();
@@ -242,8 +261,18 @@ export function createSkinPackRuntime(options = {}) {
   };
 }
 
-// Composite PNGs are complete banners. Keep them intact and add the HUD's count
-// and headshot state; do not claim that a flat wiki image contains separate layers.
+// Some source packs (Ayakashi) supply transparent 1x1 pip placeholders. Keep
+// their emblem/ring, but provide visible generic radial markers instead of
+// pretending that the source includes the original game's missing effect.
+export function drawFallbackPip(context, x, y, rotation, scale = 1) {
+  context.save(); context.translate(x, y); context.rotate(rotation); context.scale(scale, scale);
+  context.fillStyle = '#f3f5f8'; context.beginPath();
+  context.moveTo(0, -8); context.lineTo(5, 1); context.lineTo(0, 7); context.lineTo(-5, 1);
+  context.closePath(); context.fill(); context.restore();
+}
+
+// Legacy schema-2 packs may still supply a composite. Reviewed layered packs use
+// the native HUD's frame/ring/emblem/pip drawing path instead of this fallback.
 export function drawCompositeBanner(canvas, context, image, animation, kills, headshot, pixelRatio = globalThis.devicePixelRatio || 1) {
   if (!image?.complete || !(image.naturalWidth > 0)) return false;
   const size = Math.max(1, Math.round(canvas.clientWidth * pixelRatio));

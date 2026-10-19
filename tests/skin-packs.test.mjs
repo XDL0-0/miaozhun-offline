@@ -17,7 +17,7 @@ function partialFixture(){
   const collection={...catalog.collections.find(item=>item.id==='ora-by-onetap'),themes:['base']};
   const selected={schemaVersion:1,audio:review.audio.filter(entry=>entry.collection===collection.id&&entry.theme==='base'&&entry.id==='1'),
     banners:review.banners.filter(entry=>entry.collection===collection.id&&entry.theme==='base'),fire:[]};
-  for(const entry of [...selected.audio,...selected.banners]){
+  for(const entry of [...selected.audio,...selected.banners,...selected.banners.flatMap(banner=>Object.values(banner.layers??{}))]){
     const target=path.join(root,entry.path);
     fs.mkdirSync(path.dirname(target),{recursive:true});
     fs.copyFileSync(path.join(projectRoot,entry.path),target);
@@ -46,7 +46,7 @@ test('all exclusive top-ten skins are represented with exact weapon coverage',()
   assert.equal(grouped.size,8);
 });
 
-test('ORA requires independent fire per weapon and theme, and actual composite banners',()=>{
+test('ORA requires independent fire per weapon and theme, previews and radial banner layers',()=>{
   const ora=catalog.collections.find(c=>c.id==='ora-by-onetap');
   assert.equal(ora.tier,'Ultra');
   assert.deepEqual(ora.themes,['base','watch','renegade','raja','ignition']);
@@ -57,7 +57,9 @@ test('ORA requires independent fire per weapon and theme, and actual composite b
   assert.ok(fire.every(asset=>asset.source&&asset.sha256),'every weapon and theme has an independently reviewed gunfire excerpt');
   assert.equal(banners.length,5);
   assert.ok(banners.every(asset=>asset.id==='banner:default'&&asset.source.endsWith('/default.png')));
-  assert.ok(!assets.some(asset=>/emblem|frame|ring|pip|headshot/.test(asset.id)));
+  const layers=assets.filter(asset=>asset.kind==='banner-layer');
+  assert.equal(layers.length,25);
+  assert.ok(layers.every(asset=>asset.source&&asset.sha256));
   const oneFire={collection:ora.id,theme:'base',weapon:'vandal',path:'skin-packs/media/ora-by-onetap/fire/base/vandal.mp3',sha256:'a'.repeat(64)};
   const changed=requiredAssets(ora,{...review,fire:[oneFire]}).filter(asset=>asset.kind==='fire');
   assert.equal(changed.find(asset=>asset.theme==='base'&&asset.weapon==='vandal').source,oneFire.path);
@@ -67,9 +69,10 @@ test('ORA requires independent fire per weapon and theme, and actual composite b
 test('review audit covers every catalog gunfire combination and all retained effects',()=>{
   const packs=audit(),assets=packs.flatMap(pack=>pack.assets);
   assert.equal(packs.length,9);
-  assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind!=='banner').length,109);
+  assert.equal(assets.filter(asset=>asset.status==='present'&&['fire','kill','successive'].includes(asset.kind)).length,109);
   assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='fire').length,30);
   assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='banner').length,37);
+  assert.equal(assets.filter(asset=>asset.status==='present'&&asset.kind==='banner-layer').length,185);
   assert.deepEqual(packs.flatMap(pack=>pack.missing),[]);
   assert.ok(packs.every(pack=>pack.sourceStatus==='complete'&&pack.complete));
   assert.ok(assets.some(asset=>asset.kind==='kill'&&asset.id==='kill:6'&&asset.source.includes('/ayakashi/')));
@@ -79,11 +82,11 @@ test('audit distinguishes missing review, absent bytes, and changed bytes withou
   const f=partialFixture();
   try{
     let check=auditPack(f.collection,f);
-    assert.equal(check.present,2);
+    assert.equal(check.present,7);
     assert.equal(check.missing.find(asset=>asset.id==='fire:vandal').status,'not-reviewed');
     const unreviewed=path.join(f.root,'skin-packs','local',f.collection.id,'weapons','vandal','fire.ogg');
     fs.mkdirSync(path.dirname(unreviewed),{recursive:true});fs.writeFileSync(unreviewed,'lookalike');
-    assert.equal(auditPack(f.collection,f).present,2);
+    assert.equal(auditPack(f.collection,f).present,7);
     fs.appendFileSync(path.join(f.root,f.review.audio[0].path),'changed bytes');
     check=auditPack(f.collection,f);
     assert.equal(check.missing.find(asset=>asset.id==='kill:1').status,'hash-mismatch');

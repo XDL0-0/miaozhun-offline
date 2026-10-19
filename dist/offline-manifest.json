@@ -34,9 +34,11 @@
     "killAudio": 66,
     "successiveAudio": 13,
     "banners": 37,
+    "layeredBanners": 37,
+    "bannerLayers": 86,
     "fire": 30,
     "missingFire": 0,
     "eligibleFireCombinations": 30
   },
-  "created": "2026-10-19T14:27:10.254Z"
+  "created": "2026-10-19T16:45:16.115Z"
 }

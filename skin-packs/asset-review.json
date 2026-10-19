@@ -3,7 +3,7 @@
   "compiledOn": "2026-10-19",
   "review": {
     "audio": "Every stored kill MP3 decoded with ffmpeg -map 0:a:0 -vn. Gunfire uses 30 reviewed single-shot segments from downloaded official Riot CDN previews, retained as 14 complete original AAC tracks.",
-    "banners": "Reviewed actual RGBA pixels in banners-contact-sheet.jpg. These are transparent composite icons with frames, emblems and ornaments already combined; independent animation/headshot layers were not supplied.",
+    "banners": "Composite PNGs remain settings thumbnails. Gameplay now uses separately reviewed frame, ring, emblem, pip and headshot PNG layers from Kingdom Archives, preserving source pixel dimensions and measured placement. The same skin-colored pip is placed radially 1–5 times by the existing client HUD; no first-kill composite is drawn during layered gameplay. Ayakashi supplies four transparent 1x1 pip placeholders; an explicit generic-chevron fallback provides visible radial kill states for those four palettes.",
     "provenance": "Local wiki download manifest paths and hashes verified against bytes. All 79 tracked kill clips match decoded source PCM; 76 pairs are also byte-identical.",
     "scope": "All 30 catalog weapon/theme fire combinations have independent reviewed single-shot segments. ORA has five distinct theme segments for each of four weapons. Inspection, kill and finisher clips are not relabeled as gunfire.",
     "evidence": [
@@ -11,7 +11,8 @@
       "skin-packs/audit/catalog-weapons-contact-sheet.jpg",
       "skin-packs/audit/animated-content-contact-sheet.jpg",
       "skin-packs/audit/source-media-audit.json",
-      "skin-packs/audit/fire-review.json"
+      "skin-packs/audit/fire-review.json",
+      "skin-packs/audit/banner-layer-review.json"
     ],
     "fire": "Verified actual weapon model, muzzle flash/recoil/casing and matching audio attack. Full original AAC retained with decoded PCM equality to official MP4; exact cuts, 20ms tail fades and constant peak gains are recorded per entry. These are preview recordings, not unpacked game audio."
   },
@@ -30,7 +31,66 @@
         "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner.png?1e0b5",
         "sha256": "1befdb6eaad45ed52d919532e853db58147b3970beeb0f8125012ef07ce8abc7"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_frame.png",
+          "sha256": "c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0",
+          "width": 240,
+          "height": 240,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_emblem.png",
+          "sha256": "932f489b97454de1cabcff4aa29f209731b841cee3c1386d269a9d867fe08913",
+          "width": 184,
+          "height": 184,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip.png",
+          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
+          "width": 1,
+          "height": 1,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        -0.3,
+        -18.5
+      ],
+      "pipFallback": "generic-chevron",
+      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
     },
     {
       "collection": "ayakashi",
@@ -46,7 +106,66 @@
         "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Blue.png?f2a15",
         "sha256": "c08deb50ad777bd1b6c33901566ba90f59dedcd9dc97eee573a60b2a61d6ead3"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_frame.png",
+          "sha256": "c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0",
+          "width": 240,
+          "height": 240,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_emblem_v3.png",
+          "sha256": "83fb8483b8608625a6a2a080c78ab451bc7b8b6eb3e803a340291729e5ffeeab",
+          "width": 184,
+          "height": 184,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v3.png",
+          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
+          "width": 1,
+          "height": 1,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        -0.3,
+        -18.5
+      ],
+      "pipFallback": "generic-chevron",
+      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
     },
     {
       "collection": "ayakashi",
@@ -62,7 +181,66 @@
         "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Pink.png?089ec",
         "sha256": "f9eff9c5b656ee55e7043d004535b806988bc9647617e0a5ffb49b86217a7b13"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_frame.png",
+          "sha256": "c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0",
+          "width": 240,
+          "height": 240,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_emblem_v2.png",
+          "sha256": "81fd082d9233cd9ad6a8ae6629e676ae3a994365c16f0f01000b9a0edb55a23b",
+          "width": 184,
+          "height": 184,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v2.png",
+          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
+          "width": 1,
+          "height": 1,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        -0.3,
+        -18.5
+      ],
+      "pipFallback": "generic-chevron",
+      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
     },
     {
       "collection": "ayakashi",
@@ -78,7 +256,66 @@
         "page": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Ayakashi_Kill_Banner_Red.png?0c837",
         "sha256": "c0ae47ee69acb5244dd78439e5726ffe3701c8ea60ae108f4a0cbfa8babe6c7d"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_frame.png",
+          "sha256": "c8c4c55ce89ae29abbdccc1683b5faa3ba73b93b2977597929927229087e5db0",
+          "width": 240,
+          "height": 240,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_emblem_v1.png",
+          "sha256": "ff40fe5aad2892e08977af5b063681360e5ec5fe3b213ffc4fca4f436c0dd354",
+          "width": 180,
+          "height": 180,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/ayakashi/ayakashi_pip_v1.png",
+          "sha256": "98e76a0dc4c1570a127248d4c4b53c67d707a5aaec265860ab982b95b277186b",
+          "width": 1,
+          "height": 1,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/ayakashi/ayakashi_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=ayakashi",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        -0.3,
+        -18.5
+      ],
+      "pipFallback": "generic-chevron",
+      "pipFallbackReason": "The source pip is a transparent 1x1 placeholder. Use a generic white radial chevron, preserving the original frame/ring/emblem and recording that the skin-specific pip effect is unavailable."
     },
     {
       "collection": "kuronami",
@@ -94,7 +331,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner.png?d37f8",
         "sha256": "c6744c2e39dccd1644cdbdd97642adafc43769b589a9a36d6a6830253f20c6df"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_frame.png",
+          "sha256": "c53233d072f9cc01208be5e5a0412a40749476a8a053132d6c3aacf19d7964fb",
+          "width": 256,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_emblem.png",
+          "sha256": "b8b9de4dbd2c1949c2d994c71eef0a51996e8bf088d772d0b3c43cc6a79ea0a1",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_pip.png",
+          "sha256": "2d1ec68f53670249d30a308182995a94bb7e5ed15650b55259e4bcde674e6050",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 90,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "kuronami",
@@ -110,7 +404,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner_Black.png?426ca",
         "sha256": "e394e9394e26d87c2aceedbedb2629dada8a874ae67b762ee89e81dd4ec40788"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_frame.png",
+          "sha256": "c53233d072f9cc01208be5e5a0412a40749476a8a053132d6c3aacf19d7964fb",
+          "width": 256,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_emblem_v3.png",
+          "sha256": "5feea97d644c0a9dcf6ecc208ead6c5169441c4e174e0d93e03a180ca50f221c",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_pip_v3.png",
+          "sha256": "2f2342278a456d1441ec1d64c530103c58fc163b97ff46571e42f84b9802288b",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 90,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "kuronami",
@@ -126,7 +477,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner_Purple.png?1c34e",
         "sha256": "c3f1304ff0fd2393e3a45b43eff3736ebbcecde9e2bcf21d572216f5a93cf33f"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_frame.png",
+          "sha256": "c53233d072f9cc01208be5e5a0412a40749476a8a053132d6c3aacf19d7964fb",
+          "width": 256,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_emblem_v1.png",
+          "sha256": "e293c4ffd345561c52fa22096312735cb6f0d4e11fa3f0c03a09dc40bf85a795",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_pip_v1.png",
+          "sha256": "271e12453ff1298666c6aadcddad7864d5abc191cc8ae9a2cb77e086091876d3",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 90,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "kuronami",
@@ -142,7 +550,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Kuronami_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Kuronami_Kill_Banner_White.png?aad6a",
         "sha256": "e662695bd4d22c3e51f9c2497e3a4826e2ee1748c922c57742ef5321dc1f86e7"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_frame.png",
+          "sha256": "c53233d072f9cc01208be5e5a0412a40749476a8a053132d6c3aacf19d7964fb",
+          "width": 256,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_emblem_v2.png",
+          "sha256": "be497d4b83c45acda596f1498922b454c830a55a0e7b8ebce5a7a16b53c1a522",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/kuronami/kuronami_pip_v2.png",
+          "sha256": "bb336f92c4934c1e7e2d9a47e7bb190e9c418c6fc8bcca775ccffb9bc1f77c1f",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/kuronami/kuronami_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=kuronami",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 90,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "mystbloom",
@@ -158,7 +623,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner.png?483bf",
         "sha256": "e15519c149f0035a6c26f443b9642609a65adf1afe0613dc5ee535d8aaa5c2da"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_frame.png",
+          "sha256": "e8e0fa66d255dc6d2cc6e74c0a9c6766fb9c18ac50f65846d07ba7d1f12b7f0a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_ring.png",
+          "sha256": "2b04fc7bc6cf75435b8cf1ec3402b5ffc400ba5591f4cb77ee04dde78d628d94",
+          "width": 127,
+          "height": 127,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_emblem.png",
+          "sha256": "dd4dfc70a0f0235cdec23461b011187f3ac2cd90c43b22c0a2b8510b6e332afc",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_pip.png",
+          "sha256": "37c19d8f67937fdf12ece09a62d243c8e0541fb47838721b2c044b2d5cac888d",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 70,
+      "headshotOffset": [
+        0,
+        -29
+      ]
     },
     {
       "collection": "mystbloom",
@@ -174,7 +696,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner_Blue.png?1a331",
         "sha256": "aa460c69f870a7f77297d8b3eb4fd62aa4377918d515d20154cad39858a3a58f"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_frame.png",
+          "sha256": "e8e0fa66d255dc6d2cc6e74c0a9c6766fb9c18ac50f65846d07ba7d1f12b7f0a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_ring.png",
+          "sha256": "2b04fc7bc6cf75435b8cf1ec3402b5ffc400ba5591f4cb77ee04dde78d628d94",
+          "width": 127,
+          "height": 127,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_emblem_v1.png",
+          "sha256": "af8b4de994aa755c4ab0edaffbff39308cbb5ca0cc0c8acd9267d6fb0e80369b",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_pip_v1.png",
+          "sha256": "46063c88733dbab8f42ff658068584e47035caa44533fcbe00b4a182dd87ce2e",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 70,
+      "headshotOffset": [
+        0,
+        -29
+      ]
     },
     {
       "collection": "mystbloom",
@@ -190,7 +769,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner_Orange.png?bb020",
         "sha256": "d4f411090bd5bb1448222c7c19cf450793f150bf98660a59eb433941e683a2f0"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_frame.png",
+          "sha256": "e8e0fa66d255dc6d2cc6e74c0a9c6766fb9c18ac50f65846d07ba7d1f12b7f0a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_ring.png",
+          "sha256": "2b04fc7bc6cf75435b8cf1ec3402b5ffc400ba5591f4cb77ee04dde78d628d94",
+          "width": 127,
+          "height": 127,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_emblem_v2.png",
+          "sha256": "72a63eccf9fc4c7fed392a17a101602b1c9e26f78bf90b752dce4eae385daf05",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_pip_v2.png",
+          "sha256": "8ff3df9390829cb313a11bc474b98fd5e842fc0f92d93b0a8a1adf780f31402f",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 70,
+      "headshotOffset": [
+        0,
+        -29
+      ]
     },
     {
       "collection": "mystbloom",
@@ -206,7 +842,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Mystbloom_Kill_Banner_Purple.png?7f1b6",
         "sha256": "ffcfb1e119cfccb526730e670fc032b5315d1933d5adb0fe11c0c29d37bd8842"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_frame.png",
+          "sha256": "e8e0fa66d255dc6d2cc6e74c0a9c6766fb9c18ac50f65846d07ba7d1f12b7f0a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_ring.png",
+          "sha256": "2b04fc7bc6cf75435b8cf1ec3402b5ffc400ba5591f4cb77ee04dde78d628d94",
+          "width": 127,
+          "height": 127,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_emblem_v3.png",
+          "sha256": "1e5cbf15c83063a7560bef6580129ccb4b60c8e6b3a0687ed8e12184e2cb531b",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/mystbloom/mystbloom_pip_v3.png",
+          "sha256": "48cbba27a2e07ddbb26dc2545a68e79671d1e7543d9343b75d34959a5ae3ab0a",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/mystbloom/mystbloom_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=mystbloom",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 70,
+      "headshotOffset": [
+        0,
+        -29
+      ]
     },
     {
       "collection": "nocturnum",
@@ -222,7 +915,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner.png?03bf0",
         "sha256": "d5a34bf657257f9bd61784e114f2bef4b6429e2814b11911e5cb66d8bf79afce"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_frame.png",
+          "sha256": "c660b4a4d550d478d8ac1a3ffa8222f098ef6e93d0f924582062660ff8968736",
+          "width": 212,
+          "height": 212,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_ring.png",
+          "sha256": "8518b2059261cd045d935fe027833c1cd5688d55429d3788aec839c575e539ca",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_emblem.png",
+          "sha256": "50bcfbadd1ad234cb5087ba1238fa9f0080f8f868f3fde9237c024799704d97e",
+          "width": 152,
+          "height": 152,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_pip.png",
+          "sha256": "a754b31b2a68ae3ff7dd35c33e474794ba48508e4c68531485c9eb8cf55c4356",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 78,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "nocturnum",
@@ -238,7 +988,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner_Black.png?c48ce",
         "sha256": "4fd90afaa07f5ba45a7bebded8c46f0809af562825d0c6f80b363b69890bd49d"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_frame.png",
+          "sha256": "c660b4a4d550d478d8ac1a3ffa8222f098ef6e93d0f924582062660ff8968736",
+          "width": 212,
+          "height": 212,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_ring.png",
+          "sha256": "8518b2059261cd045d935fe027833c1cd5688d55429d3788aec839c575e539ca",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_emblem_v1.png",
+          "sha256": "53195e66093b4c8f1cd1cdc2c43a20aa0d102f3e082caacdb9a87f60eda1aa71",
+          "width": 152,
+          "height": 152,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_pip_v1.png",
+          "sha256": "68a916fbe2308d5f968af5b61825d6185341457a80696f7652d52e94c1147ff0",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 78,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "nocturnum",
@@ -254,7 +1061,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner_Blue.png?b1f2d",
         "sha256": "12ff42b91b727e14ec0905443d61a8d4b1d3fb9a5eb46607b1eb407896369d52"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_frame.png",
+          "sha256": "c660b4a4d550d478d8ac1a3ffa8222f098ef6e93d0f924582062660ff8968736",
+          "width": 212,
+          "height": 212,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_ring.png",
+          "sha256": "8518b2059261cd045d935fe027833c1cd5688d55429d3788aec839c575e539ca",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_emblem_v2.png",
+          "sha256": "3a7ff99a85db4f27ac6189f4f865d65d803082e3720673c7fb8035da2ba6529e",
+          "width": 152,
+          "height": 152,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_pip_v2.png",
+          "sha256": "6280a32fff5658b70f6f582bedecfc0f223fcbafbb0a2bfc8b4705d87d9b72cf",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 78,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "nocturnum",
@@ -270,7 +1134,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Nocturnum_Kill_Banner_Yellow.png?cbc75",
         "sha256": "133340464c216a067966c55f774cf4e0a5550bd78926ee38cc5f1875fdb86e53"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_frame.png",
+          "sha256": "c660b4a4d550d478d8ac1a3ffa8222f098ef6e93d0f924582062660ff8968736",
+          "width": 212,
+          "height": 212,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_ring.png",
+          "sha256": "8518b2059261cd045d935fe027833c1cd5688d55429d3788aec839c575e539ca",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_emblem_v3.png",
+          "sha256": "ab672fab574281f812a9cc6166a9d51db2bbc2668cc8e00b612f11130b73bef1",
+          "width": 152,
+          "height": 152,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/nocturnum/nocturnum_pip_v3.png",
+          "sha256": "427591d18325f88fa323585a77ff55366841a365d214d4664f807980519293a9",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/nocturnum/nocturnum_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=nocturnum",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 78,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "ora-by-onetap",
@@ -286,7 +1207,64 @@
         "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner.png?ad06f",
         "sha256": "b1b6bd01c7bf0d70fa9fe0d0b5f15657f041261029b295a4166e25f0561ab80a"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_frame.png",
+          "sha256": "2b4c0ed8133a025d33f3bd8f85b4f933fea755c7415fb9d9f6e25f98c8d0cfa3",
+          "width": 220,
+          "height": 220,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-lawyer",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_ring.png",
+          "sha256": "315642514ef0bb919007c642f280a83d87754e8d6c7b2b2dff88fd6b015c9e48",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-lawyer",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_emblem_lawyer.png",
+          "sha256": "a1174106172c892791f4c33290ce708b4c8278f757424070934794e9356f5384",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-lawyer",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_emblem_lawyer.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_pip_lawyer.png",
+          "sha256": "46bfd00e105e95f1a14fbda06cf8108a2ef55ed181b1ac020ba965599af68194",
+          "width": 92,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-lawyer",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_pip_lawyer.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-lawyer",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 72.5,
+      "headshotOffset": [
+        0,
+        -25
+      ]
     },
     {
       "collection": "ora-by-onetap",
@@ -302,7 +1280,64 @@
         "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_Ignition.png?663f2",
         "sha256": "096727658f29f010855c095b3b59d7c0034a75d8eedd42d13a4203636e3127c7"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_frame.png",
+          "sha256": "2b4c0ed8133a025d33f3bd8f85b4f933fea755c7415fb9d9f6e25f98c8d0cfa3",
+          "width": 220,
+          "height": 220,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-ignition",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_ring.png",
+          "sha256": "315642514ef0bb919007c642f280a83d87754e8d6c7b2b2dff88fd6b015c9e48",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-ignition",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_emblem.png",
+          "sha256": "c821095ca456beff1dc9a33dc73bc62b03e5eaeb0f42568ffd6468b4e99dd49f",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-ignition",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_pip.png",
+          "sha256": "f6e9ef09c2c648c6eb4e0327378dd7f7a08506a799fc70ab6ce40c70bf7d2109",
+          "width": 92,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-ignition",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-ignition",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 72.5,
+      "headshotOffset": [
+        0,
+        -25
+      ]
     },
     {
       "collection": "ora-by-onetap",
@@ -318,7 +1353,64 @@
         "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_RAJA.png?d7578",
         "sha256": "01c4602005c6dcdd3d243ab204d79912dde0245b75623468a25a5f47b24d6e04"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_frame.png",
+          "sha256": "2b4c0ed8133a025d33f3bd8f85b4f933fea755c7415fb9d9f6e25f98c8d0cfa3",
+          "width": 220,
+          "height": 220,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-raja",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_ring.png",
+          "sha256": "315642514ef0bb919007c642f280a83d87754e8d6c7b2b2dff88fd6b015c9e48",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-raja",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_emblem_raja.png",
+          "sha256": "44cf1ad6e80681ea84aeaf4680ce0596900cab10ef45015105ddaf1e17bab9c6",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-raja",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_emblem_raja.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_pip_raja.png",
+          "sha256": "446afada363b24aee29bcda5a6bc7e5481c5e7fbde5f938dfff4dbd1311d7ac0",
+          "width": 92,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-raja",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_pip_raja.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-raja",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 72.5,
+      "headshotOffset": [
+        0,
+        -25
+      ]
     },
     {
       "collection": "ora-by-onetap",
@@ -334,7 +1426,64 @@
         "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_RENEGADE.png?7d5c8",
         "sha256": "cad6e3d8efaf2365dd1995b1b31391de4f259a670abd8c420ed97494125f6121"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_frame.png",
+          "sha256": "2b4c0ed8133a025d33f3bd8f85b4f933fea755c7415fb9d9f6e25f98c8d0cfa3",
+          "width": 220,
+          "height": 220,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-renegade",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_ring.png",
+          "sha256": "315642514ef0bb919007c642f280a83d87754e8d6c7b2b2dff88fd6b015c9e48",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-renegade",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_emblem_renegade.png",
+          "sha256": "50f46f7dcf3f4ba4fc88e11d30fae2813d4c0a4d10f9087b62a5251de5abb1bf",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-renegade",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_emblem_renegade.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_pip_renegade.png",
+          "sha256": "cf13d3cfcba897658683cc22df18a44c470d28c7cc1cedea4aa42a1db5871ccf",
+          "width": 92,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-renegade",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_pip_renegade.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-renegade",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 72.5,
+      "headshotOffset": [
+        0,
+        -25
+      ]
     },
     {
       "collection": "ora-by-onetap",
@@ -350,7 +1499,64 @@
         "page": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/ORA_by_OneTap_Kill_Banner_Watch.png?bfc07",
         "sha256": "9d02b857af4ea204c4ef83ead93a833866e2bcf9e00cbb0dd02c33b838045209"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_frame.png",
+          "sha256": "2b4c0ed8133a025d33f3bd8f85b4f933fea755c7415fb9d9f6e25f98c8d0cfa3",
+          "width": 220,
+          "height": 220,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-watch",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_ring.png",
+          "sha256": "315642514ef0bb919007c642f280a83d87754e8d6c7b2b2dff88fd6b015c9e48",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-watch",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_emblem_watch.png",
+          "sha256": "f287ecbc13de7cc0dfc2778226cfbd57311f1d9eda6ed4892a791f9cb98d04af",
+          "width": 172,
+          "height": 172,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-watch",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_emblem_watch.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/orabyonetap/orabyonetap_pip_watch.png",
+          "sha256": "c96ba6bc3b21e616431c527473ae29fea7949730224db07b003443fbc11e3294",
+          "width": 92,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-watch",
+            "url": "https://kingdomarchive.com/uploads/killbanners/orabyonetap/orabyonetap_pip_watch.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=orabyonetap-watch",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 72.5,
+      "headshotOffset": [
+        0,
+        -25
+      ]
     },
     {
       "collection": "prelude-to-chaos",
@@ -366,7 +1572,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner.png?2b426",
         "sha256": "df242b2c74065b73d9c201ef012e2de8274c7be3213543207ccdfc34a8eda594"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_frame.png",
+          "sha256": "156f7862b1e42cb664cc2333a377f9341f52dceb719357c73c01e196bcc6af1a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_emblem.png",
+          "sha256": "6aa108e174df06ecb969ac4479dce9b71095ba6166c006f73e48425afbf52a82",
+          "width": 120,
+          "height": 120,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_pip.png",
+          "sha256": "273036ccc76c0c030f568aa8849103c53d89128c7561bba17ebf1155df7cff58",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        0,
+        -18
+      ]
     },
     {
       "collection": "prelude-to-chaos",
@@ -382,7 +1645,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner_Blue.png?d504a",
         "sha256": "9a599a76fa953f5dca1023ec60bc08e96cdcbd94adf8919c1b691ad712720d6c"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_frame.png",
+          "sha256": "156f7862b1e42cb664cc2333a377f9341f52dceb719357c73c01e196bcc6af1a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_emblem_v3.png",
+          "sha256": "495cf3a990e2c64f88477e5fe2e326214819ac973bc345b517f95f78431def4c",
+          "width": 120,
+          "height": 120,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_pip_v3.png",
+          "sha256": "b408c03f42a9a61ccb3d9088ee7332c7ce04e35cf2a64e06be4634db34bf26cc",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        0,
+        -18
+      ]
     },
     {
       "collection": "prelude-to-chaos",
@@ -398,7 +1718,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner_Green.png?917b7",
         "sha256": "6c8aabf2056f7b9a4ebda991b6140cf2458fc265debb00b96ecf0a9b49778d74"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_frame.png",
+          "sha256": "156f7862b1e42cb664cc2333a377f9341f52dceb719357c73c01e196bcc6af1a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_emblem_v1.png",
+          "sha256": "45c986b4fa1416237583e523ce0f26fb60ababe68138ee8f74d3ac6a2bdcfb4d",
+          "width": 120,
+          "height": 120,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_pip_v1.png",
+          "sha256": "4a280eb1e00b630f97e0891f9e8cb32c735c7faafb771ed410d88f28ecd35fb8",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        0,
+        -18
+      ]
     },
     {
       "collection": "prelude-to-chaos",
@@ -414,7 +1791,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Prelude_to_Chaos_Kill_Banner_White.png?81ffe",
         "sha256": "c51d1d1d12e0be7659f9a41f8ad893ea563b9cceccaebf339bfbd7702c7f336d"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_frame.png",
+          "sha256": "156f7862b1e42cb664cc2333a377f9341f52dceb719357c73c01e196bcc6af1a",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_emblem_v2.png",
+          "sha256": "2fc286e1f1b4e9020793edded42992bed2581a44fd9a25cceb6b559f99526afa",
+          "width": 120,
+          "height": 120,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/preludetochaos/preludetochaos_pip_v2.png",
+          "sha256": "896d21376082a98fa7932d6c0a0d0be22fb7e310db6db0fc9be69ef70673877a",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/preludetochaos/preludetochaos_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=preludetochaosv25",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 85,
+      "headshotOffset": [
+        0,
+        -18
+      ]
     },
     {
       "collection": "primordium",
@@ -430,7 +1864,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner.png?2cea0",
         "sha256": "421af5f07c779dcb2676d3264b16febf1c28f6ebd7abc6afdd10d0ce7cd962ef"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_frame.png",
+          "sha256": "e67b72c811024393f8fc8b33821f6caf19b4c530e7d09139dc5fd0f5228733fb",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_emblem.png",
+          "sha256": "1d7bff3dd2c06b79ae099e390312b4b55fd3d56c606c5bb3745baaebed55366c",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_pip.png",
+          "sha256": "d244cd3b06279cf50b8d375087ef4f3b35a0e1df80d8e171076158ec1deff427",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 76,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "primordium",
@@ -446,7 +1937,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner_Cobalt.png?1adb9",
         "sha256": "f3868fd82899bfc891e19539a6aa07a76e3aceb8d08685c546fabbf7ebdf1267"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_frame.png",
+          "sha256": "e67b72c811024393f8fc8b33821f6caf19b4c530e7d09139dc5fd0f5228733fb",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_emblem_v2.png",
+          "sha256": "ce6f87b23d06ea2c96378873ea96a1f0a8d6b54009aba2b1a806716c5a36dd76",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_pip_v2.png",
+          "sha256": "a2218850180a32d546c31f0f33c18e943dfa4db79971fa5569b3307612f4daa4",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 76,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "primordium",
@@ -462,7 +2010,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner_Gold.png?52eae",
         "sha256": "84235fb3c2dacd60a7c288afe4e8d4a0a29c029cf77e98b65c91efd528e18db1"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_frame.png",
+          "sha256": "e67b72c811024393f8fc8b33821f6caf19b4c530e7d09139dc5fd0f5228733fb",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_emblem_v3.png",
+          "sha256": "1c89f153aa3f23051df9fd034b7a0c80691acdb7cc3b0c807320062ba50c073a",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_pip_v3.png",
+          "sha256": "1b8e4fe3b3940af8aede47b25acb3de46054c47485744b1689450b0027ced610",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 76,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "primordium",
@@ -478,7 +2083,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Primordium_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Primordium_Kill_Banner_Venom.png?9cc13",
         "sha256": "c6e3fe7026af19c0709db31526829916cb9b3d73132c98df93ce0bbc9503a387"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_frame.png",
+          "sha256": "e67b72c811024393f8fc8b33821f6caf19b4c530e7d09139dc5fd0f5228733fb",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_emblem_v1.png",
+          "sha256": "71d829a5124c774ea43b304aaf65c6682856743d7c9a369047af69a86da566b5",
+          "width": 128,
+          "height": 128,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/primordium/primordium_pip_v1.png",
+          "sha256": "ed34834cebcdd02a3c962a6fa2e2fae4dc3580a633db42fd2b23e3c9191f4c96",
+          "width": 76,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/primordium/primordium_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=primordium",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 76,
+      "headshotOffset": [
+        0,
+        -20
+      ]
     },
     {
       "collection": "rgx-11z-pro",
@@ -494,7 +2156,64 @@
         "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner.png?17354",
         "sha256": "1627ddcf8ab1602ed3e8818ee5a9c686781c246e3aa5176048b4e28d147418b7"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_frame.png",
+          "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+          "width": 200,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_ring.png",
+          "sha256": "d45f7258bdef60ea48f0dd25926d0e41db6770102793f751de0e628aa25344b5",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_emblem.png",
+          "sha256": "f59db910cb4b5487830fcc3790b51fe274e6bc3f9237a5700d96daeaa67998cf",
+          "width": 85,
+          "height": 85,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_pip.png",
+          "sha256": "f34d228a1bb193a9967e880bd5800d47a9bacb7e77ebef3ebc497f7eb1ba710b",
+          "width": 45,
+          "height": 42,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 73.5,
+      "headshotOffset": [
+        0.85,
+        -21
+      ]
     },
     {
       "collection": "rgx-11z-pro",
@@ -510,7 +2229,64 @@
         "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner_Blue.png?010e7",
         "sha256": "c06f9ff9f485ada44373f6e895e67c7ccc3f62972ad3c7b12b2ff2594bbe75a2"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_frame.png",
+          "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+          "width": 200,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_ring.png",
+          "sha256": "d45f7258bdef60ea48f0dd25926d0e41db6770102793f751de0e628aa25344b5",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_emblem_v2.png",
+          "sha256": "7b681782c218adf12554304d0caea43e4e2330eb2c6ec472b1f1b7a333f9c91b",
+          "width": 85,
+          "height": 85,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_pip_v2.png",
+          "sha256": "038e5eeaf27e4f00311fdb22f06876607ba7e134774a10c31101834f8bf74b70",
+          "width": 45,
+          "height": 42,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 73.5,
+      "headshotOffset": [
+        0.85,
+        -21
+      ]
     },
     {
       "collection": "rgx-11z-pro",
@@ -526,7 +2302,64 @@
         "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner_Red.png?771b8",
         "sha256": "b2f8f2f66ae940acf019c57d7865eff3389d1fe014ff6d817db129cde5a55914"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_frame.png",
+          "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+          "width": 200,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_ring.png",
+          "sha256": "d45f7258bdef60ea48f0dd25926d0e41db6770102793f751de0e628aa25344b5",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_emblem_v1.png",
+          "sha256": "850e7e126da83bc779b8e0112575b58e4bd0b896da2965d642839f237c6274c2",
+          "width": 85,
+          "height": 85,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_pip_v1.png",
+          "sha256": "5adfe626a08ad5f1063fbb506310380e067cfd9d39623a0f785543761b317ad1",
+          "width": 45,
+          "height": 42,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 73.5,
+      "headshotOffset": [
+        0.85,
+        -21
+      ]
     },
     {
       "collection": "rgx-11z-pro",
@@ -542,7 +2375,64 @@
         "page": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/RGX_11z_Pro_Kill_Banner_Yellow.png?522b9",
         "sha256": "db711db4f91af6532188cfa35e93c42a5665cf74e668b5e54f78e68a95aed5e0"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_frame.png",
+          "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+          "width": 200,
+          "height": 256,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_ring.png",
+          "sha256": "d45f7258bdef60ea48f0dd25926d0e41db6770102793f751de0e628aa25344b5",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_emblem_v3.png",
+          "sha256": "b1c4196e0acd2f90d7790a5aea2906363d9d713bc0c12c8279f8963f86bd4d33",
+          "width": 85,
+          "height": 85,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rgx11zproep9/rgx11zproep9_pip_v3.png",
+          "sha256": "4e897ab8f2b329c5ff219e2de5351019b37863391f1526b157cc9ad5bf13298a",
+          "width": 45,
+          "height": 42,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rgx11zproep9/rgx11zproep9_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rgx11zproep9",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 73.5,
+      "headshotOffset": [
+        0.85,
+        -21
+      ]
     },
     {
       "collection": "rogue",
@@ -558,7 +2448,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner.png?8c88e",
         "sha256": "70ac57cadea958c92cfbf6a8777b894641c53f00407f80907944ed11b399fdd9"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_frame.png",
+          "sha256": "c116f194b4b275231babc41641b70c66060aa49a430b84f0d6729d36fc476891",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_emblem.png",
+          "sha256": "3edd268b726ce60144fc152a6608dd1183da00794d17ff54d64bd5cb86b25416",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_emblem.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_pip.png",
+          "sha256": "048e3ba430791a50f1bf6bf2e84303bafcfeb39097e6c70bcb0120bf9fdebb87",
+          "width": 96,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_pip.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 83.5,
+      "headshotOffset": [
+        0,
+        -17
+      ]
     },
     {
       "collection": "rogue",
@@ -574,7 +2521,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner_Blue.png?1c344",
         "sha256": "600d99ad825c039593f2c51d8364eca36b7d2bc40961b62368d99f09d4d6a197"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_frame.png",
+          "sha256": "c116f194b4b275231babc41641b70c66060aa49a430b84f0d6729d36fc476891",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_emblem_v3.png",
+          "sha256": "54b6e5e45116ebb056f463938283e6b2334cf16b9a8b2c6ea3a7e6d0bf411223",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_emblem_v3.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_pip_v3.png",
+          "sha256": "9701e903773634e6785ec993771c5490058d319a7a9d869d87c25cd93c387d68",
+          "width": 96,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_pip_v3.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 83.5,
+      "headshotOffset": [
+        0,
+        -17
+      ]
     },
     {
       "collection": "rogue",
@@ -590,7 +2594,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner_Green.png?1c344",
         "sha256": "069eebcefca2be468a429d8581625ef8413d68292ff91a9fe09120e795e7dc19"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_frame.png",
+          "sha256": "c116f194b4b275231babc41641b70c66060aa49a430b84f0d6729d36fc476891",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_emblem_v1.png",
+          "sha256": "2ca1194825c93ff66e3f0b55b319db382e04dab8167b10176bba1b8e8f3ce85b",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_emblem_v1.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_pip_v1.png",
+          "sha256": "3098dba51f5342e34f01a50ab0030a618ffbeae11ce5f6e1450de5c7adbd1841",
+          "width": 96,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_pip_v1.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 83.5,
+      "headshotOffset": [
+        0,
+        -17
+      ]
     },
     {
       "collection": "rogue",
@@ -606,7 +2667,64 @@
         "page": "https://wiki.playvalorant.com/en-us/Rogue_Collection",
         "url": "https://wiki.playvalorant.com/en-us/images/Rogue_Kill_Banner_Red.png?1c344",
         "sha256": "5950114abf584b94fccdb115c6b5a450d98dbfe2214b9281b1d249320264895c"
-      }
+      },
+      "layers": {
+        "frame": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_frame.png",
+          "sha256": "c116f194b4b275231babc41641b70c66060aa49a430b84f0d6729d36fc476891",
+          "width": 280,
+          "height": 280,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_frame.png"
+          }
+        },
+        "ring": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_ring.png",
+          "sha256": "4895174ffcaa372b55aa74b0fee84a12db48b8063c222fb1ef841b5720ed607c",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_ring.png"
+          }
+        },
+        "emblem": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_emblem_v2.png",
+          "sha256": "bb298ce2e9d6967e3113b8fc4abb3bf0810437fb3b56df35480369aa523fb380",
+          "width": 170,
+          "height": 170,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_emblem_v2.png"
+          }
+        },
+        "pip": {
+          "path": "skin-packs/media/banner-layers/rogue/rogue_pip_v2.png",
+          "sha256": "6ddb010fe179712508ee791902b96ccf2a4cec60291ff2b8de317d1bc8c075b2",
+          "width": 96,
+          "height": 40,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/rogue/rogue_pip_v2.png"
+          }
+        },
+        "headshot": {
+          "path": "skin-packs/media/banner-layers/default/Default_HS.png",
+          "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+          "width": 36,
+          "height": 36,
+          "source": {
+            "page": "https://kingdomarchive.com/killbanners?banner=rogue",
+            "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+          }
+        }
+      },
+      "pipRadius": 83.5,
+      "headshotOffset": [
+        0,
+        -17
+      ]
     }
   ],
   "audio": [

@@ -424,6 +424,71 @@ test('readiness activates the selected banner before first fire even with native
   assert.equal(gate.value,h.runtime.bannerKit());h.runtime.reset();assert.equal(gate.value,null);
 });
 
+test('a layered banner waits for every decoded part, falls back on failure and retries without using a first-kill composite',async()=>{
+  const data=fixture(),banner=data.collections[0].themes[0].banners[0];
+  banner.layers=Object.fromEntries(['frame','ring','emblem','pip'].map(layer=>[layer,`/skin-packs/test/${layer}.png`]));
+  banner.headshot='/skin-packs/test/headshot.png';banner.pipRadius=72.5;banner.headshotOffset=[0,-25];
+  const h=harness(data),gate=deferred();h.imageDecodeGates.set(banner.layers.pip,gate);
+  await h.runtime.initialize();h.runtime.setActiveWeapon('vandal');
+  const loading=pick(h.runtime,'vandal');await turn();
+  assert.equal(h.runtime.bannerKit(),null);
+  assert.equal(h.runtime.availability('vandal').banner,'loading');
+  gate.resolve();await loading;
+  const kit=h.runtime.bannerKit(),definition=h.runtime.bannerDefinition(kit),before=h.counts();
+  assert.deepEqual(definition.layers,banner.layers);assert.equal(definition.composite,undefined);
+  for(let i=0;i<20;i++)assert.deepEqual(h.runtime.bannerDefinition(kit),definition);
+  assert.deepEqual(h.counts(),before,'HUD definition and drawing must read decoded caches only');
+  const failed=harness(data);failed.imageFailures.add(banner.layers.ring);await failed.runtime.initialize();await pick(failed.runtime,'vandal');failed.runtime.setActiveWeapon('vandal');
+  assert.equal(failed.runtime.getImage(banner.url)?.complete,true,'a ready preview must not hide a broken gameplay layer');
+  assert.equal(failed.runtime.bannerKit(),null);assert.equal(failed.runtime.bannerDefinition('skin:'+banner.url),null);
+  assert.equal(failed.runtime.availability('vandal').banner,'failed');
+  failed.imageFailures.clear();await failed.runtime.prepare();assert(failed.runtime.bannerKit());
+});
+
+test('all 37 delivered skin variants draw changing radial artwork through the actual HUD for kills 1–5 and repeated cycles',async()=>{
+  const manifest=JSON.parse(fs.readFileSync(new URL('../dist/skin-packs/index.json',import.meta.url),'utf8'));
+  const h=harness(manifest);await h.runtime.initialize();
+  const source=patched['DVK7uRSu.js'],start=source.indexOf("const dl=c({'__name':'KillBannerHud'"),end=source.indexOf(',cl=w(',start);
+  const radialStart=source.indexOf('function ol('),radialEnd=source.indexOf('const rl=',radialStart);
+  const positions=vm.runInNewContext('('+source.slice(radialStart,radialEnd)+')');
+  let variants=0;
+  for(const collection of manifest.collections)for(const theme of collection.themes)for(const banner of theme.banners){
+    assert(banner.layers,collection.id+'/'+banner.id+' must not draw a static first-kill composite');
+    const weapon=collection.weapons[0];await h.runtime.select(weapon,{collection:collection.id,theme:theme.id,banner:banner.id});h.runtime.setActiveWeapon(weapon);
+    const calls=[],stack=[];let translation=[0,0],exposed;
+    const context={setTransform(){},clearRect(){calls.length=0},save(){stack.push([...translation])},restore(){translation=stack.pop()},
+      translate(x,y){translation=[translation[0]+x,translation[1]+y]},rotate(){},scale(){},drawImage(image){calls.push({url:image.url,at:[...translation]})}};
+    const canvas={clientWidth:150,width:300,height:300,getContext:()=>context},view={seq:0,kills:0,headshot:false,at:10,now:10.4};
+    const component=vm.runInNewContext(source.slice(start+'const dl='.length,end),{
+      c:value=>value,x:value=>({value:value===null?canvas:value}),A:(get,callback)=>callback(get()),D(){},E(){},
+      Dt:key=>h.runtime.bannerDefinition(key),__aimSkins:h.runtime,Pt:['frame','ring','emblem','pip'],
+      __aimDrawSkinPip(ctx,x,y){assert.equal(banner.pipFallback,'generic-chevron');calls.push({url:banner.layers.pip,at:[x,y],fallback:true})},
+      Image:class{constructor(){assert.fail('gameplay must reuse decoded layers')}},
+      ul:()=>({scale:1,alpha:1,ringRotation:0,ringGlow:0,newPipAlpha:1,newPipScale:1,headshotScale:1}),wt:killIndex,ol:positions,
+      window:{devicePixelRatio:2},al:300,
+    });
+    component.setup({view:{current:view},kit:h.runtime.bannerKit()},{expose:api=>{exposed=api}});
+    const pipBytes=fs.readFileSync(new URL('../dist'+banner.layers.pip,import.meta.url));
+    if(pipBytes.readUInt32BE(16)===1||pipBytes.readUInt32BE(20)===1)assert.equal(banner.pipFallback,'generic-chevron','invisible source pips must have a visible radial fallback');
+    const before=h.counts(),patterns=[];
+    for(const kill of [1,2,3,4,5,6,7,10]){
+      Object.assign(view,{seq:view.seq+1,kills:kill,headshot:kill===5});exposed.tick();
+      const pips=calls.filter(call=>call.url===banner.layers.pip),count=killIndex(kill);
+      assert.equal(pips.length,count,collection.id+'/'+banner.id+' kill '+kill);
+      for(const pip of pips)assert(Math.abs(Math.hypot(...pip.at)-banner.pipRadius)<1e-8,'pips must be on the main emblem ring');
+      if(kill===2){assert(Math.abs(pips[0].at[1])<1e-8);assert(Math.abs(pips[1].at[1])<1e-8);assert(pips[0].at[0]*pips[1].at[0]<0,'two kills occupy opposite sides');}
+      for(const part of ['frame','ring','emblem'])assert(calls.some(call=>call.url===banner.layers[part]));
+      assert.equal(calls.some(call=>call.url===banner.headshot),kill===5);
+      assert(!calls.some(call=>call.url===banner.url),'preview composite must never be drawn in layered gameplay');
+      patterns.push(JSON.stringify(pips.map(pip=>pip.at)));
+    }
+    assert.equal(new Set(patterns.slice(0,5)).size,5,'all five main-art states must differ');
+    assert.equal(patterns[0],patterns[5]);assert.equal(patterns[1],patterns[6]);assert.equal(patterns[4],patterns[7]);
+    assert.deepEqual(h.counts(),before);variants++;
+  }
+  assert.equal(variants,37);
+});
+
 test('actual HUD consumes the first recent skin kill on mount, preserves native mount behavior and rejects expired events',()=>{
   function hud(source,{seq=1,kills=1,headshot=true,at=10,now=10.02,kit='skin:/skin-packs/test/banner.png'}={}){
     const timingStart=source.indexOf('const rl=0.16,'),timingEnd=source.indexOf('const dl=',timingStart);

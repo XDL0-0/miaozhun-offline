@@ -74,6 +74,21 @@ function bannerOutput(root,destination,entry,relative){
   return output.url;
 }
 
+function bannerLayerOutput(root,destination,entry){
+  const source=reviewedSource(root,entry);
+  if(!source)return null;
+  const bytes=fs.readFileSync(source);
+  // Pips and emblems must retain their native dimensions and transparent bounds;
+  // normalizing each layer to a 300px square breaks radial placement.
+  if(!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
+    ||bytes.readUInt32BE(16)!==entry.width||bytes.readUInt32BE(20)!==entry.height){
+    throw new Error('Invalid reviewed banner layer: '+entry.path);
+  }
+  const output=outputUrl(destination,`layers/${entry.sha256}.png`);
+  fs.copyFileSync(source,output.target);
+  return output.url;
+}
+
 function validateReview(catalog,review){
   const seen=new Set();
   for(const collection of catalog.collections){
@@ -88,6 +103,26 @@ function validateReview(catalog,review){
       if(kind==='fire'&&!collection.weapons.includes(entry.weapon))throw new Error('Ineligible reviewed weapon: '+entry.weapon);
       if(kind==='audio'&&!(entry.role==='successive'&&entry.id==='successive'||entry.role==='kill'&&/^[1-6]$/.test(entry.id)))throw new Error('Invalid reviewed audio role/id');
       if(kind==='banners'&&!segment.test(entry.id))throw new Error('Unsafe banner identifier: '+entry.id);
+      if(kind==='banners'&&entry.layers!==undefined){
+        if(!entry.layers||typeof entry.layers!=='object'||Array.isArray(entry.layers)
+          ||!['frame','ring','emblem','pip'].every(layer=>entry.layers[layer])
+          ||Object.keys(entry.layers).some(layer=>!['frame','ring','emblem','pip','headshot'].includes(layer))
+          ||!Number.isFinite(entry.pipRadius)||entry.pipRadius<=0||entry.pipRadius>150
+          ||!Array.isArray(entry.headshotOffset)||entry.headshotOffset.length!==2
+          ||entry.headshotOffset.some(value=>!Number.isFinite(value)||Math.abs(value)>150)){
+          throw new Error('Invalid reviewed banner geometry: '+entry.path);
+        }
+        for(const layer of Object.values(entry.layers)){
+          if(!Number.isInteger(layer.width)||!Number.isInteger(layer.height)
+            ||layer.width<1||layer.height<1||layer.width>1024||layer.height>1024){
+            throw new Error('Invalid reviewed banner dimensions: '+layer.path);
+          }
+        }
+        if(entry.pipFallback!==undefined&&entry.pipFallback!=='generic-chevron'
+          ||(entry.layers.pip.width===1||entry.layers.pip.height===1)&&entry.pipFallback!=='generic-chevron'){
+          throw new Error('Invisible banner pip requires an explicit fallback: '+entry.path);
+        }
+      }
       if(Object.hasOwn(entry,'excerpt')){
         if(kind==='banners')throw new Error('Reviewed banners cannot have audio excerpts');
         const excerpt=entry.excerpt;
@@ -119,10 +154,14 @@ export function buildSkinPacks({root=projectRoot,destination}={}){
   if(review.schemaVersion!==1)throw new Error('Unsupported skin asset review version');
   validateReview(catalog,review);
   // Verify every existing reviewed input before clearing previous output.
-  for(const entries of [review.audio??[],review.banners??[],review.fire??[]])for(const entry of entries)reviewedSource(root,entry);
+  for(const entries of [review.audio??[],review.banners??[],review.fire??[]])for(const entry of entries){
+    reviewedSource(root,entry);
+    for(const layer of Object.values(entry.layers??{}))reviewedSource(root,layer);
+  }
   fs.rmSync(destination,{recursive:true,force:true});
   fs.mkdirSync(destination,{recursive:true});
-  const counts={collections:catalog.collections.length,themes:0,audio:0,killAudio:0,successiveAudio:0,banners:0,fire:0,missingFire:0,eligibleFireCombinations:0};
+  const layerUrls=new Set();
+  const counts={collections:catalog.collections.length,themes:0,audio:0,killAudio:0,successiveAudio:0,banners:0,layeredBanners:0,bannerLayers:0,fire:0,missingFire:0,eligibleFireCombinations:0};
   const collections=catalog.collections.map(collection=>({
     id:collection.id,name:collection.name,tier:collection.tier,weapons:[...collection.weapons],
     themes:collection.themes.map(theme=>{
@@ -149,16 +188,34 @@ export function buildSkinPacks({root=projectRoot,destination}={}){
       const bannerEntries=(review.banners??[]).filter(e=>e.collection===collection.id&&e.theme===theme);
       for(const entry of bannerEntries){
         const url=bannerOutput(root,destination,entry,`${collection.id}/banners/${theme}/${entry.id}.png`);
-        if(url){result.banners.push({id:entry.id,label:entry.label,url});counts.banners++}
+        if(url){
+          const banner={id:entry.id,label:entry.label,url};
+          if(entry.layers){
+            const layers=Object.fromEntries(Object.entries(entry.layers).map(([key,value])=>[key,bannerLayerOutput(root,destination,value)]));
+            if(Object.values(layers).every(Boolean)){
+              const {headshot,...parts}=layers;
+              Object.assign(banner,{layers:parts,headshot,pipRadius:entry.pipRadius,headshotOffset:entry.headshotOffset,
+                ...(entry.pipFallback?{pipFallback:entry.pipFallback}:{})});
+              for(const value of Object.values(layers))layerUrls.add(value);
+              counts.layeredBanners++;
+            }else{
+              result.missing.push('banner-layers:'+entry.id);
+              // Do not silently substitute the old first-kill artwork.
+              continue;
+            }
+          }
+          result.banners.push(banner);counts.banners++;
+        }
         else result.missing.push('banner:'+entry.id);
       }
       if(!bannerEntries.length)result.missing.push('banner');
       return result;
     }),
   }));
+  counts.bannerLayers=layerUrls.size;
   const partial=collections.some(c=>c.themes.some(t=>t.missing.length));
   const manifest={schemaVersion:2,compiledOn:catalog.compiledOn,sourceStatus:partial?'partial':'complete',resourceStatus:partial?'partial':'complete',
-    bannerFormat:'transparent-composite',bannerSize:[300,300],counts,collections};
+    bannerFormat:counts.layeredBanners?'layered':'transparent-composite',bannerSize:[300,300],counts,collections};
   fs.writeFileSync(path.join(destination,'index.json'),JSON.stringify(manifest,null,2)+'\n');
   return manifest;
 }

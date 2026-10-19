@@ -1,6 +1,6 @@
 # Vandal / Phantom skin packs + ORA by OneTap
 
-The offline client builds skin effects from reviewed originals in `skin-packs/media/`. The build supplies **30 genuine single-shot gunfire clips, 79 kill-audio clips and 37 transparent composite kill banners** across nine collections and thirteen themes. The 30 firing mappings cover ten ordinary skin/weapon pairs and all twenty ORA weapon/theme pairs. Available effects work independently, with native fallback if a resource fails.
+The offline client builds skin effects from reviewed originals in `skin-packs/media/`. The build supplies **30 genuine single-shot gunfire clips, 79 kill-audio clips and 37 layered kill-banner variants** across nine collections and thirteen themes. The 37 composite previews are retained for settings. The 30 firing mappings cover ten ordinary skin/weapon pairs and all twenty ORA weapon/theme pairs. Available effects work independently, with native fallback if a resource fails.
 
 ## Selection
 
@@ -23,17 +23,19 @@ node server.mjs
 
 Open [the local client](http://127.0.0.1:18746/aim). The server listens only on `127.0.0.1:18746`. The Windows launcher remains available; rebuilding on Windows also requires `ffmpeg` on `PATH` and can use `.\runtime\node.exe` in place of `node`.
 
-`prepare-offline.mjs` applies the versioned patches and calls [build-skin-packs.mjs](../scripts/build-skin-packs.mjs). The builder checks reviewed SHA-256 hashes, converts MP3 and reviewed AAC excerpts to Vorbis OGG, normalizes transparent PNG banners to 300 × 300, and writes the **schema-2** `dist/skin-packs/index.json`. It rebuilds from repository media and [asset-review.json](./asset-review.json); `skin-packs/local/wiki-downloads/` and a new download are unnecessary. Rebuilding replaces generated skin output.
+`prepare-offline.mjs` applies the versioned patches and calls [build-skin-packs.mjs](../scripts/build-skin-packs.mjs). The builder checks reviewed SHA-256 hashes, converts MP3 and reviewed AAC excerpts to Vorbis OGG, normalizes composite previews to 300 × 300, copies layered PNGs at their original pixel dimensions, and writes the **schema-2** `dist/skin-packs/index.json`. Identical layers share a content-addressed URL. It rebuilds from repository media and [asset-review.json](./asset-review.json); `skin-packs/local/wiki-downloads/` and a new download are unnecessary. Rebuilding replaces generated skin output.
 
 ## Settings and playback
 
-In **参数设置 → 音频 → 枪械皮肤与击杀反馈**, select a gun, skin, theme and banner style. Selections and the separate fire, kill and banner switches are stored per gun in the browser. Ordinary collections offer four banner variants; ORA offers one composite banner per theme. The panel reports missing, loading, failed and ready assets, shows a banner preview, and provides fire, individual and 1–5 kill auditions, an original-effect option, stop and reload controls.
+In **参数设置 → 音频 → 枪械皮肤与击杀反馈**, select a gun, skin, theme and banner style. Selections and the separate fire, kill and banner switches are stored per gun in the browser. Ordinary collections offer four banner variants; ORA offers one variant per theme. The panel reports missing, loading, failed and ready assets, shows a banner preview, and provides fire, individual and 1–5 kill auditions, an original-effect option, stop and reload controls.
 
 Audio and images load asynchronously. Audio is decoded before use; firing and kill events only read the decoded cache. An unavailable or failed asset falls back to the current original effect. All 30 reviewed firing samples are available after preload; their audition controls follow the actual loading state. Missing or failed resources still disable their audition and use the native effect during play.
 
 Live kills follow the client's existing **1–5 cyclic sound sequence**: kill 6 uses clip 1, kill 7 uses clip 2. `successive.ogg` is an original multi-kill recording available for audition; Ayakashi's sixth clip is also audition-only. Neither replaces the live 1–5 sequence.
 
-The imported banners are complete transparent images. The HUD draws the selected composite and adds its kill count and headshot feedback; the source does not provide separate frame, ring, emblem or headshot animation layers.
+Gameplay uses separate frame, ring, emblem, pip and headshot layers. The existing client HUD places pips around the emblem for kills 1–5, including opposite positions for two kills, then repeats that cycle. This fixes the old behavior that drew the first-kill composite on every kill. Ayakashi's four source pip PNGs are transparent 1 × 1 placeholders; its original frame/ring/emblem are retained with explicit generic white radial chevrons for visible progression. Other variants use their source-colored pips. Every image layer is decoded during preload and reused during drawing. A failed required layer falls back to the native banner instead of displaying a static composite. The legacy composite renderer remains compatible with older schema-2 packs.
+
+[banner-layer-review.json](./audit/banner-layer-review.json) records 93 reviewed source PNGs (86 unique byte streams), all 37 variant mappings, source geometry and the [Kingdom Archives](https://kingdomarchive.com/killbanners) source pages. Existing variant IDs remain stable for saved selections. The rendering restores radial kill states with the native client animation; original Unreal shader/VFX animation is outside this implementation.
 
 ## Audit and staging
 

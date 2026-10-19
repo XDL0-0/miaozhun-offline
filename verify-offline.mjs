@@ -105,13 +105,15 @@ if(has('/skin-packs/index.json')){
  try{
   const manifest=readJson(path.join(root,'skin-packs/index.json'));
   if(manifest.schemaVersion!==2)throw new Error('Unsupported skin manifest version');
-  const counts={audio:0,killAudio:0,successiveAudio:0,banners:0,fire:0,missingFire:0,eligibleFireCombinations:0};
+  const counts={audio:0,killAudio:0,successiveAudio:0,banners:0,layeredBanners:0,bannerLayers:0,fire:0,missingFire:0,eligibleFireCombinations:0},layerUrls=new Set();
   function skinAsset(url,kind){
    if(typeof url!=='string'||!/^\/skin-packs\/[a-z0-9/-]+\.(?:ogg|png)$/.test(url))throw new Error('Unsafe skin asset URL');
    requireAsset(url,'skin pack '+kind);
    if(!has(url))return;
    const bytes=fs.readFileSync(path.join(root,url.slice(1)));
-   if(kind==='banner'){
+   if(kind==='banner-layer'){
+    if(bytes.length<26||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||bytes.readUInt32BE(16)<1||bytes.readUInt32BE(16)>1024||bytes.readUInt32BE(20)<1||bytes.readUInt32BE(20)>1024)throw new Error('Invalid native-size skin banner layer: '+url);
+   }else if(kind==='banner'){
     if(bytes.length<26||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||bytes.readUInt32BE(16)!==300||bytes.readUInt32BE(20)!==300||bytes[25]!==6)throw new Error('Invalid normalized RGBA skin banner: '+url);
    }else if(bytes.subarray(0,4).toString()!=='OggS')throw new Error('Invalid Ogg skin audio: '+url);
   }
@@ -119,8 +121,16 @@ if(has('/skin-packs/index.json')){
    for(const weapon of collection.weapons){counts.eligibleFireCombinations++;if(theme.fire[weapon]){skinAsset(theme.fire[weapon],'fire');counts.fire++;counts.audio++}else counts.missingFire++}
    for(const url of Object.values(theme.kills)){skinAsset(url,'kill');counts.audio++;counts.killAudio++}
    if(theme.successive){skinAsset(theme.successive,'successive');counts.audio++;counts.successiveAudio++}
-   for(const banner of theme.banners){skinAsset(banner.url,'banner');counts.banners++}
+   for(const banner of theme.banners){
+    skinAsset(banner.url,'banner');counts.banners++;
+    if(banner.layers){
+     if(!['frame','ring','emblem','pip'].every(layer=>banner.layers[layer])||!(banner.pipRadius>0&&banner.pipRadius<=150)||!Array.isArray(banner.headshotOffset)||banner.headshotOffset.length!==2||banner.headshotOffset.some(value=>!Number.isFinite(value)||Math.abs(value)>150))throw new Error('Invalid skin banner geometry');
+     for(const url of [...Object.values(banner.layers),banner.headshot].filter(Boolean)){skinAsset(url,'banner-layer');layerUrls.add(url)}
+     counts.layeredBanners++;
+    }
+   }
   }
+  counts.bannerLayers=layerUrls.size;
   for(const [key,value]of Object.entries(counts))if(manifest.counts[key]!==value)throw new Error('Skin manifest count mismatch: '+key);
   skinPacks={resourceStatus:manifest.resourceStatus,...counts};
  }catch(error){failures.push({path:'/skin-packs/index.json',stage:'skin pack integrity',error:error.message})}

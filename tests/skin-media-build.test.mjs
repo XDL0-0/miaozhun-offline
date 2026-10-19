@@ -62,7 +62,7 @@ function fixture(){
   review.audio=review.audio.filter(e=>e.collection===collection.id&&e.theme==='base'&&(e.id==='1'||e.role==='successive'));
   review.banners=review.banners.filter(e=>e.collection===collection.id&&e.theme==='base');
   review.fire=[];
-  for(const entry of [...review.audio,...review.banners]){
+  for(const entry of [...review.audio,...review.banners,...review.banners.flatMap(banner=>Object.values(banner.layers??{}))]){
     const target=path.join(root,entry.path);
     fs.mkdirSync(path.dirname(target),{recursive:true});
     fs.copyFileSync(path.join(projectRoot,entry.path),target);
@@ -94,6 +94,14 @@ test('reviewed originals build valid, deterministic media with explicit missing 
     assert.equal(theme.label,'Base');
     assert.equal(manifest.counts.audio,2);
     assert.equal(manifest.counts.banners,1);
+    assert.equal(manifest.counts.layeredBanners,1);
+    assert.equal(manifest.counts.bannerLayers,5);
+    const banner=theme.banners[0];
+    assert.equal(banner.pipRadius,72.5);
+    for(const [layer,entry]of Object.entries(f.review.banners[0].layers)){
+      const url=layer==='headshot'?banner.headshot:banner.layers[layer];
+      assert.equal(digest(path.join(f.destination,url.slice('/skin-packs/'.length))),entry.sha256,'layers retain reviewed bytes and dimensions');
+    }
     const ogg=path.join(f.destination,theme.successive.slice('/skin-packs/'.length));
     assert.equal(fs.readFileSync(ogg).subarray(0,4).toString(),'OggS');
     const probe=spawnSync('ffprobe',['-v','error','-show_streams','-of','json',ogg],{encoding:'utf8'});
@@ -214,5 +222,21 @@ test('unreviewed bytes fail before previous output is cleared',()=>{
     assert.throws(()=>buildSkinPacks(f),/hash mismatch/);
     assert.equal(fs.readFileSync(path.join(f.destination,'previous-build'),'utf8'),'preserve');
     assert.throws(()=>buildSkinPacks({...f,destination:f.root}),/separate/);
+  }finally{fs.rmSync(f.root,{recursive:true,force:true})}
+});
+
+test('changed banner layers and invalid placement fail before previous output is cleared',()=>{
+  const f=fixture();
+  try{
+    fs.mkdirSync(f.destination,{recursive:true});
+    fs.writeFileSync(path.join(f.destination,'previous-build'),'preserve');
+    const banner=f.review.banners[0],pip=path.join(f.root,banner.layers.pip.path),bytes=fs.readFileSync(pip);
+    fs.appendFileSync(pip,'changed');
+    assert.throws(()=>buildSkinPacks(f),/hash mismatch/);
+    fs.writeFileSync(pip,bytes);
+    banner.pipRadius=-1;
+    fs.writeFileSync(path.join(f.root,'skin-packs/asset-review.json'),JSON.stringify(f.review));
+    assert.throws(()=>buildSkinPacks(f),/banner geometry/);
+    assert.equal(fs.readFileSync(path.join(f.destination,'previous-build'),'utf8'),'preserve');
   }finally{fs.rmSync(f.root,{recursive:true,force:true})}
 });

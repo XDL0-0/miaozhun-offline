@@ -33,7 +33,10 @@ export function requiredAssets(collection,review=reviewAt(projectRoot)){
     // Ayakashi's sixth clip is retained for audition, outside the game's 1–5 cycle.
     for(const entry of audio.filter(entry=>entry.role==='kill'&&Number(entry.id)>5))add('kill',theme,'kill:'+entry.id,entry);
     add('successive',theme,'successive',audio.find(entry=>entry.role==='successive'));
-    if(banners.length)for(const entry of banners)add('banner',theme,'banner:'+entry.id,entry);
+    if(banners.length)for(const entry of banners){
+      add('banner',theme,'banner:'+entry.id,entry);
+      for(const [layer,source]of Object.entries(entry.layers??{}))add('banner-layer',theme,'banner:'+entry.id+':'+layer,source);
+    }
     else add('banner',theme,'banner',null);
   }
   return assets;
