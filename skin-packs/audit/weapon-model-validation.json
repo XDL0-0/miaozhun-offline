@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 1,
+  "models": 14,
+  "states": 70,
+  "baselineMemory": {
+    "geometries": 5,
+    "textures": 2
+  },
+  "results": [
+    {
+      "key": "ayakashi/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 12,
+          "triangles": 10582,
+          "calls": 13
+        },
+        {
+          "state": "fire",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13
+        },
+        {
+          "state": "reload",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13
+        },
+        {
+          "state": "left",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13
+        },
+        {
+          "state": "ads",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "prelude-to-chaos/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 12,
+          "triangles": 16608,
+          "calls": 13
+        },
+        {
+          "state": "fire",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13
+        },
+        {
+          "state": "reload",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13
+        },
+        {
+          "state": "left",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13
+        },
+        {
+          "state": "ads",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "kuronami/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 10,
+          "triangles": 16077,
+          "calls": 11
+        },
+        {
+          "state": "fire",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11
+        },
+        {
+          "state": "reload",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11
+        },
+        {
+          "state": "left",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11
+        },
+        {
+          "state": "ads",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "kuronami/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 10,
+          "triangles": 11649,
+          "calls": 11
+        },
+        {
+          "state": "fire",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11
+        },
+        {
+          "state": "reload",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11
+        },
+        {
+          "state": "left",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11
+        },
+        {
+          "state": "ads",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "primordium/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 4,
+          "triangles": 16884,
+          "calls": 5
+        },
+        {
+          "state": "fire",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5
+        },
+        {
+          "state": "reload",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5
+        },
+        {
+          "state": "left",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5
+        },
+        {
+          "state": "ads",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "primordium/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 4,
+          "triangles": 15456,
+          "calls": 5
+        },
+        {
+          "state": "fire",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5
+        },
+        {
+          "state": "reload",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5
+        },
+        {
+          "state": "left",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5
+        },
+        {
+          "state": "ads",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "rogue/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 10,
+          "triangles": 30785,
+          "calls": 11
+        },
+        {
+          "state": "fire",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11
+        },
+        {
+          "state": "reload",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11
+        },
+        {
+          "state": "left",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11
+        },
+        {
+          "state": "ads",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "rgx-11z-pro/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 12,
+          "triangles": 17558,
+          "calls": 11
+        },
+        {
+          "state": "fire",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11
+        },
+        {
+          "state": "reload",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11
+        },
+        {
+          "state": "left",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11
+        },
+        {
+          "state": "ads",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "nocturnum/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 11,
+          "triangles": 14473,
+          "calls": 12
+        },
+        {
+          "state": "fire",
+          "skinMesh": 11,
+          "triangles": 27560,
+          "calls": 12
+        },
+        {
+          "state": "reload",
+          "skinMesh": 11,
+          "triangles": 27560,
+          "calls": 12
+        },
+        {
+          "state": "left",
+          "skinMesh": 11,
+          "triangles": 27560,
+          "calls": 12
+        },
+        {
+          "state": "ads",
+          "skinMesh": 11,
+          "triangles": 27560,
+          "calls": 12
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "mystbloom/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 13,
+          "triangles": 18792,
+          "calls": 14
+        },
+        {
+          "state": "fire",
+          "skinMesh": 13,
+          "triangles": 31879,
+          "calls": 14
+        },
+        {
+          "state": "reload",
+          "skinMesh": 13,
+          "triangles": 31879,
+          "calls": 14
+        },
+        {
+          "state": "left",
+          "skinMesh": 13,
+          "triangles": 31879,
+          "calls": 14
+        },
+        {
+          "state": "ads",
+          "skinMesh": 13,
+          "triangles": 31879,
+          "calls": 14
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 5,
+          "triangles": 9114,
+          "calls": 6
+        },
+        {
+          "state": "fire",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6
+        },
+        {
+          "state": "reload",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6
+        },
+        {
+          "state": "left",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6
+        },
+        {
+          "state": "ads",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 5,
+          "triangles": 5759,
+          "calls": 6
+        },
+        {
+          "state": "fire",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6
+        },
+        {
+          "state": "reload",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6
+        },
+        {
+          "state": "left",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6
+        },
+        {
+          "state": "ads",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/sheriff",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 4,
+          "triangles": 6834,
+          "calls": 5
+        },
+        {
+          "state": "fire",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5
+        },
+        {
+          "state": "reload",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5
+        },
+        {
+          "state": "left",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5
+        },
+        {
+          "state": "ads",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/operator",
+      "frames": [
+        {
+          "state": "idle",
+          "skinMesh": 5,
+          "triangles": 8140,
+          "calls": 6
+        },
+        {
+          "state": "fire",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6
+        },
+        {
+          "state": "reload",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6
+        },
+        {
+          "state": "left",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6
+        },
+        {
+          "state": "ads",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6
+        }
+      ],
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    }
+  ],
+  "errors": []
+}

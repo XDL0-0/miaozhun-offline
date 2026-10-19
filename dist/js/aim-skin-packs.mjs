@@ -2,7 +2,7 @@ const __aimOfflineLocale=globalThis.__aimI18n??{t:value=>value,format:(template,
 // Shared by the settings panel and the game. Playback only reads decoded caches.
 export const SKIN_WEAPONS = ['vandal', 'phantom', 'sheriff', 'operator'];
 const STORAGE_KEY = 'aim-offline.skin-packs.v2';
-const original = () => ({collection: 'default', theme: 'default', banner: 'default', fireEnabled: true, killEnabled: true, bannerEnabled: true});
+const original = () => ({collection: 'default', theme: 'default', banner: 'default', modelEnabled: true, fireEnabled: true, killEnabled: true, bannerEnabled: true});
 export const killIndex = kills => (Math.max(1, Math.floor(Number(kills) || 1)) - 1) % 5 + 1;
 const safePath = value => typeof value === 'string' && /^\/skin-packs\/[a-z0-9/-]+\.(ogg|png)$/.test(value) ? value : null;
 const bannerParts = banner => banner?.layers ? [...Object.values(banner.layers), banner.headshot].filter(Boolean) : [banner?.url];
@@ -47,7 +47,7 @@ export function createSkinPackRuntime(options = {}) {
     if (!theme) throw new Error('Skin has no themes');
     const banner = theme.banners.find(item => item.id === candidate.banner) ?? theme.banners[0];
     return {collection: collection.id, theme: theme.id, banner: banner?.id ?? 'default',
-      fireEnabled: candidate.fireEnabled !== false, killEnabled: candidate.killEnabled !== false, bannerEnabled: candidate.bannerEnabled !== false};
+      modelEnabled: candidate.modelEnabled !== false, fireEnabled: candidate.fireEnabled !== false, killEnabled: candidate.killEnabled !== false, bannerEnabled: candidate.bannerEnabled !== false};
   }
   function stopVoice(voice, at) {
     if (!voice) return;
@@ -312,7 +312,7 @@ export function mountSkinSettings(host, getAudioSettings = () => ({})) {
   const make = (tag, text, className) => { const node = doc.createElement(tag); if (text) node.textContent = text; if (className) node.className = className; return node; };
   const section = make('section', '', 'aim-skin-settings');
   section.setAttribute('data-role', 'skin-settings');
-  const heading = make('h3', (__aimOfflineLocale.t('枪械皮肤与击杀反馈'))), intro = make('p', (__aimOfflineLocale.t('各枪械独立保存音效与击杀横幅。缺失或未加载成功的素材使用当前原版效果。')));
+  const heading = make('h3', (__aimOfflineLocale.t('枪械皮肤与击杀反馈'))), intro = make('p', (__aimOfflineLocale.t('各枪械独立保存枪模、音效与击杀横幅。缺失或未加载成功的素材使用当前原版效果。')));
   const controls = make('div', '', 'aim-skin-controls'), content = make('div'), status = make('p', '', 'aim-skin-notice');
   status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
   section.append(heading, intro, controls, content, status); host.replaceChildren(section);
@@ -341,7 +341,7 @@ export function mountSkinSettings(host, getAudioSettings = () => ({})) {
       controls.append(dropdown((__aimOfflineLocale.t('主题')), collection.themes.map(item => ({id: item.id, label: item.label})), selection.theme, value => update({theme: value}), collection.themes.length === 1));
       controls.append(dropdown((__aimOfflineLocale.t('横幅样式')), theme.banners, selection.banner, value => update({banner: value}), theme.banners.length < 2));
       const modes = make('div', '', 'aim-skin-modes');
-      for (const [key, label] of [['fireEnabled', (__aimOfflineLocale.t('皮肤开火音效'))], ['killEnabled', (__aimOfflineLocale.t('皮肤击杀音效'))], ['bannerEnabled', (__aimOfflineLocale.t('皮肤击杀横幅'))]]) {
+      for (const [key, label] of [['modelEnabled', (__aimOfflineLocale.t('皮肤枪模'))], ['fireEnabled', (__aimOfflineLocale.t('皮肤开火音效'))], ['killEnabled', (__aimOfflineLocale.t('皮肤击杀音效'))], ['bannerEnabled', (__aimOfflineLocale.t('皮肤击杀横幅'))]]) {
         const wrapper = make('label'), input = make('input'); input.type = 'checkbox'; input.setAttribute('aria-label', label); input.checked = selection[key]; input.addEventListener('change', () => update({[key]: input.checked})); wrapper.append(input, doc.createTextNode(label)); modes.append(wrapper);
       }
       content.append(modes);

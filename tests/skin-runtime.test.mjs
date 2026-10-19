@@ -119,7 +119,7 @@ test('selections filter weapons and persist each gun, theme, banner and toggles 
   const reloaded=harness(fixture(),storage);await reloaded.runtime.initialize();
   assert.deepEqual(reloaded.runtime.selection('vandal'),savedVandal);assert.deepEqual(reloaded.runtime.selection('phantom'),savedPhantom);
   await h.runtime.select('vandal',{collection:'default'});
-  assert.deepEqual(h.runtime.selection('vandal'),{collection:'default',theme:'default',banner:'default',fireEnabled:true,killEnabled:true,bannerEnabled:true});
+  assert.deepEqual(h.runtime.selection('vandal'),{collection:'default',theme:'default',banner:'default',modelEnabled:true,fireEnabled:true,killEnabled:true,bannerEnabled:true});
   assert.deepEqual(h.runtime.selection('phantom'),savedPhantom);
 });
 

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "models": {
+    "prelude-to-chaos/vandal": "/skin-packs/models/prelude-to-chaos/vandal.json",
+    "kuronami/vandal": "/skin-packs/models/kuronami/vandal.json",
+    "kuronami/phantom": "/skin-packs/models/kuronami/phantom.json",
+    "primordium/vandal": "/skin-packs/models/primordium/vandal.json",
+    "primordium/phantom": "/skin-packs/models/primordium/phantom.json",
+    "rogue/vandal": "/skin-packs/models/rogue/vandal.json",
+    "rgx-11z-pro/vandal": "/skin-packs/models/rgx-11z-pro/vandal.json",
+    "ayakashi/phantom": "/skin-packs/models/ayakashi/phantom.json",
+    "nocturnum/phantom": "/skin-packs/models/nocturnum/phantom.json",
+    "mystbloom/phantom": "/skin-packs/models/mystbloom/phantom.json",
+    "ora-by-onetap/vandal": "/skin-packs/models/ora-by-onetap/vandal.json",
+    "ora-by-onetap/phantom": "/skin-packs/models/ora-by-onetap/phantom.json",
+    "ora-by-onetap/sheriff": "/skin-packs/models/ora-by-onetap/sheriff.json",
+    "ora-by-onetap/operator": "/skin-packs/models/ora-by-onetap/operator.json"
+  },
+  "counts": {
+    "weapons": 14,
+    "collections": 9,
+    "assets": 205
+  }
+}

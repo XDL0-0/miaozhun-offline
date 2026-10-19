@@ -40,5 +40,10 @@
     "missingFire": 0,
     "eligibleFireCombinations": 30
   },
-  "created": "2026-10-19T18:04:35.702Z"
+  "weaponModels": {
+    "weapons": 14,
+    "collections": 9,
+    "assets": 205
+  },
+  "created": "2026-10-19T18:34:41.065Z"
 }

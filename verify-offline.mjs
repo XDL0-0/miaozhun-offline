@@ -5,6 +5,7 @@ import crypto from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {inventoryFonts} from './verify-font-inventory.mjs';
+import {decodeWeaponGlb} from './patches/weapon-models-runtime.mjs';
 
 const packageRoot=path.dirname(fileURLToPath(import.meta.url));
 const arg=process.argv.find(x=>x.startsWith('--root='));
@@ -139,6 +140,31 @@ if(has('/skin-packs/index.json')){
   skinPacks={resourceStatus:manifest.resourceStatus,...counts};
  }catch(error){failures.push({path:'/skin-packs/index.json',stage:'skin pack integrity',error:error.message})}
 }
+// Weapon appearances are ordinary local GLBs/PNGs, independent of the encrypted
+// default models. Verify every material/attachment before certifying offline use.
+try{
+ const indexPath='/skin-packs/models/index.json';requireAsset(indexPath,'weapon model catalogue');
+ const index=readJson(path.join(root,indexPath.slice(1))),seen=new Set();
+ if(index.schemaVersion!==1||Object.keys(index.models??{}).length!==14)throw new Error('Incomplete weapon model catalogue');
+ const safe=url=>typeof url==='string'&&/^\/skin-packs\/models\/[a-z0-9/-]+\.(?:json|png|glb)$/.test(url);
+ for(const [key,url]of Object.entries(index.models)){
+  if(!safe(url))throw new Error('Invalid weapon model package path');requireAsset(url,indexPath);
+  const pack=readJson(path.join(root,url.slice(1)));
+  if(pack.schemaVersion!==1||key!==pack.collection+'/'+pack.weapon||pack.parts.filter(p=>p.role==='body').length!==1||pack.parts.filter(p=>p.role==='magazine').length!==1)throw new Error('Incomplete weapon model '+key);
+  for(const part of pack.parts){
+   if(!safe(part.url))throw new Error('Invalid weapon GLB path');requireAsset(part.url,key+' '+part.role);seen.add(part.url);
+   const bytes=fs.readFileSync(path.join(root,part.url.slice(1))),decoded=decodeWeaponGlb(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));
+   if(decoded.primitives.some(p=>p.material>=part.materials.length||!p.position.every(Number.isFinite)))throw new Error('Invalid weapon geometry '+key);
+   for(const mat of part.materials)for(const field of ['map','normalMap','ormMap','emissiveMap']){
+    const texture=mat[field];if(!texture)continue;if(!safe(texture))throw new Error('Invalid weapon texture path');requireAsset(texture,key+' '+mat.name);seen.add(texture);
+    const png=fs.readFileSync(path.join(root,texture.slice(1)));
+    if(!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||png.readUInt32BE(16)>1024||png.readUInt32BE(20)>1024)throw new Error('Invalid weapon texture '+texture);
+   }
+  }
+ }
+ if(index.counts.assets!==seen.size)throw new Error('Weapon model asset count mismatch');
+ if(skinPacks)skinPacks.weaponModels={...index.counts};
+}catch(error){failures.push({path:'/skin-packs/models/index.json',stage:'weapon model integrity',error:error.message})}
 // Expand every decoded manifest. Packed /Game identities are metadata, not URLs.
 for(const [p,data]of decrypted){
  walkValues(data,(v,key)=>{
