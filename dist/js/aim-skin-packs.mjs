@@ -27,6 +27,7 @@ export function createSkinPackRuntime(options = {}) {
   try { storage = options.storage ?? globalThis.localStorage; } catch {}
   let manifest = null, initializing = null, manifestError = '', decoder = null, activeWeapon = null;
   let previewContext = null, previewSerial = 0;
+  let selectionRevision = 0;
   const listeners = new Set(), buffers = new Map(), audioTasks = new Map(), images = new Map(), imageTasks = new Map(), failures = new Map();
   const previewVoices = new Set(), selections = Object.fromEntries(SKIN_WEAPONS.map(weapon => [weapon, original()]));
   let saved = {};
@@ -161,7 +162,9 @@ export function createSkinPackRuntime(options = {}) {
           }
         }
         manifest = value; manifestError = '';
+        const previousSelections=JSON.stringify(selections);
         for (const weapon of SKIN_WEAPONS) { try { selections[weapon] = normalized(weapon, saved[weapon]); } catch { selections[weapon] = original(); } }
+        if(previousSelections!==JSON.stringify(selections))selectionRevision++;
         emit();
         return manifest;
       } catch (error) { manifestError = (__aimOfflineLocale.t('皮肤目录加载失败，使用原版效果：')) + String(error.message ?? error); emit(); return null; }
@@ -174,6 +177,7 @@ export function createSkinPackRuntime(options = {}) {
     let candidate = {...previous, ...change};
     if (change.collection && change.collection !== previous.collection) candidate = {...original(), ...change};
     selections[weapon] = normalized(weapon, candidate);
+    if(JSON.stringify(previous)!==JSON.stringify(selections[weapon]))selectionRevision++;
     stopAudition();
     try { storage?.setItem(STORAGE_KEY, JSON.stringify(selections)); } catch {}
     emit();
@@ -222,7 +226,14 @@ export function createSkinPackRuntime(options = {}) {
     const next = SKIN_WEAPONS.includes(weapon) ? weapon : null;
     if (activeWeapon !== next) { activeWeapon = next; emit(); }
   }
-  async function prepare(context) { await initialize(); if (manifest) await preload(null, context); }
+  async function prepare(context) {
+    await initialize();if(!manifest)return;
+    for(;;){
+      const revision=selectionRevision;await preload(null,context);
+      await Promise.all([...audioTasks.values(),...imageTasks.values()]);
+      if(revision===selectionRevision&&!audioTasks.size&&!imageTasks.size)return;
+    }
+  }
   function availability(weapon) {
     const {selection, theme} = details(weapon);
     const banner = theme?.banners.find(item => item.id === selection.banner);
@@ -265,6 +276,7 @@ export function createSkinPackRuntime(options = {}) {
     reset() { setActiveWeapon(null); stopAudition(); },
     subscribe(listener) { listeners.add(listener); return () => listeners.delete(listener); },
     get manifest() { return manifest; }, get manifestError() { return manifestError; },
+    get selectionRevision() { return selectionRevision; },
     selection: weapon => ({...(selections[weapon] ?? original())}),
     details, getImage: url => images.get(url) ?? null,
   };

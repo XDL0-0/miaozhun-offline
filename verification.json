@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T23:37:38.760Z",
+  "generatedAt": "2026-10-20T00:34:41.287Z",
   "root": "G:\\TOOLS\\AimOffline\\dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
@@ -11,7 +11,7 @@
     "mapCount": 6
   },
   "resourceCount": 2824,
-  "storedBytes": 494629325,
+  "storedBytes": 494647604,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
@@ -1613,8 +1613,8 @@
       "en"
     ],
     "defaultLanguage": "zh-CN",
-    "catalogEntries": 6335,
-    "sourceKeys": 6314,
+    "catalogEntries": 6339,
+    "sourceKeys": 6318,
     "bundledPresentationKeys": 428,
     "minimapCallouts": {
       "ascent": 22,
@@ -1649,7 +1649,7 @@
       "COrNDj1U.js": 3,
       "CplsneeA.js": 77,
       "CSDlBjTJ.js": 1,
-      "CymPR-fm.js": 305,
+      "CymPR-fm.js": 307,
       "DCKWp-_u.js": 779,
       "De-4Vn7b.js": 24,
       "DhZaeXPX.js": 99,
@@ -1657,7 +1657,7 @@
       "DqtmD7Xr.js": 115,
       "DtLCYWdy.js": 126,
       "DuBWfmzx.js": 12,
-      "DVK7uRSu.js": 350,
+      "DVK7uRSu.js": 353,
       "DXaB1Kn3.js": 9,
       "Dy9x1Za6.js": 5,
       "index.C6F_bJRd.js": 814,
@@ -2015,7 +2015,7 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "3251d1cf9b2c3f41acd060313a58250628186cee2da0249dcc76bfa60ab6171d",
+    "sha256": "c0613b7b11266084ecb7bce3a3bed1fa494005857c6ea52cf73acb3c18e29ccf",
     "fileCount": 2824
   },
   "limitations": [

@@ -1,22 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T23:38:48.763Z",
+  "generatedAt": "2026-10-20T00:37:56.696Z",
   "scope": "HDR source reflections, tangent frames and texture/cache ownership",
   "build": {
     "passed": true
   },
   "tests": {
-    "passed": 168,
+    "passed": 212,
     "failed": 0,
     "skipped": 0
   },
   "offline": {
     "success": true,
     "resources": 2824,
-    "storedBytes": 494629325,
+    "storedBytes": 494647604,
     "scenes": 62,
     "maps": 6,
-    "missingRequired": 0,
     "failures": []
   },
   "source": {
@@ -52,14 +51,27 @@
   },
   "servedRuntime": {
     "matchesBuild": true,
-    "modules": 4
+    "modules": 7,
+    "files": [
+      "dist/js/CFqO0zvx.js",
+      "dist/js/CymPR-fm.js",
+      "dist/js/DCKWp-_u.js",
+      "dist/js/DVK7uRSu.js",
+      "dist/js/aim-skin-packs.mjs",
+      "dist/js/aim-weapon-models.mjs",
+      "dist/js/tmIeW3Ig.js"
+    ],
+    "verificationManifestMatches": true,
+    "resources": 2824
   },
   "browserValidation": {
-    "performed": false,
-    "reason": "Computer Use stopped because the active Edge URL could not be determined reliably. No alternate browser or automation was used."
+    "performed": true,
+    "scope": "Actual full training with Champions 2023 and deterministic native input",
+    "manualGameplayFpsMeasured": false,
+    "report": "docs/training-validation.json"
   },
   "limitations": [
-    "No new rendered visual acceptance or full-scene FPS benchmark; prior Champions screenshots predate this material change.",
+    "The current browser test covers one training scene and selected skins, not every material in every map.",
     "Original cooked custom shader formulas, projection volumes and reflection rotation units remain approximated or omitted."
   ],
   "tangents": {

@@ -29,6 +29,10 @@ export function applySkinPacksPatch(modules) {
     'dispose(){this.killVoice&&Vf(this.killVoice,this.context?.currentTime??0);__aimSkins.reset();this.killVoice=null,this.flash.clear(),this.context?.close()', 'audio session disposal');
   game = replaceOne(game, 'ctx.phase("正在准备本场景技能与枪械…");await d.ready(i.renderer,i.camera,ctx.check);ctx.check();',
     'ctx.phase("正在异步预载皮肤音效与击杀横幅…");await __aimSkins.prepare();ctx.check();__aimSkins.setActiveWeapon(qe());ctx.phase("正在准备本场景技能与枪械…");await d.ready(i.renderer,i.camera,ctx.check);ctx.check();', 'skin preload and initial weapon in scene readiness gate');
+  game = replaceOne(game, 'JSON.stringify(t.botOrderParts?.current)].join("|")',
+    'JSON.stringify(t.botOrderParts?.current),__aimSkins.selectionRevision].join("|")', 'skin audio and banner selection invalidate preparation');
+  game = replaceOne(game, 'load:async()=>{await __aimPrepareAuxiliary(ctx);return __aimPrepareLoadout(ctx)}',
+    'load:async()=>{await __aimSkins.prepare();ctx.check();await __aimPrepareAuxiliary(ctx);return __aimPrepareLoadout(ctx)}', 'wait for media changed during visual preparation');
   result['CymPR-fm.js'] = 'import{skinPacks as __aimSkins}from"./aim-skin-packs.mjs";\n' + game;
 
   let settings = result['DCKWp-_u.js'];

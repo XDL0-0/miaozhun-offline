@@ -23,7 +23,9 @@
     "adjacent-tick-interpolation",
     "shared-hud-raf",
     "local-fps-limit",
-    "scene-prewarm"
+    "scene-prewarm",
+    "stable-loadout-preparation",
+    "same-frame-bot-order"
   ],
   "skinPacks": {
     "clientBridge": true,
@@ -46,5 +48,5 @@
     "variants": 4,
     "assets": 640
   },
-  "created": "2026-10-19T23:35:43.945Z"
+  "created": "2026-10-20T00:33:40.294Z"
 }

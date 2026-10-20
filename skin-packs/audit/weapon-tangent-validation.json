@@ -6,7 +6,7 @@
     "index": "/skin-packs/models/index.json",
     "indexSha256": "b21efb90102ed5577083b165b7edc5fe209dc1fa154535b68fa559c776c23120",
     "runtime": "patches/weapon-models-runtime.mjs",
-    "runtimeSha256": "1a8750aed467b18db33bce622e521cac4528a4c0fe0d712772a776b0de5f042b"
+    "runtimeSha256": "55649169df7e3b19a552be30f415eb929bc4ac07db406ded255e0c969f2883cb"
   },
   "checks": {
     "sourceVertexAttributes": [

@@ -8,7 +8,7 @@ import {applySkinPacksPatch} from '../patches/skin-packs.mjs';
 import {applyInterpolationPatch} from '../patches/interpolation.mjs';
 import {applyHudPatch} from '../patches/hud.mjs';
 import {applyFrameratePatch} from '../patches/framerate.mjs';
-import {applyPrewarmPatch} from '../patches/prewarm.mjs';
+import {applyPrewarmPatch,prepareStableVisuals} from '../patches/prewarm.mjs';
 
 const clone=value=>JSON.parse(JSON.stringify(value));
 const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b});return{promise,resolve,reject}};
@@ -87,6 +87,18 @@ function harness(manifest=fixture(),storage=memoryStorage(),options={}){
 const pick=(runtime,weapon,collection='ora-by-onetap',theme='base',extra={})=>runtime.select(weapon,{collection,theme,...extra});
 const selectedTheme=(h,collection='ora-by-onetap',theme='base')=>h.manifest.collections.find(item=>item.id===collection).themes.find(item=>item.id===theme);
 const firedUrl=context=>context.sources.at(-1)?.buffer?.url;
+
+test('scene media preparation follows selection changes and drains obsolete decodes before allowing play',async()=>{
+  const h=harness();await h.runtime.initialize();
+  const old=selectedTheme(h).fire.vandal,gate=deferred();h.decodeGates.set(old,gate);
+  const selecting=pick(h.runtime,'vandal');await turn();const initial=h.runtime.selectionRevision;
+  let ready=false;const preparation=h.runtime.prepare().then(()=>{ready=true;});
+  const changed=pick(h.runtime,'vandal','prelude-to-chaos','default');await changed;await turn();
+  assert.ok(h.runtime.selectionRevision>initial);assert.equal(ready,false,'old decoding work must finish before entering the scene');
+  gate.resolve();await Promise.all([selecting,preparation]);assert.equal(h.runtime.availability('vandal').fire,'ready');
+  const stable=h.runtime.selectionRevision;await pick(h.runtime,'vandal','prelude-to-chaos','default');h.runtime.setActiveWeapon('vandal');
+  assert.equal(h.runtime.selectionRevision,stable,'load completion and active HUD changes cannot continuously restart the gate');
+});
 
 test('manifest initialization is deduplicated, validates schema and retries after failure',async()=>{
   const h=harness(),gate=deferred();h.fetchGates.set('/skin-packs/index.json',gate);
@@ -409,10 +421,11 @@ test('readiness activates the selected banner before first fire even with native
   const game=patched['CymPR-fm.js'],start=game.indexOf('function __aimBeginWarm(doc,retry=false){'),end=game.indexOf('let Sa=null,Vs=0;',start);
   assert(start>=0&&end>start);
   const noop=()=>{},ready=async()=>{},context={phase:noop,check:noop},built={};
-  const begin=vm.runInNewContext('('+game.slice(start,end).trim()+')',{
+  const begin=vm.runInNewContext('(function(){'+game.slice(start,end).trim()+';return __aimBeginWarm;})()',{
     __aimSkins:h.runtime,__aimWarmGate:{run:work=>work(context)},Nt:built,Vs:0,__aimMapReady:Promise.resolve(),
-    __aimSceneAssetsReady:ready,_n:ready,d:{ready},h:null,t:{viewModel:{current:false}},
+    __aimSceneAssetsReady:ready,_n:ready,d:{ready},ie:{prepare:ready},h:null,t:{viewModel:{current:false}},
     i:{renderer:{},camera:{}},ju:ready,__aimGpuFence:ready,qe:()=> 'vandal',
+    __aimPrepareStableVisuals:prepareStableVisuals,__aimWarmIdentity:()=>'',
   });
   await begin({props:[]});assert(h.runtime.bannerKit(),'scene readiness must establish the gun before any fire event');
   const banner=patched['DVK7uRSu.js'],gateStart=banner.indexOf('cG=e(()=>{__aimSkinRevision.value;'),gateEnd=banner.indexOf('),cH=aS(',gateStart);

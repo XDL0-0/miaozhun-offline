@@ -208,13 +208,43 @@ export const weaponModels=createWeaponModelLoader();
 export const loadWeaponModel=stem=>weaponModels.load(stem);
 export const weaponEffectImage=url=>weaponModels.picture(url);
 
+// Keep asynchronous selection changes inside scene preparation. Obsolete loads
+// still decode on the main thread, so readiness also drains those jobs before
+// allowing a new round to begin.
+export function createWeaponSelectionGate({selectionKey,load,apply,initialKey=null}){
+  let key=initialKey,serial=0,revision=0,disposed=false,latest=null;
+  const jobs=new Set();
+  function refresh(){
+    if(disposed)return Promise.resolve(revision);
+    const next=selectionKey();if(next===key)return latest??Promise.resolve(revision);
+    key=next;const version=++serial;++revision;
+    if(!next){latest=null;apply(null);++revision;return Promise.resolve(revision);}
+    const task=Promise.resolve().then(()=>load()).then(assets=>{
+      if(!disposed&&version===serial){key=selectionKey();apply(assets?.key===key?assets:null);++revision;}
+    },error=>{
+      if(disposed||version!==serial||selectionKey()!==next)return;
+      key=Symbol('failed selection');throw error;
+    });
+    latest=task;jobs.add(task);
+    const done=()=>{jobs.delete(task);if(latest===task)latest=null;};task.then(done,done);return task;
+  }
+  return {refresh,get revision(){return revision;},async ready(){
+    for(;;){
+      if(disposed)throw new Error('Weapon preparation cancelled');
+      refresh();await Promise.all([...jobs]);
+      if(disposed)throw new Error('Weapon preparation cancelled');
+      if(!jobs.size&&key===selectionKey())return revision;
+    }
+  },dispose(){disposed=true;++serial;}};
+}
+
 // All Three.js types come from the existing renderer. There is one renderer,
 // one animation clock and one pair of hands, including left-handed viewmodels.
 export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,originals,stem,initial,environment,skins=skinPacks,loader=weaponModels}){
   const {Group,Geometry,Attribute,Bone,Skeleton,SkinnedMesh,Mesh,Material,Physical,Texture,DataTexture,half,rgba,equirect,linear,linearSrgb,Vector3,Quaternion,srgb,repeat}=types;
   const weapon=weaponOf(stem),nativeMeshes=originals.filter(Boolean);
   const armsScales=armsRig?.bones.map(b=>[b.scale.x,b.scale.y,b.scale.z]);
-  let current=null,disposed=false,serial=0,key=null,requestedGun='vandal';
+  let current=null,disposed=false,requestedGun='vandal';
   const savedVisibility=new Map(nativeMeshes.map(m=>[m,m.visible]));
   function restore(){for(const [mesh,visible]of savedVisibility)mesh.visible=visible;}
   function visibility(){
@@ -310,23 +340,19 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
     // Refresh its ancestors before uploading the skin's world-space bone data.
     current.group.updateWorldMatrix(true,true);current.skeleton.update();
   }
-  async function refresh(){
-    const next=loader.selectionKey(weapon);if(next===key||disposed)return;key=next;const version=++serial;
-    if(!next){key=null;swap(null);return;}
-    const assets=await loader.load(weapon);
-    if(!disposed&&version===serial){key=loader.selectionKey(weapon);swap(assets?.key===key?assets:null);update();}
-  }
-  key=loader.selectionKey(weapon);if(initial?.key===key)swap(initial);
-  const unsubscribe=skins.subscribe(()=>{void refresh();});
+  const selected=loader.selectionKey(weapon);if(initial?.key===selected)swap(initial);
+  const gate=createWeaponSelectionGate({selectionKey:()=>loader.selectionKey(weapon),load:()=>loader.load(weapon),apply(assets){swap(assets);update();},initialKey:current?.key??null});
+  const refresh=()=>{void gate.refresh().catch(error=>globalThis.console?.warn('Skin weapon preparation failed',error));};
+  const unsubscribe=skins.subscribe(refresh);
   // A loader may finish after the user's selection changed during scene setup.
-  if(key&&!current){key=null;void refresh();}
+  if(selected&&!current)refresh();
   const point=new Vector3();
-  return {update,setGun(value){requestedGun=value;visibility();},
+  return {update,async ready(){await skins.initialize();return gate.ready();},get revision(){return gate.revision;},setGun(value){requestedGun=value;visibility();},
     setVisible(visible){if(current)current.group.visible=visible;},
     get muzzle(){return current?.muzzle??null;},
     effectBone(name){return current?.boneMap.get(name)??null;},
     get active(){return !!current;},get key(){return current?.key??null;},
     measureMuzzle(camera){if(!current?.muzzle)return null;parent.updateWorldMatrix(true,true);current.muzzle.getWorldPosition(point);point.applyMatrix4(camera.matrixWorldInverse);return {x:point.x,y:point.y,z:point.z};},
-    dispose(){if(disposed)return;disposed=true;++serial;unsubscribe();current?.dispose();current=null;restore();},
+    dispose(){if(disposed)return;disposed=true;gate.dispose();unsubscribe();current?.dispose();current=null;restore();},
   };
 }

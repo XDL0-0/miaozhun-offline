@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-20T00:37:56.696Z",
+  "scope": "Resource preparation, actual local training entry, deterministic native-engine actions and projected bot-order labels",
+  "build": {
+    "passed": true
+  },
+  "tests": {
+    "passed": 212,
+    "failed": 0,
+    "skipped": 0
+  },
+  "offline": {
+    "success": true,
+    "resources": 2824,
+    "storedBytes": 494647604,
+    "scenes": 62,
+    "maps": 6,
+    "failures": []
+  },
+  "servedRuntime": {
+    "matchesBuild": true,
+    "modules": 7,
+    "files": [
+      "dist/js/CFqO0zvx.js",
+      "dist/js/CymPR-fm.js",
+      "dist/js/DCKWp-_u.js",
+      "dist/js/DVK7uRSu.js",
+      "dist/js/aim-skin-packs.mjs",
+      "dist/js/aim-weapon-models.mjs",
+      "dist/js/tmIeW3Ig.js"
+    ],
+    "verificationManifestMatches": true,
+    "resources": 2824
+  },
+  "browserValidation": {
+    "performed": true,
+    "browser": "ChatGPT in-app Chromium browser",
+    "scene": "b840a9b06efea122",
+    "seed": 20261020,
+    "selectedVandal": "Champions 2023",
+    "auxiliary": "all enabled",
+    "kind": "deterministic native-engine fixture; not a manual gameplay FPS benchmark",
+    "seconds": 10,
+    "ticks": 1280,
+    "completion": "completed-10s",
+    "pointerLocked": false,
+    "scoresAndReplaysDiscarded": true,
+    "errors": [],
+    "firstShotCpu": {
+      "beforeAudioPreparationMs": 39.2,
+      "afterMs": 3.7,
+      "beforeAudioExclusiveMs": 35.9,
+      "afterAudioExclusiveMs": 0.3
+    },
+    "renderSubmitCpuMs": {
+      "samples": 1055,
+      "mean": 3.884,
+      "p50": 3.8,
+      "p95": 4.8,
+      "p99": 5.4,
+      "max": 8.8
+    },
+    "earlierOutputAndActorWarmStage": {
+      "renderSubmitMaxMs": 23
+    },
+    "resources": {
+      "first": {
+        "at": 28128.70000000298,
+        "duration": 2.799999997019768,
+        "geometries": 573,
+        "programs": 91,
+        "textures": 119,
+        "tick": 1
+      },
+      "last": {
+        "at": 38104.09999999404,
+        "duration": 3.6000000089406967,
+        "geometries": 573,
+        "programs": 91,
+        "textures": 119,
+        "tick": 1279
+      },
+      "initializationSlowFrames": []
+    },
+    "rafIntervalsMs": {
+      "samples": 1133,
+      "mean": 8.828,
+      "p50": 6.5,
+      "p95": 12.1,
+      "p99": 17.6,
+      "max": 51.6
+    },
+    "viewportPixels": [
+      1920,
+      1080
+    ],
+    "productionEntryVerified": true,
+    "normalDeliveryDiagnosticsRemoved": true
+  },
+  "limitations": [
+    "CPU measurements include diagnostic hooks. They are not GPU execution time or a full-scene manual FPS guarantee.",
+    "The reported before/after observations are staged fixes in this session, not a complete original-build FPS baseline.",
+    "Occasional browser/system scheduling gaps remain in the observed RAF intervals.",
+    "Later actor respawns outside the first-wave reserve may allocate normally.",
+    "The two retained optional Outlaw equip files are absent; entry preserves its native default pose."
+  ]
+}
