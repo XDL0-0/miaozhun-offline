@@ -8,6 +8,7 @@ import {applyActorPrewarmPatch} from './patches/actor-prewarm.mjs';
 import {applyBotOrderPatch,applyBotOrderCss} from './patches/bot-order.mjs';
 import {applySkinPacksPatch} from './patches/skin-packs.mjs';
 import {applyWeaponModelsPatch} from './patches/weapon-models.mjs';
+import {applyManualReloadPatch} from './patches/manual-reload.mjs';
 import {buildSkinPacks} from './scripts/build-skin-packs.mjs';
 import {buildLocalization} from './scripts/build-localization.mjs';
 const root=path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'));
@@ -105,8 +106,22 @@ fs.writeFileSync(replayFile,replay);
 // Performance patches are reproducible transformations of the retained public
 // client modules. Each patch rejects unexpected upstream versions.
 const moduleDirectory=path.join(dist,'js');
+// Keep the retained client's reload help consistent with unlimited-ammo input.
+const reloadHelp=[
+ ['DCKWp-_u.js',
+  '只在限制弹药的场景里有用；小球项目子弹无限，按了没有反应',
+  '手动换弹；无限子弹时也可使用。换弹期间无法开火'],
+ ['ClAFWwpi.js',
+  'D.value?N("",!0):(p(),m("p",eg," 关掉无限子弹后，弹匣打空会自动换弹（"+$(B.value)+" 秒，取自游戏导出值）， 换弹期间开不出枪。换弹是**打空自动触发**的，没有手动换弹键。 ",1))',
+  '(p(),m("p",eg," 关掉无限子弹后，弹匣打空会自动换弹（"+$(B.value)+" 秒，取自游戏导出值）。无论是否开启无限子弹，都可按换弹键手动换弹（默认 R，可在键位设置中修改）；换弹期间无法开火。 ",1))'],
+];
+for(const[name,before,after]of reloadHelp){
+ const file=path.join(moduleDirectory,name),text=fs.readFileSync(file,'utf8');
+ if(text.split(before).length!==2)throw new Error('换弹说明版本不匹配：'+name);
+ fs.writeFileSync(file,text.replace(before,after));
+}
 const originalModules=Object.fromEntries(fs.readdirSync(moduleDirectory).filter(name=>name.endsWith('.js')).map(name=>[name,fs.readFileSync(path.join(moduleDirectory,name),'utf8')]));
-const optimizedModules=applyWeaponModelsPatch(applySkinPacksPatch(applyBotOrderPatch(applyActorPrewarmPatch(applyPrewarmPatch(applyFrameratePatch(applyHudPatch(applyInterpolationPatch(originalModules))))))));
+const optimizedModules=applyManualReloadPatch(applyWeaponModelsPatch(applySkinPacksPatch(applyBotOrderPatch(applyActorPrewarmPatch(applyPrewarmPatch(applyFrameratePatch(applyHudPatch(applyInterpolationPatch(originalModules)))))))));
 for(const[name,text]of Object.entries(optimizedModules))if(text!==originalModules[name])fs.writeFileSync(path.join(moduleDirectory,name),text);
 const orderCssFile=path.join(dist,'css/TrainLayer.CcDeXnwn.css');
 fs.writeFileSync(orderCssFile,applyBotOrderCss(fs.readFileSync(orderCssFile,'utf8')));

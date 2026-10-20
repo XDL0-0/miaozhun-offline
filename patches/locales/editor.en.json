@@ -677,6 +677,7 @@
   "无限子弹": "Infinite Ammo",
   "关掉无限子弹后，弹匣打空会自动换弹（": "With Infinite Ammo off, an empty magazine automatically reloads (",
   "秒，取自游戏导出值）， 换弹期间开不出枪。换弹是**打空自动触发**的，没有手动换弹键。": " seconds, from the game's exported data). You cannot fire during reload. Reloading is **triggered automatically when empty**; there is no manual reload key.",
+  "秒，取自游戏导出值）。无论是否开启无限子弹，都可按换弹键手动换弹（默认 R，可在键位设置中修改）；换弹期间无法开火。": " seconds, from the game's exported data). You can also manually reload with or without infinite ammo (default: R; change it in Keybinds). You cannot fire while reloading.",
   "击杀回满血": "Restore Full Health on Kill",
   "血量归 0 时": "When Health Reaches 0",
   "这一局在你被打死的那一刻当场结束，结算走与时间到点同一条路。": "End the round as soon as you die, using the same results flow as the time limit.",

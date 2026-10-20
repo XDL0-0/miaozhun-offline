@@ -49,6 +49,7 @@
   "按住开镜还是切换开镜，在「常规 › 鼠标」里设置": "Choose Hold or Toggle under General › Mouse",
   "换弹": "Reload",
   "只在限制弹药的场景里有用；小球项目子弹无限，按了没有反应": "Only applies to scenes with limited ammo. Sphere drills have unlimited ammo, so this does nothing there.",
+  "手动换弹；无限子弹时也可使用。换弹期间无法开火": "Manually reload, including with infinite ammo. You cannot fire while reloading.",
   "主武器": "Primary Weapon",
   "从刀切回枪。拿出枪需要一点时间（步枪约 1 秒），拿好之前不能开火；小球项目不能切换": "Switch from your knife to your gun. Equipping takes time (about 1 second for rifles), and you cannot fire until ready. Weapon switching is unavailable in target drills.",
   "近战（刀）": "Melee (Knife)",
