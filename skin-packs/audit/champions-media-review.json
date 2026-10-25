@@ -1,0 +1,1487 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-20",
+  "scope": "Champions annual weapon collections2021–2026; 2026 attacking/defending original banners and shared kill/fire audio",
+  "counts": {
+    "uniqueKillSources": 37,
+    "audioMappings": 44,
+    "fireSources": 6,
+    "fireMappings": 7,
+    "bannerVariants": 7,
+    "layeredBannerVariants": 3,
+    "wholeFrameBannerVariants": 4,
+    "wholeFrames": 24
+  },
+  "methods": {
+    "audio": "Download exact wiki originalMP3bytes; decode toverifydurationandPCM. Shared2026originalkill sound mapped toboth themes. Preserve completeRiotAACstreams and verify decoded equality withMP4audio; cut declaredsingle-trigger intervals withtailfade only.",
+    "banners": "2021–2023 original frame/ring/emblem/pip PNGs from Kingdom Archives preserve all original dimensions and radial count placement. 2024–2025 use six original count-specific BannerSwap PNGs each. 2026 uses sourceKillBannerData/UMGcount-specific badges, backgrounds and open-state texturelayers; twelve distinct rendered frames retain allsixkillstatesandbothfactions. The runtime originaltransition animationisnot reproduced.",
+    "fire2022": "This Level 2 preview demonstrates a continuous 30-round automatic burst and a lethal shot. Use only the final trigger and its original natural tail at the end of the non-lethal burst, ending before the next mechanical click. The onset retains quiet reverberation of the preceding burst; no second trigger, kill music or fabricated tail is included. Level 3 and Level 4 previews were also checked and contain lethal shots only."
+  },
+  "entries": {
+    "schemaVersion": 1,
+    "audio": [
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2021/kill/default/kill-1.mp3",
+        "sha256": "93cae73e9313fe5f7783d426a05bf54c272d472039d7f77b78726ad2054204e0",
+        "duration": 3.823,
+        "decodedAudioMD5": "fd17cf4cd3bc1777c6831fcf1981ac7a",
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_1.mp3?46194",
+          "sha256": "93cae73e9313fe5f7783d426a05bf54c272d472039d7f77b78726ad2054204e0"
+        }
+      },
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2021/kill/default/kill-2.mp3",
+        "sha256": "857563506e620548c7d0336b75b18ae10b8e61c4ab0cbd34a3909020c679b45a",
+        "duration": 3.065429,
+        "decodedAudioMD5": "60f440264b97d01530927bddd7eea39a",
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_2.mp3?46194",
+          "sha256": "857563506e620548c7d0336b75b18ae10b8e61c4ab0cbd34a3909020c679b45a"
+        }
+      },
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2021/kill/default/kill-3.mp3",
+        "sha256": "98c387531ebeb26830137a64bc895c3ffa331567d5cd761fd17262d3b183ec02",
+        "duration": 3.143786,
+        "decodedAudioMD5": "0ea0d178de4cb60e436ca109a4128ca0",
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_3.mp3?46194",
+          "sha256": "98c387531ebeb26830137a64bc895c3ffa331567d5cd761fd17262d3b183ec02"
+        }
+      },
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2021/kill/default/kill-4.mp3",
+        "sha256": "54edf1f6af4e03d1c40ac928b8b54d795a61f50f50329f55cfc479cc9a6bfedd",
+        "duration": 3.169929,
+        "decodedAudioMD5": "def27b7a04136ab6cfdd12c8a8c565d9",
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_4.mp3?46194",
+          "sha256": "54edf1f6af4e03d1c40ac928b8b54d795a61f50f50329f55cfc479cc9a6bfedd"
+        }
+      },
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2021/kill/default/kill-5.mp3",
+        "sha256": "d37eb6127219b534c93ad59a3d9a4756ea0c698e63e0d863d2e6d366b2232794",
+        "duration": 6.670357,
+        "decodedAudioMD5": "75b5d2cb0c13a98c59f04634ddd6e5fe",
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_5.mp3?24454",
+          "sha256": "d37eb6127219b534c93ad59a3d9a4756ea0c698e63e0d863d2e6d366b2232794"
+        }
+      },
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2021/kill/default/successive.mp3",
+        "sha256": "c5d3720702581417c4940d93bb2b02822fb25d530ad8a4d797cce8563ed8c539",
+        "duration": 13.06805,
+        "decodedAudioMD5": "d0dd8d45626f9f723413d67b9c10d56d",
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_Successive.mp3?da510",
+          "sha256": "c5d3720702581417c4940d93bb2b02822fb25d530ad8a4d797cce8563ed8c539"
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2022/kill/default/kill-1.mp3",
+        "sha256": "138c0b1b03eb4b83c02e76b5091d924d1fb0c2f49277629bfb3a49f08d95bfd6",
+        "duration": 2.752,
+        "decodedAudioMD5": "34cbdd2a82b85e96e626c025b51b5257",
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2022_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2022_Kill_1.mp3?87a44",
+          "sha256": "138c0b1b03eb4b83c02e76b5091d924d1fb0c2f49277629bfb3a49f08d95bfd6"
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2022/kill/default/kill-2.mp3",
+        "sha256": "ecd15e3fe3a88400f553db66fcf3c603bf84b0316bf337e0981171cf8fb0a006",
+        "duration": 2.752,
+        "decodedAudioMD5": "0166bce9d02c9335aa77134a6ede44c5",
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2022_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2022_Kill_2.mp3?87a44",
+          "sha256": "ecd15e3fe3a88400f553db66fcf3c603bf84b0316bf337e0981171cf8fb0a006"
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2022/kill/default/kill-3.mp3",
+        "sha256": "b4ea96f100fa21e7f5779301dbc66971ff599e9310aa7c69719155fbf75cf299",
+        "duration": 2.752,
+        "decodedAudioMD5": "7f230332efbb192ac962ed2c1ff8cd15",
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2022_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2022_Kill_3.mp3?d5b52",
+          "sha256": "b4ea96f100fa21e7f5779301dbc66971ff599e9310aa7c69719155fbf75cf299"
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2022/kill/default/kill-4.mp3",
+        "sha256": "7505b35bff3408b3518027e4a7ddcbecbc51a58fd1090b9cfc7723a81a20fe40",
+        "duration": 2.752,
+        "decodedAudioMD5": "8741769001fac5d44a3cf4603b2234b4",
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2022_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2022_Kill_4.mp3?d5b52",
+          "sha256": "7505b35bff3408b3518027e4a7ddcbecbc51a58fd1090b9cfc7723a81a20fe40"
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2022/kill/default/kill-5.mp3",
+        "sha256": "ae471a64a0d9a43636ccf3c9c91bb4459757d87ed7eb96a875626ff7c5ac4597",
+        "duration": 6.592,
+        "decodedAudioMD5": "f5635868bf085adbb2a78f019578e2c9",
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2022_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2022_Kill_5.mp3?f3668",
+          "sha256": "ae471a64a0d9a43636ccf3c9c91bb4459757d87ed7eb96a875626ff7c5ac4597"
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2022/kill/default/successive.mp3",
+        "sha256": "58a7542d50a69d3658180c8f3a7826ba87ce25e2b81d91c816db9f401c6562f4",
+        "duration": 15.239546,
+        "decodedAudioMD5": "1b5e70ac92c4b88b21ba5867387d44d1",
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2022_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2022_Kill_Successive.mp3?67766",
+          "sha256": "58a7542d50a69d3658180c8f3a7826ba87ce25e2b81d91c816db9f401c6562f4"
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2023/kill/default/kill-1.mp3",
+        "sha256": "45fa6567c4eea258f6c828e289f326f1fd7799387ba0a5b785006cf16e97bc92",
+        "duration": 3.078639,
+        "decodedAudioMD5": "7600af4c64890e26705188f2e599da0d",
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2023_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2023_Kill_1.mp3?05fc5",
+          "sha256": "45fa6567c4eea258f6c828e289f326f1fd7799387ba0a5b785006cf16e97bc92"
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2023/kill/default/kill-2.mp3",
+        "sha256": "5dc557d03263667fb15b81aa00ac6888f1fb221444aba3d0adbaecabab158e05",
+        "duration": 3.078639,
+        "decodedAudioMD5": "1bda2fac100e1bbeb25fe305623c3060",
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2023_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2023_Kill_2.mp3?af528",
+          "sha256": "5dc557d03263667fb15b81aa00ac6888f1fb221444aba3d0adbaecabab158e05"
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2023/kill/default/kill-3.mp3",
+        "sha256": "dbcb9b93a737dbb92512902175899eeff032c0b18d9f8d3155f038a1eaa0d3a6",
+        "duration": 3.078639,
+        "decodedAudioMD5": "3e957c0a20409ea26872165db04e155a",
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2023_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2023_Kill_3.mp3?4d070",
+          "sha256": "dbcb9b93a737dbb92512902175899eeff032c0b18d9f8d3155f038a1eaa0d3a6"
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2023/kill/default/kill-4.mp3",
+        "sha256": "f56cf3ba56e5bea1f1761ea865c755a49188490030ca175a1a1a0998e3c4b6a1",
+        "duration": 3.078639,
+        "decodedAudioMD5": "9cfb9b297449233b0e8d042d6b346284",
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2023_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2023_Kill_4.mp3?ad007",
+          "sha256": "f56cf3ba56e5bea1f1761ea865c755a49188490030ca175a1a1a0998e3c4b6a1"
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2023/kill/default/kill-5.mp3",
+        "sha256": "6f2d1729eb07e2324de62820f5fc8f71992aab24300fd62eff38f7a55f015e9f",
+        "duration": 6.152358,
+        "decodedAudioMD5": "e1ef3da833992411a4674c48590bbfd9",
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2023_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2023_Kill_5.mp3?d9a62",
+          "sha256": "6f2d1729eb07e2324de62820f5fc8f71992aab24300fd62eff38f7a55f015e9f"
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2023/kill/default/successive.mp3",
+        "sha256": "e9eebcb56e7ac8c39961e88a4567042ae29e6ffcd6376a2f5e23f3df25e79086",
+        "duration": 12.5,
+        "decodedAudioMD5": "13fe030d0c1ebe3bdf967549d269f059",
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2023_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2023_Kill_Successive.mp3?bc2b3",
+          "sha256": "e9eebcb56e7ac8c39961e88a4567042ae29e6ffcd6376a2f5e23f3df25e79086"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2024/kill/default/kill-1.mp3",
+        "sha256": "86c8eba7e65b7a98050cb5107192ffc4fa7c4cbffaad2d793a21163e4035c828",
+        "duration": 3.057392,
+        "decodedAudioMD5": "544c8a33f479547fb593ed5beaee7b72",
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_1.mp3?74f24",
+          "sha256": "86c8eba7e65b7a98050cb5107192ffc4fa7c4cbffaad2d793a21163e4035c828"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2024/kill/default/kill-2.mp3",
+        "sha256": "22dcf1ea2fdb1e831cba341d83a19ae7ed829e78c43cc65706b513cca37e1015",
+        "duration": 3.057392,
+        "decodedAudioMD5": "c3d02ee1e919b2dafe3fb24143f24f3d",
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_2.mp3?caf2d",
+          "sha256": "22dcf1ea2fdb1e831cba341d83a19ae7ed829e78c43cc65706b513cca37e1015"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2024/kill/default/kill-3.mp3",
+        "sha256": "11c842dc4f11b56d98d1dab2d33241ddf49ac81436ffc1dd513675643ff66a23",
+        "duration": 3.057392,
+        "decodedAudioMD5": "b087aed6922fc1330059f2662d010939",
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_3.mp3?a1c4b",
+          "sha256": "11c842dc4f11b56d98d1dab2d33241ddf49ac81436ffc1dd513675643ff66a23"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2024/kill/default/kill-4.mp3",
+        "sha256": "4afdf60b87c2f1ace8600b7e3e9506e0902e054cbb3a2c50d19cb8a02fb6c65d",
+        "duration": 3.057392,
+        "decodedAudioMD5": "21433946cd41157e9757c29bb2880c90",
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_4.mp3?091b1",
+          "sha256": "4afdf60b87c2f1ace8600b7e3e9506e0902e054cbb3a2c50d19cb8a02fb6c65d"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2024/kill/default/kill-5.mp3",
+        "sha256": "4ba9d464d7406fdad9e41fec366630f8e992ddf1088529f4b006c2e7f0f06a1f",
+        "duration": 6.152268,
+        "decodedAudioMD5": "c35940c7b3be3ccb7ffb5ad45d918992",
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_5.mp3?3c16d",
+          "sha256": "4ba9d464d7406fdad9e41fec366630f8e992ddf1088529f4b006c2e7f0f06a1f"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2024/kill/default/successive.mp3",
+        "sha256": "40cee977d5e7395f97eb137b0504ef48ffba161cc9fe2a1ebbb6adae66fdf1f9",
+        "duration": 14.1,
+        "decodedAudioMD5": "d4a9e858b77e59717f6b0a8b5d8c5f36",
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_Successive.mp3?8e7e7",
+          "sha256": "40cee977d5e7395f97eb137b0504ef48ffba161cc9fe2a1ebbb6adae66fdf1f9"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2025/kill/default/kill-1.mp3",
+        "sha256": "d17b890a9345e51e1fa800368dc30116979767d803b2a4e79e5b1ebaf5c976d3",
+        "duration": 3.078521,
+        "decodedAudioMD5": "517cffbbf96533d329717a4ed3013f25",
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_1.mp3?279cf",
+          "sha256": "d17b890a9345e51e1fa800368dc30116979767d803b2a4e79e5b1ebaf5c976d3"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2025/kill/default/kill-2.mp3",
+        "sha256": "d80f5e9a4ed1913c2d3abc976c386880cbfd95a36d7042004859bf0bba5d6909",
+        "duration": 3.078542,
+        "decodedAudioMD5": "dec2e85f70d662130aec522a39df8855",
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_2.mp3?bf61e",
+          "sha256": "d80f5e9a4ed1913c2d3abc976c386880cbfd95a36d7042004859bf0bba5d6909"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2025/kill/default/kill-3.mp3",
+        "sha256": "5c5b0df27a50e990018be3056ce8d7f81eeb9f0d26357317579dc2ba5839ecc5",
+        "duration": 3.078542,
+        "decodedAudioMD5": "339c9273badb7c533272631da3cd6802",
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_3.mp3?27e7c",
+          "sha256": "5c5b0df27a50e990018be3056ce8d7f81eeb9f0d26357317579dc2ba5839ecc5"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2025/kill/default/kill-4.mp3",
+        "sha256": "1bbc76e1064ba4576dd5eb13d9fc11c150a360ff8c63b5356ed0a9f2ab883ce4",
+        "duration": 3.078521,
+        "decodedAudioMD5": "305485ad10480c4f051ad62f2091bf29",
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_4.mp3?27e7c",
+          "sha256": "1bbc76e1064ba4576dd5eb13d9fc11c150a360ff8c63b5356ed0a9f2ab883ce4"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2025/kill/default/kill-5.mp3",
+        "sha256": "731e13ea285f83dc8f90c8657e758d9525893f17f8bbcbf453fb346186756b65",
+        "duration": 5.980771,
+        "decodedAudioMD5": "ad478f7352aa0b5a9ddbba6cbaf8ea0e",
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_5.mp3?ba7c4",
+          "sha256": "731e13ea285f83dc8f90c8657e758d9525893f17f8bbcbf453fb346186756b65"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2025/kill/default/successive.mp3",
+        "sha256": "18853f9fd250552a3059b9f83eb9623dcd20ad5bfe18fbb4dd276afaa7784278",
+        "duration": 13.9,
+        "decodedAudioMD5": "ae6903687980d656b52fb33edf96d724",
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_Successive.mp3?642a5",
+          "sha256": "18853f9fd250552a3059b9f83eb9623dcd20ad5bfe18fbb4dd276afaa7784278"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-1.mp3",
+        "sha256": "9c5541eb7dd939a22df957152d43593050503d9435f6cbbfefb449e74705a496",
+        "duration": 2.903243,
+        "decodedAudioMD5": "32c3f1ad4a5d543d7f05d553a817dbac",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_1.mp3?37af0",
+          "sha256": "9c5541eb7dd939a22df957152d43593050503d9435f6cbbfefb449e74705a496"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-2.mp3",
+        "sha256": "c6f90d95907069497d71a4a93706b9fd2c25edf8c03b2fd7cd4e25446756320e",
+        "duration": 2.758934,
+        "decodedAudioMD5": "0771605a663a09f9ca9b7ad60ace3fac",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_2.mp3?37af0",
+          "sha256": "c6f90d95907069497d71a4a93706b9fd2c25edf8c03b2fd7cd4e25446756320e"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-3.mp3",
+        "sha256": "5a4ed219dbf8168c589e73bdccdf32937f9eb33c9ad40edd1c20489b31d444d8",
+        "duration": 2.903243,
+        "decodedAudioMD5": "e979a697540762fd8024b9f01b14509b",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_3.mp3?2746f",
+          "sha256": "5a4ed219dbf8168c589e73bdccdf32937f9eb33c9ad40edd1c20489b31d444d8"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-4.mp3",
+        "sha256": "5ffb6f1a760c7505d98a3f0d32ea14b7be053889e788fe48e0d9fbb4653f5d71",
+        "duration": 2.903243,
+        "decodedAudioMD5": "84ef415cc8489c752b8d6c522282effc",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_4.mp3?37af0",
+          "sha256": "5ffb6f1a760c7505d98a3f0d32ea14b7be053889e788fe48e0d9fbb4653f5d71"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-5.mp3",
+        "sha256": "0c336fe7d083dc8d38c937163ce63a1f3360a409deb2784f20601b5387040bf2",
+        "duration": 8.129048,
+        "decodedAudioMD5": "69e458cf3f2f3ded56c338ba7b59ccd4",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_5.mp3?37af0",
+          "sha256": "0c336fe7d083dc8d38c937163ce63a1f3360a409deb2784f20601b5387040bf2"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "kill",
+        "id": "6",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-6.mp3",
+        "sha256": "75e2780a774659f755171ed7a95adee529a91b78c014ed4afbfce3a8a44fb241",
+        "duration": 2.587188,
+        "decodedAudioMD5": "8f9677326eb9ae133673561b60a89f91",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_6.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_6.mp3?37af0",
+          "sha256": "75e2780a774659f755171ed7a95adee529a91b78c014ed4afbfce3a8a44fb241"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2026/kill/shared/successive.mp3",
+        "sha256": "692038aeea4c074a4d7e0d34ee6df8e15f43e56059173bddc2a1732b9da05c9a",
+        "duration": 18.600249,
+        "decodedAudioMD5": "a4dcdd8e607c5af0a60e2d1f1d925101",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_Successive.mp3?0353d",
+          "sha256": "692038aeea4c074a4d7e0d34ee6df8e15f43e56059173bddc2a1732b9da05c9a"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "kill",
+        "id": "1",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-1.mp3",
+        "sha256": "9c5541eb7dd939a22df957152d43593050503d9435f6cbbfefb449e74705a496",
+        "duration": 2.903243,
+        "decodedAudioMD5": "32c3f1ad4a5d543d7f05d553a817dbac",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_1.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_1.mp3?37af0",
+          "sha256": "9c5541eb7dd939a22df957152d43593050503d9435f6cbbfefb449e74705a496"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "kill",
+        "id": "2",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-2.mp3",
+        "sha256": "c6f90d95907069497d71a4a93706b9fd2c25edf8c03b2fd7cd4e25446756320e",
+        "duration": 2.758934,
+        "decodedAudioMD5": "0771605a663a09f9ca9b7ad60ace3fac",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_2.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_2.mp3?37af0",
+          "sha256": "c6f90d95907069497d71a4a93706b9fd2c25edf8c03b2fd7cd4e25446756320e"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "kill",
+        "id": "3",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-3.mp3",
+        "sha256": "5a4ed219dbf8168c589e73bdccdf32937f9eb33c9ad40edd1c20489b31d444d8",
+        "duration": 2.903243,
+        "decodedAudioMD5": "e979a697540762fd8024b9f01b14509b",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_3.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_3.mp3?2746f",
+          "sha256": "5a4ed219dbf8168c589e73bdccdf32937f9eb33c9ad40edd1c20489b31d444d8"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "kill",
+        "id": "4",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-4.mp3",
+        "sha256": "5ffb6f1a760c7505d98a3f0d32ea14b7be053889e788fe48e0d9fbb4653f5d71",
+        "duration": 2.903243,
+        "decodedAudioMD5": "84ef415cc8489c752b8d6c522282effc",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_4.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_4.mp3?37af0",
+          "sha256": "5ffb6f1a760c7505d98a3f0d32ea14b7be053889e788fe48e0d9fbb4653f5d71"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "kill",
+        "id": "5",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-5.mp3",
+        "sha256": "0c336fe7d083dc8d38c937163ce63a1f3360a409deb2784f20601b5387040bf2",
+        "duration": 8.129048,
+        "decodedAudioMD5": "69e458cf3f2f3ded56c338ba7b59ccd4",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_5.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_5.mp3?37af0",
+          "sha256": "0c336fe7d083dc8d38c937163ce63a1f3360a409deb2784f20601b5387040bf2"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "kill",
+        "id": "6",
+        "path": "skin-packs/media/champions-2026/kill/shared/kill-6.mp3",
+        "sha256": "75e2780a774659f755171ed7a95adee529a91b78c014ed4afbfce3a8a44fb241",
+        "duration": 2.587188,
+        "decodedAudioMD5": "8f9677326eb9ae133673561b60a89f91",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_6.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_6.mp3?37af0",
+          "sha256": "75e2780a774659f755171ed7a95adee529a91b78c014ed4afbfce3a8a44fb241"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "role": "successive",
+        "id": "successive",
+        "path": "skin-packs/media/champions-2026/kill/shared/successive.mp3",
+        "sha256": "692038aeea4c074a4d7e0d34ee6df8e15f43e56059173bddc2a1732b9da05c9a",
+        "duration": 18.600249,
+        "decodedAudioMD5": "a4dcdd8e607c5af0a60e2d1f1d925101",
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_Successive.mp3",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_Successive.mp3?0353d",
+          "sha256": "692038aeea4c074a4d7e0d34ee6df8e15f43e56059173bddc2a1732b9da05c9a"
+        }
+      }
+    ],
+    "banners": [
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2021/banners/default/default.png",
+        "sha256": "80d0b5ce82c80de6d0fb1091f3dbf5e53e9a298b19878246288fb4612f1629ed",
+        "width": 200,
+        "height": 256,
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/Champions_2021_Kill_Banner.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_Banner.png?147be",
+          "sha256": "80d0b5ce82c80de6d0fb1091f3dbf5e53e9a298b19878246288fb4612f1629ed"
+        },
+        "layers": {
+          "frame": {
+            "path": "skin-packs/media/banner-layers/champions-2021/champions2021_frame.png",
+            "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+            "width": 200,
+            "height": 256,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2021",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2021/champions2021_frame.png"
+            }
+          },
+          "ring": {
+            "path": "skin-packs/media/banner-layers/champions-2021/champions2021_ring.png",
+            "sha256": "f611c1f254b8d2ede83a185a09ea0a1e3146d37adbcaee695d2ccfceca05894a",
+            "width": 170,
+            "height": 170,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2021",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2021/champions2021_ring.png"
+            }
+          },
+          "emblem": {
+            "path": "skin-packs/media/banner-layers/champions-2021/champions2021_emblem.png",
+            "sha256": "70084dfc131091265be2bf733ab6c8e8056856cd8f814763c84e53c771cf94e5",
+            "width": 132,
+            "height": 132,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2021",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2021/champions2021_emblem.png"
+            }
+          },
+          "pip": {
+            "path": "skin-packs/media/banner-layers/champions-2021/champions2021_pip.png",
+            "sha256": "0b659ca37d7bb1731b13e59a4f61c4843a21f367d999731fcf38022a3603c417",
+            "width": 76,
+            "height": 36,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2021",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2021/champions2021_pip.png"
+            }
+          },
+          "headshot": {
+            "path": "skin-packs/media/banner-layers/champions-2021/Default_HS.png",
+            "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+            "width": 36,
+            "height": 36,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2021",
+              "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+            }
+          }
+        },
+        "pipRadius": 67,
+        "headshotOffset": [
+          0,
+          0
+        ]
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2022/banners/default/default.png",
+        "sha256": "80d0b5ce82c80de6d0fb1091f3dbf5e53e9a298b19878246288fb4612f1629ed",
+        "width": 200,
+        "height": 256,
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/Champions_2021_Kill_Banner.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_Banner.png?147be",
+          "sha256": "80d0b5ce82c80de6d0fb1091f3dbf5e53e9a298b19878246288fb4612f1629ed"
+        },
+        "layers": {
+          "frame": {
+            "path": "skin-packs/media/banner-layers/champions-2022/champions2022_frame.png",
+            "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+            "width": 200,
+            "height": 256,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2022",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2022/champions2022_frame.png"
+            }
+          },
+          "ring": {
+            "path": "skin-packs/media/banner-layers/champions-2022/champions2022_ring.png",
+            "sha256": "f611c1f254b8d2ede83a185a09ea0a1e3146d37adbcaee695d2ccfceca05894a",
+            "width": 170,
+            "height": 170,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2022",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2022/champions2022_ring.png"
+            }
+          },
+          "emblem": {
+            "path": "skin-packs/media/banner-layers/champions-2022/champions2022_emblem.png",
+            "sha256": "70084dfc131091265be2bf733ab6c8e8056856cd8f814763c84e53c771cf94e5",
+            "width": 132,
+            "height": 132,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2022",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2022/champions2022_emblem.png"
+            }
+          },
+          "pip": {
+            "path": "skin-packs/media/banner-layers/champions-2022/champions2022_pip.png",
+            "sha256": "0b659ca37d7bb1731b13e59a4f61c4843a21f367d999731fcf38022a3603c417",
+            "width": 76,
+            "height": 36,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2022",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2022/champions2022_pip.png"
+            }
+          },
+          "headshot": {
+            "path": "skin-packs/media/banner-layers/champions-2022/Default_HS.png",
+            "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+            "width": 36,
+            "height": 36,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2022",
+              "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+            }
+          }
+        },
+        "pipRadius": 67,
+        "headshotOffset": [
+          0,
+          0
+        ]
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2023/banners/default/default.png",
+        "sha256": "80d0b5ce82c80de6d0fb1091f3dbf5e53e9a298b19878246288fb4612f1629ed",
+        "width": 200,
+        "height": 256,
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/Champions_2021_Kill_Banner.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2021_Kill_Banner.png?147be",
+          "sha256": "80d0b5ce82c80de6d0fb1091f3dbf5e53e9a298b19878246288fb4612f1629ed"
+        },
+        "layers": {
+          "frame": {
+            "path": "skin-packs/media/banner-layers/champions-2023/champions2023_frame.png",
+            "sha256": "7a6a8e0331113f7c1af853e1f32b3c17183a3b285bd679b7d0f70a35488b3649",
+            "width": 200,
+            "height": 256,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2023",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2023/champions2023_frame.png"
+            }
+          },
+          "ring": {
+            "path": "skin-packs/media/banner-layers/champions-2023/champions2023_ring.png",
+            "sha256": "f611c1f254b8d2ede83a185a09ea0a1e3146d37adbcaee695d2ccfceca05894a",
+            "width": 170,
+            "height": 170,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2023",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2023/champions2023_ring.png"
+            }
+          },
+          "emblem": {
+            "path": "skin-packs/media/banner-layers/champions-2023/champions2023_emblem.png",
+            "sha256": "70084dfc131091265be2bf733ab6c8e8056856cd8f814763c84e53c771cf94e5",
+            "width": 132,
+            "height": 132,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2023",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2023/champions2023_emblem.png"
+            }
+          },
+          "pip": {
+            "path": "skin-packs/media/banner-layers/champions-2023/champions2023_pip.png",
+            "sha256": "0b659ca37d7bb1731b13e59a4f61c4843a21f367d999731fcf38022a3603c417",
+            "width": 76,
+            "height": 36,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2023",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2023/champions2023_pip.png"
+            }
+          },
+          "headshot": {
+            "path": "skin-packs/media/banner-layers/champions-2023/Default_HS.png",
+            "sha256": "1ea46b780bd1149e8c8089574881d346687d0a70b06c0faa421568fcb1242bea",
+            "width": 36,
+            "height": 36,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2023",
+              "url": "https://kingdomarchive.com/uploads/killbanners/default/Default_HS.png"
+            }
+          }
+        },
+        "pipRadius": 67,
+        "headshotOffset": [
+          0,
+          0
+        ]
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2024/banners/default/default.png",
+        "sha256": "856bfde5ad3cbe9b9916780332b541f7d148559d9d0f9b748810cc844a77222c",
+        "width": 469,
+        "height": 469,
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/Champions_2024_Kill_Banner.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2024_Kill_Banner.png?fdeaa",
+          "sha256": "856bfde5ad3cbe9b9916780332b541f7d148559d9d0f9b748810cc844a77222c"
+        },
+        "frames": [
+          {
+            "path": "skin-packs/media/champions-2024/banners/default/kill-1.png",
+            "sha256": "e8d7d868537967483f6e017f822a54b860e825f3f8c631758c85c0491d1a76bd",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2024",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2024/Champs24_1.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2024/banners/default/kill-2.png",
+            "sha256": "e7b54d331ff16f5a190c4923e70bacaa16147fec9510243a680d657ddd683ca7",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2024",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2024/Champs24_2.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2024/banners/default/kill-3.png",
+            "sha256": "05c4c60d3121e7afa9606c23638f384babbc4a1ef53587a6bff81816734cead1",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2024",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2024/Champs24_3.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2024/banners/default/kill-4.png",
+            "sha256": "a9ae9ef279acc38d49b1287f5b69f8a56eb099badfa6615a5720acb6a6620c92",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2024",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2024/Champs24_4.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2024/banners/default/kill-5.png",
+            "sha256": "67b3b1b215af64bebc20e684638dd8e64ee5660696892387e471d254f662b66a",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2024",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2024/Champs24_5.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2024/banners/default/kill-6.png",
+            "sha256": "5d3414d8078c547f4277654a560bd5858acdd5e12d834fbc5cd4c8eced12b153",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2024",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2024/Champs24_6.png"
+            }
+          }
+        ]
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2025/banners/default/default.png",
+        "sha256": "f701e9dde3da65f5a043bee5f29e5b45d1063750fea58945a92c3b187e6ee536",
+        "width": 300,
+        "height": 300,
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/Champions_2025_Kill_Banner.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2025_Kill_Banner.png?0726f",
+          "sha256": "f701e9dde3da65f5a043bee5f29e5b45d1063750fea58945a92c3b187e6ee536"
+        },
+        "frames": [
+          {
+            "path": "skin-packs/media/champions-2025/banners/default/kill-1.png",
+            "sha256": "abfe54c69f467355e7cc8dea9bee6334eb9907312c429c788ed9b568bd92b256",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2025",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2025/Champs-25-1.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2025/banners/default/kill-2.png",
+            "sha256": "00c85d16501923dc2607a7bd09e7ff55f07cdfef05862d6523c447a582d7a381",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2025",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2025/Champs-25-2.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2025/banners/default/kill-3.png",
+            "sha256": "3a288cfcb7b9d7610f1a00183a40fceebe8440bf8bae4a56453612ceab630683",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2025",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2025/Champs-25-3.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2025/banners/default/kill-4.png",
+            "sha256": "51138485c702f8f6a8cb59e7a0ec64e405f6121475ef9efc19ede88ec3b91217",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2025",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2025/Champs-25-4.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2025/banners/default/kill-5.png",
+            "sha256": "a03f2ecca52f51107cba83536779280ab414ce9721d5ed1322748586c43e0029",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2025",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2025/champs-25-5.png"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2025/banners/default/kill-6.png",
+            "sha256": "2e674d76d26a38be5cb0d55a236ce13dbb98ac54fb35ab69b596810ca133cf44",
+            "width": 300,
+            "height": 300,
+            "source": {
+              "page": "https://kingdomarchive.com/killbanners?banner=champions2025",
+              "url": "https://kingdomarchive.com/uploads/killbanners/champions2025/champs-25-6.png"
+            }
+          }
+        ]
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2026/banners/attacking/default.png",
+        "sha256": "6b58fbbbfddf83d67a60c261d267c5cd055d0f064ed72e73fb83a3f9363e8580",
+        "width": 469,
+        "height": 476,
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_Banner_Attacking.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_Banner_Attacking.png?2746f",
+          "sha256": "6b58fbbbfddf83d67a60c261d267c5cd055d0f064ed72e73fb83a3f9363e8580"
+        },
+        "frames": [
+          {
+            "path": "skin-packs/media/champions-2026/banners/attacking/kill-1.png",
+            "sha256": "aafd212ec69ba631acce23040eee71ca51ae9bcf977295e744e192a963e17d37",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/01_Champs26_Emblem_Animation_Snake.174",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34",
+              "sourceWidgetSha256": "c9612afc05e062e41b942307c71261964a4217729ca2cb6feea6eca3c7affa9c"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/attacking/kill-2.png",
+            "sha256": "5699f695320c20d38e2dcf4b62dff430b5a088457f93bb73daf7f27e35168254",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/02_Champs26_Emblem_Animation_Snake.174",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34",
+              "sourceWidgetSha256": "54423de53d3e9ab4aa86e305b2541dac8b2bbe39d73b9b4c09c8dd86ebb59a90"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/attacking/kill-3.png",
+            "sha256": "bf8bea409204c84416aeba0cfbb10cc0c6e1ea921bc286046740aa2f09e7823b",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/03_Champs26_Emblem_Animation_Snake.174",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34",
+              "sourceWidgetSha256": "b33cd7a867d447b020a567d92a5a2dddfbe19a2c51d8ee1320638f8a83964c0b"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/attacking/kill-4.png",
+            "sha256": "a48b2fca43add7a5b3916d0526199c289020601a5dc31ef267626a65e16fd1ba",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/04_Champs26_Emblem_Animation_Snake.257",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34",
+              "sourceWidgetSha256": "2fd14cb7f0b91a22a87bc3cfaa0817c02d493b42ada69ab456868c98a3b6db50"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/attacking/kill-5.png",
+            "sha256": "8d2a313b06a97f7ee3b8ce08385a21fa81d5b8f07c5140324cf93f97f4323be4",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/05_Champs26_Emblem_Animation_Snake.269",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34",
+              "sourceWidgetSha256": "714732dd54adcd653ab4b5a03a350c8dd07e727e7b8d6454c0c7c39612923908"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/attacking/kill-6.png",
+            "sha256": "98fb4fb485b5e750bd6f49fdb2f4a6f38827757ab37948f4bdd13ce4ec4e7b70",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/06_Champs26_Emblem_Animation_Snake.337",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34",
+              "sourceWidgetSha256": "6460ca4965053586e2bc19fa3fec3462a4230c78c50dea92b4a8805a0a5470db"
+            }
+          }
+        ]
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "id": "default",
+        "label": "Default",
+        "path": "skin-packs/media/champions-2026/banners/defending/default.png",
+        "sha256": "7009aef510149d1b956ce878679bfed6b391f1fbcdccca3dfb38806579ef3cac",
+        "width": 469,
+        "height": 476,
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/Champions_2026_Kill_Banner_Defending.png",
+          "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+          "url": "https://wiki.playvalorant.com/en-us/images/Champions_2026_Kill_Banner_Defending.png?2746f",
+          "sha256": "7009aef510149d1b956ce878679bfed6b391f1fbcdccca3dfb38806579ef3cac"
+        },
+        "frames": [
+          {
+            "path": "skin-packs/media/champions-2026/banners/defending/kill-1.png",
+            "sha256": "d4b59ebdac3699fd820502b58e2c4dec36744c5c8537f4491ae129398d469257",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/01_Champs26_Emblem_Animation_Snake.174",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2",
+              "sourceWidgetSha256": "c9612afc05e062e41b942307c71261964a4217729ca2cb6feea6eca3c7affa9c"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/defending/kill-2.png",
+            "sha256": "674d552bb81301f66cee37b7133473598fe044089e25fd72b2451a2b8f78d861",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/02_Champs26_Emblem_Animation_Snake.174",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2",
+              "sourceWidgetSha256": "54423de53d3e9ab4aa86e305b2541dac8b2bbe39d73b9b4c09c8dd86ebb59a90"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/defending/kill-3.png",
+            "sha256": "d0d302aebda4c2bf9dcb3eccc44b0d2edbb25cbf97068fd9e2acf1c0a8466f30",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/03_Champs26_Emblem_Animation_Snake.174",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2",
+              "sourceWidgetSha256": "b33cd7a867d447b020a567d92a5a2dddfbe19a2c51d8ee1320638f8a83964c0b"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/defending/kill-4.png",
+            "sha256": "7bf078bd82f71567c2be4095259fb68515ccf275552419acf36553696d343de5",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/04_Champs26_Emblem_Animation_Dragon.257",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2",
+              "sourceWidgetSha256": "a0039bb7f94ba1fa8f1d40f2a38a641c4989505f7a06e8ee09459c7093f5dea0"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/defending/kill-5.png",
+            "sha256": "2ecb72af0b1768c4d62f421d005773e0c5a4594bf9f03e7ed953c531cc3f64b6",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/05_Champs26_Emblem_Animation_Dragon.269",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2",
+              "sourceWidgetSha256": "42eecc56cc41f48929e7b5e2ca41c2b1e5a6e613f9af8e309c2729f10c6c8d97"
+            }
+          },
+          {
+            "path": "skin-packs/media/champions-2026/banners/defending/kill-6.png",
+            "sha256": "08b8f9cf0cb6a41d13e86daced967ec09310ee691cde9ccf468167851b3e00c7",
+            "width": 384,
+            "height": 384,
+            "source": {
+              "page": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+              "localAsset": "/Game/UI/InGame/KillBanner/Champs26/06_Champs26_Emblem_Animation_Dragon.337",
+              "review": "skin-packs/audit/champions-banner-recipes.json",
+              "sourceDataSha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2",
+              "sourceWidgetSha256": "0938b959e24ede1fb8b5415689afa05191b54660bf10fc65a3a9eb2949e73dfc"
+            }
+          }
+        ]
+      }
+    ],
+    "fire": [
+      {
+        "collection": "champions-2021",
+        "theme": "default",
+        "weapon": "vandal",
+        "path": "skin-packs/media/fire-sources/champions-2021-vandal-level2.m4a",
+        "sha256": "1a90267f2ea1e72d0d56ea3aecceb665e6714453c190068bb8e64967f265679e",
+        "excerpt": {
+          "startSeconds": 18.477,
+          "endSeconds": 18.805,
+          "gainDb": 0.408,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2021/champions-2021-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/761eeafc-489b-81c4-dc64-2cbd85be44ce_default_universal.mp4",
+          "sha256": "b8c7db6c764c1f5d70b186c8f7e8b2bf920e8b190e44aaae541566c4a92f7306",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "9bf19b77-4b33-7203-9f2c-16932970622f",
+          "levelUuid": "f96ed262-4280-2363-2542-38b5620bfbb5",
+          "levelName": "Champions 2021 Vandal Level 2",
+          "retainedAudioDecodedPcmSha256": "9bd1743fb3143aae3ec56a71a680ade06f82e173f63a3af0763cffcecba41564",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2021-vandal.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json",
+          "notes": "Champions 2021 does not add a unique gunshot; retained source is its original Vandal shot."
+        }
+      },
+      {
+        "collection": "champions-2022",
+        "theme": "default",
+        "weapon": "phantom",
+        "path": "skin-packs/media/fire-sources/champions-2022-phantom-level2.m4a",
+        "sha256": "f88592b645daa12ebd6ff90a70c797c36d61e198396c607035b987b095eed76a",
+        "excerpt": {
+          "startSeconds": 3.747,
+          "endSeconds": 4.025,
+          "gainDb": 16.135,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2022/champions-2022-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/856e4472-4b0d-b2dd-f988-95afa7c477d4_default_universal.mp4",
+          "sha256": "77fb1bb9c8249ec927497dae7adac9b3ab48887fccaca499343423e066a4b9a1",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "8c72ae0b-4357-1a75-ad62-fbaec7b64f92",
+          "levelUuid": "3e511130-4d87-06dc-d6b3-45909bcba884",
+          "levelName": "Champions 2022 Phantom Level 2",
+          "retainedAudioDecodedPcmSha256": "c7c07d5c4b0357a91df3a44e24451922b33bb2a2a645d84efa11aba01af31b52",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2022-phantom.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json",
+          "notes": "This Level 2 preview demonstrates a continuous 30-round automatic burst and a lethal shot. Use only the final trigger and its original natural tail at the end of the non-lethal burst, ending before the next mechanical click. The onset retains quiet reverberation of the preceding burst; no second trigger, kill music or fabricated tail is included. Level 3 and Level 4 previews were also checked and contain lethal shots only."
+        }
+      },
+      {
+        "collection": "champions-2023",
+        "theme": "default",
+        "weapon": "vandal",
+        "path": "skin-packs/media/fire-sources/champions-2023-vandal-level2.m4a",
+        "sha256": "31be3f37ffd953d023716cef0d717bec019d3cb1f8e8968825e0abb8085c0baf",
+        "excerpt": {
+          "startSeconds": 6.561,
+          "endSeconds": 7.34,
+          "gainDb": 0.555,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2023/champions-2023-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/ed6a3dea-41d8-4f88-95d8-a8a23301c034_default_universal.mp4",
+          "sha256": "a4b90581f95457848ff5d7de6328ba4f00042be45b19971087b3076edec95d4b",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "b0f65660-4c51-13b7-9d01-e29a1e2879b0",
+          "levelUuid": "71eaf031-4f82-4482-7500-d698fa2ec81f",
+          "levelName": "Champions 2023 Vandal Level 2",
+          "retainedAudioDecodedPcmSha256": "0b8fc5441c51b90e459bcd9dad4050d5e12dfda93d1200021aff8fd282b9b63b",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2023-vandal.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json"
+        }
+      },
+      {
+        "collection": "champions-2024",
+        "theme": "default",
+        "weapon": "phantom",
+        "path": "skin-packs/media/fire-sources/champions-2024-phantom-level2.m4a",
+        "sha256": "6665f080d9cdbe6455b39ae213f8b1981c4bc95f25e82ced0692aed783f47c4b",
+        "excerpt": {
+          "startSeconds": 1.583,
+          "endSeconds": 2.08,
+          "gainDb": -3.315,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2024/champions-2024-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/543e3a0e-48ef-ab7c-f5e4-c39980399b1d_default_universal.mp4",
+          "sha256": "a248d08a0d042f3e1810c9fff7d297536ef14540df5547b04cfc2dead3c35bb9",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "cc1da8cd-452f-a007-0bf8-b68a471c3a6e",
+          "levelUuid": "a4199a7f-4b2a-166f-ec2e-769607a77845",
+          "levelName": "Champions 2024 Phantom Level 2",
+          "retainedAudioDecodedPcmSha256": "6278da3790a56022cbe01ff0cf190cd58cfe36305dbe7d0cde13844adef9267b",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2024-phantom.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json"
+        }
+      },
+      {
+        "collection": "champions-2025",
+        "theme": "default",
+        "weapon": "vandal",
+        "path": "skin-packs/media/fire-sources/champions-2025-vandal-level2.m4a",
+        "sha256": "82f55e3ce9d994f03df404b8113cb56101d21531643f56cb52b209df1a7f986c",
+        "excerpt": {
+          "startSeconds": 3.882,
+          "endSeconds": 4.52,
+          "gainDb": 2.004,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2025/champions-2025-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/897a6dce-42a5-43fb-6ea6-15aa76638139_default_universal.mp4",
+          "sha256": "82cdc424a6e05cf7a32219ee2425c95584387d6abf53987cb4117e2deb666937",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "15cc1aab-432f-34d8-e0e8-d2925d54324b",
+          "levelUuid": "1674f649-46ce-d98a-37c7-47b016160623",
+          "levelName": "Champions 2025 Vandal Level 2",
+          "retainedAudioDecodedPcmSha256": "38b9f36ffb2a700967b4756c4bbf565b6e062eac40fee0ade2cf80fca9568907",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2025-vandal.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json"
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "attacking",
+        "weapon": "phantom",
+        "path": "skin-packs/media/fire-sources/champions-2026-phantom-level2.m4a",
+        "sha256": "a6ed1249b8da94cf5194cc0b215be3aa4169de56476b1b0792ec4ae6580f28dc",
+        "excerpt": {
+          "startSeconds": 2.042,
+          "endSeconds": 2.56,
+          "gainDb": 2.032,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/champions-2026-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/ba17324e-40e4-0eef-8a56-288a8f16a57a_default_universal.mp4",
+          "sha256": "1bb1922c474e452bd6fc90e23e8982c05f9108e1f27f3f9791c2cce470e7c189",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "7b17cfbb-4d50-4908-9da5-18afb3a63d8a",
+          "levelUuid": "92b704dd-4da3-0594-6be5-48b288b4020a",
+          "levelName": "Champions 2026 Phantom Level 2\nThe skin design changes if you are attacker or defender",
+          "retainedAudioDecodedPcmSha256": "6ca3beba2ef7f50412f31c365901d0ea1704d9dfe56b8bb2ea11e5a750d36126",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2026-phantom.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json",
+          "notes": "Level 2 preview simultaneously demonstrates attacking and defending models; original firing audio is shared."
+        }
+      },
+      {
+        "collection": "champions-2026",
+        "theme": "defending",
+        "weapon": "phantom",
+        "path": "skin-packs/media/fire-sources/champions-2026-phantom-level2.m4a",
+        "sha256": "a6ed1249b8da94cf5194cc0b215be3aa4169de56476b1b0792ec4ae6580f28dc",
+        "excerpt": {
+          "startSeconds": 2.042,
+          "endSeconds": 2.56,
+          "gainDb": 2.032,
+          "fadeOutSeconds": 0.02
+        },
+        "source": {
+          "path": "qa-artifacts/champions/media/2026/champions-2026-level2.mp4",
+          "url": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/ba17324e-40e4-0eef-8a56-288a8f16a57a_default_universal.mp4",
+          "sha256": "1bb1922c474e452bd6fc90e23e8982c05f9108e1f27f3f9791c2cce470e7c189",
+          "apiSource": "https://valorant-api.com/v1/weapons/skins",
+          "skinUuid": "7b17cfbb-4d50-4908-9da5-18afb3a63d8a",
+          "levelUuid": "92b704dd-4da3-0594-6be5-48b288b4020a",
+          "levelName": "Champions 2026 Phantom Level 2\nThe skin design changes if you are attacker or defender",
+          "retainedAudioDecodedPcmSha256": "6ca3beba2ef7f50412f31c365901d0ea1704d9dfe56b8bb2ea11e5a750d36126",
+          "audioRetention": "Complete original AAC stream copied from MP4 without encoding; decoded PCM equality verified",
+          "reviewEvidence": "skin-packs/audit/fire-evidence/champions-2026-phantom.jpg",
+          "reviewAudit": "skin-packs/audit/champions-media-review.json",
+          "notes": "Level 2 preview simultaneously demonstrates attacking and defending models; original firing audio is shared."
+        }
+      }
+    ]
+  },
+  "banner2026Recipes": "skin-packs/audit/champions-banner-recipes.json"
+}

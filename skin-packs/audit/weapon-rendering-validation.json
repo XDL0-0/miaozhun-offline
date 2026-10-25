@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-20T00:37:56.696Z",
+  "scope": "HDR source reflections, tangent frames and texture/cache ownership",
+  "build": {
+    "passed": true
+  },
+  "tests": {
+    "passed": 212,
+    "failed": 0,
+    "skipped": 0
+  },
+  "offline": {
+    "success": true,
+    "resources": 2824,
+    "storedBytes": 494647604,
+    "scenes": 62,
+    "maps": 6,
+    "failures": []
+  },
+  "source": {
+    "assets": 640,
+    "unchangedOriginalSurfaceAndGeometryAssets": 445,
+    "environmentSourceRecords": 14,
+    "uniqueEnvironmentPayloads": 13,
+    "visibleMaterialAssignments": 135,
+    "bodyResolution": "unchanged"
+  },
+  "performance": {
+    "fpsMeasured": false,
+    "rawHistoricalCacheBudgetBytes": 100663296,
+    "retainsMostRecentOversizedPack": true,
+    "sharingEstimates": [
+      {
+        "keys": [
+          "champions-2026/phantom/defending",
+          "champions-2026/melee/defending"
+        ],
+        "bodyRgba8FullMipBytesSaved": 5592400,
+        "measured": false
+      },
+      {
+        "keys": [
+          "kuronami/vandal",
+          "kuronami/phantom"
+        ],
+        "bodyRgba8FullMipBytesSaved": 7346184,
+        "measured": false
+      }
+    ]
+  },
+  "servedRuntime": {
+    "matchesBuild": true,
+    "modules": 7,
+    "files": [
+      "dist/js/CFqO0zvx.js",
+      "dist/js/CymPR-fm.js",
+      "dist/js/DCKWp-_u.js",
+      "dist/js/DVK7uRSu.js",
+      "dist/js/aim-skin-packs.mjs",
+      "dist/js/aim-weapon-models.mjs",
+      "dist/js/tmIeW3Ig.js"
+    ],
+    "verificationManifestMatches": true,
+    "resources": 2824
+  },
+  "browserValidation": {
+    "performed": true,
+    "scope": "Actual full training with Champions 2023 and deterministic native input",
+    "manualGameplayFpsMeasured": false,
+    "report": "docs/training-validation.json"
+  },
+  "limitations": [
+    "The current browser test covers one training scene and selected skins, not every material in every map.",
+    "Original cooked custom shader formulas, projection volumes and reflection rotation units remain approximated or omitted."
+  ],
+  "tangents": {
+    "status": "pass",
+    "glbs": 73,
+    "primitives": 186,
+    "sourceVertices": 274590,
+    "decodedVertices": 276150,
+    "extraVertices": 1560,
+    "triangles": 289168,
+    "corners": 867504,
+    "signedCorners": 858207,
+    "ambiguousCorners": 0,
+    "degenerateUVCorners": 9297,
+    "duplicateAttributeValuesChecked": 27944,
+    "failureCount": 0,
+    "extraVertexPercent": 0.5681197421610401,
+    "report": "skin-packs/audit/weapon-tangent-validation.json"
+  }
+}

@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 const root=path.join(path.dirname(fileURLToPath(import.meta.url)),'dist');
 const port=18746,host='127.0.0.1';
 const mime={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.enc':'application/octet-stream','.wasm':'application/wasm','.woff2':'font/woff2','.woff':'font/woff','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.ico':'image/x-icon','.ogg':'audio/ogg','.mp3':'audio/mpeg','.glb':'model/gltf-binary','.bin':'application/octet-stream'};
+mime['.mjs']='application/javascript; charset=utf-8';
 const csp="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'";
 let missing=new Map();
 const ok=data=>({code:'00000',data,msg:'本地离线数据'});

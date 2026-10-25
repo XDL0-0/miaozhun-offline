@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T17:49:37.599Z",
-  "root": "G:\\TOOLS\\AimOffline\\dist",
+  "generatedAt": "2026-10-20T11:42:52.517Z",
+  "root": "/home/yuyuan/miaozhun-offline/dist",
   "success": true,
   "scope": "Acquired public local training, map scenes and local editor resources. Account, rankings, course content, cloud publishing and permission-gated skin lab are outside offline runtime.",
   "checks": {
@@ -10,16 +10,16 @@
     "sceneCount": 62,
     "mapCount": 6
   },
-  "resourceCount": 1826,
-  "storedBytes": 164536932,
+  "resourceCount": 2824,
+  "storedBytes": 494648085,
   "encryptedResources": 410,
   "jsonResources": 111,
   "inventory": {
     "materialCandidates": 638,
     "moduleCandidates": 0,
     "moduleClosureEntries": 78,
-    "uniqueRequirements": 1729,
-    "satisfied": 1727,
+    "uniqueRequirements": 2721,
+    "satisfied": 2719,
     "moduleExclusions": [
       {
         "path": "js/BbCrAlFy.js",
@@ -1588,6 +1588,86 @@
       }
     }
   ],
+  "skinPacks": {
+    "resourceStatus": "complete",
+    "audio": 160,
+    "killAudio": 103,
+    "successiveAudio": 20,
+    "banners": 44,
+    "layeredBanners": 40,
+    "bannerLayers": 92,
+    "fire": 37,
+    "missingFire": 0,
+    "eligibleFireCombinations": 37,
+    "weaponModels": {
+      "weapons": 26,
+      "collections": 15,
+      "variants": 4,
+      "assets": 640
+    }
+  },
+  "localization": {
+    "schemaVersion": 1,
+    "languages": [
+      "zh-CN",
+      "en"
+    ],
+    "defaultLanguage": "zh-CN",
+    "catalogEntries": 6341,
+    "sourceKeys": 6318,
+    "bundledPresentationKeys": 428,
+    "minimapCallouts": {
+      "ascent": 22,
+      "bonsai": 24,
+      "infinity": 23,
+      "jam": 28,
+      "plummet": 24,
+      "triad": 21
+    },
+    "modules": {
+      "4JWOlA2c.js": 10,
+      "B51EgnC9.js": 42,
+      "B7oA57Lm.js": 73,
+      "B9C9f4Y8.js": 1675,
+      "BB-zep8c.js": 3,
+      "BHk7ng7V.js": 2,
+      "BIK6wYuP.js": 22,
+      "BW23heFo.js": 85,
+      "BcReXW5-.js": 7,
+      "Biqfuxlb.js": 9,
+      "BsLgkbch.js": 2,
+      "ByozQ3Kd.js": 55,
+      "C-EbiaU_.js": 1,
+      "C5ume65F.js": 53,
+      "COrNDj1U.js": 3,
+      "CSDlBjTJ.js": 1,
+      "CbwK0sKS.js": 7,
+      "CdryQ4Mo.js": 7,
+      "Ce84J7kX.js": 4,
+      "CiTlk85K.js": 4,
+      "ClAFWwpi.js": 1363,
+      "CplsneeA.js": 77,
+      "CymPR-fm.js": 307,
+      "DCKWp-_u.js": 779,
+      "DVK7uRSu.js": 353,
+      "DXaB1Kn3.js": 9,
+      "De-4Vn7b.js": 24,
+      "DhZaeXPX.js": 99,
+      "DkK-e7zE.js": 8,
+      "DqtmD7Xr.js": 115,
+      "DtLCYWdy.js": 126,
+      "DuBWfmzx.js": 12,
+      "Dy9x1Za6.js": 5,
+      "aQOfOAp-.js": 137,
+      "aim-skin-packs.mjs": 56,
+      "index.C6F_bJRd.js": 814,
+      "mxLm3KzH.js": 144,
+      "tmIeW3Ig.js": 53,
+      "offline-runtime.js": 89,
+      "offline-i18n.js": 3
+    },
+    "missing": []
+  },
   "fonts": {
     "files": 1013,
     "cachedFiles": 1013,
@@ -1935,8 +2015,8 @@
   "failures": [],
   "sha256Manifest": {
     "file": "verification-resources.sha256.json",
-    "sha256": "184cd8da1a0122f5ab75bf64f612635519c3076854095802c5d0d7245254f6aa",
-    "fileCount": 1826
+    "sha256": "b115c52a4333c6f943f232223f3c4b9c3fff04b091c843a71cf9842d02958300",
+    "fileCount": 2824
   },
   "limitations": [
     "Static/resource integrity validation does not prove every interactive training mode; the separate browser smoke test covers rendering and input.",

@@ -1,0 +1,1161 @@
+{
+  "schemaVersion": 1,
+  "method": "Actual shipped native viewmodel and particle renderer; 1280x720; five shots per sequence; memory-only preferences. Coverage is the fraction of a downsampled fixed-camera frame changing by at least 48/255 in any RGB channel, not an FPS measurement or a gameplay visibility guarantee.",
+  "before": {
+    "models": 14,
+    "scenarios": 56,
+    "frames": 4088,
+    "results": [
+      {
+        "key": "prelude-to-chaos/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 369,
+            "center": 316,
+            "time": 0.4583333333333333,
+            "particles": 11,
+            "coverage": 0.00640625,
+            "centerCoverage": 0.045717592592592594
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 361,
+            "center": 317,
+            "time": 0.15,
+            "particles": 17,
+            "coverage": 0.006267361111111111,
+            "centerCoverage": 0.04586226851851852
+          },
+          {
+            "scenario": "ads",
+            "changed": 147,
+            "center": 147,
+            "time": 0.16666666666666666,
+            "particles": 7,
+            "coverage": 0.0025520833333333333,
+            "centerCoverage": 0.021267361111111112
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 152,
+            "center": 152,
+            "time": 0.15833333333333333,
+            "particles": 12,
+            "coverage": 0.002638888888888889,
+            "centerCoverage": 0.02199074074074074
+          }
+        ]
+      },
+      {
+        "key": "kuronami/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 1879,
+            "center": 1512,
+            "time": 0.1,
+            "particles": 25,
+            "coverage": 0.03262152777777778,
+            "centerCoverage": 0.21875
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 1879,
+            "center": 1512,
+            "time": 0.1,
+            "particles": 31,
+            "coverage": 0.03262152777777778,
+            "centerCoverage": 0.21875
+          },
+          {
+            "scenario": "ads",
+            "changed": 2095,
+            "center": 1921,
+            "time": 0.13333333333333333,
+            "particles": 25,
+            "coverage": 0.03637152777777778,
+            "centerCoverage": 0.2779224537037037
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 2096,
+            "center": 1922,
+            "time": 0.3333333333333333,
+            "particles": 32,
+            "coverage": 0.03638888888888889,
+            "centerCoverage": 0.27806712962962965
+          }
+        ]
+      },
+      {
+        "key": "kuronami/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 668,
+            "center": 180,
+            "time": 0.1,
+            "particles": 21,
+            "coverage": 0.011597222222222222,
+            "centerCoverage": 0.026041666666666668
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 670,
+            "center": 182,
+            "time": 0.3,
+            "particles": 21,
+            "coverage": 0.011631944444444445,
+            "centerCoverage": 0.026331018518518517
+          },
+          {
+            "scenario": "ads",
+            "changed": 471,
+            "center": 123,
+            "time": 0.1,
+            "particles": 21,
+            "coverage": 0.008177083333333333,
+            "centerCoverage": 0.017795138888888888
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 471,
+            "center": 123,
+            "time": 0.1,
+            "particles": 22,
+            "coverage": 0.008177083333333333,
+            "centerCoverage": 0.017795138888888888
+          }
+        ]
+      },
+      {
+        "key": "primordium/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 370,
+            "center": 370,
+            "time": 0.425,
+            "particles": 6,
+            "coverage": 0.006423611111111111,
+            "centerCoverage": 0.053530092592592594
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 350,
+            "center": 350,
+            "time": 0.26666666666666666,
+            "particles": 3,
+            "coverage": 0.006076388888888889,
+            "centerCoverage": 0.05063657407407408
+          },
+          {
+            "scenario": "ads",
+            "changed": 224,
+            "center": 224,
+            "time": 0.10833333333333334,
+            "particles": 6,
+            "coverage": 0.0038888888888888888,
+            "centerCoverage": 0.032407407407407406
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 266,
+            "center": 266,
+            "time": 0.425,
+            "particles": 9,
+            "coverage": 0.004618055555555556,
+            "centerCoverage": 0.038483796296296294
+          }
+        ]
+      },
+      {
+        "key": "primordium/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 263,
+            "center": 260,
+            "time": 0.10833333333333334,
+            "particles": 6,
+            "coverage": 0.004565972222222222,
+            "centerCoverage": 0.03761574074074074
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 268,
+            "center": 265,
+            "time": 0.10833333333333334,
+            "particles": 8,
+            "coverage": 0.004652777777777777,
+            "centerCoverage": 0.03833912037037037
+          },
+          {
+            "scenario": "ads",
+            "changed": 124,
+            "center": 124,
+            "time": 0.4,
+            "particles": 7,
+            "coverage": 0.0021527777777777778,
+            "centerCoverage": 0.017939814814814815
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 161,
+            "center": 161,
+            "time": 0.1,
+            "particles": 9,
+            "coverage": 0.0027951388888888887,
+            "centerCoverage": 0.023292824074074073
+          }
+        ]
+      },
+      {
+        "key": "rogue/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 1076,
+            "center": 894,
+            "time": 0.4,
+            "particles": 14,
+            "coverage": 0.018680555555555554,
+            "centerCoverage": 0.1293402777777778
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 998,
+            "center": 906,
+            "time": 0.325,
+            "particles": 21,
+            "coverage": 0.017326388888888888,
+            "centerCoverage": 0.1310763888888889
+          },
+          {
+            "scenario": "ads",
+            "changed": 1016,
+            "center": 837,
+            "time": 0.4166666666666667,
+            "particles": 10,
+            "coverage": 0.017638888888888888,
+            "centerCoverage": 0.12109375
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 975,
+            "center": 798,
+            "time": 0.125,
+            "particles": 15,
+            "coverage": 0.016927083333333332,
+            "centerCoverage": 0.1154513888888889
+          }
+        ]
+      },
+      {
+        "key": "rgx-11z-pro/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 5441,
+            "center": 3436,
+            "time": 0.1,
+            "particles": 10,
+            "coverage": 0.09446180555555556,
+            "centerCoverage": 0.49710648148148145
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 5441,
+            "center": 3436,
+            "time": 0.1,
+            "particles": 17,
+            "coverage": 0.09446180555555556,
+            "centerCoverage": 0.49710648148148145
+          },
+          {
+            "scenario": "ads",
+            "changed": 15257,
+            "center": 6661,
+            "time": 0.1,
+            "particles": 7,
+            "coverage": 0.2648784722222222,
+            "centerCoverage": 0.9636863425925926
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 10942,
+            "center": 6282,
+            "time": 0.1,
+            "particles": 18,
+            "coverage": 0.18996527777777777,
+            "centerCoverage": 0.9088541666666666
+          }
+        ]
+      },
+      {
+        "key": "ayakashi/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 280,
+            "center": 201,
+            "time": 0.45,
+            "particles": 11,
+            "coverage": 0.004861111111111111,
+            "centerCoverage": 0.029079861111111112
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 261,
+            "center": 177,
+            "time": 0.26666666666666666,
+            "particles": 12,
+            "coverage": 0.00453125,
+            "centerCoverage": 0.025607638888888888
+          },
+          {
+            "scenario": "ads",
+            "changed": 157,
+            "center": 157,
+            "time": 0.25,
+            "particles": 7,
+            "coverage": 0.0027256944444444446,
+            "centerCoverage": 0.02271412037037037
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 147,
+            "center": 147,
+            "time": 0.4583333333333333,
+            "particles": 7,
+            "coverage": 0.0025520833333333333,
+            "centerCoverage": 0.021267361111111112
+          }
+        ]
+      },
+      {
+        "key": "nocturnum/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 229,
+            "center": 229,
+            "time": 0.16666666666666666,
+            "particles": 8,
+            "coverage": 0.003975694444444444,
+            "centerCoverage": 0.033130787037037035
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 320,
+            "center": 320,
+            "time": 0.19166666666666668,
+            "particles": 11,
+            "coverage": 0.005555555555555556,
+            "centerCoverage": 0.046296296296296294
+          },
+          {
+            "scenario": "ads",
+            "changed": 178,
+            "center": 178,
+            "time": 0.26666666666666666,
+            "particles": 9,
+            "coverage": 0.0030902777777777777,
+            "centerCoverage": 0.025752314814814815
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 227,
+            "center": 227,
+            "time": 0.49166666666666664,
+            "particles": 8,
+            "coverage": 0.0039409722222222224,
+            "centerCoverage": 0.03284143518518518
+          }
+        ]
+      },
+      {
+        "key": "mystbloom/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 511,
+            "center": 511,
+            "time": 0.35833333333333334,
+            "particles": 13,
+            "coverage": 0.008871527777777779,
+            "centerCoverage": 0.07392939814814815
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 508,
+            "center": 508,
+            "time": 0.35833333333333334,
+            "particles": 13,
+            "coverage": 0.008819444444444444,
+            "centerCoverage": 0.07349537037037036
+          },
+          {
+            "scenario": "ads",
+            "changed": 254,
+            "center": 254,
+            "time": 0.25833333333333336,
+            "particles": 13,
+            "coverage": 0.004409722222222222,
+            "centerCoverage": 0.03674768518518518
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 272,
+            "center": 272,
+            "time": 0.26666666666666666,
+            "particles": 13,
+            "coverage": 0.004722222222222222,
+            "centerCoverage": 0.03935185185185185
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 692,
+            "center": 586,
+            "time": 0.4,
+            "particles": 7,
+            "coverage": 0.012013888888888888,
+            "centerCoverage": 0.08478009259259259
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 751,
+            "center": 645,
+            "time": 0.1,
+            "particles": 9,
+            "coverage": 0.013038194444444444,
+            "centerCoverage": 0.09331597222222222
+          },
+          {
+            "scenario": "ads",
+            "changed": 243,
+            "center": 191,
+            "time": 0.2,
+            "particles": 7,
+            "coverage": 0.00421875,
+            "centerCoverage": 0.027633101851851853
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 305,
+            "center": 253,
+            "time": 0.4,
+            "particles": 9,
+            "coverage": 0.005295138888888889,
+            "centerCoverage": 0.03660300925925926
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 31,
+            "center": 31,
+            "time": 0.325,
+            "particles": 3,
+            "coverage": 0.0005381944444444444,
+            "centerCoverage": 0.004484953703703704
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 33,
+            "center": 33,
+            "time": 0.125,
+            "particles": 4,
+            "coverage": 0.0005729166666666667,
+            "centerCoverage": 0.004774305555555556
+          },
+          {
+            "scenario": "ads",
+            "changed": 0,
+            "center": 0,
+            "coverage": 0,
+            "centerCoverage": 0
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 0,
+            "center": 0,
+            "coverage": 0,
+            "centerCoverage": 0
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/sheriff",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 941,
+            "center": 625,
+            "time": 0.225,
+            "particles": 9,
+            "coverage": 0.016336805555555556,
+            "centerCoverage": 0.0904224537037037
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 973,
+            "center": 659,
+            "time": 0.425,
+            "particles": 23,
+            "coverage": 0.01689236111111111,
+            "centerCoverage": 0.09534143518518519
+          },
+          {
+            "scenario": "ads",
+            "changed": 824,
+            "center": 659,
+            "time": 0.225,
+            "particles": 9,
+            "coverage": 0.014305555555555556,
+            "centerCoverage": 0.09534143518518519
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 858,
+            "center": 693,
+            "time": 0.325,
+            "particles": 19,
+            "coverage": 0.014895833333333334,
+            "centerCoverage": 0.10026041666666667
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/operator",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 1554,
+            "center": 1291,
+            "time": 0.4,
+            "particles": 7,
+            "coverage": 0.026979166666666665,
+            "centerCoverage": 0.18677662037037038
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 1535,
+            "center": 1248,
+            "time": 0.2,
+            "particles": 12,
+            "coverage": 0.026649305555555555,
+            "centerCoverage": 0.18055555555555555
+          },
+          {
+            "scenario": "ads",
+            "changed": 1526,
+            "center": 1268,
+            "time": 0.2,
+            "particles": 7,
+            "coverage": 0.026493055555555554,
+            "centerCoverage": 0.18344907407407407
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 1602,
+            "center": 1301,
+            "time": 0.3,
+            "particles": 13,
+            "coverage": 0.0278125,
+            "centerCoverage": 0.18822337962962962
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "after": {
+    "models": 14,
+    "scenarios": 56,
+    "frames": 4088,
+    "results": [
+      {
+        "key": "prelude-to-chaos/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 283,
+            "center": 283,
+            "time": 0.25833333333333336,
+            "particles": 9,
+            "coverage": 0.004913194444444445,
+            "centerCoverage": 0.040943287037037035
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 335,
+            "center": 335,
+            "time": 0.15,
+            "particles": 11,
+            "coverage": 0.005815972222222222,
+            "centerCoverage": 0.04846643518518518
+          },
+          {
+            "scenario": "ads",
+            "changed": 229,
+            "center": 229,
+            "time": 0.15,
+            "particles": 7,
+            "coverage": 0.003975694444444444,
+            "centerCoverage": 0.033130787037037035
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 254,
+            "center": 254,
+            "time": 0.4583333333333333,
+            "particles": 12,
+            "coverage": 0.004409722222222222,
+            "centerCoverage": 0.03674768518518518
+          }
+        ]
+      },
+      {
+        "key": "kuronami/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 83,
+            "center": 83,
+            "time": 0.3,
+            "particles": 11,
+            "coverage": 0.0014409722222222222,
+            "centerCoverage": 0.012008101851851851
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 103,
+            "center": 103,
+            "time": 0.4083333333333333,
+            "particles": 18,
+            "coverage": 0.0017881944444444445,
+            "centerCoverage": 0.01490162037037037
+          },
+          {
+            "scenario": "ads",
+            "changed": 103,
+            "center": 103,
+            "time": 0.3416666666666667,
+            "particles": 11,
+            "coverage": 0.0017881944444444445,
+            "centerCoverage": 0.01490162037037037
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 119,
+            "center": 119,
+            "time": 0.14166666666666666,
+            "particles": 17,
+            "coverage": 0.002065972222222222,
+            "centerCoverage": 0.017216435185185185
+          }
+        ]
+      },
+      {
+        "key": "kuronami/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 111,
+            "center": 111,
+            "time": 0.3,
+            "particles": 7,
+            "coverage": 0.0019270833333333334,
+            "centerCoverage": 0.016059027777777776
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 110,
+            "center": 110,
+            "time": 0.1,
+            "particles": 7,
+            "coverage": 0.0019097222222222222,
+            "centerCoverage": 0.015914351851851853
+          },
+          {
+            "scenario": "ads",
+            "changed": 0,
+            "center": 0,
+            "coverage": 0,
+            "centerCoverage": 0
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 0,
+            "center": 0,
+            "coverage": 0,
+            "centerCoverage": 0
+          }
+        ]
+      },
+      {
+        "key": "primordium/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 379,
+            "center": 379,
+            "time": 0.125,
+            "particles": 6,
+            "coverage": 0.006579861111111111,
+            "centerCoverage": 0.05483217592592592
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 422,
+            "center": 422,
+            "time": 0.23333333333333334,
+            "particles": 6,
+            "coverage": 0.007326388888888889,
+            "centerCoverage": 0.06105324074074074
+          },
+          {
+            "scenario": "ads",
+            "changed": 274,
+            "center": 274,
+            "time": 0.3,
+            "particles": 6,
+            "coverage": 0.004756944444444445,
+            "centerCoverage": 0.039641203703703706
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 326,
+            "center": 326,
+            "time": 0.11666666666666667,
+            "particles": 7,
+            "coverage": 0.005659722222222222,
+            "centerCoverage": 0.04716435185185185
+          }
+        ]
+      },
+      {
+        "key": "primordium/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 77,
+            "center": 75,
+            "time": 0.25833333333333336,
+            "particles": 3,
+            "coverage": 0.0013368055555555555,
+            "centerCoverage": 0.010850694444444444
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 78,
+            "center": 76,
+            "time": 0.4583333333333333,
+            "particles": 3,
+            "coverage": 0.0013541666666666667,
+            "centerCoverage": 0.01099537037037037
+          },
+          {
+            "scenario": "ads",
+            "changed": 10,
+            "center": 10,
+            "time": 0.1,
+            "particles": 3,
+            "coverage": 0.00017361111111111112,
+            "centerCoverage": 0.0014467592592592592
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 10,
+            "center": 10,
+            "time": 0.1,
+            "particles": 4,
+            "coverage": 0.00017361111111111112,
+            "centerCoverage": 0.0014467592592592592
+          }
+        ]
+      },
+      {
+        "key": "rogue/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 290,
+            "center": 156,
+            "time": 0.325,
+            "particles": 13,
+            "coverage": 0.0050347222222222225,
+            "centerCoverage": 0.022569444444444444
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 213,
+            "center": 172,
+            "time": 0.125,
+            "particles": 18,
+            "coverage": 0.0036979166666666666,
+            "centerCoverage": 0.02488425925925926
+          },
+          {
+            "scenario": "ads",
+            "changed": 139,
+            "center": 115,
+            "time": 0.23333333333333334,
+            "particles": 9,
+            "coverage": 0.0024131944444444444,
+            "centerCoverage": 0.016637731481481483
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 112,
+            "center": 95,
+            "time": 0.3333333333333333,
+            "particles": 15,
+            "coverage": 0.0019444444444444444,
+            "centerCoverage": 0.013744212962962963
+          }
+        ]
+      },
+      {
+        "key": "rgx-11z-pro/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 440,
+            "center": 388,
+            "time": 0.4,
+            "particles": 9,
+            "coverage": 0.007638888888888889,
+            "centerCoverage": 0.05613425925925926
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 483,
+            "center": 431,
+            "time": 0.2,
+            "particles": 15,
+            "coverage": 0.008385416666666666,
+            "centerCoverage": 0.06235532407407408
+          },
+          {
+            "scenario": "ads",
+            "changed": 592,
+            "center": 232,
+            "time": 0.4,
+            "particles": 7,
+            "coverage": 0.010277777777777778,
+            "centerCoverage": 0.03356481481481482
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 664,
+            "center": 299,
+            "time": 0.4,
+            "particles": 13,
+            "coverage": 0.011527777777777777,
+            "centerCoverage": 0.04325810185185185
+          }
+        ]
+      },
+      {
+        "key": "ayakashi/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 124,
+            "center": 50,
+            "time": 0.225,
+            "particles": 9,
+            "coverage": 0.0021527777777777778,
+            "centerCoverage": 0.007233796296296296
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 125,
+            "center": 51,
+            "time": 0.225,
+            "particles": 10,
+            "coverage": 0.002170138888888889,
+            "centerCoverage": 0.007378472222222222
+          },
+          {
+            "scenario": "ads",
+            "changed": 4,
+            "center": 4,
+            "time": 0.1,
+            "particles": 5,
+            "coverage": 0.00006944444444444444,
+            "centerCoverage": 0.0005787037037037037
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 5,
+            "center": 5,
+            "time": 0.2,
+            "particles": 5,
+            "coverage": 0.00008680555555555556,
+            "centerCoverage": 0.0007233796296296296
+          }
+        ]
+      },
+      {
+        "key": "nocturnum/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 50,
+            "center": 50,
+            "time": 0.5416666666666666,
+            "particles": 8,
+            "coverage": 0.0008680555555555555,
+            "centerCoverage": 0.007233796296296296
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 46,
+            "center": 46,
+            "time": 0.35,
+            "particles": 7,
+            "coverage": 0.0007986111111111112,
+            "centerCoverage": 0.006655092592592593
+          },
+          {
+            "scenario": "ads",
+            "changed": 1,
+            "center": 1,
+            "time": 0.375,
+            "particles": 5,
+            "coverage": 0.00001736111111111111,
+            "centerCoverage": 0.00014467592592592592
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 1,
+            "center": 1,
+            "time": 0.15,
+            "particles": 6,
+            "coverage": 0.00001736111111111111,
+            "centerCoverage": 0.00014467592592592592
+          }
+        ]
+      },
+      {
+        "key": "mystbloom/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 229,
+            "center": 229,
+            "time": 0.2,
+            "particles": 6,
+            "coverage": 0.003975694444444444,
+            "centerCoverage": 0.033130787037037035
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 230,
+            "center": 230,
+            "time": 0.3,
+            "particles": 6,
+            "coverage": 0.003993055555555555,
+            "centerCoverage": 0.033275462962962965
+          },
+          {
+            "scenario": "ads",
+            "changed": 8,
+            "center": 8,
+            "time": 0.10833333333333334,
+            "particles": 6,
+            "coverage": 0.0001388888888888889,
+            "centerCoverage": 0.0011574074074074073
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 7,
+            "center": 7,
+            "time": 0.2,
+            "particles": 6,
+            "coverage": 0.00012152777777777777,
+            "centerCoverage": 0.0010127314814814814
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 571,
+            "center": 470,
+            "time": 0.2,
+            "particles": 6,
+            "coverage": 0.009913194444444445,
+            "centerCoverage": 0.06799768518518519
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 572,
+            "center": 471,
+            "time": 0.4,
+            "particles": 8,
+            "coverage": 0.009930555555555555,
+            "centerCoverage": 0.0681423611111111
+          },
+          {
+            "scenario": "ads",
+            "changed": 162,
+            "center": 110,
+            "time": 0.1,
+            "particles": 6,
+            "coverage": 0.0028125,
+            "centerCoverage": 0.015914351851851853
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 163,
+            "center": 111,
+            "time": 0.4,
+            "particles": 8,
+            "coverage": 0.002829861111111111,
+            "centerCoverage": 0.016059027777777776
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 61,
+            "center": 61,
+            "time": 0.14166666666666666,
+            "particles": 3,
+            "coverage": 0.0010590277777777779,
+            "centerCoverage": 0.00882523148148148
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 56,
+            "center": 56,
+            "time": 0.24166666666666667,
+            "particles": 4,
+            "coverage": 0.0009722222222222222,
+            "centerCoverage": 0.008101851851851851
+          },
+          {
+            "scenario": "ads",
+            "changed": 1,
+            "center": 1,
+            "time": 0.14166666666666666,
+            "particles": 3,
+            "coverage": 0.00001736111111111111,
+            "centerCoverage": 0.00014467592592592592
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 1,
+            "center": 1,
+            "time": 0.14166666666666666,
+            "particles": 3,
+            "coverage": 0.00001736111111111111,
+            "centerCoverage": 0.00014467592592592592
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/sheriff",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 596,
+            "center": 375,
+            "time": 0.325,
+            "particles": 8,
+            "coverage": 0.010347222222222223,
+            "centerCoverage": 0.054253472222222224
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 657,
+            "center": 441,
+            "time": 0.425,
+            "particles": 23,
+            "coverage": 0.01140625,
+            "centerCoverage": 0.06380208333333333
+          },
+          {
+            "scenario": "ads",
+            "changed": 433,
+            "center": 297,
+            "time": 0.225,
+            "particles": 8,
+            "coverage": 0.007517361111111111,
+            "centerCoverage": 0.04296875
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 509,
+            "center": 373,
+            "time": 0.125,
+            "particles": 23,
+            "coverage": 0.008836805555555556,
+            "centerCoverage": 0.05396412037037037
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/operator",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 753,
+            "center": 650,
+            "time": 0.1,
+            "particles": 6,
+            "coverage": 0.013072916666666667,
+            "centerCoverage": 0.09403935185185185
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 736,
+            "center": 661,
+            "time": 0.1,
+            "particles": 11,
+            "coverage": 0.012777777777777779,
+            "centerCoverage": 0.09563078703703703
+          },
+          {
+            "scenario": "ads",
+            "changed": 869,
+            "center": 733,
+            "time": 0.4,
+            "particles": 6,
+            "coverage": 0.015086805555555555,
+            "centerCoverage": 0.1060474537037037
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 828,
+            "center": 705,
+            "time": 0.1,
+            "particles": 9,
+            "coverage": 0.014375,
+            "centerCoverage": 0.10199652777777778
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "baselineCommit": "24ba87c"
+}

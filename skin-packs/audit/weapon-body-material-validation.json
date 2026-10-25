@@ -1,0 +1,2447 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "29f718a",
+  "method": "Actual shipped renderer, 1280x720. Freeze weapon pose and vary only material time/heat; compare a 320x180 pixel probe to detect changes outside the existing silhouette. Memory-only skin choices; no user data changed. This is a visual regression check, not an FPS benchmark.",
+  "tests": 144,
+  "models": 14,
+  "states": 154,
+  "baselineMemory": {
+    "geometries": 5,
+    "textures": 2
+  },
+  "results": [
+    {
+      "key": "ayakashi/phantom",
+      "surfaceCheck": {
+        "features": [
+          "rim",
+          "flow"
+        ],
+        "animatedPixels": 247,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Yokai_Shell_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Yokai_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Yokai_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Yokai_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Yokai_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Yokai_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Yokai_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Yokai_Head_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Yokai_Head_Shell_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Yokai_Shell_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Yokai_Background_MI",
+          "map": true,
+          "color": [
+            0.045963,
+            0.04585,
+            0.046875
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Yokai_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "prelude-to-chaos/vandal",
+      "surfaceCheck": {
+        "features": [
+          "tint"
+        ],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_DemonStone_Magazine_v1_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "Demonstone_Emissive_v1_MI",
+          "map": false,
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "1P_Demonstone_Decals_v1_MI",
+          "map": true,
+          "color": [
+            0.703125,
+            0.703125,
+            0.703125
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_DemonStone_Magazine_v1_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "Demonstone_Emissive_v1_MI",
+          "map": false,
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "1P_Demonstone_Decals_v1_MI",
+          "map": true,
+          "color": [
+            0.703125,
+            0.703125,
+            0.703125
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_DemonStone_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "Demonstone_Emissive_MI",
+          "map": false,
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "1P_Demonstone_Decals_MI",
+          "map": true,
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Demonstone_Emissive_v1_MI",
+          "map": false,
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_DemonStone_v1_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "1P_Demonstone_Decals_v1_MI",
+          "map": true,
+          "color": [
+            0.703125,
+            0.703125,
+            0.703125
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "kuronami/vandal",
+      "surfaceCheck": {
+        "features": [
+          "flow"
+        ],
+        "animatedPixels": 29,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Ninja_Magazine_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Ninja_Water_Magazine_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Ninja_Magazine_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Ninja_Water_Magazine_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Ninja_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Ninja_Water_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Ninja_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Ninja_Water_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "1P_Ninja_Decals_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Ninja_Shuriken_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "kuronami/phantom",
+      "surfaceCheck": {
+        "features": [
+          "flow"
+        ],
+        "animatedPixels": 311,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Ninja2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Ninja2_Water_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Ninja2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Ninja2_Water_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Ninja_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Ninja_Water_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Ninja2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Ninja2_Water_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "1P_Ninja2_Decals_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Ninja2_Shuriken_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "primordium/vandal",
+      "surfaceCheck": {
+        "features": [
+          "heat"
+        ],
+        "animatedPixels": 555,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "primordium/phantom",
+      "surfaceCheck": {
+        "features": [
+          "heat"
+        ],
+        "animatedPixels": 734,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Hellfire_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "rogue/vandal",
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Rogue_v3_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Rogue_v3_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Rogue_v3_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Rogue_v3_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Rogue_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Rogue_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Rogue_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 2,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Rogue_Extra_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "1P_Rogue_Decals_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "1P_Rogue_Decals_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "rgx-11z-pro/vandal",
+      "surfaceCheck": {
+        "features": [
+          "plastic"
+        ],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Afterglow_Opaque_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Afterglow_Transparent_MI",
+          "map": true,
+          "color": [
+            0.45,
+            0.45,
+            0.45
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Afterglow_LEDs_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Afterglow_Opaque_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Afterglow_Transparent_MI",
+          "map": true,
+          "color": [
+            0.45,
+            0.45,
+            0.45
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Afterglow_LEDs_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Afterglow_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Afterglow_Opaque_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Afterglow_LEDs_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Afterglow_Transparent_MI",
+          "map": true,
+          "color": [
+            0.45,
+            0.45,
+            0.45
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "nocturnum/phantom",
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Coven_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Coven_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Coven_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Coven_Straps_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 3,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Coven_Feathers_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0.5,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "coven_cracks_05_MI",
+          "map": true,
+          "color": [
+            0.003047,
+            0.003201,
+            0.0045
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "coven_cracks_04_MI",
+          "map": true,
+          "color": [
+            0.003047,
+            0.003201,
+            0.0045
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "coven_cracks_03_MI",
+          "map": true,
+          "color": [
+            0.003047,
+            0.003201,
+            0.0045
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "coven_cracks_02_MI",
+          "map": true,
+          "color": [
+            0.003047,
+            0.003201,
+            0.0045
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "coven_cracks_01_MI",
+          "map": true,
+          "color": [
+            0.003047,
+            0.003201,
+            0.0045
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "mystbloom/phantom",
+      "surfaceCheck": {
+        "features": [
+          "flow",
+          "scroll",
+          "line"
+        ],
+        "animatedPixels": 456,
+        "whitePixels": 434,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Spirit_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Spirit_Energy_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Spirit_Petal_MI",
+          "map": true,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Spirit_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Spirit_Petal_MI",
+          "map": true,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Spirit_Petal_MI",
+          "map": true,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Spirit_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Spirit_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Spirit_Petal_Line_MI",
+          "map": false,
+          "color": [
+            0.08,
+            0.08,
+            0.08
+          ],
+          "emissiveIntensity": 0,
+          "transparent": true
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Spirit_Animated_Petal_MI",
+          "map": true,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Spirit_Static_Petal_MI",
+          "map": true,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Spirit_Petal_MI",
+          "map": true,
+          "color": [
+            0.8,
+            0.8,
+            0.8
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Spirit_Energy_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/vandal",
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "AK_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "AK_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "AK_Ego2_Screen_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/phantom",
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Carbine_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:silencer",
+          "material": "Silencer_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "RedDot_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Carbine_Ego2_Screen_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/sheriff",
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "Revolver_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:magazineSpare",
+          "material": "Revolver_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Revolver_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "Revolver_Ego2_Screen_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/operator",
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "materials": [
+        {
+          "mesh": "skin:magazine",
+          "material": "BoltSniper_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "BoltSniper_Ego2_Scope_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:sight",
+          "material": "BoltSniper_Ego2_Glass_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "BoltSniper_Ego2_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "skin:body",
+          "material": "BoltSniper_Ego2_Screen_MI",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 0,
+          "transparent": false
+        },
+        {
+          "mesh": "arms",
+          "material": "",
+          "map": true,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "emissiveIntensity": 1,
+          "transparent": false
+        }
+      ],
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    }
+  ],
+  "beforeOperator": [
+    {
+      "mesh": "skin:magazine",
+      "material": "BoltSniper_Ego2_MI",
+      "map": true,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 0.35,
+      "transparent": false
+    },
+    {
+      "mesh": "skin:sight",
+      "material": "BoltSniper_Ego2_Scope_MI",
+      "map": true,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 0.35,
+      "transparent": false
+    },
+    {
+      "mesh": "skin:sight",
+      "material": "BoltSniper_Ego2_Glass_MI",
+      "map": true,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 0.35,
+      "transparent": true
+    },
+    {
+      "mesh": "skin:body",
+      "material": "BoltSniper_Ego2_MI",
+      "map": true,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 0.35,
+      "transparent": false
+    },
+    {
+      "mesh": "skin:body",
+      "material": "BoltSniper_Ego2_Screen_MI",
+      "map": true,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 0.35,
+      "transparent": false
+    },
+    {
+      "mesh": "arms",
+      "material": "",
+      "map": true,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 1,
+      "transparent": false
+    }
+  ],
+  "firing": {
+    "models": 14,
+    "scenarios": 56,
+    "frames": 4088,
+    "results": [
+      {
+        "key": "prelude-to-chaos/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 262,
+            "center": 262,
+            "time": 0.15833333333333333,
+            "particles": 9,
+            "coverage": 0.004548611111111111,
+            "centerCoverage": 0.037905092592592594
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 258,
+            "center": 258,
+            "time": 0.35833333333333334,
+            "particles": 15,
+            "coverage": 0.004479166666666667,
+            "centerCoverage": 0.03732638888888889
+          },
+          {
+            "scenario": "ads",
+            "changed": 246,
+            "center": 246,
+            "time": 0.15833333333333333,
+            "particles": 7,
+            "coverage": 0.004270833333333333,
+            "centerCoverage": 0.035590277777777776
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 223,
+            "center": 223,
+            "time": 0.35,
+            "particles": 10,
+            "coverage": 0.003871527777777778,
+            "centerCoverage": 0.03226273148148148
+          }
+        ]
+      },
+      {
+        "key": "kuronami/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 81,
+            "center": 81,
+            "time": 0.1,
+            "particles": 11,
+            "coverage": 0.00140625,
+            "centerCoverage": 0.01171875
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 112,
+            "center": 112,
+            "time": 0.10833333333333334,
+            "particles": 18,
+            "coverage": 0.0019444444444444444,
+            "centerCoverage": 0.016203703703703703
+          },
+          {
+            "scenario": "ads",
+            "changed": 105,
+            "center": 105,
+            "time": 0.44166666666666665,
+            "particles": 11,
+            "coverage": 0.0018229166666666667,
+            "centerCoverage": 0.015190972222222222
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 115,
+            "center": 115,
+            "time": 0.24166666666666667,
+            "particles": 16,
+            "coverage": 0.0019965277777777776,
+            "centerCoverage": 0.016637731481481483
+          }
+        ]
+      },
+      {
+        "key": "kuronami/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 37,
+            "center": 37,
+            "time": 0.2,
+            "particles": 7,
+            "coverage": 0.0006423611111111111,
+            "centerCoverage": 0.00535300925925926
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 37,
+            "center": 37,
+            "time": 0.3,
+            "particles": 7,
+            "coverage": 0.0006423611111111111,
+            "centerCoverage": 0.00535300925925926
+          },
+          {
+            "scenario": "ads",
+            "changed": 0,
+            "center": 0,
+            "coverage": 0,
+            "centerCoverage": 0
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 0,
+            "center": 0,
+            "coverage": 0,
+            "centerCoverage": 0
+          }
+        ]
+      },
+      {
+        "key": "primordium/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 257,
+            "center": 257,
+            "time": 0.225,
+            "particles": 6,
+            "coverage": 0.004461805555555556,
+            "centerCoverage": 0.037181712962962965
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 259,
+            "center": 259,
+            "time": 0.31666666666666665,
+            "particles": 6,
+            "coverage": 0.004496527777777778,
+            "centerCoverage": 0.03747106481481482
+          },
+          {
+            "scenario": "ads",
+            "changed": 287,
+            "center": 287,
+            "time": 0.10833333333333334,
+            "particles": 6,
+            "coverage": 0.004982638888888889,
+            "centerCoverage": 0.04152199074074074
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 273,
+            "center": 273,
+            "time": 0.2,
+            "particles": 8,
+            "coverage": 0.0047395833333333335,
+            "centerCoverage": 0.039496527777777776
+          }
+        ]
+      },
+      {
+        "key": "primordium/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 27,
+            "center": 27,
+            "time": 0.4666666666666667,
+            "particles": 3,
+            "coverage": 0.00046875,
+            "centerCoverage": 0.00390625
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 28,
+            "center": 28,
+            "time": 0.375,
+            "particles": 4,
+            "coverage": 0.0004861111111111111,
+            "centerCoverage": 0.004050925925925926
+          },
+          {
+            "scenario": "ads",
+            "changed": 7,
+            "center": 7,
+            "time": 0.1,
+            "particles": 3,
+            "coverage": 0.00012152777777777777,
+            "centerCoverage": 0.0010127314814814814
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 8,
+            "center": 8,
+            "time": 0.36666666666666664,
+            "particles": 4,
+            "coverage": 0.0001388888888888889,
+            "centerCoverage": 0.0011574074074074073
+          }
+        ]
+      },
+      {
+        "key": "rogue/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 204,
+            "center": 72,
+            "time": 0.24166666666666667,
+            "particles": 13,
+            "coverage": 0.0035416666666666665,
+            "centerCoverage": 0.010416666666666666
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 130,
+            "center": 68,
+            "time": 0.25,
+            "particles": 17,
+            "coverage": 0.0022569444444444442,
+            "centerCoverage": 0.009837962962962963
+          },
+          {
+            "scenario": "ads",
+            "changed": 141,
+            "center": 117,
+            "time": 0.43333333333333335,
+            "particles": 9,
+            "coverage": 0.002447916666666667,
+            "centerCoverage": 0.016927083333333332
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 101,
+            "center": 84,
+            "time": 0.13333333333333333,
+            "particles": 17,
+            "coverage": 0.0017534722222222222,
+            "centerCoverage": 0.012152777777777778
+          }
+        ]
+      },
+      {
+        "key": "rgx-11z-pro/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 297,
+            "center": 257,
+            "time": 0.1,
+            "particles": 9,
+            "coverage": 0.00515625,
+            "centerCoverage": 0.037181712962962965
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 330,
+            "center": 290,
+            "time": 0.2,
+            "particles": 18,
+            "coverage": 0.005729166666666666,
+            "centerCoverage": 0.04195601851851852
+          },
+          {
+            "scenario": "ads",
+            "changed": 505,
+            "center": 172,
+            "time": 0.2,
+            "particles": 7,
+            "coverage": 0.008767361111111111,
+            "centerCoverage": 0.02488425925925926
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 574,
+            "center": 236,
+            "time": 0.1,
+            "particles": 17,
+            "coverage": 0.009965277777777778,
+            "centerCoverage": 0.03414351851851852
+          }
+        ]
+      },
+      {
+        "key": "ayakashi/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 118,
+            "center": 36,
+            "time": 0.3333333333333333,
+            "particles": 9,
+            "coverage": 0.0020486111111111113,
+            "centerCoverage": 0.005208333333333333
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 119,
+            "center": 37,
+            "time": 0.23333333333333334,
+            "particles": 10,
+            "coverage": 0.002065972222222222,
+            "centerCoverage": 0.00535300925925926
+          },
+          {
+            "scenario": "ads",
+            "changed": 4,
+            "center": 4,
+            "time": 0.1,
+            "particles": 5,
+            "coverage": 0.00006944444444444444,
+            "centerCoverage": 0.0005787037037037037
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 4,
+            "center": 4,
+            "time": 0.1,
+            "particles": 5,
+            "coverage": 0.00006944444444444444,
+            "centerCoverage": 0.0005787037037037037
+          }
+        ]
+      },
+      {
+        "key": "nocturnum/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 47,
+            "center": 47,
+            "time": 0.5,
+            "particles": 6,
+            "coverage": 0.0008159722222222223,
+            "centerCoverage": 0.006799768518518518
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 39,
+            "center": 39,
+            "time": 0.16666666666666666,
+            "particles": 6,
+            "coverage": 0.0006770833333333334,
+            "centerCoverage": 0.005642361111111111
+          },
+          {
+            "scenario": "ads",
+            "changed": 2,
+            "center": 2,
+            "time": 0.525,
+            "particles": 8,
+            "coverage": 0.00003472222222222222,
+            "centerCoverage": 0.00028935185185185184
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 1,
+            "center": 1,
+            "time": 0.16666666666666666,
+            "particles": 8,
+            "coverage": 0.00001736111111111111,
+            "centerCoverage": 0.00014467592592592592
+          }
+        ]
+      },
+      {
+        "key": "mystbloom/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 202,
+            "center": 202,
+            "time": 0.4,
+            "particles": 6,
+            "coverage": 0.0035069444444444445,
+            "centerCoverage": 0.02922453703703704
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 204,
+            "center": 204,
+            "time": 0.4,
+            "particles": 6,
+            "coverage": 0.0035416666666666665,
+            "centerCoverage": 0.029513888888888888
+          },
+          {
+            "scenario": "ads",
+            "changed": 7,
+            "center": 7,
+            "time": 0.1,
+            "particles": 6,
+            "coverage": 0.00012152777777777777,
+            "centerCoverage": 0.0010127314814814814
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 7,
+            "center": 7,
+            "time": 0.2,
+            "particles": 6,
+            "coverage": 0.00012152777777777777,
+            "centerCoverage": 0.0010127314814814814
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/vandal",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 441,
+            "center": 345,
+            "time": 0.10833333333333334,
+            "particles": 6,
+            "coverage": 0.00765625,
+            "centerCoverage": 0.04991319444444445
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 449,
+            "center": 354,
+            "time": 0.13333333333333333,
+            "particles": 8,
+            "coverage": 0.007795138888888889,
+            "centerCoverage": 0.051215277777777776
+          },
+          {
+            "scenario": "ads",
+            "changed": 121,
+            "center": 70,
+            "time": 0.3,
+            "particles": 6,
+            "coverage": 0.0021006944444444445,
+            "centerCoverage": 0.010127314814814815
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 122,
+            "center": 71,
+            "time": 0.23333333333333334,
+            "particles": 8,
+            "coverage": 0.0021180555555555558,
+            "centerCoverage": 0.010271990740740741
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/phantom",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 43,
+            "center": 43,
+            "time": 0.14166666666666666,
+            "particles": 3,
+            "coverage": 0.0007465277777777778,
+            "centerCoverage": 0.006221064814814815
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 46,
+            "center": 46,
+            "time": 0.14166666666666666,
+            "particles": 4,
+            "coverage": 0.0007986111111111112,
+            "centerCoverage": 0.006655092592592593
+          },
+          {
+            "scenario": "ads",
+            "changed": 3,
+            "center": 3,
+            "time": 0.24166666666666667,
+            "particles": 3,
+            "coverage": 0.00005208333333333334,
+            "centerCoverage": 0.00043402777777777775
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 1,
+            "center": 1,
+            "time": 0.125,
+            "particles": 3,
+            "coverage": 0.00001736111111111111,
+            "centerCoverage": 0.00014467592592592592
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/sheriff",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 471,
+            "center": 307,
+            "time": 0.225,
+            "particles": 8,
+            "coverage": 0.008177083333333333,
+            "centerCoverage": 0.04441550925925926
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 533,
+            "center": 366,
+            "time": 0.425,
+            "particles": 18,
+            "coverage": 0.009253472222222222,
+            "centerCoverage": 0.05295138888888889
+          },
+          {
+            "scenario": "ads",
+            "changed": 416,
+            "center": 285,
+            "time": 0.125,
+            "particles": 8,
+            "coverage": 0.007222222222222222,
+            "centerCoverage": 0.04123263888888889
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 470,
+            "center": 339,
+            "time": 0.325,
+            "particles": 19,
+            "coverage": 0.008159722222222223,
+            "centerCoverage": 0.04904513888888889
+          }
+        ]
+      },
+      {
+        "key": "ora-by-onetap/operator",
+        "frames": [
+          {
+            "scenario": "hip",
+            "changed": 743,
+            "center": 647,
+            "time": 0.1,
+            "particles": 6,
+            "coverage": 0.012899305555555556,
+            "centerCoverage": 0.09360532407407407
+          },
+          {
+            "scenario": "hip-spread",
+            "changed": 738,
+            "center": 604,
+            "time": 0.4,
+            "particles": 12,
+            "coverage": 0.0128125,
+            "centerCoverage": 0.08738425925925926
+          },
+          {
+            "scenario": "ads",
+            "changed": 949,
+            "center": 798,
+            "time": 0.2,
+            "particles": 6,
+            "coverage": 0.016475694444444446,
+            "centerCoverage": 0.1154513888888889
+          },
+          {
+            "scenario": "ads-spread",
+            "changed": 853,
+            "center": 711,
+            "time": 0.2,
+            "particles": 13,
+            "coverage": 0.014809027777777779,
+            "centerCoverage": 0.10286458333333333
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "errors": [],
+  "console": []
+}

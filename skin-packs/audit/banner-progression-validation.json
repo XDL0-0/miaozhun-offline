@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-19",
+  "baseCommit": "aa0bedebfdac43502fe5bf2797e288e9467b18b5",
+  "branch": "codex/english-ui-valorant",
+  "automatedTests": {
+    "command": "node --test",
+    "passed": 118,
+    "failed": 0,
+    "skipped": 0,
+    "mediaTools": "ffmpeg/ffprobe 9.0.2 from the Windows build linked by ffmpeg.org",
+    "actualHudVariants": 37,
+    "actualHudKillCounts": [1, 2, 3, 4, 5, 6, 7, 10],
+    "coverage": "Actual patched KillBannerHud consumes kill events and draws the source-colored radial pips (or documented generic fallback), including two opposite pips, headshots and modulo-five repetition. No image construction, fetch or decoding is allowed during HUD drawing. Partial preload/failure/retry behavior is checked separately."
+  },
+  "browserPixelReview": {
+    "method": "A temporary isolated localhost review page imports the delivered skin runtime and executes cR/cP/ol extracted from the delivered DVK7uRSu.js. All image layers are loaded from the installed local server. Each palette renders kills 1–5 to real browser canvases; PNG pixels are compared for five distinct images per palette.",
+    "variants": 37,
+    "distinctRenderedStates": 185,
+    "result": "PASS",
+    "screenshots": ["banner-progression-review.png", "ayakashi-progression-review.png"],
+    "regressionFoundAndFixed": "Initial real-pixel review found repeated Ayakashi output despite correct draw-call counts. Its source pip PNGs are transparent 1x1 placeholders. Four explicit generic-chevron fallbacks now produce visible radial progression; skin-specific Ayakashi pip VFX remain unavailable."
+  },
+  "installedApplicationSmoke": {
+    "origin": "http://127.0.0.1:18746",
+    "catalogueScenes": 62,
+    "maps": 6,
+    "training": "Boaster架枪训练（简单静步）",
+    "trainingPreload": "ready; start overlay displayed",
+    "consoleWarningsAndErrors": 0,
+    "manualLiveKills": "not exercised; actual kill dispatch/HUD behavior is covered by the automated tests and real-pixel review"
+  },
+  "offlineVerification": {
+    "command": "node verify-offline.mjs",
+    "success": true,
+    "resources": 2062,
+    "requiredMissing": 0,
+    "optionalMissing": ["/aim-viewmodel/outlaw.equip.bin.enc", "/aim-viewmodel/outlaw.equip.json.enc"],
+    "layeredBanners": 37,
+    "uniquePngLayers": 86,
+    "retainedAudioAndCompositePreviewBytesUnchanged": true
+  },
+  "limitations": [
+    "Ayakashi retains its original frame/ring/emblem with generic white radial markers because its four source pip images are blank placeholders.",
+    "The client uses its existing native HUD animation. Original Unreal shader/VFX animation is not reproduced."
+  ]
+}

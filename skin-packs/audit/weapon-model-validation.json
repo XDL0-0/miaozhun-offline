@@ -1,0 +1,2165 @@
+{
+  "schemaVersion": 2,
+  "models": 14,
+  "states": 154,
+  "baselineMemory": {
+    "geometries": 5,
+    "textures": 2
+  },
+  "results": [
+    {
+      "key": "ayakashi/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 10582,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 12,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Carbine_Yokai_MFlash_Base",
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/Yokai/VFX/Particle/Fire/Firing_EyeGlowing_P"
+            ],
+            "particles": 9,
+            "batches": 9
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 23669,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "rim",
+          "flow"
+        ],
+        "animatedPixels": 247,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "prelude-to-chaos/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 16608,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 12,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/AK/DemonStone/VFX/DStone_MFlash_Upgraded_VFX"
+            ],
+            "particles": 9,
+            "batches": 9
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 29695,
+          "calls": 13,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "tint"
+        ],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "kuronami/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 16077,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 10,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_MF",
+              "skin:/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX",
+              "skin:/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_VFX_01",
+              "skin:/Game/Equippables/Guns/Rifles/AK/Ninja/VFX/Particle/MF_VFX/Ninja_AK_Glowing_ChargingHandle"
+            ],
+            "particles": 11,
+            "batches": 11
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 29164,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "flow"
+        ],
+        "animatedPixels": 29,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "kuronami/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 11649,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 10,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Ninja2_Carbine_Fire01",
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/Ninja2/VFX/Particles/Fire/Ninja_CB_Fire_VFX_SweepGlow"
+            ],
+            "particles": 7,
+            "batches": 7
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 24736,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "flow"
+        ],
+        "animatedPixels": 311,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "primordium/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 16884,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 4,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/AK/Hellfire/VFX/Particles/Fire/MFlash_AK_Hellfire_VFX_1P_Base"
+            ],
+            "particles": 6,
+            "batches": 6
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 29971,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "heat"
+        ],
+        "animatedPixels": 555,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "primordium/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 15456,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 4,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/SubMachineGuns/MP5/Hellfire/VFX/Particles/P_MP5_Hellfire_Fire"
+            ],
+            "particles": 3,
+            "batches": 3
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 28543,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "heat"
+        ],
+        "animatedPixels": 734,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "rogue/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 30785,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 10,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/AK/Rogue/VFX/Particles/MuzzleFlash/Rogue_AK_MFlash_1p_Base"
+            ],
+            "particles": 13,
+            "batches": 13
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 10,
+          "triangles": 43872,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "rgx-11z-pro/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 17558,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 12,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/AK/Afterglow/VFX/MFlash_AK_Afterglow_VFX_1P_Base"
+            ],
+            "particles": 9,
+            "batches": 9
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 12,
+          "triangles": 30645,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "plastic"
+        ],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "nocturnum/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 11,
+          "triangles": 14472,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 11,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/Coven/VFX/MuzzleFlash/ParticleSystems/Carbine_1P_Coven_MFlash_VFX_Silence_Base"
+            ],
+            "particles": 8,
+            "batches": 3
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 11,
+          "triangles": 27559,
+          "calls": 11,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "mystbloom/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 13,
+          "triangles": 21934,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 13,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/Spirit/VFX/Particle/Fire/Spirit_Carbine_Fire_01_VFX"
+            ],
+            "particles": 6,
+            "batches": 6
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 13,
+          "triangles": 35021,
+          "calls": 15,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [
+          "flow",
+          "scroll",
+          "line"
+        ],
+        "animatedPixels": 456,
+        "whitePixels": 434,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/vandal",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 9114,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 5,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/AK/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_AK_MFlash_PS"
+            ],
+            "particles": 6,
+            "batches": 6
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 22201,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/phantom",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 5759,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 5,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Rifles/Carbine/S0/VFX/MFlash_Carbine_1P_VFX_Silence_Base"
+            ],
+            "particles": 3,
+            "batches": 3
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 18846,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/sheriff",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 6834,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 4,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/Sidearms/Revolver/Ego2/VFX/All/MuzzleFlash/ParticleSystems/Ego2_Revolver_MFlash_PS"
+            ],
+            "particles": 8,
+            "batches": 8
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 4,
+          "triangles": 19921,
+          "calls": 5,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    },
+    {
+      "key": "ora-by-onetap/operator",
+      "frames": [
+        {
+          "state": "idle",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 8140,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "fire",
+          "motion": "fire",
+          "skinMesh": 5,
+          "triangles": 2,
+          "calls": 1,
+          "effects": {
+            "systems": [
+              "skin:/Game/Equippables/Guns/SniperRifles/Boltsniper/Ego2/VFX/All/Muzzleflash/ParticleSystems/Ego2_Bolt_MFlash_PS"
+            ],
+            "particles": 6,
+            "batches": 4
+          }
+        },
+        {
+          "state": "reload",
+          "motion": "reload",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect",
+          "motion": "inspect",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-fire",
+          "motion": "fire",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-reload",
+          "motion": "reload",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-cancelled",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-repeat",
+          "motion": "inspect",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "inspect-ended",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "left",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        },
+        {
+          "state": "ads",
+          "motion": "idle",
+          "skinMesh": 5,
+          "triangles": 21227,
+          "calls": 6,
+          "effects": {
+            "systems": [],
+            "particles": 0,
+            "batches": 0
+          }
+        }
+      ],
+      "surfaceCheck": {
+        "features": [],
+        "animatedPixels": 0,
+        "whitePixels": 0,
+        "outsidePixels": 0,
+        "probePixels": 57600
+      },
+      "defaultRestored": true,
+      "skinRestored": true,
+      "memoryAfterDispose": {
+        "geometries": 5,
+        "textures": 2
+      }
+    }
+  ],
+  "errors": [],
+  "nativeInspectKeyPresses": 1
+}

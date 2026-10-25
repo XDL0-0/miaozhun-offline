@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "compiledOn": "2026-10-20",
+  "purpose": "Ranked skin catalog and reviewed original-media inputs for the offline skin-pack build; source provenance is recorded in asset-review.json.",
+  "ranking": {
+    "source": "https://reports.valstats.site/skin-popularity-v2/",
+    "sampleInventories": 60024,
+    "updated": "2026-09-10",
+    "description": "Equipped weapon skins (not total ownership); top 10 includes Standard/default.",
+    "top10": {
+      "vandal": [
+        {
+          "rank": 1,
+          "name": "Standard Vandal",
+          "tier": "Default"
+        },
+        {
+          "rank": 2,
+          "name": "Gaia's Vengeance",
+          "tier": "Premium"
+        },
+        {
+          "rank": 3,
+          "name": "Prelude to Chaos",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 4,
+          "name": "Kuronami",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 5,
+          "name": "Prime",
+          "tier": "Premium"
+        },
+        {
+          "rank": 6,
+          "name": "Primordium",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 7,
+          "name": "Reaver",
+          "tier": "Premium"
+        },
+        {
+          "rank": 8,
+          "name": "Rogue",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 9,
+          "name": "RGX 11z Pro",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 10,
+          "name": "Forsaken",
+          "tier": "Premium"
+        }
+      ],
+      "phantom": [
+        {
+          "rank": 1,
+          "name": "Standard Phantom",
+          "tier": "Default"
+        },
+        {
+          "rank": 2,
+          "name": "Recon",
+          "tier": "Premium"
+        },
+        {
+          "rank": 3,
+          "name": "Oni",
+          "tier": "Premium"
+        },
+        {
+          "rank": 4,
+          "name": "Primordium",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 5,
+          "name": "Ayakashi",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 6,
+          "name": "Reaver",
+          "tier": "Premium"
+        },
+        {
+          "rank": 7,
+          "name": "Kuronami",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 8,
+          "name": "Nocturnum",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 9,
+          "name": "Mystbloom",
+          "tier": "Exclusive"
+        },
+        {
+          "rank": 10,
+          "name": "Helix",
+          "tier": "Premium"
+        }
+      ]
+    }
+  },
+  "filter": {
+    "edition": "Exclusive",
+    "plus": [
+      "ORA by OneTap (Ultra, explicitly requested)"
+    ]
+  },
+  "collections": [
+    {
+      "id": "prelude-to-chaos",
+      "name": "Prelude to Chaos",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "vandal"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Prelude_to_Chaos_Collection"
+    },
+    {
+      "id": "kuronami",
+      "name": "Kuronami",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "vandal",
+        "phantom"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Kuronami_Collection"
+    },
+    {
+      "id": "primordium",
+      "name": "Primordium",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "vandal",
+        "phantom"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Primordium_Collection"
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "vandal"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Rogue_Collection"
+    },
+    {
+      "id": "rgx-11z-pro",
+      "name": "RGX 11z Pro",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "vandal"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/RGX_11z_Pro_Collection"
+    },
+    {
+      "id": "ayakashi",
+      "name": "Ayakashi",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "phantom"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Ayakashi_Collection"
+    },
+    {
+      "id": "nocturnum",
+      "name": "Nocturnum",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "phantom"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Nocturnum_Collection"
+    },
+    {
+      "id": "mystbloom",
+      "name": "Mystbloom",
+      "tier": "Exclusive",
+      "inTop10": true,
+      "weapons": [
+        "phantom"
+      ],
+      "themes": [
+        "default"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Mystbloom_Collection"
+    },
+    {
+      "id": "ora-by-onetap",
+      "name": "ORA by OneTap",
+      "tier": "Ultra",
+      "inTop10": false,
+      "weapons": [
+        "vandal",
+        "phantom",
+        "sheriff",
+        "operator"
+      ],
+      "themes": [
+        "base",
+        "watch",
+        "renegade",
+        "raja",
+        "ignition"
+      ],
+      "assetStatus": "reviewed_fire_kills_composite_banners",
+      "rights": "Original game media is owned by Riot Games. File references are for research; supply only assets that you are authorized to use.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/ORA_by_OneTap_Collection",
+      "notes": "ORA has five independent kill-banner/kill-audio themes and theme-specific gunfire; its four rifles/sidearms are included despite being outside the popularity top-10 and orange edition."
+    },
+    {
+      "id": "champions-2021", "name": "Champions 2021", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["vandal", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2021_Collection",
+      "meleeName": "Champions 2021 Karambit"
+    },
+    {
+      "id": "champions-2022", "name": "Champions 2022", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["phantom", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2022_Collection",
+      "meleeName": "Champions 2022 Butterfly Knife"
+    },
+    {
+      "id": "champions-2023", "name": "Champions 2023", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["vandal", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2023_Collection",
+      "meleeName": "Champions 2023 Kunai"
+    },
+    {
+      "id": "champions-2024", "name": "Champions 2024", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["phantom", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2024_Collection",
+      "meleeName": "Champions 2024 Blade"
+    },
+    {
+      "id": "champions-2025", "name": "Champions 2025", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["vandal", "melee"], "themes": ["default"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2025_Collection",
+      "meleeName": "Champions 2025 Butterfly Knife"
+    },
+    {
+      "id": "champions-2026", "name": "Champions 2026", "tier": "Exclusive", "inTop10": false,
+      "weapons": ["phantom", "melee"], "themes": ["attacking", "defending"],
+      "assetStatus": "reviewed_champions_originals",
+      "rights": "Original game media is owned by Riot Games.",
+      "referencePage": "https://wiki.playvalorant.com/en-us/Champions_2026_Collection",
+      "meleeName": "Champions 2026 Fan"
+    }
+  ]
+}

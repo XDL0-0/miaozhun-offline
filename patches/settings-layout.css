@@ -1,0 +1,131 @@
+/* Keep Settings labels and controls in their own space after localization. */
+.hall-root .st-view.st-rows .st-tabbar {
+  flex-wrap: wrap;
+  gap: 0 16px;
+}
+
+.hall-root .st-view.st-rows .st-tabs {
+  flex: 1 0 max-content;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.hall-root .st-view.st-rows .st-save {
+  flex: 0 0 31em;
+  justify-content: flex-end;
+  max-width: 100%;
+  padding: 8px 0;
+  line-height: 1.5;
+}
+
+.hall-root .st-view.st-rows .st-save i {
+  flex: none;
+}
+
+.hall-root .st-view.st-rows .st-save > span {
+  min-width: 0;
+}
+
+/* The preset and refresh-rate choices are wider than their old label row. */
+.hall-root .st-view.st-rows .hall-field:is([data-setting="qualityPreset"], [data-setting="frameRate"]) {
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.hall-root .st-view.st-rows .hall-field:is([data-setting="qualityPreset"], [data-setting="frameRate"]) > .hall-field-text {
+  flex-basis: 100%;
+}
+
+.hall-root .st-view.st-rows .hall-field:is([data-setting="qualityPreset"], [data-setting="frameRate"]) > .hall-choice-options {
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.hall-root .st-view.st-rows .hall-field-head {
+  flex-wrap: wrap;
+}
+
+.hall-root .st-view.st-rows .sound-kits-name {
+  width: auto;
+  min-width: 7em;
+}
+
+/* Preview headings must not shrink behind the canvas or background buttons. */
+.hall-root .st-view.st-rows .st-side {
+  container-name: settings-side;
+  padding: 0 8px 12px 7px;
+  overflow: hidden auto;
+  scrollbar-width: thin;
+}
+
+.hall-root .st-view.st-rows .st-stack {
+  container-name: settings-preview;
+}
+
+.hall-root .st-view.st-rows .st-bar {
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  height: auto;
+  min-height: 40px;
+  padding-bottom: 8px;
+}
+
+.hall-root .st-view.st-rows .st-bar h2,
+.hall-root .st-view.st-rows .st-bar .st-seg {
+  flex: none;
+  max-width: 100%;
+}
+
+.hall-root .st-view.st-rows .st-bar h2 {
+  white-space: nowrap;
+}
+
+.hall-root .st-view.st-rows .st-bar p {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+/* A code header and its actions may never compete for the same grid space. */
+.hall-root .st-view.st-rows .st-code header {
+  min-width: 0;
+}
+
+.hall-root .st-view.st-rows .st-code header b {
+  flex: 1;
+  min-width: 0;
+}
+
+.hall-root .st-view.st-rows .st-code header button {
+  flex: none;
+  white-space: nowrap;
+}
+
+.hall-root .st-view.st-rows .st-code > div {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.hall-root .st-view.st-rows .st-code > div .hall-dialog-btn {
+  max-width: 100%;
+  height: auto;
+  min-height: 32px;
+  padding: 7px 14px;
+  white-space: normal;
+}
+
+@container settings-side (max-width: 680px) {
+  .hall-root .st-view.st-rows .st-stack {
+    width: 100%;
+  }
+}
+
+@container settings-preview (max-width: 680px) {
+  .hall-root .st-view.st-rows .st-code {
+    grid-template-areas: "head" "code" "acts" "msg";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

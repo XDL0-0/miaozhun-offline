@@ -1,0 +1,752 @@
+{
+  "source": "site/aim-viewmodel/muzzle.5073054cbb.json.enc",
+  "sourceSha256": "1f83070da5cb74aa83435a72e8bbc9a0191556827500466dad398719d54c52b5",
+  "materials": {
+    "/Game/Equippables/Guns/Rifles/AK/S0/VFX/0_rifle_burst_smoke": {
+      "kind": "generic",
+      "tex": "/Game/Equippables/Guns/Rifles/AK/S0/VFX/rifle_smoke"
+    },
+    "/Game/VFX/Materials/1_Procedural_Smoke_Dynamic_MAT_Inst1": {
+      "depthFade": 32,
+      "distRadius": 0.5,
+      "distSpeed": 3,
+      "distStrength": 1,
+      "edgeDistortion": 1,
+      "edgeHardness": 0.786493,
+      "edgeRadius": 0.221429,
+      "erosion": 1,
+      "kind": "procsmoke",
+      "pan": [
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        1
+      ],
+      "shade": 1,
+      "temp": 1,
+      "tempRadius": 1,
+      "tex": "/Game/VFX/Textures/Old/UV_Noise_Cellular_TEX",
+      "texPower": 1,
+      "tint": [
+        1,
+        1,
+        1
+      ]
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/0_m_flash_ring": {
+      "kind": "generic",
+      "tex": "/Game/VFX/Textures/Mask/m_flash_01_ring"
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/BasePistolGlow_1": {
+      "kind": "generic",
+      "tex": "/Game/VFX/ZWIP/AK_Project/Glow"
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/FakeLighting_Base_MI": {
+      "kind": "fakelight",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutPos": 0.75
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Core_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0,
+      "lutMix": 1.1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash2_Greyscale_TEX_Inverted",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Embers_2x2_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0,
+      "lutMix": 0.95,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/m_flash_02",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_FrontCore_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.2,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": true,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash2_FB_1x4_VFX",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_FrontSmoke_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Flipbook/BlastDirectional_8x1",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Front_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.2,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": true,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash3_FB_1x4_VFX_Grayscale",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_RadialSmoke2_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.9,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Flipbook/SmokeRadial_4x2_TFX",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_RadialSmoke3_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.9,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Flipbook/SmokeRadial_4x2_TFX",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_RadialSmoke_MAT": {
+      "camFadeHardness": 0,
+      "camFadeRadius": 100,
+      "e": {
+        "offset": [
+          0,
+          0.4
+        ],
+        "rate": 0,
+        "rot": 0.5,
+        "scale": [
+          1,
+          0.355024
+        ]
+      },
+      "kind": "radialsmoke",
+      "o": {
+        "offset": [
+          0,
+          0
+        ],
+        "rate": 0,
+        "rot": 0.5,
+        "scale": [
+          1,
+          0.5
+        ],
+        "scroll": [
+          0.1,
+          1.1
+        ]
+      },
+      "o1": {
+        "offset": [
+          0,
+          0
+        ],
+        "rate": 0,
+        "rot": 0.5,
+        "scale": [
+          2,
+          0.5
+        ],
+        "scroll": [
+          0,
+          0.5
+        ]
+      },
+      "softFadeDist": 5,
+      "texE": "/Game/VFX/Textures/AlphaGradient/00_Grad2x2_Grayscale",
+      "texO": "/Game/VFX/Textures/Mask/CloudsGS_TEX_Grayscale"
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_RadialSmoke_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.4,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/Characters/Clay/S0/VFX/Textures/SplatRadialBody_4x3",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SideSmoke_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": null,
+      "lutMin": 1,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Flipbook/SmokePuff_4x3a",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Sides2_3x1_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.2,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash2_FB_1x3_VFX",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SidesCore_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.2,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash2_FB_1x4_VFX",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SidesMoon2_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.8,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/ArrowMuzzle_TEX",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SidesMoon_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.15,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MoonGradient_TEX",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SidesThick_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.2,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash3_FB_1x4_VFX_Grayscale",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Sides_3x1_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.2,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlash1_FB_1x3_VFX",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_SmokeDS_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.3,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Flipbook/RingSmoke_3x3_TEX",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": false
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Smoke_2x2_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/Equippables/Guns/Rifles/AK/S0/VFX/rifle_smoke",
+      "texColor": true,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Sparks_MI": {
+      "emissiveMult": 2,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/ZWIP/AK_Project/Glow",
+      "texColor": false,
+      "useAlpha": false,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_StarDS_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Flipbook/Flash_Alpha2_DS_2x2_TEX",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/Grayscale/Muzzleflash_Star_MI": {
+      "emissiveMult": 1,
+      "errorFix": 0.05,
+      "kind": "mf",
+      "lut": "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX",
+      "lutMin": 0.3,
+      "lutMix": 1,
+      "lutVariant": 0,
+      "nLuts": 4,
+      "particleColor": true,
+      "rot90": false,
+      "tex": "/Game/VFX/Textures/Mask/MuzzleFlashCenter_VFX",
+      "texColor": false,
+      "useAlpha": true,
+      "useLut": true
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/SmokePuff1_Radial": {
+      "alphaMult": 2,
+      "alphaPow": 1,
+      "camFadeHardness": 0,
+      "camFadeRadius": 100,
+      "e": {
+        "offset": [
+          0,
+          0
+        ],
+        "rate": 0,
+        "rot": 0,
+        "scale": [
+          1,
+          1
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "emisCol": [
+        1,
+        1,
+        1
+      ],
+      "emisPow": 1,
+      "kind": "generica",
+      "o": {
+        "offset": [
+          0,
+          0
+        ],
+        "rate": 0,
+        "rot": 0,
+        "scale": [
+          1,
+          1
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "softFadeDist": 100,
+      "tex": "/Game/VFX/Textures/Mask/00_White_DIFF",
+      "texO": "/Game/VFX/Textures/Flipbook/SmokeRadial_4x2_TFX"
+    },
+    "/Game/VFX/Materials/MuzzleFlashes/Base/SmokePuff2_Radial": {
+      "alphaMult": 1,
+      "alphaPow": 1,
+      "camFadeHardness": 0,
+      "camFadeRadius": 100,
+      "e": {
+        "offset": [
+          0,
+          0
+        ],
+        "rate": 0,
+        "rot": 0,
+        "scale": [
+          1,
+          1
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "emisCol": [
+        1,
+        1,
+        1
+      ],
+      "emisPow": 1,
+      "kind": "generica",
+      "o": {
+        "offset": [
+          0,
+          0
+        ],
+        "rate": 0,
+        "rot": 0,
+        "scale": [
+          1,
+          1
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "softFadeDist": 100,
+      "tex": "/Game/Characters/Clay/S0/VFX/Textures/SplatRadialBody_4x3",
+      "texO": "/Game/Characters/Clay/S0/VFX/Textures/SplatRadialBody_4x3"
+    },
+    "/Game/VFX/ParticleSystems/MFlash_1P_VFX_SO_Silence": {
+      "colA": [
+        1,
+        0.974968,
+        0.911458
+      ],
+      "colB": [
+        1,
+        0.974968,
+        0.911458
+      ],
+      "kind": "uberlerp",
+      "tex": "/Game/VFX/ParticleSystems/MFlash_1P_VFX_Silenced_SO"
+    }
+  },
+  "textures": {
+    "/Game/Characters/Clay/S0/VFX/Textures/SplatRadialBody_4x3": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 1024,
+      "nearest": false,
+      "srgb": true,
+      "w": 1024
+    },
+    "/Game/Equippables/Guns/Rifles/AK/S0/VFX/rifle_smoke": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": true,
+      "w": 512
+    },
+    "/Game/VFX/ParticleSystems/MFlash_1P_VFX_Silenced_SO": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": false,
+      "w": 256
+    },
+    "/Game/VFX/Textures/AlphaGradient/00_Grad2x2_Grayscale": {
+      "alphaConst": true,
+      "clampX": true,
+      "clampY": true,
+      "h": 2,
+      "nearest": false,
+      "srgb": false,
+      "w": 2
+    },
+    "/Game/VFX/Textures/ColorGradient/LUT_BaseWeaponsGrayscale_TEX": {
+      "alphaConst": true,
+      "clampX": true,
+      "clampY": true,
+      "h": 4,
+      "nearest": true,
+      "srgb": false,
+      "w": 128
+    },
+    "/Game/VFX/Textures/Flipbook/BlastDirectional_8x1": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": true,
+      "w": 1024
+    },
+    "/Game/VFX/Textures/Flipbook/Flash_Alpha2_DS_2x2_TEX": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": false,
+      "w": 512
+    },
+    "/Game/VFX/Textures/Flipbook/RingSmoke_3x3_TEX": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 1024,
+      "nearest": false,
+      "srgb": false,
+      "w": 1024
+    },
+    "/Game/VFX/Textures/Flipbook/SmokePuff_4x3a": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": true,
+      "w": 512
+    },
+    "/Game/VFX/Textures/Flipbook/SmokeRadial_4x2_TFX": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 1024,
+      "nearest": false,
+      "srgb": true,
+      "w": 1024
+    },
+    "/Game/VFX/Textures/Mask/00_White_DIFF": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 8,
+      "nearest": false,
+      "srgb": true,
+      "w": 8
+    },
+    "/Game/VFX/Textures/Mask/ArrowMuzzle_TEX": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": true,
+      "w": 512
+    },
+    "/Game/VFX/Textures/Mask/CloudsGS_TEX_Grayscale": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 64,
+      "nearest": false,
+      "srgb": false,
+      "w": 128
+    },
+    "/Game/VFX/Textures/Mask/MoonGradient_TEX": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 256
+    },
+    "/Game/VFX/Textures/Mask/MuzzleFlash1_FB_1x3_VFX": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 256
+    },
+    "/Game/VFX/Textures/Mask/MuzzleFlash2_FB_1x3_VFX": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 256
+    },
+    "/Game/VFX/Textures/Mask/MuzzleFlash2_FB_1x4_VFX": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 128
+    },
+    "/Game/VFX/Textures/Mask/MuzzleFlash2_Greyscale_TEX_Inverted": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 128
+    },
+    "/Game/VFX/Textures/Mask/MuzzleFlash3_FB_1x4_VFX_Grayscale": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 128
+    },
+    "/Game/VFX/Textures/Mask/MuzzleFlashCenter_VFX": {
+      "alphaConst": false,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": true,
+      "w": 512
+    },
+    "/Game/VFX/Textures/Mask/m_flash_01_ring": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 256,
+      "nearest": false,
+      "srgb": true,
+      "w": 256
+    },
+    "/Game/VFX/Textures/Mask/m_flash_02": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 128,
+      "nearest": false,
+      "srgb": true,
+      "w": 128
+    },
+    "/Game/VFX/Textures/Old/UV_Noise_Cellular_TEX": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 1024,
+      "nearest": false,
+      "srgb": false,
+      "w": 1024
+    },
+    "/Game/VFX/ZWIP/AK_Project/Glow": {
+      "alphaConst": true,
+      "clampX": false,
+      "clampY": false,
+      "h": 512,
+      "nearest": false,
+      "srgb": true,
+      "w": 512
+    }
+  }
+}

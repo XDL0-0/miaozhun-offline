@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "models": {
+    "prelude-to-chaos/vandal": "/skin-packs/models/prelude-to-chaos/vandal.json",
+    "kuronami/vandal": "/skin-packs/models/kuronami/vandal.json",
+    "kuronami/phantom": "/skin-packs/models/kuronami/phantom.json",
+    "primordium/vandal": "/skin-packs/models/primordium/vandal.json",
+    "primordium/phantom": "/skin-packs/models/primordium/phantom.json",
+    "rogue/vandal": "/skin-packs/models/rogue/vandal.json",
+    "rgx-11z-pro/vandal": "/skin-packs/models/rgx-11z-pro/vandal.json",
+    "ayakashi/phantom": "/skin-packs/models/ayakashi/phantom.json",
+    "nocturnum/phantom": "/skin-packs/models/nocturnum/phantom.json",
+    "mystbloom/phantom": "/skin-packs/models/mystbloom/phantom.json",
+    "ora-by-onetap/vandal": "/skin-packs/models/ora-by-onetap/vandal.json",
+    "ora-by-onetap/phantom": "/skin-packs/models/ora-by-onetap/phantom.json",
+    "ora-by-onetap/sheriff": "/skin-packs/models/ora-by-onetap/sheriff.json",
+    "ora-by-onetap/operator": "/skin-packs/models/ora-by-onetap/operator.json",
+    "champions-2021/vandal": "/skin-packs/models/champions-2021/vandal.json",
+    "champions-2022/phantom": "/skin-packs/models/champions-2022/phantom.json",
+    "champions-2023/vandal": "/skin-packs/models/champions-2023/vandal.json",
+    "champions-2024/phantom": "/skin-packs/models/champions-2024/phantom.json",
+    "champions-2025/vandal": "/skin-packs/models/champions-2025/vandal.json",
+    "champions-2026/phantom": "/skin-packs/models/champions-2026/phantom-defending.json",
+    "champions-2021/melee": "/skin-packs/models/champions-2021/melee.json",
+    "champions-2022/melee": "/skin-packs/models/champions-2022/melee.json",
+    "champions-2023/melee": "/skin-packs/models/champions-2023/melee.json",
+    "champions-2024/melee": "/skin-packs/models/champions-2024/melee.json",
+    "champions-2025/melee": "/skin-packs/models/champions-2025/melee.json",
+    "champions-2026/melee": "/skin-packs/models/champions-2026/melee-defending.json"
+  },
+  "variants": {
+    "champions-2026/phantom": {
+      "defending": "/skin-packs/models/champions-2026/phantom-defending.json",
+      "attacking": "/skin-packs/models/champions-2026/phantom-attacking.json"
+    },
+    "champions-2026/melee": {
+      "defending": "/skin-packs/models/champions-2026/melee-defending.json",
+      "attacking": "/skin-packs/models/champions-2026/melee-attacking.json"
+    }
+  },
+  "counts": {
+    "weapons": 26,
+    "collections": 15,
+    "variants": 4,
+    "assets": 640
+  }
+}

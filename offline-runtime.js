@@ -65,7 +65,7 @@
    if(!button){button=document.createElement('button');button.className='al-wk-fav';button.type='button';button.dataset.offlineFavorite='';button.textContent='♥';(card.querySelector('.al-wk-art')||card).append(button);}
    setAttr(button,'data-offline-code',code);
    const on=favorites.has(code);setClass(button,'is-on',on);setAttr(button,'aria-pressed',String(on));
-   const title=card.querySelector('.al-wk-name,.al-wk-card-title,h3,h2')?.textContent.trim()||card.querySelector('[aria-label^="开始游玩："]')?.getAttribute('aria-label').slice(5)||code;
+   const title=card.querySelector('.al-wk-name,.al-wk-card-title,h3,h2')?.textContent.trim()||card.querySelector('[aria-label^="开始游玩："]')?.getAttribute('aria-label').slice(globalThis.__aimI18n.t('开始游玩：').length)||code;
    setAttr(button,'aria-label',(on?'取消本机收藏：':'收藏到本机：')+title);setAttr(button,'title',on?'取消本机收藏':'收藏到本机');
    const excluded=favoritesOnly&&(!on||seen.has(code));setFlag(card,'data-offline-excluded',excluded);
    if(!excluded){visible++;seen.add(code);}
@@ -189,7 +189,7 @@
   });
  }
  document.addEventListener('DOMContentLoaded',()=>{
-  const style=document.createElement('style');style.textContent=`#offline-tools{position:fixed;left:8px;bottom:10px;z-index:1000;display:flex;align-items:center;gap:8px;padding:5px 8px;background:#172324e8;color:#a4e9c8;border:1px solid #356452;border-radius:5px;font:11px system-ui;max-width:calc(100vw - 16px);flex-wrap:wrap}#offline-tools button,#offline-tools a{color:inherit;background:none;border:0;cursor:pointer;font:inherit}#offline-tools button:disabled{opacity:.5;cursor:wait}#offline-tools button[aria-pressed=true]{text-decoration:underline}.al-wk-fav.is-on{color:#ff7596!important}.al-wk-card[data-offline-excluded],.al-wk-sec[data-offline-empty]{display:none!important}body[data-offline-favorites-only] .al-wk-shelf{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;overflow:visible!important}body[data-offline-favorites-only] .al-wk-grid{display:contents!important}body[data-offline-favorites-only] .al-wk-sec-more,body[data-offline-favorites-only] .al-wk-pageno{display:none!important}#offline-favorites-empty{padding:20px;color:#b4c2bd}body:has(.al-train-layer,.hall-train-layer) #offline-tools{display:none}`;document.head.append(style);
+  const style=document.createElement('style');style.textContent=`#offline-tools{position:fixed;left:0;bottom:0;z-index:1000;display:flex;align-items:center;gap:8px;box-sizing:border-box;width:100%;max-width:100vw;min-height:42px;padding:8px 12px;background:#172324;color:#a4e9c8;border:0;border-top:1px solid #356452;font:11px system-ui;flex-wrap:wrap}#offline-tools button,#offline-tools a{color:inherit;background:none;border:0;cursor:pointer;font:inherit}#offline-tools button:disabled{opacity:.5;cursor:wait}#offline-tools button[aria-pressed=true]{text-decoration:underline}.al-wk-fav.is-on{color:#ff7596!important}.al-wk-card[data-offline-excluded],.al-wk-sec[data-offline-empty]{display:none!important}body[data-offline-favorites-only] .al-wk-shelf{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;overflow:visible!important}body[data-offline-favorites-only] .al-wk-grid{display:contents!important}body[data-offline-favorites-only] .al-wk-sec-more,body[data-offline-favorites-only] .al-wk-pageno{display:none!important}#offline-favorites-empty{padding:20px;color:#b4c2bd}body:has(.al-train-layer,.hall-train-layer) #offline-tools{display:none}`;document.head.append(style);
   const tools=document.createElement('div');tools.id='offline-tools';const label=document.createElement('span');label.textContent='本机离线版';tools.append(label);
   const editor=document.createElement('a');editor.href='/aim/studio';editor.target='_blank';editor.rel='noopener noreferrer';editor.dataset.action='offline-open-studio';editor.textContent='场景编辑器';tools.append(editor);
   favoriteButton=document.createElement('button');favoriteButton.type='button';favoriteButton.onclick=()=>showFavorites(!favoritesOnly);tools.append(favoriteButton);
@@ -207,7 +207,17 @@
     location.reload();
    }catch(error){alert('恢复失败：'+error.message)}finally{importButton.disabled=false}
   };tools.append(importButton,input);
-  statusLabel=document.createElement('span');statusLabel.setAttribute('role','status');statusLabel.setAttribute('aria-live','polite');tools.append(statusLabel);document.body.append(tools);
-  const app=document.getElementById('app');if(app)new MutationObserver(observeChanges).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['aria-pressed','class','data-toggle','data-share-code']});tidy();
+  statusLabel=document.createElement('span');statusLabel.setAttribute('role','status');statusLabel.setAttribute('aria-live','polite');tools.append(statusLabel);globalThis.__aimI18n.mountLanguageSelector(tools);document.body.append(tools);
+  // Reserve the actual toolbar height, including wrapped labels or backup status.
+  const syncToolsSpace=()=>document.documentElement.style.setProperty('--offline-tools-space',Math.ceil(tools.getBoundingClientRect().height)+'px');
+  new ResizeObserver(syncToolsSpace).observe(tools);syncToolsSpace();
+  const app=document.getElementById('app'),observer=new MutationObserver(observeChanges),observeOptions={childList:true,subtree:true,attributes:true,attributeFilter:['aria-pressed','class','data-toggle','data-share-code']};
+  if(app)observer.observe(app,observeOptions);
+  // The retained trainer mounts its UI beside #app. Give that portal the same
+  // targeted offline controls/notices; HUD text still skips adaptation scans.
+  function watchPortal(root){if(root instanceof Element&&root.matches('.aimlab-page')&&!app?.contains(root)){observer.observe(root,observeOptions);tidySubtree(root);}}
+  document.querySelectorAll('.aimlab-page').forEach(watchPortal);
+  new MutationObserver(records=>{for(const record of records)for(const node of record.addedNodes)watchPortal(node)}).observe(document.body,{childList:true});
+  tidy();
  });
 })();

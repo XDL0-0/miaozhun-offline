@@ -1,0 +1,73 @@
+/* Keep editor controls readable when translated labels need more room. */
+.al-studio-shell .al-studio-topbar .al-studio-topbar-mid {
+  grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+}
+
+.al-studio-shell .al-studio-topbar .al-studio-scenebar {
+  flex-shrink: 0;
+}
+
+.al-studio-shell .al-studio-topbar .al-studio-brand-mark > span {
+  min-width: 0;
+}
+
+.al-studio-shell .al-studio-topbar .al-studio-brand-mark small {
+  white-space: normal;
+  line-height: 1.3;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+}
+
+.al-studio-shell .al-studio-col-center .al-studio-dock:not(.al-studio-dock-history) {
+  flex-wrap: wrap;
+  clip-path: none;
+  border-radius: 4px;
+}
+
+.al-studio-shell .al-studio-col-center .al-studio-selbar {
+  width: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  clip-path: none;
+  border-radius: 4px;
+}
+
+.al-studio-shell .al-studio-selbar .al-studio-selbar-who {
+  min-width: 0;
+  flex-shrink: 0;
+  max-width: min(240px, 100%);
+}
+
+html[lang="en"] .al-studio-shell .al-studio-tabs .al-studio-tab {
+  height: auto;
+  min-height: 44px;
+  padding: 6px 3px 8px;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+@media (max-width: 1350px) {
+  html .al-studio-shell .al-studio-topbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    height: auto;
+    min-height: 60px;
+  }
+
+  .al-studio-shell .al-studio-topbar .al-studio-topbar-lead {
+    grid-column: 1;
+    grid-row: 1;
+    width: var(--al-studio-left-w);
+    min-height: 60px;
+  }
+
+  .al-studio-shell .al-studio-topbar .al-studio-topbar-end {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .al-studio-shell .al-studio-topbar .al-studio-topbar-mid {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 0 12px 10px;
+  }
+}

@@ -56,6 +56,48 @@ export function createSceneReadyGate({onState = () => {}, timeoutMs = 60000, tim
   return {run, cancel, get state() { return state; }, get ready() { return state.status === 'ready'; }};
 }
 
+// A decoded model can still be replaced by a selection made during GPU work.
+// Repeat the small loadout until both its identity and every visual revision settle.
+export async function prepareStableVisuals({load, warm, check = () => {}, identity = () => ''}) {
+  for (;;) {
+    check();const selected = identity(), entries = await load();check();
+    const revisions = [];
+    for (const entry of entries) {await entry.model.ready?.();check();revisions.push(entry.model.visualRevision?.() ?? 0);}
+    const stable = () => selected === identity() && entries.every((entry, index) => (entry.model.visualRevision?.() ?? 0) === revisions[index]);
+    try {await warm(entries);} catch(error) {check();if(stable())throw error;continue;}check();
+    if (stable()) return entries;
+  }
+}
+
+// Lv starts one batch for each nonempty emitter in every surviving system.
+// Bound those windows at the weapon's fastest (including burst) shot interval;
+// sampling age bins also covers switching between hip fire and ADS mid-spray.
+export function planMuzzleBatches(manifest, weapon, {intervalSeconds, maxUpdateSeconds = .1, hasMaterial = () => true} = {}) {
+  const gun=manifest.guns[weapon];if(!gun)return {emitters:[],maxWindowSeconds:0};
+  const variants=rules=>rules.flatMap(rule=>(manifest.systems[rule.sys]?.emitters??[]).filter(e=>e.enabled&&e.mat&&hasMaterial(e.mat)));
+  const hip=variants(gun.hip),ads=variants(gun.ads),single=hip.length>=ads.length?hip:ads;
+  if(!['LeavePrevious','DeactivatePrevious'].includes(gun.prev))return {emitters:single,maxWindowSeconds:0};
+  if(!(intervalSeconds>0&&Number.isFinite(intervalSeconds)))throw Error('Missing weapon interval for particle preparation');
+  function upper(d){
+    if(!d)return 0;if(Number.isFinite(d.c))return d.c;
+    if(d.curve){const values=[];for(let i=0;i<d.curve.length;i++){const a=d.curve[i];values.push(a[1]);const b=d.curve[i+1];if(b&&a[2]!=='CIM_Constant'&&a[2]!=='CIM_Linear'){const span=b[0]-a[0];values.push(a[1]+span*(a[4]??0)/3,b[1]-span*(b[3]??0)/3)}}return Math.max(0,...values)}
+    return Math.max(0,...(d.v??[]));
+  }
+  function window(emitter){
+    const life=upper(emitter.mods?.filter(m=>m.t==='life').at(-1)?.d);if(!(life>0&&Number.isFinite(life)))throw Error('Unbounded particle lifetime: '+emitter.name);
+    const burst=(emitter.burst??[]).filter(b=>b[0]>0).map(b=>b[2]*emitter.duration),rate=upper(emitter.rate),delay=Math.max(0,emitter.delay??0);
+    const start=delay+(rate>0?0:Math.min(...burst)),last=Math.max(rate>0?(emitter.loops>0?emitter.duration*emitter.loops:3):-Infinity,...burst);
+    return {emitter,start,end:delay+last+life+maxUpdateSeconds};
+  }
+  const hipWindows=hip.map(window),adsWindows=ads.map(window),maxWindowSeconds=Math.max(0,...[...hipWindows,...adsWindows].map(w=>w.end)),emitters=[];
+  for(let bin=0;bin<=Math.ceil(maxWindowSeconds/intervalSeconds);bin++){
+    const from=bin*intervalSeconds,to=from+intervalSeconds,intersects=w=>w.start<=to&&w.end>=from;
+    const h=hipWindows.filter(intersects),a=adsWindows.filter(intersects);
+    emitters.push(...(h.length>=a.length?h:a).map(w=>w.emitter));
+  }
+  return {emitters,maxWindowSeconds};
+}
+
 const warmVisual = `async function __aimWarmVisual(renderer,scene,camera,check=()=>{}){
  check();await renderer.compileAsync(scene,camera);check();
  const target=renderer.getRenderTarget(),viewport=renderer.getViewport(new On),scissor=renderer.getScissorTest(),auto=renderer.autoClear;
@@ -63,6 +105,12 @@ const warmVisual = `async function __aimWarmVisual(renderer,scene,camera,check=(
  try{renderer.setRenderTarget(scratch);renderer.setScissorTest(false);renderer.autoClear=true;renderer.render(scene,camera)}
  finally{renderer.setRenderTarget(target);renderer.setViewport(viewport);renderer.setScissorTest(scissor);renderer.autoClear=auto;scratch.dispose()}
  check();
+}
+async function __aimWarmOutputPass(renderer,scene,camera,target,viewport,check=()=>{}){
+ const previousTarget=renderer.getRenderTarget(),previousViewport=renderer.getViewport(new On),scissor=renderer.getScissor(new On),scissorTest=renderer.getScissorTest(),auto=renderer.autoClear,color=renderer.getClearColor(new ht),alpha=renderer.getClearAlpha();
+ const output=()=>{renderer.setRenderTarget(target);renderer.setViewport(viewport);renderer.setScissor(viewport.x,viewport.y,1,1);renderer.setScissorTest(true);renderer.autoClear=false};
+ try{check();output();await renderer.compileAsync(scene,camera);check();output();renderer.render(scene,camera);check()}
+ finally{renderer.setRenderTarget(previousTarget);renderer.setViewport(previousViewport);renderer.setScissor(scissor);renderer.setScissorTest(scissorTest);renderer.autoClear=auto;renderer.setClearColor(color,alpha)}
 }
 async function __aimGpuFence(renderer,check){
  check();const gl=renderer.getContext();if(gl.isContextLost())throw Error("图形上下文已丢失，请重试。");
@@ -72,31 +120,51 @@ async function __aimGpuFence(renderer,check){
  finally{gl.deleteSync(fence)}
 }`;
 
-const gateIntegration = `let __aimMapReady=Promise.resolve(),__aimModelReady=Promise.resolve(),__aimWarmDoc=null,__aimWarmJob=Promise.resolve({status:"idle"}),__aimWarmRestart=0;
+const gateIntegration = `let __aimMapReady=Promise.resolve(),__aimModelReady=Promise.resolve(),__aimWarmDoc=null,__aimWarmJob=Promise.resolve({status:"idle"}),__aimWarmRestart=0,__aimPreparedSelection=null;
+ const __aimWarmIdentity=()=>[qe(),ao(),t.viewModel.current,t.viewModelGun.current,t.botOrderWanted?.current,JSON.stringify(t.audio?.current),JSON.stringify(t.botOrderParts?.current)].join("|");
+ const __aimWarmSelection=()=>__aimWarmIdentity()+"|"+[...Ut].map(([key,value])=>key+":"+(value.model.visualRevision?.()??0)).join("|");
  const __aimWarmNotice=document.createElement("div");__aimWarmNotice.dataset.role="scene-preparation";__aimWarmNotice.setAttribute("role","status");
  Object.assign(__aimWarmNotice.style,{position:"absolute",left:"50%",top:"18px",transform:"translateX(-50%)",zIndex:"80",padding:"10px 14px",borderRadius:"8px",background:"#17202bea",color:"#fff",font:"14px system-ui",pointerEvents:"auto",maxWidth:"80%"});
  const __aimWarmText=document.createElement("span"),__aimWarmRetry=document.createElement("button");__aimWarmRetry.type="button";__aimWarmRetry.textContent="重试";__aimWarmRetry.style.marginLeft="12px";__aimWarmNotice.append(__aimWarmText,__aimWarmRetry);e.appendChild(__aimWarmNotice);
  const __aimWarmGate=__aimCreateReadyGate({onState(value){
-   if(Ro)return;__aimWarmNotice.dataset.state=value.status;__aimWarmNotice.hidden=value.status==="ready"||value.status==="cancelled";
+   if(Ro)return;if(value.status==="ready")__aimPreparedSelection=__aimWarmSelection();n.onPreparationChange?.(value);__aimWarmNotice.dataset.state=value.status;__aimWarmNotice.hidden=value.status==="ready"||value.status==="cancelled";
    __aimWarmText.textContent=value.status==="failed"?"准备失败："+(value.error?.message??"未知错误"):value.label??"正在准备本场景资源…";
    __aimWarmRetry.hidden=value.status!=="failed";
  }});
  __aimWarmRetry.onclick=()=>{if(__aimWarmDoc&&!Ro)__aimBeginWarm(__aimWarmDoc,true)};
- function __aimCanStart(){if(t.session.current==="calibration")return true;if(__aimWarmGate.ready)return true;__aimWarmNotice.hidden=false;return false}
+ function __aimCanStart(){if(t.session.current==="calibration")return true;if(__aimWarmGate.ready){if(__aimPreparedSelection===__aimWarmSelection())return true;if(__aimWarmDoc)__aimBeginWarm(__aimWarmDoc)}__aimWarmNotice.hidden=false;return false}
  function __aimBeginWarm(doc,retry=false){
   if(retry){Xu(doc);Yu(doc);d.prepare(doc)}
   __aimWarmDoc=doc;const built=Nt;
   __aimWarmJob=__aimWarmGate.run(async ctx=>{
    ctx.phase("正在加载地图与当前角色…");await __aimMapReady;ctx.check();
    await __aimSceneAssetsReady(doc,i.renderer,ctx.check);ctx.check();
-   await _n();ctx.check();
    ctx.phase("正在准备本场景技能与枪械…");await d.ready(i.renderer,i.camera,ctx.check);ctx.check();
    await h?.prepare(i.renderer,i.camera,ctx.check);ctx.check();
    if(doc.props?.some(p=>p.kind==="lockdown"))await M.ready();ctx.check();
-   if(t.viewModel.current&&Ne&&Xc(qe()).canFire)await f.prepare(qe(),i.renderer,Ne,ctx.check);ctx.check();
    if(Nt!==built)throw Error("场景已经切换。");
-   ctx.phase("正在编译与预绘画面…");await ju(doc,Vs,ctx);ctx.check();await __aimGpuFence(i.renderer,ctx.check);
+   await __aimPrepareStableVisuals({check:ctx.check,identity:__aimWarmIdentity,load:async()=>{await __aimPrepareAuxiliary(ctx);return __aimPrepareLoadout(ctx)},warm:async entries=>{
+    ctx.phase("正在编译与预绘画面…");
+    for(const entry of entries){ctx.check();const layer=entry.model.fxLayer?.();if(layer)await __aimWarmVisual(i.renderer,layer.scene,layer.camera,ctx.check);if(Xc(entry.weapon).canFire){const profile=Gs(entry.weapon),rate=Math.max(profile.firingRatePerSecond,profile.firingRatePerSecond*(profile.ads.fireRateMultiplier??1),profile.ads.burst?.internalRatePerSecond??0);await f.prepare(entry.weapon,i.renderer,entry.model,ctx.check,{intervalSeconds:1/rate})}}
+    await ju(doc,Vs,ctx);ctx.check();await __aimGpuFence(i.renderer,ctx.check);
+   }});
   });return __aimWarmJob;
+ }
+ async function __aimPrepareLoadout(ctx){
+  await ie.prepare?.(ctx.check);ctx.check();await _n();ctx.check();if(!t.viewModel.current)return[];
+  const weapons=[qe(),ao(),...(Qn?["melee"]:[])],entries=[],stems=new Set;
+  for(const weapon of weapons){const stem=wn(weapon).stem;if(stems.has(stem))continue;stems.add(stem);const cacheKey=Lo(stem);let cached=Ut.get(cacheKey);
+   if(!cached){const assets=await D0(stem,{...us(),knife:stem===wn("melee").stem});ctx.check();if(!assets)throw Error("枪械模型未能加载："+stem);cached={model:O0(assets),stem};Ut.set(cacheKey,cached)}
+   const model=cached.model;model.setFovHorizontal(t.viewModelFov.current);model.setHand(t.viewModelHand.current);model.setGun(ua(weapon,t.viewModelGun.current));await model.ready?.();ctx.check();
+   if(Qn&&model.setEquip){let equip=is.get(stem);if(!equip){equip=N0(stem);is.set(stem,equip)}const clip=await equip;ctx.check();if(!clip&&stem!=="outlaw")throw Error("切枪动画未能加载："+stem);if(clip)model.setEquip(clip)}
+   entries.push({weapon,model});
+  }return entries;
+ }
+ async function __aimPrepareAuxiliary(ctx){
+  if(!t.botOrderWanted?.current||!vt)return;const collision=qn();if(!collision)return;
+  Se??=ig(vt,collision,la(vt.environment.map));ctx.phase("正在准备辅助预瞄…");
+  while(!Se.prepared()){ctx.check();Se.advance(6);await new Promise(resolve=>setTimeout(resolve,0))}
+  ctx.check();if(t.botOrderParts?.current?.headLines){const lines=Se.headLines();if(lines&&Ke?.source!==lines){Ke?.dispose();Ke=Kh(lines);i.scene.add(Ke.object)}}
  }
  `;
 
@@ -167,14 +235,27 @@ function patchMuzzle(text) {
     const old = 'let me=!1;function te(){me=!0,(e.load??bv)().then(S=>{if(!(a||!S)){t=S;for(const K of Object.values(S.materials))K.kind==="mf"&&K.lut&&b.add(K.lut),K.kind==="fakelight"&&b.add(K.lut);if(n=Rv(S,y,{detail:o,hasMaterial:K=>_(K)!==null}),s)for(const K of Il(S,s.weapon))g(K)}})}';
     const replacement = 'let me=!1,__aimManifest=null;function te(){if(__aimManifest)return __aimManifest;me=!0;__aimManifest=Promise.resolve().then(()=> (e.load??bv)()).then(S=>{if(a)throw Error("Preparation cancelled");if(!S)throw Error("枪焰清单未能加载。");t=S;for(const K of Object.values(S.materials))K.kind==="mf"&&K.lut&&b.add(K.lut),K.kind==="fakelight"&&b.add(K.lut);n=Rv(S,y,{detail:o,hasMaterial:K=>_(K)!==null});if(s)for(const K of Il(S,s.weapon))g(K);return S}).catch(error=>{me=!1;__aimManifest=null;throw error});__aimManifest.catch(()=>{});return __aimManifest}';
     body = replaceOne(body, old, replacement, 'muzzle manifest ready');
+    body = replaceOne(body, 'const k=[];let C=null;', 'const k=[];let C=null,__aimPreparing=0,__aimParticleWarm=Promise.resolve();', 'muzzle preparation ownership');
+    body = replaceOne(body, 'render(S,K){if(a||!s)return;', 'render(S,K){if(a||!s||__aimPreparing)return;', 'muzzle draws cannot reset batches during preparation');
     return replaceOne(body, 'return{frame(S){', `return{async prepare(weapon,renderer,model,check=()=>{}){
+     const previous=__aimParticleWarm;let release;__aimParticleWarm=new Promise(resolve=>release=resolve);await previous;__aimPreparing++;try{check();
      await te();check();if(!t.guns[weapon])return;await Promise.all(Il(t,weapon).map(g));check();
      for(const trigger of [...t.guns[weapon].hip,...t.guns[weapon].ads])for(const emitter of t.systems[trigger.sys]?.emitters??[])if(emitter.enabled&&emitter.mat&&!_(emitter.mat))throw Error("枪焰材质未能准备。");
      for(const texture of w.splice(0))renderer.initTexture(texture);
      const layer=model.fxLayer?.();if(!layer)throw Error("枪械画面未能准备。");
-     const target=renderer.getRenderTarget(),viewport=renderer.getViewport(new On),scissor=renderer.getScissorTest(),auto=renderer.autoClear,color=renderer.getClearColor(new ht),alpha=renderer.getClearAlpha();
-     try{const q=C??=jv(z);H(q,renderer,P(renderer),layer.scene,layer.camera);v=false}
-     finally{renderer.setRenderTarget(target);renderer.setViewport(viewport);renderer.setScissorTest(scissor);renderer.autoClear=auto;renderer.setClearColor(color,alpha)}
+     const target=renderer.getRenderTarget(),viewport=renderer.getViewport(new On),scissor=renderer.getScissorTest(),scissorRect=renderer.getScissor(new On),auto=renderer.autoClear,color=renderer.getClearColor(new ht),alpha=renderer.getClearAlpha();
+     try{const q=C??=jv(z);H(q,renderer,P(renderer),layer.scene,layer.camera);v=false;
+      for(const pass of [q.lightPass,q.tonePass])await __aimWarmOutputPass(renderer,pass.scene,q.quadCam,target,viewport,check);
+      const {emitters}=__aimPlanMuzzleBatches(t,weapon,{intervalSeconds:arguments[4]?.intervalSeconds,maxUpdateSeconds:Xv,hasMaterial:id=>!!_(id)});
+      while(k.length<emitters.length)k.push(L());q.warmScene.clear();
+      try{for(let index=0;index<emitters.length;index++){const batch=k[index];batch.mesh.material=_(emitters[index].mat);batch.scene?.remove(batch.mesh);batch.scene=null;batch.mesh.visible=true;
+       batch.sink.pos.set([-.001,-.001,-1,.001,-.001,-1,0,.001,-1]);batch.sink.uv.set([0,0,1,0,.5,1]);batch.sink.col.fill(1,0,12);batch.sink.dyn.fill(0,0,12);batch.mesh.geometry.setDrawRange(0,3);
+       for(const attr of [...batch.attrs,batch.dynAttr])attr.needsUpdate=true;q.warmScene.add(batch.mesh)}
+       await __aimWarmVisual(renderer,q.warmScene,q.fxCam,check);
+      }finally{q.warmScene.clear();for(const batch of k){batch.mesh.visible=false;batch.mesh.geometry.setDrawRange(0,0)}}
+     }
+     finally{renderer.setRenderTarget(target);renderer.setViewport(viewport);renderer.setScissor(scissorRect);renderer.setScissorTest(scissor);renderer.autoClear=auto;renderer.setClearColor(color,alpha)}
+     }finally{__aimPreparing--;release()}
     },frame(S){`, 'muzzle public prepare');
   }, 'muzzle renderer');
 }
@@ -189,8 +270,37 @@ function patchViewport(text) {
   return replaceOne(text, 'prewarm(I,R){return T(I,R??[])}', 'prewarm(I,R,scope){return T(I,R??[],scope)}', 'viewport scope argument');
 }
 
+function patchAudioResources(text) {
+  if(text.includes('export async function __aimPrepareNativeAudio'))throw Error('Prewarm patch already applied: native audio');
+  for(const anchor of [
+    'function Wl(e){const t=Gn.get(e);if(t)return t;',
+    'function Pt(e,t){const n=xt.get(t);if(n!==void 0)return Promise.resolve(n);const a=ln.get(t);if(a)return a;',
+    'function Hm(e,t){ko(e,t)}',
+    'function Dm(e,t){if(!wo(e))return;const n=_o(t);n&&Pt(n,We[e])}',
+    'function Vm(e,t){const n=Ut(e),a=_o(t);if(!(!n||!a))for(const o of n)Pt(a,o)'
+  ])if(text.split(anchor).length!==2)throw Error('Prewarm patch version mismatch: native audio caches');
+  // Wl fills a reusable PCM buffer with its own deterministic LCG. It never
+  // starts a voice or touches Math.random/the simulation's random stream.
+  return text+`\nexport async function __aimPrepareNativeAudio(context,weapons,settings,check=()=>{}){
+ check();if(!context||!settings.enabled||settings.volume<=0)return;
+ Wl(context);
+ if(weapons){for(const weapon of weapons)Dm(weapon,context);if(settings.killSound!==false&&Bd(settings.killKit))Vm(settings.killKit,context)}
+ else if(on(settings.fireKit))Hm(context,settings.fireKit);
+ // Scene flash sounds use the same decode cache. Include their in-flight work;
+ // failed recordings keep the native cached-null/synth fallback behavior.
+ while(ln.size){check();await Promise.all([...ln.values()])}check();
+}\n`;
+}
+
 function patchTraining(text) {
-  text = 'import{__aimPrewarmSceneAssets as __aimSceneAssetsReady}from"./tmIeW3Ig.js";import{f1 as __aimMapAssets}from"./aQOfOAp-.js";\n' + warmVisual + '\nconst __aimCreateReadyGate=' + createSceneReadyGate.toString() + ';\n' + text;
+  text = 'import{__aimPrewarmSceneAssets as __aimSceneAssetsReady}from"./tmIeW3Ig.js";import{f1 as __aimMapAssets}from"./aQOfOAp-.js";import{__aimPrepareNativeAudio}from"./DCKWp-_u.js";\n' + warmVisual + '\nconst __aimCreateReadyGate=' + createSceneReadyGate.toString() + ';\nconst __aimPrepareStableVisuals=' + prepareStableVisuals.toString() + ';\nconst __aimPlanMuzzleBatches=' + planMuzzleBatches.toString() + ';\n' + text;
+  text = replaceOne(text, 'ensure(){const t=this.settings.current??on;if(!t.enabled||t.volume<=0)return null;if(this.context||(this.context=new AudioContext,this.master=this.context.createGain(),this.master.connect(this.context.destination)),this.context.state==="suspended"&&this.context.resume(),this.weaponSounds){',
+    'prepareContext(){const t=this.settings.current??on;if(!t.enabled||t.volume<=0)return null;return this.context||(this.context=new AudioContext,this.master=this.context.createGain(),this.master.connect(this.context.destination)),{context:this.context,master:this.master}}async prepare(check=()=>{}){check();const audio=this.prepareContext();if(!audio)return;fl(audio.context);await Promise.all([__aimPrepareNativeAudio(audio.context,this.weaponSounds,this.settings.current??on,check),ul]);check()}unlock(){const t=this.settings.current??on;if(t.enabled&&t.volume>0&&this.context?.state==="suspended")this.context.resume().catch(()=>{})}ensure(){const t=this.settings.current??on;if(!this.prepareContext())return null;this.unlock();if(this.weaponSounds){',
+    'silent audio context preparation and gesture unlock');
+  text = replaceOne(text, 'plan:()=>u,numberOf:g=>r.get(g)??0,headLines:()=>o.headLines,', 'prepared:()=>!a||(!l&&(u===null||!a.grid()||o.headLines!==null)),plan:()=>u,numberOf:g=>r.get(g)??0,headLines:()=>o.headLines,', 'auxiliary planner completion');
+  text = replaceOne(text, 'const re=X(!1),W=X(e.displaySettings.value.renderScale)', 'const __aimPreparation=X({status:"loading"}),re=X(!1),W=X(e.displaySettings.value.renderScale)', 'reactive preparation status');
+  text = replaceOne(text, 'io={onPhaseChange(N){a.value=N}', 'io={onPreparationChange(N){__aimPreparation.value=N},onPhaseChange(N){a.value=N}', 'preparation state callback');
+  text = replaceOne(text, 'loadScene:ee,mapLoading:re,', 'loadScene:ee,mapLoading:re,preparation:__aimPreparation,', 'preparation state exposed to entry UI');
   text = replaceOne(text, 'let Sa=null,Vs=0;', gateIntegration + 'let Sa=null,Vs=0;', 'training gate integration');
   text = editSection(text, 'function _n(){', 'const us=()=>', body => {
     body = replaceOne(body, 'i.setViewModel(null);return}', 'i.setViewModel(null);return Promise.resolve()}', 'disabled model ready');
@@ -203,19 +313,39 @@ function patchTraining(text) {
 async function ju(E,Q,ctx){ctx.check();if(!i.prewarm)throw Error("当前画面不支持预热。");const built=Nt,roots=[],skeletons=[];
  try{for(const template of built.actorTemplates.values()){const copy=template.spawn();roots.push(copy.root);if(copy.skin?.skeleton)skeletons.push(copy.skin.skeleton)}
  roots.push(...u.warmUp?.()??[],...l.warmUp?.()??[],...r.warmUp?.()??[]);
+ if(Ke?.object?.visible)roots.push(Ke.object.clone(true));
  if(E.props?.some(p=>p.kind==="lockdown"))roots.push(...M.warmUp());
  await i.prewarm(()=>{try{ctx.check();return !Ro&&Nt===built&&Q===Vs}catch{return false}},roots,ctx.generation);ctx.check();
  }finally{for(const skeleton of skeletons)skeleton.dispose()}
 }
+
 `, 'scene map and GPU readiness');
   text = replaceOne(text, ',h?.prepare(i.renderer,i.camera)}function tr()', '}function tr()', 'smoke starts only inside current gate');
   text = replaceOne(text, 'function Ta(E,Q=null,le=E){if(', 'function Ta(E,Q=null,le=E){__aimWarmGate.cancel();if(', 'scene cancellation before build');
   text = replaceOne(text, 'te.setLookOnly(pt!==null&&t.phase.current!=="running"),qu()}function Zu(E)', 'te.setLookOnly(pt!==null&&t.phase.current!=="running"),qu(),__aimBeginWarm(E)}function Zu(E)', 'start readiness after stable scene build');
-  text = replaceOne(text, 'async function td(){ee=!1,fs(!1),await Ie(', 'async function td(){if(!__aimCanStart())return;ee=!1,fs(!1),await Ie(', 'gesture-safe start gate');
+  text = replaceOne(text, 'async function td(){ee=!1,fs(!1),await Ie(', 'async function td(){if(!__aimCanStart())return;ie.unlock?.();ee=!1,fs(!1),await Ie(', 'gesture-safe start gate');
+  text = replaceOne(text, 'start:td,restart:Do,', 'start:td,canStart:__aimCanStart,retryPreparation(){return __aimWarmDoc?__aimBeginWarm(__aimWarmDoc,true):null},restart:Do,', 'preparation actions for countdown entry');
   const restart = 'Ea(),n.onLastResult(null),n.onSessionActive(!0),n.onPhaseChange("running"),tn()||ro()}function nd()';
   text = replaceOne(text, restart, 'const attempt=++__aimWarmRestart;Ea();n.onSessionActive(!1);n.onPhaseChange("idle");const job=__aimWarmJob;job.then(result=>{if(Ro||attempt!==__aimWarmRestart||job!==__aimWarmJob||result.status!=="ready")return;n.onLastResult(null),n.onSessionActive(!0),n.onPhaseChange("running");if(!tn()){n.onPhaseChange("paused");__aimWarmNotice.hidden=false;__aimWarmText.textContent="资源已准备，点击开始继续。"}})}function nd()', 'restart after readiness');
-  text = replaceOne(text, 'function md(){it(),D(),sd(),!Lt()&&', 'function md(){it(),D(),sd();if(t.session.current!=="calibration"&&!__aimWarmGate.ready){te.setEnabled(false);te.setLookOnly(false);return}!Lt()&&', 'no physics while preparing');
+  text = replaceOne(text, 'function md(){it(),D(),sd(),!Lt()&&', 'function md(){it(),D(),sd();if(t.phase.current==="idle"&&__aimWarmGate.ready&&__aimWarmDoc&&__aimPreparedSelection!==__aimWarmSelection())__aimBeginWarm(__aimWarmDoc);if(t.session.current!=="calibration"&&!__aimWarmGate.ready){te.setEnabled(false);te.setLookOnly(false);return}!Lt()&&', 'no physics while preparing');
   return replaceOne(text, 'wd=()=>{Ro=!0;', 'wd=()=>{__aimWarmGate.cancel("disposed");__aimWarmNotice.remove();Ro=!0;', 'gate disposal');
+}
+
+function patchEntry(text) {
+  text=replaceOne(text,"cJ=e(()=>cC['mapLoading']['value']?'地图还在加载':cH['blocking']['value']?'解说还在加载':'点击任意位置开始')", "__aimEntryWaiting=e(()=>cC['session']['value']!=='calibration'&&cC['preparation']?.['value']?.['status']!=='ready'),cJ=e(()=>__aimEntryWaiting['value']?(cC['preparation']?.['value']?.['status']==='failed'?'训练资源准备失败，请重试':cC['preparation']?.['value']?.['label']??'正在准备训练资源…'):cC['mapLoading']['value']?'地图还在加载':cH['blocking']['value']?'解说还在加载':'点击任意位置开始')",'entry preparation message');
+  text=replaceOne(text,"dL=()=>{cC['mapLoading']['value']||cH['blocking']['value']||", "dL=()=>{__aimEntryWaiting['value']||cC['mapLoading']['value']||cH['blocking']['value']||",'entry preparation click guard');
+  text=replaceOne(text,"{'is-waiting':h(cC)['mapLoading']['value']||h(cH)['blocking']['value']}","{'is-waiting':__aimEntryWaiting['value']||h(cC)['mapLoading']['value']||h(cH)['blocking']['value']}",'entry preparation styling');
+  text=replaceOne(text,"dR[0x1a]||(dR[0x1a]=k('div',{'class':'al-scene-start-hint'},'Enter\\x20也行',-0x1))", "k('div',{'class':'al-scene-start-hint','style':O({'display':__aimEntryWaiting['value']?'none':''})},'Enter\\x20也行',0x4)",'entry gesture hint keeps a stable dynamic VNode');
+  text=replaceOne(text,"'disabled':h(cC)['mapLoading']['value'],'onClick':dL", "'disabled':__aimEntryWaiting['value']||h(cC)['mapLoading']['value'],'onClick':dL",'entry start button disabled');
+  text=replaceOne(text,"t(h(cC)['mapLoading']['value']?'地图加载中…':'开始训练')", "t(__aimEntryWaiting['value']?cJ['value']:h(cC)['mapLoading']['value']?'地图加载中…':'开始训练')",'entry start button loading message');
+  text=replaceOne(text,"h(cC)['mapLoading']['value']?g('',!0x0):(j(),f('kbd',Ui,'ENTER'))", "__aimEntryWaiting['value']||h(cC)['mapLoading']['value']?g('',!0x0):(j(),f('kbd',Ui,'ENTER'))",'entry button hint only after preparation');
+  text=replaceOne(text,"const cH=x(!0x1),cI=Mu({'onStart':()=>Xe(cF,{'rebuild':!0x1})})", "function __aimHallCanStart(){if(cF['session']['value']!=='calibration'&&cF['preparation']?.['value']?.['status']!=='ready')return false;return cF['engine']['value']?.['canStart']?.()!==false}const cH=x(!0x1),cI=Mu({'onStart':()=>{if(__aimHallCanStart())Xe(cF,{'rebuild':!0x1});else cI['rewind']()}})",'countdown completion requires stable preparation');
+  text=replaceOne(text,"const cO=e(()=>''),cP=e(()=>bU),cQ=e(()=>'');function cR(cY){", "A(()=>cF['preparation']?.['value']?.['status'],status=>{if(status!=='ready'&&cI['state']['value']==='counting')cI['rewind']()});const cO=e(()=>cF['preparation']?.['value']?.['status']==='ready'?'':cF['preparation']?.['value']?.['status']==='failed'?'训练资源准备失败，请重试':cF['preparation']?.['value']?.['label']??'正在准备训练资源…'),cP=e(()=>bU),cQ=e(()=>'');function cR(cY){if(!__aimHallCanStart())return;",'countdown waits visibly for resources and a new click');
+  text=replaceOne(text,"return cZ?.['awaitClick']?cI['rewind']():cI['restart'](),!0x0;", "return cZ?.['awaitClick']||!__aimHallCanStart()?cI['rewind']():cI['restart'](),!0x0;",'round preparation cannot begin an early countdown');
+  text=replaceOne(text,"cF['phase']['value']!=='paused'?!0x1:(cF['phase']['value']='idle',cF['engine']['value']?.['start'](),cI['restart'](),!0x0)", "cF['phase']['value']!=='paused'?!0x1:!__aimHallCanStart()?!0x0:(cF['phase']['value']='idle',cF['engine']['value']?.['start'](),cI['restart'](),!0x0)",'resume countdown waits for resources');
+  text=replaceOne(text,"k('p',td,t(cO['value']),0x1),cZ[0x5]||", "k('p',td,t(cO['value']),0x1),h(cF)['preparation']?.['value']?.['status']==='failed'?(j(),f('button',{'type':'button','data-action':'prep-retry','onClick':()=>h(cF)['engine']['value']?.['retryPreparation']?.()},'重试')):g('',!0x0),cZ[0x5]||",'countdown entry exposes retry');
+  text=replaceOne(text,"cZ[0x5]||(cZ[0x5]=k('p',{'class':'hall-train-prep-hint'},[p('\\x20可以先转动视角看靶位\\x20·\\x20'),k('b',null,'点击左键'),p('\\x20开始，还有\\x203\\x20秒准备时间\\x20')],-0x1))", "k('p',{'class':'hall-train-prep-hint','style':O({'display':h(cF)['preparation']?.['value']?.['status']!=='ready'?'none':''})},[p('\\x20可以先转动视角看靶位\\x20·\\x20'),k('b',null,'点击左键'),p('\\x20开始，还有\\x203\\x20秒准备时间\\x20')],0x4)",'countdown gesture hint keeps a stable dynamic VNode');
+  return text;
 }
 
 export function applyPrewarmPatch(sources) {
@@ -228,5 +358,7 @@ export function applyPrewarmPatch(sources) {
   out['tmIeW3Ig.js'] = patchCharacterAssets(out['tmIeW3Ig.js']);
   out['aQOfOAp-.js'] = patchViewport(out['aQOfOAp-.js']);
   out['CymPR-fm.js'] = patchTraining(patchMuzzle(patchFlash(out['CymPR-fm.js'])));
+  if(typeof out['DCKWp-_u.js']==='string')out['DCKWp-_u.js']=patchAudioResources(out['DCKWp-_u.js']);
+  if(typeof out['DVK7uRSu.js']==='string')out['DVK7uRSu.js']=patchEntry(out['DVK7uRSu.js']);
   return out;
 }

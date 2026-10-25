@@ -1,6 +1,6 @@
 {
   "app": "aim-offline",
-  "version": 2,
+  "version": 4,
   "originalVersion": "0.0.15",
   "sceneCount": 62,
   "originalSceneCount": 62,
@@ -14,11 +14,39 @@
   ],
   "network": "local-only",
   "origin": "http://127.0.0.1:18746",
+  "languages": [
+    "zh-CN",
+    "en"
+  ],
+  "defaultLanguage": "zh-CN",
   "performanceOptimizations": [
     "adjacent-tick-interpolation",
     "shared-hud-raf",
     "local-fps-limit",
-    "scene-prewarm"
+    "scene-prewarm",
+    "stable-loadout-preparation",
+    "same-frame-bot-order"
   ],
-  "created": "2026-10-16T17:49:06.224Z"
+  "skinPacks": {
+    "clientBridge": true,
+    "resourceStatus": "complete",
+    "collections": 15,
+    "themes": 20,
+    "audio": 160,
+    "killAudio": 103,
+    "successiveAudio": 20,
+    "banners": 44,
+    "layeredBanners": 40,
+    "bannerLayers": 92,
+    "fire": 37,
+    "missingFire": 0,
+    "eligibleFireCombinations": 37
+  },
+  "weaponModels": {
+    "weapons": 26,
+    "collections": 15,
+    "variants": 4,
+    "assets": 640
+  },
+  "created": "2026-10-20T00:33:40.294Z"
 }

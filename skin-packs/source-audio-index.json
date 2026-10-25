@@ -1,0 +1,535 @@
+{
+  "source_folder": "https://drive.google.com/drive/folders/1PkJyMg_Kj7-rJHoptMudeT5VorBwM8jG",
+  "discovered_on": "2026-10-19",
+  "note": "Source index only. MP3 files already copied to skin-packs/media are not the same as activation in the runtime. Visual assets and gunfire are not contained in this index.",
+  "collections": [
+    {
+      "collection": "Prelude to Chaos",
+      "audio": [
+        {
+          "file": "Prelude to Chaos Kill Successive.mp3",
+          "drive_file_id": "1PXsweZHXiSmULCFNlZqodfyiWMzKQWw8",
+          "bytes": 335542,
+          "source_url": "https://drive.google.com/file/d/1PXsweZHXiSmULCFNlZqodfyiWMzKQWw8/view?usp=drivesdk"
+        },
+        {
+          "file": "Prelude to Chaos Kill 4.mp3",
+          "drive_file_id": "1Z-XI7Ze6k9JINe6Mpa1V4dUNN1w4p9_A",
+          "bytes": 44013,
+          "source_url": "https://drive.google.com/file/d/1Z-XI7Ze6k9JINe6Mpa1V4dUNN1w4p9_A/view?usp=drivesdk"
+        },
+        {
+          "file": "Prelude to Chaos Kill 5.mp3",
+          "drive_file_id": "1o2ibq32kQOKwfdtvYvgNWDkU2joolpMx",
+          "bytes": 100699,
+          "source_url": "https://drive.google.com/file/d/1o2ibq32kQOKwfdtvYvgNWDkU2joolpMx/view?usp=drivesdk"
+        },
+        {
+          "file": "Prelude to Chaos Kill 2.mp3",
+          "drive_file_id": "1zDENw2Jqu2k0twsCkWjzwFPivQ1skq1N",
+          "bytes": 44013,
+          "source_url": "https://drive.google.com/file/d/1zDENw2Jqu2k0twsCkWjzwFPivQ1skq1N/view?usp=drivesdk"
+        },
+        {
+          "file": "Prelude to Chaos Kill 3.mp3",
+          "drive_file_id": "1BmPd3h0DfooypDZAtJi4LFmUj15ejag9",
+          "bytes": 44013,
+          "source_url": "https://drive.google.com/file/d/1BmPd3h0DfooypDZAtJi4LFmUj15ejag9/view?usp=drivesdk"
+        },
+        {
+          "file": "Prelude to Chaos Kill 1.mp3",
+          "drive_file_id": "1g1MLM3uZHODXTliJV-FRZEE_xVqGqPr9",
+          "bytes": 44013,
+          "source_url": "https://drive.google.com/file/d/1g1MLM3uZHODXTliJV-FRZEE_xVqGqPr9/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "Kuronami",
+      "audio": [
+        {
+          "file": "Kuronami Kill Successive.mp3",
+          "drive_file_id": "1G2gm4rsF4p7uBM9tENSQ0N5N2sBU9HEb",
+          "bytes": 472744,
+          "source_url": "https://drive.google.com/file/d/1G2gm4rsF4p7uBM9tENSQ0N5N2sBU9HEb/view?usp=drivesdk"
+        },
+        {
+          "file": "Kuronami Kill 5.mp3",
+          "drive_file_id": "19EJMtKBCbGwdV2wGIVbxSTeopKcx6B2K",
+          "bytes": 181101,
+          "source_url": "https://drive.google.com/file/d/19EJMtKBCbGwdV2wGIVbxSTeopKcx6B2K/view?usp=drivesdk"
+        },
+        {
+          "file": "Kuronami Kill 4.mp3",
+          "drive_file_id": "1SE19eCAhBmgBAl7T0IRW_LHqyb13HDqG",
+          "bytes": 85869,
+          "source_url": "https://drive.google.com/file/d/1SE19eCAhBmgBAl7T0IRW_LHqyb13HDqG/view?usp=drivesdk"
+        },
+        {
+          "file": "Kuronami Kill 3.mp3",
+          "drive_file_id": "1vkp7Qr5RM4JOM4LUPhDN0kYjedvp11Zy",
+          "bytes": 88413,
+          "source_url": "https://drive.google.com/file/d/1vkp7Qr5RM4JOM4LUPhDN0kYjedvp11Zy/view?usp=drivesdk"
+        },
+        {
+          "file": "Kuronami Kill 2.mp3",
+          "drive_file_id": "1VHjRgAWTA1K2-iHTYJJ7S8ApIEj8Jcn5",
+          "bytes": 86733,
+          "source_url": "https://drive.google.com/file/d/1VHjRgAWTA1K2-iHTYJJ7S8ApIEj8Jcn5/view?usp=drivesdk"
+        },
+        {
+          "file": "Kuronami Kill 1.mp3",
+          "drive_file_id": "1HHtjpMKvKUo7EwAA9hFcEbZkNScnrC2H",
+          "bytes": 88437,
+          "source_url": "https://drive.google.com/file/d/1HHtjpMKvKUo7EwAA9hFcEbZkNScnrC2H/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "Primordium",
+      "audio": [
+        {
+          "file": "Primordium Kill Successive.mp3",
+          "drive_file_id": "1m-vXjy6N4k8wuf4P9pXEADSfDHlZKp9e",
+          "bytes": 490408,
+          "source_url": "https://drive.google.com/file/d/1m-vXjy6N4k8wuf4P9pXEADSfDHlZKp9e/view?usp=drivesdk"
+        },
+        {
+          "file": "Primordium Kill 5.mp3",
+          "drive_file_id": "12GBVHE7C5TzMqYRawVy2N2Exj1OJuRSa",
+          "bytes": 192620,
+          "source_url": "https://drive.google.com/file/d/12GBVHE7C5TzMqYRawVy2N2Exj1OJuRSa/view?usp=drivesdk"
+        },
+        {
+          "file": "Primordium Kill 4.mp3",
+          "drive_file_id": "1gLMBWYR7sjI_ZOaIiIWfdNl_E78KQ1AX",
+          "bytes": 94508,
+          "source_url": "https://drive.google.com/file/d/1gLMBWYR7sjI_ZOaIiIWfdNl_E78KQ1AX/view?usp=drivesdk"
+        },
+        {
+          "file": "Primordium Kill 3.mp3",
+          "drive_file_id": "1kuEzjBopxH84PGey-pLuV2NOMe1Vj2qj",
+          "bytes": 93716,
+          "source_url": "https://drive.google.com/file/d/1kuEzjBopxH84PGey-pLuV2NOMe1Vj2qj/view?usp=drivesdk"
+        },
+        {
+          "file": "Primordium Kill 2.mp3",
+          "drive_file_id": "13tTIPisiJVZc9brs9mQKZZURVYO-O6Yf",
+          "bytes": 93836,
+          "source_url": "https://drive.google.com/file/d/13tTIPisiJVZc9brs9mQKZZURVYO-O6Yf/view?usp=drivesdk"
+        },
+        {
+          "file": "Primordium Kill 1.mp3",
+          "drive_file_id": "16uzIZTHIEw7kGwccPjhebxA7ySpoxZ0S",
+          "bytes": 95300,
+          "source_url": "https://drive.google.com/file/d/16uzIZTHIEw7kGwccPjhebxA7ySpoxZ0S/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "Rogue",
+      "audio": [
+        {
+          "file": "Rogue Kill Successive.mp3",
+          "drive_file_id": "1VQypKGYMhdizsRVZroqBs5SvUbhfT9VR",
+          "bytes": 348327,
+          "source_url": "https://drive.google.com/file/d/1VQypKGYMhdizsRVZroqBs5SvUbhfT9VR/view?usp=drivesdk"
+        },
+        {
+          "file": "Rogue Kill 5.mp3",
+          "drive_file_id": "1ufIR9GnGX1RuIRGiITm0_YgJ6nw4KCdb",
+          "bytes": 149229,
+          "source_url": "https://drive.google.com/file/d/1ufIR9GnGX1RuIRGiITm0_YgJ6nw4KCdb/view?usp=drivesdk"
+        },
+        {
+          "file": "Rogue Kill 4.mp3",
+          "drive_file_id": "1Xes5u5_Z4sjy-WuBEaDmaVu-FC7d1uTm",
+          "bytes": 74925,
+          "source_url": "https://drive.google.com/file/d/1Xes5u5_Z4sjy-WuBEaDmaVu-FC7d1uTm/view?usp=drivesdk"
+        },
+        {
+          "file": "Rogue Kill 3.mp3",
+          "drive_file_id": "1fPm_q1jmxDwps8YCHBatgT8HoPX6OzLm",
+          "bytes": 75501,
+          "source_url": "https://drive.google.com/file/d/1fPm_q1jmxDwps8YCHBatgT8HoPX6OzLm/view?usp=drivesdk"
+        },
+        {
+          "file": "Rogue Kill 2.mp3",
+          "drive_file_id": "1Y07KdYD4L1Y9NfHGiPVqg2Vd4-T6HXZg",
+          "bytes": 75501,
+          "source_url": "https://drive.google.com/file/d/1Y07KdYD4L1Y9NfHGiPVqg2Vd4-T6HXZg/view?usp=drivesdk"
+        },
+        {
+          "file": "Rogue Kill 1.mp3",
+          "drive_file_id": "1ljlpOes7Uoin55cQqvYrWL_uWYDGKD7Q",
+          "bytes": 74925,
+          "source_url": "https://drive.google.com/file/d/1ljlpOes7Uoin55cQqvYrWL_uWYDGKD7Q/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "RGX 11z Pro",
+      "audio": [
+        {
+          "file": "RGX 11z Pro Kill Successive.mp3",
+          "drive_file_id": "1yreRbREiOTwXtJ_K2Q-O0O6aBImQXF8r",
+          "bytes": 285448,
+          "source_url": "https://drive.google.com/file/d/1yreRbREiOTwXtJ_K2Q-O0O6aBImQXF8r/view?usp=drivesdk"
+        },
+        {
+          "file": "RGX 11z Pro Kill 4.mp3",
+          "drive_file_id": "18si87TvPRKUdrOSC6eonGakzMboc9ve0",
+          "bytes": 27556,
+          "source_url": "https://drive.google.com/file/d/18si87TvPRKUdrOSC6eonGakzMboc9ve0/view?usp=drivesdk"
+        },
+        {
+          "file": "RGX 11z Pro Kill 5.mp3",
+          "drive_file_id": "1FALJB5kx3NUgRfA0gk08UoU3OvNVqBb6",
+          "bytes": 60836,
+          "source_url": "https://drive.google.com/file/d/1FALJB5kx3NUgRfA0gk08UoU3OvNVqBb6/view?usp=drivesdk"
+        },
+        {
+          "file": "RGX 11z Pro Kill 2.mp3",
+          "drive_file_id": "1Yr9Jzotantd8ekH8re9QwtDx_l992qS-",
+          "bytes": 29385,
+          "source_url": "https://drive.google.com/file/d/1Yr9Jzotantd8ekH8re9QwtDx_l992qS-/view?usp=drivesdk"
+        },
+        {
+          "file": "RGX 11z Pro Kill 3.mp3",
+          "drive_file_id": "1fmDTCkZn9v1Q3ZcP9So72XP9O6n5yARO",
+          "bytes": 29385,
+          "source_url": "https://drive.google.com/file/d/1fmDTCkZn9v1Q3ZcP9So72XP9O6n5yARO/view?usp=drivesdk"
+        },
+        {
+          "file": "RGX 11z Pro Kill 1.mp3",
+          "drive_file_id": "1dDdNp62Kg7KgfPVo--qxFD9lMcOYWJQi",
+          "bytes": 28653,
+          "source_url": "https://drive.google.com/file/d/1dDdNp62Kg7KgfPVo--qxFD9lMcOYWJQi/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "Ayakashi",
+      "audio": [
+        {
+          "file": "Ayakashi Kill Successive.mp3",
+          "drive_file_id": "1BZ7MoncvcXcdXvVYbGtMFlqsqIQ8wYu1",
+          "bytes": 525735,
+          "source_url": "https://drive.google.com/file/d/1BZ7MoncvcXcdXvVYbGtMFlqsqIQ8wYu1/view?usp=drivesdk"
+        },
+        {
+          "file": "Ayakashi Kill 6.mp3",
+          "drive_file_id": "14rOLv-xYDk0MlN36RI8EsBR1sqnAUKXW",
+          "bytes": 127917,
+          "source_url": "https://drive.google.com/file/d/14rOLv-xYDk0MlN36RI8EsBR1sqnAUKXW/view?usp=drivesdk"
+        },
+        {
+          "file": "Ayakashi Kill 5.mp3",
+          "drive_file_id": "17LXNKbe77Llcqg7nD9naI3DpxR72IowJ",
+          "bytes": 166509,
+          "source_url": "https://drive.google.com/file/d/17LXNKbe77Llcqg7nD9naI3DpxR72IowJ/view?usp=drivesdk"
+        },
+        {
+          "file": "Ayakashi Kill 4.mp3",
+          "drive_file_id": "1RWMfUPVpT-spRtZl2OL7eqGQcbND98gh",
+          "bytes": 50733,
+          "source_url": "https://drive.google.com/file/d/1RWMfUPVpT-spRtZl2OL7eqGQcbND98gh/view?usp=drivesdk"
+        },
+        {
+          "file": "Ayakashi Kill 3.mp3",
+          "drive_file_id": "1aX_Qhcdyq91mHOn3JZpr_rT9AsWIVdV-",
+          "bytes": 54189,
+          "source_url": "https://drive.google.com/file/d/1aX_Qhcdyq91mHOn3JZpr_rT9AsWIVdV-/view?usp=drivesdk"
+        },
+        {
+          "file": "Ayakashi Kill 2.mp3",
+          "drive_file_id": "1a6DqGJHPVLv036QGIH9WLNB4YM7Hy_u9",
+          "bytes": 54765,
+          "source_url": "https://drive.google.com/file/d/1a6DqGJHPVLv036QGIH9WLNB4YM7Hy_u9/view?usp=drivesdk"
+        },
+        {
+          "file": "Ayakashi Kill 1.mp3",
+          "drive_file_id": "1YffkLvT7PKbF6fjFVXoiMJdFfMeBD7KX",
+          "bytes": 50733,
+          "source_url": "https://drive.google.com/file/d/1YffkLvT7PKbF6fjFVXoiMJdFfMeBD7KX/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 7
+    },
+    {
+      "collection": "Nocturnum",
+      "audio": [
+        {
+          "file": "Nocturnum Kill Successive.mp3",
+          "drive_file_id": "1Pjcfq8BY0zfjm91UQ_cUrM3jdHpUqlsK",
+          "bytes": 377087,
+          "source_url": "https://drive.google.com/file/d/1Pjcfq8BY0zfjm91UQ_cUrM3jdHpUqlsK/view?usp=drivesdk"
+        },
+        {
+          "file": "Nocturnum Kill 1.mp3",
+          "drive_file_id": "1t_zU3HN9OnRfJX5huDyHBjK9653iWwaK",
+          "bytes": 75276,
+          "source_url": "https://drive.google.com/file/d/1t_zU3HN9OnRfJX5huDyHBjK9653iWwaK/view?usp=drivesdk"
+        },
+        {
+          "file": "Nocturnum Kill 2.mp3",
+          "drive_file_id": "1fUlRQyBg7BldWSOWjvW7o7bzeM3StqnE",
+          "bytes": 75276,
+          "source_url": "https://drive.google.com/file/d/1fUlRQyBg7BldWSOWjvW7o7bzeM3StqnE/view?usp=drivesdk"
+        },
+        {
+          "file": "Nocturnum Kill 3.mp3",
+          "drive_file_id": "1dGkEbObG91us_z1U7JIHy3TY0_Q0wf7N",
+          "bytes": 75276,
+          "source_url": "https://drive.google.com/file/d/1dGkEbObG91us_z1U7JIHy3TY0_Q0wf7N/view?usp=drivesdk"
+        },
+        {
+          "file": "Nocturnum Kill 4.mp3",
+          "drive_file_id": "1CzF04nULDKmQqLgWp_Am8wDKobnmRwFi",
+          "bytes": 75276,
+          "source_url": "https://drive.google.com/file/d/1CzF04nULDKmQqLgWp_Am8wDKobnmRwFi/view?usp=drivesdk"
+        },
+        {
+          "file": "Nocturnum Kill 5.mp3",
+          "drive_file_id": "15KJSaz9gtfwoyn9-j5iyKIXYA39OE5cs",
+          "bytes": 149255,
+          "source_url": "https://drive.google.com/file/d/15KJSaz9gtfwoyn9-j5iyKIXYA39OE5cs/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "Mystbloom",
+      "audio": [
+        {
+          "file": "Mystbloom Kill Successive.mp3",
+          "drive_file_id": "1lSxYvBh8YiTse04Ikw1Snb9yK6a11pH3",
+          "bytes": 379432,
+          "source_url": "https://drive.google.com/file/d/1lSxYvBh8YiTse04Ikw1Snb9yK6a11pH3/view?usp=drivesdk"
+        },
+        {
+          "file": "Mystbloom Kill 1.mp3",
+          "drive_file_id": "11Dqizonm1Hg6VcEibxueOyIy0pO8thTX",
+          "bytes": 78381,
+          "source_url": "https://drive.google.com/file/d/11Dqizonm1Hg6VcEibxueOyIy0pO8thTX/view?usp=drivesdk"
+        },
+        {
+          "file": "Mystbloom Kill 2.mp3",
+          "drive_file_id": "1-ZNpd8m4KXe3pc2dv6iarPosttNGK3EN",
+          "bytes": 78381,
+          "source_url": "https://drive.google.com/file/d/1-ZNpd8m4KXe3pc2dv6iarPosttNGK3EN/view?usp=drivesdk"
+        },
+        {
+          "file": "Mystbloom Kill 3.mp3",
+          "drive_file_id": "1rRjkB6YClYHawt52Wqc9SW-ZOLs-x6tQ",
+          "bytes": 78381,
+          "source_url": "https://drive.google.com/file/d/1rRjkB6YClYHawt52Wqc9SW-ZOLs-x6tQ/view?usp=drivesdk"
+        },
+        {
+          "file": "Mystbloom Kill 4.mp3",
+          "drive_file_id": "1l4PADbHsJ3yOyy0BW8Y1zXcswNu9CGbv",
+          "bytes": 76653,
+          "source_url": "https://drive.google.com/file/d/1l4PADbHsJ3yOyy0BW8Y1zXcswNu9CGbv/view?usp=drivesdk"
+        },
+        {
+          "file": "Mystbloom Kill 5.mp3",
+          "drive_file_id": "1rwRIXCnt6uv_TC52Jfsv50M8TMzm3sk6",
+          "bytes": 150381,
+          "source_url": "https://drive.google.com/file/d/1rwRIXCnt6uv_TC52Jfsv50M8TMzm3sk6/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 6
+    },
+    {
+      "collection": "ORA by OneTap",
+      "audio": [
+        {
+          "file": "ORA by OneTap Kill Successive Watch.mp3",
+          "drive_file_id": "1hb-af_32DcyH18PiW9flbvEyX7pQnAtO",
+          "bytes": 616159,
+          "source_url": "https://drive.google.com/file/d/1hb-af_32DcyH18PiW9flbvEyX7pQnAtO/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill Successive RENEGADE.mp3",
+          "drive_file_id": "1e71bYzy-1ApOrNTwgwe7L52sC3wsYTIb",
+          "bytes": 603620,
+          "source_url": "https://drive.google.com/file/d/1e71bYzy-1ApOrNTwgwe7L52sC3wsYTIb/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill Successive RAJA.mp3",
+          "drive_file_id": "1y1TJJf1iEGLc4ZFDCwD-HZwkqg5Rg7G-",
+          "bytes": 603620,
+          "source_url": "https://drive.google.com/file/d/1y1TJJf1iEGLc4ZFDCwD-HZwkqg5Rg7G-/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill Successive Ignition.mp3",
+          "drive_file_id": "17IzLqftxCrgCMWPql-lCfCoDkMWe5F7k",
+          "bytes": 611980,
+          "source_url": "https://drive.google.com/file/d/17IzLqftxCrgCMWPql-lCfCoDkMWe5F7k/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill Successive.mp3",
+          "drive_file_id": "1H-B7g0GmVbBK7CYDSjRixQ67ZzcSQcQn",
+          "bytes": 599441,
+          "source_url": "https://drive.google.com/file/d/1H-B7g0GmVbBK7CYDSjRixQ67ZzcSQcQn/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 5 Watch.mp3",
+          "drive_file_id": "1SIJSzX7HOrFt-nKAoS40KWV03ZbuK9x4",
+          "bytes": 258133,
+          "source_url": "https://drive.google.com/file/d/1SIJSzX7HOrFt-nKAoS40KWV03ZbuK9x4/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 4 Watch.mp3",
+          "drive_file_id": "170JrXlQ9lNHix0ENJLJFEJ2Um_I4OZvd",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/170JrXlQ9lNHix0ENJLJFEJ2Um_I4OZvd/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 3 Watch.mp3",
+          "drive_file_id": "1bY84QYXBYqjZ-6qY6Tj7KaMsAdNidLUg",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1bY84QYXBYqjZ-6qY6Tj7KaMsAdNidLUg/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 2 Watch.mp3",
+          "drive_file_id": "1DEhQoRiwf1SV0N-FgcQSA_DTqIvKQm9S",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1DEhQoRiwf1SV0N-FgcQSA_DTqIvKQm9S/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 1 Watch.mp3",
+          "drive_file_id": "11zCs1ghPbfzojY1hYgjQk0-hgvRe1JDM",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/11zCs1ghPbfzojY1hYgjQk0-hgvRe1JDM/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 5 RENEGADE.mp3",
+          "drive_file_id": "159m5n4mdSKxo4L0rBjsYEjnU2-B96Ip3",
+          "bytes": 248729,
+          "source_url": "https://drive.google.com/file/d/159m5n4mdSKxo4L0rBjsYEjnU2-B96Ip3/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 4 RENEGADE.mp3",
+          "drive_file_id": "1ShScTxReRrdHp48lpAdBnGs36cQ478k5",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1ShScTxReRrdHp48lpAdBnGs36cQ478k5/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 3 RENEGADE.mp3",
+          "drive_file_id": "15LyjbWS4ZRYmNQ9untjkGotMrlWEEbUY",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/15LyjbWS4ZRYmNQ9untjkGotMrlWEEbUY/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 2 RENEGADE.mp3",
+          "drive_file_id": "1hhQQycyiv4CmKHmICzvIZle9mV7hE5xL",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1hhQQycyiv4CmKHmICzvIZle9mV7hE5xL/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 1 RENEGADE.mp3",
+          "drive_file_id": "1t81h8dky9N0vYphJQS-E7o-jVWD5dJPN",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1t81h8dky9N0vYphJQS-E7o-jVWD5dJPN/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 5 RAJA.mp3",
+          "drive_file_id": "1Jl7Sc7dHcx87u0ZJSK0aMOLQXW_aHU4b",
+          "bytes": 248729,
+          "source_url": "https://drive.google.com/file/d/1Jl7Sc7dHcx87u0ZJSK0aMOLQXW_aHU4b/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 4 RAJA.mp3",
+          "drive_file_id": "17F0YgiAmFM-JiXFKrcUAHbNifrDSLNZL",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/17F0YgiAmFM-JiXFKrcUAHbNifrDSLNZL/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 3 RAJA.mp3",
+          "drive_file_id": "13EZu0Krt8ElMjfq0OaPdplnZmtEoQVmJ",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/13EZu0Krt8ElMjfq0OaPdplnZmtEoQVmJ/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 2 RAJA.mp3",
+          "drive_file_id": "19gwDtMGjfFEO9DnX4S-ZodgDprC67lGk",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/19gwDtMGjfFEO9DnX4S-ZodgDprC67lGk/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 1 RAJA.mp3",
+          "drive_file_id": "1YiZutp5eX9DoZ0xp2tHNZ7aHl71PUpgi",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1YiZutp5eX9DoZ0xp2tHNZ7aHl71PUpgi/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 3.mp3",
+          "drive_file_id": "1k164w7SVOX21RBUPOl7MmFImsLThm82D",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1k164w7SVOX21RBUPOl7MmFImsLThm82D/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 2.mp3",
+          "drive_file_id": "17Qa0CnKRaCAJHBj7_Le5sPXetAo5HtmM",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/17Qa0CnKRaCAJHBj7_Le5sPXetAo5HtmM/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 5.mp3",
+          "drive_file_id": "1zUgdBZW9T_EeAy5ol6z-tgVmrWFil6ZR",
+          "bytes": 242460,
+          "source_url": "https://drive.google.com/file/d/1zUgdBZW9T_EeAy5ol6z-tgVmrWFil6ZR/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 4.mp3",
+          "drive_file_id": "1s3s1Dus_VEVDl_pfGj9Cm-o4kyNjQOJc",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1s3s1Dus_VEVDl_pfGj9Cm-o4kyNjQOJc/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 1.mp3",
+          "drive_file_id": "1_DiFTkYjn4crxW9s1QtRWiWgll13b_tf",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1_DiFTkYjn4crxW9s1QtRWiWgll13b_tf/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 5 Ignition.mp3",
+          "drive_file_id": "1LhSeWfA1foFGPnqCotcscltKB1cvEfsk",
+          "bytes": 248729,
+          "source_url": "https://drive.google.com/file/d/1LhSeWfA1foFGPnqCotcscltKB1cvEfsk/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 4 Ignition.mp3",
+          "drive_file_id": "1ubW90UgEK1sjQiYLX99j37BL8Oemn3oy",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1ubW90UgEK1sjQiYLX99j37BL8Oemn3oy/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 3 Ignition.mp3",
+          "drive_file_id": "1g3eMLpFCBybuUBzwKzOceszpufpVKcTN",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1g3eMLpFCBybuUBzwKzOceszpufpVKcTN/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 2 Ignition.mp3",
+          "drive_file_id": "18MnIsxvPjiZwqxOzjM_Q5QJVMIZfqGJK",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/18MnIsxvPjiZwqxOzjM_Q5QJVMIZfqGJK/view?usp=drivesdk"
+        },
+        {
+          "file": "ORA by OneTap Kill 1 Ignition.mp3",
+          "drive_file_id": "1bspeVRsVdh9BQFdTEK7_mEGLTE6bXhy6",
+          "bytes": 125431,
+          "source_url": "https://drive.google.com/file/d/1bspeVRsVdh9BQFdTEK7_mEGLTE6bXhy6/view?usp=drivesdk"
+        }
+      ],
+      "audio_count": 30
+    }
+  ]
+}

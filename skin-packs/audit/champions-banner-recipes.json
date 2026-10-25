@@ -1,0 +1,4617 @@
+{
+  "schemaVersion": 1,
+  "source": "Installed VALORANT 13.08 source UI KillBannerData_Champs26_Snake/Dragon and original UMG animation endpoints",
+  "method": "Compose original count-specific badge/background textures and only nonzero-opacity native UMG decorative layers at their fully opened animation endpoint. Preserve source texture pixels with declared transforms; no first-kill clone or fabricated repeat pips. Frame size384 with300px common frame, centered native256 artwork. This is the static open state; Unreal transition animation is not included.",
+  "frames": [
+    {
+      "theme": "attacking",
+      "kill": 1,
+      "path": "skin-packs/media/champions-2026/banners/attacking/kill-1.png",
+      "sha256": "aafd212ec69ba631acce23040eee71ca51ae9bcf977295e744e192a963e17d37",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/01_Champs26_Emblem_Animation_Snake.174",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Snake.json",
+        "sha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/01_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "c9612afc05e062e41b942307c71261964a4217729ca2cb6feea6eca3c7affa9c"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "026daa64645351cd962c014c92c5845f895f59ee608f29fefe356d67a239e263",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_1_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_1_BG.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "a4a2f7c78788e920fa99a802191a15922f2a773c8449182d2ca30b5484f8fc38",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "427e951ed619f2dd5207eee72e4164f85c998067f61c51506792ad869e0c1477",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "68f5d33ae7239c1a5d0b3ee1392b6bf7f2831507bba3f931a94ccfdc48b0fb65",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "faca2f114fb2211ed54c893cb44c0bc4ac9ce2ed767f657cb8ec6285eae8af80",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_top_right.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "43c4c7e9bd289f410873f415fd48568cb0291e0f8639a65082e03bde1eb0afea",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "06_dots_top",
+          "sha256": "f61908b6b9f80a58e3bd11d25a133df54019bbdd5e2cf1a578d88da66b007718",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 1,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_top.png"
+        },
+        {
+          "name": "count-1-badge",
+          "sha256": "d5fed9f27f37e277a1bed3b1c896559a37cfd269b60422ffaf059934b919a6fd",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "attacking",
+      "kill": 2,
+      "path": "skin-packs/media/champions-2026/banners/attacking/kill-2.png",
+      "sha256": "5699f695320c20d38e2dcf4b62dff430b5a088457f93bb73daf7f27e35168254",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/02_Champs26_Emblem_Animation_Snake.174",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Snake.json",
+        "sha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/02_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "54423de53d3e9ab4aa86e305b2541dac8b2bbe39d73b9b4c09c8dd86ebb59a90"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "21df3cd874ac5be0113b7da79b085915610e25b961bbe2ad6d5c25a597af0172",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "ccf8be8c9a882a8b0a028c30e3c494cdeb6a0eb0f359a0a1d54f9d5771f61893",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "bd1a035dc065ce9fa36e8c9117f277e976513e62765e3862ca27a90226e25fe9",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "7a93678902009649c15273de85276fa9224ffdfc72d685052e669b40a5e8df3e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_right.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "43c4c7e9bd289f410873f415fd48568cb0291e0f8639a65082e03bde1eb0afea",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cca4c90c8bc7d3cffe5f2226db27972eacbc391c0ae7c4e01753d9a146d73a1a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "06_dots_top",
+          "sha256": "f61908b6b9f80a58e3bd11d25a133df54019bbdd5e2cf1a578d88da66b007718",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 1,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_top.png"
+        },
+        {
+          "name": "count-2-badge",
+          "sha256": "be39b83802c80f17e7c3bd09085d7463034efc628edf1276abc99129650608e1",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/02/02_emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/02/02_emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "attacking",
+      "kill": 3,
+      "path": "skin-packs/media/champions-2026/banners/attacking/kill-3.png",
+      "sha256": "bf8bea409204c84416aeba0cfbb10cc0c6e1ea921bc286046740aa2f09e7823b",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/03_Champs26_Emblem_Animation_Snake.174",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Snake.json",
+        "sha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/03_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "b33cd7a867d447b020a567d92a5a2dddfbe19a2c51d8ee1320638f8a83964c0b"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "c25af02e435d4ec07f596f57b97350f28558ca94d8476de234d4c6acb5ba1043",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "27b5cdd9bf9a377bcd53db54c7e40279ccfcc38bf898c8f1952af79887190cf2",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "21df3cd874ac5be0113b7da79b085915610e25b961bbe2ad6d5c25a597af0172",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "ccf8be8c9a882a8b0a028c30e3c494cdeb6a0eb0f359a0a1d54f9d5771f61893",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "bd1a035dc065ce9fa36e8c9117f277e976513e62765e3862ca27a90226e25fe9",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "7a93678902009649c15273de85276fa9224ffdfc72d685052e669b40a5e8df3e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_right.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "43c4c7e9bd289f410873f415fd48568cb0291e0f8639a65082e03bde1eb0afea",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cca4c90c8bc7d3cffe5f2226db27972eacbc391c0ae7c4e01753d9a146d73a1a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "bf00497b4d3dec8fde6c4625d5d6c8ae0fc75847a0a973ffda29ddf32706c5bc",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "2f577ec7d91119208f7157eee88fa87f9fe4080c255aee76ce565afefe85b2a6",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "06_dots_top",
+          "sha256": "f61908b6b9f80a58e3bd11d25a133df54019bbdd5e2cf1a578d88da66b007718",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 1,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_top.png"
+        },
+        {
+          "name": "count-3-badge",
+          "sha256": "8966029c60f1f23e007a165571ab3912bc18f16b060bd74475b274649fb02b29",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "attacking",
+      "kill": 4,
+      "path": "skin-packs/media/champions-2026/banners/attacking/kill-4.png",
+      "sha256": "a48b2fca43add7a5b3916d0526199c289020601a5dc31ef267626a65e16fd1ba",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/04_Champs26_Emblem_Animation_Snake.257",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Snake.json",
+        "sha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/04_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "2fd14cb7f0b91a22a87bc3cfaa0817c02d493b42ada69ab456868c98a3b6db50"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "c25af02e435d4ec07f596f57b97350f28558ca94d8476de234d4c6acb5ba1043",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "27b5cdd9bf9a377bcd53db54c7e40279ccfcc38bf898c8f1952af79887190cf2",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "7e77c3080afdf2d1533d21f9bb34c9def5145016832f5b9aaef5149461e20756",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "9be6eb0741a0908e2a2b06d2c3ecb7b444ad3dd13a515b0c46224d0d033a8bc5",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "1fa62e5925943c8224a896ec73b25d3400999b7720bbfeb97a8a3da4bec084fc",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "bdf4b1b00b31a3b3918e375dcad9aef370ecd04a84465757617a571f2b51a818",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_right.png"
+        },
+        {
+          "name": "06_snake_crown",
+          "sha256": "ed38fa5696250fc31c9afb4324f9a7212c8027aed68241cd32457938184dd8cb",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_snake_crown.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_snake_crown.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "419c925421492c2cea5806a4bcce352c162d01010bef5d522e974094e9a504b1",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cca4c90c8bc7d3cffe5f2226db27972eacbc391c0ae7c4e01753d9a146d73a1a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "7677152f2f4f771f22279e4b9f63178b1312ccac258e210c7a867a130e247632",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "af8b0d10c154b3c8d39dadc864632e965b498357ec8d564e994953ba423b82c7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -1,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "count-4-badge",
+          "sha256": "6e17bb308aad790d4ca2e47af64211b38d122531fb19e5ada6bc515247459410",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "attacking",
+      "kill": 5,
+      "path": "skin-packs/media/champions-2026/banners/attacking/kill-5.png",
+      "sha256": "8d2a313b06a97f7ee3b8ce08385a21fa81d5b8f07c5140324cf93f97f4323be4",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/05_Champs26_Emblem_Animation_Snake.269",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Snake.json",
+        "sha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/05_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "714732dd54adcd653ab4b5a03a350c8dd07e727e7b8d6454c0c7c39612923908"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "05_explosion_snake",
+          "sha256": "ee1767c94fdec0db949c23317e1e5c121f82aa50262c2fa952f4f313c658cb4e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 3,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_explosion_snake.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_explosion_snake.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "8f8298ee07c4be5056874ae4bbb903805d4aecb5e2981a4f3dfda593f5301dd2",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_chev_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_chev_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "34781d55eae1359110cb47d9fd998a82d91e805d34a823d439b56535a32188c3",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_chev_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_chev_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "7e77c3080afdf2d1533d21f9bb34c9def5145016832f5b9aaef5149461e20756",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "9be6eb0741a0908e2a2b06d2c3ecb7b444ad3dd13a515b0c46224d0d033a8bc5",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "1fa62e5925943c8224a896ec73b25d3400999b7720bbfeb97a8a3da4bec084fc",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "bdf4b1b00b31a3b3918e375dcad9aef370ecd04a84465757617a571f2b51a818",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_right.png"
+        },
+        {
+          "name": "06_snake_crown",
+          "sha256": "ed38fa5696250fc31c9afb4324f9a7212c8027aed68241cd32457938184dd8cb",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_snake_crown.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_snake_crown.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "419c925421492c2cea5806a4bcce352c162d01010bef5d522e974094e9a504b1",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "db00bca058e34f3daf0b612c05c880a62f761a77a85837ecf84d6eb032e98fb9",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "7677152f2f4f771f22279e4b9f63178b1312ccac258e210c7a867a130e247632",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "af8b0d10c154b3c8d39dadc864632e965b498357ec8d564e994953ba423b82c7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -1,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "count-5-badge",
+          "sha256": "c902a6fcd46a2e73d75123eb0c06c32edc5c8100fe2bdbfe2be7e0393c874f85",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "attacking",
+      "kill": 6,
+      "path": "skin-packs/media/champions-2026/banners/attacking/kill-6.png",
+      "sha256": "98fb4fb485b5e750bd6f49fdb2f4a6f38827757ab37948f4bdd13ce4ec4e7b70",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/06_Champs26_Emblem_Animation_Snake.337",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Snake.json",
+        "sha256": "0a04623bddd0481ccbab78b59051026dfbb7789dfbb75f34737da92ba4089e34"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/06_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "6460ca4965053586e2bc19fa3fec3462a4230c78c50dea92b4a8805a0a5470db"
+      },
+      "layers": [
+        {
+          "name": "06_explosion",
+          "sha256": "0b10768afaed96db92ff26c1f23041d157a5f3ed3b32ea6e08fe7c31859cbb86",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_explosion.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_explosion.png"
+        },
+        {
+          "name": "02_frame",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "offset": {
+            "Left": 0.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "7c3145f6e96ea920f7f8010c5a1ac6a4c5dc93292aaa3d6a6d4f88239c5b1a58",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_chevron_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_chevron_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "e6e683340c137f68a505f6d53fb7ea9035473026db889c68a1146e26027d0f44",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_chevron_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_chevron_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "1bf88dc4cfc5639722fc9edf6d310a6fada757a3f11683e2bc802831984cc62e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "a2a86787db7538eba0075e004248be7c1588da8dfac7e82edf9620edfdd61278",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "ede605605b87ac2903cd16146c7e74a25fb7a004417bb53f57edcb065848e5b0",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "f78e5281327c85544ce7747fba94e2bb59f01796498a46363f564ef9b0085d45",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_top_right.png"
+        },
+        {
+          "name": "06_snake_crown",
+          "sha256": "5ea6b22b04a200104d9b0a0df65deff48aae605c8032bb0fa9adb0e605ce8b64",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_snake_crown.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_snake_crown.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "74231062df0ba6d5ddd2e293f3d24a0339f7d537dea34d0d7620be3cb1f9179c",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "3333c2f9ab51fa9d41c2e41ce4a9cc6f67df95ea0b198be727821ab913ec4d2c",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cd2866ad382bd8b7e8d1b6153b04f50e93070fdfe4189b1476d758d4bab2d1b0",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "6b374069fcee813b08799be6e10b5b2ed556de6044243485d1e81b37b9a531d7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "59dffc2fc46770005f8ed86d8ba08134a50eca964e62d73b1e031c6adc50af3e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -1,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "b30f65862263050f82ba2a435403bd200c6a417326dae1b525dea3f890333943",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dots_bot.png"
+        },
+        {
+          "name": "count-6-badge",
+          "sha256": "8b17728360b5b6c3770daaa7a6df38f3f7b5c6f58ee4cd80ee6dfe68729acf0c",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_Emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_Emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "defending",
+      "kill": 1,
+      "path": "skin-packs/media/champions-2026/banners/defending/kill-1.png",
+      "sha256": "d4b59ebdac3699fd820502b58e2c4dec36744c5c8537f4491ae129398d469257",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/01_Champs26_Emblem_Animation_Snake.174",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Dragon.json",
+        "sha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/01_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "c9612afc05e062e41b942307c71261964a4217729ca2cb6feea6eca3c7affa9c"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "026daa64645351cd962c014c92c5845f895f59ee608f29fefe356d67a239e263",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_1_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_1_BG.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "a4a2f7c78788e920fa99a802191a15922f2a773c8449182d2ca30b5484f8fc38",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "427e951ed619f2dd5207eee72e4164f85c998067f61c51506792ad869e0c1477",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "68f5d33ae7239c1a5d0b3ee1392b6bf7f2831507bba3f931a94ccfdc48b0fb65",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "faca2f114fb2211ed54c893cb44c0bc4ac9ce2ed767f657cb8ec6285eae8af80",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_arm_top_right.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "43c4c7e9bd289f410873f415fd48568cb0291e0f8639a65082e03bde1eb0afea",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "06_dots_top",
+          "sha256": "f61908b6b9f80a58e3bd11d25a133df54019bbdd5e2cf1a578d88da66b007718",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 1,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_top.png"
+        },
+        {
+          "name": "count-1-badge",
+          "sha256": "3e6947ce16620cf1a89f412f4ff1f8b901ab1953549edd978f7a27b1b496b042",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/01/01_emblem_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/01/01_emblem_dragon.png"
+        }
+      ]
+    },
+    {
+      "theme": "defending",
+      "kill": 2,
+      "path": "skin-packs/media/champions-2026/banners/defending/kill-2.png",
+      "sha256": "674d552bb81301f66cee37b7133473598fe044089e25fd72b2451a2b8f78d861",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/02_Champs26_Emblem_Animation_Snake.174",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Dragon.json",
+        "sha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/02_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "54423de53d3e9ab4aa86e305b2541dac8b2bbe39d73b9b4c09c8dd86ebb59a90"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "21df3cd874ac5be0113b7da79b085915610e25b961bbe2ad6d5c25a597af0172",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "ccf8be8c9a882a8b0a028c30e3c494cdeb6a0eb0f359a0a1d54f9d5771f61893",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "bd1a035dc065ce9fa36e8c9117f277e976513e62765e3862ca27a90226e25fe9",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "7a93678902009649c15273de85276fa9224ffdfc72d685052e669b40a5e8df3e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_right.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "43c4c7e9bd289f410873f415fd48568cb0291e0f8639a65082e03bde1eb0afea",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cca4c90c8bc7d3cffe5f2226db27972eacbc391c0ae7c4e01753d9a146d73a1a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "06_dots_top",
+          "sha256": "f61908b6b9f80a58e3bd11d25a133df54019bbdd5e2cf1a578d88da66b007718",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 1,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_top.png"
+        },
+        {
+          "name": "count-2-badge",
+          "sha256": "2fb8d3f724fe297fde997284b5f42e0448204aaff596c6ef28ce600d03c60dd2",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/02/02_emblem_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/02/02_emblem_dragon.png"
+        }
+      ]
+    },
+    {
+      "theme": "defending",
+      "kill": 3,
+      "path": "skin-packs/media/champions-2026/banners/defending/kill-3.png",
+      "sha256": "d0d302aebda4c2bf9dcb3eccc44b0d2edbb25cbf97068fd9e2acf1c0a8466f30",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/03_Champs26_Emblem_Animation_Snake.174",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Dragon.json",
+        "sha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/03_Champs26_Emblem_Animation_Snake.json",
+        "sha256": "b33cd7a867d447b020a567d92a5a2dddfbe19a2c51d8ee1320638f8a83964c0b"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "c25af02e435d4ec07f596f57b97350f28558ca94d8476de234d4c6acb5ba1043",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "27b5cdd9bf9a377bcd53db54c7e40279ccfcc38bf898c8f1952af79887190cf2",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "21df3cd874ac5be0113b7da79b085915610e25b961bbe2ad6d5c25a597af0172",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "ccf8be8c9a882a8b0a028c30e3c494cdeb6a0eb0f359a0a1d54f9d5771f61893",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "bd1a035dc065ce9fa36e8c9117f277e976513e62765e3862ca27a90226e25fe9",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_left.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "7a93678902009649c15273de85276fa9224ffdfc72d685052e669b40a5e8df3e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_arm_top_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_arm_top_right.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "43c4c7e9bd289f410873f415fd48568cb0291e0f8639a65082e03bde1eb0afea",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_ornament_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_ornament_top.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2.25,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cca4c90c8bc7d3cffe5f2226db27972eacbc391c0ae7c4e01753d9a146d73a1a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "bf00497b4d3dec8fde6c4625d5d6c8ae0fc75847a0a973ffda29ddf32706c5bc",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "2f577ec7d91119208f7157eee88fa87f9fe4080c255aee76ce565afefe85b2a6",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.25,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "06_dots_top",
+          "sha256": "f61908b6b9f80a58e3bd11d25a133df54019bbdd5e2cf1a578d88da66b007718",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 3.25,
+            "Top": 1,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_dots_top.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_dots_top.png"
+        },
+        {
+          "name": "count-3-badge",
+          "sha256": "c51675fbec38a052466fc65c5eeb05ed7195b7cfd596bae0739730bc1791872b",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/03/03_emblem_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/03/03_emblem_dragon.png"
+        }
+      ]
+    },
+    {
+      "theme": "defending",
+      "kill": 4,
+      "path": "skin-packs/media/champions-2026/banners/defending/kill-4.png",
+      "sha256": "7bf078bd82f71567c2be4095259fb68515ccf275552419acf36553696d343de5",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/04_Champs26_Emblem_Animation_Dragon.257",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Dragon.json",
+        "sha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/04_Champs26_Emblem_Animation_Dragon.json",
+        "sha256": "a0039bb7f94ba1fa8f1d40f2a38a641c4989505f7a06e8ee09459c7093f5dea0"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "c25af02e435d4ec07f596f57b97350f28558ca94d8476de234d4c6acb5ba1043",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "27b5cdd9bf9a377bcd53db54c7e40279ccfcc38bf898c8f1952af79887190cf2",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_chev_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_chev_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "7e77c3080afdf2d1533d21f9bb34c9def5145016832f5b9aaef5149461e20756",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "9be6eb0741a0908e2a2b06d2c3ecb7b444ad3dd13a515b0c46224d0d033a8bc5",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "53abbddcf5c50b5fe3f8d351e6cdcd269d1376f6152abd1dafdfc4c5b239513e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_left_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_left_dragon.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "5f878e3fc17389a6aef857853d2262d67b30ac7838b041590525f5d06230e624",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_right_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_right_dragon.png"
+        },
+        {
+          "name": "06_snake_crown",
+          "sha256": "ce0f13f6214344a8195a6423ec5eb18362077f976bd54403edc1732b232bdb9f",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dragon_crown.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dragon_crown.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "1215917f7ffb3e441a3bf615d47fb20abeae9555785d572af65f652103cc53cb",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_top_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_top_dragon.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cca4c90c8bc7d3cffe5f2226db27972eacbc391c0ae7c4e01753d9a146d73a1a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "7677152f2f4f771f22279e4b9f63178b1312ccac258e210c7a867a130e247632",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "af8b0d10c154b3c8d39dadc864632e965b498357ec8d564e994953ba423b82c7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -1,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "count-4-badge",
+          "sha256": "014d42249b2596ef1d552f7fbc706fbbf4382eff0c979b832473439143259a1f",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/04/04_emblem_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/04/04_emblem_dragon.png"
+        }
+      ]
+    },
+    {
+      "theme": "defending",
+      "kill": 5,
+      "path": "skin-packs/media/champions-2026/banners/defending/kill-5.png",
+      "sha256": "2ecb72af0b1768c4d62f421d005773e0c5a4594bf9f03e7ed953c531cc3f64b6",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/05_Champs26_Emblem_Animation_Dragon.269",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Dragon.json",
+        "sha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/05_Champs26_Emblem_Animation_Dragon.json",
+        "sha256": "42eecc56cc41f48929e7b5e2ca41c2b1e5a6e613f9af8e309c2729f10c6c8d97"
+      },
+      "layers": [
+        {
+          "name": "background",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "05_explosion_snake",
+          "sha256": "279c824cb7c0f6615bad34336ac91ee5a338a6b32197da2da815adb6108ce9a7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 3,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_explosion_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_explosion_dragon.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "8f8298ee07c4be5056874ae4bbb903805d4aecb5e2981a4f3dfda593f5301dd2",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_chev_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_chev_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "34781d55eae1359110cb47d9fd998a82d91e805d34a823d439b56535a32188c3",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_chev_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_chev_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "7e77c3080afdf2d1533d21f9bb34c9def5145016832f5b9aaef5149461e20756",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "9be6eb0741a0908e2a2b06d2c3ecb7b444ad3dd13a515b0c46224d0d033a8bc5",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "53abbddcf5c50b5fe3f8d351e6cdcd269d1376f6152abd1dafdfc4c5b239513e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_left_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_left_dragon.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "5f878e3fc17389a6aef857853d2262d67b30ac7838b041590525f5d06230e624",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_arm_top_right_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_arm_top_right_dragon.png"
+        },
+        {
+          "name": "06_snake_crown",
+          "sha256": "ce0f13f6214344a8195a6423ec5eb18362077f976bd54403edc1732b232bdb9f",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dragon_crown.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dragon_crown.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "1215917f7ffb3e441a3bf615d47fb20abeae9555785d572af65f652103cc53cb",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_top_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_top_dragon.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "0f8300ac9d03f053c8e5405393c4cb2a4a22f6a9e576db3e78da4f7085b65ea8",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "db00bca058e34f3daf0b612c05c880a62f761a77a85837ecf84d6eb032e98fb9",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "7677152f2f4f771f22279e4b9f63178b1312ccac258e210c7a867a130e247632",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "af8b0d10c154b3c8d39dadc864632e965b498357ec8d564e994953ba423b82c7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -1,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "43403ed263cfdd765315dd96c5d18d393e689d3bcc2964ba8c0f1c604d0a21fe",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_dots_bot.png"
+        },
+        {
+          "name": "count-5-badge",
+          "sha256": "c902a6fcd46a2e73d75123eb0c06c32edc5c8100fe2bdbfe2be7e0393c874f85",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/05/05_emblem.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/05/05_emblem.png"
+        }
+      ]
+    },
+    {
+      "theme": "defending",
+      "kill": 6,
+      "path": "skin-packs/media/champions-2026/banners/defending/kill-6.png",
+      "sha256": "08b8f9cf0cb6a41d13e86daced967ec09310ee691cde9ccf468167851b3e00c7",
+      "width": 384,
+      "height": 384,
+      "sourceWidget": "/Game/UI/InGame/KillBanner/Champs26/06_Champs26_Emblem_Animation_Dragon.337",
+      "sourceData": {
+        "path": "qa-artifacts/val-model-tools/properties/KillBannerData_Champs26_Dragon.json",
+        "sha256": "25cfc706c1a8ecba60d6a66b8a6e69e717cd86bbf847608159bc4b31761e65d2"
+      },
+      "sourceProperties": {
+        "path": "qa-artifacts/val-model-tools/properties/06_Champs26_Emblem_Animation_Dragon.json",
+        "sha256": "0938b959e24ede1fb8b5415689afa05191b54660bf10fc65a3a9eb2949e73dfc"
+      },
+      "layers": [
+        {
+          "name": "06_explosion",
+          "sha256": "0b10768afaed96db92ff26c1f23041d157a5f3ed3b32ea6e08fe7c31859cbb86",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_explosion.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_explosion.png"
+        },
+        {
+          "name": "02_frame",
+          "sha256": "94f530e98802632ccc9272370da4a5c84139a24d788c55a8ff7076fd749b5732",
+          "width": 300,
+          "height": 300,
+          "offset": {
+            "Left": 0.75,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Champs26_Frame_2_BG.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Champs26_Frame_2_BG.png"
+        },
+        {
+          "name": "06_chev_left",
+          "sha256": "7c3145f6e96ea920f7f8010c5a1ac6a4c5dc93292aaa3d6a6d4f88239c5b1a58",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_chevron_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_chevron_left.png"
+        },
+        {
+          "name": "06_chev_right",
+          "sha256": "e6e683340c137f68a505f6d53fb7ea9035473026db889c68a1146e26027d0f44",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_chevron_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_chevron_right.png"
+        },
+        {
+          "name": "06_arm_bot_right",
+          "sha256": "1bf88dc4cfc5639722fc9edf6d310a6fada757a3f11683e2bc802831984cc62e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_bot_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_bot_right.png"
+        },
+        {
+          "name": "06_arm_bot_left",
+          "sha256": "a2a86787db7538eba0075e004248be7c1588da8dfac7e82edf9620edfdd61278",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_bot_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_bot_left.png"
+        },
+        {
+          "name": "06_arm_top_left",
+          "sha256": "d8075f10201dd235979e0995de7490e5809944d998fa87ececb6461fa1168b5c",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_top_left_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_top_left_dragon.png"
+        },
+        {
+          "name": "06_arm_top_right",
+          "sha256": "44241969ea58491d8a6b61f788c2bc2c054505d4f7472a1f2f5dd6a705600c0a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_arm_top_right_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_arm_top_right_dragon.png"
+        },
+        {
+          "name": "06_snake_crown",
+          "sha256": "81bd329dd71ac03c89a3e7400568b337f3ae2de94d7092627ca07bec0bd408a0",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1.5,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {},
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dragon_crown.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dragon_crown.png"
+        },
+        {
+          "name": "06_ornament_top",
+          "sha256": "4702514c849653f45744b1704f40646c3dda88dbd5b9f3c8db9eba2580205e8a",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_ornament_top_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_ornament_top_dragon.png"
+        },
+        {
+          "name": "06_ornament_bot",
+          "sha256": "3333c2f9ab51fa9d41c2e41ce4a9cc6f67df95ea0b198be727821ab913ec4d2c",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 1,
+            "Top": 4.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_ornament_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_ornament_bot.png"
+        },
+        {
+          "name": "06_corner_triangles",
+          "sha256": "cd2866ad382bd8b7e8d1b6153b04f50e93070fdfe4189b1476d758d4bab2d1b0",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 0.25,
+            "Top": 5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_corner_triangles.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_corner_triangles.png"
+        },
+        {
+          "name": "06_dots_right",
+          "sha256": "6b374069fcee813b08799be6e10b5b2ed556de6044243485d1e81b37b9a531d7",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -0.5,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dots_right.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dots_right.png"
+        },
+        {
+          "name": "06_dots_left",
+          "sha256": "59dffc2fc46770005f8ed86d8ba08134a50eca964e62d73b1e031c6adc50af3e",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": -1,
+            "Top": 6,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dots_left.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dots_left.png"
+        },
+        {
+          "name": "06_dots_bot",
+          "sha256": "b30f65862263050f82ba2a435403bd200c6a417326dae1b525dea3f890333943",
+          "width": 256,
+          "height": 256,
+          "offset": {
+            "Left": 2,
+            "Top": -8.5,
+            "Bottom": 100
+          },
+          "transform": {
+            "Translation": {
+              "X": 0,
+              "Y": 0
+            },
+            "Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "Angle": 0
+          },
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_dots_bot.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_dots_bot.png"
+        },
+        {
+          "name": "count-6-badge",
+          "sha256": "794f6368279d36732735bec34b316be14f77352a68cb5601b2dcc38e1a981543",
+          "width": 172,
+          "height": 172,
+          "tint": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          },
+          "sourceExport": "qa-artifacts/val-model-tools/exports/ShooterGame/Content/UI/InGame/KillBanner/Champs26/Animation_Assets/Snake/06/06_Emblem_dragon.png",
+          "path": "skin-packs/media/champions-2026/banner-sources/Animation_Assets/Snake/06/06_Emblem_dragon.png"
+        }
+      ]
+    }
+  ]
+}
