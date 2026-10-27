@@ -10,7 +10,9 @@ import {applySkinPacksPatch} from './patches/skin-packs.mjs';
 import {applyWeaponModelsPatch} from './patches/weapon-models.mjs';
 import {applyManualReloadPatch} from './patches/manual-reload.mjs';
 import {applyWorldPerformancePatch} from './patches/world-performance.mjs';
+import {applyInstanceVisibilityCompactionPatch} from './patches/instance-visibility-compaction.mjs';
 import {applyMuzzleLayerPerformancePatch} from './patches/muzzle-layer-performance.mjs';
+import {applyMuzzleCompositeScissorPatch} from './patches/muzzle-composite-scissor.mjs';
 import {applyImpactTracerPoolingPatch} from './patches/impact-tracer-pooling.mjs';
 import {applyTrainingHallVisibilityCss} from './patches/training-hall-visibility.mjs';
 import {buildSkinPacks} from './scripts/build-skin-packs.mjs';
@@ -125,7 +127,7 @@ for(const[name,before,after]of reloadHelp){
  fs.writeFileSync(file,text.replace(before,after));
 }
 const originalModules=Object.fromEntries(fs.readdirSync(moduleDirectory).filter(name=>name.endsWith('.js')).map(name=>[name,fs.readFileSync(path.join(moduleDirectory,name),'utf8')]));
-const optimizedModules=[applyInterpolationPatch,applyHudPatch,applyFrameratePatch,applyPrewarmPatch,applyActorPrewarmPatch,applyBotOrderPatch,applySkinPacksPatch,applyWeaponModelsPatch,applyManualReloadPatch,applyWorldPerformancePatch,applyMuzzleLayerPerformancePatch,applyImpactTracerPoolingPatch].reduce((modules,apply)=>apply(modules),originalModules);
+const optimizedModules=[applyInterpolationPatch,applyHudPatch,applyFrameratePatch,applyPrewarmPatch,applyActorPrewarmPatch,applyBotOrderPatch,applySkinPacksPatch,applyWeaponModelsPatch,applyManualReloadPatch,applyWorldPerformancePatch,applyInstanceVisibilityCompactionPatch,applyMuzzleLayerPerformancePatch,applyMuzzleCompositeScissorPatch,applyImpactTracerPoolingPatch].reduce((modules,apply)=>apply(modules),originalModules);
 for(const[name,text]of Object.entries(optimizedModules))if(text!==originalModules[name])fs.writeFileSync(path.join(moduleDirectory,name),text);
 const orderCssFile=path.join(dist,'css/TrainLayer.CcDeXnwn.css');
 fs.writeFileSync(orderCssFile,applyTrainingHallVisibilityCss(applyBotOrderCss(fs.readFileSync(orderCssFile,'utf8'))));
@@ -150,6 +152,6 @@ fs.writeFileSync(workshopPath,JSON.stringify(catalogue));
 const localization=buildLocalization({root,directory:dist});
 fs.writeFileSync(path.join(dist,'index.html'),`<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101316"><title>瞄准专家 · 离线版</title><link rel="icon" href="/favicon-aim.ico"><link rel="stylesheet" href="/css/index.DjXErpXU.css"><link rel="stylesheet" href="/offline-ui.css"><script src="/offline-i18n.js"></script><script src="/offline-runtime.js"></script><script type="module" src="/js/index.C6F_bJRd.js"></script></head><body><div id="app"></div></body></html>`);
 const maps=[...new Set(catalogue.data.map(s=>s.mapId).filter(Boolean))];
-const summary={app:'aim-offline',version:4,originalVersion:'0.0.15',sceneCount:catalogue.data.length,originalSceneCount:allCount,maps,network:'local-only',origin:'http://127.0.0.1:18746',languages:localization.languages,defaultLanguage:localization.defaultLanguage,performanceOptimizations:['adjacent-tick-interpolation','shared-hud-raf','local-fps-limit','scene-prewarm','stable-loadout-preparation','same-frame-bot-order','raf-timestamp-fps-limit','skin-bone-update-deduplication','bounded-stable-local-lights','idle-jett-canvas-compositing','nonempty-muzzle-layer-rendering','covered-hall-rendering-hidden','bounded-impact-tracer-pooling'],skinPacks:{clientBridge:true,resourceStatus:skinManifest.resourceStatus,...skinManifest.counts},weaponModels:weaponModelManifest.counts,created:new Date().toISOString()};
+const summary={app:'aim-offline',version:4,originalVersion:'0.0.15',sceneCount:catalogue.data.length,originalSceneCount:allCount,maps,network:'local-only',origin:'http://127.0.0.1:18746',languages:localization.languages,defaultLanguage:localization.defaultLanguage,performanceOptimizations:['adjacent-tick-interpolation','shared-hud-raf','local-fps-limit','scene-prewarm','stable-loadout-preparation','same-frame-bot-order','raf-timestamp-fps-limit','skin-bone-update-deduplication','bounded-stable-local-lights','idle-jett-canvas-compositing','nonempty-muzzle-layer-rendering','covered-hall-rendering-hidden','bounded-impact-tracer-pooling','per-instance-static-map-culling','layer-specific-muzzle-composite-scissor'],skinPacks:{clientBridge:true,resourceStatus:skinManifest.resourceStatus,...skinManifest.counts},weaponModels:weaponModelManifest.counts,created:new Date().toISOString()};
 fs.writeFileSync(path.join(dist,'offline-manifest.json'),JSON.stringify(summary,null,2));
 console.log(JSON.stringify(summary,null,2));

@@ -6,12 +6,29 @@ import {createRequire} from 'node:module';
 import {installTrainingFixture} from './training-profile-fixture.mjs';
 import {applySpatialInstancingPatch} from '../patches/world-performance.mjs';
 import {applyTrainingGraphicsPhases} from './training-graphics-phases.mjs';
+import {observeTrainingLongFrames} from './training-long-frames.mjs';
 const {parse}=createRequire(import.meta.url)('./vendor/acorn.cjs');
 const repository=fileURLToPath(new URL('../',import.meta.url));
 const syntax=source=>parse(source,{ecmaVersion:'latest',sourceType:'module'});
 
 export function comparisonCases(graphicsSweep=false){
   return graphicsSweep?['gfx-default','gfx-no-msaa','gfx-75','gfx-50','gfx-low-tier','gfx-standard-no-msaa','gfx-no-shadows']:['native','skin-full','skin-no-motion','skin-no-muzzle'];
+}
+
+export function readComparisonSequence(search,graphicsSweep=false){
+  const raw=new URLSearchParams(search).get('__comparisonSequence');
+  if(raw===null)return null;
+  const names=raw.split(','),allowed=comparisonCases(graphicsSweep);
+  if(names.length<2||names.length>8||names.some(name=>!allowed.includes(name)))throw Error('Comparison sequence requires 2-8 known cases');
+  return names;
+}
+
+export function readCompactionSequence(search){
+  const raw=new URLSearchParams(search).get('__compactionSequence');
+  if(raw===null)return null;
+  const names=raw.split(',');
+  if(names.length<2||names.length>8||names.some(name=>name!=='on'&&name!=='off'))throw Error('Compaction sequence requires 2-8 on/off entries');
+  return names.map(name=>name==='on');
 }
 
 export function readComparisonConfig(search,graphicsSweep=false){
@@ -40,12 +57,12 @@ export function comparisonMSAAEnabled(nativeValue,config){
   return config?.enabled&&config.graphicsSweep&&(config.case==='gfx-no-msaa'||config.case==='gfx-standard-no-msaa')?false:nativeValue;
 }
 
-export async function executeComparisonQueue({initialCase,cases:availableCases=comparisonCases(),selectCase,rebuildViewport,measure,onReport,check}){
+export async function executeComparisonQueue({initialCase,cases:availableCases=comparisonCases(),selectCase,rebuildViewport,measure,onReport,check,reuseCurrentViewport=false}){
   const first=availableCases.indexOf(initialCase);
   const cases=[initialCase,...availableCases.filter((name,index)=>index!==first)];
   for(let index=0;index<cases.length;index++){
     check();selectCase(cases[index],index);
-    if(index>0)await rebuildViewport(cases[index]);
+    if(index>0&&!(reuseCurrentViewport&&cases[index]===cases[index-1]))await rebuildViewport(cases[index]);
     check();const report=await measure(cases[index]);check();
     if(report?.reason!=='completed-10s'||report.errors?.length||report.scoreAndReplayDiscarded!==true)throw Error('对照组未正常完成：'+cases[index]+' · '+(report?.reason??'no report'));
     onReport(report);
@@ -172,6 +189,11 @@ function comparisonRuntime(graphicsSweep=false){
   const config=readComparisonConfig(location.search,graphicsSweep);
   if(!config.enabled||document.getElementById('performance-comparison'))return;
   const query=new URLSearchParams(location.search),requestedRepeats=Number(query.get('__repeatCurrent'));
+  const longFrames=observeTrainingLongFrames();
+  const sequence=readComparisonSequence(location.search,graphicsSweep);
+  const compactionSequence=readCompactionSequence(location.search);
+  if(sequence&&compactionSequence)throw Error('Use only one comparison sequence');
+  if(sequence&&sequence[0]!==config.case)throw Error('Comparison sequence must start with the URL case');
   const repeatCurrent=Number.isInteger(requestedRepeats)&&requestedRepeats>=2&&requestedRepeats<=6?requestedRepeats:0;
   const state={config,sampling:false,models:{},record(name,duration){
     if(!run||!state.sampling)return;const bucket=run.timings[name]??=([]);
@@ -184,12 +206,12 @@ function comparisonRuntime(graphicsSweep=false){
   const host=document.createElement('section');host.id='performance-comparison';
   Object.assign(host.style,{position:'fixed',right:'8px',bottom:'8px',zIndex:'2147483647',width:'340px',maxWidth:'95vw',padding:'9px',background:'#101923f2',border:'1px solid #718298',borderRadius:'6px',color:'#eef4fc',font:'12px system-ui',lineHeight:'1.5',boxSizing:'border-box'});
   const title=document.createElement('b');title.textContent='诊断对照 · '+config.case;
-  const seriesName=repeatCurrent?repeatCurrent+'轮':config.graphicsSweep?'七组':'四组';
+  const seriesName=compactionSequence?compactionSequence.length+'组':sequence?sequence.length+'组':repeatCurrent?repeatCurrent+'轮':config.graphicsSweep?'七组':'四组';
   const notice=document.createElement('div');notice.textContent=config.graphicsSweep?'画面参数诊断；全部保留完整皮肤、动画与枪口。低档组会改变灯光预算/MSAA/DPR上限，均不属于最终优化。':'仅用于定位成本；停动画或特效不属于最终优化。';
   const status=document.createElement('div');status.id='performance-comparison-status';status.textContent='进入同一训练场景后运行；等待原生引擎。';
   const controls=document.createElement('div');Object.assign(controls.style,{display:'flex',gap:'5px',margin:'6px 0',flexWrap:'wrap'});
   function button(text,fn){const b=document.createElement('button');b.type='button';b.textContent=text;b.addEventListener('click',fn);controls.append(b);return b;}
-  const allLabel=repeatCurrent?'重复当前组 '+repeatCurrent+' 次':config.graphicsSweep?'一键运行全部':'一键运行四组';
+  const allLabel=compactionSequence?'交替裁剪 '+compactionSequence.length+' 组':sequence?'运行指定 '+sequence.length+' 组':repeatCurrent?'重复当前组 '+repeatCurrent+' 次':config.graphicsSweep?'一键运行全部':'一键运行四组';
   const start=button('运行10秒对照',begin),all=button(allLabel,event=>{
     if(!event.isTrusted){status.textContent='请直接用鼠标点击“'+allLabel+'”，避免自动化切走OS前台。';return;}
     void beginAll();
@@ -199,6 +221,14 @@ function comparisonRuntime(graphicsSweep=false){
     const url=URL.createObjectURL(new Blob([combined?aggregate.value:output.value],{type:'application/json'})),link=document.createElement('a');
     link.href=url;link.download='performance-comparison-'+(combined?'all':config.case)+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   });start.disabled=true;all.disabled=true;stop.disabled=true;download.disabled=true;
+  button('地图裁剪开关',()=>{
+    if(run?.active||queue?.active)return;
+    const current=bridge?.snapshot?.()?.mapCompaction;
+    if(!current){status.textContent='当前构建无裁剪状态；先运行一次短测。';return;}
+    state.compactionEnabled=!current.enabled;bridge?.setMapCompactionEnabled?.(state.compactionEnabled);
+    const next=bridge?.snapshot?.()?.mapCompaction;host.dataset.mapCompaction=JSON.stringify(next);
+    status.textContent='地图裁剪：'+(next?.enabled?'开':'关')+'；仅此训练窗口，未写入设置。';
+  });
   const links=document.createElement('div');
   for(const name of comparisonCases(config.graphicsSweep)){
     const link=document.createElement('a'),url=new URL(location.href);url.searchParams.set('__comparisonCase',name);link.href=url.href;link.textContent=name+' ';link.style.color='#9dcaff';links.append(link);
@@ -208,7 +238,7 @@ function comparisonRuntime(graphicsSweep=false){
   host.append(title,notice,status,controls,links,output,aggregate);
   if(document.body)document.body.append(host);else document.addEventListener('DOMContentLoaded',()=>document.body.append(host),{once:true});
   const now=()=>performance.now(),round=value=>Number.isFinite(value)?Math.round(value*1000)/1000:null;
-  const environment=()=>({width:innerWidth,height:innerHeight,dpr:devicePixelRatio,visibility:document.visibilityState,hidden:document.hidden,focused:document.hasFocus(),canvases:[...document.querySelectorAll('canvas')].map(canvas=>({className:canvas.className,width:canvas.width,height:canvas.height}))});
+  const environment=()=>({timeOrigin:performance.timeOrigin,heapUsedBytes:performance.memory?.usedJSHeapSize??null,width:innerWidth,height:innerHeight,dpr:devicePixelRatio,visibility:document.visibilityState,hidden:document.hidden,focused:document.hasFocus(),canvases:[...document.querySelectorAll('canvas')].map(canvas=>({className:canvas.className,width:canvas.width,height:canvas.height}))});
   const visibility=()=>({at:now(),state:document.visibilityState,hidden:document.hidden});
   document.addEventListener('visibilitychange',()=>{
     if(run?.active)run.visibility.push(visibility());
@@ -274,7 +304,7 @@ function comparisonRuntime(graphicsSweep=false){
         method:'Query-only constructor overrides. gfx-default retains original values. gfx-no-msaa retains lowLatency and forces only the native MSAA selector a=false for both hR(a) and fallback WebGL context. gfx-standard-no-msaa sets lowLatency=false and forces a=false. gfx-no-shadows changes only shadows=false. gfx-75/50 retain original lowLatency/MSAA policy, use absolute renderScale .75/.5, and clear explicit renderResolution. gfx-low-tier retains original viewport options except gpu={tier:low}; native low tier has pointLights=4, spotLights=1, msaa=false, maxPixelRatio=1, so it is a combined quality diagnostic rather than an isolated lighting test. Complete skin models, animation and muzzle remain enabled. No persisted display setting is changed.'},
       modelProof,
       raf:{all,foreground,allFps:all?round(1000/all.mean):null,foregroundFps:foreground?round(1000/foreground.mean):null,frameCount:run.frames.length,cap:4000,visibilityEvents:run.visibility,frames:run.frames},
-      nativeCpu:native,gpuBackpressure:fixture?.gpuBackpressure??null,nativeTimeline:query.get('__detailedTimings')==='1'?{tick:cpu?.tick??[],render:cpu?.render??[],phase:cpu?.phase??[]}:undefined,
+      nativeCpu:native,gpuBackpressure:fixture?.gpuBackpressure??null,runtimeDisplayOptions:fixture?.runtimeDisplayOptions??null,mapCompactionEnabled:state.compactionEnabled??null,mapCompaction:fixture?.mapCompaction??null,glStalls:fixture?.glStalls??null,longFrames:longFrames.snapshot(run.runningAt??run.startedAt,endedAt),nativeSlowRenders:cpu?.render?.filter(value=>value.duration>=8).sort((a,b)=>b.duration-a.duration).slice(0,12)??[],nativeSlowTicks:cpu?.tick?.filter(value=>value.duration>=8).sort((a,b)=>b.duration-a.duration).slice(0,12)??[],nativeTimeline:query.get('__detailedTimings')==='1'?{tick:cpu?.tick??[],render:cpu?.render??[],phase:cpu?.phase??[]}:undefined,
       gpuSamplesMs:native?.gpuSamplesMs??[],focusEvents:focusEvents.filter(event=>event.at>=run.startedAt&&event.at<=endedAt),
       componentCpu:Object.fromEntries(Object.entries(run.timings).map(([name,values])=>[name,stats(values)])),droppedComponentTimings:run.droppedTimings,errors:run.errors,
       controls:{selection:'Private loader reads existing in-memory skin selection. Explicit query overrides affect models only. Saved audio, banner and graphics settings are unchanged.',
@@ -312,8 +342,8 @@ function comparisonRuntime(graphicsSweep=false){
         try{await document.documentElement.requestFullscreen();queue.fullscreen.entered=document.fullscreenElement===document.documentElement;}
         catch(error){queue.fullscreen.rejection=String(error?.message??error);}
       }
-      await executeComparisonQueue({initialCase:config.case,cases:repeatCurrent?Array(repeatCurrent).fill(config.case):comparisonCases(config.graphicsSweep),check:checkQueue,
-        selectCase(name,index){config.case=name;title.textContent='诊断对照 · '+name;queue.events.push({at:now(),kind:'case',case:name,index});},
+      await executeComparisonQueue({initialCase:config.case,cases:compactionSequence?Array(compactionSequence.length).fill(config.case):sequence??(repeatCurrent?Array(repeatCurrent).fill(config.case):comparisonCases(config.graphicsSweep)),check:checkQueue,reuseCurrentViewport:!!compactionSequence||query.get('__reuseViewport')==='1',
+        selectCase(name,index){config.case=name;if(compactionSequence)state.compactionEnabled=compactionSequence[index];title.textContent='诊断对照 · '+name+(compactionSequence?(state.compactionEnabled?' · 裁剪开':' · 裁剪关'):'');queue.events.push({at:now(),kind:'case',case:name,index,mapCompactionEnabled:state.compactionEnabled??null});},
         async rebuildViewport(name){
           status.textContent='切换 '+name+'：退出训练并重新打开 NO.B212F6…';
           const oldVersion=bridgeVersion;
@@ -399,7 +429,7 @@ export function writePerformanceComparison({inputDir=path.join(repository,'dist'
   const tags=[...html.matchAll(/<script type="module" src="([^"]+)"><\/script>/g)];
   if(tags.length!==1)throw Error('Expected one production module entry');
   html=html.replace(tags[0][0],'<script type="module">if(new URLSearchParams(location.search).get("__performanceComparison")==="1"&&new URLSearchParams(location.search).get("__offlineProfile")==="1")await import("/__performance-comparison.mjs");await import('+JSON.stringify(tags[0][1])+');</script>');
-  const runtime=[comparisonCases,readComparisonConfig,executeComparisonQueue,comparisonDomButton,summarizeTrainingRenderSamples].map(fn=>fn.toString()).join('\n')+'\n('+comparisonRuntime.toString()+')('+graphicsSweep+');\n';
+  const runtime=[comparisonCases,readComparisonSequence,readCompactionSequence,readComparisonConfig,executeComparisonQueue,comparisonDomButton,summarizeTrainingRenderSamples,observeTrainingLongFrames].map(fn=>fn.toString()).join('\n')+'\n('+comparisonRuntime.toString()+')('+graphicsSweep+');\n';
   const models=`import {skinPacks} from './aim-skin-packs.mjs';
 import {createWeaponModelLoader,createWeaponAppearance as normalAppearance,loadWeaponModel as normalLoad,weaponEffectImage as normalImage} from './aim-weapon-models.mjs';
 ${comparisonCases.toString()}
@@ -412,7 +442,7 @@ const bridge=createComparisonWeaponBridge({config,skins:skinPacks,createLoader:c
 export const {loadWeaponModel,createWeaponAppearance,weaponEffectImage,wrapNativeViewModel,wrapMuzzle}=bridge;
 export const viewportOptions=options=>{
   const effective=comparisonViewportOptions(options,config);
-  if(config.enabled&&config.graphicsSweep&&state)state.graphicsViewport={case:config.case,original:{...options},effective:{...effective}};
+  if(config.enabled&&state)state.graphicsViewport={case:config.case,original:{...options},effective:{...effective}};
   return effective;
 };
 `;

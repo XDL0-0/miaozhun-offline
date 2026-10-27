@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -11,7 +12,7 @@ internal static class OfflineLauncher
     private const string HealthUrl = "http://127.0.0.1:18746/__offline/health";
 
     [STAThread]
-    private static void Main()
+    private static void Main(string[] args)
     {
         try
         {
@@ -56,13 +57,18 @@ internal static class OfflineLauncher
                 "Microsoft", "Edge", "Application", "msedge.exe");
             if (File.Exists(edge))
             {
+                bool legacy = Array.Exists(args, argument =>
+                    string.Equals(argument, "--legacy-profile", StringComparison.OrdinalIgnoreCase));
+                string profilePath = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                    "AimOffline", "EdgeProfile");
+                if (!legacy)
+                    Directory.CreateDirectory(profilePath);
+
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = edge,
-                    Arguments = "--app=" + AppUrl + " --no-first-run"
-                        + " --disable-renderer-backgrounding"
-                        + " --disable-backgrounding-occluded-windows"
-                        + " --disable-background-timer-throttling",
+                    Arguments = BuildEdgeArguments(profilePath, legacy),
                     WorkingDirectory = directory,
                     UseShellExecute = true
                 });
@@ -81,6 +87,39 @@ internal static class OfflineLauncher
             MessageBox.Show(error.Message, "瞄准专家离线版启动失败",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+    }
+
+    private static string BuildEdgeArguments(string profilePath, bool legacy)
+    {
+        string arguments = "--app=" + AppUrl + " --no-first-run"
+            + " --disable-renderer-backgrounding"
+            + " --disable-backgrounding-occluded-windows"
+            + " --disable-background-timer-throttling";
+        if (legacy)
+            return arguments;
+        if (string.IsNullOrWhiteSpace(profilePath))
+            throw new ArgumentException("独立 Edge 配置目录不能为空。", "profilePath");
+        return arguments + " --user-data-dir=" + QuoteWindowsArgument(profilePath);
+    }
+
+    private static string QuoteWindowsArgument(string value)
+    {
+        StringBuilder quoted = new StringBuilder("\"");
+        int backslashes = 0;
+        foreach (char character in value)
+        {
+            if (character == '\\')
+            {
+                backslashes++;
+                continue;
+            }
+            quoted.Append('\\', character == '"' ? backslashes * 2 + 1 : backslashes);
+            quoted.Append(character);
+            backslashes = 0;
+        }
+        quoted.Append('\\', backslashes * 2);
+        quoted.Append('"');
+        return quoted.ToString();
     }
 
     private static bool IsServerReady(int timeout = 500)

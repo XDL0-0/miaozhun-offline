@@ -69,7 +69,7 @@ test('Full generated-module parsing rejects invalid modules before any backup or
  assert.equal(fs.existsSync(path.join(root,'qa-artifacts')),false,'Parse failure must precede backup creation');
 });
 
-function nativeFixtureContext(patched,enabled){
+function nativeFixtureContext(patched,enabled,extraQuery=""){
  const start=patched.indexOf(nativeMarker)+nativeMarker.length,end=patched.indexOf('const a=o.buildViewport',start);
  assert.ok(start>=nativeMarker.length&&end>start);
  const helpers=patched.slice(start,end),adStart=patched.indexOf('function ad(E){'),adEnd=patched.indexOf('function id(',adStart);
@@ -77,7 +77,7 @@ function nativeFixtureContext(patched,enabled){
  const inputs={},originals={},events=[],phases=[];let restartCalls=0,rounds=0,tickCalls=0,renderCalls=0;
  for(const method of ['drainForTick','peekPendingLook','takeReloadPresses','takeInspectPresses','takeEquipPress','takeUsePresses','takeSecondaryPresses','takeTailwindPresses','takeCloudburstEdges'])inputs[method]=originals[method]=()=>method;
  inputs.setEnabled=()=>{};inputs.setLookOnly=()=>{};
- const context={URLSearchParams,location:{search:enabled?'?__offlineProfile=1':''},document:{pointerLockElement:null},performance:{now:()=>100},he:1/128,te:inputs,nt:{replay:true},t:{phase:{current:'idle'},session:{current:'standalone'},autoAim:{current:false},rankedTicket:{current:null}},n:{onPhaseChange(value){context.t.phase.current=value;phases.push(value);},onSessionActive(){},onRoundComplete(){rounds++;}},qe:()=> 'vandal',md(){tickCalls++;return 7;},yd(alpha){renderCalls++;assert.equal(alpha,.5);return 8;},i:{renderer:{info:{programs:[],memory:{textures:2,geometries:3}}}},__aimWarmJob:Promise.resolve({status:'ready'}),Zt:{result:()=>({hits:0})},ke:null,N:null,dn:null,io:0,ds:15,Zo:100,go:null,jn:null,wo:null,Mo:false};
+ const context={URLSearchParams,location:{search:enabled?'?__offlineProfile=1'+extraQuery:''},document:{pointerLockElement:null},performance:{now:()=>100},he:1/128,te:inputs,nt:{replay:true},t:{phase:{current:'idle'},session:{current:'standalone'},autoAim:{current:false},rankedTicket:{current:null}},n:{onPhaseChange(value){context.t.phase.current=value;phases.push(value);},onSessionActive(){},onRoundComplete(){rounds++;}},qe:()=> 'vandal',md(){tickCalls++;return 7;},yd(alpha){renderCalls++;assert.equal(alpha,.5);return 8;},i:{renderer:{info:{programs:[],memory:{textures:2,geometries:3}}}},__aimWarmJob:Promise.resolve({status:'ready'}),Zt:{result:()=>({hits:0})},ke:null,N:null,dn:null,io:0,ds:15,Zo:100,go:null,jn:null,wo:null,Mo:false};
  context.window={__offlineTrainingFixtureRegistry:{event(kind,value){events.push({kind,value});}}};
  context.Do=()=>{restartCalls++;context.api.ready();};
  vm.runInNewContext(helpers+patched.slice(adStart,adEnd)+';globalThis.api={start:__aimFixtureStart,stop:__aimFixtureStop,ready:__aimFixtureReady,snapshot:__aimFixtureSnapshot,tick:__aimFixtureTick,render:__aimFixtureRender,finish:ad,phase:__aimFixturePhase,call:__aimFixtureCall};',context);
@@ -120,6 +120,38 @@ test('Deterministic native input queues restore on stop and tainted fixture scen
  assert.equal(active.context.api.snapshot().reason,'native-round-ended:early-native-end');
 });
 
+test('runtime display snapshots read native maxFps and live render options without retaining mutable resolution aliases',t=>{
+ const root=temporaryRoot(t);installTrainingFixture(root);
+ const probe=nativeFixtureContext(readNative(root),true),settings=probe.context.t,api=probe.context.api;
+ // Use the actual retained limiter field, rather than inventing a fixture-only
+ // fpsLimit setting that would make a disconnected diagnostic appear correct.
+ assert.match(native.source,/maxFps:(?:me\?)?t\.maxFps\?\.current\?\?0/);
+ assert.equal(Object.hasOwn(settings,'fpsLimit'),false);
+ api.start();
+ const plain=value=>JSON.parse(JSON.stringify(value));
+ assert.deepEqual(plain(api.snapshot().runtimeDisplayOptions),{
+  fpsLimit:null,maxFps:null,renderEveryNthFrame:null,frameMode:null,renderScale:null,renderResolution:null,lowLatency:null,shadows:null,
+ });
+ Object.assign(settings,{
+  maxFps:{current:240},renderEveryNthFrame:{current:1},frameMode:{current:'refresh'},
+  renderScale:{current:1},renderResolution:{current:{width:1920,height:1080}},lowLatency:{current:true},shadows:{current:true},
+ });
+ const first=api.snapshot().runtimeDisplayOptions;
+ assert.deepEqual(plain(first),{
+  fpsLimit:240,maxFps:240,renderEveryNthFrame:1,frameMode:'refresh',renderScale:1,renderResolution:{width:1920,height:1080},lowLatency:true,shadows:true,
+ });
+ assert.notEqual(first.renderResolution,settings.renderResolution.current,'a saved report must own its resolution snapshot');
+ settings.maxFps.current=0;settings.renderEveryNthFrame.current=2;settings.frameMode.current='unlimited';
+ settings.renderScale.current=.75;settings.renderResolution.current.width=1280;settings.lowLatency.current=false;settings.shadows.current=false;
+ assert.deepEqual(plain(api.snapshot().runtimeDisplayOptions),{
+  fpsLimit:0,maxFps:0,renderEveryNthFrame:2,frameMode:'unlimited',renderScale:.75,renderResolution:{width:1280,height:1080},lowLatency:false,shadows:false,
+ });
+ assert.equal(first.maxFps,240);assert.equal(first.renderResolution.width,1920);
+ assert.equal(settings.maxFps.current,0,'reading evidence must not change the actual limiter setting');
+ settings.renderResolution.current=null;
+ assert.equal(api.snapshot().runtimeDisplayOptions.renderResolution,null);
+});
+
 test('Native tick phase timings remain exclusive across nested calls and preserve returns and thrown errors',t=>{
  const root=temporaryRoot(t);installTrainingFixture(root);const probe=nativeFixtureContext(readNative(root),true),api=probe.context.api;
  assert.equal(api.call('inactive',()=>42),42);assert.equal(api.snapshot(),null);
@@ -156,14 +188,16 @@ test('Query-only native onRender records all passes and restores counters after 
  assert.equal(api.snapshot().nativeCpu.render[1].drawStats.calls,1);
 });
 
-test('native render CPU duration excludes both collector setup and finish instrumentation',t=>{
- const root=temporaryRoot(t);installTrainingFixture(root);const probe=nativeFixtureContext(readNative(root),true),api=probe.context.api;
- let clock=100;probe.context.performance.now=()=>clock;
- const info=probe.context.i.renderer.info;
- info.render={frame:10,get calls(){clock+=2;return 0;},triangles:0,points:0,lines:0};info.reset=()=>{};info.autoReset=true;
- probe.context.i.renderer.getContext=()=>{clock+=100;return null;};
- api.start();probe.context.yd=()=>{clock+=7;return 88;};assert.equal(api.render(.5),88);
- const sample=api.snapshot().nativeCpu.render[0];assert.equal(sample.duration,7);assert.equal(sample.diagnosticDuration,104);
+test('GPU timing is opt-in and native CPU duration excludes its setup and finish instrumentation',t=>{
+ const root=temporaryRoot(t);installTrainingFixture(root);
+ for(const gpuTiming of [false,true]){
+  const probe=nativeFixtureContext(readNative(root),true,gpuTiming?'&__gpuTiming=1':''),api=probe.context.api;
+  let clock=100,contexts=0;probe.context.performance.now=()=>clock;
+  const info=probe.context.i.renderer.info;info.render={frame:10,get calls(){clock+=2;return 0;},triangles:0,points:0,lines:0};info.reset=()=>{};info.autoReset=true;
+  probe.context.i.renderer.getContext=()=>{contexts++;clock+=100;return null;};
+  api.start();probe.context.yd=()=>{clock+=7;return 88;};assert.equal(api.render(.5),88);
+  const sample=api.snapshot().nativeCpu.render[0];assert.equal(sample.duration,7);assert.equal(sample.diagnosticDuration,gpuTiming?104:4);assert.equal(contexts,gpuTiming?1:0);
+ }
 });
 
 test('coarse native render phases stay exclusive and restore timing after an exception',t=>{
