@@ -57,18 +57,17 @@ internal static class OfflineLauncher
                 "Microsoft", "Edge", "Application", "msedge.exe");
             if (File.Exists(edge))
             {
-                bool legacy = Array.Exists(args, argument =>
-                    string.Equals(argument, "--legacy-profile", StringComparison.OrdinalIgnoreCase));
+                bool isolated = UseIsolatedProfile(args);
                 string profilePath = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                     "AimOffline", "EdgeProfile");
-                if (!legacy)
+                if (isolated)
                     Directory.CreateDirectory(profilePath);
 
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = edge,
-                    Arguments = BuildEdgeArguments(profilePath, legacy),
+                    Arguments = BuildEdgeArguments(profilePath, !isolated),
                     WorkingDirectory = directory,
                     UseShellExecute = true
                 });
@@ -87,6 +86,15 @@ internal static class OfflineLauncher
             MessageBox.Show(error.Message, "瞄准专家离线版启动失败",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+    }
+
+    private static bool UseIsolatedProfile(string[] args)
+    {
+        if (args == null || Array.Exists(args, argument =>
+            string.Equals(argument, "--legacy-profile", StringComparison.OrdinalIgnoreCase)))
+            return false;
+        return Array.Exists(args, argument =>
+            string.Equals(argument, "--isolated-profile", StringComparison.OrdinalIgnoreCase));
     }
 
     private static string BuildEdgeArguments(string profilePath, bool legacy)

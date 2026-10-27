@@ -1,13 +1,16 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-27",
-  "scope": "Sanitized validation of static map instance compaction and launcher isolation. Detailed local telemetry and browser data are excluded.",
+  "scope": "Sanitized validation of static map instance compaction, retained FX and optional profile-isolation experiments. Default startup is restored to the original shared Edge data; detailed local telemetry and browser data are excluded.",
   "status": {
     "shortComparison": "valid for the observed foreground/Normal/EcoQoS-off windows",
-    "independentProfileLongRun": "pending verified target-window OS foreground and main-agent sustained validation",
+    "independentProfileLongRun": "incomplete optional test; target OS foreground and sustained play not validated",
     "stable240FpsDemonstrated": false,
     "previous69msRootCauseEstablished": false,
-    "finalBehaviorAndOfflineChecks": "passed for the final production build"
+    "finalBehaviorAndOfflineChecks": "The map/FX production snapshot passed 346 behavior tests and offline verification. The subsequent compatibility-default launcher passed its updated Windows argument tests and an actual desktop-entry data-preservation check.",
+    "defaultStartup": "original shared Edge profile restored; no profile migration or deletion",
+    "isolatedProfileDefault": false,
+    "publicationStage": "draft pull request; not merged into main"
   },
   "hardware": {
     "cpu": "AMD Ryzen 7 5800H",
@@ -264,7 +267,7 @@
     },
     "validityLimit": "Correct independent-profile launch flags, Normal renderer priority and process EcoQoS-off observations do not prove that the measured game window is the OS foreground window. Neither attempt is accepted as independent-profile foreground or sustained-play validation.",
     "causeLimit": "Intermittent zero GPU utilization, low RAF rates and long callback gaps in these invalid foreground attempts do not establish EcoQoS or Edge energy saver as their cause. Browser energy saving and Windows process EcoQoS are separate observations.",
-    "requiredFollowUp": "Identify and activate the intended independent-profile game window, confirm its OS foreground identity before starting, and maintain aligned target-window and renderer scheduling evidence throughout the sustained run."
+    "requiredFollowUp": "Any future explicitly requested --isolated-profile test requires verified target-window OS foreground and aligned scheduling evidence. This report records no completed independent-profile migration or sustained foreground validation; normal startup uses the original shared profile."
   },
   "diagnosticsAndStalls": {
     "previous69msStall": {
@@ -279,20 +282,37 @@
     }
   },
   "launcher": {
-    "defaultProfile": "%LOCALAPPDATA%\\AimOffline\\EdgeProfile",
-    "independentBrowserInstanceObserved": true,
-    "backgroundFlagsVerified": {
-      "--disable-renderer-backgrounding": true,
-      "--disable-backgrounding-occluded-windows": true,
-      "--disable-background-timer-throttling": true
-    },
+    "defaultMode": "original shared Edge profile",
+    "defaultProfile": "existing shared Edge profile and its original local site data",
+    "legacyCompatibilityOption": "--legacy-profile selects the same shared profile as normal startup",
     "dailyEdgeMustBeClosed": false,
+    "defaultBackgroundFlagsGuaranteed": false,
+    "schedulingLimit": "An existing shared Edge process can accept the launch request without adopting new flags. No foreground scheduling or FPS guarantee is made for default startup.",
+    "isolatedTest": {
+      "option": "--isolated-profile",
+      "optInOnly": true,
+      "profileDirectory": "%LOCALAPPDATA%\\AimOffline\\EdgeProfile",
+      "independentInstanceObserved": true,
+      "historicalBackgroundFlagsVerified": {
+        "--disable-renderer-backgrounding": true,
+        "--disable-backgrounding-occluded-windows": true,
+        "--disable-background-timer-throttling": true
+      },
+      "targetForegroundValidated": false,
+      "migrationCompleted": false,
+      "sustainedValidationCompleted": false,
+      "deliveryStatus": "optional experiment; not a delivered default isolation or performance fix"
+    },
     "legacyDataPreserved": true,
-    "migration": "Use --legacy-profile to open the old shared browser data, export a complete in-app backup, then launch normally and restore it in the independent profile.",
-    "dataMigrationAndSustainedValidation": {
-      "status": "pending main-agent completion",
-      "results": null
-    }
+    "isolatedProfilePreserved": true,
+    "profileMigrationPerformed": false,
+    "profilesDeleted": false,
+    "backups": {
+      "keptLocally": true,
+      "uploadedWithRepository": false,
+      "privateBackupPathsPublished": false
+    },
+    "dataHandling": "Normal startup continues to use original shared-profile data. Existing old data and local backups are retained; no profile migration or deletion is performed by this restoration."
   },
   "validation": {
     "formalBehaviorTests": {
@@ -306,10 +326,27 @@
       "status": "passed",
       "requiredResourcesMissing": 0,
       "failures": 0,
-      "optionalMissing": ["/aim-viewmodel/outlaw.equip.bin.enc", "/aim-viewmodel/outlaw.equip.json.enc"],
+      "optionalMissing": [
+        "/aim-viewmodel/outlaw.equip.bin.enc",
+        "/aim-viewmodel/outlaw.equip.json.enc"
+      ],
       "productionDiagnosticsRemoved": true
     },
-    "relatedSummary": "performance-validation-2026-10-27.json"
+    "relatedSummary": "performance-validation-2026-10-27.json",
+    "launcherDefaultRestoration": {
+      "status": "passed",
+      "windowsArgumentCases": 8,
+      "defaultAndLegacyUseSharedProfile": true,
+      "isolatedModeRequiresExplicitOptIn": true,
+      "legacyTakesPrecedenceWhenBothOptionsPresent": true,
+      "deployedLauncherMatchesValidatedBuild": true,
+      "actualDesktopEntryOpenedSharedProfile": true,
+      "preexistingPreferencesFavoritesAndHistoryVisible": true,
+      "isolatedGameBrowserStartedByDefault": false,
+      "obsoleteTestPageClosed": true,
+      "privatePreferenceValuesPublished": false
+    },
+    "scopeNote": "The 346-test and offline-verification results retain the validated map/FX snapshot. Only launcher behavior and documentation changed afterward; its updated Windows argument test and actual desktop-entry data-preservation check passed. These checks are not a performance guarantee."
   },
   "provenance": {
     "source": "Aggregated from locally retained round3 low-overhead baseline, compaction-v3 and corresponding OS/QoS samples; the later alternating series, independent launcher command-line check and two invalid independent-profile foreground attempts are separately classified.",
