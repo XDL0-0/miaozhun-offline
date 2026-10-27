@@ -6,11 +6,31 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
-import {readComparisonConfig,createComparisonWeaponBridge,writePerformanceComparison,executeComparisonQueue,comparisonDomButton,summarizeTrainingRenderSamples} from '../scripts/create-performance-comparison.mjs';
+import {readComparisonConfig,readComparisonSequence,readCompactionSequence,createComparisonWeaponBridge,writePerformanceComparison,executeComparisonQueue,comparisonDomButton,summarizeTrainingRenderSamples} from '../scripts/create-performance-comparison.mjs';
 const {parse}=createRequire(import.meta.url)('../scripts/vendor/acorn.cjs');
 const repository=fileURLToPath(new URL('../',import.meta.url));
 const digest=file=>fs.existsSync(file)?crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'):null;
 const query=name=>readComparisonConfig('?__offlineProfile=1&__performanceComparison=1&__comparisonCase='+name);
+
+test('compaction A/B sequence is explicit, boolean and bounded',()=>{
+ assert.equal(readCompactionSequence(''),null);
+ assert.deepEqual(readCompactionSequence('?__compactionSequence=off,on,off,on'),[false,true,false,true]);
+ for(const value of ['', 'on','on,unknown',Array(9).fill('off').join(',')])assert.throws(()=>readCompactionSequence('?__compactionSequence='+value),/2-8 on\/off/);
+});
+
+test('interleaved same-scene sequence accepts only bounded known cases and keeps repeated entries',()=>{
+ assert.equal(readComparisonSequence(''),null);
+ assert.deepEqual(readComparisonSequence('?__comparisonSequence=skin-full,native,skin-full,native'),['skin-full','native','skin-full','native']);
+ assert.deepEqual(readComparisonSequence('?__comparisonSequence=gfx-default,gfx-no-msaa',true),['gfx-default','gfx-no-msaa']);
+ for(const raw of ['','skin-full','skin-full,unknown','skin-full,native,'.repeat(8),'gfx-default,gfx-no-msaa'])assert.throws(()=>readComparisonSequence('?__comparisonSequence='+raw),/2-8 known cases/);
+});
+
+test('explicit same-viewport repetitions reset the fixture and rebuild only when the case changes',async()=>{
+ const events=[];
+ await executeComparisonQueue({initialCase:'skin-full',cases:['skin-full','skin-full','native','native','skin-full'],reuseCurrentViewport:true,check(){},selectCase(name){events.push('select:'+name);},async rebuildViewport(name){events.push('rebuild:'+name);},async measure(name){events.push('measure:'+name);return{reason:'completed-10s',scoreAndReplayDiscarded:true,errors:[]};},onReport(){}});
+ assert.deepEqual(events.filter(x=>x.startsWith('rebuild:')),['rebuild:native','rebuild:skin-full']);
+ assert.equal(events.filter(x=>x.startsWith('measure:')).length,5);
+});
 
 function harness(name,{saved={collection:'kuronami',theme:'default',modelEnabled:true},enabled=true}={}){
   const calls=[],pack={key:saved.collection+'/vandal',motions:{clips:{original:{}}},parts:[{mesh:'unchanged'}]},state={sampling:true,models:{},record:(name,value)=>calls.push({name,value})};

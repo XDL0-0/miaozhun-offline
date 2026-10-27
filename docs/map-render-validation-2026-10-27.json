@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "scope": "Sanitized validation of static map instance compaction, retained FX and optional profile-isolation experiments. Default startup is restored to the original shared Edge data; detailed local telemetry and browser data are excluded.",
+  "status": {
+    "shortComparison": "valid for the observed foreground/Normal/EcoQoS-off windows",
+    "independentProfileLongRun": "incomplete optional test; target OS foreground and sustained play not validated",
+    "stable240FpsDemonstrated": false,
+    "previous69msRootCauseEstablished": false,
+    "finalBehaviorAndOfflineChecks": "The map/FX production snapshot passed 346 behavior tests and offline verification. The subsequent compatibility-default launcher passed its updated Windows argument tests and an actual desktop-entry data-preservation check.",
+    "defaultStartup": "original shared Edge profile restored; no profile migration or deletion",
+    "isolatedProfileDefault": false,
+    "publicationStage": "draft pull request; not merged into main"
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 7 5800H",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 6 GB",
+    "ramGb": 16,
+    "display": "ASUS VG249QM1A",
+    "refreshHz": 239.76
+  },
+  "method": {
+    "scene": "NO.B212F6 / 天枢云阙A大进攻预瞄",
+    "map": "plummet",
+    "weapon": "RGX 11z Pro Vandal",
+    "melee": "Champions 2022",
+    "renderLoad": "1920x1080 browser viewport override, 100% render scale, shadows, complete selected skin models, skeletal animation and muzzle/body effects",
+    "frameLimit": 240,
+    "workload": "Fixed seed 20261020; 1280 ticks / ten simulation seconds: idle, fire, reload, melee, attack, primary, inspect, fire. Scores and replays discarded.",
+    "comparison": "Three baseline runs followed by a separate three-run compaction block. This is a short, non-randomized comparison, not a completed same-window alternating or sustained manual-play test.",
+    "metrics": "RAF FPS is the reciprocal of mean observed RAF interval. 1% Low is 1000 divided by the mean of the slowest ceil(intervalCount * 0.01) raw intervals; it is not 1000/p99. Presented display frames are not measured.",
+    "diagnostics": "Low-overhead summaries; no timed GL-call probe and no GPU timer query in these six accepted runs.",
+    "scheduling": "OS samples are aligned to each native running window. Foreground window identity and the renderer with greatest aggregate CPU delta are checked; DOM focus alone is not scheduling evidence."
+  },
+  "shortComparison": {
+    "baseline": {
+      "runs": [
+        {
+          "round": 1,
+          "rafFps": 188.041,
+          "onePercentLowFps": 79.564,
+          "rafIntervals": 1877,
+          "maxRafIntervalMs": 12.7,
+          "rafIntervalsOver50Ms": 0,
+          "worldDrawCpuMeanMs": 1.964,
+          "mapVisibilityCpuMeanMs": 0.074,
+          "drawCallsMean": 162.92,
+          "trianglesMean": 2191309.93,
+          "scheduling": {
+            "samples": 20,
+            "gameForeground": 20,
+            "rendererPresent": 20,
+            "rendererNormal": 20,
+            "rendererIdle": 0,
+            "ecoQosOff": 20,
+            "ecoQosOn": 0
+          }
+        },
+        {
+          "round": 2,
+          "rafFps": 190.078,
+          "onePercentLowFps": 96.759,
+          "rafIntervals": 1901,
+          "maxRafIntervalMs": 16.8,
+          "rafIntervalsOver50Ms": 0,
+          "worldDrawCpuMeanMs": 1.992,
+          "mapVisibilityCpuMeanMs": 0.061,
+          "drawCallsMean": 164.429,
+          "trianglesMean": 2191175.349,
+          "scheduling": {
+            "samples": 20,
+            "gameForeground": 20,
+            "rendererPresent": 20,
+            "rendererNormal": 20,
+            "rendererIdle": 0,
+            "ecoQosOff": 20,
+            "ecoQosOn": 0
+          }
+        },
+        {
+          "round": 3,
+          "rafFps": 176.274,
+          "onePercentLowFps": 88.279,
+          "rafIntervals": 1763,
+          "maxRafIntervalMs": 20.8,
+          "rafIntervalsOver50Ms": 0,
+          "worldDrawCpuMeanMs": 2.317,
+          "mapVisibilityCpuMeanMs": 0.08,
+          "drawCallsMean": 164.517,
+          "trianglesMean": 2191057.236,
+          "scheduling": {
+            "samples": 20,
+            "gameForeground": 20,
+            "rendererPresent": 20,
+            "rendererNormal": 20,
+            "rendererIdle": 0,
+            "ecoQosOff": 20,
+            "ecoQosOn": 0
+          }
+        }
+      ]
+    },
+    "compactionV3": {
+      "runs": [
+        {
+          "round": 1,
+          "rafFps": 196.386,
+          "onePercentLowFps": 105.152,
+          "rafIntervals": 1961,
+          "maxRafIntervalMs": 12.6,
+          "rafIntervalsOver50Ms": 0,
+          "worldDrawCpuMeanMs": 1.837,
+          "mapVisibilityCpuMeanMs": 0.089,
+          "drawCallsMean": 164.194,
+          "trianglesMean": 1662075.486,
+          "scheduling": {
+            "samples": 20,
+            "gameForeground": 20,
+            "rendererPresent": 20,
+            "rendererNormal": 20,
+            "rendererIdle": 0,
+            "ecoQosOff": 20,
+            "ecoQosOn": 0
+          }
+        },
+        {
+          "round": 2,
+          "rafFps": 196.928,
+          "onePercentLowFps": 104.932,
+          "rafIntervals": 1968,
+          "maxRafIntervalMs": 16.8,
+          "rafIntervalsOver50Ms": 0,
+          "worldDrawCpuMeanMs": 1.904,
+          "mapVisibilityCpuMeanMs": 0.075,
+          "drawCallsMean": 164.874,
+          "trianglesMean": 1661900.555,
+          "scheduling": {
+            "samples": 20,
+            "gameForeground": 20,
+            "rendererPresent": 20,
+            "rendererNormal": 20,
+            "rendererIdle": 0,
+            "ecoQosOff": 20,
+            "ecoQosOn": 0
+          }
+        },
+        {
+          "round": 3,
+          "rafFps": 195.427,
+          "onePercentLowFps": 118.273,
+          "rafIntervals": 1954,
+          "maxRafIntervalMs": 8.5,
+          "rafIntervalsOver50Ms": 0,
+          "worldDrawCpuMeanMs": 2.033,
+          "mapVisibilityCpuMeanMs": 0.089,
+          "drawCallsMean": 164.227,
+          "trianglesMean": 1661400.508,
+          "scheduling": {
+            "samples": 20,
+            "gameForeground": 20,
+            "rendererPresent": 20,
+            "rendererNormal": 20,
+            "rendererIdle": 0,
+            "ecoQosOff": 20,
+            "ecoQosOn": 0
+          }
+        }
+      ]
+    },
+    "schedulingCaveat": "The shared browser process lacked the three background-throttling flags in both short blocks. The accepted runs are valid only for their directly observed 20/20 foreground, Normal-priority and EcoQoS-off OS samples per round; these samples do not prove that the launcher flags were active or that later windows stayed unthrottled.",
+    "geometryResult": {
+      "totalTrianglesPerFrameApprox": {
+        "baseline": 2190000,
+        "compaction": 1660000
+      },
+      "drawCallsPerFrameApprox": 164,
+      "drawCountIncreaseObserved": false,
+      "endSnapshot": {
+        "eligibleBatches": 9,
+        "visibleEligibleBatches": 7,
+        "eligibleInstancesTotal": 898,
+        "drawnInstancesWithoutCompaction": 612,
+        "drawnInstancesWithCompaction": 221,
+        "drawnEligibleTrianglesWithoutCompaction": 848332,
+        "drawnEligibleTrianglesWithCompaction": 315325,
+        "disabledBatches": 0
+      },
+      "snapshotScope": "End-of-run counters for eligible batches; whole-run triangle/draw means are recorded above."
+    },
+    "conclusion": "The short accepted blocks show reduced geometry submission and higher RAF average/1% Low in all three recorded candidate runs. They do not establish sustained 240 FPS, isolate all machine-timing effects, or establish performance on other maps and weapons."
+  },
+  "excludedAlternatingSeries": {
+    "runs": 6,
+    "comparisonValid": false,
+    "reason": "The shared Edge instance had none of the three background-throttling flags. Scheduling changed during the series: the foreground renderer was observed at Idle priority with EcoQoS enabled in later aligned samples. The OS sampler did not cover the final run. The complete six-run series is excluded from optimization benefit claims.",
+    "observedBackgroundFlags": {
+      "--disable-renderer-backgrounding": false,
+      "--disable-backgrounding-occluded-windows": false,
+      "--disable-background-timer-throttling": false
+    },
+    "alignedOsTotals": {
+      "samples": 178,
+      "gameForeground": 178,
+      "rendererPresent": 178,
+      "rendererNormal": 72,
+      "rendererIdle": 106,
+      "ecoQosOff": 72,
+      "ecoQosOn": 106
+    },
+    "finalRunOsCoverage": false,
+    "degradedRuns": [
+      {
+        "round": 3,
+        "rafFps": 46.598,
+        "maxRafIntervalMs": 2973.8
+      },
+      {
+        "round": 4,
+        "rafFps": 65.189,
+        "maxRafIntervalMs": 2397.4
+      },
+      {
+        "round": 5,
+        "rafFps": 57.534,
+        "maxRafIntervalMs": 1783.5
+      },
+      {
+        "round": 6,
+        "rafFps": 66.832,
+        "maxRafIntervalMs": 2020.4
+      }
+    ],
+    "causeLimit": "Observed Idle/EcoQoS invalidates this series; the report does not assign every individual long frame to a proven cause."
+  },
+  "excludedIndependentProfileAttempts": {
+    "comparisonValid": false,
+    "attempts": [
+      {
+        "attempt": "first",
+        "acceptedForForegroundPerformanceClaims": false,
+        "osSamplingDurationSeconds": 120.008,
+        "osSamples": 240,
+        "targetGameWindowForegroundSamples": 0,
+        "previousSharedWindowForegroundSamples": 240,
+        "targetRendererPresentSamples": 240,
+        "targetRendererNormalSamples": 240,
+        "targetRendererEcoQosOffSamples": 240,
+        "outcome": "The target independent-profile workload was stopped without completing the intended run. Every OS sample identified the previous shared-profile window as foreground."
+      },
+      {
+        "attempt": "unique-title-retry",
+        "acceptedForForegroundPerformanceClaims": false,
+        "osSamplingDurationSeconds": 120.007,
+        "osSamples": 240,
+        "targetGameWindowForegroundSamples": 0,
+        "previousSharedWindowForegroundSamples": 240,
+        "targetRendererPresentSamples": 240,
+        "targetRendererNormalSamples": 240,
+        "targetRendererEcoQosOffSamples": 240,
+        "outcome": "A distinct target-window title did not establish OS foreground. Every OS sample still identified the previous shared-profile window as foreground."
+      }
+    ],
+    "independentInstanceBackgroundFlagsVerified": {
+      "--disable-renderer-backgrounding": true,
+      "--disable-backgrounding-occluded-windows": true,
+      "--disable-background-timer-throttling": true
+    },
+    "validityLimit": "Correct independent-profile launch flags, Normal renderer priority and process EcoQoS-off observations do not prove that the measured game window is the OS foreground window. Neither attempt is accepted as independent-profile foreground or sustained-play validation.",
+    "causeLimit": "Intermittent zero GPU utilization, low RAF rates and long callback gaps in these invalid foreground attempts do not establish EcoQoS or Edge energy saver as their cause. Browser energy saving and Windows process EcoQoS are separate observations.",
+    "requiredFollowUp": "Any future explicitly requested --isolated-profile test requires verified target-window OS foreground and aligned scheduling evidence. This report records no completed independent-profile migration or sustained foreground validation; normal startup uses the original shared profile."
+  },
+  "diagnosticsAndStalls": {
+    "previous69msStall": {
+      "rootCause": "not established",
+      "garbageCollectionProven": false
+    },
+    "overhead": "Detailed per-frame collection, large JSON rebuilding and GPU status/timer queries can disturb allocation, collection and scheduling. Low-overhead sampling is used for the accepted short comparison; GPU timing is now explicit opt-in.",
+    "heapInterpretation": "Heap growth or a later decrease is supporting observation only, not proof that a particular long frame was caused by GC.",
+    "fxComposition": {
+      "selectedEffectsRetained": true,
+      "additionalFpsBenefitMeasured": false
+    }
+  },
+  "launcher": {
+    "defaultMode": "original shared Edge profile",
+    "defaultProfile": "existing shared Edge profile and its original local site data",
+    "legacyCompatibilityOption": "--legacy-profile selects the same shared profile as normal startup",
+    "dailyEdgeMustBeClosed": false,
+    "defaultBackgroundFlagsGuaranteed": false,
+    "schedulingLimit": "An existing shared Edge process can accept the launch request without adopting new flags. No foreground scheduling or FPS guarantee is made for default startup.",
+    "isolatedTest": {
+      "option": "--isolated-profile",
+      "optInOnly": true,
+      "profileDirectory": "%LOCALAPPDATA%\\AimOffline\\EdgeProfile",
+      "independentInstanceObserved": true,
+      "historicalBackgroundFlagsVerified": {
+        "--disable-renderer-backgrounding": true,
+        "--disable-backgrounding-occluded-windows": true,
+        "--disable-background-timer-throttling": true
+      },
+      "targetForegroundValidated": false,
+      "migrationCompleted": false,
+      "sustainedValidationCompleted": false,
+      "deliveryStatus": "optional experiment; not a delivered default isolation or performance fix"
+    },
+    "legacyDataPreserved": true,
+    "isolatedProfilePreserved": true,
+    "profileMigrationPerformed": false,
+    "profilesDeleted": false,
+    "backups": {
+      "keptLocally": true,
+      "uploadedWithRepository": false,
+      "privateBackupPathsPublished": false
+    },
+    "dataHandling": "Normal startup continues to use original shared-profile data. Existing old data and local backups are retained; no profile migration or deletion is performed by this restoration."
+  },
+  "validation": {
+    "formalBehaviorTests": {
+      "status": "passed",
+      "passed": 346,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "All tests/*.test.mjs in the publication scope. Two unadopted render experiments and their seven tests are retained only in the ignored local audit directory."
+    },
+    "offlineVerification": {
+      "status": "passed",
+      "requiredResourcesMissing": 0,
+      "failures": 0,
+      "optionalMissing": [
+        "/aim-viewmodel/outlaw.equip.bin.enc",
+        "/aim-viewmodel/outlaw.equip.json.enc"
+      ],
+      "productionDiagnosticsRemoved": true
+    },
+    "relatedSummary": "performance-validation-2026-10-27.json",
+    "launcherDefaultRestoration": {
+      "status": "passed",
+      "windowsArgumentCases": 8,
+      "defaultAndLegacyUseSharedProfile": true,
+      "isolatedModeRequiresExplicitOptIn": true,
+      "legacyTakesPrecedenceWhenBothOptionsPresent": true,
+      "deployedLauncherMatchesValidatedBuild": true,
+      "actualDesktopEntryOpenedSharedProfile": true,
+      "preexistingPreferencesFavoritesAndHistoryVisible": true,
+      "isolatedGameBrowserStartedByDefault": false,
+      "obsoleteTestPageClosed": true,
+      "privatePreferenceValuesPublished": false
+    },
+    "scopeNote": "The 346-test and offline-verification results retain the validated map/FX snapshot. Only launcher behavior and documentation changed afterward; its updated Windows argument test and actual desktop-entry data-preservation check passed. These checks are not a performance guarantee."
+  },
+  "provenance": {
+    "source": "Aggregated from locally retained round3 low-overhead baseline, compaction-v3 and corresponding OS/QoS samples; the later alternating series, independent launcher command-line check and two invalid independent-profile foreground attempts are separately classified.",
+    "rawIntervalsPublished": false,
+    "rawOsTelemetryPublished": false,
+    "processIdentifiersPublished": false,
+    "privateBrowserStoragePublished": false
+  }
+}

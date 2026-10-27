@@ -32,7 +32,9 @@
     "idle-jett-canvas-compositing",
     "nonempty-muzzle-layer-rendering",
     "covered-hall-rendering-hidden",
-    "bounded-impact-tracer-pooling"
+    "bounded-impact-tracer-pooling",
+    "per-instance-static-map-culling",
+    "layer-specific-muzzle-composite-scissor"
   ],
   "skinPacks": {
     "clientBridge": true,
@@ -55,5 +57,5 @@
     "variants": 4,
     "assets": 640
   },
-  "created": "2026-10-27T17:31:14.579Z"
+  "created": "2026-10-27T19:05:16.603Z"
 }
