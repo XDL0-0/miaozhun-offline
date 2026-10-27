@@ -16,8 +16,13 @@ export function animationState(actions,state,weapon){
     return {action:'reload',time:Math.min(duration,state.reloadSince*duration/real),weight:Math.min(1,state.reloadSince/.06)};
   }
   const shots=state.shots??[],shot=shots.at(-1)??-Infinity;
-  const events=(state.melee??[]).filter(e=>!e.weapon||e.weapon===weapon);
-  const inspect=events.findLast(e=>e.inspect===true),attack=events.findLast(e=>e.inspect!==true);
+  const events=state.melee??[];let inspect,attack;
+  for(let index=events.length-1;index>=0;index--){
+    const event=events[index];if(event.weapon&&event.weapon!==weapon)continue;
+    if(event.inspect===true){if(!inspect)inspect=event;}
+    else if(!attack)attack=event;
+    if(inspect&&attack)break;
+  }
   if(inspect&&actions.inspect&&shot<inspect.at&&(weapon!=='melee'||(attack?.at??-Infinity)<inspect.at)&&(state.equipAt??-Infinity)<inspect.at&&(state.adsBlend??0)<.01){
     const elapsed=now-inspect.at,duration=actions.inspect.arms.duration;
     if(elapsed>=0&&elapsed<duration)return {action:'inspect',time:elapsed,weight:Math.min(1,elapsed/.12,(duration-elapsed)/.16)};

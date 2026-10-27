@@ -26,6 +26,8 @@ node server.mjs
 
 构建直接使用仓库内已审查的原始媒体，无需重新下载，也不依赖 `skin-packs/local/wiki-downloads/`。Windows 重建时同样需要 `ffmpeg`，并可将以上 `node` 替换为 `.\runtime\node.exe`。已有离线包可直接启动服务。
 
+Windows 的浏览器调度修复需通过新版 `瞄准专家-离线版.exe` 启动才会带入参数。首次使用此次更新时，先保存其他 Edge 窗口中的工作，完整退出所有 Edge 实例（包括后台进程），再双击新版启动器；仅关闭训练窗口未必退出 Edge。已有 Edge 实例可能接管新的打开请求，启动器参数不会补入其既有浏览器进程。启动器沿用原 Edge 配置和本机训练数据，直接在已运行的浏览器中输入页面地址不会增加这些启动参数。 这些参数作用于启动的整个 Edge 实例，之后共享该实例的窗口也受影响。
+
 ## 枪械皮肤与击杀反馈
 
 在“参数设置 → 音频 → 枪械皮肤与击杀反馈”中，为 Vandal、Phantom、Sheriff、Operator 分别选择可用皮肤、主题与横幅样式，并试听开火及击杀音效。ORA by OneTap 的 Base、Watch、RENEGADE、RAJA、Ignition 五个主题均支持这四种枪械；其他皮肤按原有枪械覆盖范围提供。选择保存在浏览器本机。
@@ -56,13 +58,38 @@ node server.mjs
 
 ## 性能优化与验证
 
-`patches/` 中的补丁在构建时应用，原始 `site/` 保留不变。当前优化覆盖相邻模拟步的移动插值、共享 HUD 刷新、本机数值限帧和场景资源预热。数值帧率上限可在“参数设置”中选择，与刷新率设置共同生效。
+构建时应用版本固定的补丁：训练覆盖大厅时隐藏被遮住的大厅 DOM；启动器避免 Edge 将前台游戏误降为后台节能进程；数值限帧按 RAF 时间戳推进；枪皮桥去除重复的世界矩阵和骨架更新；局部灯光使用稳定 Top-K；跳过闲置画布和空枪口层。保留原画质、枪皮、骨骼动画和特效。
 
-运行行为测试：
+弹道与命中特效现在复用有界资源。原生工厂的 80 次命中对照中，atlas 贴图克隆由 80 降至 4，预热后的 Mesh、材质分配由各 160 降至 0；销毁后无遗留材质或贴图。这是资源分配计数，不能据此断言整体 FPS 或 1% Low 已提升。空闲池各最多 64 项，场景销毁时释放。
+
+全高清验证使用 RTX 3060 Laptop / Ryzen 7 5800H、239.760 Hz 显示器，NO.B212F6，240 帧上限、100% 比例、阴影、完整 Champions 2023 Vandal 枪模、动画与枪口特效。下表是最终正式版本的三轮相同十秒模拟脚本；每轮同期 OS 样本核对游戏前台，活动渲染进程保持 Normal 且 EcoQoS 关闭。
+
+| 轮次 | RAF 平均 FPS | 1% Low FPS | 间隔 p99/ms | 最大间隔/ms |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 195.542 | 105.319 | 8.4 | 12.6 |
+| 2 | 186.672 | 65.630 | 8.4 | 69.2 |
+| 3 | 183.251 | 109.384 | 8.4 | 12.7 |
+
+仍未证明稳定 240 FPS，也未证明本轮资源池化带来一致的整段 1% Low 提升。主要剩余耗时在地图绘制，骨骼不是此脚本的主要瓶颈。全量空间分批把三角形约从 218 万降至 136 万，但 draw 约从 168 增至 291，帧率下降；选择性分批及粒子合批也未显示一致收益，因此均未启用。此前大厅可见/隐藏的独立同版本 A/B 为 96.768 → 180.115 RAF FPS。
+
+数字来自浏览器 RAF 间隔，不能称为屏幕实际呈现帧数或手动实战成绩。1% Low 按最慢 ceil(1% × 间隔数) 个原始间隔的平均值换算，不等于 1000/p99；1920×1080 使用临时 viewport override 建立渲染负载。原始机器遥测仅留本地，已跟踪的[脱敏验证摘要](docs/performance-validation-2026-10-27.json)包含逐轮结果、OS 有效性计数、资源计数和被拒绝的候选。
+
+正式行为测试 **312/312 通过**。离线校验结果见根目录 [verification.json](verification.json)。诊断只由 scripts/create-performance-comparison.mjs 在独立目录生成，正常构建不包含诊断入口；可用 --graphics-phases 分段计时，查询参数 __repeatCurrent=3 重复当前组。可选实验函数保留供复现，不在默认构建启用。
+
+只运行 `tests/` 下的行为测试。Linux / Bash：
 
 ```bash
-node --test
+node --test tests/*.test.mjs
 ```
+
+Windows / PowerShell 显式枚举测试文件：
+
+```powershell
+$behaviorTests = @(Get-ChildItem -LiteralPath .\tests -Filter '*.test.mjs' -File | ForEach-Object FullName)
+& .\runtime\node.exe --test @behaviorTests
+```
+
+媒体相关测试需要按[皮肤构建依赖说明](skin-packs/README.md#build-and-run-on-linux)准备 `ffmpeg`。表面贴图打包测试及部分导入脚本支持用 `FFMPEG_PATH` 指定已安装的 `ffmpeg` 可执行文件完整路径；常规皮肤媒体构建仍要求 `ffmpeg` 位于 `PATH`。请勿在根目录直接使用不带文件范围的 `node --test`，以免自动运行 `qa-artifacts/` 内的历史诊断脚本。
 
 测试覆盖实际客户端函数和皮肤媒体构建行为；完整校验检查本机素材和脚本。真实训练中的流畅度仍取决于地图、画面设置与设备负载。
 

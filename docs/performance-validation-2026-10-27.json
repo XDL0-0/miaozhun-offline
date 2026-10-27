@@ -1,0 +1,2026 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-27",
+  "scope": "Sanitized, portable performance validation for the GitHub release. Raw local traces are intentionally excluded.",
+  "status": {
+    "formalTestsPassed": 312,
+    "stable240FpsDemonstrated": false,
+    "wholeRunOnePercentLowImprovementDemonstrated": false,
+    "offlineFailures": [],
+    "offlineRequiredMissingCount": 0,
+    "offlineSuccess": true
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 7 5800H",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 6 GB",
+    "ramGb": 16,
+    "display": "ASUS VG249QM1A",
+    "refreshHz": 239.76
+  },
+  "method": {
+    "map": "NO.B212F6 / 天枢云阙A大进攻预瞄",
+    "renderLoad": "1920x1080 browser viewport override; 100% scale, shadows, full Champions 2023 Vandal model, native animation and muzzle effects",
+    "frameLimit": 240,
+    "workload": "Three repetitions per candidate. Same deterministic ten-simulation-second native-engine script: idle, fire, reload, melee, inspect, fire. Scores and replays discarded.",
+    "metrics": "RAF intervals and CPU submissions, not presented-frame counts or manual gameplay. 1% Low is 1000 divided by the mean of the slowest ceil(intervalCount*0.01) raw intervals; it is not 1000/p99.",
+    "gpu": "Asynchronous EXT_disjoint_timer_query_webgl2 elapsed segment. May include CPU submission gaps; does not isolate shader time or include browser compositor work.",
+    "focus": "OS samples were aligned to each measurement window. The busiest renderer was checked for Normal priority and EcoQoS. DOM focus alone was not accepted as proof.",
+    "limits": "Short repeated tests are not a guarantee for every map, weapon, thermal state or sustained manual gameplay. No candidate was selected solely on a single best run."
+  },
+  "productionChanges": [
+    "hide covered hall DOM while training is active",
+    "Edge launch flags prevent renderer/occluded-window/background-timer throttling",
+    "RAF timestamp numeric frame limiter",
+    "deduplicate native skin world/skeleton updates",
+    "bounded stable Top-K local lights",
+    "hide inactive Jett compositing canvas",
+    "skip empty muzzle layer passes",
+    "bounded native tracer/impact presentation-object pools with four shared atlas frames"
+  ],
+  "resourceAccounting": {
+    "kind": "Actual native factory functions with mocked presentation resources; does not measure GPU speed",
+    "hitEvents": 80,
+    "native": {
+      "atlasClones": 80,
+      "sourceVersionWrites": 80,
+      "runtimeMeshAllocations": 160,
+      "runtimeMaterialAllocations": 160
+    },
+    "pooled": {
+      "atlasClones": 4,
+      "sourceVersionWrites": 4,
+      "runtimeMeshAllocations": 0,
+      "runtimeMaterialAllocations": 0
+    },
+    "materialsAndTexturesRemainingAfterDispose": 0,
+    "idlePoolLimitPerEffect": 64
+  },
+  "earlierHallIsolation": {
+    "kind": "Independent same-build visibility A/B, not the repeated full-HD baseline",
+    "rafFpsVisible": 96.768,
+    "rafFpsHidden": 180.115,
+    "renderCpuMsVisible": 3.194,
+    "renderCpuMsHidden": 3.266,
+    "gpuElapsedMsVisible": 5.538,
+    "gpuElapsedMsHidden": 3.597
+  },
+  "measurements": [
+    {
+      "name": "baseline",
+      "decision": "reference: existing hall, scheduling and skeleton fixes",
+      "rounds": [
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 196.502,
+          "onePercentLowFps": 102.934,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 5.089,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.4,
+            "samples": 1962
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 6.5,
+            "mean": 2.99,
+            "p50": 2.8,
+            "p95": 4.4,
+            "p99": 5.1,
+            "samples": 1951
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1951
+            },
+            "mapVisibility": {
+              "max": 0.4,
+              "mean": 0.064,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1951
+            },
+            "viewModelDraw": {
+              "max": 1.1,
+              "mean": 0.289,
+              "p50": 0.3,
+              "p95": 0.5,
+              "p99": 0.6,
+              "samples": 1951
+            },
+            "viewModelOverlay": {
+              "max": 2.2,
+              "mean": 0.162,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 1,
+              "samples": 1951
+            },
+            "worldDraw": {
+              "max": 4,
+              "mean": 1.847,
+              "p50": 1.7,
+              "p95": 2.6,
+              "p99": 3,
+              "samples": 1951
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1951
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 0.7,
+            "mean": 0.154,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.4,
+            "samples": 1951
+          },
+          "drawCalls": {
+            "max": 252,
+            "mean": 167.842,
+            "p50": 146,
+            "p95": 234,
+            "p99": 245,
+            "samples": 1951
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2183336.809,
+            "p50": 2182407,
+            "p95": 2206601,
+            "p99": 2206649,
+            "samples": 1951
+          },
+          "gpuElapsedMs": {
+            "max": 6.896,
+            "mean": 3.599,
+            "p50": 3.498,
+            "p95": 4.999,
+            "p99": 5.452,
+            "samples": 1949
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 181.719,
+          "onePercentLowFps": 85.586,
+          "rafIntervalsMs": {
+            "max": 16.8,
+            "mean": 5.503,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.5,
+            "samples": 1816
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 8.5,
+            "mean": 3.438,
+            "p50": 3.2,
+            "p95": 4.8,
+            "p99": 5.9,
+            "samples": 1814
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1814
+            },
+            "mapVisibility": {
+              "max": 0.3,
+              "mean": 0.087,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1814
+            },
+            "viewModelDraw": {
+              "max": 1,
+              "mean": 0.257,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1814
+            },
+            "viewModelOverlay": {
+              "max": 2.6,
+              "mean": 0.165,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 0.9,
+              "samples": 1814
+            },
+            "worldDraw": {
+              "max": 5.6,
+              "mean": 2.333,
+              "p50": 2.2,
+              "p95": 3.2,
+              "p99": 3.8,
+              "samples": 1814
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1814
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.2,
+            "mean": 0.163,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1814
+          },
+          "drawCalls": {
+            "max": 252,
+            "mean": 167.429,
+            "p50": 146,
+            "p95": 232,
+            "p99": 245,
+            "samples": 1814
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2182506.765,
+            "p50": 2182407,
+            "p95": 2206601,
+            "p99": 2206649,
+            "samples": 1814
+          },
+          "gpuElapsedMs": {
+            "max": 7.609,
+            "mean": 3.543,
+            "p50": 3.449,
+            "p95": 4.876,
+            "p99": 5.425,
+            "samples": 1812
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 180.832,
+          "onePercentLowFps": 104.683,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 5.53,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.4,
+            "samples": 1808
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 6.9,
+            "mean": 3.393,
+            "p50": 3.2,
+            "p95": 4.7,
+            "p99": 5.6,
+            "samples": 1807
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1807
+            },
+            "mapVisibility": {
+              "max": 0.3,
+              "mean": 0.086,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1807
+            },
+            "viewModelDraw": {
+              "max": 1.4,
+              "mean": 0.297,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1807
+            },
+            "viewModelOverlay": {
+              "max": 1.2,
+              "mean": 0.164,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 0.9,
+              "samples": 1807
+            },
+            "worldDraw": {
+              "max": 4.7,
+              "mean": 2.234,
+              "p50": 2.1,
+              "p95": 3.1,
+              "p99": 3.5,
+              "samples": 1807
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1807
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.3,
+            "mean": 0.154,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1807
+          },
+          "drawCalls": {
+            "max": 252,
+            "mean": 167.674,
+            "p50": 146,
+            "p95": 234,
+            "p99": 245,
+            "samples": 1807
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2182280.427,
+            "p50": 2182407,
+            "p95": 2206601,
+            "p99": 2206649,
+            "samples": 1807
+          },
+          "gpuElapsedMs": {
+            "max": 6.477,
+            "mean": 3.606,
+            "p50": 3.504,
+            "p95": 4.915,
+            "p99": 5.409,
+            "samples": 1805
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "effects",
+      "decision": "not enabled together: no consistent FPS/1% Low benefit",
+      "rounds": [
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 181.488,
+          "onePercentLowFps": 96.057,
+          "rafIntervalsMs": {
+            "max": 12.7,
+            "mean": 5.51,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.4,
+            "samples": 1813
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 7.6,
+            "mean": 3.333,
+            "p50": 3.2,
+            "p95": 4.7,
+            "p99": 5.4,
+            "samples": 1810
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1810
+            },
+            "mapVisibility": {
+              "max": 0.3,
+              "mean": 0.085,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1810
+            },
+            "viewModelDraw": {
+              "max": 1.6,
+              "mean": 0.252,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1810
+            },
+            "viewModelOverlay": {
+              "max": 2.4,
+              "mean": 0.159,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.9,
+              "samples": 1810
+            },
+            "worldDraw": {
+              "max": 4.7,
+              "mean": 2.215,
+              "p50": 2.1,
+              "p95": 3,
+              "p99": 3.5,
+              "samples": 1810
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1810
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 0.5,
+            "mean": 0.184,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.4,
+            "samples": 1810
+          },
+          "drawCalls": {
+            "max": 249,
+            "mean": 167.864,
+            "p50": 146,
+            "p95": 231,
+            "p99": 243,
+            "samples": 1810
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2182943.122,
+            "p50": 2182407,
+            "p95": 2206601,
+            "p99": 2206651,
+            "samples": 1810
+          },
+          "gpuElapsedMs": {
+            "max": 7.159,
+            "mean": 3.577,
+            "p50": 3.504,
+            "p95": 4.852,
+            "p99": 5.387,
+            "samples": 1808
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 186.22,
+          "onePercentLowFps": 82.073,
+          "rafIntervalsMs": {
+            "max": 58.4,
+            "mean": 5.37,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.5,
+            "samples": 1861
+          },
+          "over50ms": 1,
+          "renderCpuMs": {
+            "max": 6.8,
+            "mean": 3.188,
+            "p50": 3,
+            "p95": 4.4,
+            "p99": 5.2,
+            "samples": 1858
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1858
+            },
+            "mapVisibility": {
+              "max": 0.2,
+              "mean": 0.067,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1858
+            },
+            "viewModelDraw": {
+              "max": 1.1,
+              "mean": 0.263,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1858
+            },
+            "viewModelOverlay": {
+              "max": 1.4,
+              "mean": 0.157,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.8,
+              "samples": 1858
+            },
+            "worldDraw": {
+              "max": 4.4,
+              "mean": 2.096,
+              "p50": 2,
+              "p95": 2.9,
+              "p99": 3.3,
+              "samples": 1858
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1858
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.3,
+            "mean": 0.16,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1858
+          },
+          "drawCalls": {
+            "max": 249,
+            "mean": 168.003,
+            "p50": 146,
+            "p95": 231,
+            "p99": 243,
+            "samples": 1858
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2182793.814,
+            "p50": 2182407,
+            "p95": 2206601,
+            "p99": 2206649,
+            "samples": 1858
+          },
+          "gpuElapsedMs": {
+            "max": 64.654,
+            "mean": 3.599,
+            "p50": 3.479,
+            "p95": 4.801,
+            "p99": 5.334,
+            "samples": 1856
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 182.949,
+          "onePercentLowFps": 106.802,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 5.466,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.5,
+            "samples": 1829
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 6,
+            "mean": 3.328,
+            "p50": 3.2,
+            "p95": 4.5,
+            "p99": 5.1,
+            "samples": 1820
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1820
+            },
+            "mapVisibility": {
+              "max": 0.2,
+              "mean": 0.061,
+              "p50": 0.1,
+              "p95": 0.1,
+              "p99": 0.2,
+              "samples": 1820
+            },
+            "viewModelDraw": {
+              "max": 1.3,
+              "mean": 0.249,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1820
+            },
+            "viewModelOverlay": {
+              "max": 2,
+              "mean": 0.159,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.8,
+              "samples": 1820
+            },
+            "worldDraw": {
+              "max": 4.4,
+              "mean": 2.262,
+              "p50": 2.2,
+              "p95": 3,
+              "p99": 3.3,
+              "samples": 1820
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1820
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.4,
+            "mean": 0.177,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.4,
+            "samples": 1820
+          },
+          "drawCalls": {
+            "max": 249,
+            "mean": 168.408,
+            "p50": 148,
+            "p95": 232,
+            "p99": 243,
+            "samples": 1820
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2183339.651,
+            "p50": 2182407,
+            "p95": 2206603,
+            "p99": 2206655,
+            "samples": 1820
+          },
+          "gpuElapsedMs": {
+            "max": 6.74,
+            "mean": 3.536,
+            "p50": 3.488,
+            "p95": 4.737,
+            "p99": 5.096,
+            "samples": 1818
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "spatial",
+      "decision": "rejected: fewer triangles but too many draw calls",
+      "rounds": [
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 168.634,
+          "onePercentLowFps": 88.45,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 5.93,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.5,
+            "samples": 1684
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 7.1,
+            "mean": 3.764,
+            "p50": 3.5,
+            "p95": 5,
+            "p99": 5.8,
+            "samples": 1683
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1683
+            },
+            "mapVisibility": {
+              "max": 0.4,
+              "mean": 0.096,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1683
+            },
+            "viewModelDraw": {
+              "max": 1.2,
+              "mean": 0.299,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.6,
+              "samples": 1683
+            },
+            "viewModelOverlay": {
+              "max": 1.6,
+              "mean": 0.171,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 0.9,
+              "samples": 1683
+            },
+            "worldDraw": {
+              "max": 5,
+              "mean": 2.57,
+              "p50": 2.4,
+              "p95": 3.3,
+              "p99": 3.6,
+              "samples": 1683
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1683
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.2,
+            "mean": 0.153,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1683
+          },
+          "drawCalls": {
+            "max": 373,
+            "mean": 290.897,
+            "p50": 270,
+            "p95": 361,
+            "p99": 368,
+            "samples": 1683
+          },
+          "triangles": {
+            "max": 1413208,
+            "mean": 1356715.094,
+            "p50": 1361481,
+            "p95": 1405549,
+            "p99": 1412670,
+            "samples": 1683
+          },
+          "gpuElapsedMs": {
+            "max": 6.341,
+            "mean": 3.221,
+            "p50": 3.225,
+            "p95": 4.293,
+            "p99": 4.965,
+            "samples": 1681
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 160.411,
+          "onePercentLowFps": 79.85,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 6.234,
+            "p50": 4.3,
+            "p95": 8.4,
+            "p99": 12.4,
+            "samples": 1603
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 9.4,
+            "mean": 4.012,
+            "p50": 3.8,
+            "p95": 5.4,
+            "p99": 6,
+            "samples": 1602
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1602
+            },
+            "mapVisibility": {
+              "max": 0.3,
+              "mean": 0.138,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.3,
+              "samples": 1602
+            },
+            "viewModelDraw": {
+              "max": 1.1,
+              "mean": 0.274,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1602
+            },
+            "viewModelOverlay": {
+              "max": 1.1,
+              "mean": 0.169,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 0.9,
+              "samples": 1602
+            },
+            "worldDraw": {
+              "max": 5.9,
+              "mean": 2.831,
+              "p50": 2.7,
+              "p95": 3.6,
+              "p99": 4.1,
+              "samples": 1602
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1602
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1,
+            "mean": 0.155,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1602
+          },
+          "drawCalls": {
+            "max": 373,
+            "mean": 290.748,
+            "p50": 270,
+            "p95": 361,
+            "p99": 368,
+            "samples": 1602
+          },
+          "triangles": {
+            "max": 1413208,
+            "mean": 1355795.665,
+            "p50": 1361469,
+            "p95": 1405553,
+            "p99": 1412670,
+            "samples": 1602
+          },
+          "gpuElapsedMs": {
+            "max": 7.661,
+            "mean": 3.216,
+            "p50": 3.243,
+            "p95": 4.273,
+            "p99": 4.871,
+            "samples": 1600
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 161.97,
+          "onePercentLowFps": 89.9,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 6.174,
+            "p50": 4.3,
+            "p95": 8.4,
+            "p99": 8.5,
+            "samples": 1620
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 7.1,
+            "mean": 3.988,
+            "p50": 3.8,
+            "p95": 5.4,
+            "p99": 6,
+            "samples": 1620
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1620
+            },
+            "mapVisibility": {
+              "max": 0.4,
+              "mean": 0.165,
+              "p50": 0.2,
+              "p95": 0.3,
+              "p99": 0.3,
+              "samples": 1620
+            },
+            "viewModelDraw": {
+              "max": 1.4,
+              "mean": 0.287,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1620
+            },
+            "viewModelOverlay": {
+              "max": 1.1,
+              "mean": 0.167,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.9,
+              "samples": 1620
+            },
+            "worldDraw": {
+              "max": 5.1,
+              "mean": 2.767,
+              "p50": 2.7,
+              "p95": 3.6,
+              "p99": 4,
+              "samples": 1620
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1620
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1,
+            "mean": 0.15,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1620
+          },
+          "drawCalls": {
+            "max": 373,
+            "mean": 290.603,
+            "p50": 270,
+            "p95": 361,
+            "p99": 368,
+            "samples": 1620
+          },
+          "triangles": {
+            "max": 1413208,
+            "mean": 1355699.214,
+            "p50": 1361467,
+            "p95": 1405549,
+            "p99": 1412668,
+            "samples": 1620
+          },
+          "gpuElapsedMs": {
+            "max": 6.234,
+            "mean": 3.238,
+            "p50": 3.235,
+            "p95": 4.274,
+            "p99": 4.74,
+            "samples": 1618
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "selective",
+      "decision": "rejected: no consistent benefit and slow frames",
+      "rounds": [
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 171.028,
+          "onePercentLowFps": 111.386,
+          "rafIntervalsMs": {
+            "max": 12.5,
+            "mean": 5.847,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.5,
+            "samples": 1707
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 6.3,
+            "mean": 3.564,
+            "p50": 3.4,
+            "p95": 4.8,
+            "p99": 5.3,
+            "samples": 1700
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1700
+            },
+            "mapVisibility": {
+              "max": 0.3,
+              "mean": 0.088,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1700
+            },
+            "viewModelDraw": {
+              "max": 1.1,
+              "mean": 0.286,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1700
+            },
+            "viewModelOverlay": {
+              "max": 1.2,
+              "mean": 0.175,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 0.9,
+              "samples": 1700
+            },
+            "worldDraw": {
+              "max": 4.4,
+              "mean": 2.362,
+              "p50": 2.3,
+              "p95": 3.1,
+              "p99": 3.4,
+              "samples": 1700
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1700
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.7,
+            "mean": 0.173,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1700
+          },
+          "drawCalls": {
+            "max": 275,
+            "mean": 192.481,
+            "p50": 172,
+            "p95": 258,
+            "p99": 269,
+            "samples": 1700
+          },
+          "triangles": {
+            "max": 2017402,
+            "mean": 1977160.695,
+            "p50": 1982946,
+            "p95": 2017346,
+            "p99": 2017392,
+            "samples": 1700
+          },
+          "gpuElapsedMs": {
+            "max": 6.548,
+            "mean": 3.491,
+            "p50": 3.365,
+            "p95": 4.748,
+            "p99": 5.259,
+            "samples": 1698
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 0,
+            "activeRendererNormalSamples": 8,
+            "activeRendererEcoQosSamples": 12
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 166.834,
+          "onePercentLowFps": 58.14,
+          "rafIntervalsMs": {
+            "max": 54.3,
+            "mean": 5.994,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 12.5,
+            "samples": 1668
+          },
+          "over50ms": 1,
+          "renderCpuMs": {
+            "max": 6.5,
+            "mean": 3.589,
+            "p50": 3.3,
+            "p95": 5,
+            "p99": 5.7,
+            "samples": 1665
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1665
+            },
+            "mapVisibility": {
+              "max": 0.4,
+              "mean": 0.081,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1665
+            },
+            "viewModelDraw": {
+              "max": 1.7,
+              "mean": 0.297,
+              "p50": 0.3,
+              "p95": 0.5,
+              "p99": 0.6,
+              "samples": 1665
+            },
+            "viewModelOverlay": {
+              "max": 2.5,
+              "mean": 0.188,
+              "p50": 0,
+              "p95": 0.8,
+              "p99": 1,
+              "samples": 1665
+            },
+            "worldDraw": {
+              "max": 4.5,
+              "mean": 2.366,
+              "p50": 2.2,
+              "p95": 3.2,
+              "p99": 3.5,
+              "samples": 1665
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1665
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 0.6,
+            "mean": 0.172,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.4,
+            "samples": 1665
+          },
+          "drawCalls": {
+            "max": 275,
+            "mean": 191.937,
+            "p50": 170,
+            "p95": 258,
+            "p99": 269,
+            "samples": 1665
+          },
+          "triangles": {
+            "max": 2017402,
+            "mean": 1977856.374,
+            "p50": 1982958,
+            "p95": 2017344,
+            "p99": 2017392,
+            "samples": 1665
+          },
+          "gpuElapsedMs": {
+            "max": 6.615,
+            "mean": 3.504,
+            "p50": 3.317,
+            "p95": 5.005,
+            "p99": 5.561,
+            "samples": 1663
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 0,
+            "activeRendererNormalSamples": 8,
+            "activeRendererEcoQosSamples": 12
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 179.501,
+          "onePercentLowFps": 26.779,
+          "rafIntervalsMs": {
+            "max": 463.1,
+            "mean": 5.571,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 12.4,
+            "samples": 1868
+          },
+          "over50ms": 1,
+          "renderCpuMs": {
+            "max": 381.8,
+            "mean": 3.295,
+            "p50": 2.9,
+            "p95": 4.4,
+            "p99": 5.1,
+            "samples": 1867
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.002,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1867
+            },
+            "mapVisibility": {
+              "max": 0.3,
+              "mean": 0.065,
+              "p50": 0.1,
+              "p95": 0.1,
+              "p99": 0.2,
+              "samples": 1867
+            },
+            "viewModelDraw": {
+              "max": 1.3,
+              "mean": 0.258,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1867
+            },
+            "viewModelOverlay": {
+              "max": 1.9,
+              "mean": 0.159,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.9,
+              "samples": 1867
+            },
+            "worldDraw": {
+              "max": 378.3,
+              "mean": 2.233,
+              "p50": 1.9,
+              "p95": 2.8,
+              "p99": 3.2,
+              "samples": 1867
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1867
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1,
+            "mean": 0.154,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.4,
+            "samples": 1867
+          },
+          "drawCalls": {
+            "max": 275,
+            "mean": 191.244,
+            "p50": 170,
+            "p95": 257,
+            "p99": 268,
+            "samples": 1867
+          },
+          "triangles": {
+            "max": 2017402,
+            "mean": 1976368.543,
+            "p50": 1982946,
+            "p95": 2017344,
+            "p99": 2017392,
+            "samples": 1867
+          },
+          "gpuElapsedMs": {
+            "max": 378.217,
+            "mean": 3.679,
+            "p50": 3.352,
+            "p95": 4.849,
+            "p99": 5.382,
+            "samples": 1865
+          },
+          "osEvidence": {
+            "samples": 21,
+            "gameForegroundSamples": 0,
+            "activeRendererNormalSamples": 9,
+            "activeRendererEcoQosSamples": 12
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "final",
+      "decision": "production: existing fixes plus bounded impact/tracer reuse",
+      "rounds": [
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 195.542,
+          "onePercentLowFps": 105.319,
+          "rafIntervalsMs": {
+            "max": 12.6,
+            "mean": 5.114,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.4,
+            "samples": 1951
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 6.3,
+            "mean": 3.046,
+            "p50": 2.8,
+            "p95": 4.3,
+            "p99": 4.9,
+            "samples": 1949
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1949
+            },
+            "mapVisibility": {
+              "max": 0.2,
+              "mean": 0.08,
+              "p50": 0.1,
+              "p95": 0.2,
+              "p99": 0.2,
+              "samples": 1949
+            },
+            "viewModelDraw": {
+              "max": 1.2,
+              "mean": 0.297,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.6,
+              "samples": 1949
+            },
+            "viewModelOverlay": {
+              "max": 2.3,
+              "mean": 0.165,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.9,
+              "samples": 1949
+            },
+            "worldDraw": {
+              "max": 3.9,
+              "mean": 1.872,
+              "p50": 1.7,
+              "p95": 2.6,
+              "p99": 3,
+              "samples": 1949
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1949
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.1,
+            "mean": 0.155,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1949
+          },
+          "drawCalls": {
+            "max": 252,
+            "mean": 168.062,
+            "p50": 146,
+            "p95": 234,
+            "p99": 245,
+            "samples": 1949
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2183541.472,
+            "p50": 2182407,
+            "p95": 2206603,
+            "p99": 2206649,
+            "samples": 1949
+          },
+          "gpuElapsedMs": {
+            "max": 6.688,
+            "mean": 3.584,
+            "p50": 3.503,
+            "p95": 4.873,
+            "p99": 5.415,
+            "samples": 1947
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 186.672,
+          "onePercentLowFps": 65.63,
+          "rafIntervalsMs": {
+            "max": 69.2,
+            "mean": 5.357,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.4,
+            "samples": 1867
+          },
+          "over50ms": 1,
+          "renderCpuMs": {
+            "max": 59.4,
+            "mean": 3.269,
+            "p50": 3,
+            "p95": 4.5,
+            "p99": 5.1,
+            "samples": 1867
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1867
+            },
+            "mapVisibility": {
+              "max": 0.2,
+              "mean": 0.064,
+              "p50": 0.1,
+              "p95": 0.1,
+              "p99": 0.2,
+              "samples": 1867
+            },
+            "viewModelDraw": {
+              "max": 1.5,
+              "mean": 0.263,
+              "p50": 0.3,
+              "p95": 0.4,
+              "p99": 0.5,
+              "samples": 1867
+            },
+            "viewModelOverlay": {
+              "max": 1.7,
+              "mean": 0.165,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.8,
+              "samples": 1867
+            },
+            "worldDraw": {
+              "max": 57.1,
+              "mean": 2.18,
+              "p50": 2,
+              "p95": 2.9,
+              "p99": 3.2,
+              "samples": 1867
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0,
+              "samples": 1867
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.1,
+            "mean": 0.159,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.3,
+            "samples": 1867
+          },
+          "drawCalls": {
+            "max": 252,
+            "mean": 167.484,
+            "p50": 146,
+            "p95": 234,
+            "p99": 246,
+            "samples": 1867
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2182860.375,
+            "p50": 2182407,
+            "p95": 2206603,
+            "p99": 2206649,
+            "samples": 1867
+          },
+          "gpuElapsedMs": {
+            "max": 58.816,
+            "mean": 3.633,
+            "p50": 3.494,
+            "p95": 4.916,
+            "p99": 5.366,
+            "samples": 1865
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        },
+        {
+          "reason": "completed-10s",
+          "simulationSeconds": 10,
+          "scoreAndReplayDiscarded": true,
+          "errors": [],
+          "fps": 183.251,
+          "onePercentLowFps": 109.384,
+          "rafIntervalsMs": {
+            "max": 12.7,
+            "mean": 5.457,
+            "p50": 4.2,
+            "p95": 8.4,
+            "p99": 8.4,
+            "samples": 1832
+          },
+          "over50ms": 0,
+          "renderCpuMs": {
+            "max": 6.9,
+            "mean": 3.368,
+            "p50": 3.2,
+            "p95": 4.7,
+            "p99": 5.2,
+            "samples": 1829
+          },
+          "graphicsCpuMs": {
+            "localLights": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1829
+            },
+            "mapVisibility": {
+              "max": 0.2,
+              "mean": 0.062,
+              "p50": 0.1,
+              "p95": 0.1,
+              "p99": 0.2,
+              "samples": 1829
+            },
+            "viewModelDraw": {
+              "max": 1.2,
+              "mean": 0.24,
+              "p50": 0.2,
+              "p95": 0.3,
+              "p99": 0.4,
+              "samples": 1829
+            },
+            "viewModelOverlay": {
+              "max": 1.3,
+              "mean": 0.165,
+              "p50": 0,
+              "p95": 0.7,
+              "p99": 0.8,
+              "samples": 1829
+            },
+            "worldDraw": {
+              "max": 4.7,
+              "mean": 2.293,
+              "p50": 2.2,
+              "p95": 3.1,
+              "p99": 3.4,
+              "samples": 1829
+            },
+            "worldOverlay": {
+              "max": 0.1,
+              "mean": 0.001,
+              "p50": 0,
+              "p95": 0,
+              "p99": 0.1,
+              "samples": 1829
+            }
+          },
+          "actorPoseCpuMs": {
+            "max": 1.4,
+            "mean": 0.183,
+            "p50": 0.2,
+            "p95": 0.3,
+            "p99": 0.4,
+            "samples": 1829
+          },
+          "drawCalls": {
+            "max": 252,
+            "mean": 167.986,
+            "p50": 146,
+            "p95": 234,
+            "p99": 245,
+            "samples": 1829
+          },
+          "triangles": {
+            "max": 2206659,
+            "mean": 2182466.494,
+            "p50": 2182407,
+            "p95": 2206603,
+            "p99": 2206653,
+            "samples": 1829
+          },
+          "gpuElapsedMs": {
+            "max": 6.077,
+            "mean": 3.559,
+            "p50": 3.469,
+            "p95": 4.797,
+            "p99": 5.189,
+            "samples": 1827
+          },
+          "osEvidence": {
+            "samples": 20,
+            "gameForegroundSamples": 20,
+            "activeRendererNormalSamples": 20,
+            "activeRendererEcoQosSamples": 0
+          },
+          "renderCanvasesStart": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ],
+          "renderCanvasesEnd": [
+            {
+              "className": "al-stage-canvas",
+              "height": 1080,
+              "width": 1920
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "disabledExperiments": [
+    "muzzle particle batch merging",
+    "all-instance spatial24",
+    "selective spatial24 minBatchTriangles=50000 plus map96",
+    "nonblocking fence status polling"
+  ],
+  "globalPowerPlanChanged": false,
+  "driverSettingsChanged": false,
+  "browserPreferenceFilesChanged": false,
+  "references": [
+    {
+      "title": "Chromium task throttling flags",
+      "url": "https://github.com/GoogleChrome/chrome-launcher/blob/main/docs/chrome-flags-for-tools.md#task-throttling"
+    }
+  ],
+  "slowFrameFinding": {
+    "round": 2,
+    "rafMaxMs": 69.2,
+    "worldDrawMaxCpuMs": 57.1,
+    "actorPoseMaxCpuMs": 1.1,
+    "interpretation": "The largest event was in the world renderer. A full browser/driver trace would be needed to distinguish CPU work, driver submission stalls and scheduling; no unsupported root-cause attribution is made."
+  }
+}

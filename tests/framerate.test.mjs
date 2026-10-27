@@ -32,11 +32,11 @@ test('real settings gates enable browser cap while keeping fractional refresh an
   assert.equal(patched['DCKWp-_u.js'].split('帧率上限（本机）').length - 1, 2);
 });
 
-function simulate({maxFps=0, nth=1, duration=10, rafHz=240, jitter=0, changeAt, changeTo, text=patched['CymPR-fm.js']}) {
+function simulate({maxFps=0, nth=1, duration=10, rafHz=240, jitter=0, callbackDelay=()=>0, tickCpuMs=0, changeAt, changeTo, text=patched['CymPR-fm.js']}) {
   const start = text.indexOf('function mm('), end = text.indexOf('const ja=', start);
   assert.ok(start > 0 && end > start);
   const loopText = text.slice(start, end);
-  let now = 0, callback, nextId = 0, ticks = 0, accumulator = 0;
+  let now = 0, frameTime = 0, callback, nextId = 0, ticks = 0, accumulator = 0;
   const frames = [];
   const scheduler = {now:()=>now, requestFrame:fn=>(callback=fn, ++nextId), cancelFrame:()=>{callback=null;}};
   const noStats = () => ({record(){}, report(){return null;}, reset(){}, frame(){}, summary(){return {};}, recent(){return [];}});
@@ -46,12 +46,13 @@ function simulate({maxFps=0, nth=1, duration=10, rafHz=240, jitter=0, changeAt, 
     _d:()=>({advance(seconds){accumulator+=seconds;const count=Math.floor((accumulator+1e-10)*128);accumulator-=count/128;return count;},alpha:()=>accumulator*128,reset:()=>{accumulator=0;}}),
   });
   const makeLoop = vm.runInContext(`${loopText};mm`, context);
-  const loop = makeLoop({onTick(){ticks++;},onRender(alpha){assert.ok(alpha>=-1e-7&&alpha<=1+1e-7);frames.push(now);}}, {maxFps,renderEveryNthFrame:nth,showPerformance:false}, scheduler);
+  const loop = makeLoop({onTick(){ticks++;now+=tickCpuMs;},onRender(alpha){assert.ok(alpha>=-1e-7&&alpha<=1+1e-7);frames.push(frameTime);}}, {maxFps,renderEveryNthFrame:nth,showPerformance:false}, scheduler);
   loop.start();
   for (let frame=0; frame<=duration*rafHz; frame++) {
-    now=1000+frame*1000/rafHz+(frame%2?jitter:-jitter);
+    frameTime=1000+frame*1000/rafHz+(frame%2?jitter:-jitter);
+    now=frameTime+callbackDelay(frame);
     if(changeAt!==undefined&&frame===changeAt)loop.setOptions(changeTo);
-    const fn=callback;callback=null;assert.equal(typeof fn,'function');fn(now);
+    const fn=callback;callback=null;assert.equal(typeof fn,'function');fn(frameTime);
   }
   loop.stop();
   return {frames,ticks};
@@ -64,6 +65,37 @@ test('small RAF timing jitter no longer causes a whole missed refresh at 120 FPS
   const worstDeviation=frames=>Math.max(...frames.slice(1).map((time,index)=>Math.abs(time-frames[index]-1000/120)));
   assert.ok(worstDeviation(baseline)>4);
   assert.ok(worstDeviation(optimized)<.161);
+});
+
+test('240 FPS cap keeps on-time display frames despite callback queueing and intermittent simulation CPU', () => {
+  const options={maxFps:240,callbackDelay:frame=>frame%2?0:1,tickCpuMs:.8};
+  // Isolate the clock bug from the previously fixed sub-millisecond tolerance.
+  const previousClock=source['CymPR-fm.js'].replace('if(O>=m)return!0;const k=', 'if(O>=m||!n.deferFrame&&m-O<.25)return!0;const k=');
+  const baseline=simulate({...options,text:previousClock});
+  const optimized=simulate(options);
+  assert.ok(baseline.frames.length<2300, `${baseline.frames.length} baseline frames`);
+  assert.equal(optimized.frames.length,2401);
+  assert.equal(optimized.ticks,1280);
+  for(let i=1;i<optimized.frames.length;i++)assert.ok(Math.abs(optimized.frames[i]-optimized.frames[i-1]-1000/240)<1e-7);
+  for(const cap of [60,120,240,0]) {
+    const loaded=simulate({...options,maxFps:cap});
+    const idle=simulate({maxFps:cap});
+    assert.deepEqual(loaded.frames,idle.frames, `cap ${cap} must use the display clock`);
+    assert.equal(loaded.ticks,1280);
+  }
+});
+
+test('refresh estimate text describes browser load instead of a monitor FPS ceiling', () => {
+  const settings=patched['DCKWp-_u.js'];
+  assert.ok(!settings.includes('最高与显示器刷新率相同'));
+  assert.ok(!settings.includes('帧率等于显示器刷新率'));
+  const start=settings.indexOf('X=O(()=>{const _='),end=settings.indexOf(',me=O(',start);
+  assert.ok(start>0&&end>start);
+  const hint=vm.runInNewContext(settings.slice(start,end)+';X.value', {
+    O:get=>({get value(){return get();}}),a:{fpsFor:()=>125},t:{value:{renderEveryNthFrame:1}},
+  });
+  assert.match(hint,/当前实测值会随负载变化，并非显示器上限/);
+  assert.match(hint,/125/);
 });
 
 for (const cap of [60,120,144,165,240,0]) {

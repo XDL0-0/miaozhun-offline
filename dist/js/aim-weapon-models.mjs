@@ -240,7 +240,7 @@ export function createWeaponSelectionGate({selectionKey,load,apply,initialKey=nu
 
 // All Three.js types come from the existing renderer. There is one renderer,
 // one animation clock and one pair of hands, including left-handed viewmodels.
-export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,originals,stem,initial,environment,skins=skinPacks,loader=weaponModels}){
+export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,originals,stem,initial,environment,skins=skinPacks,loader=weaponModels,deferWorldUpdate=false}){
   const {Group,Geometry,Attribute,Bone,Skeleton,SkinnedMesh,Mesh,Material,Physical,Texture,DataTexture,half,rgba,equirect,linear,linearSrgb,Vector3,Quaternion,srgb,repeat}=types;
   const weapon=weaponOf(stem),nativeMeshes=originals.filter(Boolean);
   const armsScales=armsRig?.bones.map(b=>[b.scale.x,b.scale.y,b.scale.z]);
@@ -336,9 +336,11 @@ export function createWeaponAppearance({types,parent,baseRig,baseRest,armsRig,or
     }
     const active=current.motion?.update(state,blocked);
     current.group.userData.motion=active?.action??'idle';
-    // Skin actions can move the hand socket after the native rig was sampled.
-    // Refresh its ancestors before uploading the skin's world-space bone data.
-    current.group.updateWorldMatrix(true,true);current.skeleton.update();
+    // The native bridge updates the whole hand root immediately after this
+    // call, including the skin and any hand attachment. Its renderer uploads
+    // each shared skeleton once per frame. Standalone callers still need an
+    // immediate world/bone refresh for effects and review helpers.
+    if(!deferWorldUpdate){current.group.updateWorldMatrix(true,true);current.skeleton.update();}
   }
   const selected=loader.selectionKey(weapon);if(initial?.key===selected)swap(initial);
   const gate=createWeaponSelectionGate({selectionKey:()=>loader.selectionKey(weapon),load:()=>loader.load(weapon),apply(assets){swap(assets);update();},initialKey:current?.key??null});
