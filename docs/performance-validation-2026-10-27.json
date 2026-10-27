@@ -6,7 +6,9 @@
     "formalTestsPassed": 312,
     "stable240FpsDemonstrated": false,
     "wholeRunOnePercentLowImprovementDemonstrated": false,
-    "offlineFailures": []
+    "offlineFailures": [],
+    "offlineRequiredMissingCount": 0,
+    "offlineSuccess": true
   },
   "hardware": {
     "cpu": "AMD Ryzen 7 5800H",
