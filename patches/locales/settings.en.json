@@ -1577,5 +1577,7 @@
   "第一次上榜：第": "First Ranking: Rank",
   "名次没变": "Rank Unchanged",
   "比你上一次最好多": "More than your previous best by",
-  "分。": "points."
+  "分。": "points.",
+  "跟随浏览器刷新，调低可以省电、减少发热。当前实测值会随负载变化，并非显示器上限": "Follow the browser's refresh cadence. Lower settings save power and reduce heat. This measurement varies with load and is not your monitor's limit.",
+  "跟随浏览器刷新，实际帧率取决于负载": "Follow the browser's refresh cadence; actual FPS depends on load."
 }

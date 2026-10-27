@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {createRequire} from 'node:module';
+import {beginTrainingRenderStats} from './training-render-stats.mjs';
+import {beginTrainingRenderPhases} from './training-render-phases.mjs';
 const {parse}=createRequire(import.meta.url)('./vendor/acorn.cjs');
 const marker='/*__offlineTrainingFixture__*/';
 const sha=s=>crypto.createHash('sha256').update(s).digest('hex');
@@ -52,7 +54,7 @@ export function installTrainingFixture(root,restore=false){
  replace('function pd(){const E=ps();','function pd(){if(__aimFixture&&__aimFixture.startedAt!==null&&__aimFixture.tick>=Math.round(10/he)){__aimFixtureStop("completed-10s");return}const E=ps();');
  replace('onTick:md,onRender:yd,','onTick:__aimFixtureAllowed?__aimFixtureTick:md,onRender:__aimFixtureAllowed?__aimFixtureRender:yd,');
  replace('n.onPlayerFell?n.onPlayerFell():Ra();return','(__aimFixture?__aimFixtureStop("player-fell"):n.onPlayerFell?n.onPlayerFell():Ra());return');
- replace('const gd={get sceneSource()','if(__aimFixtureAllowed&&window.__offlineTrainingFixtureRegistry)window.__offlineTrainingFixtureRegistry.register({start:__aimFixtureStart,stop:()=>__aimFixtureStop("manual-stop"),snapshot:__aimFixtureSnapshot});const gd={get sceneSource()');
+ replace('const gd={get sceneSource()','if(__aimFixtureAllowed&&window.__offlineTrainingFixtureRegistry)window.__offlineTrainingFixtureRegistry.register({start:__aimFixtureStart,stop:()=>__aimFixtureStop("manual-stop"),snapshot:__aimFixtureSnapshot,graphicsPhase:__aimFixtureGraphicsPhase});const gd={get sceneSource()');
  replace('wd=()=>{__aimWarmGate.cancel','wd=()=>{if(__aimFixture)__aimFixtureStop("disposed");__aimWarmGate.cancel');
  const pdStart=source.indexOf('function pd(){'),pdEnd=source.indexOf('function hd(){',pdStart);
  if(pdStart<0||pdEnd<=pdStart)throw Error('Fixture native tick boundaries are missing');
@@ -71,6 +73,15 @@ export function installTrainingFixture(root,restore=false){
   ['hud-publish','dd(Ae.player,Be)'],
  ])timeReplace(expression,'__aimFixtureCall('+JSON.stringify(name)+',()=>'+expression+')');
  source=source.slice(0,pdStart)+pd+source.slice(pdEnd);
+ const renderStart=source.indexOf('function yd(E){'),renderEnd=source.indexOf('i.setMaxFramesInFlight(',renderStart);
+ if(renderStart<0||renderEnd<=renderStart)throw Error('Fixture native render boundaries are missing');
+ let render=source.slice(renderStart,renderEnd);
+ const renderReplace=(from,to)=>{if(render.split(from).length!==2)throw Error('Fixture render timing version anchor missing or ambiguous: '+from);render=render.replace(from,to);};
+ renderReplace('const oe=It(ke);','__aimFixtureRenderPhase("worldUpdate");const oe=It(ke);');
+ renderReplace('cn.apply(oe,Ht,le,vd(oe)),Ht=[];','__aimFixtureRenderPhase("actorPose"),cn.apply(oe,Ht,le,vd(oe)),__aimFixtureRenderPhase("worldUpdate"),Ht=[];');
+ renderReplace('i.render(),p.render(i.renderer),i.present()',
+  '__aimFixtureRenderPhase("sceneRender"),i.render(),__aimFixtureRenderPhase("flashRender"),p.render(i.renderer),__aimFixtureRenderPhase("present"),i.present()');
+ source=source.slice(0,renderStart)+render+source.slice(renderEnd);
  validate(source);
  fs.mkdirSync(path.dirname(backup),{recursive:true});fs.writeFileSync(backup,clean);fs.writeFileSync(file,source);
  const manifest={file,originalSha256:sha(clean),patchedSha256:sha(source),query:'__offlineProfile=1',kind:'deterministic fixture; not manual gameplay FPS'};
@@ -78,19 +89,25 @@ export function installTrainingFixture(root,restore=false){
 }
 function fixtureSource(){return `
 const __aimFixtureAllowed=typeof location!=="undefined"&&new URLSearchParams(location.search).get("__offlineProfile")==="1";
-let __aimFixture=null,__aimFixtureLast=null,__aimFixtureTainted=false,__aimFixtureTiming=null;
-function __aimFixtureSnapshot(){const f=__aimFixture??__aimFixtureLast;return f?{kind:"deterministic-fixture",active:!!__aimFixture,seed:f.seed,tick:f.tick,simulationSeconds:f.tick*he,startedAt:f.startedAt,endedAt:f.endedAt??null,reason:f.reason??null,phase:t.phase.current,weapon:qe(),fireHeldTicks:f.shots??0,nativeCpu:f.cpu,script:"0-.75 idle; .75-2 fire; 2.5 reload; 4 melee; 4.5-5.5 attack; 6 primary; 6.75 inspect; 8-9.5 fire; 10 stop",pointerLocked:!!document.pointerLockElement,scoreAndReplayDiscarded:true}:null}
+const __aimFixtureGpuTiming=typeof location==="undefined"||new URLSearchParams(location.search).get("__gpuTiming")!=="0";
+let __aimFixture=null,__aimFixtureLast=null,__aimFixtureTainted=false,__aimFixtureTiming=null,__aimFixtureRenderTiming=null,__aimFixtureGraphicsTiming=null;
+${beginTrainingRenderStats.toString()}
+${beginTrainingRenderPhases.toString()}
+function __aimFixtureRenderPhase(name){__aimFixtureRenderTiming?.mark(name)}
+function __aimFixtureGraphicsPhase(name){const frame=__aimFixtureGraphicsTiming;if(!frame)return;if(frame.active){frame.timing.mark(name);frame.active=name!==null}else if(name!==null){frame.timing.start(performance.now(),name);frame.active=true}}
+function __aimFixtureSnapshot(){const f=__aimFixture??__aimFixtureLast;return f?{kind:"deterministic-fixture",active:!!__aimFixture,seed:f.seed,tick:f.tick,simulationSeconds:f.tick*he,startedAt:f.startedAt,endedAt:f.endedAt??null,reason:f.reason??null,phase:t.phase.current,weapon:qe(),fireHeldTicks:f.shots??0,nativeCpu:f.cpu,gpuBackpressure:{start:f.gpuBackpressureStart??null,end:i.gpuBackpressureStats?.()??null},script:"0-.75 idle; .75-2 fire; 2.5 reload; 4 melee; 4.5-5.5 attack; 6 primary; 6.75 inspect; 8-9.5 fire; 10 stop",pointerLocked:!!document.pointerLockElement,scoreAndReplayDiscarded:true}:null}
 function __aimFixturePhase(name){const frame=__aimFixtureTiming;if(!frame)return;const at=performance.now(),f=frame.fixture;if(frame.name!==null){if(f.cpu.phase.length<24000)f.cpu.phase.push({at:frame.at,duration:at-frame.at,tick:f.tick,frameId:frame.id,phase:frame.name});else f.cpu.droppedPhases++}frame.name=name;frame.at=performance.now()}
 function __aimFixtureCall(name,callback){const frame=__aimFixtureTiming;if(!frame)return callback();const previous=frame.name;__aimFixturePhase(name);try{return callback()}finally{__aimFixturePhase(previous)}}
 function __aimFixtureTick(){const f=__aimFixture;if(!f||f.startedAt===null)return md();const at=performance.now(),frameId=++f.nextFrameId;__aimFixtureTiming={fixture:f,id:frameId,name:"tick-preamble",at};try{return md()}finally{__aimFixturePhase(null);__aimFixtureTiming=null;if(f.cpu.tick.length<2048)f.cpu.tick.push({at,duration:performance.now()-at,tick:f.tick,frameId});else f.cpu.droppedTicks++}}
-function __aimFixtureRender(alpha){const f=__aimFixture;if(!f||f.startedAt===null)return yd(alpha);const at=performance.now();try{return yd(alpha)}finally{if(f.cpu.render.length<4096)f.cpu.render.push({at,duration:performance.now()-at,tick:f.tick,programs:i.renderer.info.programs?.length??0,textures:i.renderer.info.memory?.textures??0,geometries:i.renderer.info.memory?.geometries??0});else f.cpu.droppedRenders++}}
-function __aimFixtureReady(){if(!__aimFixture||__aimFixture.startedAt!==null)return;nt=null;__aimFixture.startedAt=performance.now();window.__offlineTrainingFixtureRegistry?.event("running",__aimFixtureSnapshot())}
-function __aimFixtureStop(reason){const f=__aimFixture;if(!f)return;f.reason=reason;f.endedAt=performance.now();nt=null;for(const [key,value]of f.originals)te[key]=value;__aimFixture=null;__aimFixtureLast=f;n.onPhaseChange("paused");n.onSessionActive(false);te.setEnabled(false);te.setLookOnly(false);window.__offlineTrainingFixtureRegistry?.event("stopped",__aimFixtureSnapshot())}
+function __aimFixtureRender(alpha){const f=__aimFixture;if(!f||f.startedAt===null)return yd(alpha);const diagnosticAt=performance.now(),stats=beginTrainingRenderStats(i.renderer,{gpuTiming:__aimFixtureGpuTiming}),timing=beginTrainingRenderPhases(),graphics={timing:beginTrainingRenderPhases(),active:false},previousTiming=__aimFixtureRenderTiming,previousGraphics=__aimFixtureGraphicsTiming,at=performance.now();__aimFixtureRenderTiming=timing;__aimFixtureGraphicsTiming=graphics;timing.start(at);try{return yd(alpha)}finally{const endedAt=performance.now();__aimFixtureRenderTiming=previousTiming;__aimFixtureGraphicsTiming=previousGraphics;const phaseStats=timing.finish(endedAt),graphicsStats=graphics.timing.finish(endedAt),markerMs=phaseStats.instrumentationMs+graphicsStats.instrumentationMs,drawStats=stats.finish(),diagnosticDuration=at-diagnosticAt+performance.now()-endedAt+markerMs;if(phaseStats.phases.sceneRender!==undefined)phaseStats.phases.sceneRender=Math.max(0,phaseStats.phases.sceneRender-graphicsStats.instrumentationMs);if(f.cpu.render.length<4096)f.cpu.render.push({at,duration:Math.max(0,endedAt-at-markerMs),diagnosticDuration,phases:phaseStats.phases,graphicsPhases:graphicsStats.phases,tick:f.tick,drawStats,programs:i.renderer.info.programs?.length??0,textures:i.renderer.info.memory?.textures??0,geometries:i.renderer.info.memory?.geometries??0});else f.cpu.droppedRenders++}}
+function __aimFixtureReady(){if(!__aimFixture||__aimFixture.startedAt!==null)return;nt=null;__aimFixture.startedAt=performance.now();__aimFixture.gpuBackpressureStart=i.gpuBackpressureStats?.()??null;window.__offlineTrainingFixtureRegistry?.event("running",__aimFixtureSnapshot())}
+function __aimFixtureStop(reason){const f=__aimFixture;if(!f)return;f.reason=reason;f.endedAt=performance.now();beginTrainingRenderStats.dispose?.(i.renderer);nt=null;for(const [key,value]of f.originals)te[key]=value;__aimFixture=null;__aimFixtureLast=f;n.onPhaseChange("paused");n.onSessionActive(false);te.setEnabled(false);te.setLookOnly(false);window.__offlineTrainingFixtureRegistry?.event("stopped",__aimFixtureSnapshot())}
 function __aimFixtureStart(){
  if(!__aimFixtureAllowed)return {ok:false,reason:"query-required"};
  if(__aimFixture)return {ok:false,reason:"already-running"};
  if(t.session.current==="calibration"||t.session.current==="blind"||t.autoAim.current||t.rankedTicket?.current)return {ok:false,reason:"requires-unranked-training-without-autoaim"};
  if(document.pointerLockElement)return {ok:false,reason:"release-pointer-lock-first"};
+ beginTrainingRenderStats.dispose?.(i.renderer);
  const f={seed:20261020,tick:0,startedAt:null,nextFrameId:0,originals:[],shots:0,cpu:{tick:[],render:[],phase:[],droppedTicks:0,droppedRenders:0,droppedPhases:0}};__aimFixture=f;__aimFixtureTainted=true;
  const wrap=(key,fn)=>{f.originals.push([key,te[key]]);te[key]=fn};
  const neutral=()=>({forward:0,strafe:0,mouseDx:0,mouseDy:0,jump:false,crouch:false,walk:false,fire:false});

@@ -59,7 +59,10 @@ internal static class OfflineLauncher
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = edge,
-                    Arguments = "--app=" + AppUrl + " --no-first-run",
+                    Arguments = "--app=" + AppUrl + " --no-first-run"
+                        + " --disable-renderer-backgrounding"
+                        + " --disable-backgrounding-occluded-windows"
+                        + " --disable-background-timer-throttling",
                     WorkingDirectory = directory,
                     UseShellExecute = true
                 });

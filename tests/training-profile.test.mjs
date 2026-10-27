@@ -138,6 +138,67 @@ test('Native tick phase timings remain exclusive across nested calls and preserv
  assert.equal(api.call('outside-tick',()=>11),11,'A thrown native call must clear the phase timing context');
 });
 
+test('Query-only native onRender records all passes and restores counters after a thrown draw',t=>{
+ const root=temporaryRoot(t);installTrainingFixture(root);const probe=nativeFixtureContext(readNative(root),true),api=probe.context.api;
+ const info=probe.context.i.renderer.info,render={frame:11,calls:90,triangles:9000,points:0,lines:0};
+ const reset=function(){assert.equal(this,info);Object.assign(render,{calls:0,triangles:0,points:0,lines:0});};
+ Object.assign(info,{render,reset,autoReset:true});
+ api.start();probe.context.yd=()=>{
+  render.frame++;info.reset();render.calls=1200;render.triangles=800000;
+  render.frame++;info.reset();render.calls=5;render.triangles=3000;render.lines=2;
+  return 88;
+ };
+ assert.equal(api.render(.5),88);assert.equal(info.reset,reset);assert.equal(info.autoReset,true);
+ assert.deepEqual(JSON.parse(JSON.stringify(api.snapshot().nativeCpu.render[0].drawStats)),{calls:1205,triangles:803000,points:0,lines:2,renderPasses:2,counterResets:2,autoReset:true,gpuTimingSupported:false,gpuSamplesMs:[],gpuDisjoint:false,gpuQueryStarted:false});
+ assert.equal(render.frame,13);assert.equal(render.calls,5);
+ const error=new Error('native render');probe.context.yd=()=>{render.frame++;info.reset();render.calls=1;throw error;};
+ assert.throws(()=>api.render(.5),caught=>caught===error);assert.equal(info.reset,reset);
+ assert.equal(api.snapshot().nativeCpu.render[1].drawStats.calls,1);
+});
+
+test('native render CPU duration excludes both collector setup and finish instrumentation',t=>{
+ const root=temporaryRoot(t);installTrainingFixture(root);const probe=nativeFixtureContext(readNative(root),true),api=probe.context.api;
+ let clock=100;probe.context.performance.now=()=>clock;
+ const info=probe.context.i.renderer.info;
+ info.render={frame:10,get calls(){clock+=2;return 0;},triangles:0,points:0,lines:0};info.reset=()=>{};info.autoReset=true;
+ probe.context.i.renderer.getContext=()=>{clock+=100;return null;};
+ api.start();probe.context.yd=()=>{clock+=7;return 88;};assert.equal(api.render(.5),88);
+ const sample=api.snapshot().nativeCpu.render[0];assert.equal(sample.duration,7);assert.equal(sample.diagnosticDuration,104);
+});
+
+test('coarse native render phases stay exclusive and restore timing after an exception',t=>{
+ const root=temporaryRoot(t);installTrainingFixture(root);const source=readNative(root),probe=nativeFixtureContext(source,true),api=probe.context.api;
+ for(const name of ['worldUpdate','actorPose','sceneRender','flashRender','present'])assert.ok(source.includes('__aimFixtureRenderPhase('+JSON.stringify(name)+')'));
+ let clock=100;probe.context.performance.now=()=>clock;api.start();
+ probe.context.yd=()=>{
+  clock+=1;probe.context.__aimFixtureRenderPhase('worldUpdate');clock+=2;
+  probe.context.__aimFixtureRenderPhase('actorPose');clock+=3;probe.context.__aimFixtureRenderPhase('worldUpdate');clock+=4;
+  probe.context.__aimFixtureRenderPhase('sceneRender');clock+=5;probe.context.__aimFixtureRenderPhase('flashRender');clock+=6;
+  probe.context.__aimFixtureRenderPhase('present');clock+=7;return 88;
+ };
+ assert.equal(api.render(.5),88);let value=api.snapshot().nativeCpu.render[0];
+ assert.deepEqual(JSON.parse(JSON.stringify(value.phases)),{renderPreamble:1,worldUpdate:6,actorPose:3,sceneRender:5,flashRender:6,present:7});
+ assert.equal(value.duration,28);assert.equal(value.diagnosticDuration,0);
+ const error=new Error('native scene render');probe.context.yd=()=>{probe.context.__aimFixtureRenderPhase('sceneRender');clock+=2;throw error;};
+ assert.throws(()=>api.render(.5),caught=>caught===error);value=api.snapshot().nativeCpu.render[1];assert.equal(value.phases.sceneRender,2);
+ probe.context.__aimFixtureRenderPhase('outside');assert.equal(value.phases.outside,undefined);
+});
+
+test('graphics phase callbacks are confined to an active native render and restore after throws',t=>{
+ const root=temporaryRoot(t);installTrainingFixture(root);const probe=nativeFixtureContext(readNative(root),true),api=probe.context.api;
+ let clock=100;probe.context.performance.now=()=>clock;api.start();
+ const mark=probe.context.__aimFixtureGraphicsPhase;
+ probe.context.yd=()=>{probe.context.__aimFixtureRenderPhase('sceneRender');mark('localLights');clock+=2;mark('worldDraw');clock+=5;mark('viewModelDraw');clock+=3;mark(null);clock+=1;return 42;};
+ assert.equal(api.render(.5),42);
+ const sample=api.snapshot().nativeCpu.render[0];
+ assert.deepEqual(JSON.parse(JSON.stringify(sample.graphicsPhases)),{localLights:2,worldDraw:5,viewModelDraw:3});
+ assert.equal(sample.duration,11);assert.equal(sample.diagnosticDuration,0);
+ mark('outside');assert.equal(sample.graphicsPhases.outside,undefined);
+ const error=new Error('graphics draw');probe.context.yd=()=>{mark('worldDraw');clock+=4;throw error;};
+ assert.throws(()=>api.render(.5),caught=>caught===error);assert.equal(api.snapshot().nativeCpu.render[1].graphicsPhases.worldDraw,4);
+ mark('outside');assert.equal(api.snapshot().nativeCpu.render[1].graphicsPhases.outside,undefined);
+});
+
 test('Vue dispatch diagnostics observe errors before a swallowing parent and preserve the original error path',t=>{
  const root=temporaryRoot(t);installTrainingVueDiagnostics(root);const patched=readVue(root);
  const node=syntax(patched).body.find(node=>node.type==='FunctionDeclaration'&&node.id?.name==='$g');assert.ok(node);
@@ -166,12 +227,16 @@ test('Live diagnostics keep a small summary, stop all interval publishing, and c
  // Summing their phases against the first .9ms sample previously produced -7.1ms.
  raw.nativeCpu.tick.push({at:20000,duration:.9,tick:1280,frameId:2001},{at:20010,duration:7.1,tick:1280,frameId:2002},{at:21000,duration:39.2,tick:96,frameId:2003},{at:21100,duration:.2,tick:96,frameId:2004});
  raw.nativeCpu.phase.push({at:20000,duration:.9,tick:1280,frameId:2001,phase:'simulation'},{at:20010,duration:7.1,tick:1280,frameId:2002,phase:'tick-preamble'},{at:21000,duration:1.8,tick:96,frameId:2003,phase:'simulation'},{at:21001.8,duration:35.9,tick:96,frameId:2003,phase:'audio-fire'},{at:21037.7,duration:1.5,tick:96,frameId:2003,phase:'state-and-hud'},{at:21100,duration:.2,tick:96,frameId:2004,phase:'tick-preamble'});
+ for(const event of raw.nativeCpu.render)event.drawStats={calls:1205,triangles:803000,points:0,lines:2,renderPasses:3,counterResets:3,autoReset:true};
  const snapshot=()=>({...raw,nativeCpu:{...raw.nativeCpu}});
  context.__offlineTrainingFixtureRegistry.register({snapshot});context.__offlineTrainingFixtureRegistry.event('running',snapshot());
  for(const callback of intervals)callback();
  const summary=document.getElementById('training-profile-json'),full=document.getElementById('training-profile-full-json');
  assert.ok(summary.textContent.length<12000,'The accessible live JSON must stay small with full-size native buffers');
  assert.ok(JSON.parse(summary.textContent).fixture.nativeCpu.phase['audio-fire']);
+ assert.equal(JSON.parse(summary.textContent).fixture.nativeCpu.drawStats.calls.mean,1205);
+ assert.equal(JSON.parse(summary.textContent).fixture.nativeCpu.drawStats.triangles.p95,803000);
+ assert.equal(JSON.parse(summary.textContent).fixture.nativeCpu.drawStats.renderPasses.samples,4096);
  const grouped=JSON.parse(summary.textContent).fixture.nativeCpu.phaseTicks;
  assert.equal(grouped[0].tick,96);assert.equal(grouped[0].frameId,2003);assert.equal(grouped[0].totalCpuMs,39.2);assert.equal(grouped[0].accountedMs,39.2);
  assert.ok(grouped.every(frame=>frame.instrumentationAndUnattributedMs>=0),'Same-tick samples must not create negative unaccounted CPU');
