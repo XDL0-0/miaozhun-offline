@@ -4,11 +4,10 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
 import {readComparisonConfig,readComparisonSequence,readCompactionSequence,createComparisonWeaponBridge,writePerformanceComparison,executeComparisonQueue,comparisonDomButton,summarizeTrainingRenderSamples} from '../scripts/create-performance-comparison.mjs';
+import {writeLegacyPerformanceInput,legacyPerformanceSourceFiles} from './fixtures/legacy-performance-modules.mjs';
 const {parse}=createRequire(import.meta.url)('../scripts/vendor/acorn.cjs');
-const repository=fileURLToPath(new URL('../',import.meta.url));
 const digest=file=>fs.existsSync(file)?crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'):null;
 const query=name=>readComparisonConfig('?__offlineProfile=1&__performanceComparison=1&__comparisonCase='+name);
 
@@ -145,13 +144,13 @@ test('render report aggregates native draw counters and delayed finite GPU sampl
   assert.match(result.gpuMethod,/later frames/);
 });
 
-test('clean current production modules generate a separate overlay with fixture persistence guards and valid ESM',t=>{
+test('retained legacy modules generate a separate overlay with fixture persistence guards and valid ESM',t=>{
   const directory=fs.mkdtempSync(path.join(os.tmpdir(),'aim-performance-test-')),output=path.join(directory,'overlay');
   t.after(()=>{assert.equal(path.dirname(directory),path.resolve(os.tmpdir()));assert.ok(path.basename(directory).startsWith('aim-performance-test-'));fs.rmSync(directory,{recursive:true,force:true});});
-  const input=path.join(repository,'dist'),protectedFiles=['index.html','js/CymPR-fm.js','js/CFqO0zvx.js'].map(file=>path.join(input,file));
-  protectedFiles.push(path.join(repository,'qa-artifacts/training-profile-runtime.json'),path.join(repository,'qa-artifacts/training-profile-original-runtime.js'));
+  const input=writeLegacyPerformanceInput(path.join(directory,'input')),protectedFiles=['index.html','js/CymPR-fm.js','js/CFqO0zvx.js'].map(file=>path.join(input,file));
+  protectedFiles.push(...legacyPerformanceSourceFiles);
   const before=protectedFiles.map(digest),manifest=writePerformanceComparison({inputDir:input,outputDir:output});
-  assert.deepEqual(protectedFiles.map(digest),before,'production modules and existing diagnostic backups are untouched');
+  assert.deepEqual(protectedFiles.map(digest),before,'retained legacy sources and generated inputs are untouched');
   assert.equal(manifest.measured,false);assert.deepEqual(manifest.cases,['native','skin-full','skin-no-motion','skin-no-muzzle']);
   for(const file of ['js/CymPR-fm.js','js/CFqO0zvx.js','js/aim-comparison-weapon-models.mjs','__performance-comparison.mjs']){
     const source=fs.readFileSync(path.join(output,'dist',file),'utf8');parse(source,{ecmaVersion:'latest',sourceType:'module'});
@@ -169,10 +168,10 @@ test('clean current production modules generate a separate overlay with fixture 
   assert.throws(()=>writePerformanceComparison({inputDir:input,outputDir:output}),/already exists/);
 });
 
-test('isolated output rejects production paths reached through symlink parents',t=>{
+test('isolated output rejects legacy input paths reached through symlink parents',t=>{
  const directory=fs.mkdtempSync(path.join(os.tmpdir(),'aim-performance-alias-test-'));
  t.after(()=>fs.rmSync(directory,{recursive:true,force:true}));
- const input=path.join(repository,'dist'),alias=path.join(directory,'production-link');fs.symlinkSync(input,alias,'dir');
+ const input=writeLegacyPerformanceInput(path.join(directory,'input')),alias=path.join(directory,'input-link');fs.symlinkSync(input,alias,'dir');
  const child='diagnostic-must-not-exist-'+path.basename(directory),output=path.join(alias,child);
  assert.throws(()=>writePerformanceComparison({inputDir:input,outputDir:output}),/separate/);
  assert.equal(fs.existsSync(path.join(input,child)),false);

@@ -1,0 +1,1 @@
+const n=[{code:1,label:"国服"},{code:2,label:"亚服"},{code:3,label:"美服"},{code:4,label:"欧服"}],l=1;function c(e){const o=n.find(a=>a.code===e);return o?o.label:""}function r(e){return n.some(o=>o.code===e)?e:l}export{n as V,l as a,r as n,c as v};

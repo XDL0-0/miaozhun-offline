@@ -1,0 +1,1 @@
+import{r as b,ef as c,A as d}from'./index.FoQE3geO.js';const o=()=>{try{return localStorage['getItem'](c)==='light'?'light':'dark';}catch{return'dark';}},t=b(o());d(t,f=>{try{localStorage['setItem'](c,f);}catch{}});function g(){return{'theme':t,'toggle':()=>{t['value']=t['value']==='dark'?'light':'dark';}};}export{g as u};

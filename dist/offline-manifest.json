@@ -1,15 +1,19 @@
 {
   "app": "aim-offline",
-  "version": 4,
-  "originalVersion": "0.0.15",
-  "sceneCount": 62,
-  "originalSceneCount": 62,
+  "version": 5,
+  "engineBuild": "aimpro-2026-11-05",
+  "mapFormat": "VMP1",
+  "assetFormat": "versioned VSE2",
+  "sceneCount": 100,
   "maps": [
     "ascent",
     "bonsai",
+    "duality",
     "infinity",
     "jam",
+    "juliett",
     "plummet",
+    "rook",
     "triad"
   ],
   "network": "local-only",
@@ -19,27 +23,47 @@
     "en"
   ],
   "defaultLanguage": "zh-CN",
-  "performanceOptimizations": [
-    "adjacent-tick-interpolation",
-    "shared-hud-raf",
-    "local-fps-limit",
-    "scene-prewarm",
-    "stable-loadout-preparation",
-    "same-frame-bot-order",
-    "raf-timestamp-fps-limit",
-    "skin-bone-update-deduplication",
-    "bounded-stable-local-lights",
-    "idle-jett-canvas-compositing",
-    "nonempty-muzzle-layer-rendering",
-    "active-muzzle-buffer-uploads",
-    "empty-muzzle-emitter-fast-path",
-    "covered-hall-rendering-hidden",
-    "bounded-impact-tracer-pooling",
-    "static-map-instance-compaction"
-  ],
+  "storageCompatibility": {
+    "preservedLegacyKeys": [
+      "al-drill-runs-v1",
+      "al-hall-quick-start-v1",
+      "al-test-history-v3"
+    ],
+    "replay": {
+      "database": "aimlab-replay",
+      "stores": {
+        "index": "id",
+        "blob": "id"
+      },
+      "retainedLimit": 50
+    },
+    "studio": {
+      "database": "aimlab-studio",
+      "stores": {
+        "draft": null,
+        "scenes": "id"
+      },
+      "draftKey": "current",
+      "ownerKey": "current-owner"
+    },
+    "oldReplayPlayback": "Native keyframe interpolation on engine-version mismatch or detected kernel/keyframe drift; both releases use p7, so old recordings need not immediately enter interpolation and deterministic re-simulation is not promised."
+  },
+  "performanceOptimizations": {
+    "framerate": "Ported numeric browser cap, RAF timestamp, deadline tolerance; settings UI is integrated separately.",
+    "hud": "Ported shared display-clock queue and unchanged render-option gate. Native status widgets retained; old field-specific gates are not applied to new ability schemas.",
+    "botOrder": "Ported same-frame publish/subscribe and rendered actor offset for labels and aim lines; existing badge CSS patch is required.",
+    "world": "Ported stable light Top-K and inactive screen canvas hiding. Optional spatial regrouping/fence polling remains disabled.",
+    "renderAllocation": "Reuse renderer-local actor-ID scratch storage and write actor/camera scalar interpolation directly; retain snapshot, simulation, RNG and replay semantics.",
+    "instances": "Ported separate instance visibility compaction transform and active-viewport map resource leases.",
+    "muzzleLayer": "Ported visibility based on emitted geometry, preserving mask/order.",
+    "muzzleUpload": "Ported prefix update ranges and empty generator exit.",
+    "impactTracer": "Ported bounded impact Mesh/Material pool and retained warm entries; native shared atlas retained. Native new tracers already batch bounded geometry and upload active prefixes; old tracer visuals intentionally not restored.",
+    "interpolation": "Ported adjacent simulation snapshots for actors and camera XZ; native vertical stair smoothing and new held-weapon/ability state preserved.",
+    "prewarm": "Await tracked scene preparation, stable skin selection/audio and current model readiness before simulation starts. Native shader/map shadow warmup retained; first-wave actors retained and temporary skeletons released. Old loading UI/coordinator is not transplanted into new ability lifecycles.",
+    "actorPrewarm": "Ported reservation/commit/dispose pool without advancing simulation or RNG.",
+    "trainingHall": "Existing trainingHallVisibilityCss remains compatible; append in build."
+  },
   "skinPacks": {
-    "clientBridge": true,
-    "resourceStatus": "complete",
     "collections": 15,
     "themes": 20,
     "audio": 160,
@@ -58,5 +82,5 @@
     "variants": 4,
     "assets": 640
   },
-  "created": "2026-11-05T10:28:19.980Z"
+  "created": "2026-11-05T13:01:12.129Z"
 }

@@ -1,0 +1,4834 @@
+{
+  "formatVersion": 1,
+  "startedAt": "2026-11-05T10:46:07.532Z",
+  "completedAt": "2026-11-05T10:46:07.643Z",
+  "endpoint": "https://aimpro.world/prod-api/api/v1/public/val/aimlab/scenes/",
+  "mode": "offline-validation",
+  "settings": {
+    "concurrency": 4,
+    "retries": 2,
+    "timeoutMs": 25000
+  },
+  "catalog": {
+    "file": "/home/yuyuan/miaozhun-offline/upstream/aimpro-2026-11-05/workshop.json",
+    "sha256": "22239523c96d98e90c418e9150b5121e80c147e6af22145b18287fa2d8b413ab",
+    "scenes": 100
+  },
+  "baseline": {
+    "directory": "/home/yuyuan/miaozhun-offline/site/prod-api/api/v1/public/val/aimlab/scenes",
+    "scenes": 62,
+    "errors": []
+  },
+  "statusPolicy": "added/modified/unchanged compare canonical parsed scene documents by shareCode. Metadata and response hash differences are separate; live playCount does not make a document modified.",
+  "compatibilityPolicy": "Structural and enum differences are relative to captured baseline scenes, not proof that the old client rejects them. Raw fields are retained. Runtime support must be verified against client code.",
+  "statusCounts": {
+    "added": 38,
+    "modified": 1,
+    "unchanged": 61,
+    "failed": 0
+  },
+  "counts": {
+    "actorTemplates": 262,
+    "humanoidTemplates": 258,
+    "spawners": 1546,
+    "humanoidSpawners": 1542,
+    "fixedSpawners": 1434,
+    "dispatchers": 12,
+    "playerSpawnPoints": 100,
+    "spawnerPoints": 1546,
+    "actorSpatialPoints": 150,
+    "waypoints": 127,
+    "dispatcherPoints": 8,
+    "recordedTracks": 10,
+    "declaredTrackFrames": 14636
+  },
+  "perMap": {
+    "(custom)": {
+      "scenes": 6,
+      "added": 4,
+      "modified": 0,
+      "unchanged": 2,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 8,
+        "humanoidTemplates": 4,
+        "spawners": 4,
+        "humanoidSpawners": 0,
+        "fixedSpawners": 0,
+        "dispatchers": 2,
+        "playerSpawnPoints": 6,
+        "spawnerPoints": 4,
+        "actorSpatialPoints": 8,
+        "waypoints": 8,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    },
+    "ascent": {
+      "scenes": 16,
+      "added": 2,
+      "modified": 1,
+      "unchanged": 13,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 82,
+        "humanoidTemplates": 82,
+        "spawners": 210,
+        "humanoidSpawners": 210,
+        "fixedSpawners": 166,
+        "dispatchers": 4,
+        "playerSpawnPoints": 16,
+        "spawnerPoints": 210,
+        "actorSpatialPoints": 38,
+        "waypoints": 27,
+        "dispatcherPoints": 6,
+        "recordedTracks": 6,
+        "declaredTrackFrames": 9295
+      }
+    },
+    "bonsai": {
+      "scenes": 17,
+      "added": 0,
+      "modified": 0,
+      "unchanged": 17,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 35,
+        "humanoidTemplates": 35,
+        "spawners": 242,
+        "humanoidSpawners": 242,
+        "fixedSpawners": 224,
+        "dispatchers": 3,
+        "playerSpawnPoints": 17,
+        "spawnerPoints": 242,
+        "actorSpatialPoints": 42,
+        "waypoints": 39,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    },
+    "duality": {
+      "scenes": 8,
+      "added": 8,
+      "modified": 0,
+      "unchanged": 0,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 16,
+        "humanoidTemplates": 16,
+        "spawners": 144,
+        "humanoidSpawners": 144,
+        "fixedSpawners": 136,
+        "dispatchers": 0,
+        "playerSpawnPoints": 8,
+        "spawnerPoints": 144,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    },
+    "infinity": {
+      "scenes": 6,
+      "added": 0,
+      "modified": 0,
+      "unchanged": 6,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 14,
+        "humanoidTemplates": 14,
+        "spawners": 110,
+        "humanoidSpawners": 110,
+        "fixedSpawners": 94,
+        "dispatchers": 0,
+        "playerSpawnPoints": 6,
+        "spawnerPoints": 110,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    },
+    "jam": {
+      "scenes": 7,
+      "added": 1,
+      "modified": 0,
+      "unchanged": 6,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 21,
+        "humanoidTemplates": 21,
+        "spawners": 105,
+        "humanoidSpawners": 105,
+        "fixedSpawners": 103,
+        "dispatchers": 2,
+        "playerSpawnPoints": 7,
+        "spawnerPoints": 105,
+        "actorSpatialPoints": 13,
+        "waypoints": 9,
+        "dispatcherPoints": 2,
+        "recordedTracks": 2,
+        "declaredTrackFrames": 3447
+      }
+    },
+    "juliett": {
+      "scenes": 6,
+      "added": 6,
+      "modified": 0,
+      "unchanged": 0,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 12,
+        "humanoidTemplates": 12,
+        "spawners": 106,
+        "humanoidSpawners": 106,
+        "fixedSpawners": 100,
+        "dispatchers": 0,
+        "playerSpawnPoints": 6,
+        "spawnerPoints": 106,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    },
+    "plummet": {
+      "scenes": 9,
+      "added": 3,
+      "modified": 0,
+      "unchanged": 6,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 28,
+        "humanoidTemplates": 28,
+        "spawners": 169,
+        "humanoidSpawners": 169,
+        "fixedSpawners": 167,
+        "dispatchers": 0,
+        "playerSpawnPoints": 9,
+        "spawnerPoints": 169,
+        "actorSpatialPoints": 12,
+        "waypoints": 9,
+        "dispatcherPoints": 0,
+        "recordedTracks": 2,
+        "declaredTrackFrames": 1894
+      }
+    },
+    "rook": {
+      "scenes": 8,
+      "added": 8,
+      "modified": 0,
+      "unchanged": 0,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 16,
+        "humanoidTemplates": 16,
+        "spawners": 162,
+        "humanoidSpawners": 162,
+        "fixedSpawners": 158,
+        "dispatchers": 0,
+        "playerSpawnPoints": 8,
+        "spawnerPoints": 162,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    },
+    "triad": {
+      "scenes": 17,
+      "added": 6,
+      "modified": 0,
+      "unchanged": 11,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 30,
+        "humanoidTemplates": 30,
+        "spawners": 294,
+        "humanoidSpawners": 294,
+        "fixedSpawners": 286,
+        "dispatchers": 1,
+        "playerSpawnPoints": 17,
+        "spawnerPoints": 294,
+        "actorSpatialPoints": 37,
+        "waypoints": 35,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      }
+    }
+  },
+  "absentFromCatalog": [],
+  "scenes": [
+    {
+      "shareCode": "5a9e43d609bbb3a3",
+      "sceneKey": "ws-muxsursn-iw6qvu",
+      "name": "Boaster架枪训练（困难）",
+      "mapId": null,
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.021Z",
+      "documentSha256": "3ebd12b0db69b2c5c7474e43004f5f555e54cb8afc50150a960017f9c3d1c238",
+      "baselineDocumentSha256": "3ebd12b0db69b2c5c7474e43004f5f555e54cb8afc50150a960017f9c3d1c238",
+      "responseSha256": "f7f3ad71a2f6d291dc2ce40da4ce982371a6e5d959be89fc01a13d5b09b22f5a",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/5a9e43d609bbb3a3"
+    },
+    {
+      "shareCode": "026d12c2f102811b",
+      "sceneKey": "ws-mvcnxyfd-1gew8i9",
+      "name": "网格射击",
+      "mapId": null,
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:34.979Z",
+      "documentSha256": "a4383afda2ed335495b177d507833c31538194183fc2d44cca3fe9abf7ab5578",
+      "baselineDocumentSha256": null,
+      "responseSha256": "4bfc9b7e1274df187c56f919705e2fb8fa419e9a17c189e9fb7bf504e9d9018a",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/026d12c2f102811b"
+    },
+    {
+      "shareCode": "29d97300304f802d",
+      "sceneKey": "ws-muxsvcvz-12g70k7",
+      "name": "Boaster架枪训练（简单静步）",
+      "mapId": null,
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.059Z",
+      "documentSha256": "20541db6c0106d9fc481724f6c6349992bb57f80a3888187965e0a2396f280cf",
+      "baselineDocumentSha256": "20541db6c0106d9fc481724f6c6349992bb57f80a3888187965e0a2396f280cf",
+      "responseSha256": "32ba28b83c8bd48aefadcbb3c993cac0c18fda76ee867a05f51eb5307094a7fb",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/29d97300304f802d"
+    },
+    {
+      "shareCode": "887a651550f1bca1",
+      "sceneKey": "ws-mvej4bpf-4v2hxd",
+      "name": "六目标",
+      "mapId": null,
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:34.958Z",
+      "documentSha256": "4896340d5013fa247419b0f62ee420f5374b769486e375ce850a3071784f093b",
+      "baselineDocumentSha256": null,
+      "responseSha256": "bde130239ce237946902d9d68ab2cc9a6338f15f29f4a8934f16f436a40c2cf0",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/887a651550f1bca1"
+    },
+    {
+      "shareCode": "4ffa0e352c9c214d",
+      "sceneKey": "ws-mvejdnk3-xf47rx",
+      "name": "三目标",
+      "mapId": null,
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.196Z",
+      "documentSha256": "1fd09f0454ac1c8404534045ffca413eb320d7a53b43f15207d1bcb2227aabdd",
+      "baselineDocumentSha256": null,
+      "responseSha256": "1df34af5ca1586cecb4afbc50b7e4ef2f4ae52cb282195e23da70c786d36c288",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/4ffa0e352c9c214d"
+    },
+    {
+      "shareCode": "eb3733fc3a17896f",
+      "sceneKey": "ws-mvekhx2o-14y1h7x",
+      "name": "多目标连击",
+      "mapId": null,
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.214Z",
+      "documentSha256": "c9784ff440c28f039dc64d04d17dee22185344244b34fe512ffd13606e4ad419",
+      "baselineDocumentSha256": null,
+      "responseSha256": "29b4499ff17c60084f12bd116ea9c10711ded65f94b69dc00c6303e838b94b18",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/eb3733fc3a17896f"
+    },
+    {
+      "shareCode": "74c0e163b0ae79a2",
+      "sceneKey": "ws-munyg1t1-14rl4re",
+      "name": "s0pp无甲手枪名场面",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.339Z",
+      "documentSha256": "fa35a97d7e4b8e9bca28d6d0dce849e861b83256b1b51e3b95ebcbb2cf0b5e52",
+      "baselineDocumentSha256": "fa35a97d7e4b8e9bca28d6d0dce849e861b83256b1b51e3b95ebcbb2cf0b5e52",
+      "responseSha256": "8ba92a5be7ec265af477d63d5d4980a75d37428fd4bf2948a19a7772eba145f8",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/74c0e163b0ae79a2"
+    },
+    {
+      "shareCode": "888bb090ab427574",
+      "sceneKey": "ws-mvsbeuwp-dknrir",
+      "name": "困难-亚海悬城B防守混烟",
+      "mapId": "ascent",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.381Z",
+      "documentSha256": "e0096977190132aed13b460756d0ad09dc81650ca448fdc0dd5f3212c72d32c0",
+      "baselineDocumentSha256": null,
+      "responseSha256": "f8fcc5181d8db69a84686804533874124ec88d04bdda1a77c71e7bdfe95905e4",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/888bb090ab427574"
+    },
+    {
+      "shareCode": "e4ccbf9fcf247712",
+      "sceneKey": "ws-mvsbcu26-70y4wc",
+      "name": "简单-亚海悬城B防守混烟",
+      "mapId": "ascent",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.462Z",
+      "documentSha256": "7d422c9f89407564087ceaafbd03ea47ddcbe76e8193e1c1b8269d7c17985665",
+      "baselineDocumentSha256": null,
+      "responseSha256": "c859e92c94780337697a421e7d0bdd269aa739303adee2abb0cb99d7b7e518cc",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/e4ccbf9fcf247712"
+    },
+    {
+      "shareCode": "d5a8557a5d9537e3",
+      "sceneKey": "ws-mv8mn7bm-1jb66v5",
+      "name": "困难-空岛船坞抗压训练",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.496Z",
+      "documentSha256": "6e0c647c1263d00ef3eceaebd2aa5b382e22b5f8ba69b9425716d28f9b4efce3",
+      "baselineDocumentSha256": "6e0c647c1263d00ef3eceaebd2aa5b382e22b5f8ba69b9425716d28f9b4efce3",
+      "responseSha256": "2488dddd8240ec03300d03bff6971860098c2392199a0381462b352cf3a7b9dc",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/d5a8557a5d9537e3"
+    },
+    {
+      "shareCode": "c935a7a37b985842",
+      "sceneKey": "ws-mv8jqt5w-1n4vs8z",
+      "name": "困难-空岛B 中路回防包点预瞄",
+      "mapId": "ascent",
+      "status": "modified",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.576Z",
+      "documentSha256": "3f4a176512f952c01bb8df0e36090339e4de32ab65340d777bdaae69f6d0165f",
+      "baselineDocumentSha256": "d4a68fb6db039f3393faebf5b56b1e6f41bb0645f44cb14865cca53870c77144",
+      "responseSha256": "d984ccedc1723f96bdaf70c88296f609e980491eb0fe498d8dbbc355f4996540",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "sceneHash",
+        "docBytes",
+        "playCount",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/c935a7a37b985842"
+    },
+    {
+      "shareCode": "54145a349a983de4",
+      "sceneKey": "ws-mv8jpoyn-d9jxyn",
+      "name": "简单-空岛B 中路回防包点预瞄",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.678Z",
+      "documentSha256": "790b9d98aaf7e7db2424e101928993e21c420f1df6a64d57b4146796f911265e",
+      "baselineDocumentSha256": "790b9d98aaf7e7db2424e101928993e21c420f1df6a64d57b4146796f911265e",
+      "responseSha256": "3245d23dced0a2d5006d6f5426535dd2a04ecdaa820bee4ca46a21d57d241be6",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/54145a349a983de4"
+    },
+    {
+      "shareCode": "19c5ea522465b282",
+      "sceneKey": "ws-mv8i87bq-jges3m",
+      "name": "困难-空岛B CT回防包点预瞄",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.757Z",
+      "documentSha256": "137652c3599f637c442c3386ada3947f5cba8ab9c25b5d370b8132776fcfe2cd",
+      "baselineDocumentSha256": "137652c3599f637c442c3386ada3947f5cba8ab9c25b5d370b8132776fcfe2cd",
+      "responseSha256": "a41711d4662e119c01dbcaecf99a6bbd4aeec31cb311081447e1760210fc0d7c",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/19c5ea522465b282"
+    },
+    {
+      "shareCode": "49c858ec2fa5ae29",
+      "sceneKey": "ws-mv8i74mo-1vtq24j",
+      "name": "简单-空岛B CT回防包点预瞄",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.781Z",
+      "documentSha256": "7e74c3fa298852b298994f6321be8d55a6facccd41768dd3013f6e18ba61a0b0",
+      "baselineDocumentSha256": "7e74c3fa298852b298994f6321be8d55a6facccd41768dd3013f6e18ba61a0b0",
+      "responseSha256": "6b4c7b273afa6b943807c688c59f46a0d5b08f8f3430d6828ccb2ff86348223f",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/49c858ec2fa5ae29"
+    },
+    {
+      "shareCode": "24b56fc3bc3b6f89",
+      "sceneKey": "ws-mugq2hu1-1we5yz3",
+      "name": "困难-DDY预瞄训练中远上A小",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.861Z",
+      "documentSha256": "a312ba2b7eb58cda7fdb99fb929339123c694860f555c757a1f3c8ae1e24c52d",
+      "baselineDocumentSha256": "a312ba2b7eb58cda7fdb99fb929339123c694860f555c757a1f3c8ae1e24c52d",
+      "responseSha256": "89d3be5f89c1d623a0d0f25fbabd5a298f29820d9c0ee2acff26368a458f6640",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/24b56fc3bc3b6f89"
+    },
+    {
+      "shareCode": "b840a9b06efea122",
+      "sceneKey": "ws-mugq1wfj-ui0iwr",
+      "name": "简单-DDY预瞄训练中远上A小",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.979Z",
+      "documentSha256": "ff341bf498ba1896ef9d8550b0966153af3a0d3628fb17bfe01808519e226083",
+      "baselineDocumentSha256": "ff341bf498ba1896ef9d8550b0966153af3a0d3628fb17bfe01808519e226083",
+      "responseSha256": "8bc4a50c2b36b200f59ce5ba86e9426a22195bb6e9eda2e4493b85eac79c0c73",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/b840a9b06efea122"
+    },
+    {
+      "shareCode": "87a361b2c17e0042",
+      "sceneKey": "ws-mugpzo5b-1v7s6mt",
+      "name": "困难-DDY预瞄训练A大进攻路线",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.095Z",
+      "documentSha256": "2e450b3b956cfe9a4f444626c3a169119ee0e73691ba37d8f46e50c46e81bb91",
+      "baselineDocumentSha256": "2e450b3b956cfe9a4f444626c3a169119ee0e73691ba37d8f46e50c46e81bb91",
+      "responseSha256": "94f6982b48589f590306f35ece465d774a8e48777578ef6aa2a693837c88a735",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/87a361b2c17e0042"
+    },
+    {
+      "shareCode": "8bc169307d5a99cd",
+      "sceneKey": "ws-mugpz2un-1vonzom",
+      "name": "简单-DDY预瞄训练A大进攻路线",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:35.999Z",
+      "documentSha256": "56a2bba5b5f886f7019d08a86e5d79ebe4a003750314dfa0e413463e1b09582f",
+      "baselineDocumentSha256": "56a2bba5b5f886f7019d08a86e5d79ebe4a003750314dfa0e413463e1b09582f",
+      "responseSha256": "51644e428d84913124bd20c95673702b3e3e8d65bc74960666fbb8b1e05427d6",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/8bc169307d5a99cd"
+    },
+    {
+      "shareCode": "e61b0a6469c91bd9",
+      "sceneKey": "ws-mugps7y1-hda9n2",
+      "name": "简单-DDY预瞄训练B厅路线",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.101Z",
+      "documentSha256": "cd56db23a8a222cb56786377d4f40e06dfc43ab476c7366f6bec0aa59318ae01",
+      "baselineDocumentSha256": "cd56db23a8a222cb56786377d4f40e06dfc43ab476c7366f6bec0aa59318ae01",
+      "responseSha256": "e89f2efd92f8cad704826655a09e185276324339d92e71b248c407b17325c3a9",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/e61b0a6469c91bd9"
+    },
+    {
+      "shareCode": "391210d7bf192c0b",
+      "sceneKey": "ws-mugpqqk4-cjciq3",
+      "name": "困难-DDY预瞄训练B厅路线",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.274Z",
+      "documentSha256": "f5280c0b566c1561c418461c7676c71d736f7f83872e7d22308d9a01d60c3be4",
+      "baselineDocumentSha256": "f5280c0b566c1561c418461c7676c71d736f7f83872e7d22308d9a01d60c3be4",
+      "responseSha256": "03212c40400d3eefb22e8b1d3462ce7d32763e9861ec32eadc1922cc30dcaaad",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/391210d7bf192c0b"
+    },
+    {
+      "shareCode": "1a1342d870923895",
+      "sceneKey": "scene-463988257",
+      "name": "困难-B大进攻路线",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.267Z",
+      "documentSha256": "87c6307f7e58464c435083935889c28d90ba452e830620ee1ee4a86b9f623ff1",
+      "baselineDocumentSha256": "87c6307f7e58464c435083935889c28d90ba452e830620ee1ee4a86b9f623ff1",
+      "responseSha256": "53b77782b5079a00efc2f513e723a0d3e06fed561ae4727a45ae93754104c5a5",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/1a1342d870923895"
+    },
+    {
+      "shareCode": "1b597bb63a48bf26",
+      "sceneKey": "scene-769102058",
+      "name": "简单-A2 回防预瞄",
+      "mapId": "ascent",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.387Z",
+      "documentSha256": "1ea07b2242363ba52a1fd619f194229b9d3d1a0f6a42db962768753cc09f5086",
+      "baselineDocumentSha256": "1ea07b2242363ba52a1fd619f194229b9d3d1a0f6a42db962768753cc09f5086",
+      "responseSha256": "a3c1f5ddd3f7b8cdb69e5567e2508d249af0e4e8e2a73c962de03befa27da7ec",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/1b597bb63a48bf26"
+    },
+    {
+      "shareCode": "cb2431243b5643fd",
+      "sceneKey": "ws-mutiibpl-b10r1h",
+      "name": "霓虹厅A大架枪（优化版）",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.370Z",
+      "documentSha256": "0062cece29d7e07f77a6495084910c117081b6ebd574052b930803bf9ed82706",
+      "baselineDocumentSha256": "0062cece29d7e07f77a6495084910c117081b6ebd574052b930803bf9ed82706",
+      "responseSha256": "a023f92425aac7a45257c736d079db73ab19649822d5b15b2f2f947db0b003db",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/cb2431243b5643fd"
+    },
+    {
+      "shareCode": "bb7624010563ab6b",
+      "sceneKey": "ws-mva8cx8h-4byro8",
+      "name": "困难-霓虹町A包接人",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.567Z",
+      "documentSha256": "03f7ddda90ed02070dcda55e3a387869a286f404fe550b225cdeeaa210f43d8f",
+      "baselineDocumentSha256": "03f7ddda90ed02070dcda55e3a387869a286f404fe550b225cdeeaa210f43d8f",
+      "responseSha256": "36597b15dccf246dfd497d86ddcd777641bd287d97a27514af708e5b18d41748",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/bb7624010563ab6b"
+    },
+    {
+      "shareCode": "aa03a3989083b77f",
+      "sceneKey": "ws-mva6nh9c-x27flv",
+      "name": "困难-霓虹町B包回防2楼路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.553Z",
+      "documentSha256": "21ef307ba00b37fb45007bbba2f159ee6c9e47d83c8d31bf7bc9f06fafbf9f10",
+      "baselineDocumentSha256": "21ef307ba00b37fb45007bbba2f159ee6c9e47d83c8d31bf7bc9f06fafbf9f10",
+      "responseSha256": "9a35823317c7b28ce428751bb1586aa796b31502fb6e7decb6ba80986216ccef",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/aa03a3989083b77f"
+    },
+    {
+      "shareCode": "1260bffea8d85b5d",
+      "sceneKey": "ws-mva6mf8n-170i77m",
+      "name": "简单-霓虹町B包回防2楼路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.627Z",
+      "documentSha256": "f411def5f46575589c2f0c71f94379205390f88b7f25c1f787f1d427bc41f25f",
+      "baselineDocumentSha256": "f411def5f46575589c2f0c71f94379205390f88b7f25c1f787f1d427bc41f25f",
+      "responseSha256": "b36e0455c8566afb3fb659fb9dc801521c3d76bd2dba17f018893024991a813c",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/1260bffea8d85b5d"
+    },
+    {
+      "shareCode": "8439ab50a708a5b8",
+      "sceneKey": "ws-mva3lbcw-qrnxxm",
+      "name": "困难-霓虹町B包回防CT路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.690Z",
+      "documentSha256": "048cec77c2c3c496cfacc37d7ac3dae7a5ccc347253d470e261e7c88b938fdb6",
+      "baselineDocumentSha256": "048cec77c2c3c496cfacc37d7ac3dae7a5ccc347253d470e261e7c88b938fdb6",
+      "responseSha256": "9d67f66f899e7d01db33c42f79b073ca5ad724b406494a59028eb99d6a4971fc",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/8439ab50a708a5b8"
+    },
+    {
+      "shareCode": "426e2f8fa5e244b7",
+      "sceneKey": "ws-mva3kkn2-sk3aho",
+      "name": "简单-霓虹町B包回防CT路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.832Z",
+      "documentSha256": "8dca52eec2467e7fc3df811db3ef381d50de5432505f277bf3bb46a328f1ba13",
+      "baselineDocumentSha256": "8dca52eec2467e7fc3df811db3ef381d50de5432505f277bf3bb46a328f1ba13",
+      "responseSha256": "be6902b0a3193f89ccd01ce0964a60452aa7ee305a0339b64873b192abf5939c",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/426e2f8fa5e244b7"
+    },
+    {
+      "shareCode": "80444d4551b0ebcc",
+      "sceneKey": "ws-mv9pqdgx-n9guwo",
+      "name": "困难-霓虹町回防A包 铁板路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.836Z",
+      "documentSha256": "cf4ac0505549e497cf19259c170a575aca60fdc1ad73ca579d0f07699d6a59f3",
+      "baselineDocumentSha256": "cf4ac0505549e497cf19259c170a575aca60fdc1ad73ca579d0f07699d6a59f3",
+      "responseSha256": "77f7662fc7dc07ac117c9c112e2579ecfd3c912b02c45d5e35049c8ce15fcb38",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/80444d4551b0ebcc"
+    },
+    {
+      "shareCode": "1802435f5c7bd36c",
+      "sceneKey": "ws-mv9ppmmk-1usp51e",
+      "name": "简单-霓虹町回防A包 铁板路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:36.943Z",
+      "documentSha256": "a67024714bbc74933e1ece5f64ab752ffd63ea17440943c21168b2d0be14fda8",
+      "baselineDocumentSha256": "a67024714bbc74933e1ece5f64ab752ffd63ea17440943c21168b2d0be14fda8",
+      "responseSha256": "c6356f6ee2e88ece0206d7fa5580ee22cd8922b1feb5c41e11e8f54359d216b0",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/1802435f5c7bd36c"
+    },
+    {
+      "shareCode": "334c7b11c93f400f",
+      "sceneKey": "ws-mv9eu3kx-m0kwj7",
+      "name": "困难-霓虹町回防A包 ct路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.003Z",
+      "documentSha256": "bc2d80f050bb677188e053e47a559c60d6090f1924f29cc3982d326293e56a74",
+      "baselineDocumentSha256": "bc2d80f050bb677188e053e47a559c60d6090f1924f29cc3982d326293e56a74",
+      "responseSha256": "a7338757452f3cd307a0744bc674dacd5cb5d18d95bfc0eaa3930f3070a99174",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/334c7b11c93f400f"
+    },
+    {
+      "shareCode": "2bca4991b2ec434d",
+      "sceneKey": "ws-mv9esh0t-142yps3",
+      "name": "简单-霓虹町回防A包 ct路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.104Z",
+      "documentSha256": "d8347b545ec306965084da4e0054b3ac9bd4c2118cd826900465873a7766d16d",
+      "baselineDocumentSha256": "d8347b545ec306965084da4e0054b3ac9bd4c2118cd826900465873a7766d16d",
+      "responseSha256": "955efb98bef1caacf7e2d4997a4b5e84eca48b9dc93a6f29c71e40566ce2ceac",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/2bca4991b2ec434d"
+    },
+    {
+      "shareCode": "782614562cd94b22",
+      "sceneKey": "ws-muqvtair-1o8n7fs",
+      "name": "霓虹厅B二楼接包点",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.149Z",
+      "documentSha256": "681c6423342ef8d071c732f7ccaf895f9d0ddac24df013c65255d3f5443c4386",
+      "baselineDocumentSha256": "681c6423342ef8d071c732f7ccaf895f9d0ddac24df013c65255d3f5443c4386",
+      "responseSha256": "3a6c028176774e00871884b33e057e3e4be2ccff8e4ade194fcbdfee7d2a857c",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/782614562cd94b22"
+    },
+    {
+      "shareCode": "0a18b502eae99be7",
+      "sceneKey": "ws-munorksa-18xmtn",
+      "name": "困难-DDY预瞄教学A大进攻路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.210Z",
+      "documentSha256": "0411222cd90cd303c3416fafb678a804ae2cc3afe92ea8df1ccb9f860798828a",
+      "baselineDocumentSha256": "0411222cd90cd303c3416fafb678a804ae2cc3afe92ea8df1ccb9f860798828a",
+      "responseSha256": "34f3b5f94746640b76507a9feddd4967d444e6f96b90be6255e456b1d0a11e76",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/0a18b502eae99be7"
+    },
+    {
+      "shareCode": "42892b6f8794298d",
+      "sceneKey": "ws-munoqqfi-1hge385",
+      "name": "简单-DDY预瞄教学A大进攻路线",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.267Z",
+      "documentSha256": "479c4308ee5f895f3895df9023e538c62806e76322155f09b610489efa907ec2",
+      "baselineDocumentSha256": "479c4308ee5f895f3895df9023e538c62806e76322155f09b610489efa907ec2",
+      "responseSha256": "0ce65c2c824094a8ad746df4f5bc166e3229fb9257961a898b5a1c160305dc8a",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/42892b6f8794298d"
+    },
+    {
+      "shareCode": "a4ae10756361597b",
+      "sceneKey": "ws-munog3n1-p61dwj",
+      "name": "困难-DDY预瞄训练B厅进攻",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.385Z",
+      "documentSha256": "021241d753a2b56298c8a2d622246b408c422f08708adf696a3ff3b7ca7b56f6",
+      "baselineDocumentSha256": "021241d753a2b56298c8a2d622246b408c422f08708adf696a3ff3b7ca7b56f6",
+      "responseSha256": "5867b68bc35aef7355bee5a821465b64ef7cee3d292e9e5606602f292229178a",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/a4ae10756361597b"
+    },
+    {
+      "shareCode": "68251fbac9876edd",
+      "sceneKey": "ws-munofixe-1qygwcm",
+      "name": "简单-DDY预瞄训练B厅进攻",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.463Z",
+      "documentSha256": "95d8148631c86d1020d466ae6e8cba854ea2e3bfdfee876b9b9807a585ab09b2",
+      "baselineDocumentSha256": "95d8148631c86d1020d466ae6e8cba854ea2e3bfdfee876b9b9807a585ab09b2",
+      "responseSha256": "4ff7bb9c169ad6f29010fef7cb5b08d5116183efee849df8cf175303cf56410e",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/68251fbac9876edd"
+    },
+    {
+      "shareCode": "ea526db79d7c6ba9",
+      "sceneKey": "ws-munobp38-s1yre4",
+      "name": "困难-DDY 中路预瞄训练",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.492Z",
+      "documentSha256": "e1c1024f479e24b16a212db764f4c544926996e805efa6cf9a430c02803a1ffe",
+      "baselineDocumentSha256": "e1c1024f479e24b16a212db764f4c544926996e805efa6cf9a430c02803a1ffe",
+      "responseSha256": "eeb8b2f8a6da7c1bcad569e05efe2b482cb3baac2ae0fe18f7d816adfac3df4e",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/ea526db79d7c6ba9"
+    },
+    {
+      "shareCode": "ec10162a4e006ddc",
+      "sceneKey": "ws-munoarzu-16vsajh",
+      "name": "简单-DDY 中路预瞄训练",
+      "mapId": "bonsai",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.530Z",
+      "documentSha256": "8e47bfd86d03cc6f43cee47fe67a29f62305bee1ca77954831c483b70d917d0e",
+      "baselineDocumentSha256": "8e47bfd86d03cc6f43cee47fe67a29f62305bee1ca77954831c483b70d917d0e",
+      "responseSha256": "1e9fff97177e3908de14791a5b38e35b125b59f632c9a4dfeb4240796d31b9d3",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/ec10162a4e006ddc"
+    },
+    {
+      "shareCode": "896df6cdf4fca73b",
+      "sceneKey": "ws-mvg14sq5-6qdm03",
+      "name": "困难-源工重镇B大进攻预瞄",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.708Z",
+      "documentSha256": "f39fed311d5c6a6c3a38c851fde0e57e19adf4eaa3e0d194556bb4da9646411c",
+      "baselineDocumentSha256": null,
+      "responseSha256": "6c8bcea403e41428cb2e067ec704e26f7bc0466629034f46ee335baed8bbcde9",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/896df6cdf4fca73b"
+    },
+    {
+      "shareCode": "cceb421a7e3b0441",
+      "sceneKey": "ws-mvg13yfz-ju1kvo",
+      "name": "简单-源工重镇B大进攻预瞄",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.726Z",
+      "documentSha256": "4c89574765ff357198d392b4bceab8bc4d062f3dac63c0b2f899e41c6c7b3815",
+      "baselineDocumentSha256": null,
+      "responseSha256": "c2cdb37eb6cd30f3c817d474a05863e0f68d75dd904a35a98a103bea7887c1ae",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/cceb421a7e3b0441"
+    },
+    {
+      "shareCode": "ba1331641e33869b",
+      "sceneKey": "ws-mvg0nm1b-12ea2l4",
+      "name": "困难-源工重镇B 2楼进攻预瞄",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.784Z",
+      "documentSha256": "a3065e40325428a30058b224973d23a961430995f245067c6cb20fcd2ae251e8",
+      "baselineDocumentSha256": null,
+      "responseSha256": "9b050d2c24380cb85a63c992fcbd3a7e5774110aa4acf3a00002616996191557",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/ba1331641e33869b"
+    },
+    {
+      "shareCode": "5b3bac15f3823e5a",
+      "sceneKey": "ws-mvg0n3gr-1b7ydtv",
+      "name": "简单-源工重镇B 2楼进攻预瞄",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.809Z",
+      "documentSha256": "63bad5063498f7cf8083db9f7c6e2a86e76c2be63cc3800f595bbe749c9a7a62",
+      "baselineDocumentSha256": null,
+      "responseSha256": "ebabc3e37c1bd398cee37271cf2722d39eb8d2a91284ec05d8afa05d3a1a0d8d",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/5b3bac15f3823e5a"
+    },
+    {
+      "shareCode": "0663496eae588ad2",
+      "sceneKey": "ws-mvfjag0y-123k0eg",
+      "name": "困难-源工重镇A浴室进攻预瞄路线",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:37.994Z",
+      "documentSha256": "bdfb59ca451539a2691195f3f8fdf3b4275d123a68d305f63d17fcab75df2a6a",
+      "baselineDocumentSha256": null,
+      "responseSha256": "cd145fc8befb13dfaf5be956c4138d1fd015ff24d089505758cc3abdeee7b15f",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/0663496eae588ad2"
+    },
+    {
+      "shareCode": "34bc05fc77508a79",
+      "sceneKey": "ws-mvfj9xxl-1rg5o23",
+      "name": "简单-源工重镇A浴室进攻预瞄路线",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.011Z",
+      "documentSha256": "75d2abc806f9d26247fab23eb0d0e4fab78b3823feec2b3addfd2de5b7ae3055",
+      "baselineDocumentSha256": null,
+      "responseSha256": "78e4ba2528f7fa7d4b379afe817c0cf631e16d673958095150a1b939f19ffebc",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/34bc05fc77508a79"
+    },
+    {
+      "shareCode": "a5f55fd4b78ff0f1",
+      "sceneKey": "ws-mvfiqxzz-1fhvh7s",
+      "name": "困难-源工重镇A大进攻预瞄路线",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.051Z",
+      "documentSha256": "d162b65d7e6d24011440dac603f6eb33c02a30a0b94e8ca16a6598b93c828e11",
+      "baselineDocumentSha256": null,
+      "responseSha256": "b94ad4caef5df7f7feb3c0f11dd8a6556c2deb9c591711ef672ab00b91afef89",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/a5f55fd4b78ff0f1"
+    },
+    {
+      "shareCode": "9da50a5d6e9f75a6",
+      "sceneKey": "ws-mvfipy68-jptk45",
+      "name": "简单-源工重镇A大进攻预瞄路线",
+      "mapId": "duality",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.100Z",
+      "documentSha256": "7b5feb9d404f0f815d469913cce21f96cdf2af10c122d6ee90fc2db4ddceaf79",
+      "baselineDocumentSha256": null,
+      "responseSha256": "61b5312e190aa3dd66678a76803700c06efe0a6e79acd7c2c441c02a535d9faa",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/9da50a5d6e9f75a6"
+    },
+    {
+      "shareCode": "5e7181a5a97d2a8e",
+      "sceneKey": "ws-mv5ek7vw-1ecerpw",
+      "name": "困难-幽邃地窟中路预瞄 夹B",
+      "mapId": "infinity",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.321Z",
+      "documentSha256": "36eaf317563ba841ac13793eb144c34772c144914bbc2f26b1ecca2710f19800",
+      "baselineDocumentSha256": "36eaf317563ba841ac13793eb144c34772c144914bbc2f26b1ecca2710f19800",
+      "responseSha256": "2e75d41463f296e9fd3aa70278fab6b94ed51f8ae5a989ff7e452aff32fefb09",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/5e7181a5a97d2a8e"
+    },
+    {
+      "shareCode": "c0002648f8a2d1e4",
+      "sceneKey": "ws-mv5eivt2-17yp4xw",
+      "name": "简单-幽邃地窟中路预瞄 夹B",
+      "mapId": "infinity",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.331Z",
+      "documentSha256": "cc89c0337221d02e544ec8b51ab3366eeca74e9e4ec5d18ab30119b3c6bed88f",
+      "baselineDocumentSha256": "cc89c0337221d02e544ec8b51ab3366eeca74e9e4ec5d18ab30119b3c6bed88f",
+      "responseSha256": "70831626da5ddbb1aa33ea71c76b823ccde06d62171b40a8f9039b459cb47d3b",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/c0002648f8a2d1e4"
+    },
+    {
+      "shareCode": "becafa3cd2560b03",
+      "sceneKey": "ws-mv160gkx-ms265c",
+      "name": "困难-幽邃地窟B大进攻预瞄悬崖路线",
+      "mapId": "infinity",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.327Z",
+      "documentSha256": "16caafd40a712db2ceedff204270f27c265757657b04df3b8d2303157f3a3ced",
+      "baselineDocumentSha256": "16caafd40a712db2ceedff204270f27c265757657b04df3b8d2303157f3a3ced",
+      "responseSha256": "584c2488910aab50fc1da8e62267422d53a9edb615c78a73706079769eaacc69",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/becafa3cd2560b03"
+    },
+    {
+      "shareCode": "10d043eea1794c53",
+      "sceneKey": "ws-mv15zrap-134f28f",
+      "name": "简单-幽邃地窟B大进攻包点路线预瞄",
+      "mapId": "infinity",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.365Z",
+      "documentSha256": "75cea397299b9fac91953e9c89acd828edc29ffd2f2d053b7856ee414aa82362",
+      "baselineDocumentSha256": "75cea397299b9fac91953e9c89acd828edc29ffd2f2d053b7856ee414aa82362",
+      "responseSha256": "f9b6638a5484a8484d9bbd3e52a5e9105cc562bd3e9b53cdde95b386864b2f62",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/10d043eea1794c53"
+    },
+    {
+      "shareCode": "bcc026278b45c206",
+      "sceneKey": "ws-mv0tdetx-g3bfs",
+      "name": "困难-幽邃地窟A大预瞄路线",
+      "mapId": "infinity",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.662Z",
+      "documentSha256": "3fdff07645796736fe663fd79d9595c65dec9bb6e905e5ce26ba29d8a3a22b23",
+      "baselineDocumentSha256": "3fdff07645796736fe663fd79d9595c65dec9bb6e905e5ce26ba29d8a3a22b23",
+      "responseSha256": "c079fbbe6c7440a95a5d511c41761e7a9d01a1ebe411dd7f1926aaaf058965c2",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/bcc026278b45c206"
+    },
+    {
+      "shareCode": "36afa3da2e3134c5",
+      "sceneKey": "ws-mv0tcdkq-axlntw",
+      "name": "简单-幽邃地窟A大预瞄路线",
+      "mapId": "infinity",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.596Z",
+      "documentSha256": "8cde42f18c9777da67ba859a2e71af4449bc3ca12adfe4e70db225bfc5574909",
+      "baselineDocumentSha256": "8cde42f18c9777da67ba859a2e71af4449bc3ca12adfe4e70db225bfc5574909",
+      "responseSha256": "ebf1c637d5351b665747c8d08270e3422845cbf77ef6941619663e929f4a261a",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/36afa3da2e3134c5"
+    },
+    {
+      "shareCode": "9eee483b9d18e35a",
+      "sceneKey": "ws-mvwsa2xk-1eqc65l",
+      "name": "困难-莲花古城C包接人",
+      "mapId": "jam",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.597Z",
+      "documentSha256": "bc3a69cb2b383242c50ba1eee3b0e1eb9ae01ca5e708cc22b32c892ae8198638",
+      "baselineDocumentSha256": null,
+      "responseSha256": "543e2fe15c8170a923adf3b17f0b5a807ed2ace5d4f2696bd5f22e6ac647950e",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/9eee483b9d18e35a"
+    },
+    {
+      "shareCode": "e141b0dd0d7c5a65",
+      "sceneKey": "ws-muwszjzo-1qn1gmw",
+      "name": "困难-莲花古城DDY C大进攻预瞄",
+      "mapId": "jam",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.639Z",
+      "documentSha256": "9c9a945ef85a0031d9e6f64116f620731ee14fc4a6096a908017a9b2f8b80ff0",
+      "baselineDocumentSha256": "9c9a945ef85a0031d9e6f64116f620731ee14fc4a6096a908017a9b2f8b80ff0",
+      "responseSha256": "5b9388e973c33dbe4885ffbc443415d4bde8ee0065af710aae7a191f45c4521d",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/e141b0dd0d7c5a65"
+    },
+    {
+      "shareCode": "cea517f28f2a6503",
+      "sceneKey": "ws-muwsyjzm-14awhff",
+      "name": "简单-莲花古城DDY C大进攻预瞄",
+      "mapId": "jam",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.892Z",
+      "documentSha256": "1c42beeda30d1024424f8ef2523db2da9e09ddacae0e7ea54da60949e9f6e5fe",
+      "baselineDocumentSha256": "1c42beeda30d1024424f8ef2523db2da9e09ddacae0e7ea54da60949e9f6e5fe",
+      "responseSha256": "8df9683e0fc10075e12eb3c512e1923b1aef21fa379123fdc891b96907b96b6a",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/cea517f28f2a6503"
+    },
+    {
+      "shareCode": "35e58d677b59c90e",
+      "sceneKey": "ws-muwqvg40-4ynsov",
+      "name": "困难-莲花古城DDY B进攻预瞄",
+      "mapId": "jam",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.941Z",
+      "documentSha256": "33317b4da67689a434363788031d0c1789af15d536aa02a80e7d17ebce157194",
+      "baselineDocumentSha256": "33317b4da67689a434363788031d0c1789af15d536aa02a80e7d17ebce157194",
+      "responseSha256": "f6e6a2ed9204d29fb4752d24fa8cdfc46aebcd2b60a20f6b94e2eda59ea03bb6",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/35e58d677b59c90e"
+    },
+    {
+      "shareCode": "8493fc74ca8b261b",
+      "sceneKey": "ws-muwqrmao-1yhtz4q",
+      "name": "简单-莲花古城DDY B进攻预瞄",
+      "mapId": "jam",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.943Z",
+      "documentSha256": "2be65353bbd85cbc0f967962a81f186540fb372f6050997a7df5747cb2fa141e",
+      "baselineDocumentSha256": "2be65353bbd85cbc0f967962a81f186540fb372f6050997a7df5747cb2fa141e",
+      "responseSha256": "a6d698ba4fcbeb1bb19204b947a9e34bdfe6a7d1e79ab9422fc7f8ada7c78817",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/8493fc74ca8b261b"
+    },
+    {
+      "shareCode": "e759f847c60c90e5",
+      "sceneKey": "ws-muuawknr-1j9e6yh",
+      "name": "困难-莲花古城A大进攻（随机）",
+      "mapId": "jam",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:38.973Z",
+      "documentSha256": "bc50083363d355fb4528a9646abce8ff2e313b492e40476b8ca21a2762473c96",
+      "baselineDocumentSha256": "bc50083363d355fb4528a9646abce8ff2e313b492e40476b8ca21a2762473c96",
+      "responseSha256": "d7983006f3b015453a8b9afbc107065e92dd1f1fe67a9678a32d796b2d81b2a1",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/e759f847c60c90e5"
+    },
+    {
+      "shareCode": "789f9e6dc075e747",
+      "sceneKey": "ws-muuavo7p-1ux6g8o",
+      "name": "简单-莲花古城A大进攻",
+      "mapId": "jam",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.285Z",
+      "documentSha256": "efa8c08075ebe33e8243c470547f179851541c14318421ee6b273fc401b706d7",
+      "baselineDocumentSha256": "efa8c08075ebe33e8243c470547f179851541c14318421ee6b273fc401b706d7",
+      "responseSha256": "c34ff3ebd453d47115ba1f6f1299ebcc32960b1f2262f1db0c0583bc83a959e9",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/789f9e6dc075e747"
+    },
+    {
+      "shareCode": "382004b0566223b7",
+      "sceneKey": "ws-mvlj4aow-2cvdfx",
+      "name": "困难-日落之城A管进攻预瞄路线",
+      "mapId": "juliett",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.200Z",
+      "documentSha256": "0f5da4891b92019c267cff38dbfc08086100c8cf538b14c727984d918ce77063",
+      "baselineDocumentSha256": null,
+      "responseSha256": "e29d971ae529e6943ff28a2dce77bce0845d723f43435bcb84cc5d8dd4d38624",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/382004b0566223b7"
+    },
+    {
+      "shareCode": "4bbed18893e7142f",
+      "sceneKey": "ws-mvlj3ku7-19qgron",
+      "name": "简单-日落之城A管进攻预瞄路线",
+      "mapId": "juliett",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.212Z",
+      "documentSha256": "79972dad74a79b84381ff338e4e9d18d3aec3ca9e066978a1f5f152190872e1d",
+      "baselineDocumentSha256": null,
+      "responseSha256": "dbcee01925d8309c8dc5a45c38e3287c9d9bf2e88dfc9c4ce048d89e2cc77cf4",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/4bbed18893e7142f"
+    },
+    {
+      "shareCode": "377921a685c761aa",
+      "sceneKey": "ws-mvlhpd6m-1ln8c99",
+      "name": "困难-日落之城A小进攻预瞄路线",
+      "mapId": "juliett",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.239Z",
+      "documentSha256": "f4c926c2f55a033f05dc961e921f03f4d214c4eac9aee7e920ffcb07e4e125d4",
+      "baselineDocumentSha256": null,
+      "responseSha256": "3f6293a7d67be17d037c2c6bd31f0c1bc39341cba42ca3f2e535a38c6795a407",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/377921a685c761aa"
+    },
+    {
+      "shareCode": "b6d26bc36aab936c",
+      "sceneKey": "ws-mvlhotrm-179y2fg",
+      "name": "简单-日落之城A小进攻预瞄路线",
+      "mapId": "juliett",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.469Z",
+      "documentSha256": "8c042d4c945fea5a8175b07fb722c611ad8444195aac9debc2f608f3e35ddf9e",
+      "baselineDocumentSha256": null,
+      "responseSha256": "7ba4326a80f4b5b2a7fccb500a06d3c56eb3aeab0830d7346cd8cfdf8c91577f",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/b6d26bc36aab936c"
+    },
+    {
+      "shareCode": "03bd24fedb5bcd4c",
+      "sceneKey": "ws-mvlg7vj6-b84v4n",
+      "name": "困难-日落之城B大进攻预瞄路线",
+      "mapId": "juliett",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.506Z",
+      "documentSha256": "efe94b6366ad5f564e682621194698b396b3aeed1272a924b66b26284198bc79",
+      "baselineDocumentSha256": null,
+      "responseSha256": "c80cb67df8800086cf20a5387df8267790b52101b1e6321e9b7a0485f714be8f",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/03bd24fedb5bcd4c"
+    },
+    {
+      "shareCode": "0bde7807c506db39",
+      "sceneKey": "ws-mvlg7fv7-15gk5vo",
+      "name": "简单-日落之城B大进攻预瞄路线",
+      "mapId": "juliett",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.504Z",
+      "documentSha256": "d91114df582835ba46fac540e1283acd5dafc5076016e1529400c2ebd4a65882",
+      "baselineDocumentSha256": null,
+      "responseSha256": "5323e17bae6467f387ed2a03736550940ed735064910cd35198472ba6e0cdf11",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/0bde7807c506db39"
+    },
+    {
+      "shareCode": "52fcee29676cf60b",
+      "sceneKey": "ws-mvo4yu6h-1uzqdm0",
+      "name": "直面唯嘉的保安",
+      "mapId": "plummet",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.552Z",
+      "documentSha256": "c7728a3d83da8b4187738e5b767375fe8b55a8d87ac391e23a9d87d8baeee721",
+      "baselineDocumentSha256": null,
+      "responseSha256": "5e31e32565f3b9de92c173c058230a09841b21f986cb00a8e82c7064f8d8edf9",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/52fcee29676cf60b"
+    },
+    {
+      "shareCode": "6c28ed794c50b5ef",
+      "sceneKey": "ws-mvjq9qwg-qlz92o",
+      "name": "困难-天枢云阙中路进A",
+      "mapId": "plummet",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.806Z",
+      "documentSha256": "de9c4ebfe956a69cb29f3c029910d67b7d49e47fd5fa38ee74e890a9cbcad2ac",
+      "baselineDocumentSha256": null,
+      "responseSha256": "c7df5ab0de121aa2b74fffe08771bc2943059aa3583fa9779c11f169471ffbb8",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/6c28ed794c50b5ef"
+    },
+    {
+      "shareCode": "e2770bd10cafe096",
+      "sceneKey": "ws-mvjq90gz-45xj7f",
+      "name": "简单-天枢云阙中路进A",
+      "mapId": "plummet",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.769Z",
+      "documentSha256": "fc8004e96355103a7bef225432d196c4c679f79f2be5f73f0f2f4f46e052c81d",
+      "baselineDocumentSha256": null,
+      "responseSha256": "eeec7c6d3e7d9c0a8fd7a9951f20d2bff6584dbba5c28524d0aa9042f2e29273",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/e2770bd10cafe096"
+    },
+    {
+      "shareCode": "ff81533277dc43c8",
+      "sceneKey": "ws-muvhqle0-fje1x0",
+      "name": "困难-天枢云阙中路上B",
+      "mapId": "plummet",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.786Z",
+      "documentSha256": "340764b955e854b6d09f7f7a02e44369d54540d3aeb535a9503f89259c699153",
+      "baselineDocumentSha256": "340764b955e854b6d09f7f7a02e44369d54540d3aeb535a9503f89259c699153",
+      "responseSha256": "02386db683cfd42d5ad5831f6342077d049a5a44f1b9ac9882b2b25a39d9f545",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/ff81533277dc43c8"
+    },
+    {
+      "shareCode": "fdb3a73e5a32b2d9",
+      "sceneKey": "ws-muvhpu2c-1tldn9v",
+      "name": "简单-天枢云阙中路上B",
+      "mapId": "plummet",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:39.821Z",
+      "documentSha256": "3a73b4a505b650ce747f9b5398afef50514d6ab8262d338428a0365d92301f77",
+      "baselineDocumentSha256": "3a73b4a505b650ce747f9b5398afef50514d6ab8262d338428a0365d92301f77",
+      "responseSha256": "c2a24339a962cd1b8492ac5241e5149a854baf2cf77381899b57b23124b00960",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/fdb3a73e5a32b2d9"
+    },
+    {
+      "shareCode": "b69de2b10b5cfc06",
+      "sceneKey": "ws-muvb0cp4-g517tu",
+      "name": "困难-天枢云阙B大进攻（开枪）",
+      "mapId": "plummet",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.040Z",
+      "documentSha256": "8e3cd75a0ead2077a50e0cb98c885710db436ef1a2f2c8551e87476df953350e",
+      "baselineDocumentSha256": "8e3cd75a0ead2077a50e0cb98c885710db436ef1a2f2c8551e87476df953350e",
+      "responseSha256": "53f24330d68ca5688c1d5ce4179fc302c75b2528014a5a08c0b3877ca6e403ae",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/b69de2b10b5cfc06"
+    },
+    {
+      "shareCode": "75551c4e540ca4e8",
+      "sceneKey": "ws-muvaza0j-19rkfhj",
+      "name": "简单-天枢云阙B大进攻",
+      "mapId": "plummet",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.058Z",
+      "documentSha256": "247422fed53179986e5c75e392eaf09537e42b9630d0785815ba595e8cd59514",
+      "baselineDocumentSha256": "247422fed53179986e5c75e392eaf09537e42b9630d0785815ba595e8cd59514",
+      "responseSha256": "85098b1510b27db486eade19cb160d01edce7abc3ae747d204dc4004fb700b05",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/75551c4e540ca4e8"
+    },
+    {
+      "shareCode": "ba9af09e219369fd",
+      "sceneKey": "ws-muv4h48o-1j7cqpj",
+      "name": "困难-天枢云阙A大进攻预瞄",
+      "mapId": "plummet",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.148Z",
+      "documentSha256": "4fa0e867fd398ce09402db1be5ee7229667fc42b53e85b89f0e5d374778c4068",
+      "baselineDocumentSha256": "4fa0e867fd398ce09402db1be5ee7229667fc42b53e85b89f0e5d374778c4068",
+      "responseSha256": "9255a70467964def90a58d05635ed2562339550de8cd835d6125d9549c70dd98",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/ba9af09e219369fd"
+    },
+    {
+      "shareCode": "b212f6540b47679a",
+      "sceneKey": "ws-muv4fwkq-acg1z2",
+      "name": "简单-天枢云阙A大进攻预瞄",
+      "mapId": "plummet",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.125Z",
+      "documentSha256": "8d9f2dc611e7375567b1c527b55d4ce65cffc11e838d0f19145673f2c50d35b0",
+      "baselineDocumentSha256": "8d9f2dc611e7375567b1c527b55d4ce65cffc11e838d0f19145673f2c50d35b0",
+      "responseSha256": "cc33df03590ecfe51282851b72334abd3e8b1d5df29c428f0ec51339e5f5a443",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/b212f6540b47679a"
+    },
+    {
+      "shareCode": "f9b26b6cc3b9ac7b",
+      "sceneKey": "ws-mvfftyaw-1b5jaq2",
+      "name": "困难-盐海矿镇中路夹B进攻路线",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.250Z",
+      "documentSha256": "e56d9a5b14c1480e7eccdf004f4eb33739395e1013ed3a5ad45abbd342a2e9e6",
+      "baselineDocumentSha256": null,
+      "responseSha256": "505b3071c52f8863335acc56bf9db91b7e37eaec8e6c69883f7413bf48a424f8",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/f9b26b6cc3b9ac7b"
+    },
+    {
+      "shareCode": "1a8c351fd8b269c7",
+      "sceneKey": "ws-mvfft52w-1ozl5cm",
+      "name": "简单-盐海矿镇中路夹B进攻路线",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.327Z",
+      "documentSha256": "26ae58c9ada76ad6439700a3a28cec206e2fd7f40df63f124b3fc71fe7dd4833",
+      "baselineDocumentSha256": null,
+      "responseSha256": "63c7bd3de28a151086513b3f2430785b9e460a85e1eca6b6d69433f540eff405",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/1a8c351fd8b269c7"
+    },
+    {
+      "shareCode": "9a8227e19409af93",
+      "sceneKey": "ws-mve6c011-movdit",
+      "name": "困难-盐海矿镇进攻中路夹A预瞄路线",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.436Z",
+      "documentSha256": "d90ff9942cfde6945071fd984c0bcfb7c808b26f3420b8337488877ac8973969",
+      "baselineDocumentSha256": null,
+      "responseSha256": "676c0e77def183d1832b4a571144bc53f153a258fa9ca1f683e0f8275ec9c32f",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/9a8227e19409af93"
+    },
+    {
+      "shareCode": "4813a4333b9e69c9",
+      "sceneKey": "ws-mve6b7o8-13i304l",
+      "name": "简单-盐海矿镇进攻中路夹A预瞄路线",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.442Z",
+      "documentSha256": "2dcd75e6f976da41c7e8a1965c6c23cd63906c0860e65d54a1fed9403edbeb86",
+      "baselineDocumentSha256": null,
+      "responseSha256": "92e6a0460f98bfc38641241a802b405bf3a0b43d381d1c2b0cc5e9690cfde55a",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/4813a4333b9e69c9"
+    },
+    {
+      "shareCode": "7cdde140321c07dd",
+      "sceneKey": "ws-mvdr4tmz-r4i5k6",
+      "name": "困难-盐海矿镇A大进攻预瞄路线",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.534Z",
+      "documentSha256": "86d6dfae36a9ddd6e6e7ae523cc846ea483616bf4b056266c407ac54cbbb21ad",
+      "baselineDocumentSha256": null,
+      "responseSha256": "aa1d2cfe24ec6b1cff4a105c030a6aa687874b2c08436d3049d1785aebb75a55",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/7cdde140321c07dd"
+    },
+    {
+      "shareCode": "901ae2e9901e0828",
+      "sceneKey": "ws-mvdr42ap-18tvd5r",
+      "name": "简单-盐海矿镇A大进攻预瞄路线",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.968Z",
+      "documentSha256": "94ffbc74275956706196b3012b2627c2d971d296a8f55cb003c12a4fbf77e836",
+      "baselineDocumentSha256": null,
+      "responseSha256": "5c2036cf0bce42f76a303057abdaa27728e7ceb0901c0384a590aafdad154ff0",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/901ae2e9901e0828"
+    },
+    {
+      "shareCode": "74984ecaccc098f7",
+      "sceneKey": "ws-mvcxhp55-75wfve",
+      "name": "困难-盐海矿镇B大进攻预瞄",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.713Z",
+      "documentSha256": "7fd9109eba04adb152f4a49381b7033cb5d421442fcb8231d951c6e020633abf",
+      "baselineDocumentSha256": null,
+      "responseSha256": "bd219672ea4a869dc8cbba7e704fd040ae931c779f29f4a4a02797110caae18a",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/74984ecaccc098f7"
+    },
+    {
+      "shareCode": "0e62efa6521a28b5",
+      "sceneKey": "ws-mvcxh01v-1odat6j",
+      "name": "简单-盐海矿镇B大进攻预瞄",
+      "mapId": "rook",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.806Z",
+      "documentSha256": "eaca76dbbc30b4731a3c4dde246b96136a0bb95e613920a075094dac0afb038e",
+      "baselineDocumentSha256": null,
+      "responseSha256": "7f06433f8146a645e7afd0a3aeec6b3379b7ac59295c4185b624f2519433f459",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/0e62efa6521a28b5"
+    },
+    {
+      "shareCode": "8e3c439a53c4dc6b",
+      "sceneKey": "ws-muren0u9-ju78jn",
+      "name": "Erv 正义7秒5杀",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.747Z",
+      "documentSha256": "ed8fcdb2d7aecd6726250c1a8d95386f963962f7bb6b96df2548a08f33bdab16",
+      "baselineDocumentSha256": "ed8fcdb2d7aecd6726250c1a8d95386f963962f7bb6b96df2548a08f33bdab16",
+      "responseSha256": "8e90bd143a246ab3ca83d2bfa6ca03f19f1059194921074a6becf2d2fc9a93d0",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/8e3c439a53c4dc6b"
+    },
+    {
+      "shareCode": "0552daec0eb0acd6",
+      "sceneKey": "ws-mvin90tf-1591qf8",
+      "name": "困难-隐士修所A回防路线",
+      "mapId": "triad",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:40.930Z",
+      "documentSha256": "a1aa286a8d9b46c151483e5119cad5776c54497ddb8c967b3e7faeb337d89979",
+      "baselineDocumentSha256": null,
+      "responseSha256": "88ac33ff4dc2a8ac4f8a2eada137c96d4b319339a282c3d181ec88696110d06d",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/0552daec0eb0acd6"
+    },
+    {
+      "shareCode": "89a3a1ffa79f7087",
+      "sceneKey": "ws-mvin8an4-1p3r1x4",
+      "name": "简单-隐士修所A回防路线",
+      "mapId": "triad",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.018Z",
+      "documentSha256": "9230e91c70b3c4bf10fa9e926726663b0974e284cc0618647651e833fc156cd6",
+      "baselineDocumentSha256": null,
+      "responseSha256": "c854ea319e76f58615cd9b31d1c99a45ba2f9fa5b7d216ab9156dae139fa5919",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/89a3a1ffa79f7087"
+    },
+    {
+      "shareCode": "a8e16cabdc80bec8",
+      "sceneKey": "ws-mviimchh-o0x6lv",
+      "name": "困难-隐士修所C车库回防路线",
+      "mapId": "triad",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.079Z",
+      "documentSha256": "0e50ad28daa9e73fb80cd42365eb2ce3d0a2e0994ab3d2028b44b69f38c3a363",
+      "baselineDocumentSha256": null,
+      "responseSha256": "1772218b669e2a4a173d8077a70d603f88604f7b68c44c3a9e7210eaecd4fc2f",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/a8e16cabdc80bec8"
+    },
+    {
+      "shareCode": "a28996339800e808",
+      "sceneKey": "ws-mviilj5o-3y59c1",
+      "name": "简单-隐士修所C车库回防路线",
+      "mapId": "triad",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.211Z",
+      "documentSha256": "0f859ff387085bc8ce773d1d29b154287d95e1130387ef8cf3836049b91e3108",
+      "baselineDocumentSha256": null,
+      "responseSha256": "62efdefcacde59836087269fcd293a401e4aabfada75acd28245183eea8d7724",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/a28996339800e808"
+    },
+    {
+      "shareCode": "480a2f547c3fe153",
+      "sceneKey": "ws-mvih67yr-11f2tcm",
+      "name": "困难-隐士修所C回防CT路线",
+      "mapId": "triad",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.285Z",
+      "documentSha256": "d1bc11e46bdb45ae49a43a4e14a7e64fbf0b9fb91771dbeda9d496add07df1d7",
+      "baselineDocumentSha256": null,
+      "responseSha256": "1b0d024e166114337552d2d955634939c1adf3c673ba4a61f523d76161f24f83",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/480a2f547c3fe153"
+    },
+    {
+      "shareCode": "8aee2c1f82191394",
+      "sceneKey": "ws-mvih4yp0-1w2c2pk",
+      "name": "简单-隐士修所C回防 CT路线",
+      "mapId": "triad",
+      "status": "added",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.293Z",
+      "documentSha256": "5d81d2a1d52831b545abebc6bb6c41f478f2b94dfeec4e67822eb9c780d1841b",
+      "baselineDocumentSha256": null,
+      "responseSha256": "ce07bbfdb36981df0f7e4ba0e5def127a5c2f6ce2bc49143fdb142e9849b4a4a",
+      "responseChanged": null,
+      "changedMetadataFields": [
+        "shareCode",
+        "sceneKey",
+        "name",
+        "description",
+        "schemaVersion",
+        "sceneHash",
+        "docBytes",
+        "blockCount",
+        "playCount",
+        "authorUid",
+        "authorNickname",
+        "createTime",
+        "updateTime"
+      ],
+      "sourceFile": "scenes/8aee2c1f82191394"
+    },
+    {
+      "shareCode": "95db7dec27f4fb1c",
+      "sceneKey": "ws-muvezuw0-13uo6xy",
+      "name": "简单-遗落境地A包接人背闪",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.294Z",
+      "documentSha256": "361ed78bbb7771f91858905278e76a15003649b782182bc3d7f00a365deb5939",
+      "baselineDocumentSha256": "361ed78bbb7771f91858905278e76a15003649b782182bc3d7f00a365deb5939",
+      "responseSha256": "799acdbce0a90270fe870ef465dcfe480ab141d064e76c98ee4741d6ec5f52e6",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/95db7dec27f4fb1c"
+    },
+    {
+      "shareCode": "0d98806d4c5493c2",
+      "sceneKey": "ws-muu3bc2y-r1fqef",
+      "name": "困难-隐士修所DDY预瞄中路进攻车库（随机）",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.435Z",
+      "documentSha256": "702680b7bca4c28edc17f81ef97e3dd49fcec830617311673ca2ba42d736614c",
+      "baselineDocumentSha256": "702680b7bca4c28edc17f81ef97e3dd49fcec830617311673ca2ba42d736614c",
+      "responseSha256": "27a9949bbf31be3e1522be6e75a602f2b3439185e40afe8046c21e5e0ff5dcef",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/0d98806d4c5493c2"
+    },
+    {
+      "shareCode": "275f856ff0aadc98",
+      "sceneKey": "ws-muu3aee1-1n17v93",
+      "name": "简单-隐士修所DDY预瞄中路进攻车库",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:42.035Z",
+      "documentSha256": "b27a351a25c479b16d4332b1c7a22b4ed6eef3ddd48e3f97ee436e2c1905359d",
+      "baselineDocumentSha256": "b27a351a25c479b16d4332b1c7a22b4ed6eef3ddd48e3f97ee436e2c1905359d",
+      "responseSha256": "25a95a35bdbc10c00c1d6a696b25b6a2253fa830b30d6609af392e7d618a85e4",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/275f856ff0aadc98"
+    },
+    {
+      "shareCode": "03fb06bc6f0cfd56",
+      "sceneKey": "ws-muu1px3r-1f5cl52",
+      "name": "困难-隐士修所DDY C大进攻路线",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.578Z",
+      "documentSha256": "aaad4cb0fae0542cbeaec927ee006770c96f91eacecd899c3434ce42a93cf7f2",
+      "baselineDocumentSha256": "aaad4cb0fae0542cbeaec927ee006770c96f91eacecd899c3434ce42a93cf7f2",
+      "responseSha256": "09b882938ee68f5398340ca2b2d2a09cab962d647ae9ab50f7767c54a8ab9268",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/03fb06bc6f0cfd56"
+    },
+    {
+      "shareCode": "6973bd707a594514",
+      "sceneKey": "ws-muu1p8cn-x5flf2",
+      "name": "简单-隐士修所DDY C大进攻路线",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.559Z",
+      "documentSha256": "7ba8c8d8a28f08b089e4519f12cb87ea1c60d536e29a309515fda5ffb1aecb34",
+      "baselineDocumentSha256": "7ba8c8d8a28f08b089e4519f12cb87ea1c60d536e29a309515fda5ffb1aecb34",
+      "responseSha256": "85590d773d9f66311e9ea7676e1d7f63b737e3d6dd843bb966b00e1acc3242c5",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/6973bd707a594514"
+    },
+    {
+      "shareCode": "f4dd449a25c0afdf",
+      "sceneKey": "ws-mutrpqkk-1faarzo",
+      "name": "困难-隐士修所DDY预瞄A小进攻",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.703Z",
+      "documentSha256": "6ce57da971cc7535f2da52d530442832ddd9e1f16040a459f48ab6d2d631a86e",
+      "baselineDocumentSha256": "6ce57da971cc7535f2da52d530442832ddd9e1f16040a459f48ab6d2d631a86e",
+      "responseSha256": "6fe8e24263fb641e2045fe7b10670f870dc2c6f9a85a0b3cba8e9ae617504531",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/f4dd449a25c0afdf"
+    },
+    {
+      "shareCode": "17b1d2dfe79fd055",
+      "sceneKey": "ws-mutrp3yc-1hzr16v",
+      "name": "简单-隐士修所DDY预瞄A小进攻",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.824Z",
+      "documentSha256": "d0ef71cd60ea10bed78ba7f89b68525f4889a6407e523ba3e4e8295b9d1d1e21",
+      "baselineDocumentSha256": "d0ef71cd60ea10bed78ba7f89b68525f4889a6407e523ba3e4e8295b9d1d1e21",
+      "responseSha256": "3ed36991726a7714a9cc8030d7ef17d3ce4decf7238d9e0efa42a06f5ab3b22f",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/17b1d2dfe79fd055"
+    },
+    {
+      "shareCode": "935efd2987c64ad4",
+      "sceneKey": "ws-murzzj1d-aflqu2",
+      "name": "困难-遗落境地DDY A大进攻预瞄（随机）",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.859Z",
+      "documentSha256": "aae74253672aa3251d47f7e65c6cc2aa5fa9e9feb1fbc061537642472c1579c0",
+      "baselineDocumentSha256": "aae74253672aa3251d47f7e65c6cc2aa5fa9e9feb1fbc061537642472c1579c0",
+      "responseSha256": "2127168cd77f091b7e6becf248ede24000666c9324dc9287406fda792f85f5ee",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/935efd2987c64ad4"
+    },
+    {
+      "shareCode": "afcbc73b0048afcc",
+      "sceneKey": "ws-mur5j295-jdqdsi",
+      "name": "困难-遗落境地DDY A大进攻预瞄（开枪）",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:41.993Z",
+      "documentSha256": "00e708f634bfe27fa1a77cd1e712d0948e9d1f7b15724db27ec60c280fa43be8",
+      "baselineDocumentSha256": "00e708f634bfe27fa1a77cd1e712d0948e9d1f7b15724db27ec60c280fa43be8",
+      "responseSha256": "57a231c384db111fc7ead87835fc5a45fc705422e62733590d6438f24d70dbd6",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/afcbc73b0048afcc"
+    },
+    {
+      "shareCode": "46029355cfd99cf1",
+      "sceneKey": "ws-mur5hmk9-1m45dgv",
+      "name": "简单-遗落境地DDY A大进攻预瞄",
+      "mapId": "triad",
+      "status": "unchanged",
+      "acquisition": "captured-file",
+      "attempts": 0,
+      "fetchedAt": "2026-11-05T10:38:42.092Z",
+      "documentSha256": "5884247303277cdf4c25b517123e6367c55b7a648fe0fd7dd8a69bd9a49f4e82",
+      "baselineDocumentSha256": "5884247303277cdf4c25b517123e6367c55b7a648fe0fd7dd8a69bd9a49f4e82",
+      "responseSha256": "ac000ad4cc92bfe59896bfd6472a3d1a19e7f437c7df0a9024145e86305cf837",
+      "responseChanged": true,
+      "changedMetadataFields": [
+        "playCount"
+      ],
+      "sourceFile": "scenes/46029355cfd99cf1"
+    }
+  ],
+  "compatibility": {
+    "issues": [
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/ads",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/air",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "9eee483b9d18e35a"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/crouch",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/pitch",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/shots",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/swaps",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/swaps/*",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/x",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/y",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/yaw",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/z",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables",
+        "detail": {
+          "types": [
+            "array"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/perfectAccuracy",
+        "detail": {
+          "types": [
+            "boolean"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/sova/reconBolt",
+        "detail": {
+          "types": [
+            "boolean"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/sova/unlimited",
+        "detail": {
+          "types": [
+            "boolean"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/swaps/*/*",
+        "detail": {
+          "types": [
+            "number",
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/growTime",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/lifetime",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/minScale",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/ads/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/air/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "9eee483b9d18e35a"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/crouch/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/from/x",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/from/y",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/from/yaw",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/from/z",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/n",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/pitch/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/shots/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/v",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/x/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/y/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/yaw/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/z/*",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/body/radius",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/dispatchers/*/routes/*/at/x",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/dispatchers/*/routes/*/at/y",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/dispatchers/*/routes/*/at/z",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/dispatchers/*/routes/*/rotationY",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/environment/lightingVersion",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "03bd24fedb5bcd4c",
+          "0552daec0eb0acd6",
+          "0663496eae588ad2",
+          "0bde7807c506db39",
+          "1a8c351fd8b269c7",
+          "34bc05fc77508a79",
+          "377921a685c761aa",
+          "382004b0566223b7",
+          "480a2f547c3fe153",
+          "4bbed18893e7142f",
+          "52fcee29676cf60b",
+          "5b3bac15f3823e5a",
+          "888bb090ab427574",
+          "896df6cdf4fca73b",
+          "89a3a1ffa79f7087",
+          "8aee2c1f82191394",
+          "9da50a5d6e9f75a6",
+          "9eee483b9d18e35a",
+          "a28996339800e808",
+          "a5f55fd4b78ff0f1",
+          "a8e16cabdc80bec8",
+          "b6d26bc36aab936c",
+          "ba1331641e33869b",
+          "cceb421a7e3b0441",
+          "e4ccbf9fcf247712",
+          "f9b26b6cc3b9ac7b"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/props/*/life",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/expiredPenalty",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*/max",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*/min",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*/step",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/spawners/*/columns",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/spawners/*/minAngularGap",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/spawners/*/minAngularGapFromPrevious",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "4ffa0e352c9c214d",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/spawners/*/minShowGap",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/spawners/*/rows",
+        "detail": {
+          "types": [
+            "number"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track",
+        "detail": {
+          "types": [
+            "object"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/from",
+        "detail": {
+          "types": [
+            "object"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/dispatchers/*/routes/*/at",
+        "detail": {
+          "types": [
+            "object"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/sova",
+        "detail": {
+          "types": [
+            "object"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*",
+        "detail": {
+          "types": [
+            "object"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/end",
+        "detail": {
+          "types": [
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "888bb090ab427574",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/fire",
+        "detail": {
+          "types": [
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/actors/*/behaviors/*/track/weapon",
+        "detail": {
+          "types": [
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*/field",
+        "detail": {
+          "types": [
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*/id",
+        "detail": {
+          "types": [
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-field",
+        "jsonPointer": "/rules/tunables/*/label",
+        "detail": {
+          "types": [
+            "string"
+          ]
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "888bb090ab427574",
+          "e4ccbf9fcf247712",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/actors/*/behaviors/*/kind",
+        "detail": {
+          "value": "decay"
+        },
+        "shareCodes": [
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/environment/map",
+        "detail": {
+          "value": "duality"
+        },
+        "shareCodes": [
+          "0663496eae588ad2",
+          "34bc05fc77508a79",
+          "5b3bac15f3823e5a",
+          "896df6cdf4fca73b",
+          "9da50a5d6e9f75a6",
+          "a5f55fd4b78ff0f1",
+          "ba1331641e33869b",
+          "cceb421a7e3b0441"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/spawners/*/kind",
+        "detail": {
+          "value": "grid"
+        },
+        "shareCodes": [
+          "026d12c2f102811b"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/environment/map",
+        "detail": {
+          "value": "juliett"
+        },
+        "shareCodes": [
+          "03bd24fedb5bcd4c",
+          "0bde7807c506db39",
+          "377921a685c761aa",
+          "382004b0566223b7",
+          "4bbed18893e7142f",
+          "b6d26bc36aab936c"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/environment/map",
+        "detail": {
+          "value": "rook"
+        },
+        "shareCodes": [
+          "0e62efa6521a28b5",
+          "1a8c351fd8b269c7",
+          "4813a4333b9e69c9",
+          "74984ecaccc098f7",
+          "7cdde140321c07dd",
+          "901ae2e9901e0828",
+          "9a8227e19409af93",
+          "f9b26b6cc3b9ac7b"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/actors/*/body/shape",
+        "detail": {
+          "value": "sphere"
+        },
+        "shareCodes": [
+          "026d12c2f102811b",
+          "4ffa0e352c9c214d",
+          "887a651550f1bca1",
+          "eb3733fc3a17896f"
+        ]
+      },
+      {
+        "kind": "new-enum-value",
+        "jsonPointer": "/actors/*/behaviors/*/kind",
+        "detail": {
+          "value": "take"
+        },
+        "shareCodes": [
+          "52fcee29676cf60b",
+          "888bb090ab427574",
+          "9eee483b9d18e35a",
+          "e4ccbf9fcf247712"
+        ]
+      }
+    ],
+    "baselineSchema": {
+      "": [
+        "object"
+      ],
+      "/actors": [
+        "array"
+      ],
+      "/actors/*": [
+        "object"
+      ],
+      "/actors/*/behaviors": [
+        "array"
+      ],
+      "/actors/*/behaviors/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/aimErrorDeg": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/cadence": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/counterStrafe": [
+        "boolean"
+      ],
+      "/actors/*/behaviors/*/delay": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/delay/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/difficulty": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/dwell": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/dwell/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/engage": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/fireInterval": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/fireInterval/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/flashStops/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/agent": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/at": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/curve": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target/x": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target/y": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target/z": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/wait": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/height": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/interval": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/interval/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/killImmediate": [
+        "boolean"
+      ],
+      "/actors/*/behaviors/*/kind": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/legSpeeds": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/legSpeeds/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/legSpeeds/*/at": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/legSpeeds/*/speed": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/maxRangeM": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/mode": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/pauses": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/pauses/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/pauses/*/at": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/pauses/*/wait": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/reaction": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/reaction/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/respawn": [
+        "boolean"
+      ],
+      "/actors/*/behaviors/*/resumeDelay": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/resumeDelay/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/speed": [
+        "array",
+        "number"
+      ],
+      "/actors/*/behaviors/*/speed/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/travel": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/travel/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/waypoints": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/waypoints/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/waypoints/*/x": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/waypoints/*/y": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/waypoints/*/z": [
+        "number"
+      ],
+      "/actors/*/body": [
+        "object"
+      ],
+      "/actors/*/body/bodyHeight": [
+        "number"
+      ],
+      "/actors/*/body/bodyWidth": [
+        "number"
+      ],
+      "/actors/*/body/dropWeapon": [
+        "boolean"
+      ],
+      "/actors/*/body/headSize": [
+        "number"
+      ],
+      "/actors/*/body/look": [
+        "string"
+      ],
+      "/actors/*/body/motion": [
+        "string"
+      ],
+      "/actors/*/body/shape": [
+        "string"
+      ],
+      "/actors/*/body/weapon": [
+        "string"
+      ],
+      "/actors/*/color": [
+        "string"
+      ],
+      "/actors/*/health": [
+        "number"
+      ],
+      "/actors/*/hitSlow": [
+        "boolean"
+      ],
+      "/actors/*/id": [
+        "string"
+      ],
+      "/actors/*/name": [
+        "string"
+      ],
+      "/blocks": [
+        "array"
+      ],
+      "/blocks/*": [
+        "object"
+      ],
+      "/blocks/*/bulletCollidable": [
+        "boolean"
+      ],
+      "/blocks/*/collidable": [
+        "boolean"
+      ],
+      "/blocks/*/color": [
+        "string"
+      ],
+      "/blocks/*/id": [
+        "string"
+      ],
+      "/blocks/*/openFaces": [
+        "array"
+      ],
+      "/blocks/*/openFaces/*": [
+        "string"
+      ],
+      "/blocks/*/position": [
+        "object"
+      ],
+      "/blocks/*/position/x": [
+        "number"
+      ],
+      "/blocks/*/position/y": [
+        "number"
+      ],
+      "/blocks/*/position/z": [
+        "number"
+      ],
+      "/blocks/*/rotationY": [
+        "number"
+      ],
+      "/blocks/*/shape": [
+        "string"
+      ],
+      "/blocks/*/size": [
+        "object"
+      ],
+      "/blocks/*/size/x": [
+        "number"
+      ],
+      "/blocks/*/size/y": [
+        "number"
+      ],
+      "/blocks/*/size/z": [
+        "number"
+      ],
+      "/blocks/*/transparent": [
+        "boolean"
+      ],
+      "/dispatchers": [
+        "array"
+      ],
+      "/dispatchers/*": [
+        "object"
+      ],
+      "/dispatchers/*/faceTarget": [
+        "boolean"
+      ],
+      "/dispatchers/*/id": [
+        "string"
+      ],
+      "/dispatchers/*/interval": [
+        "array"
+      ],
+      "/dispatchers/*/interval/*": [
+        "number"
+      ],
+      "/dispatchers/*/maxAlive": [
+        "number"
+      ],
+      "/dispatchers/*/name": [
+        "string"
+      ],
+      "/dispatchers/*/order": [
+        "string"
+      ],
+      "/dispatchers/*/routes": [
+        "array"
+      ],
+      "/dispatchers/*/routes/*": [
+        "object"
+      ],
+      "/dispatchers/*/routes/*/streak": [
+        "array"
+      ],
+      "/dispatchers/*/routes/*/streak/*": [
+        "number"
+      ],
+      "/dispatchers/*/routes/*/templateId": [
+        "string"
+      ],
+      "/dispatchers/*/total": [
+        "number"
+      ],
+      "/environment": [
+        "object"
+      ],
+      "/environment/ambientIntensity": [
+        "number"
+      ],
+      "/environment/fogEnabled": [
+        "boolean"
+      ],
+      "/environment/fogFar": [
+        "number"
+      ],
+      "/environment/fogNear": [
+        "number"
+      ],
+      "/environment/keyLightIntensity": [
+        "number"
+      ],
+      "/environment/map": [
+        "string"
+      ],
+      "/environment/skyColor": [
+        "string"
+      ],
+      "/meta": [
+        "object"
+      ],
+      "/meta/createdAt": [
+        "number"
+      ],
+      "/meta/id": [
+        "string"
+      ],
+      "/meta/name": [
+        "string"
+      ],
+      "/meta/seed": [
+        "number"
+      ],
+      "/playerSpawn": [
+        "object"
+      ],
+      "/playerSpawn/position": [
+        "object"
+      ],
+      "/playerSpawn/position/x": [
+        "number"
+      ],
+      "/playerSpawn/position/y": [
+        "number"
+      ],
+      "/playerSpawn/position/z": [
+        "number"
+      ],
+      "/playerSpawn/yaw": [
+        "number"
+      ],
+      "/props": [
+        "array"
+      ],
+      "/props/*": [
+        "object"
+      ],
+      "/props/*/agent": [
+        "string"
+      ],
+      "/props/*/at": [
+        "number"
+      ],
+      "/props/*/id": [
+        "string"
+      ],
+      "/props/*/kind": [
+        "string"
+      ],
+      "/props/*/position": [
+        "object"
+      ],
+      "/props/*/position/x": [
+        "number"
+      ],
+      "/props/*/position/y": [
+        "number"
+      ],
+      "/props/*/position/z": [
+        "number"
+      ],
+      "/props/*/team": [
+        "string"
+      ],
+      "/rules": [
+        "object"
+      ],
+      "/rules/buyMenu": [
+        "boolean"
+      ],
+      "/rules/duration": [
+        "number"
+      ],
+      "/rules/fireMode": [
+        "string"
+      ],
+      "/rules/healOnKill": [
+        "boolean"
+      ],
+      "/rules/jett": [
+        "object"
+      ],
+      "/rules/jett/cloudburst": [
+        "boolean"
+      ],
+      "/rules/jett/tailwind": [
+        "boolean"
+      ],
+      "/rules/limitedAmmo": [
+        "boolean"
+      ],
+      "/rules/moment": [
+        "object"
+      ],
+      "/rules/moment/commentary": [
+        "string"
+      ],
+      "/rules/moment/parSeconds": [
+        "number"
+      ],
+      "/rules/playerDeath": [
+        "string"
+      ],
+      "/rules/playerMovable": [
+        "boolean"
+      ],
+      "/rules/scoring": [
+        "string"
+      ],
+      "/rules/spawnerPick": [
+        "object"
+      ],
+      "/rules/spawnerPick/count": [
+        "number"
+      ],
+      "/rules/spawnerPick/pool": [
+        "array"
+      ],
+      "/rules/spawnerPick/pool/*": [
+        "string"
+      ],
+      "/rules/startArmor": [
+        "string"
+      ],
+      "/rules/weapon": [
+        "string"
+      ],
+      "/schemaVersion": [
+        "number"
+      ],
+      "/spawners": [
+        "array"
+      ],
+      "/spawners/*": [
+        "object"
+      ],
+      "/spawners/*/actorTemplateId": [
+        "string"
+      ],
+      "/spawners/*/faceTarget": [
+        "boolean"
+      ],
+      "/spawners/*/groundSnap": [
+        "boolean"
+      ],
+      "/spawners/*/id": [
+        "string"
+      ],
+      "/spawners/*/kind": [
+        "string"
+      ],
+      "/spawners/*/maxAlive": [
+        "number"
+      ],
+      "/spawners/*/name": [
+        "string"
+      ],
+      "/spawners/*/pacing": [
+        "string"
+      ],
+      "/spawners/*/position": [
+        "object"
+      ],
+      "/spawners/*/position/x": [
+        "number"
+      ],
+      "/spawners/*/position/y": [
+        "number"
+      ],
+      "/spawners/*/position/z": [
+        "number"
+      ],
+      "/spawners/*/rotationY": [
+        "number"
+      ],
+      "/spawners/*/size": [
+        "object"
+      ],
+      "/spawners/*/size/x": [
+        "number"
+      ],
+      "/spawners/*/size/y": [
+        "number"
+      ],
+      "/spawners/*/size/z": [
+        "number"
+      ],
+      "/spawners/*/spawnDelay": [
+        "array"
+      ],
+      "/spawners/*/spawnDelay/*": [
+        "number"
+      ]
+    },
+    "currentSchema": {
+      "": [
+        "object"
+      ],
+      "/actors": [
+        "array"
+      ],
+      "/actors/*": [
+        "object"
+      ],
+      "/actors/*/behaviors": [
+        "array"
+      ],
+      "/actors/*/behaviors/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/aimErrorDeg": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/cadence": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/counterStrafe": [
+        "boolean"
+      ],
+      "/actors/*/behaviors/*/delay": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/delay/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/difficulty": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/dwell": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/dwell/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/end": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/engage": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/fire": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/fireInterval": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/fireInterval/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/flashStops/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/agent": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/at": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/curve": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target/x": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target/y": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/target/z": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/flashStops/*/wait": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/growTime": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/height": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/interval": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/interval/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/killImmediate": [
+        "boolean"
+      ],
+      "/actors/*/behaviors/*/kind": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/legSpeeds": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/legSpeeds/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/legSpeeds/*/at": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/legSpeeds/*/speed": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/lifetime": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/maxRangeM": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/minScale": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/mode": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/pauses": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/pauses/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/pauses/*/at": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/pauses/*/wait": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/reaction": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/reaction/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/respawn": [
+        "boolean"
+      ],
+      "/actors/*/behaviors/*/resumeDelay": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/resumeDelay/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/speed": [
+        "array",
+        "number"
+      ],
+      "/actors/*/behaviors/*/speed/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/track/ads": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/ads/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/air": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/air/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/crouch": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/crouch/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/from": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/track/from/x": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/from/y": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/from/yaw": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/from/z": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/n": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/pitch": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/pitch/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/shots": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/shots/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/swaps": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/swaps/*": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/swaps/*/*": [
+        "number",
+        "string"
+      ],
+      "/actors/*/behaviors/*/track/v": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/weapon": [
+        "string"
+      ],
+      "/actors/*/behaviors/*/track/x": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/x/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/y": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/y/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/yaw": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/yaw/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/track/z": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/track/z/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/travel": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/travel/*": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/waypoints": [
+        "array"
+      ],
+      "/actors/*/behaviors/*/waypoints/*": [
+        "object"
+      ],
+      "/actors/*/behaviors/*/waypoints/*/x": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/waypoints/*/y": [
+        "number"
+      ],
+      "/actors/*/behaviors/*/waypoints/*/z": [
+        "number"
+      ],
+      "/actors/*/body": [
+        "object"
+      ],
+      "/actors/*/body/bodyHeight": [
+        "number"
+      ],
+      "/actors/*/body/bodyWidth": [
+        "number"
+      ],
+      "/actors/*/body/dropWeapon": [
+        "boolean"
+      ],
+      "/actors/*/body/headSize": [
+        "number"
+      ],
+      "/actors/*/body/look": [
+        "string"
+      ],
+      "/actors/*/body/motion": [
+        "string"
+      ],
+      "/actors/*/body/radius": [
+        "number"
+      ],
+      "/actors/*/body/shape": [
+        "string"
+      ],
+      "/actors/*/body/weapon": [
+        "string"
+      ],
+      "/actors/*/color": [
+        "string"
+      ],
+      "/actors/*/health": [
+        "number"
+      ],
+      "/actors/*/hitSlow": [
+        "boolean"
+      ],
+      "/actors/*/id": [
+        "string"
+      ],
+      "/actors/*/name": [
+        "string"
+      ],
+      "/blocks": [
+        "array"
+      ],
+      "/blocks/*": [
+        "object"
+      ],
+      "/blocks/*/bulletCollidable": [
+        "boolean"
+      ],
+      "/blocks/*/collidable": [
+        "boolean"
+      ],
+      "/blocks/*/color": [
+        "string"
+      ],
+      "/blocks/*/id": [
+        "string"
+      ],
+      "/blocks/*/openFaces": [
+        "array"
+      ],
+      "/blocks/*/openFaces/*": [
+        "string"
+      ],
+      "/blocks/*/position": [
+        "object"
+      ],
+      "/blocks/*/position/x": [
+        "number"
+      ],
+      "/blocks/*/position/y": [
+        "number"
+      ],
+      "/blocks/*/position/z": [
+        "number"
+      ],
+      "/blocks/*/rotationY": [
+        "number"
+      ],
+      "/blocks/*/shape": [
+        "string"
+      ],
+      "/blocks/*/size": [
+        "object"
+      ],
+      "/blocks/*/size/x": [
+        "number"
+      ],
+      "/blocks/*/size/y": [
+        "number"
+      ],
+      "/blocks/*/size/z": [
+        "number"
+      ],
+      "/blocks/*/transparent": [
+        "boolean"
+      ],
+      "/dispatchers": [
+        "array"
+      ],
+      "/dispatchers/*": [
+        "object"
+      ],
+      "/dispatchers/*/faceTarget": [
+        "boolean"
+      ],
+      "/dispatchers/*/id": [
+        "string"
+      ],
+      "/dispatchers/*/interval": [
+        "array"
+      ],
+      "/dispatchers/*/interval/*": [
+        "number"
+      ],
+      "/dispatchers/*/maxAlive": [
+        "number"
+      ],
+      "/dispatchers/*/name": [
+        "string"
+      ],
+      "/dispatchers/*/order": [
+        "string"
+      ],
+      "/dispatchers/*/routes": [
+        "array"
+      ],
+      "/dispatchers/*/routes/*": [
+        "object"
+      ],
+      "/dispatchers/*/routes/*/at": [
+        "object"
+      ],
+      "/dispatchers/*/routes/*/at/x": [
+        "number"
+      ],
+      "/dispatchers/*/routes/*/at/y": [
+        "number"
+      ],
+      "/dispatchers/*/routes/*/at/z": [
+        "number"
+      ],
+      "/dispatchers/*/routes/*/rotationY": [
+        "number"
+      ],
+      "/dispatchers/*/routes/*/streak": [
+        "array"
+      ],
+      "/dispatchers/*/routes/*/streak/*": [
+        "number"
+      ],
+      "/dispatchers/*/routes/*/templateId": [
+        "string"
+      ],
+      "/dispatchers/*/total": [
+        "number"
+      ],
+      "/environment": [
+        "object"
+      ],
+      "/environment/ambientIntensity": [
+        "number"
+      ],
+      "/environment/fogEnabled": [
+        "boolean"
+      ],
+      "/environment/fogFar": [
+        "number"
+      ],
+      "/environment/fogNear": [
+        "number"
+      ],
+      "/environment/keyLightIntensity": [
+        "number"
+      ],
+      "/environment/lightingVersion": [
+        "number"
+      ],
+      "/environment/map": [
+        "string"
+      ],
+      "/environment/skyColor": [
+        "string"
+      ],
+      "/meta": [
+        "object"
+      ],
+      "/meta/createdAt": [
+        "number"
+      ],
+      "/meta/id": [
+        "string"
+      ],
+      "/meta/name": [
+        "string"
+      ],
+      "/meta/seed": [
+        "number"
+      ],
+      "/playerSpawn": [
+        "object"
+      ],
+      "/playerSpawn/position": [
+        "object"
+      ],
+      "/playerSpawn/position/x": [
+        "number"
+      ],
+      "/playerSpawn/position/y": [
+        "number"
+      ],
+      "/playerSpawn/position/z": [
+        "number"
+      ],
+      "/playerSpawn/yaw": [
+        "number"
+      ],
+      "/props": [
+        "array"
+      ],
+      "/props/*": [
+        "object"
+      ],
+      "/props/*/agent": [
+        "string"
+      ],
+      "/props/*/at": [
+        "number"
+      ],
+      "/props/*/id": [
+        "string"
+      ],
+      "/props/*/kind": [
+        "string"
+      ],
+      "/props/*/life": [
+        "number"
+      ],
+      "/props/*/position": [
+        "object"
+      ],
+      "/props/*/position/x": [
+        "number"
+      ],
+      "/props/*/position/y": [
+        "number"
+      ],
+      "/props/*/position/z": [
+        "number"
+      ],
+      "/props/*/team": [
+        "string"
+      ],
+      "/rules": [
+        "object"
+      ],
+      "/rules/buyMenu": [
+        "boolean"
+      ],
+      "/rules/duration": [
+        "number"
+      ],
+      "/rules/expiredPenalty": [
+        "number"
+      ],
+      "/rules/fireMode": [
+        "string"
+      ],
+      "/rules/healOnKill": [
+        "boolean"
+      ],
+      "/rules/jett": [
+        "object"
+      ],
+      "/rules/jett/cloudburst": [
+        "boolean"
+      ],
+      "/rules/jett/tailwind": [
+        "boolean"
+      ],
+      "/rules/limitedAmmo": [
+        "boolean"
+      ],
+      "/rules/moment": [
+        "object"
+      ],
+      "/rules/moment/commentary": [
+        "string"
+      ],
+      "/rules/moment/parSeconds": [
+        "number"
+      ],
+      "/rules/perfectAccuracy": [
+        "boolean"
+      ],
+      "/rules/playerDeath": [
+        "string"
+      ],
+      "/rules/playerMovable": [
+        "boolean"
+      ],
+      "/rules/scoring": [
+        "string"
+      ],
+      "/rules/sova": [
+        "object"
+      ],
+      "/rules/sova/reconBolt": [
+        "boolean"
+      ],
+      "/rules/sova/unlimited": [
+        "boolean"
+      ],
+      "/rules/spawnerPick": [
+        "object"
+      ],
+      "/rules/spawnerPick/count": [
+        "number"
+      ],
+      "/rules/spawnerPick/pool": [
+        "array"
+      ],
+      "/rules/spawnerPick/pool/*": [
+        "string"
+      ],
+      "/rules/startArmor": [
+        "string"
+      ],
+      "/rules/tunables": [
+        "array"
+      ],
+      "/rules/tunables/*": [
+        "object"
+      ],
+      "/rules/tunables/*/field": [
+        "string"
+      ],
+      "/rules/tunables/*/id": [
+        "string"
+      ],
+      "/rules/tunables/*/label": [
+        "string"
+      ],
+      "/rules/tunables/*/max": [
+        "number"
+      ],
+      "/rules/tunables/*/min": [
+        "number"
+      ],
+      "/rules/tunables/*/step": [
+        "number"
+      ],
+      "/rules/weapon": [
+        "string"
+      ],
+      "/schemaVersion": [
+        "number"
+      ],
+      "/spawners": [
+        "array"
+      ],
+      "/spawners/*": [
+        "object"
+      ],
+      "/spawners/*/actorTemplateId": [
+        "string"
+      ],
+      "/spawners/*/columns": [
+        "number"
+      ],
+      "/spawners/*/faceTarget": [
+        "boolean"
+      ],
+      "/spawners/*/groundSnap": [
+        "boolean"
+      ],
+      "/spawners/*/id": [
+        "string"
+      ],
+      "/spawners/*/kind": [
+        "string"
+      ],
+      "/spawners/*/maxAlive": [
+        "number"
+      ],
+      "/spawners/*/minAngularGap": [
+        "number"
+      ],
+      "/spawners/*/minAngularGapFromPrevious": [
+        "number"
+      ],
+      "/spawners/*/minShowGap": [
+        "number"
+      ],
+      "/spawners/*/name": [
+        "string"
+      ],
+      "/spawners/*/pacing": [
+        "string"
+      ],
+      "/spawners/*/position": [
+        "object"
+      ],
+      "/spawners/*/position/x": [
+        "number"
+      ],
+      "/spawners/*/position/y": [
+        "number"
+      ],
+      "/spawners/*/position/z": [
+        "number"
+      ],
+      "/spawners/*/rotationY": [
+        "number"
+      ],
+      "/spawners/*/rows": [
+        "number"
+      ],
+      "/spawners/*/size": [
+        "object"
+      ],
+      "/spawners/*/size/x": [
+        "number"
+      ],
+      "/spawners/*/size/y": [
+        "number"
+      ],
+      "/spawners/*/size/z": [
+        "number"
+      ],
+      "/spawners/*/spawnDelay": [
+        "array"
+      ],
+      "/spawners/*/spawnDelay/*": [
+        "number"
+      ]
+    },
+    "baselineEnums": {
+      "/actors/*/behaviors/*/kind": [
+        "cross",
+        "jump",
+        "respawn",
+        "shooter",
+        "strafe"
+      ],
+      "/actors/*/body/shape": [
+        "humanoid"
+      ],
+      "/environment/map": [
+        "ascent",
+        "bonsai",
+        "infinity",
+        "jam",
+        "plummet",
+        "triad"
+      ],
+      "/schemaVersion": [
+        2
+      ],
+      "/spawners/*/kind": [
+        "area",
+        "fixed"
+      ]
+    },
+    "currentEnums": {
+      "/actors/*/behaviors/*/kind": [
+        "cross",
+        "decay",
+        "jump",
+        "respawn",
+        "shooter",
+        "strafe",
+        "take"
+      ],
+      "/actors/*/body/shape": [
+        "humanoid",
+        "sphere"
+      ],
+      "/environment/map": [
+        "ascent",
+        "bonsai",
+        "duality",
+        "infinity",
+        "jam",
+        "juliett",
+        "plummet",
+        "rook",
+        "triad"
+      ],
+      "/schemaVersion": [
+        2
+      ],
+      "/spawners/*/kind": [
+        "area",
+        "fixed",
+        "grid"
+      ]
+    }
+  }
+}

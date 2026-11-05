@@ -1,0 +1,1 @@
+import{e as b}from'./BzXkLXGj.js';const u=[{'id':'DAY','label':'日榜'},{'id':'WEEK','label':'周榜'},{'id':'ALL','label':'总榜'}],a=b;function t(c){return!!c&&c!=='custom';}function l(c,d,e=a){return{'sceneCode':c,'window':d,'limit':e};}function D(c){return!Number['isFinite'](c)||c<=0x0?'—':c<0x400?c+'\x20B':(c/0x400)['toFixed'](0x1)+'\x20KB';}export{u as L,a,l as b,D as f,t as i};

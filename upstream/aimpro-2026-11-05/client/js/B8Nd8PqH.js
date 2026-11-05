@@ -1,0 +1,1 @@
+import{d as o,o as t,m as n,e as a,g5 as l}from"./index.FoQE3geO.js";const m=o({name:"MultiLevel1",__name:"level1",setup(s){return t(()=>{}),(_,c)=>{const e=l;return a(),n(e,{closable:!1,title:"菜单一"})}}});export{m as _};

@@ -1,0 +1,1 @@
+import{bW as r}from"./index.FoQE3geO.js";const e="/api/v1/referral";function n(t){return r({url:`${e}/bind`,method:"post",params:{code:t},skipGlobalError:!0})}function a(){return r({url:`${e}/my-invite-code`,method:"get"})}function i(){return r({url:`${e}/my-referrals`,method:"get"})}export{i as a,n as b,a as g};

@@ -2,8 +2,8 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-const root=path.join(path.dirname(fileURLToPath(import.meta.url)),'dist');
-const port=18746,host='127.0.0.1';
+const root=path.resolve(process.argv.find(x=>x.startsWith('--root='))?.slice(7)??path.join(path.dirname(fileURLToPath(import.meta.url)),'dist'));
+const port=Number(process.argv.find(x=>x.startsWith('--port='))?.slice(7)??18746),host='127.0.0.1';
 const mime={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.enc':'application/octet-stream','.wasm':'application/wasm','.woff2':'font/woff2','.woff':'font/woff','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.avif':'image/avif','.ico':'image/x-icon','.ogg':'audio/ogg','.mp3':'audio/mpeg','.glb':'model/gltf-binary','.bin':'application/octet-stream'};
 mime['.mjs']='application/javascript; charset=utf-8';
 const csp="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'";
@@ -12,7 +12,8 @@ const ok=data=>({code:'00000',data,msg:'本地离线数据'});
 function json(res,data,status=200){let b=JSON.stringify(data);res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(b)}
 function serve(req,res,file,asJson=false){
  const stat=fs.statSync(file),ext=path.extname(file).toLowerCase();
- const headers={'Content-Type':asJson?'application/json; charset=utf-8':mime[ext]??'application/octet-stream','Cache-Control':'no-cache','Content-Length':stat.size};
+ const immutable=/\.[a-f0-9]{12}\.enc$/.test(file);
+ const headers={'Content-Type':asJson?'application/json; charset=utf-8':mime[ext]??'application/octet-stream','Cache-Control':immutable?'public, max-age=31536000, immutable':'no-cache','Content-Length':stat.size};
  const range=req.headers.range?.match(/^bytes=(\d+)-(\d*)$/);
  if(range){let start=Number(range[1]),end=range[2]?Number(range[2]):stat.size-1;if(start>=stat.size||end<start){res.writeHead(416,{'Content-Range':`bytes */${stat.size}`});res.end();return}end=Math.min(end,stat.size-1);Object.assign(headers,{'Content-Length':end-start+1,'Content-Range':`bytes ${start}-${end}/${stat.size}`,'Accept-Ranges':'bytes'});res.writeHead(206,headers);fs.createReadStream(file,{start,end}).pipe(res);return}
  res.writeHead(200,headers);if(req.method==='HEAD')res.end();else fs.createReadStream(file).pipe(res);

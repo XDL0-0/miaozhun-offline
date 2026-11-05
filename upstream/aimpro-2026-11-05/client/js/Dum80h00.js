@@ -1,0 +1,1 @@
+import{d as t,ak as s,c as a,e as r,t as o,g as n}from"./index.FoQE3geO.js";import"./ATp_kJvD.js";const p={class:"p-5"},l=t({name:"Other",inheritAttrs:!1,__name:"route-param",setup(c){const e=s().query.type;return(i,u)=>(r(),a("div",p,"路由参数type："+o(n(e)),1))}});export{l as default};

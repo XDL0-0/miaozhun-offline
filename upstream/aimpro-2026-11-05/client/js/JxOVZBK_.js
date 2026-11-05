@@ -1,0 +1,1 @@
+function r(e,n){return n.packageType===3&&e.couponCode==="NEW_USER_20OFF"?"当前套餐不可使用新人专享券":n.coachIsStreamer===1&&e.ownerUid?"本订单指定的导师为主播，不可叠加主播分成优惠码":n.designated&&e.allowDesignated===!1?"该优惠码不可用于指定导师订单":null}export{r as g};

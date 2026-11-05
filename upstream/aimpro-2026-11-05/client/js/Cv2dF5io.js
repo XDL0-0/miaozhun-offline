@@ -1,0 +1,1 @@
+import{d as s,ak as n,ar as c,c as p,e as u}from"./index.FoQE3geO.js";import"./ATp_kJvD.js";const f=s({__name:"index",setup(m){const e=n(),t=c(),{params:o,query:a}=e,{path:r}=o;return t.replace({path:"/"+r,query:a}),(_,i)=>(u(),p("div"))}});export{f as default};

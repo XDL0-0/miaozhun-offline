@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F1428" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+
+    <!--
+      静态资源加载失败自愈（最坏情况兜底）。必须内联在 <head> 最前面：
+      若入口 JS/CSS 因边缘(ESA)↔源站 525 等失败、且坏副本被缓存进浏览器，main.ts 根本
+      不会执行，故自愈不能依赖任何打包产物。捕获阶段监听入口资源的加载错误，用带缓存破坏
+      参数的新 URL 重新拉取（绕开浏览器按原 URL 缓存的坏副本）；仍失败则给出可点击的重试 UI，
+      杜绝无限白屏/转圈。决策与 src/utils/asset-recovery.ts 保持一致（RELOAD 键、10s 窗口）。
+    -->
+    <script>
+      (function () {
+        if (typeof window === "undefined") return;
+        // 本地开发无 CDN/边缘缓存问题，跳过自愈以免干扰调试/HMR。
+        if (/^(localhost|127\.|0\.0\.0\.0|\[?::1\]?)/.test(location.hostname)) return;
+
+        var RELOAD_KEY = "__asset_reload_ts__"; // 必须与 asset-recovery.ts 的 RELOAD_GUARD_KEY 一致
+        var RELOAD_WINDOW_MS = 10000;
+        var WATCHDOG_MS = 15000; // 入口加载+执行宽限期；仅展示重试 UI，不自动刷新（避免打断慢网络）
+
+        window.__APP_BOOTED__ = false;
+
+        function bust(url) {
+          var h = url.indexOf("#"),
+            hash = h >= 0 ? url.slice(h) : "",
+            base = h >= 0 ? url.slice(0, h) : url;
+          var q = base.indexOf("?"),
+            path = q >= 0 ? base.slice(0, q) : base,
+            query = q >= 0 ? base.slice(q + 1) : "";
+          var ps = query.split("&").filter(function (p) {
+            return p && p.indexOf("_cb=") !== 0;
+          });
+          ps.push("_cb=" + Date.now());
+          return path + "?" + ps.join("&") + hash;
+        }
+
+        // 用带缓存破坏参数的新 URL 重新插入失败的入口脚本/样式表。入口脚本失败时它从未执行过，
+        // 故重注入不会造成重复挂载。每个元素只重试一次（data-cb-retried）防死循环。
+        function reinject(el) {
+          if (!el || (el.dataset && el.dataset.cbRetried)) return false;
+          var tag = el.tagName.toLowerCase(),
+            attr = tag === "link" ? "href" : "src";
+          var url = el.getAttribute(attr);
+          if (!url) return false;
+          var fresh = document.createElement(tag);
+          for (var i = 0; i < el.attributes.length; i++)
+            fresh.setAttribute(el.attributes[i].name, el.attributes[i].value);
+          fresh.setAttribute(attr, bust(url));
+          fresh.dataset.cbRetried = "1";
+          (el.parentNode || document.head).insertBefore(fresh, el);
+          if (el.parentNode) el.parentNode.removeChild(el);
+          return true;
+        }
+
+        function entryScript() {
+          return document.querySelector('script[type="module"][src]');
+        }
+
+        var overlayEl = null;
+        // 应用最终启动后调用：移除可能已弹出的兜底层（应对"慢网络下到点先弹层、随后又加载成功"）。
+        window.__dismissAssetReloadFallback__ = function () {
+          if (overlayEl) {
+            overlayEl.remove();
+            overlayEl = null;
+          }
+        };
+        window.__showAssetReloadFallback__ = function () {
+          if (overlayEl || window.__APP_BOOTED__) return; // 已弹出、或应用已就绪则不弹
+          var box = document.createElement("div");
+          overlayEl = box;
+          box.setAttribute(
+            "style",
+            "position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;" +
+              "background:#0F1428;color:#e6ebff;font:14px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;padding:24px;"
+          );
+          box.innerHTML =
+            '<div style="max-width:340px;text-align:center;">' +
+            '<div style="font-size:16px;font-weight:600;margin-bottom:10px;">页面资源加载失败</div>' +
+            '<div style="opacity:.7;margin-bottom:20px;">可能是网络波动导致部分文件没拿全。请点击重试；若多次仍失败，请清除浏览器缓存后再试。</div>' +
+            '<button data-retry style="cursor:pointer;border:0;border-radius:8px;padding:10px 24px;' +
+            'background:#498cff;color:#fff;font-size:14px;font-weight:600;">重新加载</button>' +
+            "</div>";
+          document.body.appendChild(box);
+          box.querySelector("[data-retry]").addEventListener("click", function () {
+            var entry = entryScript();
+            // 入口尚未启动且还没重试过 → 用新 URL 重拉入口（绕开浏览器里被毒化的副本）；否则整页刷新。
+            if (
+              !window.__APP_BOOTED__ &&
+              entry &&
+              !(entry.dataset && entry.dataset.cbRetried) &&
+              reinject(entry)
+            ) {
+              box.remove();
+              overlayEl = null;
+            } else {
+              location.reload();
+            }
+          });
+        };
+
+        // 入口资源彻底失败时：先尝试重注入；已重试过则刷新一次（窗口内再失败则给重试 UI）。
+        function recoverDocument() {
+          var last = Number(sessionStorage.getItem(RELOAD_KEY) || 0);
+          if (Date.now() - last >= RELOAD_WINDOW_MS) {
+            sessionStorage.setItem(RELOAD_KEY, String(Date.now()));
+            location.reload();
+          } else {
+            window.__showAssetReloadFallback__();
+          }
+        }
+
+        // 资源加载错误不冒泡，必须捕获阶段监听；且须在入口 <script>/<link> 之前注册（本块在 <head> 最前）。
+        window.addEventListener(
+          "error",
+          function (e) {
+            var el = e.target;
+            if (!el || el === window || !el.tagName) return; // 忽略 JS 运行时异常（target 非元素）
+            var tag = el.tagName.toLowerCase();
+            var isEntry = tag === "script" && el.type === "module" && el.getAttribute("src");
+            var isCss = tag === "link" && el.rel === "stylesheet";
+            if (!isEntry && !isCss) return; // 不为第三方统计脚本等失败而恢复
+            if (!reinject(el)) recoverDocument();
+          },
+          true
+        );
+
+        // 看门狗兜底：到点仍未挂载（如入口块响应被挂起、error 未触发）→ 仅展示重试 UI，不自动刷新。
+        setTimeout(function () {
+          if (!window.__APP_BOOTED__) window.__showAssetReloadFallback__();
+        }, WATCHDOG_MS);
+      })();
+    </script>
+
+    <!--
+      ⚠️ site-head:begin … site-head:end 这一段（图标 + 标题 + 简介 + 分享卡片）在构建时会被
+      `build/aimHtml.ts` 整段换成瞄准专家的，另存一份 `aim.html` 给 /aim/* 用。两个标记别删：
+      删了构建直接失败（故意的，免得发出去一份还是复盘简介的 aim.html）。
+    -->
+    <!-- 海外版 aimpro.world 专用：build/aimHtml.ts 按 src/views/course/aimlab/seo/aimHead.ts 生成 -->
+    <title>AimPro - VALORANT aim training in your browser</title>
+    <meta name="description" content="No install needed: practice on in-game maps, take on famous pro-match moments, play scenes made by other players or build your own in Studio. Every leaderboard score is verified by the server." />
+    <meta name="keywords" content="AimPro,VALORANT aim trainer,VALORANT aim training,VALORANT aim practice,browser aim trainer,aim practice" />
+    <meta property="og:title" content="AimPro - VALORANT aim training in your browser" />
+    <meta property="og:description" content="No install needed: practice on in-game maps, take on famous pro-match moments, play scenes made by other players or build your own in Studio. Every leaderboard score is verified by the server." />
+    <meta property="og:image" content="https://aimpro.world/og-aimpro.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AimPro" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AimPro - VALORANT aim training in your browser" />
+    <meta name="twitter:description" content="No install needed: practice on in-game maps, take on famous pro-match moments, play scenes made by other players or build your own in Studio. Every leaderboard score is verified by the server." />
+    <meta name="twitter:image" content="https://aimpro.world/og-aimpro.png" />
+    <link id="site-icon" rel="icon" sizes="any" href="/favicon-aim.ico" />
+    <link id="site-icon-32" rel="icon" type="image/png" sizes="32x32" href="/favicon-aim-32.png" />
+    <link id="site-icon-16" rel="icon" type="image/png" sizes="16x16" href="/favicon-aim-16.png" />
+    <link id="site-apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-aim.png" />
+    <link id="site-manifest" rel="manifest" href="/site-aimpro.webmanifest" />
+
+    <!-- 搜索引擎站长验证（已由运营填入实际 token） -->
+    <meta name="baidu-site-verification" content="codeva-rLuH1Q6r5u" />
+    <meta name="google-site-verification" content="TW9onK9Ga3JTH9LZ87NazKy2DmPCTG4QE8iWu2jn67o" />
+    <meta name="msvalidate.01" content="C1D9E0B8FAB2C36569BB6C6AF695BCA0" />
+    <meta name="360-site-verification" content="25558181968cb40be0767685aea20d3f" />
+    <meta name="sogou_site_verification" content="Sd7VA6RqfV" />
+
+    <!--
+      全站根 JSON-LD: Organization + WebSite（构建期预渲染可被抓走）。
+      site-ld 这对标记给海外版用：`build/aimHtml.ts` 生成 world.html 时整段换成 AimPro 的（标记别删，删了构建失败）。
+    -->
+    <!-- 海外版 aimpro.world 专用：build/aimHtml.ts 按 src/views/course/aimlab/seo/aimHead.ts 生成 -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AimPro","url":"https://aimpro.world/"}</script>
+
+    <!-- 关键资源 preconnect（按实际 CDN 域名调整） -->
+    <link rel="preconnect" href="https://proxy.rick-yang.com" crossorigin />
+    <!-- 微信扫码登录：提前与微信域建立连接，缩短点击后出码等待 -->
+    <link rel="preconnect" href="https://res.wx.qq.com" crossorigin />
+    <link rel="preconnect" href="https://open.weixin.qq.com" />
+    <script type="module" crossorigin src="/js/index.FoQE3geO.js"></script>
+    <link rel="modulepreload" crossorigin href="/js/ATp_kJvD.js">
+    <link rel="stylesheet" crossorigin href="/css/index.BIf09BrE.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="loading-container">
+        <div class="loading-spinner">
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      第三方统计（body 末尾）。⚠️ 一律异步加载，不许有同步的 <script src>：它排在我们的入口前面，
+      第三方连不上或卡住时整页解析停在那里、入口一直不执行，15 秒后弹「页面资源加载失败」，
+      点重新加载也没用（51.la 主脚本原先就是同步的，2026-10-21 改成异步）。
+
+      海外版（aimpro.world）这三段一律不加载（2026-11-03）：51.la 开着录屏、两家数据都回国内，
+      统计与录屏在欧盟等地要先征得同意。海外版的统计另走两路：Cloudflare 网页统计（边缘自动注入、不用 cookie）
+      和 Google Analytics（src/utils/worldAnalytics.ts，欧盟/英国/瑞士要先同意）。判断与 src/utils/site.ts 的 WORLD_HOSTNAME 一致。
+    -->
+    <script>
+      window.__AIM_NO_THIRD_PARTY_STATS__ = location.hostname === "aimpro.world";
+    </script>
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        if (window.__AIM_NO_THIRD_PARTY_STATS__) return;
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f54dd79d535049fcd52b9b81ef44619c";
+        hm.async = true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script defer>
+      !(function (c, i, e, b) {
+        if (c.__AIM_NO_THIRD_PARTY_STATS__) return;
+        var h = i.createElement("script");
+        var f = i.getElementsByTagName("script")[0];
+        h.type = "text/javascript";
+        h.async = true;
+        h.crossorigin = true;
+        h.onload = function () {
+          new c[b]["Monitor"]().init({
+            id: "3PkOHLI5iR3dKyDU",
+            sendSuspicious: true,
+            sendSpaPv: true,
+          });
+        };
+        f.parentNode.insertBefore(h, f);
+        h.src = e;
+      })(window, document, "https://sdk.51.la/perf/js-sdk-perf.min.js", "LingQue");
+    </script>
+    <script>
+      !(function (c, i, e) {
+        if (c.__AIM_NO_THIRD_PARTY_STATS__) return;
+        var h = i.createElement("script");
+        var f = i.getElementsByTagName("script")[0];
+        h.id = "LA_COLLECT";
+        h.setAttribute("charset", "UTF-8");
+        h.async = true;
+        h.onload = function () {
+          if (!c.LA || !c.LA.init) return;
+          c.LA.init({
+            id: "3QPU7vTEV5EzuCsr",
+            ck: "3QPU7vTEV5EzuCsr",
+            autoTrack: true,
+            hashMode: true,
+            screenRecord: true,
+          });
+        };
+        f.parentNode.insertBefore(h, f);
+        h.src = e;
+      })(window, document, "https://sdk.51.la/js-sdk-pro.min.js");
+    </script>
+  </body>
+
+  <style>
+    html,
+    body,
+    #app {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading-spinner {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+
+    .loading-bar {
+      width: 4px;
+      height: 24px;
+      background-color: #498cff;
+      border-radius: 2px;
+      animation: loading-animation 1.2s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .loading-bar:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loading-bar:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes loading-animation {
+      0% {
+        opacity: 0.3;
+        transform: scaleY(0.5);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1.2);
+      }
+
+      100% {
+        opacity: 0.3;
+        transform: scaleY(0.5);
+      }
+    }
+  </style>
+</html>

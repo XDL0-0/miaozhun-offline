@@ -1,0 +1,847 @@
+{
+  "date": "2026-11-05",
+  "upstream_url": "https://aimpro.world/aim",
+  "scope": "已下载公开客户端源码与仓库保留客户端、现有补丁的静态对照；未执行上游 JavaScript，未运行 UI/FPS 基准，未改实现。",
+  "baseline": "site/js 原始公开客户端 + patches；README 把首次离线基线标为 offline-baseline-2026-10-16。",
+  "evidence_coordinates": "char_offset 为 Python Unicode 字符下标，utf8_byte_offset 为原始 UTF-8 字节下标，均从 0 开始；excerpt 为定位片段。",
+  "official_claims": [
+    {
+      "date": "2026-11-04",
+      "claim": "小球项目开局第一枪、新球刷出来时的卡顿做了优化",
+      "source": {
+        "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+        "line": 1,
+        "char_offset": 350,
+        "utf8_byte_offset": 710,
+        "anchor": "小球项目开局第一枪",
+        "excerpt": "小球项目开局第一枪、新球刷出来时的卡顿做了优化','大厅右上角新增语言切换，可换英文界面']}]},{'id':'2026-11-03','headline':'新玩法封烟训练：暮蝶、炼狱放烟，编排器和训练清单上线，闪光照游戏重做','sections':[{'name':'新玩法：封烟训练','items':['瓦创意工坊新增暮蝶、炼狱的技能放烟，计分方式可选「封烟」：按\\x20E\\x20拿出地图选点，把烟封到作者标的位置，结算看封住几颗、偏差和用时（登"
+      },
+      "assessment": "官方定性宣称；代码可确认命中特效图集共享和资源 ready 等待，但未充分隔离每项对首枪/刷球的因果贡献，也没有帧时测量。"
+    },
+    {
+      "date": "2026-10-28",
+      "claim": "地图和枪模换了新的加载方式，第一次重新下载，之后未改变的不再下载",
+      "source": {
+        "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+        "line": 1,
+        "char_offset": 1506,
+        "utf8_byte_offset": 3357,
+        "anchor": "地图和枪模换了新的加载方式",
+        "excerpt": "地图和枪模换了新的加载方式，每样第一次用要重新下载一次，之后没改的不再重下']}]},{'id':'2026-10-25','headline':'左栏新增特殊活动抽《影之刃零》豪华版，18\\x20把枪照游戏重做，刀能砍人了','sections':[{'name':'特殊活动','items':['左栏新增「特殊活动」：免费抽\\x201\\x20份《影之刃零》数字豪华版（Steam\\x20国区\\x20CDK）。在桌面版里完整打完一局瓦工坊，每天得\\x201"
+      },
+      "assessment": "资源版本表、路径构造和地图私有解析器支持其实现方向；实际 HTTP 缓存命中和下载时间未测试。"
+    },
+    {
+      "date": "2026-10-21",
+      "claim": "更新时未改地图不用重新下载",
+      "source": {
+        "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+        "line": 1,
+        "char_offset": 3427,
+        "utf8_byte_offset": 7679,
+        "anchor": "从这次起，以后更新时没改过的地图不用重新下载",
+        "excerpt": "从这次起，以后更新时没改过的地图不用重新下载，进图更快']},{'name':'玩家创意工坊','items':['新作上架、本周热门、口碑之选改成页签切换','「新作上架」不会再整格消失：最近\\x203\\x20天上架的作品都能在这里找到']},{'name':'瓦创意工坊','items':['烟雾最多能摆\\x2050\\x20颗（原来\\x208\\x20颗），包点接人可以一直续烟','摆射新增「随机左右」，默认关闭']},{'name':'分享与主页','"
+      },
+      "assessment": "属于在线资源失效策略优化；本地离线包不会因此自动获得运行期 FPS 收益。"
+    },
+    {
+      "date": "2026-10-10",
+      "claim": "地图光照文件缩小八成，进图更快",
+      "source": {
+        "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+        "line": 1,
+        "char_offset": 7075,
+        "utf8_byte_offset": 15835,
+        "anchor": "地图光照文件缩小八成",
+        "excerpt": "地图光照文件缩小八成，进图更快，画面几乎看不出差别']},{'name':'排行榜','items':['人物跟枪榜只收\\x2010\\x20月\\x202\\x20日（改按子弹落点计分）以后的成绩，之前的成绩照常保留，只是不进这张榜']},{'name':'其他','items':['左栏新增「更新日志」，有新更新时打开网页会弹出来','官方\\x20KOOK\\x20换了新频道（频道\\x20ID\\x203185），满了的\\x20QQ\\x20群收起来了','浏览器"
+      },
+      "assessment": "时间早于 10-16 保留基线，不能算本轮相对旧客户端新增收益；未复核原始压缩比。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "asset_versioning",
+      "title": "按单个资源版本构建地址",
+      "classification": "新增/加载",
+      "code_facts": [
+        "新版 ATp 模块有按地图、枪模等原始 URL 的版本表 P，V 读取 P[d] 并传给 Z；Z 在路径后追加该文件标识和后缀。",
+        "旧版 DHD 模块 D(c) 只对原路径追加固定后缀，未见相同按文件版本表。",
+        "CDN 失败回源、加密解压、16 MiB 解码结果缓存旧版已经具备，不能作为新增点。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 2146,
+          "utf8_byte_offset": 2146,
+          "anchor": "const P={'/aim-maps/ascent.collision.json'",
+          "excerpt": "const P={'/aim-maps/ascent.collision.json':ak(0x146),'/aim-maps/ascent.glb':ak(0x296),'/aim-maps/ascent.lightmap.0.irr.avif':ak(0x1bf),'/aim-maps/ascent.lightmap.0.irr.png':ak(0x34f),'/aim-maps/ascent.lightmap.0.sh.avif':ak(0x27e)"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 30181,
+          "utf8_byte_offset": 30181,
+          "anchor": "Z=(d,f)=>",
+          "excerpt": "Z=(d,f)=>f?d+'.'+f+ak(0x277):d+ak(0x277),Q={'aimpro.world':J};function ee(d){const ar=ak,f=d[ar(0x3ac)]()[ar(0x2cd)]('.')[ar(0x1ad)](Boolean),h=f[ar(0x3a1)]<=0x2?f[ar(0x22e)]('.'):f[ar(0x3c6)](-0x2)[ar(0x22e)]('.');return Q[h]??h;"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 34045,
+          "utf8_byte_offset": 34047,
+          "anchor": "V=d=>{const aD=ak,f=P?.[d]",
+          "excerpt": "V=d=>{const aD=ak,f=P?.[d];return Z(d,typeof f==aD(0x2e0)?f:void 0x0);};function a(){const aO=['mti0otK1yZqZyJDK','quvtluDdtq','zgfHodHLnJC0zge3','ytaWm2rIm2zJmwqY','z3PPCa','mgqWzwq4m2zLntvK','nMuWzdi5mMq2mZm0','otCZmgm4yta3ztHI'"
+        },
+        {
+          "file": "site/js/DHDvBWqu.js",
+          "line": 1,
+          "char_offset": 5233,
+          "utf8_byte_offset": 5233,
+          "anchor": "D=c=>c+a8(0x103)",
+          "excerpt": "D=c=>c+a8(0x103);async function w(c,d){const f=D(c),l=p(f),m=async q=>{const y=await _(q,d);return H(y,M());};if(l===f)return m(f);try{return await m(l);}catch{return m(f);}}async function _(q,F){const al=a8,P=await fetch(q);if(!P"
+        },
+        {
+          "file": "site/js/DHDvBWqu.js",
+          "line": 1,
+          "char_offset": 6227,
+          "utf8_byte_offset": 6227,
+          "anchor": "const K=0x10*0x400*0x400",
+          "excerpt": "const K=0x10*0x400*0x400,o=new Map();function x(c){const ao=a8;let d=0x0;for(const f of o[ao(0xde)]())d+=f[ao(0xb8)];for(const [l,m]of o){if(d<=K)break;m===c||m[ao(0xb8)]===0x0||(o[ao(0xb7)](l),d-=m[ao(0xb8)]);}}function E(c){cons"
+        }
+      ],
+      "priority": "P2",
+      "recommendation": "若以后做增量更新器，可借鉴逐文件内容版本和缓存失效；当前离线本地读取不必照搬在线传输层。",
+      "limits": "未验证 CDN Cache-Control/ETag 或实际网络传输时间。"
+    },
+    {
+      "id": "private_map_format",
+      "title": "地图 URL 仍为 .glb，但解析链已换成私有分块容器",
+      "classification": "新增/兼容风险",
+      "code_facts": [
+        "新版 SC 通过 F_(_C(t),\"map\",LF,r) 读取地图，LF 调用 wF，后者验证私有头/版本、记录和 accessors 后构建场景。",
+        "旧版 Hg→TB→wB().parse 使用 GLTFLoader，不能把新版 .glb 文件直接交给旧解析器。",
+        "新版传输层出现 VSE2 魔数及异步分块生成器，保留旧格式兼容分支；U 仍先收集完整响应并返回 ArrayBuffer，再由 pe 向解析器生成分块，所以不能称为网络下载与解析完全流水化。",
+        "KTX2/Basis、多 worker 和 Meshopt 在旧版 wB 已存在。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 926961,
+          "utf8_byte_offset": 930294,
+          "anchor": "async function wF(",
+          "excerpt": "async function wF(t,e){let n;const i=Symbol.asyncIterator in t?t:(async function*(){yield t instanceof Uint8Array?t:new Uint8Array(t)})();try{return await CF(i,r=>{n=new SF(r,e)},(r,s,a)=>n.acceptRecord(r,s,a)),await n.scene()}cat"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 917046,
+          "utf8_byte_offset": 920137,
+          "anchor": "privateMap: 魔数不符",
+          "excerpt": "privateMap: 魔数不符\");if(c[4]!==pF)throw new Error(\"privateMap: 不支持的版本\");const l=new DataView(c.buffer);if(c[5]!==0||l.getUint16(6,!0)!==0)throw new Error(\"privateMap: 未知 flags\");const A=l.getUint32(8,!0),u=l.getUint32(12,!0);if(A>16"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 928270,
+          "utf8_byte_offset": 931625,
+          "anchor": "function LF(",
+          "excerpt": "function LF(t){return wF(t,{decodeTexture:PF})}const zi=new Map;function FF(t){return(t?zi.get(t):null)??null}const IC={textureArrays:!0};function UF(t,e,n){if(!IC.textureArrays)return;const i=new Set;e.traverse(s=>{const a=s;a.is"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 929017,
+          "utf8_byte_offset": 932372,
+          "anchor": "s=F_(_C(t),\"map\",LF,r)",
+          "excerpt": "s=F_(_C(t),\"map\",LF,r),a=Promise.all([s,i]).then(([o])=>o).then(o=>{o.name=`map:${t}`,o.updateMatrixWorld(!0),kF(o),OF(o),GF(o),zF(o),HL(o),Ns.set(t,IL(o)),BL(o);const c=zi.get(t)??null;return c&&bL(o,c),PL(o,c?{variant:(l,A,u)=>C"
+        },
+        {
+          "file": "site/js/aQOfOAp-.js",
+          "line": 4194,
+          "char_offset": 840662,
+          "utf8_byte_offset": 844047,
+          "anchor": "function wB()",
+          "excerpt": "function wB(){if(!Rr){const n=navigator.hardwareConcurrency||4,e=new Mn().setTranscoderPath(vB).setWorkerLimit(Math.min(Math.max(n,4),16)),t=new Dp;try{e.detectSupport(t)}finally{t.dispose(),t.forceContextLoss()}Rr=e,e.init().catc"
+        },
+        {
+          "file": "site/js/aQOfOAp-.js",
+          "line": 4194,
+          "char_offset": 840975,
+          "utf8_byte_offset": 844360,
+          "anchor": "function TB(",
+          "excerpt": "function TB(n){return new Promise((e,t)=>{wB().parse(n,\"\",e,t)})}const Kr=new Map;function BB(n){return(n?Kr.get(n):null)??null}const Gg={textureArrays:!0};function RB(n,e,t){if(!Gg.textureArrays)return;const i=new Set;e.traverse("
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 30091,
+          "utf8_byte_offset": 30091,
+          "anchor": "r=new Uint8Array([0x56,0x53,0x45,0x32])",
+          "excerpt": "r=new Uint8Array([0x56,0x53,0x45,0x32]),M=0x2,S=0x10,T=0x14,q=0x0,K=ak(0x376),J=ak(0x33c),Z=(d,f)=>f?d+'.'+f+ak(0x277):d+ak(0x277),Q={'aimpro.world':J};function ee(d){const ar=ak,f=d[ar(0x3ac)]()[ar(0x2cd)]('.')[ar(0x1ad)](Boolean"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 47988,
+          "utf8_byte_offset": 47990,
+          "anchor": "async function pe(",
+          "excerpt": "async function pe(f,h,l,p){const s=V(f),t=j(s),z=async E=>{const L=await U(E,p);return l((async function*(){const aF=c,W=new Uint8Array(L);r[aF(0x16c)]((a0,a1)=>W[a1]===a0)?yield*_(L,v(),k(h)):yield new Uint8Array(await X(L,v()));"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 48290,
+          "utf8_byte_offset": 48292,
+          "anchor": "async function U(",
+          "excerpt": "async function U(h,z){const aG=ak,E=await fetch(h);if(!E['ok'])throw new Error(aG(0x304)+h+aG(0x203)+E[aG(0x387)]);const L=E[aG(0x250)][aG(0x25a)](aG(0x216)),W=L?Number(L):null;let a0;if(E[aG(0x18a)]&&z){const a1=E[aG(0x18a)][aG(0"
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "地图数据与其解析/转换结果必须配套验证；保留旧运行时，不能仅替换地图文件名。",
+      "limits": "没有测量解析 CPU、峰值内存或加载总时长，私有格式变化不自动等于性能提升。"
+    },
+    {
+      "id": "map_lifetime",
+      "title": "新增按保留地图集合释放贴图与派生材质",
+      "classification": "新增/内存生命周期",
+      "code_facts": [
+        "jF 接受保留地图集合，跳过仍在加载的地图，移除其他地图的可见模型/碰撞/PVS缓存。",
+        "xL 对该地图 lightmap ImageBitmap 调 close、纹理/material 调 dispose；uL 释放该地图 texture array 及 depth material；ul WeakMap 跟踪某张光照文档派生的材质。",
+        "WaGOTZ1D 的训练层卸载后在有 keepMaps 时调用此清理函数；并非所有帧的热路径或无条件全局清理。",
+        "旧版提供全量 resetMapAssets，但无同等按保留集合清理入口。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 932755,
+          "utf8_byte_offset": 936198,
+          "anchor": "function jF(t)",
+          "excerpt": "function jF(t){const e=new Set;for(const r of t)r&&e.add(r);const n=new Set([...Us.keys(),...Gi.keys(),...Ns.keys(),...zi.keys(),...bs.keys()]),i=[];for(const r of n){if(e.has(r)||La.has(r)||Fa.has(r)||Sc.has(r))continue;Us.delete"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 890687,
+          "utf8_byte_offset": 893582,
+          "anchor": "function xL(t,e)",
+          "excerpt": "function xL(t,e){for(const n of Object.values(t.atlases))for(const i of[n.irr,n.sh,n.avif?.irr,n.avif?.sh]){if(!i)continue;const r=e(i);Er.get(r)?.close(),Er.delete(r);for(const s of[`${r}|s`,`${r}|l`])Fs.get(s)?.dispose(),Fs.dele"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4122,
+          "char_offset": 884273,
+          "utf8_byte_offset": 887028,
+          "anchor": "function uL(t)",
+          "excerpt": "function uL(t){for(const e of t)e.dispose(),Al.delete(e),Ls.get(e)?.dispose(),Ls.delete(e)}function fL(){for(const t of Al)t.dispose();Al.clear();for(const t of Ls.values())t.dispose();Ls.clear()}const j0=.28209479,Au={lmScale:{va"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4122,
+          "char_offset": 886793,
+          "utf8_byte_offset": 889562,
+          "anchor": "const br=new Map,ul=new WeakMap",
+          "excerpt": "const br=new Map,ul=new WeakMap;function eC(t,e,n){br.set(e,n);const i=ul.get(t);i?i.push(e):ul.set(t,[e])}function CL(t,e,n,i,r){const s=`${t.uuid}|${i??\"none\"}|${r}`,a=br.get(s);if(a)return a;const o=vL(t,e,n,i,r);return eC(e,s,"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/WaGOTZ1D.js",
+          "line": 1,
+          "char_offset": 115102,
+          "utf8_byte_offset": 120469,
+          "anchor": "cQ&&x(cQ)",
+          "excerpt": "cQ&&x(cQ),cQ=null;}),(cR,cS)=>(bH(),bQ(c4,{'to':'body'},[bM('div',ir,[bM('main',{'class':bW(['al-trainer-shell',bL(cL)]),'style':bT(bL(cM))},[bL(cH)['cursorGuardVisible']['value']?(bH(),bG('div',or,[...cS[0x5]||(cS[0x5]=[bM('i',nu"
+        },
+        {
+          "file": "site/js/aQOfOAp-.js",
+          "line": 4194,
+          "char_offset": 844966,
+          "utf8_byte_offset": 848439,
+          "anchor": "function VB()",
+          "excerpt": "function VB(){Kr.clear(),kT(),wT(),sc.clear(),Io.clear(),ac.clear(),Nu.clear(),rc.clear(),Bo.clear()}const WB=n=>`${ii}/${n.image}`;function qB(n){return n?To.get(n)??null:null}function KB(n){if(To.has(n))return Promise.resolve(To"
+        }
+      ],
+      "priority": "P1",
+      "recommendation": "最值得独立评估的新增实现：给离线版连续切图建立明确资源所有权和保留集合，验证回放/编辑器/多个训练窗口共享资源后再采用。",
+      "limits": "这段清理不会证明所有几何或所有地图纹理已全部释放；必须测量多次切图内存并防止清理仍被活动场景共享的资源。"
+    },
+    {
+      "id": "impact_atlas",
+      "title": "命中特效由逐次克隆图集改为共享格子纹理",
+      "classification": "新增但现有补丁已覆盖",
+      "code_facts": [
+        "新版 bw 懒创建 vn×vn 个 atlas 纹理视图，后续每次命中只选择索引；原始旧版 Oh 每次 u 调用都会克隆纹理并替换/销毁。",
+        "新版 warmUp 等待命中特效 ready 后可用真实纹理；仍每次 spawn 新建 Mesh/Material、到期 dispose，未变成完整对象池。",
+        "本仓库 impact-tracer-pooling 已有共享 atlas、预热和 Mesh/Material 池，prewarm/actor-prewarm 的就绪与首波实例保留更广。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 73774,
+          "utf8_byte_offset": 74314,
+          "anchor": "function bw(e,t)",
+          "excerpt": "function bw(e,t){let n=null,s=null;const o=()=>{if(!n)return null;if(!s){const p=n;s=Array.from({length:vn*vn},(w,g)=>{const b=p.clone();return b.repeat.set(1/vn,1/vn),b.offset.set(g%vn/vn,Math.floor(g/vn)/vn),b})}return s};let a="
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 73857,
+          "utf8_byte_offset": 74397,
+          "anchor": "s=Array.from({length:vn*vn}",
+          "excerpt": "s=Array.from({length:vn*vn},(w,g)=>{const b=p.clone();return b.repeat.set(1/vn,1/vn),b.offset.set(g%vn/vn,Math.floor(g/vn)/vn),b})}return s};let a=()=>{};const l=new Promise(p=>{a=p});m0(kw,p=>{n=p,a();for(const w of i)f(w.star,w."
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 74896,
+          "utf8_byte_offset": 75436,
+          "anchor": "ready:l,spawn(",
+          "excerpt": "ready:l,spawn(p,w,g){if(!Fv())return;const b=Aw(g,p),E=d(null,1),y=d(u,us.glowAlpha);E.renderOrder=12,y.renderOrder=11,f(E,b),r.set(t.position.x-p.x,t.position.y-p.y,t.position.z-p.z),r.lengthSq()>1e-9?r.normalize().multiplyScalar"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 524,
+          "char_offset": 242351,
+          "utf8_byte_offset": 243039,
+          "anchor": "if(i.ready&&Q.push(i.ready)",
+          "excerpt": "if(i.ready&&Q.push(i.ready),Q.length&&await Promise.race([Promise.allSettled(Q),new Promise(Oe=>setTimeout(Oe,Ob))]),j!==Za||!le||fn!==le)return;const Te=[];for(const[Oe,Ye]of le.actorTemplates)try{Te.push(Ye.spawn().root);for(con"
+        },
+        {
+          "file": "site/js/CymPR-fm.js",
+          "line": 1,
+          "char_offset": 35864,
+          "utf8_byte_offset": 35864,
+          "anchor": "function Oh(e,t){",
+          "excerpt": "function Oh(e,t){let n=null;Ui(Ph,d=>{n=d;for(const h of s)u(h.star,h.seed)},void 0,()=>{});const o=new ts(1,1),a=Dh();let s=[];const i=new Pe,l=d=>{e.remove(d.star),e.remove(d.glow),d.star.material.map?.dispose(),d.star.material."
+        },
+        {
+          "file": "patches/impact-tracer-pooling.mjs",
+          "line": 53,
+          "char_offset": 5983,
+          "utf8_byte_offset": 5983,
+          "anchor": "function __aimImpactFrame",
+          "excerpt": "function __aimImpactFrame(frame){let texture=__aimImpactAtlas[frame];if(!texture&&n){texture=n.clone();texture.repeat.set(1/nn,1/nn);texture.offset.set(frame%nn/nn,Math.floor(frame/nn)/nn);texture.needsUpdate=true;__aimImpactAtlas"
+        },
+        {
+          "file": "patches/actor-prewarm.mjs",
+          "line": 15,
+          "char_offset": 908,
+          "utf8_byte_offset": 908,
+          "anchor": "export function createActorWarmPool",
+          "excerpt": "export function createActorWarmPool(plan=actorWarmCounts){\n  const states=new WeakMap();\n  function restore(entry){for(const [mesh,culled]of entry.frustum)mesh.frustumCulled=culled;entry.frustum.length=0;}\n  function detach(entry)"
+        }
+      ],
+      "priority": "P1",
+      "recommendation": "保留现有池化和预热；可以对照新版 ready 等待路径补充资源加载失败/延迟情况，不应替换回上游逐次分配。",
+      "limits": "官方首枪/刷球卡顿宣称未做 A/B，本项只确认资源分配策略变化。"
+    },
+    {
+      "id": "image_bitmap",
+      "title": "地图光照及部分枪械纹理由 Blob URL/Image 转向 ImageBitmap",
+      "classification": "新增/加载和资源管理",
+      "code_facts": [
+        "新版 ve 使用 createImageBitmap，固定 premultiplyAlpha/colorSpaceConversion；光照预取通过 L_ 得到 bitmap。",
+        "旧版资源模块 z/N 返回 blob URL 与 revoke，旧三人称枪械纹理经 TextureLoader.loadAsync 再 source 替换。",
+        "新版部分纹理 userData.assetBitmap 保存原位图并在更换/销毁时 close。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js",
+          "line": 1,
+          "char_offset": 49736,
+          "utf8_byte_offset": 49738,
+          "anchor": "async function ve(",
+          "excerpt": "async function ve(d,f,h){const aN=ak,l=await I(d,f);if(typeof createImageBitmap!=aN(0x3da))throw new Error(aN(0x3d0));return createImageBitmap(new Blob([l],h?{'type':h}:void 0x0),{'premultiplyAlpha':aN(0x142),'colorSpaceConversion"
+        },
+        {
+          "file": "site/js/DHDvBWqu.js",
+          "line": 1,
+          "char_offset": 6859,
+          "utf8_byte_offset": 6859,
+          "anchor": "async function N(",
+          "excerpt": "async function N(c,d){const at=a8,f=await E(c),l=URL[at(0xe8)](new Blob([f],void 0x0));return{'url':l,'revoke':()=>URL[at(0xe0)](l)};}export{p as a,z as b,w as c,W as d,G as e,$ as f,E as g,N as h,Y as i,g as m,J as s};"
+        },
+        {
+          "file": "site/js/tmIeW3Ig.js",
+          "line": 1,
+          "char_offset": 919496,
+          "utf8_byte_offset": 920378,
+          "anchor": "vf(A){",
+          "excerpt": "vf(A){const g=hQ.get(A);if(g)return g;const D=typeof ImageData>\"u\"?void 0:new ImageData(new Uint8ClampedArray([30,30,30,255]),1,1),w=new VB(D);return D&&(w.needsUpdate=!0),w.flipY=!1,w.colorSpace=MD,w.wrapS=fB,w.wrapT=fB,w.anisotr"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/Do4sYkfr.js",
+          "line": 1,
+          "char_offset": 948445,
+          "utf8_byte_offset": 949717,
+          "anchor": "D.userData.assetBitmap?.close()",
+          "excerpt": "D.userData.assetBitmap?.close(),D.source=new Q8(B),D.userData.assetBitmap=B,D.needsUpdate=!0}).catch(B=>{}),D}function Ba(A,g,w){return A.texture===null?g.emissive(\"#0b1016\",w):\"bundled\"in A.texture?g.skin(A.texture.bundled,null,w"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4122,
+          "char_offset": 885985,
+          "utf8_byte_offset": 888740,
+          "anchor": "const c=await L_(o,\"map\",s.mime)",
+          "excerpt": "const c=await L_(o,\"map\",s.mime);Er.set(o,c)})())}await Promise.all(i)}function Z0(t,e){const n=`${t}|${e?\"s\":\"l\"}`,i=Fs.get(n);if(i)return i;const r=Er.get(t);if(!r)throw new Error(`lightmap: 图集尚未预取：${t}`);const s=new Lt(r);retur"
+        }
+      ],
+      "priority": "P2",
+      "recommendation": "先在独立加载器评估 ImageBitmap 的颜色、翻转、透明和关闭时机，适合资源生命周期改造时一起考虑。",
+      "limits": "这是实现路径变化；未测主线程解码耗时，不能保证所有浏览器更快。"
+    },
+    {
+      "id": "world_batching",
+      "title": "地图合批与局部灯 Top-K 尚未吸收本地优化",
+      "classification": "保留旧策略/补丁不能丢",
+      "code_facts": [
+        "新版 FL 仍把大 instanced batch 按 geometry/material/atlas 合并，只有小批次按 48 米格子分组；与旧版 XT 的结构、3 实例/6000 三角阈值一致。",
+        "新版局部灯仍 map→filter→全量 sort→slice，非本地稳定 Top-K。",
+        "没有看到新版大批次实例视锥压紧对应实现；仅看到批次创建时 setMatrixAt 和整批 bounding sphere。",
+        "纹理数组合批旧版已启用（Gg.textureArrays=true / RB），新版 IC/UF 延续此项；不能把它记作本轮新增优化。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 893383,
+          "utf8_byte_offset": 896278,
+          "anchor": "const RL=3,DL=6e3,uu=48",
+          "excerpt": "const RL=3,DL=6e3,uu=48;function PL(t,e){t.updateMatrixWorld(!0);const n=[];t.traverse(h=>{const d=h;d.isMesh&&d.geometry&&n.push(d)});const i=t.children.filter(h=>{let d=!1;return h.traverse(m=>{m.isMesh&&(d=!0)}),!d}),r=new $e()"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 895906,
+          "utf8_byte_offset": 898801,
+          "anchor": "function FL(t,e)",
+          "excerpt": "function FL(t,e){const n=LL(t.keys()),i=new Map,r=new Map,s=new Q;for(const[o,c]of t){const l=o.matrices.length,A=n.get(o),u=m=>({geometry:o.geometry,matrix:o.matrices[m],name:o.names[m],lm:o.lms[m],slot:c,pvsKey:A}),f=l<=RL&&l*(M"
+        },
+        {
+          "file": "site/js/aQOfOAp-.js",
+          "line": 4194,
+          "char_offset": 823285,
+          "utf8_byte_offset": 826508,
+          "anchor": "function XT(n,e)",
+          "excerpt": "function XT(n,e){const t=KT(n.keys()),i=new Map,s=new Map,r=new P;for(const[o,c]of n){const l=o.matrices.length,h=t.get(o),u=g=>({geometry:o.geometry,matrix:o.matrices[g],name:o.names[g],lm:o.lms[g],slot:c,pvsKey:h}),f=l<=VT&&l*(S"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4108,
+          "char_offset": 787125,
+          "utf8_byte_offset": 789666,
+          "anchor": "const d=u.map(m=>({light:m,score:gP(m,f)}))",
+          "excerpt": "const d=u.map(m=>({light:m,score:gP(m,f)})).filter(m=>m.score>0).sort((m,g)=>g.score-m.score).slice(0,A.length);for(let m=0;m<A.length;m++){const g=A[m],p=d[m];if(!p){g.intensity=0;continue}const{light:E}=p;if(g.position.copy(E.po"
+        },
+        {
+          "file": "patches/world-performance.mjs",
+          "line": 24,
+          "char_offset": 1454,
+          "utf8_byte_offset": 1454,
+          "anchor": "const __aimLocalLightSelection=[]",
+          "excerpt": "const __aimLocalLightSelection=[],__aimLocalLightScores=[];\nfunction l(h,u,f,d){\nconst __aimLimit=h.length;let __aimCount=0;\nfor(const __aimLight of u){\n const __aimScore=ZI(__aimLight,f);if(!(__aimScore>0)||__aimLimit===0)continu"
+        },
+        {
+          "file": "patches/instance-visibility-compaction.mjs",
+          "line": 3,
+          "char_offset": 157,
+          "utf8_byte_offset": 157,
+          "anchor": "export function createInstanceVisibilityCompactor",
+          "excerpt": "export function createInstanceVisibilityCompactor(mesh, spheres, {minBatchTriangles=50000,knownMaterialHook=null,onReject=null}={}) {\n  const reject=(reason,detail=null)=>{onReject?.(reason,detail);return null;};\n  const geometry="
+        },
+        {
+          "file": "site/js/aQOfOAp-.js",
+          "line": 4194,
+          "char_offset": 841103,
+          "utf8_byte_offset": 844488,
+          "anchor": "const Gg={textureArrays:!0}",
+          "excerpt": "const Gg={textureArrays:!0};function RB(n,e,t){if(!Gg.textureArrays)return;const i=new Set;e.traverse(r=>{const a=r;a.isMesh&&a.material&&!Array.isArray(a.material)&&i.add(a.material)});const s=ST(i);if(s.merge"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4165,
+          "char_offset": 928380,
+          "utf8_byte_offset": 931735,
+          "anchor": "const IC={textureArrays:!0}",
+          "excerpt": "const IC={textureArrays:!0};function UF(t,e,n){if(!IC.textureArrays)return;const i=new Set;e.traverse(s=>{const a=s;a.isMesh&&a.material&&!Array.isArray(a.material)&&i.add(a.material)});const r=lL(i);if(r.array"
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "保留当前 Top-K 和保守实例压紧。不要因为新版哈希不同就丢弃补丁；新地图是否适用需要现有条件检查。",
+      "limits": "静态对照不足以证实所有渲染路径完全相同；本仓库已有空间分批回退的负面 A/B，不能再次默认全量空间切批。"
+    },
+    {
+      "id": "particle_upload",
+      "title": "枪口粒子仍会整块标记上传且空生成器分配临时数组",
+      "classification": "保留旧策略/补丁不能丢",
+      "code_facts": [
+        "新版 q0 在循环前仍分配 Float32Array(16) 与多个向量数组，未在 e.length===0 时提前返回。",
+        "两条枪口/敌方火光路径按 drawRange 后仍逐属性 needsUpdate=true，未给属性设置本帧有效前缀。",
+        "新版曳光路径已有 addUpdateRange，但不能据此说枪口路径已经使用局部上传。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 513,
+          "char_offset": 168818,
+          "utf8_byte_offset": 169372,
+          "anchor": "function q0(e,t,n,s){let o=0;",
+          "excerpt": "function q0(e,t,n,s){let o=0;const a=new Float32Array(16),l=[0,0,0],c=[0,0,0],u=[0,0,0],i=[0,0,0],r=[0,0,0],m=[0,0,0],f=[0,0,0],d=[0,0,0],v=[0,0,0],h=[0,0,0],p=[0,0,0],w=[0,0,0],g=[0,0,0];for(const b of e){n.shifted(La(b),a);for(c"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 513,
+          "char_offset": 183450,
+          "utf8_byte_offset": 184004,
+          "anchor": "ve.mesh.geometry.setDrawRange(0,ie);for(const be of ve.attrs)be.needsUpdate=!0",
+          "excerpt": "ve.mesh.geometry.setDrawRange(0,ie);for(const be of ve.attrs)be.needsUpdate=!0;ve.mesh.material.userData.dyn===!0&&(ve.dynAttr.needsUpdate=!0),S(ve.sink,ie,D),ie===0&&(ve.mesh.visible=!1),fe=null}}}),U=ce;for(let ie=ce;ie<b.length"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 117,
+          "char_offset": 54731,
+          "utf8_byte_offset": 54926,
+          "anchor": "b.addUpdateRange(0,h*4*b.itemSize)",
+          "excerpt": "b.addUpdateRange(0,h*4*b.itemSize),b.needsUpdate=!0}d.mesh.material.uniforms.gameTime.value=(f%60+60)%60;const w=r.autoClear;r.autoClear=!1;try{r.render(d.scene,m)}finally{r.autoClear=w}},clear(){s=[]},stats(){return{live:s.length"
+        },
+        {
+          "file": "patches/muzzle-upload-performance.mjs",
+          "line": 5,
+          "char_offset": 310,
+          "utf8_byte_offset": 310,
+          "anchor": "export function markMuzzleUploadRanges",
+          "excerpt": "export function markMuzzleUploadRanges(slot, count) {\n  if (count === 0) return;\n  for (const attribute of slot.attrs) {\n    attribute.clearUpdateRanges();\n    attribute.addUpdateRange(0, count * attribute.itemSize);\n    attribute"
+        },
+        {
+          "file": "patches/muzzle-upload-performance.mjs",
+          "line": 29,
+          "char_offset": 1731,
+          "utf8_byte_offset": 1731,
+          "anchor": "if(e.length===0)return 0;",
+          "excerpt": "if(e.length===0)return 0;'));\n  const start = source.indexOf('function qv(e){'), end = source.indexOf('function Zv(e,t,n,o,a){', start);\n  if (start < 0 || end <= start) throw Error('Muzzle upload performance patch version mismatc"
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "继续保留本地空生成器提前返回和有效前缀上传补丁；未来移植到新版时须覆盖新增的第三人称火光路径。",
+      "limits": "只证明上传标记与分配差异，未测 GPU 带宽或 FPS。"
+    },
+    {
+      "id": "frame_cap",
+      "title": "网页版数值限帧和时钟问题仍需本地补丁",
+      "classification": "保留旧策略/补丁不能丢",
+      "code_facts": [
+        "新版训练参数仍 maxFps:nt?t.maxFps?.current??0:0，即由桌面 unlimited 条件控制。",
+        "新版 nk 的限帧 deadline 检查与下一帧推进仍用 n.now()，没有本地 RAF 时间戳通路与 0.25ms 截止容差。",
+        "getSyncParameter 的 GPU fence 轮询基本沿用旧版；无法据此宣称低延迟功能是新增。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 524,
+          "char_offset": 261092,
+          "utf8_byte_offset": 261780,
+          "anchor": "maxFps:nt?t.maxFps?.current??0:0",
+          "excerpt": "maxFps:nt?t.maxFps?.current??0:0,showPerformance:t.showPerformance.current}),Me&&xn){const Q=is(Me);for(const ye of bs)ye.kind===\"shot\"&&(Ms.push(ye.tick*we),Ms.length>Ce&&Ms.shift(),E.push({at:ye.tick*we,spreadDeg:ye.spreadDeg,.."
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 81161,
+          "utf8_byte_offset": 81701,
+          "anchor": "function nk(e,t,n=qw)",
+          "excerpt": "function nk(e,t,n=qw){let s={...t};const o=Sp(),a=Hw(),l=Xw();let c=null,u=0,i=0,r=0,m=!1,f=0,d=0,v=0,h=0,p=0,w=0,g=0;const b=()=>{const I=Math.max(1,Math.floor(s.renderEveryNthFrame));return v%I===0},E=()=>{const I=s.maxFps??0;re"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 81499,
+          "utf8_byte_offset": 82039,
+          "anchor": "const R=n.now();if(R>=p)return!0;",
+          "excerpt": "const R=n.now();if(R>=p)return!0;const L=Math.floor(p-R-Zw-g);return L>=1&&n.deferFrame&&(n.cancelFrame(f),f=n.deferFrame(T,L),w=R+L),!1}function x(){const I=E();if(I===0)return;const R=n.now();p=p>0&&p+I>R?p+I:R+I,g*=ek}function "
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js",
+          "line": 4108,
+          "char_offset": 790945,
+          "utf8_byte_offset": 793576,
+          "anchor": "getSyncParameter(o.sync,t.SYNC_STATUS)",
+          "excerpt": "getSyncParameter(o.sync,t.SYNC_STATUS)===t.SIGNALED)){if(e()-o.at<FP)break;r++}t.deleteSync(o.sync),s.shift()}return s.length<n?!0:(i++,!1)},stats:()=>({maxInFlight:n,inFlight:s.length,blocked:i,stale:r}),submitted(){if(n===0||t.i"
+        },
+        {
+          "file": "patches/framerate.mjs",
+          "line": 24,
+          "char_offset": 1466,
+          "utf8_byte_offset": 1536,
+          "anchor": "const O=n.deferFrame?n.now():_;",
+          "excerpt": "const O=n.deferFrame?n.now():_;if(O>=m', 1, 'RAF 限帧时钟');\n  training = replaceExact(training,\n    'function A(){const _=M();if(_===0)return;const O=n.now();',\n    'function A(frameTime){const _=M();if(_===0)return;const O=n.deferFr"
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "保留当前本机限帧、RAF 时钟补丁；上游设置文案中的低延迟收益只作为其宣称，不作为本机测量。"
+    },
+    {
+      "id": "bot_order",
+      "title": "机器人编号仍由独立 RAF 更新",
+      "classification": "保留旧策略/补丁不能丢",
+      "code_facts": [
+        "新版 BotOrderOverlay 的 b() 读 view.current，再独立 requestAnimationFrame(b)。",
+        "本地 bot-order 补丁由世界渲染帧发布，使用实际渲染位置修正头部投影，并取消旧位置淡出。",
+        "新版其他 HUD 有 afterFrame 回调，不代表编号标签已同步。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 524,
+          "char_offset": 407174,
+          "utf8_byte_offset": 411664,
+          "anchor": "const If=12,d5=4,f5=Ge({__name:\"BotOrderOverlay\"",
+          "excerpt": "const If=12,d5=4,f5=Ge({__name:\"BotOrderOverlay\",props:{view:{}},setup(e,{expose:t}){const n=e,s=se(null),o=se(null),a=[],l=[],c=[];let u=!1;function i(E){E instanceof HTMLElement&&!a.includes(E)&&a.push(E)}let r=0,m=0,f=0,d=null;"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 524,
+          "char_offset": 408321,
+          "utf8_byte_offset": 412811,
+          "anchor": "function b(){g(n.view.current),r=requestAnimationFrame(b)}",
+          "excerpt": "function b(){g(n.view.current),r=requestAnimationFrame(b)}return at(()=>{v(),typeof ResizeObserver<\"u\"&&s.value&&(d=new ResizeObserver(v),d.observe(s.value)),r=requestAnimationFrame(b)}),lt(()=>{r&&cancelAnimationFrame(r),r=0,d?.d"
+        },
+        {
+          "file": "patches/bot-order.mjs",
+          "line": 4,
+          "char_offset": 235,
+          "utf8_byte_offset": 235,
+          "anchor": "export function publishBotOrder",
+          "excerpt": "export function publishBotOrder(view){\n  const listeners=view?.[Symbol.for('aim-offline.bot-order-paint.v1')];\n  if(listeners)for(const paint of listeners)paint(view.current);\n}\n\nexport function subscribeBotOrder(view,paint){\n  co"
+        },
+        {
+          "file": "patches/bot-order.mjs",
+          "line": 24,
+          "char_offset": 1075,
+          "utf8_byte_offset": 1075,
+          "anchor": "export function offsetBotOrderHead",
+          "excerpt": "export function offsetBotOrderHead(head,actor,rendered){\n  if(!rendered)return head;\n  const position=actor.position,offset=actor.offset;\n  head.x+=rendered.x-(position.x+(offset?.x??0));\n  head.y+=rendered.y-(position.y+(offset?."
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "保留编号同帧同步补丁，机器人点位刷新时验证标签与模型的位置一致。"
+    },
+    {
+      "id": "idle_canvas",
+      "title": "捷风闲置覆盖画布仍未隐藏",
+      "classification": "保留旧策略/补丁不能丢",
+      "code_facts": [
+        "新版创建 tailwind Canvas 仍设满屏 position/inset/size 和 pointerEvents，但无初始 display:none；空状态只 clearRect。",
+        "本地 world-performance 补丁已有闲置隐藏、实际绘制再显示。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 99229,
+          "utf8_byte_offset": 99783,
+          "anchor": "pointerEvents:\"none\"}),e.appendChild(t)",
+          "excerpt": "pointerEvents:\"none\"}),e.appendChild(t);const n=t.getContext(\"2d\");let s=!1;const o=()=>{const r=Math.max(1,Math.round(e.clientWidth)),m=Math.max(1,Math.round(e.clientHeight));return(t.width!==r||t.height!==m)&&(t.width=r,t.height"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 100680,
+          "utf8_byte_offset": 101234,
+          "anchor": "i=()=>{!s||!n||(n.clearRect(0,0,t.width,t.height),s=!1)}",
+          "excerpt": "i=()=>{!s||!n||(n.clearRect(0,0,t.width,t.height),s=!1)};return{apply(r,m,f,d){if(!n||!r||!r.rules.tailwind){i();return}const v=r.tailwind,h=f?m-f.at:1/0,p=v.phase===ri||v.phase===n0;if(!(h>=0&&h<Pr)&&!(p&&d)){i();return}const{w,h"
+        },
+        {
+          "file": "patches/world-performance.mjs",
+          "line": 50,
+          "char_offset": 3120,
+          "utf8_byte_offset": 3120,
+          "anchor": "idle Jett canvas hidden initially",
+          "excerpt": "idle Jett canvas hidden initially');\n  effect = replaceOne(effect,\n    'r=()=>{!o||!n||(n.clearRect(0,0,t.width,t.height),o=!1)};',\n    'r=()=>{!o||!n||(n.clearRect(0,0,t.width,t.height),o=!1);t.style.display!==\"none\"&&(t.style.di"
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "保留本地闲置画布隐藏；大厅隐藏补丁仍需在实际新版 CSS 中单独核验，此报告未读取新版完整 CSS，不能断言大厅是否已改。"
+    },
+    {
+      "id": "stats_semantics",
+      "title": "新版 1% Low 改为 1000/p99，比较会失真",
+      "classification": "口径变化/风险",
+      "code_facts": [
+        "旧版 em 对最多 600 个小于 250ms 的间隔取平均，onePercentLow 为最慢 ceil(1%) 间隔均值倒数。",
+        "新版 Hw 使用约 5 秒窗口、至少 1 秒数据、每秒输出；onePercentLow 为排序数组第 ceil(0.99*n) 项的倒数，等价 nearest-rank p99 倒数。",
+        "新版 Hw 接受所有正且有限间隔，与旧版过滤 >=250ms 也不同。",
+        "慢帧原因分类在两版都存在，只是经验归因（shader/upload/gpu/sim/render/outside），不等于 GPU timestamp 测量。"
+      ],
+      "evidence": [
+        {
+          "file": "site/js/CymPR-fm.js",
+          "line": 1,
+          "char_offset": 43806,
+          "utf8_byte_offset": 43806,
+          "anchor": "function em(){",
+          "excerpt": "function em(){const e=[];let t=0;return{record(n){n<=0||n>=Jh||(e.push(n),e.length>qh&&e.shift())},report(n){if(e.length<Qh||n-t<Zh)return null;t=n;const o=xn(e),a=Math.max(1,Math.ceil(e.length*.01)),s=xn([...e].sort((i,l)=>l-i).s"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 78917,
+          "utf8_byte_offset": 79457,
+          "anchor": "const Dw=5e3,Ow=1e3,Bw=1e3,Nw=.99",
+          "excerpt": "const Dw=5e3,Ow=1e3,Bw=1e3,Nw=.99,Uw=(e,t)=>e[Math.min(e.length-1,Math.max(0,Math.ceil(t*e.length)-1))];function Hw(){let e=[],t=0,n=0,s=-1/0;return{record(o){if(!(!(o>0)||!Number.isFinite(o))){for(e.push(o),n+=o;n>Dw&&e.length-t>"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 79021,
+          "utf8_byte_offset": 79561,
+          "anchor": "function Hw(){",
+          "excerpt": "function Hw(){let e=[],t=0,n=0,s=-1/0;return{record(o){if(!(!(o>0)||!Number.isFinite(o))){for(e.push(o),n+=o;n>Dw&&e.length-t>1;)n-=e[t++];t>512&&t*2>e.length&&(e=e.slice(t),t=0)}},report(o){if(n<Ow||o-s<Bw)return null;s=o;const a"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 79306,
+          "utf8_byte_offset": 79846,
+          "anchor": "onePercentLow:1e3/Uw(a,Nw)",
+          "excerpt": "onePercentLow:1e3/Uw(a,Nw)}},reset(){e=[],t=0,n=0,s=-1/0}}}const Vw=1.5,Ww=120,Gw=30,Kw=60,$w=250;function jw(e,t){return t.newPrograms>0?\"shader\":t.newTextures>0||t.newGeometries>0?\"upload\":t.gpuWaits>0?\"gpu\":t.tickMs+t.renderMs<"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js",
+          "line": 182,
+          "char_offset": 79404,
+          "utf8_byte_offset": 79944,
+          "anchor": "function jw(e,t)",
+          "excerpt": "function jw(e,t){return t.newPrograms>0?\"shader\":t.newTextures>0||t.newGeometries>0?\"upload\":t.gpuWaits>0?\"gpu\":t.tickMs+t.renderMs<e?\"outside\":t.tickMs>=t.renderMs?\"sim\":\"render\"}function Xw(){const e=[];let t=0,n=0,s=0,o=0,a=0,l"
+        },
+        {
+          "file": "site/js/CymPR-fm.js",
+          "line": 1,
+          "char_offset": 44197,
+          "utf8_byte_offset": 44197,
+          "anchor": "function im(e,t)",
+          "excerpt": "function im(e,t){return t.newPrograms>0?\"shader\":t.newTextures>0||t.newGeometries>0?\"upload\":t.gpuWaits>0?\"gpu\":t.tickMs+t.renderMs<e?\"outside\":t.tickMs>=t.renderMs?\"sim\":\"render\"}function rm(){const e=[];let t=0,n=0,o=0,a=0,s=0,i"
+        }
+      ],
+      "priority": "P0",
+      "recommendation": "跨版本性能验收统一采集原始帧间隔，继续使用 README 已明确定义的最慢 1% 平均；上游 HUD 改名或换统计时不要混用历史数据。",
+      "limits": "没有在目标机器测量，因此本报告不提供 FPS 或 1% Low 提升百分比。"
+    },
+    {
+      "id": "bot_gameplay",
+      "title": "新增机器人下蹲、俯仰瞄准、持枪切换与编排功能",
+      "classification": "功能/手感优化，不是性能优化",
+      "code_facts": [
+        "官方日志记录下蹲、随机左右、抬头低头、动作复刻、生成器进入范围触发和编排器。",
+        "新版 renderer v0 收集 crouch amount、aimPitch，并混合动画/姿态；spawnHolding 支持持枪变化，仍保留旧版已有的离屏人形骨骼更新剔除。",
+        "这些功能扩大状态、回放与场景 schema，不能把新版 bot renderer 独立替换进旧模拟/命中逻辑。"
+      ],
+      "evidence": [
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+          "line": 1,
+          "char_offset": 2865,
+          "utf8_byte_offset": 6356,
+          "anchor": "敌人新增「下蹲」行为",
+          "excerpt": "敌人新增「下蹲」行为：站住时、开枪之后、隔一段时间都能蹲，可以多选，各自设几成会蹲，蹲多久可调；下蹲过程和命中判定按游戏还原','摆射「随机左右」改成和游戏训练场的横移机器人一样：从出生点往随机一侧走出去，回到出生点再挑下一侧，不再原地抽一下','生成器的「生成延迟」「出场最小间隔」写清了各从什么时候算，以及「开局马上出、打倒后多等几秒」怎么配','修复：左上角地图卡片只有点文字才能换图']}]},{'id':'2026-10-21','headline'"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+          "line": 1,
+          "char_offset": 2358,
+          "utf8_byte_offset": 5201,
+          "anchor": "开了「自动朝向」的敌人",
+          "excerpt": "开了「自动朝向」的敌人，你在高处或低处时会照游戏抬头低头对着你。修复：从下往上打高处敌人的脸，会被判成打身体','斜着贴边走上矮台不再卡脚（比如亚海悬城\\x20A\\x20点二楼的外沿），什么角度都是一步跨上去','所有地图：电线、草丛、垃圾袋、木箱和长椅的边这类游戏里能直接走过去的小东西，不再当成台阶或障碍，走过去不会再颠一下']},{'name':'大厅','items':['右上角新增消息铃铛，登录后能看站内通知']}]},{'id':'2026-10"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js",
+          "line": 1,
+          "char_offset": 643,
+          "utf8_byte_offset": 1365,
+          "anchor": "新增「编排器」",
+          "excerpt": "新增「编排器」：几个敌人编成进攻方案，每波随机或按顺序上','生成器可设「走进范围才出」','不死鸟、斯凯、铁臂、K/O、夜露等闪光照游戏数据重做，K/O\\x20能弹地','寻敌箭的扫描隔着烟看不见了','试玩里也能开辅助瞄准']},{'name':'大厅','items':['新增「训练清单」：自建、收藏、短码分享，能连续练，打完一张自动进下一张；官方清单「排位图池\\x20·\\x20预瞄」','瓦工坊新增实战、微调、热身、混烟、封烟等分类，一个项目可属多"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/Do4sYkfr.js",
+          "line": 417,
+          "char_offset": 985110,
+          "utf8_byte_offset": 987417,
+          "anchor": "crouch:BA>0?",
+          "excerpt": "crouch:BA>0?{motion:eE(_),amount:BA}:null,aimPitch:Kf(H),scale:wA*y.mesh.skin.scale})}const N=y.mesh.tintable&&y.emissiveHex!==gA;y.mesh.parts.forEach((_,BA)=>{const fA=_.material;fA.color.setHex($),N&&fA.emissive.setHex(gA).multi"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/Do4sYkfr.js",
+          "line": 417,
+          "char_offset": 983011,
+          "utf8_byte_offset": 985318,
+          "anchor": "d.spawnHolding?d.spawnHolding",
+          "excerpt": "d.spawnHolding?d.spawnHolding(M.heldWeapon,M.ads===1):d.spawn():null},l=M=>{M.parts.forEach(U=>{U.material=U.material.clone()}),Va(M.root),Oa(M.root),A.root.add(M.root)},i=M=>M.parts.map(U=>({x:U.scale.x,y:U.scale.y,z:U.scale.z}))"
+        },
+        {
+          "file": "upstream/aimpro-2026-11-05/source/js/Do4sYkfr.js",
+          "line": 417,
+          "char_offset": 986274,
+          "utf8_byte_offset": 988581,
+          "anchor": "H.culled=!(AA.visible&&f.intersectsSphere(I))",
+          "excerpt": "H.culled=!(AA.visible&&f.intersectsSphere(I)),H.culled){AA.visible=!1;continue}x?Ea(H.mesh,y,R,x.motion,x.amount):yC(H.mesh,y,R),na(H.mesh,R,x?x.motion:eE(R),x?x.amount:0,gA)}s.length=0}},clear(){for(const M of B.values())P(M);B.c"
+        },
+        {
+          "file": "site/js/tmIeW3Ig.js",
+          "line": 126,
+          "char_offset": 937175,
+          "utf8_byte_offset": 938667,
+          "anchor": "v.culled=!(i.visible&&P.intersectsSphere(f))",
+          "excerpt": "v.culled=!(i.visible&&P.intersectsSphere(f)),v.culled){i.visible=!1;continue}kE(v.mesh,a,k)}e.length=0}},clear(){for(const n of B.values())s(n);B.clear(),C=-1,Q=null,E=0,o=null,I=null}}}const DB=16,nn=.12,sn=new uA(-.28,-.22,0),Fn"
+        }
+      ],
+      "priority": "P2",
+      "recommendation": "先导入地图/机器人位置数据；若引入新行为，按模拟、命中、动画、回放、编辑器一整组移植并保持旧回放兼容。",
+      "limits": "动画能力增加也可能增加成本；没有测量，不能视作 FPS 优化。"
+    }
+  ],
+  "adoption_order": [
+    {
+      "priority": "P0",
+      "action": "保留当前运行时和已验证补丁，地图/点位用明确转换与数据校验接入；不要整体替换上游模块。"
+    },
+    {
+      "priority": "P1",
+      "action": "对连续切图的按图清理/资源所有权做独立原型，检查活跃回放和编辑器共享；这是较明确的新增可借鉴实现。"
+    },
+    {
+      "priority": "P1",
+      "action": "命中特效图集共享/ready 等待与现有池化预热对照，仅补缺口，避免重复实现和回退。"
+    },
+    {
+      "priority": "P2",
+      "action": "后续增量更新器考虑按资源内容版本；ImageBitmap 与新行为分别做加载正确性和模拟兼容验证。"
+    }
+  ],
+  "why_not_wholesale_upgrade": [
+    "所有核心模块哈希和导入关系变化，多处补丁用版本固定锚点；直接升级将丢失本地英文覆盖、枪皮扩展、同帧标签、限帧、预热、粒子上传和实例压紧。",
+    "地图 .glb 地址语义变了，私有地图容器与传输分块版本必须有对应解析器/转换器；标准 GLTFLoader 不可直接消费。",
+    "新增技能、机器人动画/持枪状态和计分/回放规则彼此耦合；只换渲染器可能使看到的姿势与命中/回放状态不一致。",
+    "1% Low 口径变化使上游 HUD 数字与历史本地结果不可比；必须统一基准和画面设置后测量。",
+    "官方日志是功能与定性改进说明，不是本机性能数据；源码变化没有证明稳定 240 FPS、平均帧率或尾帧改善。"
+  ],
+  "source_sha256": {
+    "upstream/aimpro-2026-11-05/source/js/mkwUxM8L.js": "618765fdf9239cb4704b2f471d13934860bc8e795a1ffc2c5a988c1db3ea2ec2",
+    "upstream/aimpro-2026-11-05/source/js/ATp_kJvD.js": "bf57e15ea770dd98d419b11b251fabb30b28e422bc092a5580b1df245195eba4",
+    "site/js/DHDvBWqu.js": "125497654f412e48a804519cdf6bf6c8a105fc94cda749da02bf3e41121321bc",
+    "upstream/aimpro-2026-11-05/source/js/CqM6URxy.js": "a9553a40057fec43dbd2600bb83afb0af57c2d0772c52d4b742113237257dccc",
+    "site/js/aQOfOAp-.js": "4c6d595ae8279900bfc5b2d56752683c1f31f5f79173bd25057c487174afc860",
+    "upstream/aimpro-2026-11-05/source/js/WaGOTZ1D.js": "297b8084bbd4cf3a6626dd5a352c0ca0dca052bf43bc78f2a7d649a4b214bdeb",
+    "upstream/aimpro-2026-11-05/source/js/CBthEhpW.js": "c667cdc3312891b1b2477ac59cb92c0a5ade5c293b9fb20c94af7bd163cb3bb2",
+    "site/js/CymPR-fm.js": "99b3a34df9ce76ee0ec1eb622bf10cf75c7c4db24ff3b9681b48e01a11b975eb",
+    "patches/impact-tracer-pooling.mjs": "ebeba453f2679eb1ffd7ae7a3eac859995bb42b5721604b331525a632b46a14e",
+    "patches/actor-prewarm.mjs": "9039fd271400b4589fdd256ca609ca512b7fa06da845485f1ba9fd1b9156d52f",
+    "site/js/tmIeW3Ig.js": "331ba10c11d5a7a6ba1ab924e97465b04793ff25c5283a32ffcb66e263308bbb",
+    "upstream/aimpro-2026-11-05/source/js/Do4sYkfr.js": "501cc2a536decd036f134fe1ead7bc76ae40f023de44cec651b2cb70b37aa87b",
+    "patches/world-performance.mjs": "79c0faefc722f468c08e21ec5619d090301f9a996278c6140d62ac9129670dec",
+    "patches/instance-visibility-compaction.mjs": "e154a0ba6522da02fdf4d19ccb98c83d180fc1e9d3932e1b19f915d215145972",
+    "patches/muzzle-upload-performance.mjs": "31925202e434924654b6f183e96d4c60a4162de69df60c619bd612d1349931dc",
+    "patches/framerate.mjs": "34fb963cbd81d4ea164d69297a2845d8e55ce07c648a408ab2e1341bd85e949f",
+    "patches/bot-order.mjs": "d475f27184f660427b63d56935c626b32e41388581abb22d546594788f68c03f"
+  }
+}

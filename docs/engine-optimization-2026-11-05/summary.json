@@ -1,0 +1,3913 @@
+{
+  "schemaVersion": 3,
+  "generatedAt": "2026-11-05T13:08:27.962Z",
+  "sourceDirectory": "/home/yuyuan/miaozhun-offline/local-data/engine-optimization-2026-11-05",
+  "benchmarkKind": "optimization",
+  "labels": {
+    "old": "优化前",
+    "new": "优化后"
+  },
+  "nativeStencil": {
+    "old": true,
+    "new": true
+  },
+  "validation": {
+    "valid": true,
+    "plannedRunCount": 12,
+    "pairs": [
+      {
+        "caseId": "ascent",
+        "round": 1,
+        "files": [
+          "00-old.json",
+          "01-new.json"
+        ],
+        "matched": true,
+        "allowedNativeContextDifference": null
+      },
+      {
+        "caseId": "ascent",
+        "round": 2,
+        "files": [
+          "02-new.json",
+          "03-old.json"
+        ],
+        "matched": true,
+        "allowedNativeContextDifference": null
+      },
+      {
+        "caseId": "ascent",
+        "round": 3,
+        "files": [
+          "04-old.json",
+          "05-new.json"
+        ],
+        "matched": true,
+        "allowedNativeContextDifference": null
+      },
+      {
+        "caseId": "plummet",
+        "round": 1,
+        "files": [
+          "06-old.json",
+          "07-new.json"
+        ],
+        "matched": true,
+        "allowedNativeContextDifference": null
+      },
+      {
+        "caseId": "plummet",
+        "round": 2,
+        "files": [
+          "08-new.json",
+          "09-old.json"
+        ],
+        "matched": true,
+        "allowedNativeContextDifference": null
+      },
+      {
+        "caseId": "plummet",
+        "round": 3,
+        "files": [
+          "10-old.json",
+          "11-new.json"
+        ],
+        "matched": true,
+        "allowedNativeContextDifference": null
+      }
+    ]
+  },
+  "environmentComparability": {
+    "matchedProperties": [
+      "userAgent",
+      "hardwareConcurrency",
+      "deviceMemory",
+      "devicePixelRatio",
+      "buffer",
+      "gpuVendor",
+      "gpuRenderer",
+      "context"
+    ],
+    "exception": null
+  },
+  "plan": {
+    "benchmarkKind": "optimization",
+    "labels": {
+      "old": "优化前",
+      "new": "优化后"
+    },
+    "seed": 20261105,
+    "width": 1280,
+    "height": 720,
+    "warmupSeconds": 5,
+    "measureSeconds": 15,
+    "gpuTiming": false,
+    "plan": [
+      {
+        "caseId": "ascent",
+        "round": 1,
+        "engine": "old"
+      },
+      {
+        "caseId": "ascent",
+        "round": 1,
+        "engine": "new"
+      },
+      {
+        "caseId": "ascent",
+        "round": 2,
+        "engine": "new"
+      },
+      {
+        "caseId": "ascent",
+        "round": 2,
+        "engine": "old"
+      },
+      {
+        "caseId": "ascent",
+        "round": 3,
+        "engine": "old"
+      },
+      {
+        "caseId": "ascent",
+        "round": 3,
+        "engine": "new"
+      },
+      {
+        "caseId": "plummet",
+        "round": 1,
+        "engine": "old"
+      },
+      {
+        "caseId": "plummet",
+        "round": 1,
+        "engine": "new"
+      },
+      {
+        "caseId": "plummet",
+        "round": 2,
+        "engine": "new"
+      },
+      {
+        "caseId": "plummet",
+        "round": 2,
+        "engine": "old"
+      },
+      {
+        "caseId": "plummet",
+        "round": 3,
+        "engine": "old"
+      },
+      {
+        "caseId": "plummet",
+        "round": 3,
+        "engine": "new"
+      }
+    ],
+    "cases": [
+      {
+        "id": "ascent",
+        "code": "54145a349a983de4",
+        "name": "亚海悬城 B 中路回防",
+        "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+        "spawners": 20,
+        "actorTemplates": 2
+      },
+      {
+        "id": "plummet",
+        "code": "b212f6540b47679a",
+        "name": "天枢云阙 A 大预瞄",
+        "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+        "spawners": 20,
+        "actorTemplates": 3
+      }
+    ],
+    "ports": {
+      "old": 18820,
+      "new": 18821
+    }
+  },
+  "configuration": {
+    "width": 1280,
+    "height": 720,
+    "warmupSeconds": 5,
+    "measureSeconds": 15,
+    "samplingClock": "simulation",
+    "audio": false,
+    "skin": "native default",
+    "shadows": true,
+    "lowLatency": false,
+    "renderScale": 1,
+    "frameMode": "refresh",
+    "maxFps": 0,
+    "sensitivity": 0.5,
+    "viewModelFov": 70
+  },
+  "environments": [
+    {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "hardwareConcurrency": 24,
+      "deviceMemory": 32,
+      "devicePixelRatio": 1,
+      "buffer": [
+        1280,
+        720
+      ],
+      "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+      "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+      "context": {
+        "alpha": true,
+        "antialias": true,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "high-performance",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": false,
+        "stencil": true,
+        "xrCompatible": false
+      }
+    }
+  ],
+  "hashes": {
+    "plan": "06acad048e2cff30a06ba309149425ca5c42917dcbda815af03f16e043c251af",
+    "engines": {
+      "old": {
+        "originalGame": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+        "originalWorld": "c163cf1197de1b16d351d55f6a15d6a2e65769fd532e055ec092cd57c22dd261",
+        "actorRenderer": "a13dc9d2ac7a04b8612766217733dce5bc2f5a8ea016e11620608aeb4f129f10",
+        "instrumentedWorld": "3b544b65647bdb3e66e61317c0cc886cdaefed0fe7b4f8f83d75f54015bf2f39",
+        "instrumentedGame": "06b99431cfe962af988cc8d8ea31fc06a80b0df1acbfe6ea67cf12c3d81b19d0",
+        "config": "a35296dd88b4f7f0928239e50227075362d17e498299e8dd6456d3680d54e081",
+        "runtime": "6fc9ea4ed2a7a7cb4ebd385ad2f30fdecbb2b9780e830101755b29e131f02d5a",
+        "metrics": "d6991f43b6fad8ec24d6b1aea070f97fd418232eca83e81435dfb1cfb2e5c5bd",
+        "renderStats": "56c33fcb031dadab2916c7837d6055df7880973680211621629097ce9091353e"
+      },
+      "new": {
+        "originalGame": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+        "originalWorld": "c163cf1197de1b16d351d55f6a15d6a2e65769fd532e055ec092cd57c22dd261",
+        "actorRenderer": "76716f37c321e5e57f15de3dae2e6bbc60ae6bde52ddadf99b59dca3703301b7",
+        "instrumentedWorld": "3b544b65647bdb3e66e61317c0cc886cdaefed0fe7b4f8f83d75f54015bf2f39",
+        "instrumentedGame": "06b99431cfe962af988cc8d8ea31fc06a80b0df1acbfe6ea67cf12c3d81b19d0",
+        "config": "e742ccaba367db4a3b510612efcf6f380d8944df32131c24af78924e555ad8d8",
+        "runtime": "6fc9ea4ed2a7a7cb4ebd385ad2f30fdecbb2b9780e830101755b29e131f02d5a",
+        "metrics": "d6991f43b6fad8ec24d6b1aea070f97fd418232eca83e81435dfb1cfb2e5c5bd",
+        "renderStats": "56c33fcb031dadab2916c7837d6055df7880973680211621629097ce9091353e"
+      }
+    }
+  },
+  "metricDefinitions": {
+    "averageFps": {
+      "label": "平均 FPS",
+      "direction": "higher-is-better"
+    },
+    "onePercentLowFps": {
+      "label": "1% low FPS",
+      "direction": "higher-is-better"
+    },
+    "p99FrameMs": {
+      "label": "P99 帧间隔（ms）",
+      "direction": "lower-is-better"
+    },
+    "renderSubmitMeanMs": {
+      "label": "渲染提交 CPU（ms/次）",
+      "direction": "lower-is-better"
+    },
+    "tickMeanMs": {
+      "label": "逻辑 tick CPU（ms/次）",
+      "direction": "lower-is-better"
+    },
+    "drawCallsMean": {
+      "label": "draw calls/帧",
+      "direction": "context-only"
+    },
+    "trianglesMean": {
+      "label": "三角形/帧",
+      "direction": "context-only"
+    },
+    "stuttersOver33_333Ms": {
+      "label": ">33.333 ms 次数",
+      "direction": "lower-is-better"
+    },
+    "stuttersOver50Ms": {
+      "label": ">50 ms 次数",
+      "direction": "lower-is-better"
+    },
+    "stuttersOver100Ms": {
+      "label": ">100 ms 次数",
+      "direction": "lower-is-better"
+    }
+  },
+  "runCount": 12,
+  "droppedRunCount": 0,
+  "caseCount": 2,
+  "pairedRoundCount": 6,
+  "notes": [
+    "Descriptive results only; a small number of runs does not establish statistical significance.",
+    "Positive percent change means an increase. Lower frame times and higher FPS are better.",
+    "Engine summaries include unpaired runs; paired summaries exclude missing or duplicate rounds.",
+    "Percent change is undefined (null) when the old baseline is zero."
+  ],
+  "cases": [
+    {
+      "caseId": "ascent",
+      "runCounts": {
+        "old": 3,
+        "new": 3
+      },
+      "engines": {
+        "old": {
+          "averageFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 57.937229965445894,
+            "median": 59.93732915527686,
+            "min": 53.871560610435644,
+            "max": 60.002800130625175,
+            "range": 6.131239520189531,
+            "p95": 59.99625303309035,
+            "p99": 60.00149071111821
+          },
+          "drawCallsMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 430.58750355115274,
+            "median": 430.6293007769152,
+            "min": 430.47654320987687,
+            "max": 430.65666666666607,
+            "range": 0.18012345678920383,
+            "p95": 430.65393007769103,
+            "p99": 430.656119348871
+          },
+          "onePercentLowFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 40.44356281493762,
+            "median": 51.282051282051285,
+            "min": 13.903908543563452,
+            "max": 56.144728619198126,
+            "range": 42.24082007563467,
+            "p95": 55.65846088548344,
+            "p99": 56.04747507245519
+          },
+          "p99FrameMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 32.886666663487745,
+            "median": 17.700000017881393,
+            "min": 17.69999998807907,
+            "max": 63.25999998450277,
+            "range": 45.5599999964237,
+            "p95": 58.703999987840625,
+            "p99": 62.348799985170345
+          },
+          "renderSubmitMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 2.2937999024531677,
+            "median": 2.294222222467264,
+            "min": 2.162486126499618,
+            "max": 2.4246913583926215,
+            "range": 0.2622052318930037,
+            "p95": 2.411644444800086,
+            "p99": 2.4220819756741143
+          },
+          "stuttersOver100Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "stuttersOver33_333Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 14.666666666666666,
+            "median": 0,
+            "min": 0,
+            "max": 44,
+            "range": 44,
+            "p95": 39.599999999999994,
+            "p99": 43.12
+          },
+          "stuttersOver50Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 3.3333333333333335,
+            "median": 0,
+            "min": 0,
+            "max": 10,
+            "range": 10,
+            "p95": 9,
+            "p99": 9.8
+          },
+          "tickMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.20890419843224137,
+            "median": 0.20822916673496178,
+            "min": 0.20666666650213136,
+            "max": 0.21181676205963096,
+            "range": 0.0051500955574995955,
+            "p95": 0.21145800252716404,
+            "p99": 0.21174501015313757
+          },
+          "trianglesMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1961576.151501258,
+            "median": 1961587.2844444413,
+            "min": 1961493.0577136527,
+            "max": 1961648.11234568,
+            "range": 155.05463202716783,
+            "p95": 1961642.029555556,
+            "p99": 1961646.8957876551
+          }
+        },
+        "new": {
+          "averageFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 59.91390570410019,
+            "median": 59.93293378046518,
+            "min": 59.80518311591757,
+            "max": 60.00360021591781,
+            "range": 0.19841710000023483,
+            "p95": 59.99653357237254,
+            "p99": 60.00218688720875
+          },
+          "drawCallsMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 430.6279328512418,
+            "median": 430.663706992231,
+            "min": 430.5412026726058,
+            "max": 430.6788888888884,
+            "range": 0.13768621628264555,
+            "p95": 430.6773706992227,
+            "p99": 430.6785852509553
+          },
+          "onePercentLowFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 49.01636700434379,
+            "median": 47.418335086589714,
+            "min": 43.62578769161459,
+            "max": 56.004978234827064,
+            "range": 12.379190543212474,
+            "p95": 55.14631392000333,
+            "p99": 55.83324537186231
+          },
+          "p99FrameMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 17.700333331227302,
+            "median": 17.69999998807907,
+            "min": 17.69999998807907,
+            "max": 17.701000017523768,
+            "range": 0.0010000294446967928,
+            "p95": 17.700900014579297,
+            "p99": 17.70098001693487
+          },
+          "renderSubmitMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 2.3254902755139337,
+            "median": 2.307214207012835,
+            "min": 2.2654788416783407,
+            "max": 2.403777777850626,
+            "range": 0.13829893617228528,
+            "p95": 2.394121420766847,
+            "p99": 2.40184650643387
+          },
+          "stuttersOver100Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "stuttersOver33_333Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.3333333333333333,
+            "median": 0,
+            "min": 0,
+            "max": 1,
+            "range": 1,
+            "p95": 0.8999999999999999,
+            "p99": 0.98
+          },
+          "stuttersOver50Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "tickMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.21208333325468698,
+            "median": 0.21177083305083083,
+            "min": 0.20713541672254432,
+            "max": 0.21734374999068573,
+            "range": 0.010208333268141412,
+            "p95": 0.21678645829670026,
+            "p99": 0.21723229165188865
+          },
+          "trianglesMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1961561.431729271,
+            "median": 1961582.9322974475,
+            "min": 1961499.800668145,
+            "max": 1961601.5622222207,
+            "range": 101.76155407563783,
+            "p95": 1961599.6992297436,
+            "p99": 1961601.1896237254
+          }
+        }
+      },
+      "comparisons": {
+        "averageFps": {
+          "direction": "higher-is-better",
+          "oldMedian": 59.93732915527686,
+          "newMedian": 59.93293378046518,
+          "delta": -0.004395374811686281,
+          "percentChange": -0.00733328440494802,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1.9766757386542912,
+            "median": -0.004395374811686281,
+            "min": -0.1976170147076033,
+            "max": 6.132039605482163,
+            "range": 6.329656620189766,
+            "p95": 5.518396107452777,
+            "p99": 6.009310905876286
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 3.6820077114171745,
+            "median": -0.00733328440494802,
+            "min": -0.329346320967345,
+            "max": 11.382702739623817,
+            "range": 11.712049060591161,
+            "p95": 10.24369913722094,
+            "p99": 11.154902019143242
+          }
+        },
+        "drawCallsMean": {
+          "direction": "context-only",
+          "oldMedian": 430.6293007769152,
+          "newMedian": 430.663706992231,
+          "delta": 0.034406215315812005,
+          "percentChange": 0.00798975249796946,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.04042930008902583,
+            "median": 0.022222222222353594,
+            "min": -0.08809810430943799,
+            "max": 0.18716378235416187,
+            "range": 0.27526188666359985,
+            "p95": 0.17066962634098104,
+            "p99": 0.1838649511515257
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.009393454672369923,
+            "median": 0.005160078536425836,
+            "min": -0.0204579911656027,
+            "max": 0.04347827664628663,
+            "range": 0.06393626781188932,
+            "p95": 0.03964645683530055,
+            "p99": 0.042711912684089415
+          }
+        },
+        "onePercentLowFps": {
+          "direction": "higher-is-better",
+          "oldMedian": 51.282051282051285,
+          "newMedian": 47.418335086589714,
+          "delta": -3.8637161954615706,
+          "percentChange": -7.534246581150063,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 8.572804189406167,
+            "median": -3.8637161954615706,
+            "min": -12.518940927583536,
+            "max": 42.10106969126361,
+            "range": 54.62001061884715,
+            "p95": 37.504591102591085,
+            "p99": 41.18177397352911
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 90.9894592106838,
+            "median": -7.534246581150063,
+            "min": -22.29762479126635,
+            "max": 302.80024900446784,
+            "range": 325.0978737957342,
+            "p95": 271.76679944590603,
+            "p99": 296.59355909275547
+          }
+        },
+        "p99FrameMs": {
+          "direction": "lower-is-better",
+          "oldMedian": 17.700000017881393,
+          "newMedian": 17.69999998807907,
+          "delta": -2.9802322387695312e-8,
+          "percentChange": -1.683747025852405e-7,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -15.18633333226044,
+            "median": -2.9802322387695312e-8,
+            "min": -45.558999966979,
+            "max": 0,
+            "range": 45.558999966979,
+            "p95": -2.980232238769534e-9,
+            "p99": -5.960464477539068e-10
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -24.006217770394,
+            "median": -1.683747025852405e-7,
+            "min": -72.0186531428073,
+            "max": 0,
+            "range": 72.0186531428073,
+            "p95": -1.6837470258524065e-8,
+            "p99": -3.367494051704813e-9
+          }
+        },
+        "renderSubmitMeanMs": {
+          "direction": "lower-is-better",
+          "oldMedian": 2.294222222467264,
+          "newMedian": 2.307214207012835,
+          "delta": 0.012991984545570823,
+          "percentChange": 0.5662914611470774,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.03169037306076605,
+            "median": 0.10299271517872288,
+            "min": -0.11747715137978654,
+            "max": 0.10955555538336181,
+            "range": 0.22703270676314835,
+            "p95": 0.10889927136289793,
+            "p99": 0.10942429857926904
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1.5643150303298141,
+            "median": 4.762699465056711,
+            "min": -4.845035264928094,
+            "max": 4.7752808908608255,
+            "range": 9.62031615578892,
+            "p95": 4.774022748280414,
+            "p99": 4.775029262344743
+          }
+        },
+        "stuttersOver100Ms": {
+          "direction": "lower-is-better",
+          "oldMedian": 0,
+          "newMedian": 0,
+          "delta": 0,
+          "percentChange": null,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "pairedPercentChange": null
+        },
+        "stuttersOver33_333Ms": {
+          "direction": "lower-is-better",
+          "oldMedian": 0,
+          "newMedian": 0,
+          "delta": 0,
+          "percentChange": null,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -14.333333333333332,
+            "median": 0,
+            "min": -44,
+            "max": 1,
+            "range": 45,
+            "p95": 0.8999999999999999,
+            "p99": 0.98
+          },
+          "pairedPercentChange": {
+            "count": 1,
+            "droppedSampleCount": 2,
+            "mean": -100,
+            "median": -100,
+            "min": -100,
+            "max": -100,
+            "range": 0,
+            "p95": -100,
+            "p99": -100
+          }
+        },
+        "stuttersOver50Ms": {
+          "direction": "lower-is-better",
+          "oldMedian": 0,
+          "newMedian": 0,
+          "delta": 0,
+          "percentChange": null,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -3.3333333333333335,
+            "median": 0,
+            "min": -10,
+            "max": 0,
+            "range": 10,
+            "p95": 0,
+            "p99": 0
+          },
+          "pairedPercentChange": {
+            "count": 1,
+            "droppedSampleCount": 2,
+            "mean": -100,
+            "median": -100,
+            "min": -100,
+            "max": -100,
+            "range": 0,
+            "p95": -100,
+            "p99": -100
+          }
+        },
+        "tickMeanMs": {
+          "direction": "lower-is-better",
+          "oldMedian": 0.20822916673496178,
+          "newMedian": 0.21177083305083083,
+          "delta": 0.003541666315869052,
+          "percentChange": 1.700850256187672,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.003179134822445593,
+            "median": 0.003541666315869052,
+            "min": -0.00468134533708664,
+            "max": 0.010677083488554368,
+            "range": 0.015358428825641007,
+            "p95": 0.009963541771285835,
+            "p99": 0.010534375145100661
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1.552362989722917,
+            "median": 1.700850256187672,
+            "min": -2.2100920114002784,
+            "max": 5.166330724381357,
+            "range": 7.376422735781635,
+            "p95": 4.819782677561988,
+            "p99": 5.097021115017483
+          }
+        },
+        "trianglesMean": {
+          "direction": "context-only",
+          "oldMedian": 1961587.2844444413,
+          "newMedian": 1961582.9322974475,
+          "delta": -4.352146993856877,
+          "percentChange": -0.00022186863813656332,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -14.719771986904867,
+            "median": 6.742954492336139,
+            "min": -65.18004823243245,
+            "max": 14.277777779381722,
+            "range": 79.45782601181418,
+            "p95": 13.524295450677164,
+            "p99": 14.12708131364081
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -0.0007503612210884286,
+            "median": 0.00034376642149301477,
+            "min": -0.00332271867835114,
+            "max": 0.0007278685935928393,
+            "range": 0.004050587271943979,
+            "p95": 0.0006894583763828568,
+            "p99": 0.0007201865501508428
+          }
+        }
+      },
+      "pairing": {
+        "pairedRoundCount": 3,
+        "missingRoundCount": 0,
+        "unpairedRounds": [],
+        "duplicateRounds": []
+      },
+      "pairs": [
+        {
+          "round": 1,
+          "metrics": {
+            "averageFps": {
+              "old": 60.002800130625175,
+              "new": 59.80518311591757,
+              "delta": -0.1976170147076033,
+              "percentChange": -0.329346320967345
+            },
+            "drawCallsMean": {
+              "old": 430.6293007769152,
+              "new": 430.5412026726058,
+              "delta": -0.08809810430943799,
+              "percentChange": -0.0204579911656027
+            },
+            "onePercentLowFps": {
+              "old": 56.144728619198126,
+              "new": 43.62578769161459,
+              "delta": -12.518940927583536,
+              "percentChange": -22.29762479126635
+            },
+            "p99FrameMs": {
+              "old": 17.700000017881393,
+              "new": 17.69999998807907,
+              "delta": -2.9802322387695312e-8,
+              "percentChange": -1.683747025852405e-7
+            },
+            "renderSubmitMeanMs": {
+              "old": 2.162486126499618,
+              "new": 2.2654788416783407,
+              "delta": 0.10299271517872288,
+              "percentChange": 4.762699465056711
+            },
+            "stuttersOver100Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver33_333Ms": {
+              "old": 0,
+              "new": 1,
+              "delta": 1,
+              "percentChange": null
+            },
+            "stuttersOver50Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "tickMeanMs": {
+              "old": 0.20666666650213136,
+              "new": 0.21734374999068573,
+              "delta": 0.010677083488554368,
+              "percentChange": 5.166330724381357
+            },
+            "trianglesMean": {
+              "old": 1961493.0577136527,
+              "new": 1961499.800668145,
+              "delta": 6.742954492336139,
+              "percentChange": 0.00034376642149301477
+            }
+          }
+        },
+        {
+          "round": 2,
+          "metrics": {
+            "averageFps": {
+              "old": 53.871560610435644,
+              "new": 60.00360021591781,
+              "delta": 6.132039605482163,
+              "percentChange": 11.382702739623817
+            },
+            "drawCallsMean": {
+              "old": 430.47654320987687,
+              "new": 430.663706992231,
+              "delta": 0.18716378235416187,
+              "percentChange": 0.04347827664628663
+            },
+            "onePercentLowFps": {
+              "old": 13.903908543563452,
+              "new": 56.004978234827064,
+              "delta": 42.10106969126361,
+              "percentChange": 302.80024900446784
+            },
+            "p99FrameMs": {
+              "old": 63.25999998450277,
+              "new": 17.701000017523768,
+              "delta": -45.558999966979,
+              "percentChange": -72.0186531428073
+            },
+            "renderSubmitMeanMs": {
+              "old": 2.4246913583926215,
+              "new": 2.307214207012835,
+              "delta": -0.11747715137978654,
+              "percentChange": -4.845035264928094
+            },
+            "stuttersOver100Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver33_333Ms": {
+              "old": 44,
+              "new": 0,
+              "delta": -44,
+              "percentChange": -100
+            },
+            "stuttersOver50Ms": {
+              "old": 10,
+              "new": 0,
+              "delta": -10,
+              "percentChange": -100
+            },
+            "tickMeanMs": {
+              "old": 0.21181676205963096,
+              "new": 0.20713541672254432,
+              "delta": -0.00468134533708664,
+              "percentChange": -2.2100920114002784
+            },
+            "trianglesMean": {
+              "old": 1961648.11234568,
+              "new": 1961582.9322974475,
+              "delta": -65.18004823243245,
+              "percentChange": -0.00332271867835114
+            }
+          }
+        },
+        {
+          "round": 3,
+          "metrics": {
+            "averageFps": {
+              "old": 59.93732915527686,
+              "new": 59.93293378046518,
+              "delta": -0.004395374811686281,
+              "percentChange": -0.00733328440494802
+            },
+            "drawCallsMean": {
+              "old": 430.65666666666607,
+              "new": 430.6788888888884,
+              "delta": 0.022222222222353594,
+              "percentChange": 0.005160078536425836
+            },
+            "onePercentLowFps": {
+              "old": 51.282051282051285,
+              "new": 47.418335086589714,
+              "delta": -3.8637161954615706,
+              "percentChange": -7.534246581150063
+            },
+            "p99FrameMs": {
+              "old": 17.69999998807907,
+              "new": 17.69999998807907,
+              "delta": 0,
+              "percentChange": 0
+            },
+            "renderSubmitMeanMs": {
+              "old": 2.294222222467264,
+              "new": 2.403777777850626,
+              "delta": 0.10955555538336181,
+              "percentChange": 4.7752808908608255
+            },
+            "stuttersOver100Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver33_333Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver50Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "tickMeanMs": {
+              "old": 0.20822916673496178,
+              "new": 0.21177083305083083,
+              "delta": 0.003541666315869052,
+              "percentChange": 1.700850256187672
+            },
+            "trianglesMean": {
+              "old": 1961587.2844444413,
+              "new": 1961601.5622222207,
+              "delta": 14.277777779381722,
+              "percentChange": 0.0007278685935928393
+            }
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "plummet",
+      "runCounts": {
+        "old": 3,
+        "new": 3
+      },
+      "engines": {
+        "old": {
+          "averageFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 59.669191225593906,
+            "median": 60.002800130744475,
+            "min": 59.001573375313555,
+            "max": 60.003200170723666,
+            "range": 1.001626795410111,
+            "p95": 60.00316016672575,
+            "p99": 60.003192169924084
+          },
+          "drawCallsMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 158.5083883887899,
+            "median": 158.4217536071036,
+            "min": 158.35849056603809,
+            "max": 158.74492099322805,
+            "range": 0.3864304271899641,
+            "p95": 158.7126042546156,
+            "p99": 158.73845764550555
+          },
+          "onePercentLowFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 46.40922589948828,
+            "median": 54.18422635215732,
+            "min": 29.930162954295962,
+            "max": 55.113288392011555,
+            "range": 25.183125437715592,
+            "p95": 55.020382188026126,
+            "p99": 55.09470715121447
+          },
+          "p99FrameMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 22.74400000532468,
+            "median": 17.799999982118607,
+            "min": 17.700000017881393,
+            "max": 32.73200001597404,
+            "range": 15.031999998092644,
+            "p95": 31.238800012588495,
+            "p99": 32.43336001529693
+          },
+          "renderSubmitMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1.8860570023976195,
+            "median": 1.8874717831746182,
+            "min": 1.8412874586111232,
+            "max": 1.9294117654071168,
+            "range": 0.08812430679599359,
+            "p95": 1.9252177671838668,
+            "p99": 1.9285729657624668
+          },
+          "stuttersOver100Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "stuttersOver33_333Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 2.3333333333333335,
+            "median": 0,
+            "min": 0,
+            "max": 7,
+            "range": 7,
+            "p95": 6.299999999999999,
+            "p99": 6.859999999999999
+          },
+          "stuttersOver50Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "tickMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.3592013890078965,
+            "median": 0.3594791665362869,
+            "min": 0.3533333332743551,
+            "max": 0.3647916672130475,
+            "range": 0.011458333938692389,
+            "p95": 0.36426041714537144,
+            "p99": 0.36468541719951225
+          },
+          "trianglesMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1599381.183051356,
+            "median": 1599477.2197558277,
+            "min": 1599042.519187363,
+            "max": 1599623.8102108783,
+            "range": 581.2910235151649,
+            "p95": 1599609.1511653732,
+            "p99": 1599620.8784017772
+          }
+        },
+        "new": {
+          "averageFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 59.97924422373589,
+            "median": 60.0000000000001,
+            "min": 59.93413245517062,
+            "max": 60.00360021603696,
+            "range": 0.06946776086633832,
+            "p95": 60.00324019443327,
+            "p99": 60.00352821171622
+          },
+          "drawCallsMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 158.41562420356018,
+            "median": 158.41842397336347,
+            "min": 158.3962264150948,
+            "max": 158.4322222222223,
+            "range": 0.03599580712750594,
+            "p95": 158.43084239733642,
+            "p99": 158.4319462572451
+          },
+          "onePercentLowFps": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 52.92895985400146,
+            "median": 54.086538449914144,
+            "min": 49.88913526158232,
+            "max": 54.811205850507925,
+            "range": 4.922070588925607,
+            "p95": 54.73873911044855,
+            "p99": 54.79671250249605
+          },
+          "p99FrameMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 17.76766667028268,
+            "median": 17.8010000115633,
+            "min": 17.69999998807907,
+            "max": 17.80200001120567,
+            "range": 0.10200002312659961,
+            "p95": 17.801900011241433,
+            "p99": 17.801980011212823
+          },
+          "renderSubmitMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1.8064892097719247,
+            "median": 1.8403333340088528,
+            "min": 1.7301886792519052,
+            "max": 1.8489456160550162,
+            "range": 0.11875693680311095,
+            "p95": 1.8480843878503999,
+            "p99": 1.848773370414093
+          },
+          "stuttersOver100Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "stuttersOver33_333Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "stuttersOver50Ms": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "tickMeanMs": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.3490277775873795,
+            "median": 0.3554166663903796,
+            "min": 0.33447916631897845,
+            "max": 0.3571875000527805,
+            "range": 0.022708333733802044,
+            "p95": 0.35701041668654043,
+            "p99": 0.35715208337953247
+          },
+          "trianglesMean": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 1599568.9379315162,
+            "median": 1599578.5061043284,
+            "min": 1599539.2288888858,
+            "max": 1599589.078801334,
+            "range": 49.84991244808771,
+            "p95": 1599588.0215316333,
+            "p99": 1599588.8673473939
+          }
+        }
+      },
+      "comparisons": {
+        "averageFps": {
+          "direction": "higher-is-better",
+          "oldMedian": 60.002800130744475,
+          "newMedian": 60.0000000000001,
+          "delta": -0.002800130744375906,
+          "percentChange": -0.004666666786007482,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.31005299814199344,
+            "median": -0.0032001707235664867,
+            "min": -0.068667675573856,
+            "max": 1.0020268407234028,
+            "range": 1.0706945162972588,
+            "p95": 0.9015041395787058,
+            "p99": 0.9819223004944634
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.5261770565326056,
+            "median": -0.005333333412986681,
+            "min": -0.1144407851370786,
+            "max": 1.698305288147882,
+            "range": 1.8127460732849605,
+            "p95": 1.527941425991795,
+            "p99": 1.6642325157166646
+          }
+        },
+        "drawCallsMean": {
+          "direction": "context-only",
+          "oldMedian": 158.4217536071036,
+          "newMedian": 158.41842397336347,
+          "delta": -0.0033296337401225173,
+          "percentChange": -0.002101752861781993,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -0.09276418522972563,
+            "median": -0.025527192008809152,
+            "min": -0.3264970198645756,
+            "max": 0.07373165618420785,
+            "range": 0.4002286760487834,
+            "p95": 0.06380577136490614,
+            "p99": 0.0717464792203475
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -0.0584091563285683,
+            "median": -0.016113438607754764,
+            "min": -0.20567399436893083,
+            "max": 0.04655996399098067,
+            "range": 0.25223395835991147,
+            "p95": 0.04029262373110712,
+            "p99": 0.04530649593900596
+          }
+        },
+        "onePercentLowFps": {
+          "direction": "higher-is-better",
+          "oldMedian": 54.18422635215732,
+          "newMedian": 54.086538449914144,
+          "delta": -0.09768790224317314,
+          "percentChange": -0.18028845075368274,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 6.519733954513185,
+            "median": -0.09768790224317314,
+            "min": -5.224153130429237,
+            "max": 24.881042896211962,
+            "range": 30.1051960266412,
+            "p95": 22.383169816366447,
+            "p99": 24.38146828024286
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 24.490368264066866,
+            "median": -0.18028845075368274,
+            "min": -9.478935630316075,
+            "max": 83.13032887327036,
+            "range": 92.60926450358643,
+            "p95": 74.79926714086795,
+            "p99": 81.46411652678988
+          }
+        },
+        "p99FrameMs": {
+          "direction": "lower-is-better",
+          "oldMedian": 17.799999982118607,
+          "newMedian": 17.8010000115633,
+          "delta": 0.00100002944469324,
+          "percentChange": 0.005618142953358665,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -4.976333335041998,
+            "median": -0.09999999403953552,
+            "min": -14.931000004410738,
+            "max": 0.10199999332427723,
+            "range": 15.032999997735015,
+            "p95": 0.08179999458789594,
+            "p99": 0.09795999357700097
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -15.200479199343787,
+            "median": -0.5617977198875999,
+            "min": -45.61591102628631,
+            "max": 0.5762711481425532,
+            "range": 46.192182174428865,
+            "p95": 0.4624642613395378,
+            "p99": 0.5535097707819501
+          }
+        },
+        "renderSubmitMeanMs": {
+          "direction": "lower-is-better",
+          "oldMedian": 1.8874717831746182,
+          "newMedian": 1.8403333340088528,
+          "delta": -0.04713844916576537,
+          "percentChange": -2.497438615293164,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -0.07956779262569466,
+            "median": -0.08907843139826399,
+            "min": -0.11109877935921797,
+            "max": -0.038526167119601995,
+            "range": 0.07257261223961597,
+            "p95": -0.0435813935474682,
+            "p99": -0.039537212405175236
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -4.230592384896238,
+            "median": -4.6168699183539985,
+            "min": -6.033755285718363,
+            "max": -2.041151950616354,
+            "range": 3.992603335102009,
+            "p95": -2.2987237473901185,
+            "p99": -2.0926663099711065
+          }
+        },
+        "stuttersOver100Ms": {
+          "direction": "lower-is-better",
+          "oldMedian": 0,
+          "newMedian": 0,
+          "delta": 0,
+          "percentChange": null,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "pairedPercentChange": null
+        },
+        "stuttersOver33_333Ms": {
+          "direction": "lower-is-better",
+          "oldMedian": 0,
+          "newMedian": 0,
+          "delta": 0,
+          "percentChange": null,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -2.3333333333333335,
+            "median": 0,
+            "min": -7,
+            "max": 0,
+            "range": 7,
+            "p95": 0,
+            "p99": 0
+          },
+          "pairedPercentChange": {
+            "count": 1,
+            "droppedSampleCount": 2,
+            "mean": -100,
+            "median": -100,
+            "min": -100,
+            "max": -100,
+            "range": 0,
+            "p95": -100,
+            "p99": -100
+          }
+        },
+        "stuttersOver50Ms": {
+          "direction": "lower-is-better",
+          "oldMedian": 0,
+          "newMedian": 0,
+          "delta": 0,
+          "percentChange": null,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0,
+            "median": 0,
+            "min": 0,
+            "max": 0,
+            "range": 0,
+            "p95": 0,
+            "p99": 0
+          },
+          "pairedPercentChange": null
+        },
+        "tickMeanMs": {
+          "direction": "lower-is-better",
+          "oldMedian": 0.3594791665362869,
+          "newMedian": 0.3554166663903796,
+          "delta": -0.004062500145907311,
+          "percentChange": -1.1301072562983228,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -0.010173611420517,
+            "median": -0.0093750008226679,
+            "min": -0.018854166955376672,
+            "max": -0.002291666483506427,
+            "range": 0.016562500471870245,
+            "p95": -0.002999999917422575,
+            "p99": -0.0024333331702896567
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": -2.8478471866382047,
+            "median": -2.5699602445120173,
+            "min": -5.336084988261453,
+            "max": -0.6374963271411445,
+            "range": 4.698588661120308,
+            "p95": -0.8307427188782319,
+            "p99": -0.676145605488562
+          }
+        },
+        "trianglesMean": {
+          "direction": "context-only",
+          "oldMedian": 1599477.2197558277,
+          "newMedian": 1599578.5061043284,
+          "delta": 101.28634850075468,
+          "percentChange": 0.006332465836319745,
+          "pairedDelta": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 187.75488015970524,
+            "median": 62.009133058134466,
+            "min": -45.30410654982552,
+            "max": 546.5596139708068,
+            "range": 591.8637205206323,
+            "p95": 498.10456587953956,
+            "p99": 536.8686043525533
+          },
+          "pairedPercentChange": {
+            "count": 3,
+            "droppedSampleCount": 0,
+            "mean": 0.011741698427870161,
+            "median": 0.0038768375249258395,
+            "min": -0.0028321725558619363,
+            "max": 0.03418043031454658,
+            "range": 0.037012602870408515,
+            "p95": 0.031150071035584505,
+            "p99": 0.033574358458754165
+          }
+        }
+      },
+      "pairing": {
+        "pairedRoundCount": 3,
+        "missingRoundCount": 0,
+        "unpairedRounds": [],
+        "duplicateRounds": []
+      },
+      "pairs": [
+        {
+          "round": 1,
+          "metrics": {
+            "averageFps": {
+              "old": 60.002800130744475,
+              "new": 59.93413245517062,
+              "delta": -0.068667675573856,
+              "percentChange": -0.1144407851370786
+            },
+            "drawCallsMean": {
+              "old": 158.35849056603809,
+              "new": 158.4322222222223,
+              "delta": 0.07373165618420785,
+              "percentChange": 0.04655996399098067
+            },
+            "onePercentLowFps": {
+              "old": 55.113288392011555,
+              "new": 49.88913526158232,
+              "delta": -5.224153130429237,
+              "percentChange": -9.478935630316075
+            },
+            "p99FrameMs": {
+              "old": 17.700000017881393,
+              "new": 17.80200001120567,
+              "delta": 0.10199999332427723,
+              "percentChange": 0.5762711481425532
+            },
+            "renderSubmitMeanMs": {
+              "old": 1.9294117654071168,
+              "new": 1.8403333340088528,
+              "delta": -0.08907843139826399,
+              "percentChange": -4.6168699183539985
+            },
+            "stuttersOver100Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver33_333Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver50Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "tickMeanMs": {
+              "old": 0.3594791665362869,
+              "new": 0.3571875000527805,
+              "delta": -0.002291666483506427,
+              "percentChange": -0.6374963271411445
+            },
+            "trianglesMean": {
+              "old": 1599477.2197558277,
+              "new": 1599539.2288888858,
+              "delta": 62.009133058134466,
+              "percentChange": 0.0038768375249258395
+            }
+          }
+        },
+        {
+          "round": 2,
+          "metrics": {
+            "averageFps": {
+              "old": 59.001573375313555,
+              "new": 60.00360021603696,
+              "delta": 1.0020268407234028,
+              "percentChange": 1.698305288147882
+            },
+            "drawCallsMean": {
+              "old": 158.74492099322805,
+              "new": 158.41842397336347,
+              "delta": -0.3264970198645756,
+              "percentChange": -0.20567399436893083
+            },
+            "onePercentLowFps": {
+              "old": 29.930162954295962,
+              "new": 54.811205850507925,
+              "delta": 24.881042896211962,
+              "percentChange": 83.13032887327036
+            },
+            "p99FrameMs": {
+              "old": 32.73200001597404,
+              "new": 17.8010000115633,
+              "delta": -14.931000004410738,
+              "percentChange": -45.61591102628631
+            },
+            "renderSubmitMeanMs": {
+              "old": 1.8874717831746182,
+              "new": 1.8489456160550162,
+              "delta": -0.038526167119601995,
+              "percentChange": -2.041151950616354
+            },
+            "stuttersOver100Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver33_333Ms": {
+              "old": 7,
+              "new": 0,
+              "delta": -7,
+              "percentChange": -100
+            },
+            "stuttersOver50Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "tickMeanMs": {
+              "old": 0.3647916672130475,
+              "new": 0.3554166663903796,
+              "delta": -0.0093750008226679,
+              "percentChange": -2.5699602445120173
+            },
+            "trianglesMean": {
+              "old": 1599042.519187363,
+              "new": 1599589.078801334,
+              "delta": 546.5596139708068,
+              "percentChange": 0.03418043031454658
+            }
+          }
+        },
+        {
+          "round": 3,
+          "metrics": {
+            "averageFps": {
+              "old": 60.003200170723666,
+              "new": 60.0000000000001,
+              "delta": -0.0032001707235664867,
+              "percentChange": -0.005333333412986681
+            },
+            "drawCallsMean": {
+              "old": 158.4217536071036,
+              "new": 158.3962264150948,
+              "delta": -0.025527192008809152,
+              "percentChange": -0.016113438607754764
+            },
+            "onePercentLowFps": {
+              "old": 54.18422635215732,
+              "new": 54.086538449914144,
+              "delta": -0.09768790224317314,
+              "percentChange": -0.18028845075368274
+            },
+            "p99FrameMs": {
+              "old": 17.799999982118607,
+              "new": 17.69999998807907,
+              "delta": -0.09999999403953552,
+              "percentChange": -0.5617977198875999
+            },
+            "renderSubmitMeanMs": {
+              "old": 1.8412874586111232,
+              "new": 1.7301886792519052,
+              "delta": -0.11109877935921797,
+              "percentChange": -6.033755285718363
+            },
+            "stuttersOver100Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver33_333Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "stuttersOver50Ms": {
+              "old": 0,
+              "new": 0,
+              "delta": 0,
+              "percentChange": null
+            },
+            "tickMeanMs": {
+              "old": 0.3533333332743551,
+              "new": 0.33447916631897845,
+              "delta": -0.018854166955376672,
+              "percentChange": -5.336084988261453
+            },
+            "trianglesMean": {
+              "old": 1599623.8102108783,
+              "new": 1599578.5061043284,
+              "delta": -45.30410654982552,
+              "percentChange": -0.0028321725558619363
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "file": "00-old.json",
+      "sha256": "62e1e91d0d17958a80d51619f052582d77567c9e499aa81acbc1a3169839e60b",
+      "bytes": 219758,
+      "runIndex": 0,
+      "caseId": "ascent",
+      "round": 1,
+      "engine": "old",
+      "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 900,
+      "sampleStartTick": 640,
+      "sampleEndTick": 2560,
+      "sampleWallSeconds": 15.001799999982119,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999300000011921,
+      "elapsedSeconds": 19.94690000000596,
+      "simulationSeconds": 20,
+      "inputTicks": 2560,
+      "metrics": {
+        "averageFps": 60.002800130625175,
+        "onePercentLowFps": 56.144728619198126,
+        "p99FrameMs": 17.700000017881393,
+        "renderSubmitMeanMs": 2.162486126499618,
+        "tickMeanMs": 0.20666666650213136,
+        "drawCallsMean": 430.6293007769152,
+        "trianglesMean": 1961493.0577136527,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.400000000001,
+        "averageFrameMs": 16.665999999999954,
+        "averageFps": 60.002400096004,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.700000000000728,
+        "p99FrameMs": 16.799999999999272,
+        "onePercentLowFps": 59.52380952380566,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.523809523812105,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 567,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 0,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.01077777786387336,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 11,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 11,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 15.400000005960464,
+          "max": 17.900000005960464
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 0.9000000059604645
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.5,
+          "max": 4.9000000059604645
+        },
+        "drawCalls": {
+          "min": 403,
+          "max": 482
+        },
+        "triangles": {
+          "min": 1941407,
+          "max": 1991724
+        }
+      }
+    },
+    {
+      "file": "01-new.json",
+      "sha256": "973865581714dbc590bcca2c4642abb39d913e8c07cffcb1230c6da6f4d22c77",
+      "bytes": 218725,
+      "runIndex": 1,
+      "caseId": "ascent",
+      "round": 1,
+      "engine": "new",
+      "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 897,
+      "sampleStartTick": 640,
+      "sampleEndTick": 2560,
+      "sampleWallSeconds": 15.0015,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.998699999988078,
+      "elapsedSeconds": 19.934,
+      "simulationSeconds": 20,
+      "inputTicks": 2560,
+      "metrics": {
+        "averageFps": 59.80518311591757,
+        "onePercentLowFps": 43.62578769161459,
+        "p99FrameMs": 17.69999998807907,
+        "renderSubmitMeanMs": 2.2654788416783407,
+        "tickMeanMs": 0.21734374999068573,
+        "drawCallsMean": 430.5412026726058,
+        "trianglesMean": 1961499.800668145,
+        "stuttersOver33_333Ms": 1,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.5,
+        "averageFrameMs": 16.666111111111075,
+        "averageFps": 60.00200006666902,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.799999999999272,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380207,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 552,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 3,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.011111111276679552,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 6,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 9,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 15.400000005960464,
+          "max": 33.5
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 0.6000000238418579
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.5999999940395355,
+          "max": 4.5999999940395355
+        },
+        "drawCalls": {
+          "min": 403,
+          "max": 482
+        },
+        "triangles": {
+          "min": 1941407,
+          "max": 1991724
+        }
+      }
+    },
+    {
+      "file": "02-new.json",
+      "sha256": "10467ed5d638f43a6a9eeda4b2344d648f5182dc65f6b5e6aeb13d4d4193857d",
+      "bytes": 218686,
+      "runIndex": 2,
+      "caseId": "ascent",
+      "round": 2,
+      "engine": "new",
+      "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 900,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.0015,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999100000023843,
+      "elapsedSeconds": 19.94329999998212,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 60.00360021591781,
+        "onePercentLowFps": 56.004978234827064,
+        "p99FrameMs": 17.701000017523768,
+        "renderSubmitMeanMs": 2.307214207012835,
+        "tickMeanMs": 0.20713541672254432,
+        "drawCallsMean": 430.663706992231,
+        "trianglesMean": 1961582.9322974475,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.4,
+        "averageFrameMs": 16.665999999999954,
+        "averageFps": 60.002400096004,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.700000000000728,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380351,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 558,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 0,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.01266666677263047,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 8,
+          "stale": 2
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 8,
+          "stale": 2
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 15.299999982118607,
+          "max": 18.099999994039536
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 0.800000011920929
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.5999999940395355,
+          "max": 4.800000011920929
+        },
+        "drawCalls": {
+          "min": 403,
+          "max": 482
+        },
+        "triangles": {
+          "min": 1941407,
+          "max": 1993180
+        }
+      }
+    },
+    {
+      "file": "03-old.json",
+      "sha256": "5036653118f5ef81992fda661698bb816135786af994cb3498539d1c5dae168e",
+      "bytes": 204086,
+      "runIndex": 3,
+      "caseId": "ascent",
+      "round": 2,
+      "engine": "old",
+      "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 809,
+      "sampleStartTick": 640,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.021700000017882,
+      "sampleSimulationSeconds": 15.0078125,
+      "sampleCoverageSeconds": 15.017200000017882,
+      "elapsedSeconds": 19.973699999988078,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 53.871560610435644,
+        "onePercentLowFps": 13.903908543563452,
+        "p99FrameMs": 63.25999998450277,
+        "renderSubmitMeanMs": 2.4246913583926215,
+        "tickMeanMs": 0.21181676205963096,
+        "drawCallsMean": 430.47654320987687,
+        "trianglesMean": 1961648.11234568,
+        "stuttersOver33_333Ms": 44,
+        "stuttersOver50Ms": 10,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 884,
+        "droppedSampleCount": 0,
+        "elapsedMs": 15016,
+        "averageFrameMs": 16.986425339366757,
+        "averageFps": 58.87053809270028,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.799999999999272,
+        "p99FrameMs": 19.605000000002235,
+        "onePercentLowFps": 20.7564575645758,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 51.00739607242469,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 66.70000000000073,
+        "stutterCounts": {
+          "over16_667Ms": 544,
+          "over33_333Ms": 8,
+          "over50Ms": 3,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 884,
+        "blocked": 75,
+        "cpuMs": {
+          "count": 884,
+          "droppedSampleCount": 0,
+          "mean": 0.011651583723892448,
+          "median": 0,
+          "min": 0,
+          "max": 0.20000001788139343,
+          "range": 0.20000001788139343,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 3,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 78,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 3.0999999940395355,
+          "max": 84.90000000596046
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1.0999999940395355
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.5999999940395355,
+          "max": 5.199999988079071
+        },
+        "drawCalls": {
+          "min": 403,
+          "max": 482
+        },
+        "triangles": {
+          "min": 1941407,
+          "max": 1989478
+        }
+      }
+    },
+    {
+      "file": "04-old.json",
+      "sha256": "0df6c3ac8241dd3d2b80cc75d4b4e8e93899ce13fe51bbdeb854bd4a7d9d725b",
+      "bytes": 218749,
+      "runIndex": 4,
+      "caseId": "ascent",
+      "round": 3,
+      "engine": "old",
+      "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 899,
+      "sampleStartTick": 640,
+      "sampleEndTick": 2560,
+      "sampleWallSeconds": 15.0015,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999,
+      "elapsedSeconds": 19.900899999976158,
+      "simulationSeconds": 20,
+      "inputTicks": 2560,
+      "metrics": {
+        "averageFps": 59.93732915527686,
+        "onePercentLowFps": 51.282051282051285,
+        "p99FrameMs": 17.69999998807907,
+        "renderSubmitMeanMs": 2.294222222467264,
+        "tickMeanMs": 0.20822916673496178,
+        "drawCallsMean": 430.65666666666607,
+        "trianglesMean": 1961587.2844444413,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.399999999998,
+        "averageFrameMs": 16.665999999999954,
+        "averageFps": 60.002400096004,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.799999999999272,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380207,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 554,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 1,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.00922222236792245,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 5,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 6,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 15.399999976158142,
+          "max": 33.19999998807907
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.5999999940395355,
+          "max": 5.199999988079071
+        },
+        "drawCalls": {
+          "min": 403,
+          "max": 482
+        },
+        "triangles": {
+          "min": 1941407,
+          "max": 1991724
+        }
+      }
+    },
+    {
+      "file": "05-new.json",
+      "sha256": "41e94923e1f41e46aee25376b9f18d350c5b77c94416c92b6ed4f951624143b3",
+      "bytes": 217791,
+      "runIndex": 5,
+      "caseId": "ascent",
+      "round": 3,
+      "engine": "new",
+      "sceneHash": "c82142155b131360b2a7318a568b0c4288ec4df725e7ee5b9d36b90232d0d70a",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 899,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.0025,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 15.00009999999404,
+      "elapsedSeconds": 20.179200000017882,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 59.93293378046518,
+        "onePercentLowFps": 47.418335086589714,
+        "p99FrameMs": 17.69999998807907,
+        "renderSubmitMeanMs": 2.403777777850626,
+        "tickMeanMs": 0.21177083305083083,
+        "drawCallsMean": 430.6788888888884,
+        "trianglesMean": 1961601.5622222207,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.400000000001,
+        "averageFrameMs": 16.665999999999965,
+        "averageFps": 60.00240009600397,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.799999999999272,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380351,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 547,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 1,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.012333333293596897,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 9,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 10,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 2.699999988079071,
+          "max": 33
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 0.7999999821186066
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.5,
+          "max": 5.200000017881393
+        },
+        "drawCalls": {
+          "min": 403,
+          "max": 482
+        },
+        "triangles": {
+          "min": 1941407,
+          "max": 1989472
+        }
+      }
+    },
+    {
+      "file": "06-old.json",
+      "sha256": "ddeafdd403b8d22dbc509e400cbfb374705c740887a33f9b4058428f3dae8158",
+      "bytes": 216842,
+      "runIndex": 6,
+      "caseId": "plummet",
+      "round": 1,
+      "engine": "old",
+      "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 900,
+      "sampleStartTick": 640,
+      "sampleEndTick": 2560,
+      "sampleWallSeconds": 15.003100000023842,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999299999982119,
+      "elapsedSeconds": 20.0025,
+      "simulationSeconds": 20,
+      "inputTicks": 2560,
+      "metrics": {
+        "averageFps": 60.002800130744475,
+        "onePercentLowFps": 55.113288392011555,
+        "p99FrameMs": 17.700000017881393,
+        "renderSubmitMeanMs": 1.9294117654071168,
+        "tickMeanMs": 0.3594791665362869,
+        "drawCallsMean": 158.35849056603809,
+        "trianglesMean": 1599477.2197558277,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.3,
+        "averageFrameMs": 16.66588888888884,
+        "averageFps": 60.00280013067294,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.799999999999272,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380279,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 552,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 0,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.011333333286974155,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 3,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 3,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 14.5,
+          "max": 20.100000023841858
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 2.0999999940395355
+        },
+        "renderSubmitCpuMs": {
+          "min": 1.0999999940395355,
+          "max": 5.300000011920929
+        },
+        "drawCalls": {
+          "min": 116,
+          "max": 231
+        },
+        "triangles": {
+          "min": 1488542,
+          "max": 1680212
+        }
+      }
+    },
+    {
+      "file": "07-new.json",
+      "sha256": "6aa54ef0429d26935dff67976824abfc6d09ee5944a1247e484000bf3da8ce53",
+      "bytes": 216738,
+      "runIndex": 7,
+      "caseId": "plummet",
+      "round": 1,
+      "engine": "new",
+      "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 899,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.001799999982119,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999799999982118,
+      "elapsedSeconds": 19.93959999999404,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 59.93413245517062,
+        "onePercentLowFps": 49.88913526158232,
+        "p99FrameMs": 17.80200001120567,
+        "renderSubmitMeanMs": 1.8403333340088528,
+        "tickMeanMs": 0.3571875000527805,
+        "drawCallsMean": 158.4322222222223,
+        "trianglesMean": 1599539.2288888858,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.400000000001,
+        "averageFrameMs": 16.665999999999958,
+        "averageFps": 60.002400096003996,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.700000000000728,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380351,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 563,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 1,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.00988888879617054,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 4,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 5,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 12.600000023841858,
+          "max": 32.60000002384186
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1.4000000059604645
+        },
+        "renderSubmitCpuMs": {
+          "min": 1,
+          "max": 4.699999988079071
+        },
+        "drawCalls": {
+          "min": 116,
+          "max": 230
+        },
+        "triangles": {
+          "min": 1488542,
+          "max": 1680200
+        }
+      }
+    },
+    {
+      "file": "08-new.json",
+      "sha256": "511502300e32c2000edf289773a0574cdbc7230b076891b1545fc80f0799d493",
+      "bytes": 216532,
+      "runIndex": 8,
+      "caseId": "plummet",
+      "round": 2,
+      "engine": "new",
+      "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 900,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.00190000000596,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999099999994039,
+      "elapsedSeconds": 20.1705,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 60.00360021603696,
+        "onePercentLowFps": 54.811205850507925,
+        "p99FrameMs": 17.8010000115633,
+        "renderSubmitMeanMs": 1.8489456160550162,
+        "tickMeanMs": 0.3554166663903796,
+        "drawCallsMean": 158.41842397336347,
+        "trianglesMean": 1599589.078801334,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.4,
+        "averageFrameMs": 16.66599999999994,
+        "averageFps": 60.00240009600406,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.700000000000728,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.523809523799926,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 563,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 0,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.010333333313465105,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 0,
+          "blocked": 18,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 18,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 13.599999994039536,
+          "max": 20
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1.2999999821186066
+        },
+        "renderSubmitCpuMs": {
+          "min": 1,
+          "max": 4.300000011920929
+        },
+        "drawCalls": {
+          "min": 116,
+          "max": 230
+        },
+        "triangles": {
+          "min": 1488542,
+          "max": 1680208
+        }
+      }
+    },
+    {
+      "file": "09-old.json",
+      "sha256": "7aa65731f3001a3e1913240aeab7b859fcfb9d53ad5f6a690225dbc576daa8e7",
+      "bytes": 214611,
+      "runIndex": 9,
+      "caseId": "plummet",
+      "round": 2,
+      "engine": "old",
+      "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 885,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.00159999999404,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.99959999999404,
+      "elapsedSeconds": 19.97429999998212,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 59.001573375313555,
+        "onePercentLowFps": 29.930162954295962,
+        "p99FrameMs": 32.73200001597404,
+        "renderSubmitMeanMs": 1.8874717831746182,
+        "tickMeanMs": 0.3647916672130475,
+        "drawCallsMean": 158.74492099322805,
+        "trianglesMean": 1599042.519187363,
+        "stuttersOver33_333Ms": 7,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.399999999998,
+        "averageFrameMs": 16.665999999999947,
+        "averageFps": 60.00240009600403,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.700000000000728,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380064,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 567,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 15,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.009888888829284228,
+          "median": 0,
+          "min": 0,
+          "max": 0.19999998807907104,
+          "range": 0.19999998807907104,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 7,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 22,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 13.099999994039536,
+          "max": 33.900000005960464
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1.300000011920929
+        },
+        "renderSubmitCpuMs": {
+          "min": 1,
+          "max": 7.300000011920929
+        },
+        "drawCalls": {
+          "min": 116,
+          "max": 230
+        },
+        "triangles": {
+          "min": 1488542,
+          "max": 1680208
+        }
+      }
+    },
+    {
+      "file": "10-old.json",
+      "sha256": "6c0ec33b2fc407a4f10c31022ac944f2ef1e6d2b6a3e7d835688a823ce8a0e8f",
+      "bytes": 217475,
+      "runIndex": 10,
+      "caseId": "plummet",
+      "round": 3,
+      "engine": "old",
+      "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 900,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.001399999976158,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 14.999199999988079,
+      "elapsedSeconds": 20.00509999999404,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 60.003200170723666,
+        "onePercentLowFps": 54.18422635215732,
+        "p99FrameMs": 17.799999982118607,
+        "renderSubmitMeanMs": 1.8412874586111232,
+        "tickMeanMs": 0.3533333332743551,
+        "drawCallsMean": 158.4217536071036,
+        "trianglesMean": 1599623.8102108783,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.300000000001,
+        "averageFrameMs": 16.665888888888848,
+        "averageFps": 60.00280013067292,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.799999999999272,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380279,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 547,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 0,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.011444444391462527,
+          "median": 0,
+          "min": 0,
+          "max": 0.19999998807907104,
+          "range": 0.19999998807907104,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 4,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 4,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 11,
+          "max": 22.400000005960464
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1.4000000059604645
+        },
+        "renderSubmitCpuMs": {
+          "min": 1,
+          "max": 4.4000000059604645
+        },
+        "drawCalls": {
+          "min": 116,
+          "max": 230
+        },
+        "triangles": {
+          "min": 1488542,
+          "max": 1680208
+        }
+      }
+    },
+    {
+      "file": "11-new.json",
+      "sha256": "27b1de5c653a15f1170ba2fcd5df7e8888a1281dc223ee5bf39498dc3a611f94",
+      "bytes": 216035,
+      "runIndex": 11,
+      "caseId": "plummet",
+      "round": 3,
+      "engine": "new",
+      "sceneHash": "d76915f2fc2f0d5df46cfbaa70ea579f012d7284a5e68abd33425d7d2ca06c31",
+      "engineHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "valid": true,
+      "validation": {
+        "gpuBudget": true,
+        "completed": true,
+        "noErrors": true,
+        "enoughFrames": true,
+        "sampleCoverage": true,
+        "elapsed": true,
+        "simulation": true,
+        "phase": true,
+        "buffer": true,
+        "noCapture": true,
+        "unthrottled": true,
+        "nativeSkin": true
+      },
+      "sampleCount": 900,
+      "sampleStartTick": 641,
+      "sampleEndTick": 2561,
+      "sampleWallSeconds": 15.002200000017881,
+      "sampleSimulationSeconds": 15,
+      "sampleCoverageSeconds": 15,
+      "elapsedSeconds": 20.13659999999404,
+      "simulationSeconds": 20.0078125,
+      "inputTicks": 2561,
+      "metrics": {
+        "averageFps": 60.0000000000001,
+        "onePercentLowFps": 54.086538449914144,
+        "p99FrameMs": 17.69999998807907,
+        "renderSubmitMeanMs": 1.7301886792519052,
+        "tickMeanMs": 0.33447916631897845,
+        "drawCallsMean": 158.3962264150948,
+        "trianglesMean": 1599578.5061043284,
+        "stuttersOver33_333Ms": 0,
+        "stuttersOver50Ms": 0,
+        "stuttersOver100Ms": 0
+      },
+      "rafMetrics": {
+        "sampleCount": 900,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.400000000001,
+        "averageFrameMs": 16.66599999999996,
+        "averageFps": 60.00240009600398,
+        "medianFrameMs": 16.69999999999891,
+        "p95FrameMs": 16.700000000000728,
+        "p99FrameMs": 16.80000000000109,
+        "onePercentLowFps": 59.52380952380351,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 59.52380952380566,
+        "minFrameMs": 16.5,
+        "maxFrameMs": 16.80000000000291,
+        "stutterCounts": {
+          "over16_667Ms": 556,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "finalEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 24,
+        "deviceMemory": 32,
+        "devicePixelRatio": 1,
+        "visibility": "visible",
+        "focused": true,
+        "fullscreen": false,
+        "pointerLocked": false,
+        "buffer": [
+          1280,
+          720
+        ],
+        "gpuVendor": "Google Inc. (NVIDIA Corporation)",
+        "gpuRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4070/PCIe/SSE2, OpenGL 4.5.0)",
+        "context": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 0,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.00999999983443153,
+          "median": 0,
+          "min": 0,
+          "max": 0.19999998807907104,
+          "range": 0.19999998807907104,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 5,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 5,
+          "stale": 0
+        },
+        "storage": null
+      },
+      "gpuTiming": {
+        "enabled": false,
+        "supported": false,
+        "disjoint": false,
+        "errors": [],
+        "summary": null
+      },
+      "observedRanges": {
+        "renderIntervalMs": {
+          "min": 9.400000005960464,
+          "max": 24.399999976158142
+        },
+        "tickCpuMs": {
+          "min": 0,
+          "max": 1.2000000178813934
+        },
+        "renderSubmitCpuMs": {
+          "min": 1,
+          "max": 4.600000023841858
+        },
+        "drawCalls": {
+          "min": 116,
+          "max": 231
+        },
+        "triangles": {
+          "min": 1488542,
+          "max": 1680200
+        }
+      }
+    }
+  ]
+}

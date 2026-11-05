@@ -1,0 +1,1 @@
+import{bW as t}from"./index.FoQE3geO.js";const i="/api/v1/val/pricing-config",c="/api/v1/public/val/pricing-config",n={list(){return t({url:i,method:"get"})},publicList(){return t({url:c,method:"get"})},batchUpdate(r){return t({url:`${i}/batch`,method:"put",data:r})}};export{n as P};

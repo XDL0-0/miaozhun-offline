@@ -1,0 +1,333 @@
+{
+  "decision": "Not enabled in production: exploratory single-pair runs show no consistent cadence or CPU gain. No significance claim.",
+  "candidate": "Replace getSyncParameter(sync,SYNC_STATUS) with clientWaitSync(sync,0,0); retain native default two-frame queue. Both builds already include the render allocation optimization.",
+  "protocol": "Same fixed protocol as main benchmark, one old/new pair per scene; exploratory, excluded from formal aggregate. GPU timer disabled.",
+  "runs": [
+    {
+      "caseId": "ascent",
+      "engine": "old",
+      "valid": true,
+      "metrics": {
+        "sampleCount": 898,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.5,
+        "averageFrameMs": 16.703229398663684,
+        "averageFps": 59.868662288743,
+        "medianFrameMs": 16.69999998807907,
+        "p95FrameMs": 17.400000005960464,
+        "p99FrameMs": 17.70300001680851,
+        "onePercentLowFps": 44.35682601485301,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 56.48760091795332,
+        "minFrameMs": 3.5999999940395355,
+        "maxFrameMs": 32.5,
+        "stutterCounts": {
+          "over16_667Ms": 467,
+          "over33_333Ms": 0,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "cpu": {
+        "tick": {
+          "count": 1920,
+          "droppedSampleCount": 0,
+          "mean": 0.22635416661699542,
+          "median": 0.20000001788139343,
+          "min": 0,
+          "max": 0.800000011920929,
+          "range": 0.800000011920929,
+          "p95": 0.4000000059604645,
+          "p99": 0.5999999940395355
+        },
+        "renderSubmit": {
+          "count": 899,
+          "droppedSampleCount": 0,
+          "mean": 2.3846496112221924,
+          "median": 2.2999999821186066,
+          "min": 1.5,
+          "max": 5.800000011920929,
+          "range": 4.300000011920929,
+          "p95": 3.300000011920929,
+          "p99": 4.799999982714653
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 2,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.013222222261958646,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 5,
+          "stale": 2
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 7,
+          "stale": 2
+        },
+        "storage": null
+      }
+    },
+    {
+      "caseId": "ascent",
+      "engine": "new",
+      "valid": true,
+      "metrics": {
+        "sampleCount": 898,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.5,
+        "averageFrameMs": 16.703229398663687,
+        "averageFps": 59.868662288742996,
+        "medianFrameMs": 16.600000023841858,
+        "p95FrameMs": 17.400000005960464,
+        "p99FrameMs": 17.799999982118607,
+        "onePercentLowFps": 46.997389033942554,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 56.17977533733554,
+        "minFrameMs": 14.899999976158142,
+        "maxFrameMs": 33.80000001192093,
+        "stutterCounts": {
+          "over16_667Ms": 448,
+          "over33_333Ms": 1,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "cpu": {
+        "tick": {
+          "count": 1920,
+          "droppedSampleCount": 0,
+          "mean": 0.22729166646798396,
+          "median": 0.20000001788139343,
+          "min": 0,
+          "max": 1.4000000059604645,
+          "range": 1.4000000059604645,
+          "p95": 0.5,
+          "p99": 0.6000000181794166
+        },
+        "renderSubmit": {
+          "count": 899,
+          "droppedSampleCount": 0,
+          "mean": 2.5045606236038767,
+          "median": 2.2999999821186066,
+          "min": 1.5999999940395355,
+          "max": 5.600000023841858,
+          "range": 4.000000029802322,
+          "p95": 4.5,
+          "p99": 5
+        }
+      },
+      "gpuPacing": {
+        "checks": 899,
+        "blocked": 1,
+        "cpuMs": {
+          "count": 899,
+          "droppedSampleCount": 0,
+          "mean": 0.013236929630411084,
+          "median": 0,
+          "min": 0,
+          "max": 0.19999998807907104,
+          "range": 0.19999998807907104,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 4,
+          "stale": 2
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 2,
+          "blocked": 5,
+          "stale": 2
+        },
+        "storage": null
+      }
+    },
+    {
+      "caseId": "plummet",
+      "engine": "old",
+      "valid": true,
+      "metrics": {
+        "sampleCount": 889,
+        "droppedSampleCount": 0,
+        "elapsedMs": 14999.100000023842,
+        "averageFrameMs": 16.871878515212384,
+        "averageFps": 59.270222879945386,
+        "medianFrameMs": 16.69999998807907,
+        "p95FrameMs": 17.5,
+        "p99FrameMs": 32.67199999690056,
+        "onePercentLowFps": 29.702970297029697,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 30.607247799181724,
+        "minFrameMs": 14.699999988079071,
+        "maxFrameMs": 34.10000002384186,
+        "stutterCounts": {
+          "over16_667Ms": 465,
+          "over33_333Ms": 7,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "cpu": {
+        "tick": {
+          "count": 1920,
+          "droppedSampleCount": 0,
+          "mean": 0.36645833373380754,
+          "median": 0.30000001192092896,
+          "min": 0,
+          "max": 1.300000011920929,
+          "range": 1.300000011920929,
+          "p95": 0.7000000178813934,
+          "p99": 1
+        },
+        "renderSubmit": {
+          "count": 890,
+          "droppedSampleCount": 0,
+          "mean": 2.0375280890237066,
+          "median": 2,
+          "min": 1.199999988079071,
+          "max": 5.299999982118607,
+          "range": 4.0999999940395355,
+          "p95": 3.0999999940395355,
+          "p99": 4.5999999940395355
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 11,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.012222222288449595,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 0,
+          "blocked": 2,
+          "stale": 0
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 13,
+          "stale": 0
+        },
+        "storage": null
+      }
+    },
+    {
+      "caseId": "plummet",
+      "engine": "new",
+      "valid": true,
+      "metrics": {
+        "sampleCount": 884,
+        "droppedSampleCount": 0,
+        "elapsedMs": 15015.59999999404,
+        "averageFrameMs": 16.98597285067225,
+        "averageFps": 58.87210634275935,
+        "medianFrameMs": 16.69999998807907,
+        "p95FrameMs": 17.584999994933597,
+        "p99FrameMs": 33.316999981105326,
+        "onePercentLowFps": 29.47920078783861,
+        "onePercentTailSampleCount": 9,
+        "p99EquivalentFps": 30.014707223553085,
+        "minFrameMs": 13,
+        "maxFrameMs": 35.099999994039536,
+        "stutterCounts": {
+          "over16_667Ms": 456,
+          "over33_333Ms": 9,
+          "over50Ms": 0,
+          "over100Ms": 0
+        }
+      },
+      "cpu": {
+        "tick": {
+          "count": 1922,
+          "droppedSampleCount": 0,
+          "mean": 0.3737252862129726,
+          "median": 0.30000001192092896,
+          "min": 0,
+          "max": 1.4000000059604645,
+          "range": 1.4000000059604645,
+          "p95": 0.7999999821186066,
+          "p99": 1
+        },
+        "renderSubmit": {
+          "count": 885,
+          "droppedSampleCount": 0,
+          "mean": 2.061694914809716,
+          "median": 2,
+          "min": 1.0999999940395355,
+          "max": 4.4000000059604645,
+          "range": 3.300000011920929,
+          "p95": 3.5999999940395355,
+          "p99": 4
+        }
+      },
+      "gpuPacing": {
+        "checks": 900,
+        "blocked": 16,
+        "cpuMs": {
+          "count": 900,
+          "droppedSampleCount": 0,
+          "mean": 0.008222222328186023,
+          "median": 0,
+          "min": 0,
+          "max": 0.10000002384185791,
+          "range": 0.10000002384185791,
+          "p95": 0.09999999403953552,
+          "p99": 0.10000002384185791
+        },
+        "statsStart": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 4,
+          "stale": 2
+        },
+        "statsEnd": {
+          "maxInFlight": 2,
+          "inFlight": 1,
+          "blocked": 20,
+          "stale": 2
+        },
+        "storage": null
+      }
+    }
+  ],
+  "hashes": {
+    "00-old.json": "2bb7b5d60abd2e968593958eeb84a30bb0d30129541d2c4401cad2c7833ecf13",
+    "01-new.json": "06b339647ca6a518b40bca47c534fc3d7aeb193c5a7d5ed8673d42bb4eb4ae69",
+    "02-old.json": "13d69aca71ede602c4e2381f7ae6ff6775583fa6e24ec1e939c9d95fa46c8813",
+    "03-new.json": "508f827421b660233ba98e669b36700492df2b5a07201cb829bd51d3a54e193b",
+    "old": {
+      "originalGameHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "originalWorldHash": "c163cf1197de1b16d351d55f6a15d6a2e65769fd532e055ec092cd57c22dd261"
+    },
+    "new": {
+      "originalGameHash": "0823f7fe2979672e6b0e483360f1e76c6c54dbdcdfdfe3ca497d82b5e6622299",
+      "originalWorldHash": "672f13d1ee6eb1b10830be6d0839419d5d4fb981cb95f10f7d87a81ace54aa32"
+    }
+  }
+}

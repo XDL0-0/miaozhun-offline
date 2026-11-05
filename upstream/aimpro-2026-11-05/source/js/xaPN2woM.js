@@ -1,0 +1,1 @@
+import{bW as e}from"./index.FoQE3geO.js";const t="/api/v1/public/course",a={list(){return e({url:`${t}/courses`,method:"get"})},getDetail(r,s=1,o=10){return e({url:`${t}/courses/${r}`,method:"get",params:{pageNum:s,pageSize:o}})},recentOrders(r=20){return e({url:`${t}/recent-orders`,method:"get",params:{n:r}})}};export{a as C};

@@ -1,0 +1,14 @@
+{
+  "name": "爱收徒 - 无畏契约付费复盘",
+  "short_name": "爱收徒",
+  "description": "无畏契约付费复盘平台，教练录制视频一对一服务",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0f1428",
+  "background_color": "#0f1428",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
