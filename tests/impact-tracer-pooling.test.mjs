@@ -155,7 +155,7 @@ test('pool transformation is pinned and emits valid retained modules without mut
  assert.throws(()=>applyImpactTracerPoolingPatch({'CymPR-fm.js':original.replace('new yt(o,M()),from:g','new yt(o,other()),from:g')}),/version mismatch/);
 });
 
-test('offline build applies impact/tracer pooling after the other production transforms',async()=>{
+test('offline build composes map, muzzle and pooled effects without diagnostic instrumentation',async()=>{
  const buildUrl=new URL('../prepare-offline.mjs',import.meta.url);
  const program=parse(fs.readFileSync(buildUrl,'utf8'),{ecmaVersion:'latest',sourceType:'module'});
  const imports=new Map();
@@ -166,6 +166,8 @@ test('offline build applies impact/tracer pooling after the other production tra
  assert.equal(optimized?.init.callee.property.name,'reduce');
  const steps=optimized.init.callee.object.elements.map(step=>step.name);
  assert.equal(steps.at(-1),'applyImpactTracerPoolingPatch','production preparation must finish by applying the pooled native effects');
+ assert.ok(steps.includes('applyInstanceVisibilityCompactionPatch'));
+ assert.ok(steps.includes('applyMuzzleUploadPerformancePatch'));
  const transforms=await Promise.all(steps.map(async name=>{
   const binding=imports.get(name);assert.ok(binding,'build transform has an actual import: '+name);
   const module=await import(new URL(binding.file,buildUrl));
@@ -176,6 +178,10 @@ test('offline build applies impact/tracer pooling after the other production tra
  // Exercise the production transform chain entirely in memory; no build/dist writes.
  const output=transforms.reduce((modules,apply)=>apply(modules),input);
  assert.match(output['CymPR-fm.js'],/__aimTracerPool/);assert.match(output['CymPR-fm.js'],/__aimImpactAtlas/);
+ assert.match(output['CymPR-fm.js'],/const __aimMuzzleUploadRanges=/);
+ assert.match(output['aQOfOAp-.js'],/const __aimCreateInstanceCompactor=/);
+ for(const source of Object.values(output))assert.doesNotMatch(source,/__offlineTrainingFixture__|__aimFixtureGlStalls|__performance-comparison/);
  assert.equal(input['CymPR-fm.js'],original);
  parse(output['CymPR-fm.js'],{ecmaVersion:'latest',sourceType:'module'});
+ parse(output['aQOfOAp-.js'],{ecmaVersion:'latest',sourceType:'module'});
 });
