@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "algorithm": "SHA256",
   "root": "dist",
-  "createdAt": "2026-10-27T17:34:22.535Z",
+  "createdAt": "2026-11-05T10:28:41.373Z",
   "fileCount": 2824,
-  "storedBytes": 494652748,
+  "storedBytes": 494670439,
   "encryptedAssets": 410,
   "resources": [
     {
@@ -9389,8 +9389,8 @@
     },
     {
       "path": "/js/CymPR-fm.js",
-      "bytes": 347586,
-      "sha256": "54c1736136fde106bcaa06aa861ceada606efdf436ff7e9ab0a5576bb8ae611c"
+      "bytes": 348037,
+      "sha256": "9d5cd6bd2ed1c60fd85033ebfea2820cf2c1ca9557980f163f2438203c8c35c0"
     },
     {
       "path": "/js/D4FNK_BL.js",
@@ -9529,8 +9529,8 @@
     },
     {
       "path": "/js/aQOfOAp-.js",
-      "bytes": 874348,
-      "sha256": "3b571de32706be23561ea6bc1cd600b6d01319da8079675f46e5d9897727e546"
+      "bytes": 891476,
+      "sha256": "6b7050cf0ed410fd40b2933259a7b1d92faea55d3fae4b08083d4255a1098f0e"
     },
     {
       "path": "/js/aim-skin-packs.mjs",
@@ -9595,7 +9595,7 @@
     {
       "path": "/localization-report.json",
       "bytes": 1291,
-      "sha256": "3249797853d09d4c49227ad5212b844a015b07229d57c6a57a46965bb2282284"
+      "sha256": "e0c517cfee99d232c25ecd5728d8c6c6813fd28e276d21354bde2166c2d40ef7"
     },
     {
       "path": "/logo.png",
@@ -9909,8 +9909,8 @@
     },
     {
       "path": "/offline-manifest.json",
-      "bytes": 1288,
-      "sha256": "b0049693172e5263a49baa33150d756fd55be776c1c814713fea0fe82115faf7"
+      "bytes": 1400,
+      "sha256": "378e5a645799182cb760190cbed018531af49e89295acf7e0b6fc70613232cc4"
     },
     {
       "path": "/offline-runtime.js",

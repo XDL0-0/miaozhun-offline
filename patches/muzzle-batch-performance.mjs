@@ -2,7 +2,7 @@
 // capacity decision, then join only consecutive draws that have identical state.
 // Do not batch at begin(): exposing the remaining capacity would truncate a
 // later emitter differently from the retained particle renderer.
-export function coalesceMuzzleBatches(slots, used, capacity) {
+export function coalesceMuzzleBatches(slots, used, capacity, markUploads = null) {
   let previous = null, previousCount = 0, merged = 0;
   for (let index = 0; index < used; index++) {
     const slot = slots[index], mesh = slot.mesh, geometry = mesh.geometry;
@@ -24,8 +24,13 @@ export function coalesceMuzzleBatches(slots, used, capacity) {
       previous.sink.dyn.set(slot.sink.dyn.subarray(0, count * 4), previousCount * 4);
       previousCount += count;
       previous.mesh.geometry.setDrawRange(0, previousCount);
-      for (const attribute of previous.attrs) attribute.needsUpdate = true;
-      if (previous.mesh.material.userData.dyn === true) previous.dynAttr.needsUpdate = true;
+      // A partial-upload build must include the appended vertices in the dirty
+      // prefix. Retain native full uploads when that optional transform is off.
+      if (markUploads) markUploads(previous, previousCount);
+      else {
+        for (const attribute of previous.attrs) attribute.needsUpdate = true;
+        if (previous.mesh.material.userData.dyn === true) previous.dynAttr.needsUpdate = true;
+      }
       mesh.visible = false;
       geometry.setDrawRange(0, 0);
       merged++;
@@ -49,7 +54,7 @@ export function applyMuzzleBatchPerformancePatch(sources) {
   if (effect.split(nativeFactory).length !== 2) throw Error('Muzzle batch performance patch version mismatch: native batch state');
   const anchor = '}),de=D;for(let Me=D;Me<k.length;Me++)';
   if (effect.split(anchor).length !== 2) throw Error('Muzzle batch performance patch version mismatch: completed native emitter batches');
-  effect = effect.replace(anchor, '}),de=D;__aimCoalesceMuzzleBatches(k,D,ws);for(let Me=D;Me<k.length;Me++)');
+  effect = effect.replace(anchor, '}),de=D;__aimCoalesceMuzzleBatches(k,D,ws,typeof __aimMuzzleUploadRanges==="function"?__aimMuzzleUploadRanges:null);for(let Me=D;Me<k.length;Me++)');
   source = source.slice(0, start) + 'const __aimCoalesceMuzzleBatches=(' + coalesceMuzzleBatches.toString() + ');' + effect + source.slice(end);
   output['CymPR-fm.js'] = source;
   return output;

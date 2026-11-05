@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-05",
+  "scope": "Research other games' frame-rate optimization methods, review the pending map/particle changes, and decide whether further work should delay merging main.",
+  "decision": "Finish the narrowly scoped empty-particle-emitter fast path and merge the current map/particle optimizations. Further frame-rate work needs target-device profiling; this is not a claim that no future optimization is possible.",
+  "sources": [
+    {
+      "title": "Riot: Performance Boost — VALORANT's Global Invalidation",
+      "url": "https://playvalorant.com/en-us/news/dev/performance-boost-valorant-s-global-invalidation/",
+      "lesson": "Cache unchanged UI and update only invalidated elements; validate gains across representative hardware.",
+      "application": "Covered hall DOM hiding, shared HUD RAF, and value-based UI updates already address this class of work; no further actionable HUD defect was identified.",
+      "code": [
+        "patches/hud.mjs",
+        "patches/training-hall-visibility.mjs"
+      ]
+    },
+    {
+      "title": "PlayCanvas: General Guidelines",
+      "url": "https://developer.playcanvas.com/user-manual/optimization/guidelines/",
+      "lesson": "Reuse temporary objects, control draw-call overhead, and balance visibility-test cost against the work it saves.",
+      "application": "Keep batch count stable during map instance compaction. Preserve pooling and active-prefix particle uploads. Add only the verified empty-emitter allocation fast path.",
+      "code": [
+        "patches/instance-visibility-compaction.mjs",
+        "patches/impact-tracer-pooling.mjs",
+        "patches/muzzle-upload-performance.mjs"
+      ]
+    },
+    {
+      "title": "Epic: Niagara Scalability and Best Practices",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/scalability-and-best-practices-for-niagara",
+      "lesson": "Effect instances and emitters have overhead; pooling and system reuse reduce allocation, but finer culling and CPU/GPU simulation choices have tradeoffs.",
+      "application": "Retain pooled effects and skip empty passes. Do not enable extra batching or move small particle simulations to the GPU without project-specific evidence.",
+      "code": [
+        "patches/muzzle-layer-performance.mjs",
+        "patches/impact-tracer-pooling.mjs"
+      ]
+    },
+    {
+      "title": "Unity: Performance profiling tips for game developers",
+      "url": "https://unity.com/how-to/best-practices-for-profiling-game-performance",
+      "lesson": "Establish a baseline, work to a frame-time budget, and measure CPU/GPU stages before and after changes.",
+      "application": "Use isolated fixed-input comparisons and frame-time distributions. Triangle counts, mock GL byte counts, and CPU submission time do not establish presented-frame or hardware FPS gains.",
+      "code": [
+        "scripts/create-performance-comparison.mjs",
+        "scripts/training-profile-fixture.mjs"
+      ]
+    },
+    {
+      "title": "Fortnite: Performance Mode Boosts PC FPS",
+      "url": "https://www.fortnite.com/news/fortnite-performance-mode-boosts-pc-fps?lang=en-US",
+      "lesson": "An optional lower-quality mode can reduce memory and CPU/GPU work.",
+      "application": "Do not silently reduce this project's texture sizes, particle appearance, resolution, shadows or animation. Treat a future quality preset as a separate product choice."
+    },
+    {
+      "title": "MDN: WebGL best practices",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices",
+      "lesson": "Synchronous WebGL queries can stall; reduce avoidable work and use diagnostics carefully.",
+      "application": "Production excludes diagnostic probes. GPU timing and GL call instrumentation remain explicit opt-ins; do not add synchronization to chase an unconfirmed long-frame cause.",
+      "code": [
+        "scripts/training-gl-stalls.mjs",
+        "scripts/training-profile-fixture.mjs"
+      ]
+    }
+  ],
+  "additionalChange": {
+    "function": "Retained particle geometry emitter Lv",
+    "trigger": "No active particle systems",
+    "action": "Return zero before allocating scratch vectors and a scratch matrix; preserve the outer render function's cleanup and state restoration.",
+    "evidence": "Read-only audit observed 240 scratch Float32Array constructions for 240 empty calls and identified 13 additional vector-array initializers per call. Tests exercise the retained native emitter and nonempty GPU vertex output.",
+    "fpsGainClaimed": false
+  },
+  "deferred": [
+    "LOD, different spatial batches, transparency/composite scissoring and texture compression require target-GPU measurements and visual validation.",
+    "Worker/WebGPU rendering or GPU particle simulation would be architectural work without a demonstrated bottleneck.",
+    "Prior full spatial splitting increased draw calls and regressed measured frame rate; leave it disabled."
+  ],
+  "validation": {
+    "baselineCommit": "6e37b17625dc834bebac7f5cd7059c4376df1413",
+    "review": "Independent review found no blocking regression in map compaction, shadow restoration, replay isolation or diagnostic separation.",
+    "hardwareFpsMeasured": false,
+    "browserVisualValidation": false,
+    "note": "Final automated test and offline verification results are recorded in README.md and verification.json.",
+    "buildPassed": true,
+    "productionHelpersMatchSource": true,
+    "behaviorTests": {
+      "command": "node --test --test-reporter=tap tests/*.test.mjs",
+      "passed": 360,
+      "failed": 0,
+      "skipped": 0
+    },
+    "offline": {
+      "command": "node verify-offline.mjs",
+      "success": true,
+      "resources": 2824,
+      "missingRequired": 0,
+      "missingOptional": 2
+    }
+  }
+}

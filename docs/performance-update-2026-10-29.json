@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-29",
+  "baseCommit": "6e37b17625dc834bebac7f5cd7059c4376df1413",
+  "importedMapAndDiagnosticReference": "60be50660e2a7d2e2008ea83ba6b4971b94b5608",
+  "productionChanges": {
+    "map": "Compact visible members of eligible static instance batches (at least 50000 batch triangles), keeping batch identity, PVS, full bounds and original relative order. Restore all instances for shadow updates and prewarming. Isolate geometry across map clones and release owned buffers on map replacement/disposal.",
+    "muzzle": "Upload only the emitted vertex prefix after initial buffer allocation. Zero-vertex batches do not mark buffers dirty. Preserve particle generation, draw order, materials and effective GPU vertex data.",
+    "disabledExperiments": [
+      "spatial instancing split",
+      "muzzle batch coalescing"
+    ]
+  },
+  "validation": {
+    "build": {
+      "command": "node prepare-offline.mjs",
+      "passed": true,
+      "sourceHelpersMatchDist": true,
+      "unchangedMedia": "Restored unrelated platform-dependent media re-encodes from the base commit."
+    },
+    "behaviorTests": {
+      "command": "node --test --test-reporter=tap tests/*.test.mjs",
+      "passed": 358,
+      "failed": 0,
+      "skipped": 0
+    },
+    "offline": {
+      "command": "node verify-offline.mjs",
+      "passed": true,
+      "resources": 2824,
+      "missingRequired": 0,
+      "missingOptional": 2,
+      "failures": 0
+    },
+    "service": {
+      "origin": "http://127.0.0.1:18746",
+      "ready": true,
+      "mapAndMuzzlePatchesServed": true,
+      "productionDiagnosticFixture": false
+    },
+    "gpuUploadContract": {
+      "method": "Retained Three WebGLAttributes and BufferAttribute implementation with a mock GL driver; actual native particle emitter/render path. These are transferred-byte counts, not hardware timing.",
+      "case": "One dynamic particle quad (6 vertices) in a 3072-vertex slot, after initial GPU allocation",
+      "beforeBytes": 159744,
+      "afterBytes": 312,
+      "effectiveVertexDataIdentical": true,
+      "initialAllocationUnchanged": true
+    }
+  },
+  "diagnostics": {
+    "generation": "node scripts/create-performance-comparison.mjs --input dist --output /tmp/miaozhun-performance-review --graphics-phases",
+    "separation": "Generate only into a separate overlay; do not overwrite production dist.",
+    "compactionSequence": "__compactionSequence=off,on,off,on",
+    "gpuTiming": "Explicit opt-in with __gpuTiming=1",
+    "glCallProbe": "Explicit opt-in with __glStalls=1; CPU call timing includes probe overhead and is not GPU execution time.",
+    "longFrames": "Bounded, per-round PerformanceObserver records; report unsupported entries and dropped records."
+  },
+  "limitations": [
+    "No browser visual or hardware FPS/1% low measurements were completed in this turn. Previous branch measurements do not establish gains for this combined build.",
+    "The static-map compactor does not support raw buffer writes while compacted. Restore or disable compaction before bulk editing; native instance setters restore before writing.",
+    "The source of earlier long frames remains unconfirmed; added diagnostics support future attribution."
+  ]
+}
