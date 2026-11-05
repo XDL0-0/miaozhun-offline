@@ -2,7 +2,7 @@ const __aimOfflineLocale=globalThis.__aimI18n??{t:value=>value,format:(template,
 (()=>{
  'use strict';
  const localFetch=window.fetch.bind(window);
- const offlineUrl=input=>{const raw=input instanceof Request?input.url:String(input);const u=new URL(raw,location.href);if(['ishoutu.cn','static.ishoutu.cn'].includes(u.hostname))return location.origin+u.pathname+u.search;if(u.origin===location.origin||u.protocol==='blob:'||u.protocol==='data:')return raw;throw new Error((__aimOfflineLocale.t('离线版已阻止外网请求')));};
+ const offlineUrl=input=>{const raw=input instanceof Request?input.url:String(input);const u=new URL(raw,location.href);if(['ishoutu.cn','static.ishoutu.cn','aimpro.world'].includes(u.hostname))return location.origin+u.pathname+u.search;if(u.origin===location.origin||u.protocol==='blob:'||u.protocol==='data:')return raw;throw new Error((__aimOfflineLocale.t('离线版已阻止外网请求')));};
  window.fetch=(input,init)=>{try{const url=offlineUrl(input);return localFetch(input instanceof Request&&url===input.url?input:url,init)}catch(e){return Promise.reject(e)}};
  const originalOpen=XMLHttpRequest.prototype.open;
  XMLHttpRequest.prototype.open=function(method,url,...rest){return originalOpen.call(this,method,offlineUrl(url),...rest)};
@@ -11,7 +11,7 @@ const __aimOfflineLocale=globalThis.__aimI18n??{t:value=>value,format:(template,
  const readFavorites=()=>{try{const data=JSON.parse(localStorage.getItem(favoriteKey)||'[]');return new Set(Array.isArray(data)?data.filter(v=>typeof v==='string'&&codePattern.test(v)):[])}catch{return new Set()}};
  let favorites=readFavorites(),favoritesOnly=false,favoriteButton,statusLabel;
  const hidden=new Set([(__aimOfflineLocale.t('下载桌面版')),(__aimOfflineLocale.t('下载新版桌面版')),(__aimOfflineLocale.t('访客登录或注册')),(__aimOfflineLocale.t('登录/注册')),(__aimOfflineLocale.t('登录')),(__aimOfflineLocale.t('免费体检')),(__aimOfflineLocale.t('玩家创意工坊')),(__aimOfflineLocale.t('有延迟问题？点击检测')),(__aimOfflineLocale.t('排行榜')),(__aimOfflineLocale.t('上榜局')),(__aimOfflineLocale.t('申请一局上榜')),(__aimOfflineLocale.t('重试提交')),(__aimOfflineLocale.t('分享')),(__aimOfflineLocale.t('上传分享')),(__aimOfflineLocale.t('试皮肤'))]);
- const unavailableSelector='.hall-rail-quick,.al-cloud-replay-share,.al-cloud-replay-unshare,[data-action="arm-ranked"],[data-action="open-board"],[data-action="pw-login"],[data-action="pw-board-login"],.hall-community,.hall-other-groups,.hall-qq-groups,[data-action="copy-kook"],[data-action="copy-qq-group"],[data-action="copy-other-qq-group"],[data-action="join-kook"],[data-action="join-qq-group"],[data-action="join-other-qq-group"],[data-action="toggle-other-qq-groups"],[data-action="toggle-full-qq-groups"],[data-action="open-review"],[data-test="door-replay"]';
+ const unavailableSelector='.hall-profile--login,[data-action="tab-pw"],[data-action="tab-poll"],[data-action="tab-haojiao"],[data-action="raffle"],[data-action="checkup"],[data-action="open-desktop-download"],[data-action="changelog"],[data-action="share"],[data-action="login"],[data-action="ball-open-board"],.hall-rail-quick,.al-cloud-replay-share,.al-cloud-replay-unshare,[data-action="arm-ranked"],[data-action="open-board"],[data-action="pw-login"],[data-action="pw-board-login"],.hall-community,.hall-other-groups,.hall-qq-groups,[data-action="copy-kook"],[data-action="copy-qq-group"],[data-action="copy-other-qq-group"],[data-action="join-kook"],[data-action="join-qq-group"],[data-action="join-other-qq-group"],[data-action="toggle-other-qq-groups"],[data-action="toggle-full-qq-groups"],[data-action="open-review"],[data-test="door-replay"]';
  const isFavoriteFilter=el=>el.matches('button[data-toggle="fav"],button[data-offline-favorite-filter]')||(el.matches('.al-wk-toggles .al-wk-toggle')&&el.textContent.trim()===(__aimOfflineLocale.t('收藏')));
  const cardSelector='article.al-wk-card[data-share-code]',structureSelector=cardSelector+',.al-wk-sec';
  const noteSelector='.st-sync[data-role="sync-state"],.al-run-guest[data-role="guest-sync-hint"]';
@@ -29,7 +29,7 @@ const __aimOfflineLocale=globalThis.__aimI18n??{t:value=>value,format:(template,
  function setText(el,text){if(el&&el.textContent!==text)el.textContent=text;}
  function announce(message){setText(statusLabel,message);}
  function showFavorites(value){
-  if(value){const tab=[...document.querySelectorAll('.hall-tab')].find(el=>el.textContent.trim()===(__aimOfflineLocale.t('瓦工坊')));if(tab&&!tab.classList.contains('is-active'))tab.click();}
+  if(value){const tab=document.querySelector('[data-action="tab-workshop"]');if(tab&&!tab.classList.contains('is-active'))tab.click();}
   favoritesOnly=value;setFlag(document.body,'data-offline-favorites-only',value);tidy();
  }
  function toggleFavorite(code){
@@ -84,8 +84,8 @@ const __aimOfflineLocale=globalThis.__aimI18n??{t:value=>value,format:(template,
   if(isFavoriteFilter(target)){event.preventDefault();event.stopImmediatePropagation();showFavorites(!favoritesOnly);return;}
   const favorite=target.matches('.al-wk-fav,[data-offline-favorite]')&&target.closest('article.al-wk-card[data-share-code]');
   if(favorite){const code=favorite.dataset.shareCode;if(codePattern.test(code)){event.preventDefault();event.stopImmediatePropagation();toggleFavorite(code)}return;}
-  if(target.classList.contains('hall-rail-item')&&target.textContent.trim()===(__aimOfflineLocale.t('收藏项目'))){event.preventDefault();event.stopImmediatePropagation();showFavorites(true);return;}
-  if(target.classList.contains('hall-tab')&&target.textContent.trim()===(__aimOfflineLocale.t('瓦工坊'))&&favoritesOnly)showFavorites(false);
+  if(target.matches('[data-action="favorites"]')){event.preventDefault();event.stopImmediatePropagation();showFavorites(true);return;}
+  if(target.matches('[data-action="tab-workshop"]')&&favoritesOnly)showFavorites(false);
  },true);
  window.addEventListener('storage',event=>{if(event.key===favoriteKey){favorites=readFavorites();tidy()}});
  function readStorage(){const storage={};for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(key?.startsWith('al-'))storage[key]=localStorage.getItem(key)}return storage;}

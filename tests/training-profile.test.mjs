@@ -4,33 +4,20 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import vm from 'node:vm';
-import crypto from 'node:crypto';
-import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
 import {installTrainingFixture,installTrainingVueDiagnostics} from '../scripts/training-profile-fixture.mjs';
+import {legacyPerformanceModules} from './fixtures/legacy-performance-modules.mjs';
 
 const {parse}=createRequire(import.meta.url)('../scripts/vendor/acorn.cjs');
-const repo=fileURLToPath(new URL('../',import.meta.url));
-const digest=source=>crypto.createHash('sha256').update(source).digest('hex');
-const nativeMarker='/*__offlineTrainingFixture__*/',vueMarker='/*__offlineTrainingVueDispatch__*/';
+const nativeMarker='/*__offlineTrainingFixture__*/';
 const syntax=source=>parse(source,{ecmaVersion:'latest',sourceType:'module'});
 
-// The committed delivery works in a fresh checkout. When a developer has the
-// temporary probe installed, read its verified exact backup instead.
-function cleanModule(pattern,marker,backupName,manifestName){
- const files=fs.readdirSync(path.join(repo,'dist/js')).filter(name=>pattern.test(name));
- assert.equal(files.length,1);
- let source=fs.readFileSync(path.join(repo,'dist/js',files[0]),'utf8');
- if(source.includes(marker)){
-  const manifest=JSON.parse(fs.readFileSync(path.join(repo,'qa-artifacts',manifestName),'utf8'));
-  assert.equal(digest(source),manifest.patchedSha256,'Existing temporary module must match its manifest');
-  source=fs.readFileSync(path.join(repo,'qa-artifacts',backupName),'utf8');
-  assert.equal(digest(source),manifest.originalSha256);
- }
- syntax(source);return {name:files[0],source};
-}
-const native=cleanModule(/^CymPR.*\.js$/,nativeMarker,'training-profile-original-runtime.js','training-profile-runtime.json');
-const vue=cleanModule(/^index\..*\.js$/,vueMarker,'training-profile-original-vue-runtime.js','training-profile-vue-runtime.json');
+// The legacy fixture installer is tested against retained source transforms,
+// independently of whichever engine is currently built into production dist.
+const modules=legacyPerformanceModules();
+const native={name:'CymPR-fm.js',source:modules['CymPR-fm.js']};
+const vue={name:'index.C6F_bJRd.js',source:modules['index.C6F_bJRd.js']};
+syntax(native.source);syntax(vue.source);
 
 function temporaryRoot(t){
  const base=fs.realpathSync(os.tmpdir()),prefix='aim-training-profile-test-',root=fs.mkdtempSync(path.join(base,prefix));
@@ -43,7 +30,7 @@ function temporaryRoot(t){
 function readNative(root){return fs.readFileSync(path.join(root,'dist/js',native.name),'utf8');}
 function readVue(root){return fs.readFileSync(path.join(root,'dist/js',vue.name),'utf8');}
 
-test('Training diagnostics install and exactly restore the actual native and Vue module anchors',t=>{
+test('legacy training diagnostics install and exactly restore the actual native and Vue module anchors',t=>{
  const root=temporaryRoot(t),first=installTrainingFixture(root),vueFirst=installTrainingVueDiagnostics(root);
  syntax(readNative(root));syntax(readVue(root));
  assert.ok(readNative(root).includes('Dt=!0,(__aimFixture?__aimFixtureStop("player-fell"):'));

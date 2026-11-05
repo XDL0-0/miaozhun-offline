@@ -1,0 +1,8332 @@
+{
+  "map": "Duality",
+  "space": "ue-cm",
+  "note": "光源原样落盘：位置/旋转是 UE 厘米与度，颜色是 sRGB 0-255，强度是 UE 的单位（方向光 lux、点光/聚光默认 candela）。轴系与单位换算留给运行时。",
+  "lights": [
+    {
+      "kind": "point",
+      "layer": "Duality_Art_B",
+      "name": "LightComponent0",
+      "loc": [
+        11703.528,
+        -5057.4854,
+        244.15636
+      ],
+      "rot": [
+        0.000171,
+        -0.000005,
+        -89.99806
+      ],
+      "color": [
+        175,
+        227,
+        255
+      ],
+      "intensity": 5,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 988.62067,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 3,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Art_B",
+      "name": "LightComponent0",
+      "loc": [
+        11703.562,
+        -5057.4854,
+        195.25269
+      ],
+      "rot": [
+        0.000109,
+        0.000049,
+        -89.99806
+      ],
+      "color": [
+        175,
+        227,
+        255
+      ],
+      "intensity": 5,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 988.62067,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 3,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Art_B",
+      "name": "LightComponent0",
+      "loc": [
+        11703.562,
+        -4660.51,
+        244.15636
+      ],
+      "rot": [
+        0.000171,
+        -0.000005,
+        -89.99806
+      ],
+      "color": [
+        175,
+        227,
+        255
+      ],
+      "intensity": 5,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 988.62067,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 3,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Art_B",
+      "name": "LightComponent0",
+      "loc": [
+        11703.562,
+        -4660.51,
+        195.25269
+      ],
+      "rot": [
+        0.000109,
+        0.000049,
+        -89.99806
+      ],
+      "color": [
+        175,
+        227,
+        255
+      ],
+      "intensity": 5,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 988.62067,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 3,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_B",
+      "name": "LightComponent0",
+      "loc": [
+        11523.578,
+        -4833.602,
+        -736.25024
+      ],
+      "rot": [
+        90,
+        -0.000004,
+        0
+      ],
+      "color": [
+        152,
+        255,
+        241
+      ],
+      "intensity": 15,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 435.09937,
+      "barnHeight": 200,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12565.231,
+        -5033.343,
+        517.623
+      ],
+      "rot": [
+        -0.000061,
+        180.0002,
+        -89.99987
+      ],
+      "color": [
+        225,
+        255,
+        242
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 550,
+      "sourceRadius": 5,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        13104.44,
+        -6448.749,
+        473.14322
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        118,
+        170,
+        191
+      ],
+      "intensity": 25,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 600,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": ""
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12733.873,
+        -6629.8457,
+        757.4015
+      ],
+      "rot": [
+        -90,
+        -90,
+        -0.000061035156
+      ],
+      "color": [
+        255,
+        240,
+        218
+      ],
+      "intensity": 1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 650,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 15,
+      "barnHeight": 15,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12439.381,
+        -6779.6245,
+        748.25525
+      ],
+      "rot": [
+        -90,
+        -90,
+        -0.00012207031
+      ],
+      "color": [
+        255,
+        240,
+        218
+      ],
+      "intensity": 1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 650,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 15,
+      "barnHeight": 15,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12589.13,
+        -7081.0728,
+        756.88336
+      ],
+      "rot": [
+        -90,
+        180,
+        89.99988
+      ],
+      "color": [
+        255,
+        240,
+        218
+      ],
+      "intensity": 1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 650,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 15,
+      "barnHeight": 15,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12882.588,
+        -6927.836,
+        749.66785
+      ],
+      "rot": [
+        -90,
+        0,
+        -90.00012
+      ],
+      "color": [
+        255,
+        240,
+        218
+      ],
+      "intensity": 1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 650,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 15,
+      "barnHeight": 15,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12186.623,
+        -6794.87,
+        763.13666
+      ],
+      "rot": [
+        -90,
+        0.118681185,
+        179.88147
+      ],
+      "color": [
+        211,
+        224,
+        238
+      ],
+      "intensity": 8,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1250,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 726.95575,
+      "barnHeight": 8.236361,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        13177.261,
+        -6794.87,
+        763.13666
+      ],
+      "rot": [
+        -90,
+        179.9605,
+        0.03967285
+      ],
+      "color": [
+        211,
+        224,
+        238
+      ],
+      "intensity": 8,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1250,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 726.95575,
+      "barnHeight": 8.236361,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12358.765,
+        -6646.6235,
+        539.7728
+      ],
+      "rot": [
+        -90,
+        0,
+        -89.99985
+      ],
+      "color": [
+        211,
+        224,
+        238
+      ],
+      "intensity": 2,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 200,
+      "barnHeight": 10,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12664.04,
+        -6858.7437,
+        773.84894
+      ],
+      "rot": [
+        90,
+        -179.98021,
+        0.01953125
+      ],
+      "color": [
+        254,
+        255,
+        249
+      ],
+      "intensity": 20,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1800,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 650,
+      "barnHeight": 650,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12664.04,
+        -6833.4053,
+        579.6033
+      ],
+      "rot": [
+        90,
+        -0.6328322,
+        179.36736
+      ],
+      "color": [
+        211,
+        224,
+        238
+      ],
+      "intensity": 4,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1550,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 782.0226,
+      "barnHeight": 883.8796,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        13001.358,
+        -6646.6235,
+        539.7728
+      ],
+      "rot": [
+        -90,
+        -44.999996,
+        -44.999817
+      ],
+      "color": [
+        211,
+        224,
+        238
+      ],
+      "intensity": 2,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 200,
+      "barnHeight": 10,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12676.377,
+        -7265.2305,
+        537.2406
+      ],
+      "rot": [
+        -9.999875,
+        90.00009,
+        270
+      ],
+      "color": [
+        164,
+        221,
+        255
+      ],
+      "intensity": 25,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 258.5275,
+      "barnHeight": 731.5748,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Art_DefPathB",
+      "name": "LightComponent0",
+      "loc": [
+        12684.978,
+        -6348.5127,
+        758.23004
+      ],
+      "rot": [
+        -54.999695,
+        270.00006,
+        180.0001
+      ],
+      "color": [
+        211,
+        224,
+        238
+      ],
+      "intensity": 8,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1250,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 894.8645,
+      "barnHeight": 8.236361,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Greybox",
+      "name": "LightComponent0",
+      "loc": [
+        12250,
+        3285,
+        550
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "intensity": 7000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "directional",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        1100,
+        300,
+        570
+      ],
+      "rot": [
+        -32.846912,
+        57.057613,
+        -1.999445
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 7,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 2,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9802.589,
+        -4380.895,
+        1381.0227
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 60,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        3865.2935,
+        1011.4076,
+        557.3856
+      ],
+      "rot": [
+        -90,
+        26.565033,
+        -116.565
+      ],
+      "color": [
+        255,
+        235,
+        207
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 27.256672,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        3751.345,
+        666.8123,
+        537.7832
+      ],
+      "rot": [
+        -90,
+        26.565033,
+        -116.565
+      ],
+      "color": [
+        255,
+        235,
+        207
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 27.256672,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6544.5396,
+        -2034.9495,
+        677.67535
+      ],
+      "rot": [
+        -79.999916,
+        0,
+        -89.99992
+      ],
+      "color": [
+        221,
+        150,
+        230
+      ],
+      "intensity": 200,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 27.256672,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6379.9243,
+        -3639.523,
+        689.53156
+      ],
+      "rot": [
+        -90,
+        26.565033,
+        -116.565
+      ],
+      "color": [
+        207,
+        211,
+        230
+      ],
+      "intensity": 1200,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 27.256672,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9451.534,
+        630.62683,
+        689.33887
+      ],
+      "rot": [
+        0,
+        0,
+        -89.99994
+      ],
+      "color": [
+        165,
+        210,
+        255
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9451.534,
+        535.62683,
+        562.33887
+      ],
+      "rot": [
+        0.000006830189,
+        90.00004,
+        -89.99991
+      ],
+      "color": [
+        165,
+        210,
+        255
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7748.4844,
+        5151.86,
+        673.45264
+      ],
+      "rot": [
+        0,
+        180.00009,
+        -89.999886
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7748.4863,
+        5151.0693,
+        566.45264
+      ],
+      "rot": [
+        0.000006830189,
+        270.00024,
+        -89.99984
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8901.534,
+        -2604.0134,
+        988.65625
+      ],
+      "rot": [
+        0,
+        180.00009,
+        -89.999886
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8901.534,
+        -2540.0852,
+        869.1781
+      ],
+      "rot": [
+        0.000006830189,
+        270.0003,
+        -89.999825
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9055.533,
+        -7191.1567,
+        788.65625
+      ],
+      "rot": [
+        0.000007,
+        -0.000153,
+        -89.99982
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12673.448,
+        -3590.3289,
+        1233.0237
+      ],
+      "rot": [
+        0.000020490566,
+        180.00005,
+        -89.99986
+      ],
+      "color": [
+        213,
+        232,
+        248
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1430.719,
+      "sourceRadius": 10.137128,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12650.232,
+        -3414.4036,
+        931.65344
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 200,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 18,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13142.375,
+        -3415.4036,
+        931.65344
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 200,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 18,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        3917.5623,
+        201.47513,
+        313.0733
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        255,
+        224,
+        176
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 80,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8876.858,
+        -4389.9272,
+        856.259
+      ],
+      "rot": [
+        0,
+        89.99996,
+        -119.999794
+      ],
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "intensity": 10000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9846.475,
+        -4379.4297,
+        811.3463
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        212,
+        207,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 6,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9195.475,
+        4038.5703,
+        393.3463
+      ],
+      "rot": [
+        0,
+        15.000048,
+        90.000114
+      ],
+      "color": [
+        188,
+        221,
+        255
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9045.534,
+        -7262.085,
+        672.1781
+      ],
+      "rot": [
+        0.000007,
+        -0.000153,
+        -89.99982
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8897.475,
+        4298.5703,
+        393.3463
+      ],
+      "rot": [
+        0.000006830189,
+        70.00007,
+        90.00013
+      ],
+      "color": [
+        188,
+        221,
+        255
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12600.232,
+        -4849.4033,
+        309.65344
+      ],
+      "rot": [
+        0.000040981133,
+        -0.00015258789,
+        0.00018978119
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7631.132,
+        -3947.0388,
+        817.41693
+      ],
+      "rot": [
+        -90,
+        -90,
+        179.99988
+      ],
+      "color": [
+        255,
+        224,
+        176
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6882.377,
+        -2739.4326,
+        850.1461
+      ],
+      "rot": [
+        -90,
+        -26.565033,
+        116.56492
+      ],
+      "color": [
+        255,
+        224,
+        176
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13057.232,
+        -3738.4036,
+        1210.6534
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        174,
+        231,
+        248
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 500,
+      "sourceRadius": 18,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6882.377,
+        -3334.4326,
+        852.1461
+      ],
+      "rot": [
+        -90,
+        -20.55604,
+        110.555916
+      ],
+      "color": [
+        255,
+        224,
+        176
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6163.0063,
+        -3428.9312,
+        695.35284
+      ],
+      "rot": [
+        -90,
+        -7.125023,
+        97.12491
+      ],
+      "color": [
+        255,
+        224,
+        176
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13053.727,
+        1730.2034,
+        932.3439
+      ],
+      "rot": [
+        0,
+        0,
+        -89.99994
+      ],
+      "color": [
+        248,
+        195,
+        143
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7021.132,
+        -4397.039,
+        707.41693
+      ],
+      "rot": [
+        -90,
+        -26.565033,
+        116.56492
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 1500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        17703.16,
+        -2066.2192,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        26991.16,
+        6194.781,
+        1322.5082
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 20,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 7145.527,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12600.232,
+        -4249.4033,
+        309.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12723.448,
+        -3590.3289,
+        1137.0237
+      ],
+      "rot": [
+        0.00002,
+        180.00005,
+        -89.99986
+      ],
+      "color": [
+        213,
+        232,
+        248
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1430.719,
+      "sourceRadius": 10.137128,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11051.159,
+        2909.7808,
+        169.50735
+      ],
+      "rot": [
+        -90,
+        90,
+        0.0002670288
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7051.132,
+        -2560.302,
+        873.3361
+      ],
+      "rot": [
+        -90,
+        -209.87842,
+        569.8784
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 200,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12600.232,
+        -5449.4033,
+        309.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12900.478,
+        -3477.471,
+        627.6793
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 11.480013,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11335.132,
+        -3774.039,
+        717.41693
+      ],
+      "rot": [
+        0.00023651123,
+        -0.000002861023,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 300,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11184.132,
+        -6997.039,
+        614.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13901.448,
+        3106.1829,
+        171.72083
+      ],
+      "rot": [
+        0.00015,
+        -144.99985,
+        -179.9999
+      ],
+      "color": [
+        179,
+        192,
+        246
+      ],
+      "intensity": 15000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9260.132,
+        -5619.039,
+        944.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9849.679,
+        2987.4148,
+        858.90845
+      ],
+      "rot": [
+        0.000040981133,
+        180.00005,
+        -179.9999
+      ],
+      "color": [
+        245,
+        248,
+        203
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1430.719,
+      "sourceRadius": 50,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 40,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13203.232,
+        -5449.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        19033.16,
+        -2066.2192,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        20283.16,
+        -2066.2192,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        21484.16,
+        -2066.2192,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12027.132,
+        -5305.039,
+        674.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2056.679,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11611.132,
+        1758.9609,
+        674.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9747.679,
+        2987.4148,
+        859.90845
+      ],
+      "rot": [
+        0.000041,
+        180.00005,
+        -179.9999
+      ],
+      "color": [
+        245,
+        248,
+        203
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1430.719,
+      "sourceRadius": 50,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 40,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13203.232,
+        -4849.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8901.132,
+        -1527.0391,
+        684.41693
+      ],
+      "rot": [
+        -90,
+        -1.2658925,
+        1.2659366
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        17841.16,
+        178.78076,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        19044.16,
+        178.78076,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        20284.16,
+        178.78076,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        21594.16,
+        178.78076,
+        633.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13607.351,
+        -1991.2839,
+        494.11423
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 11.480013,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8672.132,
+        -1600.0391,
+        644.41693
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9121.132,
+        -1600.0391,
+        644.41693
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12961.232,
+        -3738.4036,
+        1196.6534
+      ],
+      "rot": [
+        0.000013660378,
+        90,
+        -180
+      ],
+      "color": [
+        174,
+        231,
+        248
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 500,
+      "sourceRadius": 18,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8605.132,
+        316.96094,
+        674.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10022.132,
+        -5644.039,
+        674.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8101.2803,
+        -30.436981,
+        732.65076
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 50,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9115.28,
+        -30.436981,
+        732.65076
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 50,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7641.2935,
+        5937.872,
+        288.5306
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7968.8,
+        6091.657,
+        288.5306
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        21743.16,
+        -2626.2188,
+        5542.036
+      ],
+      "rot": [
+        90,
+        26.565033,
+        -63.434998
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 50,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        16793.16,
+        -3136.2192,
+        1333.5096
+      ],
+      "rot": [
+        90,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7984.103,
+        5324.3643,
+        423.34854
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        255,
+        228,
+        185
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7722.6587,
+        5683.684,
+        728.34705
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        255,
+        228,
+        185
+      ],
+      "intensity": 200,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 50,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7199.132,
+        2067.961,
+        704.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        232,
+        196
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12757.546,
+        1730.2034,
+        932.3439
+      ],
+      "rot": [
+        0,
+        0,
+        -89.99994
+      ],
+      "color": [
+        248,
+        195,
+        143
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11206.132,
+        3538.961,
+        680.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12930.132,
+        597.96094,
+        402.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13497.351,
+        94.716064,
+        494.11444
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        248,
+        195,
+        143
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 11.480013,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6421.8345,
+        -866.50616,
+        475.41693
+      ],
+      "rot": [
+        90,
+        0.27745056,
+        0.27745056
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 0.3,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12930.132,
+        267.96094,
+        847.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        238,
+        211
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12895.132,
+        -3050.039,
+        646.4168
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        5923.6797,
+        5396.8228,
+        333.932
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        255,
+        228,
+        185
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14750.132,
+        -2547.039,
+        1437.417
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        16395.133,
+        -2547.039,
+        1237.417
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        15625.132,
+        -2632.039,
+        692.41693
+      ],
+      "rot": [
+        -90.00001,
+        -0.000003,
+        0
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 3000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13201.232,
+        -4249.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13203.232,
+        -5849.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12100.232,
+        -5900.4033,
+        317.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11502.232,
+        -5900.4033,
+        317.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12096.232,
+        -6501.4033,
+        317.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12096.232,
+        -6901.4033,
+        317.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11504.232,
+        -6499.4033,
+        317.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13200.232,
+        -6247.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12096.232,
+        -7300.4033,
+        317.65344
+      ],
+      "rot": [
+        0.000041,
+        -0.000153,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 300,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12765.232,
+        -6279.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10655.488,
+        748.738,
+        793.3288
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        234,
+        202
+      ],
+      "intensity": 2,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 33.36757,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 25,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7746.7275,
+        5258.261,
+        694.07764
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        248,
+        195,
+        143
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 11.480013,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10166.132,
+        3363.961,
+        680.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10772.132,
+        1017.96094,
+        594.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13192.648,
+        1703.8662,
+        270.79184
+      ],
+      "rot": [
+        0.000041,
+        180.00003,
+        10.000216
+      ],
+      "color": [
+        248,
+        200,
+        164
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 198.26642,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12613.265,
+        1703.7598,
+        272.43198
+      ],
+      "rot": [
+        0.000803,
+        360.00003,
+        -10.00009
+      ],
+      "color": [
+        248,
+        200,
+        164
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11987.914,
+        2639.2776,
+        872.81964
+      ],
+      "rot": [
+        0.000007,
+        -0.000091552734,
+        -89.999954
+      ],
+      "color": [
+        248,
+        195,
+        143
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 11.480013,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8901.73,
+        -2422.4468,
+        987.6496
+      ],
+      "rot": [
+        0.000007,
+        90,
+        -90
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 3000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 625,
+      "sourceRadius": 11.480013,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12906.132,
+        879.96094,
+        758.41693
+      ],
+      "rot": [
+        -90,
+        -0.6330371,
+        0.63306
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12906.132,
+        1241.9609,
+        567.08765
+      ],
+      "rot": [
+        -90,
+        -1.2658925,
+        1.2659366
+      ],
+      "color": [
+        255,
+        218,
+        185
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        17703.16,
+        -2065.2192,
+        862.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        19030.16,
+        -2065.2192,
+        862.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        20280.16,
+        -2065.2192,
+        862.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        21471.16,
+        -2065.2192,
+        862.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        17833.16,
+        145.78076,
+        849.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        19037.16,
+        145.78076,
+        849.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        20291.16,
+        145.78076,
+        849.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        21609.16,
+        145.78076,
+        849.50964
+      ],
+      "rot": [
+        0,
+        0,
+        0.000119
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1441.5607,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13506.132,
+        -208.03906,
+        402.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13431.132,
+        -1628.0391,
+        402.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12932.132,
+        -2017.0391,
+        402.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14066.132,
+        -971.03906,
+        402.41693
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 6000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1513.7927,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12506.366,
+        2657.961,
+        595.32886
+      ],
+      "rot": [
+        0.000237,
+        -0.000003,
+        0
+      ],
+      "color": [
+        248,
+        201,
+        155
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 450,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13900.448,
+        3108.1829,
+        1282.7208
+      ],
+      "rot": [
+        0.00015,
+        -144.99985,
+        -179.9999
+      ],
+      "color": [
+        179,
+        192,
+        246
+      ],
+      "intensity": 30000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13923.448,
+        3086.1829,
+        744.7208
+      ],
+      "rot": [
+        0.00015,
+        -144.99985,
+        -179.9999
+      ],
+      "color": [
+        179,
+        192,
+        246
+      ],
+      "intensity": 70000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11544.517,
+        -6159.131,
+        503.13348
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12571.232,
+        -6279.4033,
+        322.65344
+      ],
+      "rot": [
+        0.000041,
+        180,
+        0.00019
+      ],
+      "color": [
+        188,
+        218,
+        255
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 200,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8882.258,
+        -2035.248,
+        1162.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8929.258,
+        -2163.248,
+        1162.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8880.258,
+        -2280.248,
+        1160.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8889.258,
+        -1541.248,
+        1162.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8927.258,
+        -1661.248,
+        1162.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8885.258,
+        -1778.248,
+        1160.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8927.258,
+        -1901.248,
+        1160.6425
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11544.517,
+        -6235.131,
+        504.13348
+      ],
+      "rot": [
+        -90,
+        -1.265893,
+        1.265937
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13780.694,
+        2841.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13652.694,
+        3024.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13696.694,
+        3234.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13825.694,
+        3330.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14000.694,
+        3336.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14189.694,
+        3183.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14211.694,
+        3046.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14171.694,
+        2899.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14032.694,
+        2820.2363,
+        1429.0347
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11857.897,
+        -6157.5933,
+        1055.4689
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        255,
+        224,
+        179
+      ],
+      "intensity": 4000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 840.22626,
+      "sourceRadius": 60,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 4,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12454.501,
+        -4050.0112,
+        571.67816
+      ],
+      "rot": [
+        0.000601,
+        -179.99971,
+        89.99995
+      ],
+      "color": [
+        255,
+        208,
+        194
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11024.825,
+        -6239.4907,
+        1043.8412
+      ],
+      "rot": [
+        0.000601,
+        -179.99971,
+        89.99995
+      ],
+      "color": [
+        255,
+        208,
+        194
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11394.501,
+        -7000.011,
+        591.67816
+      ],
+      "rot": [
+        0.000601,
+        -179.99971,
+        89.99995
+      ],
+      "color": [
+        255,
+        208,
+        194
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11263.825,
+        -6989.4907,
+        1133.8412
+      ],
+      "rot": [
+        0.000601,
+        -179.99971,
+        89.99995
+      ],
+      "color": [
+        255,
+        208,
+        194
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14783.501,
+        -2380.0112,
+        631.67816
+      ],
+      "rot": [
+        0.00050944724,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 800,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14082.248,
+        -1985.3916,
+        449.38474
+      ],
+      "rot": [
+        0.000509,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 400,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13253.825,
+        -4179.4907,
+        1753.8412
+      ],
+      "rot": [
+        -0.000306,
+        -179.9992,
+        179.99994
+      ],
+      "color": [
+        255,
+        161,
+        124
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 98.19571,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12304.825,
+        -4049.4907,
+        983.8412
+      ],
+      "rot": [
+        0.000601,
+        -179.99971,
+        89.99995
+      ],
+      "color": [
+        255,
+        208,
+        194
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13253.825,
+        -4509.4907,
+        1753.8412
+      ],
+      "rot": [
+        -0.000306,
+        -179.9992,
+        179.99994
+      ],
+      "color": [
+        255,
+        161,
+        124
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 98.19571,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13253.825,
+        -4829.4907,
+        1753.8412
+      ],
+      "rot": [
+        -0.000306,
+        -179.9992,
+        179.99994
+      ],
+      "color": [
+        255,
+        161,
+        124
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 98.19571,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13253.825,
+        -5159.4907,
+        1753.8412
+      ],
+      "rot": [
+        -0.000306,
+        -179.9992,
+        179.99994
+      ],
+      "color": [
+        255,
+        161,
+        124
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 98.19571,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13253.825,
+        -5489.4907,
+        1753.8412
+      ],
+      "rot": [
+        -0.000306,
+        -179.9992,
+        179.99994
+      ],
+      "color": [
+        255,
+        161,
+        124
+      ],
+      "intensity": 2000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 700,
+      "sourceRadius": 98.19571,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        14817.248,
+        -1985.3916,
+        449.38474
+      ],
+      "rot": [
+        0.000509,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 400,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        15557.248,
+        -1985.3916,
+        449.38474
+      ],
+      "rot": [
+        0.000509,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 400,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        16292.248,
+        -1985.3916,
+        449.38474
+      ],
+      "rot": [
+        0.000509,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 400,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        16443.5,
+        -2380.0112,
+        631.67816
+      ],
+      "rot": [
+        0.000509,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        188,
+        219,
+        255
+      ],
+      "intensity": 500,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 15.761415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12452.788,
+        651.312,
+        446.14795
+      ],
+      "rot": [
+        0.00062518055,
+        -179.99971,
+        89.99995
+      ],
+      "color": [
+        255,
+        227,
+        199
+      ],
+      "intensity": 800,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 800,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11654.191,
+        965.5737,
+        445.324
+      ],
+      "rot": [
+        0.000509,
+        -179.99953,
+        104.999985
+      ],
+      "color": [
+        240,
+        115,
+        77
+      ],
+      "intensity": 800,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 10,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9039.249,
+        -7308.38,
+        521.1745
+      ],
+      "rot": [
+        0,
+        4.616712,
+        0
+      ],
+      "color": [
+        255,
+        197,
+        122
+      ],
+      "intensity": 25000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9439.106,
+        378.03867,
+        418.99164
+      ],
+      "rot": [
+        0,
+        4.616712,
+        0
+      ],
+      "color": [
+        184,
+        225,
+        255
+      ],
+      "intensity": 25000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11928.861,
+        390.9326,
+        689.5375
+      ],
+      "rot": [
+        -0.000061,
+        90.000084,
+        -89.999916
+      ],
+      "color": [
+        148,
+        176,
+        255
+      ],
+      "intensity": 0.1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 2,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 30,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11844.092,
+        688.77905,
+        588.50183
+      ],
+      "rot": [
+        -0.000061,
+        90.000084,
+        -89.999916
+      ],
+      "color": [
+        205,
+        216,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 2,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 30,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11967.159,
+        628.67957,
+        -164.49817
+      ],
+      "rot": [
+        -0.000061,
+        90.000084,
+        -89.999916
+      ],
+      "color": [
+        208,
+        235,
+        255
+      ],
+      "intensity": 1000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 607.9364,
+      "sourceRadius": 2,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 30,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11075.603,
+        1222.8733,
+        394.98462
+      ],
+      "rot": [
+        90,
+        -5.710597,
+        84.28961
+      ],
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "intensity": 100,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 26.160717,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11980.2295,
+        561.3392,
+        341.3758
+      ],
+      "rot": [
+        -0.000061,
+        90.000084,
+        -89.999916
+      ],
+      "color": [
+        186,
+        212,
+        255
+      ],
+      "intensity": 7,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 2,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 30,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11533.373,
+        543.49585,
+        689.5375
+      ],
+      "rot": [
+        -0.000061,
+        0.000022888184,
+        -89.999886
+      ],
+      "color": [
+        148,
+        176,
+        255
+      ],
+      "intensity": 0.1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 2,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 30,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11644.106,
+        839.7073,
+        272.62656
+      ],
+      "rot": [
+        -0.000061,
+        180.0001,
+        -89.99988
+      ],
+      "color": [
+        186,
+        212,
+        255
+      ],
+      "intensity": 5,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 618.8588,
+      "sourceRadius": 2,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9104.129,
+        4413.32,
+        804.5251
+      ],
+      "rot": [
+        0,
+        0,
+        -25.00003
+      ],
+      "color": [
+        255,
+        220,
+        190
+      ],
+      "intensity": 10000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 57.15415,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "point",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9269.053,
+        4843.6147,
+        321.24368
+      ],
+      "rot": [
+        0,
+        0,
+        -25.00003
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 10000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 840.22626,
+      "sourceRadius": 38.2382,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 8,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7079.883,
+        -1905.0566,
+        802.81903
+      ],
+      "rot": [
+        90,
+        180.27747,
+        180.27747
+      ],
+      "color": [
+        85,
+        116,
+        166
+      ],
+      "intensity": 2,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 768.82007,
+      "barnHeight": 485.382,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12573.982,
+        -4038,
+        480
+      ],
+      "rot": [
+        0,
+        360.00073,
+        0
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 40,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 135.24854,
+      "barnHeight": 122.57755,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9127.96,
+        4715.321,
+        401
+      ],
+      "rot": [
+        -10,
+        205.00064,
+        0
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 40,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 135.24854,
+      "barnHeight": 122.57755,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12392.96,
+        3294.3208,
+        598
+      ],
+      "rot": [
+        0,
+        360.0008,
+        0.000002763385
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 40,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 60,
+      "barnHeight": 60,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9520.96,
+        3253.3208,
+        311
+      ],
+      "rot": [
+        -9.999779,
+        539.99915,
+        -179.99974
+      ],
+      "color": [
+        220,
+        241,
+        255
+      ],
+      "intensity": 10,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 60,
+      "barnHeight": 60,
+      "indirect": 20,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8902,
+        -1442,
+        757
+      ],
+      "rot": [
+        0,
+        -90.00012,
+        0
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 60,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 300,
+      "barnHeight": 300,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6319.508,
+        -2394.3699,
+        973.60803
+      ],
+      "rot": [
+        -90,
+        180,
+        180
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 80,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 1836.6105,
+      "barnHeight": 231.87935,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7749.668,
+        6249.6963,
+        355.11368
+      ],
+      "rot": [
+        0,
+        -90.00012,
+        0
+      ],
+      "color": [
+        255,
+        241,
+        221
+      ],
+      "intensity": 30,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 998.26105,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 300,
+      "barnHeight": 300,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7746.668,
+        5162.921,
+        560.20825
+      ],
+      "rot": [
+        230.00024,
+        90.000175,
+        0.00016784668
+      ],
+      "color": [
+        255,
+        205,
+        124
+      ],
+      "intensity": 12,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 108.56341,
+      "barnHeight": 25.784801,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8901.827,
+        -2539.5388,
+        867.3109
+      ],
+      "rot": [
+        -50.000202,
+        -89.999794,
+        -179.9998
+      ],
+      "color": [
+        255,
+        179,
+        122
+      ],
+      "intensity": 12,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 139.2318,
+      "barnHeight": 33.068825,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7749.668,
+        5773.998,
+        708.109
+      ],
+      "rot": [
+        90,
+        -215.53769,
+        -125.53815
+      ],
+      "color": [
+        255,
+        228,
+        185
+      ],
+      "intensity": 15,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 998.26105,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 442.48697,
+      "barnHeight": 468.38165,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "rect",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7079.883,
+        -1905.0566,
+        812.32465
+      ],
+      "rot": [
+        -90,
+        0,
+        0.000032035397
+      ],
+      "color": [
+        85,
+        116,
+        166
+      ],
+      "intensity": 25,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 768.82007,
+      "barnHeight": 485.382,
+      "indirect": 1,
+      "volumetric": 1,
+      "castShadows": false,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "sky",
+      "layer": "Duality_Lighting",
+      "name": "SkyLightComponent0",
+      "loc": [
+        1475,
+        265,
+        475
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "color": [
+        243,
+        249,
+        255
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 0,
+      "innerCone": 0,
+      "outerCone": 0,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12791.895,
+        32.976707,
+        1376.7203
+      ],
+      "rot": [
+        -28.18753,
+        65.28037,
+        -58.68277
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 600000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2439.9321,
+      "sourceRadius": 0,
+      "innerCone": 31,
+      "outerCone": 32.961903,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8137.193,
+        -4573.078,
+        1627.7223
+      ],
+      "rot": [
+        -49.75241,
+        11.967633,
+        86.52158
+      ],
+      "color": [
+        255,
+        225,
+        179
+      ],
+      "intensity": 10,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 28.770645,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7174.7754,
+        5380.3145,
+        921.7941
+      ],
+      "rot": [
+        -84.17509,
+        15.007714,
+        116.940636
+      ],
+      "color": [
+        255,
+        225,
+        179
+      ],
+      "intensity": 30,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 452.5055,
+      "sourceRadius": 17.08339,
+      "innerCone": 24.495413,
+      "outerCone": 31.018349,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 2,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10829.075,
+        71.463036,
+        693.9943
+      ],
+      "rot": [
+        -45.181953,
+        -178.12115,
+        -59.104378
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2500,
+      "sourceRadius": 20,
+      "innerCone": 15,
+      "outerCone": 34.80952,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 4,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10949.075,
+        71.463036,
+        870.9943
+      ],
+      "rot": [
+        -79.90218,
+        58.900642,
+        -297.1865
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 1,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2500,
+      "sourceRadius": 20,
+      "innerCone": 15,
+      "outerCone": 34.80952,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 4,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        11280.53,
+        -44.004425,
+        613.4093
+      ],
+      "rot": [
+        -34.99878,
+        75.000244,
+        -179.99976
+      ],
+      "color": [
+        207,
+        211,
+        230
+      ],
+      "intensity": 20000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 60,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9006.45,
+        4205.1606,
+        1204.7278
+      ],
+      "rot": [
+        -63.10208,
+        78.09349,
+        -49.459778
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 6,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2500,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 38.3238,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 10,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        8491.461,
+        -4489.0293,
+        742.6668
+      ],
+      "rot": [
+        -10.888004,
+        52.297676,
+        -1.2810593
+      ],
+      "color": [
+        255,
+        225,
+        179
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2464.1301,
+      "sourceRadius": 40,
+      "innerCone": 4,
+      "outerCone": 21.529842,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7713.5303,
+        1113.9956,
+        528.4093
+      ],
+      "rot": [
+        -34.99878,
+        75.000244,
+        -179.99976
+      ],
+      "color": [
+        207,
+        211,
+        230
+      ],
+      "intensity": 10000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 1500,
+      "sourceRadius": 60,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7559.266,
+        -1105.928,
+        950.5927
+      ],
+      "rot": [
+        -89.99999,
+        0,
+        0
+      ],
+      "color": [
+        255,
+        224,
+        191
+      ],
+      "intensity": 20000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2439.9321,
+      "sourceRadius": 0,
+      "innerCone": 15,
+      "outerCone": 46.89524,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 2,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12808.968,
+        -2165.7979,
+        2782.819
+      ],
+      "rot": [
+        -50.037678,
+        109.979675,
+        -42.711395
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 1500000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 3903.1958,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 49.514286,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        6289.6313,
+        -3998.6086,
+        906.69446
+      ],
+      "rot": [
+        -67.68657,
+        59.63924,
+        -23.843174
+      ],
+      "color": [
+        63,
+        107,
+        166
+      ],
+      "intensity": 50000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2439.9321,
+      "sourceRadius": 20,
+      "innerCone": 0,
+      "outerCone": 51.771427,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 2,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12207.968,
+        -2949.7979,
+        1867.8191
+      ],
+      "rot": [
+        -35.73291,
+        7.8814683,
+        -39.652138
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 4000000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 3903.1958,
+      "sourceRadius": 40,
+      "innerCone": 1,
+      "outerCone": 17.914284,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12753.968,
+        -3774.7979,
+        3100.819
+      ],
+      "rot": [
+        -50.037605,
+        9.979614,
+        -42.71158
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 2000000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 3903.1958,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 26.190474,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13037.968,
+        -5469.798,
+        962.8191
+      ],
+      "rot": [
+        -49.99997,
+        0,
+        0
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12789.968,
+        -646.79785,
+        2356.819
+      ],
+      "rot": [
+        -49.315628,
+        76.013885,
+        -11.59886
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 0,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 3903.1958,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 20.923807,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        9087.968,
+        -6556.798,
+        2356.819
+      ],
+      "rot": [
+        -49.315628,
+        76.013885,
+        -11.59886
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 2500000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 3903.1958,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 20.923807,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 30,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13037.968,
+        -5174.798,
+        962.8191
+      ],
+      "rot": [
+        -49.99997,
+        0,
+        0
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13037.968,
+        -4864.798,
+        962.8191
+      ],
+      "rot": [
+        -49.99997,
+        0,
+        0
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13037.968,
+        -4544.798,
+        962.8191
+      ],
+      "rot": [
+        -49.99997,
+        0,
+        0
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        13037.968,
+        -4234.798,
+        962.8191
+      ],
+      "rot": [
+        -49.99997,
+        0,
+        0
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12722.968,
+        -5469.798,
+        962.8191
+      ],
+      "rot": [
+        -120.00024,
+        0.000015258789,
+        0.000045776367
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12722.968,
+        -5164.798,
+        962.8191
+      ],
+      "rot": [
+        -120.00024,
+        0.000015258789,
+        0.000045776367
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12722.968,
+        -4854.798,
+        962.8191
+      ],
+      "rot": [
+        -59.99971,
+        -179.99997,
+        -179.99995
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12722.968,
+        -4534.798,
+        962.8191
+      ],
+      "rot": [
+        -59.99971,
+        -179.99997,
+        -179.99995
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12722.968,
+        -4224.798,
+        962.8191
+      ],
+      "rot": [
+        -59.99971,
+        -179.99997,
+        -179.99995
+      ],
+      "color": [
+        147,
+        200,
+        255
+      ],
+      "intensity": 13,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 40,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12568.124,
+        2542.1367,
+        1056.3602
+      ],
+      "rot": [
+        -72.03603,
+        34.265938,
+        -212.94627
+      ],
+      "color": [
+        255,
+        203,
+        171
+      ],
+      "intensity": 20,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 12,
+      "outerCone": 35,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        12568.124,
+        2822.3213,
+        1056.3602
+      ],
+      "rot": [
+        -72.03603,
+        34.265938,
+        -212.94627
+      ],
+      "color": [
+        255,
+        203,
+        171
+      ],
+      "intensity": 20,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 0,
+      "sourceRadius": 40,
+      "innerCone": 12,
+      "outerCone": 35,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        7591.073,
+        -12.351776,
+        856.8833
+      ],
+      "rot": [
+        -90.00001,
+        360,
+        360.00012
+      ],
+      "color": [
+        255,
+        234,
+        202
+      ],
+      "intensity": 0.5,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2000,
+      "sourceRadius": 30,
+      "innerCone": 0,
+      "outerCone": 80,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 5,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    },
+    {
+      "kind": "spot",
+      "layer": "Duality_Lighting",
+      "name": "LightComponent0",
+      "loc": [
+        10731.895,
+        -116.02329,
+        1505.7203
+      ],
+      "rot": [
+        -50.03772,
+        69.979645,
+        -42.711243
+      ],
+      "color": [
+        255,
+        200,
+        146
+      ],
+      "intensity": 600000,
+      "intensityUnits": "",
+      "temperature": 6500,
+      "useTemperature": false,
+      "radius": 2439.9321,
+      "sourceRadius": 40,
+      "innerCone": 0,
+      "outerCone": 32.961903,
+      "barnWidth": 0,
+      "barnHeight": 0,
+      "indirect": 15,
+      "volumetric": 1,
+      "castShadows": true,
+      "affectsWorld": true,
+      "visible": true,
+      "mobility": "EComponentMobility::Static"
+    }
+  ],
+  "fogs": [
+    {
+      "layer": "Duality_Lighting",
+      "name": "HeightFogComponent0",
+      "density": 0.05,
+      "heightFalloff": 0.343686,
+      "startDistance": 3619.0476,
+      "maxOpacity": 1,
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "height": 1575
+    }
+  ],
+  "posts": [
+    {
+      "layer": "Duality_Volumes",
+      "name": "PostProcessVolume_1",
+      "priority": 1,
+      "unbound": true,
+      "blendRadius": 0,
+      "blendWeight": 1,
+      "enabled": true,
+      "exposureMin": 1,
+      "exposureMax": 1,
+      "exposureBias": 0,
+      "overrides": [
+        "AutoExposureBias",
+        "AutoExposureMaxBrightness",
+        "AutoExposureMinBrightness",
+        "BloomIntensity",
+        "BloomMethod",
+        "BloomSizeScale",
+        "BloomThreshold",
+        "IndirectLightingColor",
+        "IndirectLightingIntensity",
+        "IndirectLightingScaleCurve",
+        "ScreenSpaceReflectionIntensity",
+        "ScreenSpaceReflectionMaxRoughness",
+        "ScreenSpaceReflectionQuality",
+        "VignetteIntensity"
+      ],
+      "settings": {
+        "bOverride_BloomMethod": true,
+        "bOverride_BloomIntensity": true,
+        "bOverride_BloomThreshold": true,
+        "bOverride_BloomSizeScale": true,
+        "bOverride_AutoExposureMinBrightness": true,
+        "bOverride_AutoExposureMaxBrightness": true,
+        "bOverride_AutoExposureBias": true,
+        "bOverride_VignetteIntensity": true,
+        "bOverride_IndirectLightingColor": true,
+        "bOverride_IndirectLightingIntensity": true,
+        "bOverride_ScreenSpaceReflectionIntensity": true,
+        "bOverride_ScreenSpaceReflectionQuality": true,
+        "bOverride_ScreenSpaceReflectionMaxRoughness": true,
+        "bOverride_IndirectLightingScaleCurve": true,
+        "WhiteTemp": 1500,
+        "ToneCurveAmount": 1,
+        "BloomIntensity": 1.25,
+        "BloomThreshold": -0.5,
+        "IndirectLightingColor": {
+          "R": 1,
+          "G": 0.956,
+          "B": 0.88,
+          "A": 1,
+          "Hex": "FFFAF1"
+        },
+        "IndirectLightingIntensity": 1.5,
+        "AutoExposureMinBrightness": 1,
+        "AutoExposureMaxBrightness": 1,
+        "LensFlareIntensity": 0,
+        "IndirectLightingScaleCurve": {
+          "ObjectName": "CurveFloat'IndirectLightScaleCurve'",
+          "ObjectPath": "/Game/Lighting/Misc/IndirectLightScaleCurve.0"
+        }
+      }
+    }
+  ]
+}

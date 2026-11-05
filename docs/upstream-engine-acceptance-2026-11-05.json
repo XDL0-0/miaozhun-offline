@@ -1,0 +1,105 @@
+{
+  "engineBuild": "aimpro-2026-11-05",
+  "package": {
+    "path": "dist",
+    "success": true,
+    "files": 4242,
+    "encryptedResources": 577,
+    "maps": 9,
+    "scenes": 100,
+    "failures": []
+  },
+  "tests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 467,
+    "failed": 0,
+    "scope": "Full suite after migration, render-allocation optimization, reproducible legacy fixtures and benchmark validation changes.",
+    "skipped": 0
+  },
+  "browser": {
+    "mode": "hidden background tab; real fullscreen and pointer capture disabled; simulated pointer lock for round completion",
+    "origin": "http://127.0.0.1:18747",
+    "isolatedStorage": true,
+    "maps": "9/9; see upstream-engine-map-smoke-2026-11-05.json",
+    "training": "Sunset loaded and completed a one-second QA round, result persisted",
+    "replay": "Saved replay loaded its map and played to 1.00 / 1.00 seconds",
+    "backup": "Full backup exported result/settings, one replay index+blob and editor draft+saved scene",
+    "editor": "Bind map and custom scene name survived language change and reload",
+    "locale": "English hall and Studio controls checked; offline-only controls hidden using stable selectors",
+    "missingAssetsAfterFinalChecks": []
+  },
+  "benchmarks": {
+    "engineMigration": {
+      "status": "completed",
+      "report": "engine-comparison-2026-11-05/report.md",
+      "validRuns": 12,
+      "pairedRounds": 6,
+      "maps": [
+        "ascent",
+        "plummet"
+      ],
+      "drawingBuffer": [
+        1280,
+        720
+      ],
+      "gpu": "NVIDIA GeForce RTX 4070",
+      "findings": [
+        "Ascent median render-submission CPU decreased 32.28% and draw calls decreased 49.32% across three rounds.",
+        "Plummet draw calls decreased 15.22%; render-submission CPU did not consistently decrease.",
+        "Median 1% low did not improve on either map; these fixed-scene results do not establish a general or high-refresh gameplay FPS gain."
+      ],
+      "measurementBoundary": "CPU submission and render/RAF callback intervals; no completed-GPU-frame rate or display presentation rate was measured."
+    },
+    "renderAllocationOptimization": {
+      "status": "completed",
+      "allocationFixture": {
+        "actors": 8,
+        "cameras": 1,
+        "repeatedRenders": 40,
+        "temporaryXyzObjects": {
+          "before": 360,
+          "after": 0
+        },
+        "actorIdSetConstructions": {
+          "before": 40,
+          "after": 1
+        },
+        "test": "../tests/upstream-render-allocation.test.mjs"
+      },
+      "behavior": "Differential tests compare native and adjacent-snapshot renderers across repeated renders, tick changes, actor lifecycle changes and rebuilding; snapshot creation and startup/tick invalidation remain unchanged.",
+      "measurementBoundary": "Allocation counts cover the two changed allocation sites. The 12-run background benchmark measures CPU submission and callback cadence, not GPU execution or display presentation; GPU timer disabled.",
+      "report": "engine-optimization-2026-11-05/report.md",
+      "validRuns": 12,
+      "pairedRounds": 6,
+      "changedModule": "js/Do4sYkfr.js (only changed JavaScript module between the isolated builds)",
+      "findings": [
+        "Ascent median render-submission CPU changed +0.57%; Plummet changed -2.50%. Paired CPU changes are +4.76% and -4.62% respectively.",
+        "Median submission FPS stayed about 60; 1% low changed -7.53% and -0.18%. No overall FPS improvement is established.",
+        "Every run retained maxInFlight=2, unset experimental GPU-budget storage, identical native context settings and no fullscreen/pointer lock."
+      ],
+      "independentAudit": {
+        "passed": true,
+        "scriptFilesComparedPerBuild": 737,
+        "onlyChangedModule": "Do4sYkfr.js",
+        "runMetricsRecomputed": 36,
+        "mediansRecomputed": 12,
+        "rawCopiesAndHashesMatched": true
+      }
+    },
+    "gpuPollPilot": {
+      "productionEnabled": false,
+      "report": "engine-optimization-2026-11-05/gpu-poll-pilot.json",
+      "validRuns": 4,
+      "decision": "Zero-timeout clientWaitSync substitution showed no consistent benefit in exploratory one-pair-per-map runs; native getSyncParameter polling retained."
+    }
+  },
+  "limitations": [
+    "One-second replay contains no shots or keyframe drift sample; it does not establish deterministic combat replay.",
+    "Both completed benchmarks cover two fixed scenes; no exhaustive interactive playthrough of all 100 scenes was performed.",
+    "Drawing-submission cadence is not completed GPU or display FPS. The migration benchmark did not establish a general FPS improvement.",
+    "All raw scene files were restored and verified byte-for-byte; the short round existed only in isolated staging.",
+    "See verification.json for nonliteral import boundaries and 26 source-side legacy-kernel fingerprint differences."
+  ],
+  "screenshot": "upstream-replay-background-2026-11-05.jpg",
+  "rollback": "backups/dist-before-aimpro-2026-11-05"
+}

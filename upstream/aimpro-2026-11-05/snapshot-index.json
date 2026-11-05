@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "title": "AimPro 公开地图与机器人点位快照",
+  "snapshotDate": "2026-11-05",
+  "source": "https://aimpro.world/aim",
+  "catalogSource": "https://aimpro.world/prod-api/api/v1/public/val/aimlab/workshop",
+  "scope": "当前公开客户端注册的9张地图及公开workshop接口列出的100个场景；96个瓦工坊项目和4个球类项目。",
+  "runtimeIntegration": "未应用到 site/ 或 dist/；本次仅采集、解码、验证和优化审查。",
+  "summary": {
+    "mapCount": 9,
+    "newMapIds": [
+      "duality",
+      "juliett",
+      "rook"
+    ],
+    "mapResources": 112,
+    "mapDownloadBytes": 119056458,
+    "sceneCount": 100,
+    "sceneChanges": {
+      "added": 38,
+      "modified": 1,
+      "unchanged": 61,
+      "failed": 0
+    },
+    "actorTemplates": 262,
+    "humanoidTemplates": 258,
+    "spawners": 1546,
+    "humanoidSpawners": 1542,
+    "fixedSpawners": 1434,
+    "dispatchers": 12,
+    "playerSpawnPoints": 100,
+    "spawnerPoints": 1546,
+    "actorSpatialPoints": 150,
+    "waypoints": 127,
+    "dispatcherPoints": 8,
+    "recordedTracks": 10,
+    "declaredTrackFrames": 14636,
+    "minimapCallouts": 204,
+    "decodedMotionFrames": 14636
+  },
+  "maps": [
+    {
+      "id": "ascent",
+      "name": "亚海悬城（复刻）",
+      "new": false,
+      "editorDefaultSpawn": {
+        "x": -40,
+        "y": 2.2,
+        "z": 0
+      },
+      "scenes": 16,
+      "added": 2,
+      "modified": 1,
+      "unchanged": 13,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 82,
+        "humanoidTemplates": 82,
+        "spawners": 210,
+        "humanoidSpawners": 210,
+        "fixedSpawners": 166,
+        "dispatchers": 4,
+        "playerSpawnPoints": 16,
+        "spawnerPoints": 210,
+        "actorSpatialPoints": 38,
+        "waypoints": 27,
+        "dispatcherPoints": 6,
+        "recordedTracks": 6,
+        "declaredTrackFrames": 9295
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 12,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "bonsai",
+      "name": "霓虹町（复刻）",
+      "new": false,
+      "editorDefaultSpawn": {
+        "x": -14.9,
+        "y": 5.1,
+        "z": -59.8
+      },
+      "scenes": 17,
+      "added": 0,
+      "modified": 0,
+      "unchanged": 17,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 35,
+        "humanoidTemplates": 35,
+        "spawners": 242,
+        "humanoidSpawners": 242,
+        "fixedSpawners": 224,
+        "dispatchers": 3,
+        "playerSpawnPoints": 17,
+        "spawnerPoints": 242,
+        "actorSpatialPoints": 42,
+        "waypoints": 39,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 13,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "triad",
+      "name": "隐世修所（复刻）",
+      "new": false,
+      "editorDefaultSpawn": {
+        "x": -24.5,
+        "y": 5.2,
+        "z": -13
+      },
+      "scenes": 17,
+      "added": 6,
+      "modified": 0,
+      "unchanged": 11,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 30,
+        "humanoidTemplates": 30,
+        "spawners": 294,
+        "humanoidSpawners": 294,
+        "fixedSpawners": 286,
+        "dispatchers": 1,
+        "playerSpawnPoints": 17,
+        "spawnerPoints": 294,
+        "actorSpatialPoints": 37,
+        "waypoints": 35,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 12,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "plummet",
+      "name": "天枢云阙（复刻）",
+      "new": false,
+      "editorDefaultSpawn": {
+        "x": 59,
+        "y": 4.2,
+        "z": -7.5
+      },
+      "scenes": 9,
+      "added": 3,
+      "modified": 0,
+      "unchanged": 6,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 28,
+        "humanoidTemplates": 28,
+        "spawners": 169,
+        "humanoidSpawners": 169,
+        "fixedSpawners": 167,
+        "dispatchers": 0,
+        "playerSpawnPoints": 9,
+        "spawnerPoints": 169,
+        "actorSpatialPoints": 12,
+        "waypoints": 9,
+        "dispatcherPoints": 0,
+        "recordedTracks": 2,
+        "declaredTrackFrames": 1894
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 13,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "jam",
+      "name": "莲华古城（复刻）",
+      "new": false,
+      "editorDefaultSpawn": {
+        "x": 8.5,
+        "y": 5.2,
+        "z": -16
+      },
+      "scenes": 7,
+      "added": 1,
+      "modified": 0,
+      "unchanged": 6,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 21,
+        "humanoidTemplates": 21,
+        "spawners": 105,
+        "humanoidSpawners": 105,
+        "fixedSpawners": 103,
+        "dispatchers": 2,
+        "playerSpawnPoints": 7,
+        "spawnerPoints": 105,
+        "actorSpatialPoints": 13,
+        "waypoints": 9,
+        "dispatcherPoints": 2,
+        "recordedTracks": 2,
+        "declaredTrackFrames": 3447
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 13,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "infinity",
+      "name": "幽邃地窟（复刻）",
+      "new": false,
+      "editorDefaultSpawn": {
+        "x": 58,
+        "y": 10.9,
+        "z": -8
+      },
+      "scenes": 6,
+      "added": 0,
+      "modified": 0,
+      "unchanged": 6,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 14,
+        "humanoidTemplates": 14,
+        "spawners": 110,
+        "humanoidSpawners": 110,
+        "fixedSpawners": 94,
+        "dispatchers": 0,
+        "playerSpawnPoints": 6,
+        "spawnerPoints": 110,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 13,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "rook",
+      "name": "盐海矿镇（复刻）",
+      "new": true,
+      "editorDefaultSpawn": {
+        "x": 54,
+        "y": 5.95,
+        "z": 0
+      },
+      "scenes": 8,
+      "added": 8,
+      "modified": 0,
+      "unchanged": 0,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 16,
+        "humanoidTemplates": 16,
+        "spawners": 162,
+        "humanoidSpawners": 162,
+        "fixedSpawners": 158,
+        "dispatchers": 0,
+        "playerSpawnPoints": 8,
+        "spawnerPoints": 162,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 12,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "duality",
+      "name": "源工重镇（复刻）",
+      "new": true,
+      "editorDefaultSpawn": {
+        "x": 4.5,
+        "y": 0.27,
+        "z": -7.5
+      },
+      "scenes": 8,
+      "added": 8,
+      "modified": 0,
+      "unchanged": 0,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 16,
+        "humanoidTemplates": 16,
+        "spawners": 144,
+        "humanoidSpawners": 144,
+        "fixedSpawners": 136,
+        "dispatchers": 0,
+        "playerSpawnPoints": 8,
+        "spawnerPoints": 144,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 12,
+        "format": "VMP1/privateMap"
+      }
+    },
+    {
+      "id": "juliett",
+      "name": "日落之城（复刻）",
+      "new": true,
+      "editorDefaultSpawn": {
+        "x": 5,
+        "y": 4.2,
+        "z": 51.5
+      },
+      "scenes": 6,
+      "added": 6,
+      "modified": 0,
+      "unchanged": 0,
+      "failed": 0,
+      "definitions": {
+        "actorTemplates": 12,
+        "humanoidTemplates": 12,
+        "spawners": 106,
+        "humanoidSpawners": 106,
+        "fixedSpawners": 100,
+        "dispatchers": 0,
+        "playerSpawnPoints": 6,
+        "spawnerPoints": 106,
+        "actorSpatialPoints": 0,
+        "waypoints": 0,
+        "dispatcherPoints": 0,
+        "recordedTracks": 0,
+        "declaredTrackFrames": 0
+      },
+      "mapValidation": {
+        "success": true,
+        "resources": 12,
+        "format": "VMP1/privateMap"
+      }
+    }
+  ],
+  "artifacts": {
+    "rawMaps": "assets/aim-maps/",
+    "decodedMaps": "decoded/aim-maps/",
+    "mapRegistry": "map-registry.json",
+    "mapDownloads": "map-downloads.json",
+    "mapValidation": "map-validation.json",
+    "catalog": "workshop.json",
+    "rawScenes": "scenes/",
+    "robotDefinitions": "robot-positions.json",
+    "robotMotionFrames": "robot-motion-frames.json",
+    "sceneDiff": "scene-diff.json",
+    "sourceClient": "source/",
+    "optimizationReview": "../../docs/aimpro-upstream-optimizations-2026-11-05.json",
+    "checksums": "snapshot-sha256.json"
+  },
+  "validation": {
+    "maps": true,
+    "resources": 112,
+    "externalReferences": 45,
+    "missingReferences": 0,
+    "sceneFailures": 0,
+    "baselineErrors": [],
+    "trackCount": 10,
+    "trackFrames": 14636
+  },
+  "limitations": [
+    "VMP1 is a private container, not GLB; old GLTFLoader cannot consume it.",
+    "VSE2 requires the reviewed public resource codec and normal domain mapping.",
+    "Meshopt records are authenticated and structurally checked; compressed mesh payloads are not decoded.",
+    "Image signatures, containers and dimensions are inspected; pixel decoding and browser rendering are not tested.",
+    "Geometry and placed triangle counts are metadata counts before runtime batching, PVS and culling; they are not draw calls or FPS.",
+    "机器人生成器包括固定点和随机区域，数量不等于每局存活机器人数量；实际随机生成还取决于 seed 与训练状态。",
+    "动作轨迹为局部坐标，必须结合放置朝向、裁剪、倍速和出场规则使用。",
+    "未执行游戏运行时升级、浏览器画面验证或 FPS A/B 性能测试。"
+  ],
+  "recheckCommands": [
+    "node scripts/sync-upstream-maps.mjs --offline",
+    "node scripts/validate-upstream-maps.mjs",
+    "node scripts/sync-upstream-scenes.mjs --offline",
+    "node scripts/export-upstream-takes.mjs"
+  ]
+}

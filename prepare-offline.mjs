@@ -17,6 +17,12 @@ import {applyInstanceVisibilityCompactionPatch} from './patches/instance-visibil
 import {applyTrainingHallVisibilityCss} from './patches/training-hall-visibility.mjs';
 import {buildSkinPacks} from './scripts/build-skin-packs.mjs';
 import {buildLocalization} from './scripts/build-localization.mjs';
+// Default to the complete new engine. The retained build remains reproducible
+// for rollback and historical regression tests with --legacy.
+if(!process.argv.includes('--legacy')){
+ await import('./scripts/build-upstream-offline.mjs');
+ process.exit(0);
+}
 const root=path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'));
 const source=path.join(root,'site'),dist=path.join(root,'dist');
 fs.mkdirSync(dist,{recursive:true});fs.cpSync(source,dist,{recursive:true});

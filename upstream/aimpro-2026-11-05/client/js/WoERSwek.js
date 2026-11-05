@@ -1,0 +1,1 @@
+import{M as t}from"./CVNJSyeu.js";import{A as a}from"./BmVpAqyi.js";import{s as m}from"./ATp_kJvD.js";function f(r){if(!r)return null;const i=t.find(n=>n.id===r);return i?m(`/images/map-covers/${i.id}.webp`):null}function l(r){return r?a.find(i=>i.id===r)?.icon??null:null}export{l as a,f as m};

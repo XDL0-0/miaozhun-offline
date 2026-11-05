@@ -1,0 +1,1 @@
+import{ad as t,c as r,e as o,l as s}from"./index.FoQE3geO.js";import"./ATp_kJvD.js";const a={},n={class:"app-container"};function c(d,e){return o(),r("div",n,[...e[0]||(e[0]=[s("iframe",{src:"https://juejin.cn/post/7228990409909108793",frameborder:"0"},null,-1)])])}const _=t(a,[["render",c],["__scopeId","data-v-d7e4408d"]]);export{_ as default};

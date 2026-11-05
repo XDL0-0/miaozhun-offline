@@ -1,0 +1,74 @@
+{
+  "engineBuild": "aimpro-2026-11-05",
+  "source": "scripts/write-upstream-browser-check.mjs",
+  "mode": "background, no fullscreen or pointer lock",
+  "renderSize": [
+    640,
+    360
+  ],
+  "success": true,
+  "checks": [
+    "native VMP1/Meshopt/image decoding",
+    "native collision/lighting/PVS load",
+    "native shaders compile and WebGL renders triangles",
+    "active viewport prevents map cache release",
+    "detached map releases all map visuals"
+  ],
+  "limits": "Fixed scene camera, force-all visibility for compile coverage. Draw counts are diagnostics, not gameplay FPS or optimization A/B results. Does not exhaustively cover every scene/skin combination.",
+  "maps": [
+    {
+      "map": "ascent",
+      "ok": true,
+      "calls": 423,
+      "triangles": 2170862
+    },
+    {
+      "map": "bonsai",
+      "ok": true,
+      "calls": 440,
+      "triangles": 2075814
+    },
+    {
+      "map": "triad",
+      "ok": true,
+      "calls": 648,
+      "triangles": 2706026
+    },
+    {
+      "map": "plummet",
+      "ok": true,
+      "calls": 272,
+      "triangles": 2896818
+    },
+    {
+      "map": "jam",
+      "ok": true,
+      "calls": 212,
+      "triangles": 1969660
+    },
+    {
+      "map": "infinity",
+      "ok": true,
+      "calls": 355,
+      "triangles": 1943134
+    },
+    {
+      "map": "rook",
+      "ok": true,
+      "calls": 337,
+      "triangles": 2488393
+    },
+    {
+      "map": "duality",
+      "ok": true,
+      "calls": 176,
+      "triangles": 977415
+    },
+    {
+      "map": "juliett",
+      "ok": true,
+      "calls": 290,
+      "triangles": 967262
+    }
+  ]
+}

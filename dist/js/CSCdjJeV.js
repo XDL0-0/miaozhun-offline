@@ -1,0 +1,1 @@
+import{bW as t}from"./index.FoQE3geO.js";const e="/api/v1/val/shop-wallets",r={getMyWallet(){return t({url:`${e}/my`,method:"get"})},getLogs(o){return t({url:`${e}/logs`,method:"get",params:o})}};export{r as S};

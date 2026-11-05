@@ -1,0 +1,1 @@
+function n(e){return!(!e.reason||e.reason.trim()===""||e.isIntervened&&!e.confirmIntervened)}const t=5;function r(e){if(!e.type||!e.type.startsWith("image/"))return"封面需为图片文件（JPG / PNG / WebP）";if(e.size>t*1024*1024)return`封面不能超过 ${t}MB`}export{t as C,n as c,r as v};

@@ -1,0 +1,13 @@
+// Local-only static benchmark servers and bounded test-result collector.
+import http from 'node:http';import fs from 'node:fs';import path from 'node:path';
+const base=path.resolve(process.argv[2]??'local-data/engine-comparison-2026-11-05');const output=path.join(base,'results');fs.mkdirSync(output,{recursive:true});
+const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.woff':'font/woff','.wasm':'application/wasm','.ogg':'audio/ogg','.ico':'image/x-icon'};
+for(const [engine,port] of [['old',18820],['new',18821]]){
+ const root=path.join(base,engine),origin='http://127.0.0.1:'+port;
+ http.createServer((req,res)=>{if(req.headers.host!=='127.0.0.1:'+port){res.writeHead(403).end();return;}const url=new URL(req.url,origin);const json=(obj,status=200)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(obj));};
+ if(url.pathname==='/__bench/result'&&req.method==='POST'){if(req.headers.origin!==origin){res.writeHead(403).end();return;}let text='';req.on('data',b=>{text+=b;if(text.length>5e6)req.destroy();});req.on('end',()=>{try{const data=JSON.parse(text);if(data.engine!==engine||!Number.isInteger(data.runIndex)||data.runIndex<0||data.runIndex>99)throw Error('Invalid report');fs.writeFileSync(path.join(output,String(data.runIndex).padStart(2,'0')+'-'+engine+'.json'),JSON.stringify(data,null,2));console.log(data.runIndex,engine,data.caseId,data.reason,data.metrics?.averageFps);json({saved:true});}catch(e){json({error:e.message},400);}});return;}
+ let pathname;try{pathname=decodeURIComponent(url.pathname);}catch{res.writeHead(400).end();return;}if(pathname.split('/').includes('..')){res.writeHead(403).end();return;}let file=path.join(root,pathname);if(pathname==='/aim'||pathname==='/')file=path.join(root,'__engine-benchmark.html');
+ if(!fs.existsSync(file)||!fs.statSync(file).isFile()){if(pathname.startsWith('/prod-api/')){json({code:'00000',data:[],msg:'Local benchmark'});return;}console.warn('missing',engine,pathname);res.writeHead(404).end('Missing benchmark resource');return;}
+ res.writeHead(200,{'Content-Type':mime[path.extname(file)]??'application/octet-stream','Cache-Control':'no-cache','Content-Security-Policy':"default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self'; worker-src 'self' blob:"});if(req.method==='HEAD')res.end();else fs.createReadStream(file).pipe(res);
+ }).listen(port,'127.0.0.1',()=>console.log(engine+' benchmark '+origin));
+}

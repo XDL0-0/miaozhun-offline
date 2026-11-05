@@ -1,0 +1,21 @@
+{
+  "method": "After the completed series, read each isolated origin through a local DOM diagnostic page; this is a post-run check, not per-frame storage telemetry.",
+  "observed": [
+    {
+      "engine": "old",
+      "gpuBackpressure": null,
+      "skinStorage": null,
+      "fullscreen": false,
+      "pointerLocked": false
+    },
+    {
+      "engine": "new",
+      "gpuBackpressure": null,
+      "skinStorage": null,
+      "fullscreen": false,
+      "pointerLocked": false
+    }
+  ],
+  "nativeDefaultMaxFramesInFlight": 2,
+  "gpuCompletedFrameTimingMeasured": false
+}

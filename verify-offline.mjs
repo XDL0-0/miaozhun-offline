@@ -13,6 +13,15 @@ import {gunzipSync} from 'node:zlib';
 const packageRoot=path.dirname(fileURLToPath(import.meta.url));
 const arg=process.argv.find(x=>x.startsWith('--root='));
 const root=arg?path.resolve(arg.slice(7)):path.join(packageRoot,'dist');
+// Select the verifier by the installed package, including staging roots. Keep
+// the original checks available for an explicitly built legacy package.
+const installedManifest=JSON.parse(fs.readFileSync(path.join(root,'offline-manifest.json'),'utf8'));
+if(installedManifest.engineBuild==='aimpro-2026-11-05'){
+ const reportArg=process.argv.find(x=>x.startsWith('--report='))??'--report='+path.join(packageRoot,'verification.json');
+ const result=spawnSync(process.execPath,[path.join(packageRoot,'scripts/verify-upstream-offline.mjs'),'--root='+root,reportArg],{stdio:'inherit',windowsHide:true});
+ if(result.error)throw result.error;
+ process.exit(result.status??1);
+}
 const reportFile=path.join(packageRoot,'verification.json');
 const baseUrl='http://127.0.0.1:18746';
 const maps=['ascent','bonsai','triad','plummet','jam','infinity'];

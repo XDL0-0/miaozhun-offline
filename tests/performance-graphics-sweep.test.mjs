@@ -9,6 +9,7 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
 import {comparisonCases,readComparisonConfig,comparisonViewportOptions,comparisonMSAAEnabled,createComparisonWeaponBridge,executeComparisonQueue} from '../scripts/create-performance-comparison.mjs';
+import {writeLegacyPerformanceInput,legacyPerformanceSourceFiles} from './fixtures/legacy-performance-modules.mjs';
 const {parse}=createRequire(import.meta.url)('../scripts/vendor/acorn.cjs');
 const repository=fileURLToPath(new URL('../',import.meta.url));
 const config=name=>readComparisonConfig('?__offlineProfile=1&__performanceComparison=1&__comparisonCase='+name,true);
@@ -77,11 +78,13 @@ test('additional graphics overrides isolate standard context and shadows while r
   assert.equal(original.lowLatency,true);assert.equal(original.shadows,true);
 });
 
-test('graphics CLI combines with spatial overlay and disables MSAA on both native context paths only in its own case',t=>{
+test('legacy graphics CLI combines with spatial overlay and disables MSAA on both native context paths only in its own case',t=>{
   const base=fs.realpathSync(os.tmpdir()),directory=fs.mkdtempSync(path.join(base,'aim-graphics-sweep-test-')),output=path.join(directory,'overlay');
   t.after(()=>{assert.equal(path.dirname(fs.realpathSync(directory)),base);assert.ok(path.basename(directory).startsWith('aim-graphics-sweep-test-'));fs.rmSync(directory,{recursive:true,force:true});});
-  const protectedFiles=['index.html','js/CymPR-fm.js','js/CFqO0zvx.js','js/aQOfOAp-.js'].map(name=>path.join(repository,'dist',name)),before=protectedFiles.map(hash);
-  const generated=spawnSync(process.execPath,['scripts/create-performance-comparison.mjs','--input',path.join(repository,'dist'),'--output',output,'--graphics-sweep','--spatial-cell-size','24'],{cwd:repository,encoding:'utf8',windowsHide:true});
+  const input=writeLegacyPerformanceInput(path.join(directory,'input'));
+  const protectedFiles=['index.html','js/CymPR-fm.js','js/CFqO0zvx.js','js/aQOfOAp-.js'].map(name=>path.join(input,name));
+  protectedFiles.push(...legacyPerformanceSourceFiles);const before=protectedFiles.map(hash);
+  const generated=spawnSync(process.execPath,['scripts/create-performance-comparison.mjs','--input',input,'--output',output,'--graphics-sweep','--spatial-cell-size','24'],{cwd:repository,encoding:'utf8',windowsHide:true});
   assert.equal(generated.status,0,generated.stderr);assert.deepEqual(protectedFiles.map(hash),before);
   const manifest=JSON.parse(generated.stdout),graphics=fs.readFileSync(path.join(output,'dist/js/aQOfOAp-.js'),'utf8');
   assert.deepEqual(manifest.cases,comparisonCases(true));assert.equal(manifest.experiments.spatialInstancing.cellSize,24);assert.equal(manifest.experiments.graphicsSweep.enabled,true);
